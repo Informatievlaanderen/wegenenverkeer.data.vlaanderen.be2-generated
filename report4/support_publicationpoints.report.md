@@ -4,6 +4,5 @@
 #||#  
 Error: the following directories are unsupported
 [
-  "/tmp/generated/doc/implementatiemodel",
-  "/tmp/generated/doc/implementatiemodel/signalisatievlaanderen"
+  "/tmp/generated/doc/implementatiemodel"
 ]
