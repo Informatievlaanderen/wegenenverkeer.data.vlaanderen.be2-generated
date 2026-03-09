@@ -1,0 +1,524 @@
+{
+  "@context": {
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "Datum": "http://www.w3.org/2001/XMLSchema#date",
+    "Datumtijd": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "DecimaalGetal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
+    "IPv4-Adres": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
+    "IPv4-Adres.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAantalJaar": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar",
+    "KwantitatieveWaardeInAantalJaar.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAantalJaar.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAmpereUur": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur",
+    "KwantitatieveWaardeInAmpereUur.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAmpereUur.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAmpèRe": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpere",
+    "KwantitatieveWaardeInAmpèRe.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpere.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInAmpèRe.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpere.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInBar": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar",
+    "KwantitatieveWaardeInBar.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInBar.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCelsius": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCelsius",
+    "KwantitatieveWaardeInCelsius.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCelsius.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCelsius.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCelsius.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCentimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+    "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCentimeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInDecimaleGraden": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+    "KwantitatieveWaardeInDecimaleGraden.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInDecimaleGraden.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInEuro": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro",
+    "KwantitatieveWaardeInEuro.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInEuro.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInGigabyte": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInGigabyte",
+    "KwantitatieveWaardeInGigabyte.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInGigabyte.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInGigabyte.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInGigabyte.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInHerz": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz",
+    "KwantitatieveWaardeInHerz.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInHerz.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInInch": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch",
+    "KwantitatieveWaardeInInch.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInInch.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKN": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+    "KwantitatieveWaardeInKN.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKN.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKNPerVierkanteMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerVierkanteMeter",
+    "KwantitatieveWaardeInKNPerVierkanteMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerVierkanteMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKNPerVierkanteMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerVierkanteMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKVARh": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh",
+    "KwantitatieveWaardeInKVARh.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKVARh.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKWh": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkWh",
+    "KwantitatieveWaardeInKWh.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkWh.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKWh.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkWh.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKelvin": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin",
+    "KwantitatieveWaardeInKelvin.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKelvin.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKgPerKubiekeMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde",
+    "KwantitatieveWaardeInKgPerKubiekeMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKgPerKubiekeMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKiloAmpèRe": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere",
+    "KwantitatieveWaardeInKiloAmpèRe.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKiloAmpèRe.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKiloNewtonPerMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerMeter",
+    "KwantitatieveWaardeInKiloNewtonPerMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKiloNewtonPerMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogram": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram",
+    "KwantitatieveWaardeInKilogram.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogramPerKubiekeMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerKubiekeMeter",
+    "KwantitatieveWaardeInKilogramPerKubiekeMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerKubiekeMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogramPerKubiekeMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerKubiekeMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogramPerLopendeMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter",
+    "KwantitatieveWaardeInKilogramPerLopendeMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogramPerLopendeMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilovolt": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVolt",
+    "KwantitatieveWaardeInKilovolt.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVolt.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilovolt.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVolt.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilovoltampèRe": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVoltAmpere",
+    "KwantitatieveWaardeInKilovoltampèRe.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVoltAmpere.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilovoltampèRe.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVoltAmpere.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilowatt": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt",
+    "KwantitatieveWaardeInKilowatt.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilowatt.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter",
+    "KwantitatieveWaardeInKubiekeCentimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeterPerMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeterPerMeter",
+    "KwantitatieveWaardeInKubiekeCentimeterPerMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeterPerMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeterPerMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeterPerMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter",
+    "KwantitatieveWaardeInKubiekeMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeterPerSeconde": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde",
+    "KwantitatieveWaardeInKubiekeMeterPerSeconde.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeterPerSeconde.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeterPerUur": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur",
+    "KwantitatieveWaardeInKubiekeMeterPerUur.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeMeterPerUur.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInLiter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter",
+    "KwantitatieveWaardeInLiter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInLiter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInLiterPerMinuut": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut",
+    "KwantitatieveWaardeInLiterPerMinuut.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInLiterPerMinuut.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMAh": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInmAh",
+    "KwantitatieveWaardeInMAh.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInmAh.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMAh.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInmAh.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMPa": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal",
+    "KwantitatieveWaardeInMPa.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMPa.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMaand": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+    "KwantitatieveWaardeInMaand.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMaand.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMegahertz": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegahertz",
+    "KwantitatieveWaardeInMegahertz.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegahertz.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMegahertz.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegahertz.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMegajoule": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule",
+    "KwantitatieveWaardeInMegajoule.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMegajoule.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+    "KwantitatieveWaardeInMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeterTAW": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW",
+    "KwantitatieveWaardeInMeterTAW.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeterTAW.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMicrogramPerKilogram": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMicrogramPerKilogram",
+    "KwantitatieveWaardeInMicrogramPerKilogram.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMicrogramPerKilogram.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMicrogramPerKilogram.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMicrogramPerKilogram.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMilliampèRe": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMilliAmpere",
+    "KwantitatieveWaardeInMilliampèRe.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMilliAmpere.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMilliampèRe.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMilliAmpere.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMillimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
+    "KwantitatieveWaardeInMillimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMillimeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMinuten": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut",
+    "KwantitatieveWaardeInMinuten.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMinuten.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInOhm": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInOhm",
+    "KwantitatieveWaardeInOhm.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInOhm.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInOhm.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInOhm.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInProcent": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInProcent",
+    "KwantitatieveWaardeInProcent.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInProcent.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInProcent.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInProcent.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInPromille": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille",
+    "KwantitatieveWaardeInPromille.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInPromille.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInRotatiesPerMinuut": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInRPM",
+    "KwantitatieveWaardeInRotatiesPerMinuut.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInRPM.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInRotatiesPerMinuut.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInRPM.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInSeconde": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde",
+    "KwantitatieveWaardeInSeconde.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInSeconde.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInTon": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+    "KwantitatieveWaardeInTon.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInTon.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInUur": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur",
+    "KwantitatieveWaardeInUur.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInUur.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
+    "KwantitatieveWaardeInVierkanteMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMillimeters": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMillimeter",
+    "KwantitatieveWaardeInVierkanteMillimeters.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMillimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMillimeters.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMillimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVolt": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+    "KwantitatieveWaardeInVolt.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVolt.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVoltAmpere": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVoltAmpere",
+    "KwantitatieveWaardeInVoltAmpere.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVoltAmpere.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVoltAmpere.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVoltAmpere.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInWatt": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt",
+    "KwantitatieveWaardeInWatt.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInWatt.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.waarde",
+      "@type": "@id"
+    },
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "RAL-Kleur": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteKleurRAL",
+    "RAL-Kleur.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteKleurRAL.waarde",
+      "@type": "@id"
+    },
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Tekstblok": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok",
+    "Tekstblok.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
+      "@type": "@id"
+    },
+    "Tijd": "http://www.w3.org/2001/XMLSchema#time",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "standaardeenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram.standaardEenheid",
+      "@type": "@id"
+    }
+  }
+}
