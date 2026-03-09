@@ -2,7 +2,4 @@
 #||# 
 #||#   + adding supporting /home/circleci/project/config/dev/Master.publication.json
 #||#  
-Error: the following directories are unsupported
-[
-  "/tmp/generated/doc/implementatiemodel"
-]
+#||#  All directories are supported

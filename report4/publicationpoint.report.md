@@ -1,3 +1,3 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit d4f663d18d88d7d839cead314db89d9ee4b044ed](https://github.com/Informatievlaanderen/wegenenverkeer.data.vlaanderen.be2/commit/d4f663d18d88d7d839cead314db89d9ee4b044ed) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit f921d796ccfbbc1aa10eeac31c65c96dcec2814a](https://github.com/Informatievlaanderen/wegenenverkeer.data.vlaanderen.be2/commit/f921d796ccfbbc1aa10eeac31c65c96dcec2814a) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9728;](/report4/support_publicationpoints.report.md)|
