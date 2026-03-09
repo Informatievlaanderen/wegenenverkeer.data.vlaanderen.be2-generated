@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-03-09T14:09:42.756Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:c484057f8ee08f6422bbd49182b50a8d0dfb5ad9a983ed70432ea0a858812a01](all-grondkerende-constructies.jsonld#L18161).
+2026-03-09T18:35:12.173Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:c484057f8ee08f6422bbd49182b50a8d0dfb5ad9a983ed70432ea0a858812a01](all-grondkerende-constructies.jsonld#L18161).
 
