@@ -1,0 +1,408 @@
+#||# oslo-jsonld-validator   
+
+#||# -------------------------------------  
+
+2026-03-09T13:08:53.405Z info: Loaded 47 URI prefixes into whitelist
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: http://todo.com/ for subject: [urn:oslo-toolchain:7d324fd621e6492ba6b1e85243217b188277c5708815e603a4bbec27a16d62eb](all-brandleiding.jsonld#L139)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject for subject: [[urn:oslo-toolchain:5e65841689bf1d620f8cc3a06dbfaa3ea0b70300b22a89e4895033ab1e777426](all-brandleiding.jsonld#L6524)](all-brandleiding.jsonld#L173)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#SerienummerObject for subject: [[urn:oslo-toolchain:5c425e7bd58f235d034a9d69be04a81b77c6c5e03e24d0ce47ef3803f5c1c43d](all-brandleiding.jsonld#L6547)](all-brandleiding.jsonld#L208)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#BevestigingGC for subject: [[urn:oslo-toolchain:764e12fbf171d27b5d23c6c810e453365458d4a64b97f0a647042b496159881c](all-brandleiding.jsonld#L6570)](all-brandleiding.jsonld#L243)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#LinkendElement for subject: [[urn:oslo-toolchain:f195007fc5764e1690c21483d8934db7e9933f4c12d27b5402b87e279ebbf935](all-brandleiding.jsonld#L6593)](all-brandleiding.jsonld#L278)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject for subject: [[urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82](all-brandleiding.jsonld#L6597)](all-brandleiding.jsonld#L301)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis for subject: [[urn:oslo-toolchain:dc18574aa91818150ed340486a53c1302c9679e36f0a99f8416cb109a8742562](all-brandleiding.jsonld#L6621)](all-brandleiding.jsonld#L353)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Brandvoorziening for subject: [[urn:oslo-toolchain:268924a8fd0793341377e29eef140eb7288c95399446b6ea8c3dcb24c5fea608](all-brandleiding.jsonld#L6625)](all-brandleiding.jsonld#L382)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject for subject: [[urn:oslo-toolchain:10120588cdcc653cd048c25be7f1411cde190c11dab57cb6660b846aa37c10fc](all-brandleiding.jsonld#L6629)](all-brandleiding.jsonld#L405)
+
+2026-03-09T13:08:53.650Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus for subject: [[urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772](all-brandleiding.jsonld#L6653)](all-brandleiding.jsonld#L341)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand for subject: [[urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197](all-brandleiding.jsonld#L6676)](all-brandleiding.jsonld#L344)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMVersie for subject: [[urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec](all-brandleiding.jsonld#L6699)](all-brandleiding.jsonld#L347)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject for subject: [[urn:oslo-toolchain:9bef8bc6f7eb2895cc74554c194f0ade17fbcfa9969ea9c160f4b0aa09137eeb](all-brandleiding.jsonld#L6722)](all-brandleiding.jsonld#L581)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Sturing for subject: [[urn:oslo-toolchain:828ed68d3ab3b6fbf1da0c385b006c233669c9bd81ede469aa24a857d1cffb75](all-brandleiding.jsonld#L6746)](all-brandleiding.jsonld#L646)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt for subject: [[urn:oslo-toolchain:407901cddc339cd8fca02ac7d27a54f9d96c7a03f9252197c46b46f06dca625e](all-brandleiding.jsonld#L6773)](all-brandleiding.jsonld#L675)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestiging for subject: [[urn:oslo-toolchain:504be097ad6fa652dba6787ee9e2cd5ebc62e074e6730e3d2a239f8161ca1d0a](all-brandleiding.jsonld#L6800)](all-brandleiding.jsonld#L704)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#SluitAanOp for subject: [[urn:oslo-toolchain:684b5908a6cf8662c79f3d0f407fb9cd203aec0bff0f84cec06cb2947669d9ce](all-brandleiding.jsonld#L6804)](all-brandleiding.jsonld#L733)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Omhult for subject: [[urn:oslo-toolchain:f665512fdec2a8b2c8b55087624bf351671e97f7b79e06a0cba2c7afa06039dd](all-brandleiding.jsonld#L6808)](all-brandleiding.jsonld#L762)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Persleiding for subject: [urn:oslo-toolchain:354186d2591fe28e649921352440d110752c414e579247c6e56f6c5cec9fbe5f](all-brandleiding.jsonld#L791)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel for subject: [[urn:oslo-toolchain:549c928770a2db8ae46669a1c6e50bfc89301132108bbb86d850333fce31b021](all-brandleiding.jsonld#L6812)](all-brandleiding.jsonld#L895)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Stroomkring for subject: [[urn:oslo-toolchain:4db629757d04ff1a3cc9834ca0bbb8875d6aadb42ec2defcbe3fe40523f44d38](all-brandleiding.jsonld#L6816)](all-brandleiding.jsonld#L927)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart for subject: [[urn:oslo-toolchain:fb4862be3e377ce9ed30d9eb32e0d94693c4c4f2dc307d2b4b09fff51093a1fc](all-brandleiding.jsonld#L6820)](all-brandleiding.jsonld#L956)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Hydrant for subject: [[urn:oslo-toolchain:d308a9e883f9d4cb936c3ed48b605a1d82426a3bfc5a269f32a8727cd194658f](all-brandleiding.jsonld#L6824)](all-brandleiding.jsonld#L1166)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#StuurklepBrandleiding for subject: [urn:oslo-toolchain:ce19692cbab76345b0604c7dc00db938a66a469ef158f816782a221e5b24ad36](all-brandleiding.jsonld#L1198)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#OntluchterBrandleiding for subject: [urn:oslo-toolchain:cdd83a129f1b4120a9bb63e4dede7285b109aca901fc3f7b189a8073ec163ac9](all-brandleiding.jsonld#L1227)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel for subject: [[urn:oslo-toolchain:776b6b8e35727214307dfa34c26df189ac1d03a3170bfab37580268d6f5f7bde](all-brandleiding.jsonld#L6828)](all-brandleiding.jsonld#L1256)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandleiding for subject: [urn:oslo-toolchain:96642a7186f7b7e2f467c7a0f783dccf49fd8f7cb5f1d5b06777bceab05faa67](all-brandleiding.jsonld#L1288)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukverhogingsgroep for subject: [[urn:oslo-toolchain:1b55b30f1532ceab763f0695b382977a1ebb2e6157baf5338379959f1e33ef06](all-brandleiding.jsonld#L6832)](all-brandleiding.jsonld#L1317)
+
+2026-03-09T13:08:53.651Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#VulpuntBrandweer for subject: [urn:oslo-toolchain:7fbf7acf3ee32463b465ef162ec39f84c58641d0cb519f73db15dc36a7d0cfa5](all-brandleiding.jsonld#L1349)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingslint for subject: [[urn:oslo-toolchain:69e1341942c0fcbd70b0174ee11eac0aca5c9639e1ca633d6c21d9e26766c2d6](all-brandleiding.jsonld#L6836)](all-brandleiding.jsonld#L1428)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingselement for subject: [[urn:oslo-toolchain:bb9bb3eba8a132b92ba36de8fa87794888b5d37d1dd54bf03433dbe57384b285](all-brandleiding.jsonld#L6840)](all-brandleiding.jsonld#L1507)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject.componentnummer for subject: [urn:oslo-toolchain:1c86e7fb2300bb536c6b7d4ddb938a467a8540edb7793ae9675eaec0f608c487](all-brandleiding.jsonld#L1538)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer for subject: [urn:oslo-toolchain:2bcfc8e604f3f2f0518d16b02db7bf96d2b9248859d26a2d348e060bba6ccb65](all-brandleiding.jsonld#L1576)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#LinkendElement.technischeFiche for subject: [urn:oslo-toolchain:4866a903de636f0bc1ac30df558d29eba64e2127bcfd69c96d3fbfcb719c87c7](all-brandleiding.jsonld#L1614)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.toestandBuis for subject: [urn:oslo-toolchain:90c11d1a382667a97542bb71404371fc9cde920bf2e4c0a70d2858135dd8cdf8](all-brandleiding.jsonld#L1652)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedte for subject: [urn:oslo-toolchain:4cd750d1ae0e8a079c2057ae470dc3724ac7f83a68fa995a62755b66ef7e3ae7](all-brandleiding.jsonld#L1690)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.hoogteBinnenzijde for subject: [urn:oslo-toolchain:012850ec5b2562ca2ede95a1d762d5a464c4c445c1269269d6c162219612923f](all-brandleiding.jsonld#L1734)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.isManToegankelijk for subject: [urn:oslo-toolchain:9029e616a6cd8d05ea5b37e796575cd04ed66d8d27940c1df9eeb686b10418d3](all-brandleiding.jsonld#L1772)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.vorm for subject: [urn:oslo-toolchain:db8dc14a4a45cc962e379a3cf1d98019d5fa2eb7e9ddef5d86d6a02e8c9787c2](all-brandleiding.jsonld#L1810)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.diepteOpwaarts for subject: [urn:oslo-toolchain:ebaf1e1e1cd1a14b38f03e35a4dd91e176b71a0264da749abc7cba24b25a2ea8](all-brandleiding.jsonld#L1848)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.technischeFiche for subject: [urn:oslo-toolchain:07f9d6ae9ed22567eed5c8786b49f75983987e4321a391106d99667a80ebf4cd](all-brandleiding.jsonld#L1886)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.bokOpwaarts for subject: [urn:oslo-toolchain:aaef7957fd9daecfdf7bb60648eac464d23d3de931d452678d78025298028509](all-brandleiding.jsonld#L1930)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.diepteAfwaarts for subject: [urn:oslo-toolchain:5434aac5a004354802df71ac5853cd65bd14a8ded977a752b37a65a41f157e2c](all-brandleiding.jsonld#L1968)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.bokAfwaarts for subject: [urn:oslo-toolchain:287c51252b101a05010e54a41a6e9ece78d275c42707b78b72b596966309e0d9](all-brandleiding.jsonld#L2006)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.lengte for subject: [urn:oslo-toolchain:c8113e017a93b4b673a2300a15a314c14340be18f2396ec0ba55cea75470f777](all-brandleiding.jsonld#L2044)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.helling for subject: [urn:oslo-toolchain:8bb2e261a110b271819ef28e1ac1aefd91abe2ccca6a1fe7832ff855d4b6c18d](all-brandleiding.jsonld#L2082)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.hoogteBuitenzijde for subject: [urn:oslo-toolchain:05b0b213cb9a4912f444bff53c290511edba8443991f53f86a21df5ef4e288a0](all-brandleiding.jsonld#L2120)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBinnenzijde for subject: [urn:oslo-toolchain:601b954657faceb716407d94a2810514cdc577e038d7ba5f726bf014cadab999](all-brandleiding.jsonld#L2158)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.isOpgevuld for subject: [urn:oslo-toolchain:1c315ce71bb0a1642bec43350eeec87338724a8d1a242b351ab514209d6a570d](all-brandleiding.jsonld#L2196)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBuitenzijde for subject: [urn:oslo-toolchain:dbaee9e4289836650cb47d7b09ffd67c44d2b5a63e14d7a2435c64fa6ca2ab91](all-brandleiding.jsonld#L2234)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief for subject: [urn:oslo-toolchain:ee02d37b9a0d637dc5622070a1ce0c50a5b7b663ad02f3f5f87a70c184b720b2](all-brandleiding.jsonld#L2272)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand for subject: [urn:oslo-toolchain:7412be51881ba7fb98060b298c9e6052e10d0811544107b2a48d56ba9e440c23](all-brandleiding.jsonld#L2310)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam for subject: [urn:oslo-toolchain:0130a3c18060618927ccddf2907a3ebdcbab664b83a0825d36716bafb6cd7f94](all-brandleiding.jsonld#L2348)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId for subject: [urn:oslo-toolchain:d3e9a7b2a2d09ca76c19d132936cdd642c7e8af2aa695dd9742fa4b8a55256ab](all-brandleiding.jsonld#L2392)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie for subject: [urn:oslo-toolchain:3a883d54c6aa30c6ac0860ec3086fe82ddc435b8d4aad458ba2b5515b99656b1](all-brandleiding.jsonld#L2430)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer for subject: [urn:oslo-toolchain:a236b57eef933c5b37c8cbd64c3543597229bcf703ce393ab895bf8864074138](all-brandleiding.jsonld#L2468)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI for subject: [urn:oslo-toolchain:d04e238a663c967c02c3ca3d392a1efe1e7ba9afd8725025ccc72e5bbaa39720](all-brandleiding.jsonld#L2506)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer for subject: [urn:oslo-toolchain:8fd1bf51c3748ede1f198b8f0a51cc0d67e250643dc060f1c7a5601a73a703a7](all-brandleiding.jsonld#L2544)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur for subject: [urn:oslo-toolchain:f72098f933fa574836d54f73eaee5c0b2cf002abb6a28686724a818c123ef494](all-brandleiding.jsonld#L2588)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject for subject: [urn:oslo-toolchain:b19bb340d1041f99dcfb3c14735cc928de9c7345fdb8d229ef66e7421852ebb8](all-brandleiding.jsonld#L2626)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie for subject: [urn:oslo-toolchain:53ef139079ab62315664ef622073d4242422560a80a212b1ed04936216242b24](all-brandleiding.jsonld#L2664)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject.naampad for subject: [urn:oslo-toolchain:d4641df998edaae8da77f7646ab781d6d740c6b999b0c7c03d3cb6e4e8167e89](all-brandleiding.jsonld#L2702)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator for subject: [urn:oslo-toolchain:752e05ed391506a46a8178422ee7f41ccdba4a3c82093b2ab723517fafbaae0f](all-brandleiding.jsonld#L2746)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor for subject: [urn:oslo-toolchain:f589d70ae68d9bf090f8d4d7b19775926360e537940f0360e8f2d343996ca082](all-brandleiding.jsonld#L2784)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer for subject: [urn:oslo-toolchain:5704bd3f73708e39acd715d4eb501a2d7a32ee0cb089a8cfa79d6966b0f83a21](all-brandleiding.jsonld#L2822)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp for subject: [urn:oslo-toolchain:d83587f7fa7dd2f745095fc16c71ac3e220d30f87a54f32f58ef6673f6cc2250](all-brandleiding.jsonld#L2860)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context for subject: [urn:oslo-toolchain:4cd753bd997e5e5c031fc99981d6caef2a6e591a000d0e2be7a09de76053372f](all-brandleiding.jsonld#L2898)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri for subject: [urn:oslo-toolchain:a2c561508f99c68973298832489a789cae4b9440461651efbd92a64a6cd0e1da](all-brandleiding.jsonld#L2936)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam for subject: [urn:oslo-toolchain:593dd3d1b80d5a9a2aa6d915129278ba98a210095b51c17de89fe9409182972c](all-brandleiding.jsonld#L2974)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving for subject: [urn:oslo-toolchain:5767069d7d36393f999976a91d16b5613c5f4d53bde3fb1dbda5ee52156507c6](all-brandleiding.jsonld#L3012)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType for subject: [urn:oslo-toolchain:a14f6b6ea88c9b92e9ff64021a02f375d611ebea201bf7f7b357ae4132b9c488](all-brandleiding.jsonld#L3050)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum for subject: [urn:oslo-toolchain:b00083dfdb12e5a9b97c3f4d49394b117af7dd6e8cddb9ebe03d8974b69a93b6](all-brandleiding.jsonld#L3088)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde for subject: [urn:oslo-toolchain:d2dae4610d30fe8c103a2318fe737cc72046f55e8c1a4dda6923cbc8fa369f13](all-brandleiding.jsonld#L3126)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.waarde for subject: [urn:oslo-toolchain:abb8f62e3e5178caab29b4e587c2bd1fb8d9ef922f905806884a4fdae838aa4b](all-brandleiding.jsonld#L3164)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.standaardEenheid for subject: [urn:oslo-toolchain:9d1401d02f9a752e3706ccf6ecbce173a5d96beac2b42423ce45b1647bc2db9c](all-brandleiding.jsonld#L3202)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter.standaardEenheid for subject: [urn:oslo-toolchain:0c39225bd1a196be38225aa16412e72d45046dcc00193e9614b05dc9fe57411c](all-brandleiding.jsonld#L3246)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter.waarde for subject: [urn:oslo-toolchain:c34da144edf958e69e4e719c34dba07a6b8931b6d0337ef0d68a4e9721198324](all-brandleiding.jsonld#L3290)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch.waarde for subject: [urn:oslo-toolchain:25f4c24fc92bb9367872eb4c67cc620e42a764088e103c78746e2016774fd646](all-brandleiding.jsonld#L3328)
+
+2026-03-09T13:08:53.652Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch.standaardEenheid for subject: [urn:oslo-toolchain:779a02457924d22ed0633dd6fc0da0eea98bc0098263f7eb528d1fb17c053fb0](all-brandleiding.jsonld#L3366)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid for subject: [urn:oslo-toolchain:d5bdf33c94abd0c744aafc19f1619540742bd1e994745e045e6b723c45fbef08](all-brandleiding.jsonld#L3410)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde for subject: [urn:oslo-toolchain:4ea99585e1a959eb6ad29ebd67f8db99af74d4efa5bbbcac76bd86d77c651fd4](all-brandleiding.jsonld#L3454)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid for subject: [urn:oslo-toolchain:365119dd307e458dbb28181d8b55819ff8e58bd70ee4371ec2b4727747c6856b](all-brandleiding.jsonld#L3492)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.waarde for subject: [urn:oslo-toolchain:cdaa70bf6f4b99632f42685e8ccf6d513e1773cac5e863c92f47ecf38fe0c368](all-brandleiding.jsonld#L3536)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde for subject: [urn:oslo-toolchain:b1339c7a538a58c8984c24c264c5d2b3d6cd79d3ab7632a26e6ea93042f76349](all-brandleiding.jsonld#L3574)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid for subject: [urn:oslo-toolchain:9302e9a007eb723562f96577766f1bbb0aa8ad845cc808aa63a964cb56383a71](all-brandleiding.jsonld#L3612)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde for subject: [urn:oslo-toolchain:9ed77d0a39441274237bfb6f24293e948f154ce3f47995ce5c866b28f82f77de](all-brandleiding.jsonld#L3656)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid for subject: [urn:oslo-toolchain:cdaccc8977223a35ad322c1156c384336c736352c2b1592989fc9b19ad23a8bc](all-brandleiding.jsonld#L3694)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde.standaardEenheid for subject: [urn:oslo-toolchain:56d03b880049208a384f7bcd4d05a1fc63372b65a66a9947708e2f291e6aaed5](all-brandleiding.jsonld#L3738)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde.waarde for subject: [urn:oslo-toolchain:cf6deff8f3dae79ce4ff84b7854565443b949f68fc7eb5cc2e937e376025f260](all-brandleiding.jsonld#L3782)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde for subject: [urn:oslo-toolchain:73bae71ad186108246fc8f07d4d35a216e229c7cd336d5547b2af23e873e3a45](all-brandleiding.jsonld#L3820)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid for subject: [urn:oslo-toolchain:4e12c6fa03abacb104ff2d17894eef4483633ced166e246159588ff1653e1ffb](all-brandleiding.jsonld#L3858)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde for subject: [urn:oslo-toolchain:0de1921758bca38c55a86c0445e9bc6dd48f76a12c2fd7c863330232fcc1aa46](all-brandleiding.jsonld#L3902)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid for subject: [urn:oslo-toolchain:8ac99934c54edd9c8bb74e6886e1dc1b306ae481a70228f06a9c6d772754945f](all-brandleiding.jsonld#L3940)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille.waarde for subject: [urn:oslo-toolchain:21f2b4205f08bd041720760255e27e4ff0bce823f04692bbd7b1e16cc0694226](all-brandleiding.jsonld#L3984)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille.standaardEenheid for subject: [urn:oslo-toolchain:fbb4f3af26ea5339ddcff10df6251309d87197cca5b2896cbe906d07055db830](all-brandleiding.jsonld#L4022)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.waarde for subject: [urn:oslo-toolchain:a0f6bab80b22d4d0b3cc4ca53c8062a58b40269437235db97e8e1ccff90f21ee](all-brandleiding.jsonld#L4066)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.standaardEenheid for subject: [urn:oslo-toolchain:fab3239841b92c1251b776bf300e5b88e420f6877ba49a7efd6e061e704babd2](all-brandleiding.jsonld#L4104)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt.waarde for subject: [urn:oslo-toolchain:5ee29c12e2cba0ee0d834bf7e7c1c7d1bed3da9c7685bf909d420c622cfcdb5c](all-brandleiding.jsonld#L4148)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt.standaardEenheid for subject: [urn:oslo-toolchain:25b044f9ffaee8076f249f4a74cf55767744136355d4f7ab47df1434d43903cc](all-brandleiding.jsonld#L4186)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitspanning for subject: [urn:oslo-toolchain:a73cf7c1ab024b89b4192c78e78601c2782fc66804e983de97802ff948cff026](all-brandleiding.jsonld#L4230)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen for subject: [urn:oslo-toolchain:ae5d1ea784868c45d9bb878ead08bbf6235fdc8ce738d5ae9c144944d5e17896](all-brandleiding.jsonld#L4268)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Persleiding.materiaal for subject: [urn:oslo-toolchain:0bb2f9b19201e2af885b9c35aa5460910fe34a187a0c366ce3ccd34a746b8c6a](all-brandleiding.jsonld#L4312)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Persleiding.sdrKlasse for subject: [urn:oslo-toolchain:a9ae92639109a865da8650e367c9945f66f4d93c61063caaff986f84e32fdeb8](all-brandleiding.jsonld#L4350)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.type for subject: [urn:oslo-toolchain:9c871186523fee47bd514d331347dcab3a754d9551a54ffd92eeb4f9cd0ad2ea](all-brandleiding.jsonld#L4388)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.berekeningsnota for subject: [urn:oslo-toolchain:c5d5918b7d831823599d1cc4856893070cd2a64abad014dd20fbed6e792eef2e](all-brandleiding.jsonld#L4426)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.constructieEnMontageplan for subject: [urn:oslo-toolchain:1b0613095b96d61a6f45b43e2cd4df619a67918a9e7a30fa3fbda8c174100f46](all-brandleiding.jsonld#L4470)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.isVerzegeld for subject: [urn:oslo-toolchain:6e18cbb4f0ce425be51f9e6b3205ba5a336a28b032a12971c817e2c87b001a29](all-brandleiding.jsonld#L4514)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.heeftVeiligheidsstrip for subject: [urn:oslo-toolchain:14b169c7632fce501a8147de7c6d8f3facb46fdaecd5aec9ebc8c977f1dec170](all-brandleiding.jsonld#L4552)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel for subject: [urn:oslo-toolchain:9b02181b2b0fe9e7acd0d6039e649eb4ec16059554867a4d8acffa75eff72c22](all-brandleiding.jsonld#L4590)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche for subject: [urn:oslo-toolchain:093cf9463fbea0d245c9fa95305d63498e3d371735ec42746ac1b795541e74b5](all-brandleiding.jsonld#L4628)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Stroomkring.stroomkringnummer for subject: [urn:oslo-toolchain:ee4305c000a32e0bbdb2ccfef9f14891eac8ffbdd6bcdd297cd5a5641a347a12](all-brandleiding.jsonld#L4672)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.poortadres for subject: [urn:oslo-toolchain:da4568542f3c6a78433953e9157064270ea0b777b465e3dfffec64e6d430dd97](all-brandleiding.jsonld#L4710)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.firmwareversie for subject: [urn:oslo-toolchain:89647a68c6c851ef95459fde0fd42188e4d2b89b8311813aa4d1c1108063af2e](all-brandleiding.jsonld#L4748)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.merk for subject: [urn:oslo-toolchain:85e95efb6fd365734cebdec8a2adf514232cdfd8e87f6be72230b21619afe734](all-brandleiding.jsonld#L4786)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.richting for subject: [urn:oslo-toolchain:7a7458790708153b053acd03932192b4016f20ff9cb19995dcaf6ea78b1f7887](all-brandleiding.jsonld#L4824)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.signaalType for subject: [urn:oslo-toolchain:4844c8a6bcba3ff3357e92d3d5355047586b2ed12767a1ea2d51a3bef0a05c22](all-brandleiding.jsonld#L4862)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.bitsnelheid for subject: [urn:oslo-toolchain:d8cf5c59418c2ac3fc7083402e31356fe525126841580381b0c5c9c28d132e31](all-brandleiding.jsonld#L4900)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche for subject: [urn:oslo-toolchain:128799a50273eedf36be24a775425bc3464e3903fae96615798cf30c2b509ca8](all-brandleiding.jsonld#L4938)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IOKaart.modelnaam for subject: [urn:oslo-toolchain:db12fb8cdc21717a970e1aa0c226667ca2d0e2d3d468d4927d0194c45ff48ba4](all-brandleiding.jsonld#L4976)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Hydrant.koppeling for subject: [urn:oslo-toolchain:bd352dafedace35674f492aaa5c5b75a7ec177f6437d42b32033085e8cd54883](all-brandleiding.jsonld#L5014)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Hydrant.diameter for subject: [urn:oslo-toolchain:40e2d849d05cfd1d7084606286c83aa2a1f2b57eb54f4a5036c157594fd8e290](all-brandleiding.jsonld#L5052)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Hydrant.heeftEigenAfsluitkraan for subject: [urn:oslo-toolchain:35104744822bf91cd25e6dfaec45e8a712c42df23467e62b224521ecdf639abc](all-brandleiding.jsonld#L5090)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Hydrant.heeftIsolatie for subject: [urn:oslo-toolchain:1df25c8e8edc2981df21c668d5c52c9779fe1de402e47081881ff73b9307ef24](all-brandleiding.jsonld#L5128)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#StuurklepBrandleiding.heeftLeegloopklep for subject: [urn:oslo-toolchain:8653026cc864df209a9422ebce701959c7e29129be5697e81b0426480bab7073](all-brandleiding.jsonld#L5166)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.slangLengte for subject: [urn:oslo-toolchain:457ca3b63eeae92e6a5afbd9cead38de139d2d005ba10da8e916d8085a4d77a8](all-brandleiding.jsonld#L5204)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.keuringsdatum for subject: [urn:oslo-toolchain:ff1cd96fedf071a2b1403a16c7b725fc20d2b4b1cb8c7bf216a5c9e8b8999c03](all-brandleiding.jsonld#L5242)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.maximaalVolumedebiet for subject: [urn:oslo-toolchain:e9746f43df94ca6debd42a3d1091325abbf48430da14d7e403924863c46cb918](all-brandleiding.jsonld#L5280)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.maximaalDebiet for subject: [urn:oslo-toolchain:de7e09ea1e8e543baf86a925393abb9151de6e95510da2b8f11e41d3e8b178c4](all-brandleiding.jsonld#L5318)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.merk for subject: [urn:oslo-toolchain:29e05269db01d38018e4b6e41e96e9fc5c3b85f93b7479192694110fd0eef61d](all-brandleiding.jsonld#L5362)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.modelnaam for subject: [urn:oslo-toolchain:d1f0fc29ac7adc5a5fa52265f592e1834ccb4a2e4bee970dcff7c38e0aea728f](all-brandleiding.jsonld#L5400)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandhaspel.buitendiameter for subject: [urn:oslo-toolchain:887a5b8b574e073428d6e212700287a68c5ca5bc6e119a412fc4ce7d7af99546](all-brandleiding.jsonld#L5438)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandleiding.leidingdruk for subject: [urn:oslo-toolchain:3258f7df83e2ca62cd4ccc9bbd5e70616f69eaf7a4e53afb2dd8f9944166ee58](all-brandleiding.jsonld#L5476)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Brandleiding.isGeisoleerd for subject: [urn:oslo-toolchain:c494cd25c12f92570097d94731f856913c2e2f83dcb109b0aac27705d97c6e7e](all-brandleiding.jsonld#L5514)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukverhogingsgroep.inkomendeDruk for subject: [urn:oslo-toolchain:ef3abcbef34e3746fb4df80ad835eb4f76f28e79390eca686e9e6c7f9de95311](all-brandleiding.jsonld#L5552)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukverhogingsgroep.uitgaandeDruk for subject: [urn:oslo-toolchain:dea68d912b3dc8430bd5dadfd712327bce4db7ad1d091b241c4aef1baa5f4a8f](all-brandleiding.jsonld#L5590)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukverhogingsgroep.vermogen for subject: [urn:oslo-toolchain:4994345073a3148916050b8b1c0c5ccfbdc3886bf7a6bdd9fc3516c655ff1d2d](all-brandleiding.jsonld#L5628)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingslint.vermogen for subject: [urn:oslo-toolchain:bf6f6aa05056836a823607d56beb082395f962f9f9f7aa33d3b1a8ea6046db68](all-brandleiding.jsonld#L5666)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingselement.vermogen for subject: [urn:oslo-toolchain:adcecb17d54f5daea57f56bfaec4925cdaefc42cf3d3688c0df61c57cbeb6979](all-brandleiding.jsonld#L5704)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingselement.merk for subject: [urn:oslo-toolchain:d74c7ff235e7233437fdef284718147703d0ff031bc3cb066dfa195b4a23121a](all-brandleiding.jsonld#L5742)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verwarmingselement.modelnaam for subject: [urn:oslo-toolchain:ecc510091f6c7a33da017d14192dda3c7f86e52ee1e5bb48a24f0014aec53fa6](all-brandleiding.jsonld#L5780)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/brandleiding/#Sluit%20aan%20op for subject: [urn:oslo-toolchain:6facefea3f1b60d4d26645ca56e4babbe0c233375b962ef1547ca571fed8b98c](all-brandleiding.jsonld#L5818)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/brandleiding/#Omhult for subject: [urn:oslo-toolchain:4125190520af23195ca26095f8bdd35706bfff9b1b5f6078b1dfb4bcda91e544](all-brandleiding.jsonld#L5842)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator for subject: [urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d](all-brandleiding.jsonld#L5874)
+
+2026-03-09T13:08:53.653Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie for subject: [urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58](all-brandleiding.jsonld#L5898)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument for subject: [urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933](all-brandleiding.jsonld#L5922)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok for subject: [urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce](all-brandleiding.jsonld#L5946)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt for subject: [urn:oslo-toolchain:7cc13ab56b62e83fdc38cd5d288ceeca6495e42fce3d88820f6281dca8be0eb9](all-brandleiding.jsonld#L5970)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter for subject: [urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989](all-brandleiding.jsonld#L5994)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch for subject: [urn:oslo-toolchain:261e1bd29b210a25524f683095dc90f56bb466bebcb5668b91a36e213b575348](all-brandleiding.jsonld#L6018)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter for subject: [urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560](all-brandleiding.jsonld#L6042)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW for subject: [urn:oslo-toolchain:f71790210f43985c353a71bcb3f275d5a7ba598d6058fcf1d22211d15da20cbf](all-brandleiding.jsonld#L6066)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter for subject: [urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38](all-brandleiding.jsonld#L6090)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt for subject: [urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6](all-brandleiding.jsonld#L6114)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde for subject: [urn:oslo-toolchain:d1b44077152e812590e111dee785ac7b0488b7cabdd0138dab986e93ece5aef0](all-brandleiding.jsonld#L6138)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand for subject: [urn:oslo-toolchain:68fb9c68c29c48fdc06aac35f98b63be5350d1bb98fc47241de8f97a12354d79](all-brandleiding.jsonld#L6162)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter for subject: [urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53](all-brandleiding.jsonld#L6186)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInPromille for subject: [urn:oslo-toolchain:86da3e5b48aa5518c891803c8f386fb7140fa5c4b4d17ce3b963b5e350b190da](all-brandleiding.jsonld#L6210)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar for subject: [urn:oslo-toolchain:2b55fc9b01fe813c744baec26092c737676eb4840ee684b38c86766978e508fe](all-brandleiding.jsonld#L6234)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt for subject: [urn:oslo-toolchain:290e1e35e171ffaf45476ae73ff75ff0f7a3b400e33a3770f81d53542ed5052d](all-brandleiding.jsonld#L6258)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie for subject: [urn:oslo-toolchain:ed683849367dcb78939a30ba21508d2b5cac2d3a07293cbedc32dbc9b3591084](all-brandleiding.jsonld#L6750)
+
+2026-03-09T13:08:53.654Z warn: Found non-whitelisted assigned URI: https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie for subject: [urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e](all-brandleiding.jsonld#L6777)
+
+2026-03-09T13:08:53.657Z warn: Found sentence without a '.': 'Attribuut uit gebruik sinds versie 2.1.0' for subject: [urn:oslo-toolchain:4cd750d1ae0e8a079c2057ae470dc3724ac7f83a68fa995a62755b66ef7e3ae7](all-brandleiding.jsonld#L1690)
+
+2026-03-09T13:08:53.657Z warn: Found sentence without a '.': 'Attribuut uit gebruik sinds versie 2.1.0' for subject: [urn:oslo-toolchain:ae5d1ea784868c45d9bb878ead08bbf6235fdc8ce738d5ae9c144944d5e17896](all-brandleiding.jsonld#L4268)
+
+2026-03-09T13:08:53.657Z warn: Found sentence without a '.': '"W"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:9d1401d02f9a752e3706ccf6ecbce173a5d96beac2b42423ce45b1647bc2db9c](all-brandleiding.jsonld#L3202)
+
+2026-03-09T13:08:53.657Z warn: Found sentence without a '.': '"m3"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:0c39225bd1a196be38225aa16412e72d45046dcc00193e9614b05dc9fe57411c](all-brandleiding.jsonld#L3246)
+
+2026-03-09T13:08:53.657Z warn: Found sentence without a '.': '"[in_i]"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:779a02457924d22ed0633dd6fc0da0eea98bc0098263f7eb528d1fb17c053fb0](all-brandleiding.jsonld#L3366)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"m"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:d5bdf33c94abd0c744aafc19f1619540742bd1e994745e045e6b723c45fbef08](all-brandleiding.jsonld#L3410)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"m"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:365119dd307e458dbb28181d8b55819ff8e58bd70ee4371ec2b4727747c6856b](all-brandleiding.jsonld#L3492)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"cm"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:9302e9a007eb723562f96577766f1bbb0aa8ad845cc808aa63a964cb56383a71](all-brandleiding.jsonld#L3612)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"V"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:cdaccc8977223a35ad322c1156c384336c736352c2b1592989fc9b19ad23a8bc](all-brandleiding.jsonld#L3694)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"m3/s"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:56d03b880049208a384f7bcd4d05a1fc63372b65a66a9947708e2f291e6aaed5](all-brandleiding.jsonld#L3738)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"mo"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:4e12c6fa03abacb104ff2d17894eef4483633ced166e246159588ff1653e1ffb](all-brandleiding.jsonld#L3858)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"mm"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:8ac99934c54edd9c8bb74e6886e1dc1b306ae481a70228f06a9c6d772754945f](all-brandleiding.jsonld#L3940)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"‰"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:fbb4f3af26ea5339ddcff10df6251309d87197cca5b2896cbe906d07055db830](all-brandleiding.jsonld#L4022)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"bar"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:fab3239841b92c1251b776bf300e5b88e420f6877ba49a7efd6e061e704babd2](all-brandleiding.jsonld#L4104)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': '"kW"^^cdt:ucumunit' for subject: [urn:oslo-toolchain:25b044f9ffaee8076f249f4a74cf55767744136355d4f7ab47df1434d43903cc](all-brandleiding.jsonld#L4186)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': 'Attribuut uit gebruik sinds versie 2.0.0' for subject: [urn:oslo-toolchain:de7e09ea1e8e543baf86a925393abb9151de6e95510da2b8f11e41d3e8b178c4](all-brandleiding.jsonld#L5318)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without a '.': 'Relatie uit gebruik sinds versie 2.8.0' for subject: [urn:oslo-toolchain:4125190520af23195ca26095f8bdd35706bfff9b1b5f6078b1dfb4bcda91e544](all-brandleiding.jsonld#L5842)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'http://www.w3.org/2000/01/rdf-schema#Literal' for subject: [urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f](all-brandleiding.jsonld#L6282)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#dateTime' for subject: [urn:oslo-toolchain:01c39cfc6f93e5e11216149f6e5c90fcd10fad8e09f2f49a5871a51bdbf6fd34](all-brandleiding.jsonld#L6312)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#decimal' for subject: [urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5](all-brandleiding.jsonld#L6342)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#date' for subject: [urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145](all-brandleiding.jsonld#L6372)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger' for subject: [urn:oslo-toolchain:c8a754f84072ba233ac7c173f20ac8e47ac8bf0e079ed2a90007980aab80b565](all-brandleiding.jsonld#L6402)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#anyURI' for subject: [urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6](all-brandleiding.jsonld#L6432)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#string' for subject: [urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba](all-brandleiding.jsonld#L6462)
+
+2026-03-09T13:08:53.658Z warn: Found sentence without capital letter: 'https://www.w3.org/TR/xmlschema-2/#boolean' for subject: urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'IO-Kaart' for subject: [[urn:oslo-toolchain:fb4862be3e377ce9ed30d9eb32e0d94693c4c4f2dc307d2b4b09fff51093a1fc](all-brandleiding.jsonld#L6820)](all-brandleiding.jsonld#L956)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'IO-kaart modelnaam' for subject: [urn:oslo-toolchain:1ef66738c79a9109ca2fa9303394ec60609eff130ec4e4530fb9432e28524fce](all-brandleiding.jsonld#L991)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'IO-kaart merken' for subject: [urn:oslo-toolchain:50111dde9c71a8618a98752037189ce8809cb733e4c9871a240a2e1685059ec5](all-brandleiding.jsonld#L1066)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'IO-kaart signaaltype' for subject: [urn:oslo-toolchain:f8a941bca67c812225459c218cccd828014819304b4764ca92a41ffa1e6c3589](all-brandleiding.jsonld#L1091)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'AIM-toestand' for subject: [urn:oslo-toolchain:7412be51881ba7fb98060b298c9e6052e10d0811544107b2a48d56ba9e440c23](all-brandleiding.jsonld#L2310)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'asset-id' for subject: [urn:oslo-toolchain:d3e9a7b2a2d09ca76c19d132936cdd642c7e8af2aa695dd9742fa4b8a55256ab](all-brandleiding.jsonld#L2392)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'asset-versie' for subject: [urn:oslo-toolchain:53ef139079ab62315664ef622073d4242422560a80a212b1ed04936216242b24](all-brandleiding.jsonld#L2664)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'mime-type' for subject: [urn:oslo-toolchain:a14f6b6ea88c9b92e9ff64021a02f375d611ebea201bf7f7b357ae4132b9c488](all-brandleiding.jsonld#L3050)
+
+2026-03-09T13:08:53.659Z warn: Labels must only contain alphabetical characters: 'Niet-directionele relatie' for subject: [urn:oslo-toolchain:ed683849367dcb78939a30ba21508d2b5cac2d3a07293cbedc32dbc9b3591084](all-brandleiding.jsonld#L6750)
+
+2026-03-09T13:08:53.659Z warn: Found base URI with TODO or FIXME: [urn:oslo-toolchain:7d324fd621e6492ba6b1e85243217b188277c5708815e603a4bbec27a16d62eb](all-brandleiding.jsonld#L139)
+
+2026-03-09T13:08:53.670Z info: Validation found 161 non-whitelisted assigned URIs
+
+2026-03-09T13:08:53.670Z info: Validation found 25 sentences with spelling mistakes.
+
+2026-03-09T13:08:53.670Z info: Validation found 9 labels with spelling mistakes.
+
+2026-03-09T13:08:53.670Z info: Validation found 9 invalid base URIs.
+
+2026-03-09T13:08:53.670Z info: Validation successful! All referenced classes and attributes seem to be included.
+

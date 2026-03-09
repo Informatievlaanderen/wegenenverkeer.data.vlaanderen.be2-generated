@@ -1,0 +1,2374 @@
+{
+  "@context": {
+    "oslo": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
+    "packages": "@included",
+    "classes": "@included",
+    "datatypes": "@included",
+    "attributes": "@included",
+    "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
+    "baseURI": {
+      "@id": "oslo:baseURI",
+      "@type": "@id"
+    },
+    "vocDefinition": {
+      "@id": "oslo:vocDefinition",
+      "@container": "@set"
+    },
+    "apDefinition": {
+      "@id": "oslo:apDefinition",
+      "@container": "@set"
+    },
+    "vocLabel": {
+      "@id": "oslo:vocLabel",
+      "@container": "@set"
+    },
+    "apLabel": {
+      "@id": "oslo:apLabel",
+      "@container": "@set"
+    },
+    "diagramLabel": {
+      "@id": "oslo:diagramLabel"
+    },
+    "scope": {
+      "@id": "oslo:scope",
+      "@type": "@id"
+    },
+    "vocUsageNote": {
+      "@id": "oslo:vocUsageNote",
+      "@container": "@set"
+    },
+    "apUsageNote": {
+      "@id": "oslo:apUsageNote",
+      "@container": "@set"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@container": "@set"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "minCount": {
+      "@id": "sh:minCount"
+    },
+    "maxCount": {
+      "@id": "sh:maxCount"
+    },
+    "parent": {
+      "@id": "rdfs:subClassOf",
+      "@type": "owl:Class"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime"
+    },
+    "Package": "oslo:Package",
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "DatatypeProperty": {
+      "@id": "owl:DatatypeProperty"
+    },
+    "ObjectProperty": {
+      "@id": "owl:ObjectProperty"
+    },
+    "authors": {
+      "@type": "foaf:Person",
+      "@id": "foaf:maker"
+    },
+    "editors": {
+      "@type": "foaf:Person",
+      "@id": "rec:editor"
+    },
+    "contributors": {
+      "@type": "foaf:Person",
+      "@id": "dcterms:contributor"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "assignedURI": {
+      "@id": "oslo:assignedURI",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
+    },
+    "codelist": {
+      "@id": "oslo:codelist",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "adms:status",
+      "@type": "@id"
+    },
+    "extensions": {
+      "@id": "oslo:extensions",
+      "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
+    }
+  },
+  "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.18.1",
+  "generatedAtTime": "2026-03-09T13:05:16.015Z",
+  "packages": [
+    {
+      "@id": "urn:oslo-toolchain:87e9e1a2a6e27186fd149269e9f8cd3e2de6deb77f582c810c21d67875c79562",
+      "@type": "Package",
+      "assignedURI": "http://todo.com/",
+      "baseURI": "http://todo.com/",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "classes": [
+    {
+      "@id": "urn:oslo-toolchain:59a7b2a3a0ae70ddc932743010a317f0a7c300c0d53afa9f9af4d61c68e45484",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Schoorhoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlSchoorhoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4)."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlSchoorhoek",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c7b28e26c3d597918fc2e1528b9e0744c65c0076dd52f5c620bea70098e35deb",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "BV laagtype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBVLaagtype"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Laagtypes van de bitumineuze verharding."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBVLaagtype",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8f52606ce1476bf20fe2d5309a0f478b5adc9b44f4039439a6e306d95e958918",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging voor wegverlichtingstoestellen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlWvLichtmastBevsToestel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard bevestigingen van verlichtingstoestellen aan lichtmasten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlWvLichtmastBevsToestel",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9e95ec6c2952086d19939351a5f87292bf972d21b06dabca43b5f38165e2bc15",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Wv masthoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlLichtmastMasthoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard masthoogten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlLichtmastMasthoogte",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "attributes": [
+    {
+      "@id": "urn:oslo-toolchain:d1e2d84520fec0b62f8631792f70b43d8ff26d582419b84d0ca9e7483397f51f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.hellingshoek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "hellingshoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "hellingshoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in decimale graden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:88b0268c5a73cc25bcb93ed493203a0dd519df7b7199030ef6c6e115240da923"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c946dbaa67879213c93c8c7c8b369572191bdf5dec959b597fbc3f376d6714d2"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:426fc3ab3ce0667274a7d86a5794f934056fc532dfb30369b1ae8bc3fe726c5f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.schoorhoek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "schoorhoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "schoorhoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:88b0268c5a73cc25bcb93ed493203a0dd519df7b7199030ef6c6e115240da923"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:59a7b2a3a0ae70ddc932743010a317f0a7c300c0d53afa9f9af4d61c68e45484"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ceaf7f5de6b700b51492ac5fc6f34a9995de22da54eb70666dc7e2f5ea0b5eb0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen.rechthoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rechthoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rechthoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Afmetingen voor breedte, lengte en hoogte van een rechthoekig object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:e045485de175302c8356583146f28f83bd777326650b4be32286473a32eab406"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:ecb2e4ed21bc95b00af3055e3ff55b777936c27b1fb85f6251e4960f52d59b20"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:797cf7cadcc39d3aff1781f52e94db73a3a95281d3d08bfdcf2f41fe3f029f97",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen.rond",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rond"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rond"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting van de diameter in milimeter van een rond object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:e045485de175302c8356583146f28f83bd777326650b4be32286473a32eab406"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:1f272b7aa455f407ef7b9d4806443ead225db3bdecd904cb8cfd0bb0552205d3"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3927bb4d37c22560e9260a6ea820eb3af19f8df6dba20e4669568f39e46bfcac",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm.zijde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "zijde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "zijde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting van een zijde in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5f4c009f78275038517bb8089441b1ce6d71485dd2754598928c906057cb50c7"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd34eae1ab37c5f76e0f6c4aaa2d31713b4aa9f3dd0bd4d8ac892337073613d6",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in centimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:69293dbf673ced070d69a72bdc0c1b2eccd8538a17955bb3c7519f75bc72b02f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:05cb948ea5b361b2e0566c01d9be816261de55c90156e88d2a0bef1579fde2f3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.lengte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lengte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lengte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lengte in centimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:69293dbf673ced070d69a72bdc0c1b2eccd8538a17955bb3c7519f75bc72b02f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1d7024b3cfb338df49b1f9952a3b5e7d69cd46743c78ca82c5fbf5d90d422851",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm.diameter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "diameter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "diameter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De diameter in centimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:9c0cc52b56c4d2ed836ed4a67c3d425331afaec636728a8dbc68a2c65a9b62b8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:89a2a4f8dd1c0e98297a3b84ca4aeed42496e14155bbe89e118136bd46568e6e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0d1f993348218666b66e8fd8e1a553492f4a01cd2fbe3e52186af23a0482f1cb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:36d3eeb92cc19982068173897f60e05eb35a60ee3de2345f903a74303f979402",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.hoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "hoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoogte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0d1f993348218666b66e8fd8e1a553492f4a01cd2fbe3e52186af23a0482f1cb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0d60cd47b9b91f2ebf451194615c851feae66768bae035d34800c34d78e1824f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm.diameter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "diameter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "diameter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De diameter in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:1f272b7aa455f407ef7b9d4806443ead225db3bdecd904cb8cfd0bb0552205d3"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d686c8c984f5c5d18957fa7621a0a046fe2749d08dea8e28543b8e6893e7fdc0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:ecb2e4ed21bc95b00af3055e3ff55b777936c27b1fb85f6251e4960f52d59b20"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:95b82ca392e32f96b6e07536973c6f2c5d2612d06d1519bbb124536d6346ed58",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.lengte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lengte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lengte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lengte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:ecb2e4ed21bc95b00af3055e3ff55b777936c27b1fb85f6251e4960f52d59b20"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:050fd0aa8e3c2977f275e4d89fb008e9875d94d31dd07e288367d01e460d1e49",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.hoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "hoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoogte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:ecb2e4ed21bc95b00af3055e3ff55b777936c27b1fb85f6251e4960f52d59b20"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d5bdf33c94abd0c744aafc19f1619540742bd1e994745e045e6b723c45fbef08",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in meter."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"m\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4ea99585e1a959eb6ad29ebd67f8db99af74d4efa5bbbcac76bd86d77c651fd4",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b1339c7a538a58c8984c24c264c5d2b3d6cd79d3ab7632a26e6ea93042f76349",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9302e9a007eb723562f96577766f1bbb0aa8ad845cc808aa63a964cb56383a71",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"cm\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0de1921758bca38c55a86c0445e9bc6dd48f76a12c2fd7c863330232fcc1aa46",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8ac99934c54edd9c8bb74e6886e1dc1b306ae481a70228f06a9c6d772754945f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"mm\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5b09ae32112f985e55d506a1af0cd54a15802ab3b93d2ea5fa0020b08cb2f37b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:415a9b4068e04d737aa8e8ddd9970b6d3ed199693ea152419517429d0808acf7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in ton."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"t\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d6b851d554681d288810f05c93abb8a9e6d085001e1e2d6787b41759b1824ba8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c946dbaa67879213c93c8c7c8b369572191bdf5dec959b597fbc3f376d6714d2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1b7c3445ccecc043dd46b2ea0f195eb5c1e419b450ffef5a051a250237203dc5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"deg\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c946dbaa67879213c93c8c7c8b369572191bdf5dec959b597fbc3f376d6714d2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:add37b0f59944fd490465672a70448001a08a2192ff98a075d4bb00f3ed30864",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak.rechthoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rechthoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rechthoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Afmetingen voor breedte en lengte of diepte. De breedte meet van links naar rechts in vooraanzicht, de lengte van voor naar achter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bd4e46213f5bd014d8566313acb08d37a436ce628e218cbed5486f0f2469041a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:69293dbf673ced070d69a72bdc0c1b2eccd8538a17955bb3c7519f75bc72b02f"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:629b409df0b75250b51298471b317415fadd6c98e1e98d12224805ece77b2a70",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak.rond",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rond"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rond"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting van de diameter in centimeter van een rond (grond)vlak."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bd4e46213f5bd014d8566313acb08d37a436ce628e218cbed5486f0f2469041a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:9c0cc52b56c4d2ed836ed4a67c3d425331afaec636728a8dbc68a2c65a9b62b8"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:20ba50ed91bf6d1da4b30257c5776fc24e6122e2917853667c684f4a38f3c4b5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "driehoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "driehoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting van een driehoekig verkeersbord (zijde in millimeter)."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5f4c009f78275038517bb8089441b1ce6d71485dd2754598928c906057cb50c7"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a1b25616654c547037057e9a8c6fa07368de89913cbd641ef611d9f15a505cba",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rond"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rond"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting voor een rond verkeersbord (diameter in millimeter)."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:1f272b7aa455f407ef7b9d4806443ead225db3bdecd904cb8cfd0bb0552205d3"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4e874b70080161bdee514a3750701894bacb348bc51be7360742451a78e0a641",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.vierhoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "vierhoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "vierhoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting voor een vierhoekig verkeersbord (breedte en hoogte in millimeter)."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:0d1f993348218666b66e8fd8e1a553492f4a01cd2fbe3e52186af23a0482f1cb"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c8311262d93818607e59c50c16825736db0a1fcc714cd5f7ee94b11ed5d8fe8e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.zeshoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "zeshoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "zeshoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting voor een zeshoekig verkeersbord (zijde in millimeter)."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5f4c009f78275038517bb8089441b1ce6d71485dd2754598928c906057cb50c7"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cbbf488e748bc9d5a747271c228de89969300e5c2b3ce90b63efb924598bc9f0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.achthoekig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "achthoekig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "achthoekig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmeting voor een achthoekig verkeersbord (zijde in millimeter)."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5f4c009f78275038517bb8089441b1ce6d71485dd2754598928c906057cb50c7"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8a32d463ea236766f66375aea48cb4bf873c5166ecec7db3123368471aaa3466",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht van de profileerlaag in ton."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:020707993f48b2be4b945478544f2d73d547cd9b60a9dc859fefe5952d81b925"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ed050f0160c953c1834f7b2e4f0a7ee321c7c225f9fc655851dcde00c75a9f5f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag.laagtype",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "laagtype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "laagtype"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type van de bitumineuze verharding."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:020707993f48b2be4b945478544f2d73d547cd9b60a9dc859fefe5952d81b925"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c7b28e26c3d597918fc2e1528b9e0744c65c0076dd52f5c620bea70098e35deb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6cbd45647fe598f390829f3a229efe7668925703689092eae725da2ce19ed1fb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes.laagtype",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "laagtype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "laagtype"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type van de bitumineuze verharding."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5eadf575ff63e78460e9b6d4104c0bd693465c950c9078ab816ca03b6b4f815a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c7b28e26c3d597918fc2e1528b9e0744c65c0076dd52f5c620bea70098e35deb"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1108cfdcf2b1f99634ff725b6d3a566292e00cf7a5e728418aae1ea5f5b312fb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes.profileerlaag",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "profileerlaag"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "profileerlaag"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De laag die het profiel verbetert van de verharding."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5eadf575ff63e78460e9b6d4104c0bd693465c950c9078ab816ca03b6b4f815a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:020707993f48b2be4b945478544f2d73d547cd9b60a9dc859fefe5952d81b925"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8241d8c6b773c7c12291a811a6219db22e6626bf0c8b14d65c100f5048765e0b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode.standaardMethode",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard methode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardMethode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bepaling van de standaardbevestigingen van verlichtingstoestellen aan lichtmasten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c09b4834f351d58b0f6b3ca6695723a665de1d8d341936e8e28af94a99014435"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8f52606ce1476bf20fe2d5309a0f478b5adc9b44f4039439a6e306d95e958918"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:37ae14963efa119987ebe1743d8ad8c3f9a26ed58444475b6d51c164551a9de2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode.afwijkendeMethode",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afwijkende methode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "afwijkendeMethode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Tekstveld waarin de afwijkende methode van bevestiging van verlichtingstoestel aan lichtmast kan beschreven worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c09b4834f351d58b0f6b3ca6695723a665de1d8d341936e8e28af94a99014435"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e0f38dde653ee4825df051c4781e34f910467998f62df18f9f9049215a00e563",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.standaardHoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardHoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bepaling van de standaard hoogte van een mast."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2fc500a398cdcf48d97d2a8b0470ceaa6afc1bd3cad8dfda90fb21c12479deee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:9e95ec6c2952086d19939351a5f87292bf972d21b06dabca43b5f38165e2bc15"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:66b93581e5a9e9915177c5e17c840816fdb70b78672201e3cde4ffa7bb540987",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.afwijkendeHoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afwijkende hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "afwijkendeHoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afwijkende hoogte van de mast in meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2fc500a398cdcf48d97d2a8b0470ceaa6afc1bd3cad8dfda90fb21c12479deee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "datatypes": [
+    {
+      "@id": "urn:oslo-toolchain:88b0268c5a73cc25bcb93ed493203a0dd519df7b7199030ef6c6e115240da923",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Hellings- of schoorhoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuHellingsSchoorhoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype voor de hellings- of de schoorhoek."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e045485de175302c8356583146f28f83bd777326650b4be32286473a32eab406",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Dwarsafmetingen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuDwarsafmetingen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5f4c009f78275038517bb8089441b1ce6d71485dd2754598928c906057cb50c7",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting zijde in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingZijdeInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van een zijde in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:69293dbf673ced070d69a72bdc0c1b2eccd8538a17955bb3c7519f75bc72b02f",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxl in centimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxlInCm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte en de lengte in centimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9c0cc52b56c4d2ed836ed4a67c3d425331afaec636728a8dbc68a2c65a9b62b8",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting diameter in centimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingDiameterInCm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van een diameter in centimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0d1f993348218666b66e8fd8e1a553492f4a01cd2fbe3e52186af23a0482f1cb",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxh in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxhInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte en hoogte in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1f272b7aa455f407ef7b9d4806443ead225db3bdecd904cb8cfd0bb0552205d3",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting diameter in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingDiameterInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van een diameter in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ecb2e4ed21bc95b00af3055e3ff55b777936c27b1fb85f6251e4960f52d59b20",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxlxh in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxlxhInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in meter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8bd5df05d8554568dfd10cbe40f0217b2df6e0298bf9fbc3d1af8206995cad38",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in centimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInCentimeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in centimeter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d6fe8b4cddcd020a89e5803f21faf4db9b1bcac4f1aafa0ff27560436aea9f53",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMillimeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in millimeter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in ton"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInTon"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in ton uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c946dbaa67879213c93c8c7c8b369572191bdf5dec959b597fbc3f376d6714d2",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in decimale graden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInDecimaleGraden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd4e46213f5bd014d8566313acb08d37a436ce628e218cbed5486f0f2469041a",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afmeting grondvlak"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuAfmetingGrondvlak"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Datatype voor de afmeting van een (grond)vlak volgens zijn vorm."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:08d8eef789f6812a11e62634df5e6cdf9f14df145d2177c5fe6e01302db1a789",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting verkeersbord"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuAfmetingVerkeersbord"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype voor de afmeting van het verkeersbord."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:020707993f48b2be4b945478544f2d73d547cd9b60a9dc859fefe5952d81b925",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Profileerlaag"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcProfileerlaag"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype om extra informatie te capteren van de profilerende laag."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5eadf575ff63e78460e9b6d4104c0bd693465c950c9078ab816ca03b6b4f815a",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Laagtype van de bitumineuze verharding"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuBVLaagtypes"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype voor een laagtype anders dan de profileerlaag. Bij een profileerlaag kan men het gewicht toelichten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c09b4834f351d58b0f6b3ca6695723a665de1d8d341936e8e28af94a99014435",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging wegverlichtingstoestel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuWvLichtmastBevsToestelMethode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype voor de wijze waarop verlichtingstoestellen bevestigd zijn op een lichtmast, indien dit een standaard methode is dan kan deze geselecteerd worden uit een keuzelijst. Bij afwijkende methode kan de methode toegelicht worden."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2fc500a398cdcf48d97d2a8b0470ceaa6afc1bd3cad8dfda90fb21c12479deee",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Masthoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtuLichtmastMasthoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Union datatype om een standaard of afwijkende masthoogte te bepalen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Literal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Literal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een constante."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#decimal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Decimaal getal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Decimal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#decimal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#string",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "String"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "String"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#string"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "referencedEntities": [],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:59a7b2a3a0ae70ddc932743010a317f0a7c300c0d53afa9f9af4d61c68e45484",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c7b28e26c3d597918fc2e1528b9e0744c65c0076dd52f5c620bea70098e35deb",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8f52606ce1476bf20fe2d5309a0f478b5adc9b44f4039439a6e306d95e958918",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9e95ec6c2952086d19939351a5f87292bf972d21b06dabca43b5f38165e2bc15",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "name": "union-datatypes",
+  "type": "ap",
+  "eap": "OSLO-Union-datatypes-AP.eap",
+  "diagram": "OSLO-Union-datatypes",
+  "template": "union-datatypes-ap.j2",
+  "title": "Union datatypes",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+  "publication-date": "11-02-2026",
+  "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OTL",
+  "site": "site-skeleton/union-datatypes",
+  "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
+  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
+  "dependencies": [],
+  "translation": [
+    {
+      "language": "nl",
+      "template": "union-datatypes-ap.j2",
+      "title": "Union datatypes",
+      "translationjson": "union-datatypes_nl.json",
+      "mergefile": "merge_union-datatypes_nl.jsonld",
+      "autotranslate": false
+    }
+  ],
+  "config": "config/config-ap.json",
+  "branchtag": "735b31074cc94fbbc052d68deebefd1db06f3852",
+  "navigation": {
+    "prev": "/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.18.0"
+  },
+  "repository": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer",
+  "urlref": "/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.18.1",
+  "documentcommit": "735b31074cc94fbbc052d68deebefd1db06f3852",
+  "toolchaincommit": "a5ec85c67793b62cefe676d04270584c0abd481b",
+  "hostname": "https://wegenenverkeer.data.dev-vlaanderen.be/"
+}

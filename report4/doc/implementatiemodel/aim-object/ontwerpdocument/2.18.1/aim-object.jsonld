@@ -1,0 +1,5328 @@
+{
+  "@context": {
+    "oslo": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
+    "packages": "@included",
+    "classes": "@included",
+    "datatypes": "@included",
+    "attributes": "@included",
+    "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
+    "baseURI": {
+      "@id": "oslo:baseURI",
+      "@type": "@id"
+    },
+    "vocDefinition": {
+      "@id": "oslo:vocDefinition",
+      "@container": "@set"
+    },
+    "apDefinition": {
+      "@id": "oslo:apDefinition",
+      "@container": "@set"
+    },
+    "vocLabel": {
+      "@id": "oslo:vocLabel",
+      "@container": "@set"
+    },
+    "apLabel": {
+      "@id": "oslo:apLabel",
+      "@container": "@set"
+    },
+    "diagramLabel": {
+      "@id": "oslo:diagramLabel"
+    },
+    "scope": {
+      "@id": "oslo:scope",
+      "@type": "@id"
+    },
+    "vocUsageNote": {
+      "@id": "oslo:vocUsageNote",
+      "@container": "@set"
+    },
+    "apUsageNote": {
+      "@id": "oslo:apUsageNote",
+      "@container": "@set"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@container": "@set"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "minCount": {
+      "@id": "sh:minCount"
+    },
+    "maxCount": {
+      "@id": "sh:maxCount"
+    },
+    "parent": {
+      "@id": "rdfs:subClassOf",
+      "@type": "owl:Class"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime"
+    },
+    "Package": "oslo:Package",
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "DatatypeProperty": {
+      "@id": "owl:DatatypeProperty"
+    },
+    "ObjectProperty": {
+      "@id": "owl:ObjectProperty"
+    },
+    "authors": {
+      "@type": "foaf:Person",
+      "@id": "foaf:maker"
+    },
+    "editors": {
+      "@type": "foaf:Person",
+      "@id": "rec:editor"
+    },
+    "contributors": {
+      "@type": "foaf:Person",
+      "@id": "dcterms:contributor"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "assignedURI": {
+      "@id": "oslo:assignedURI",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
+    },
+    "codelist": {
+      "@id": "oslo:codelist",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "adms:status",
+      "@type": "@id"
+    },
+    "extensions": {
+      "@id": "oslo:extensions",
+      "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
+    }
+  },
+  "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aim-object/ontwerpdocument/2.18.1",
+  "generatedAtTime": "2026-03-09T13:03:13.068Z",
+  "packages": [
+    {
+      "@id": "urn:oslo-toolchain:7241f4ef0de299bd4f99db38927dc3c7d6728b27e9816b10ca1175fd150c4b17",
+      "@type": "Package",
+      "assignedURI": "http://todo.com/",
+      "baseURI": "http://todo.com/",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "classes": [
+    {
+      "@id": "urn:oslo-toolchain:9777a456b2c970f271957eb394d75fe9a5b54303098392767785f377bda703cc",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Keuringobject"
+        },
+        {
+          "@language": "nl",
+          "@value": "Keuringobject"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KeuringObject"
+        },
+        {
+          "@value": "KeuringObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bundeling van de gemeenschappelijke eigenschappen en relaties."
+        },
+        {
+          "@language": "nl",
+          "@value": "Bundeling van de gemeenschappelijke eigenschappen en relaties."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte aanvullende geometrie"
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte aanvullende geometrie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AbstracteAanvullendeGeometrie"
+        },
+        {
+          "@value": "AbstracteAanvullendeGeometrie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+        },
+        {
+          "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM databank status"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMDBStatus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM Toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMToestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d91fa4ecb40d2cfb0cd3b42dee0d9764763a064b6ed9d26915780f4ce65f518d",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAIMToestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAIMToestand",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Derdenobject"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Derdenobject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+        },
+        {
+          "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:88aece2d1aedf7d75b5bd7c123c512e68185b1ce9b40d896bff5d7bbc3d95bcf",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toegangsprocedure aandachtspunt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlToegangsprocedureAandachtspunt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De soorten aandachtspunten voor toegang tot een object."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureAandachtspunt",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7aad5b5fdff4fd3ef5af8af82bcdf20ac9144ca641e7355fb19edf85912023b3",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Type badge"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlTypeBadge"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verschillende badgetypes."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlTypeBadge",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1",
+      "@type": "Class",
+      "assignedURI": "http://purl.org/dc/terms/Agent",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Agent"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Agent"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toegangsprocedure"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Toegangsprocedure"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De procedure die gevolgd moet worden om toegang te verkrijgen tot een object."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+        },
+        {
+          "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10120588cdcc653cd048c25be7f1411cde190c11dab57cb6660b846aa37c10fc",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM naam object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMNaamObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+        },
+        {
+          "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4961e707e678ed2a9d737a3511bd4bb4242e99868bab15c7c487533ebbd9e112",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Type sleutel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlTypeSleutel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verschillende sleuteltypes."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlTypeSleutel",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f3a7a177dcb12c07abe24d140d8a23970a656a2dd0db09eaa803350c093ad3f8",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlage type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBijlageType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mogelijke types of categorieën van het document."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBijlageType",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9bef8bc6f7eb2895cc74554c194f0ade17fbcfa9969ea9c160f4b0aa09137eeb",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Naampad object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NaampadObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:10120588cdcc653cd048c25be7f1411cde190c11dab57cb6660b846aa37c10fc"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8cd2593036dbd6726de2a84985344d2a64f3803f9740cc0ad219372c66237a1c",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toegangsprocedure toegangstijden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlToegangsprocedureToegangstijden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mogelijke toegangstijden bij een toegangsprocedure."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureToegangstijden",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5a424b0a142c84d39d9d9d70a2c7470b1d3d62a20c91fd43502bd20054c512d0",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Mimetype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAlgMimeType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:62350c24f6fbcb3904d74cfe429455f22d16b60b476984a84b9cc9fd6e729e34",
+      "@type": "Class",
+      "assignedURI": "https://schema.org/DayOfWeek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Weekdagen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAlgWeekdagen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van de verschillende weekdagen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAlgWeekdagen",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:259473ff9ce861a2d6963a2d4e8fe20edd6c7392d221a8b5bc4a3b2f4f7ca059",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Provincie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAlgProvincie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van provincies in Vlaanderen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAlgProvincie",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:74790d092c9cca4fa42032d6a75adc0e0cc0af649a2e08a875ffd599c3cb9c55",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Gemeente"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAlgGemeente"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van gemeentes in Vlaanderen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAlgGemeente",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cc62e7f96026e10cc6bce163cf4f4ae9c04cc2745550df1d0e1dadfd0d7a3fb",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlagetype toegangsprocedure"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlToegangsprocedureBijlageType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De bijlagetypes van een toegangsprocedure."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureBijlageType",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:da41dd9471ab0cb28c28490d587e5ea261ef9d82fdcbea1953fbb2fe01212605",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Bijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Klasse uit gebruik sinds versie 2.13.0"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fa5261770c12dadce99226cef93038d5abcbb00ed41bc3500cf5d1f0b42c84a3",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Keuringsresultaat"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlKeuringsresultaat"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mogelijke keuringsresultaten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlKeuringsresultaat",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:28ae8dad5bb1fc6bafcd780564e2fb345aa30b96f4a226dd4f8d52089fd217aa",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Elektrische keuring"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "ElektrischeKeuring"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een formele controle en beoordeling waarbij wordt nagegaan of de elektrische installatie voldoet aan de geldende wettelijke, normatieve en veiligheidsvereisten, met als doel de elektrische veiligheid en conformiteit te waarborgen."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Hoeft geometrisch niet gelokaliseerd te worden. Opmerkingen of inbreuken kunnen worden bijgehouden in het veld ‘notitie’, gezien het tijdelijke karakter van deze vaststellingen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:9777a456b2c970f271957eb394d75fe9a5b54303098392767785f377bda703cc"
+        },
+        {
+          "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3ad913b03e591505cb4ff8c44f42d8062899d7978ae242859b493221cfffd2f3",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlage met geometrie type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBijlageMetGeometrieType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mogelijke opties als type van een bijlage met geometrie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBijlageMetGeometrieType",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bc2aa728051c2a9ee89878a99ea5b72a1556cc47200f68e6480aafb093def8ff",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#AanvullendeGeometrie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Aanvullende geometrie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AanvullendeGeometrie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een geometrie die aanvullend is bij de de werking van een asset maar beschrijft niet de asset zelf, bv. een detailplan of een werkingsgebied met een specifieke locatie, enz...De aanvullende geometrie kan al dan niet een bijlage bevatten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cb117416ce95ed9301b4cbabfe927a599f7e4757b867c44a253406f79b86e7d4",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Voor bijlagen die meerdere assettypes behandelen of aanvullende informatie bieden. Voor specifieke informatie van de asset, en waarvoor een eigenschap gedefinieerd is bv. technische fiche, detailplan, moet deze opgenomen worden via deze eigenschap."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:828ed68d3ab3b6fbf1da0c385b006c233669c9bd81ede469aa24a857d1cffb75",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Sturing",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Sturing"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Sturing"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:ed683849367dcb78939a30ba21508d2b5cac2d3a07293cbedc32dbc9b3591084"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:407901cddc339cd8fca02ac7d27a54f9d96c7a03f9252197c46b46f06dca625e",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Voedt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Voedt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cee64e678d92795bd8a5b545a7087a73026152a7a9837d4b8504e5a4636e3f5",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Betrokkenheid rol"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBetrokkenheidRol"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met mogelijke waarden voor de rol waarmee een agent betrokken is bij een object."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBetrokkenheidRol",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft betrokkene"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HeeftBetrokkene"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2d26412b3349658d9a7b69559db351b3f9a2be5a90da05a632de15ab17aeea61",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Heeft aanvullende geometrie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HeeftAanvullendeGeometrie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9f832bc6f27a55c7e4b6455c13f9137a75a92d6a25b06eceee6363b4f826a721",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftToegangsprocedure",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Heeft toegangsprocedure"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HeeftToegangsprocedure"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie wordt gelegd tussen een klasse en de klasse Toegangsprocedure. De relatie vertrekt vanuit de klasse Toegangsprocedure en geeft aan dat er een toegangsprocedure van toepassing is voor een object."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:504be097ad6fa652dba6787ee9e2cd5ebc62e074e6730e3d2a239f8161ca1d0a",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestiging",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bevestiging"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:ed683849367dcb78939a30ba21508d2b5cac2d3a07293cbedc32dbc9b3591084"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5c3f023596d07ac336cc81f3163905308e7df681a5b5e61ff0f18e986629dfb4",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "HeeftBijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HeeftBijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:684b5908a6cf8662c79f3d0f407fb9cd203aec0bff0f84cec06cb2947669d9ce",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#SluitAanOp",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Sluit aan op"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SluitAanOp"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cb752e50a127a8b8a3b839ff72cbdc7cab0a7fc0a629261b148d6be9198022d4",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#LigtOp",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Ligt op"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "LigtOp"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "attributes": [
+    {
+      "@id": "urn:oslo-toolchain:d5db458561d651c796b9f73c7daba9f28fa28fd55c1b38b2bb1ad1ee7f66c0fe",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject.keuringsdatum",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "keuringsdatum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "keuringsdatum"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop het asset laatst is gekeurd."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:9777a456b2c970f271957eb394d75fe9a5b54303098392767785f377bda703cc"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:489c85575a2411aa3155cb5ecb7a4f90b04d1ec8a5f6af1be80e916b69268492",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-id"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Unieke identificatie van de aanvullende geometrie zoals toegekend door de beheerder of n.a.v. eerste aanlevering door de leverancier."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:816f3ac214cd45376219770a94889285db4b907269e68a66df48b071a7d88bae",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het document of artefact dat een geometrie heeft of een bijlage is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f69e4aada2ed2ea027a6d8c2b7be0a15f5fa869c913582cf6b3ee167fc41c92e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5914592e26cfe85188b5c804ed59eac666cb76c6045f21ced8f509239f70ce68",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d34e7e00f21d7ff04efd3876599f508a3e8b21b48b5816a131b7407fdfefd683",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "notitie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "notitie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Extra notitie voor het object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ee02d37b9a0d637dc5622070a1ce0c50a5b7b663ad02f3f5f87a70c184b720b2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is actief"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isActief"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a0f66cd4c3af9ffe44a6bd542388a1312fd0fc2083c533a9b92675cb2ebb0772"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fcfbccd352f62ccafdc80e5d4610387c78e603719c66117880198751aee3b1a3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.foto",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "foto"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "foto"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een foto van het derdenobject die eventuele detailinformatie weergeeft."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Enkel bestanden die een foto zijn."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9c97a2e305ddd6fbb3d47de012e23887f90b86d66f21b210d8ed6cd81dbbce70",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.assetId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-id"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:729e32f382132bc0d436fb021dd810c726283d5b97e057d934216b8dbf381b82",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.omschrijving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "omschrijving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "omschrijving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Omschrijving van het derdenobject."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:75160f2964060e5a469c27352aae0e6dbae05133aaf4f9cfd69c0ee2b6bd7cdb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.contactgegevens",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "contactgegevens"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "contactgegevens"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Naam, voornaam, telefoonnummer en/of e-mailadres van de contactpersoon."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5b0f5b4cd3c925e3f8d4105063eb8acbf4b0a5dd0525bb6b572f226cc7a59e52",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.heeftAansluitkastGeintegreerd",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft aansluitkast geïntegreerd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftAansluitkastGeintegreerd"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of de aansluitkast geïntegreerd is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10482f4c0e7e7656fc505579295f63465c60f3ce488b07959afe3527b6757d3f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Derdenobject.typeURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:680014d479fffdff495d3931d69dde67c52a986bee0cd01c6754d06fd55688ee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ad682a3e0340e4301b1a91780c32cf8eac250c81d35324e8d341f10a4a867416",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://purl.org/dc/terms/Agent.agentId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "agent identificatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "agentId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Identificatie van de agent volgens een bepaalde bron."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8515675f14b80abc27629d593375196de739addd54e605bebc8fae92acbbffdc",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://purl.org/dc/terms/Agent.contactinfo",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "contactinfo"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "contactinfo"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Algemene contactgegevens voor de agent."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f89eea1fd3909d045d20ef617966482e25469833f86cd69312714232dc634663",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://purl.org/dc/terms/Agent.naam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De naam waarmee de agent doorgaans benoemd wordt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7412be51881ba7fb98060b298c9e6052e10d0811544107b2a48d56ba9e440c23",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM-toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft de actuele stand in de levenscyclus van het object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c9cfd9596cd2591d0bb3aef835275c665edb0815ad49f72aa9977f70b0147197"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d91fa4ecb40d2cfb0cd3b42dee0d9764763a064b6ed9d26915780f4ce65f518d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:23f126a3d9a3e2517ee9513793265b7a4e620b9f8b2d66df11ac1fb9be6c334e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.assetId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "id"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De unieke identificator van de toegangsprocedure."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:accde13f70212bbb8db9cfed675eb7f6b19ff40c2d0dfd6a4dead064ec3289f8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeSleutel",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type sleutel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeSleutel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het soort sleutel dat wordt gebruikt om toegang te verkrijgen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4961e707e678ed2a9d737a3511bd4bb4242e99868bab15c7c487533ebbd9e112"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:31c299f466836326ed925f50e8aaca65a696fdcd97db34d134d6b971da5b2f59",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type badge"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeBadge"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het soort badge dat wordt gebruikt om toegang te verkijgen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7aad5b5fdff4fd3ef5af8af82bcdf20ac9144ca641e7355fb19edf85912023b3"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6d54199562426e1bdbe0e586e4f16f70d989e018cd853914a057fba49dda56df",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.naam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De naam van de toegangsprocedure."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e1e33630fe864e36891f2a6a42a4399fb54dc65c7a984f8a4e0b66c8a12d2986",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.omschrijving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "omschrijving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "omschrijving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een uitgebreide toelichting die beschrijft hoe de toegangsprocedure gebruikt kan worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:984de5995675ea7b3401bf068acfeeb18f0c1d6ec626c6513574fc6006306041",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c3b05f7bf1a57d0af4a69d92fcf0f7157759307c7f38a9f602e809a56590f652",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.aandachtspunt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "aandachtspunt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "aandachtspunt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aandachtspunten waar men rekening mee moet houden, die een impact hebben op de toegankelijkheid van een object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:88aece2d1aedf7d75b5bd7c123c512e68185b1ce9b40d896bff5d7bbc3d95bcf"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a93a578436fcb9477218af9e872163133e6f2db3982c7b4c7f60073431b46105",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.toegangstijden",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "toegangstijden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toegangstijden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De dagen/uren van de dag waarop de procedure geldt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7abcde71b5f2801cee035ed6cef8da34e949cf7d8444b62cc4e47143c92745c8"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:45c07838a411ec54b7186bb7c9f3b003eb622ccadb64d4fce2c9417e416d5fe8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.bijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bijlages, onder de vorm van een beschrijving en/of een document en/of een URL, die aanvullende informatie bevatten over de toegangsprocedure."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:de8dcf8c6f1f16510a564dd48ff2fbd307954bcfa1a4743b56e231318c2a3d05"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0130a3c18060618927ccddf2907a3ebdcbab664b83a0825d36716bafb6cd7f94",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:10120588cdcc653cd048c25be7f1411cde190c11dab57cb6660b846aa37c10fc"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d3e9a7b2a2d09ca76c19d132936cdd642c7e8af2aa695dd9742fa4b8a55256ab",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-id"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3a883d54c6aa30c6ac0860ec3086fe82ddc435b8d4aad458ba2b5515b99656b1",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "notitie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "notitie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Extra notitie voor het object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a236b57eef933c5b37c8cbd64c3543597229bcf703ce393ab895bf8864074138",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaardbestekpostnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardBestekPostNummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d04e238a663c967c02c3ca3d392a1efe1e7ba9afd8725025ccc72e5bbaa39720",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8fd1bf51c3748ede1f198b8f0a51cc0d67e250643dc060f1c7a5601a73a703a7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestekpostnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestekPostNummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f72098f933fa574836d54f73eaee5c0b2cf002abb6a28686724a818c123ef494",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "theoretische levensduur"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "theoretischeLevensduur"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:68fb9c68c29c48fdc06aac35f98b63be5350d1bb98fc47241de8f97a12354d79"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b19bb340d1041f99dcfb3c14735cc928de9c7345fdb8d229ef66e7421852ebb8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "datum oprichting object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "datumOprichtingObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:53ef139079ab62315664ef622073d4242422560a80a212b1ed04936216242b24",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De versie van de asset in de database."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:6adb7f6e9a0d39b7566bf1fba61eac1d633f2a7bbcbe52c92ef15adf74f20eec"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d4641df998edaae8da77f7646ab781d6d740c6b999b0c7c03d3cb6e4e8167e89",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naampad"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naampad"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Dient consistent te zijn met de naam."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:9bef8bc6f7eb2895cc74554c194f0ade17fbcfa9969ea9c160f4b0aa09137eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd4d224c6d47dfad4fdac6671413bbd4e6c52e2de6a6935d9404886933d74059",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.toegangstijden",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "toegangstijden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toegangstijden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het moment waarop het object toegankelijk is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7abcde71b5f2801cee035ed6cef8da34e949cf7d8444b62cc4e47143c92745c8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cd2593036dbd6726de2a84985344d2a64f3803f9740cc0ad219372c66237a1c"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6fa3dbb2d7292899a373bcbe66242acfbeba143940b547d801ab842ca5579690",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "opmerking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "opmerking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Opmerking bij de toegangstijden van een object (bijv. kantooruren tussen 9 en 17u.)"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7abcde71b5f2801cee035ed6cef8da34e949cf7d8444b62cc4e47143c92745c8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:752e05ed391506a46a8178422ee7f41ccdba4a3c82093b2ab723517fafbaae0f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "identificator"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "identificator"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f589d70ae68d9bf090f8d4d7b19775926360e537940f0360e8f2d343996ca082",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "toegekend door"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toegekendDoor"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Gegevens van de organisatie die de toekenning deed."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d495a19fb071908ee73db09f04c8e1a80f84fd1c0d2530dcb6c294ee8e97f0f5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "straatnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "straatnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De naam van de straat."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f642f4e1028683290f7c3ffaac9c7555460f35e151afee97252420fe089f0332",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "huisnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "huisnummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:93e3763131230511fd41956a70a204b31a403564e51ee3ab7e822b8413fb6ab8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bus"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een nummer dat de postbus aanduidt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a0745bd1e79dfa61acb38478b556a26313371050ed30829282bade24c3dbeb7e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "postcode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "postcode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een korte reeks tekens die in het postadres wordt opgenomen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:80d567ff37b7964f1056dcc1a43bc932e0435767a18b4aa58d17017079c62ae6",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.provincie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "provincie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "provincie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het deelgebied waarin het adres gelegen is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:259473ff9ce861a2d6963a2d4e8fe20edd6c7392d221a8b5bc4a3b2f4f7ca059"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:606639408d5816850b6a0f6a5e04bdcdf76b8d67b4ea85c939b3aff90a0fba04",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gemeente"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gemeente"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De bestuurlijke eenheid waarin het adres gelegen is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:74790d092c9cca4fa42032d6a75adc0e0cc0af649a2e08a875ffd599c3cb9c55"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5704bd3f73708e39acd715d4eb501a2d7a32ee0cb089a8cfa79d6966b0f83a21",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "versienummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "versienummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het versienummer als een oplopende integer."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c8a754f84072ba233ac7c173f20ac8e47ac8bf0e079ed2a90007980aab80b565"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d83587f7fa7dd2f745095fc16c71ac3e220d30f87a54f32f58ef6673f6cc2250",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "timestamp"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "timestamp"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De timestamp van het moment dat de versienummer werd toegekend."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:01c39cfc6f93e5e11216149f6e5c90fcd10fad8e09f2f49a5871a51bdbf6fd34"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4cd753bd997e5e5c031fc99981d6caef2a6e591a000d0e2be7a09de76053372f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "context"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "context"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De context van de versie creatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:42f316a8bbbb4e5c123ec00067123d1710f23da07af6ee6986a778010328703c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://xmlns.com/foaf/0.1/name",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "contactnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "contactnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Naam van bv. de persoon die men kan contacteren."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:441b0f30687d60e45948ff97dcb2b8e69bf99974c8a009161fe1ebb8949b0db0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://schema.org/email",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "email"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "email"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Email-adres waarnaar men kan mailen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8f8b36184dd6a12204d383dad09bf84d06031ca2c16ebd2d905c8ebd731e46c4",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://schema.org/telephone",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "telefoon"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "telefoon"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Telefoonnummer waarop men kan bellen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:dca60db8ad5914dae6671671baa3674d78c1a25493047b5da261e98debcaaa6b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://schema.org/faxNumber",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "fax"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "fax"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Faxnummer waarnaar men kan faxen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5b3cc1cfa51b2cbe2a1371827b2898e129b1cf6273b34859234de2ea17e1eefc",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://schema.org/ContactPoint.opmerkingen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "opmerkingen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "opmerkingen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fade76e5d5baadccc5a62a822f0ea160ac86906a1351a9b5d2dda58f3982be59",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://xmlns.com/foaf/0.1/page",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "website"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "website"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Website waarnaar men kan surfen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ac4c89ebda295bc12f0e1982e6646153484647579747ff02bd00dc09eb77a968",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://schema.org/hoursAvailable",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beschikbaarheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beschikbaarheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Periode waarin contact kan worden opgenomen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7b4c4f5917ecd7b832fb78a88081595169cf7d1b3301541a2633556ab54faabc"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f576557202c79f9dfdcd93c6359f7d542122c5a4f55c51a4e1a0b1765b7bf84b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://www.w3.org/ns/locn#address",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "adres"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "adres"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Adres dat men kan aanschrijven of bezoeken."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a2c561508f99c68973298832489a789cae4b9440461651efbd92a64a6cd0e1da",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "uri"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "uri"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:593dd3d1b80d5a9a2aa6d915129278ba98a210095b51c17de89fe9409182972c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestandsnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestandsnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5767069d7d36393f999976a91d16b5613c5f4d53bde3fb1dbda5ee52156507c6",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "omschrijving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "omschrijving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een korte toelichting over waar het document juist voor dient."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a14f6b6ea88c9b92e9ff64021a02f375d611ebea201bf7f7b357ae4132b9c488",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "mime-type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "mimeType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het MIME type van het document."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5a424b0a142c84d39d9d9d70a2c7470b1d3d62a20c91fd43502bd20054c512d0"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b00083dfdb12e5a9b97c3f4d49394b117af7dd6e8cddb9ebe03d8974b69a93b6",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "opmaakdatum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "opmaakdatum"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop het document is opgemaakt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d1d89782b1be47e75ed58c221b413913ecfb3700c42fd1e12a134cb91affffd2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.type",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bijlage type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "type"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type bijlage gevoegd bij de toegangsprocedure."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2cc62e7f96026e10cc6bce163cf4f4ae9c04cc2745550df1d0e1dadfd0d7a3fb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:52f62bcec833464c5c92d9c98d11badb2675927995f97d084259f5290d3dd006",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.document",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "document"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "document"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Document dat bij de toegangsprocedure als bijlage toegevoed kan worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cbf0a8e0b64bb64c4b66f261160e2542fee6d5a19e27d45437da8ab9285984d7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.nota",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "nota"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "nota"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Vrije nota die als bijlage bij de toegangsprocedure gevoegd kan worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:87f0b21f157d1b0546c331139467139b295944106b47151991fb00c5430bd38b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "http://xmlns.com/foaf/0.1/page",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "website URL"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "website"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Website URL die als bijlage bij de toegangsprocedure gevoegd kan worden"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:57a63caffa6467d2ea2f7a5003a29483010036b3d43e49d8163a535e297daaaa",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://schema.org/opens",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "openingstijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "openingstijd"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het tijdsstip waarop de opening plaatsvindt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7b4c4f5917ecd7b832fb78a88081595169cf7d1b3301541a2633556ab54faabc"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a05a61ac61122cbfd46d5ee50929ccdd4315a8e8844d80e0d0fdbdf3e62dee03"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ab6fe314f65db88b4f957a610ced12b4b89263ea903177bd97b20947439e940b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://schema.org/closes",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "sluitingstijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "sluitingstijd"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het tijdsstip waarop de sluiting plaatsvindt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7b4c4f5917ecd7b832fb78a88081595169cf7d1b3301541a2633556ab54faabc"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a05a61ac61122cbfd46d5ee50929ccdd4315a8e8844d80e0d0fdbdf3e62dee03"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:901fd75d5c400c9eb0fce3c4d3a274823096be7d08c472c4bf17ecdb5a582406",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://schema.org/dayOfWeek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "weekdag"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "weekdag"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een dag uit de week incl. weekenddagen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7b4c4f5917ecd7b832fb78a88081595169cf7d1b3301541a2633556ab54faabc"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:62350c24f6fbcb3904d74cfe429455f22d16b60b476984a84b9cc9fd6e729e34"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d2dae4610d30fe8c103a2318fe737cc72046f55e8c1a4dda6923cbc8fa369f13",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9ed77d0a39441274237bfb6f24293e948f154ce3f47995ce5c866b28f82f77de",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cdaccc8977223a35ad322c1156c384336c736352c2b1592989fc9b19ad23a8bc",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in Volt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"V\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:73bae71ad186108246fc8f07d4d35a216e229c7cd336d5547b2af23e873e3a45",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:68fb9c68c29c48fdc06aac35f98b63be5350d1bb98fc47241de8f97a12354d79"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c8a754f84072ba233ac7c173f20ac8e47ac8bf0e079ed2a90007980aab80b565"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4e12c6fa03abacb104ff2d17894eef4483633ced166e246159588ff1653e1ffb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in maand."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"mo\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:68fb9c68c29c48fdc06aac35f98b63be5350d1bb98fc47241de8f97a12354d79"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8e1fa0ddcafd3fbd4e896a8f1b7a109aee6b19d29faeec79e30e6c89b90b86bf",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#Bijlage.type",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "type"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De typering of categorie van de bijlage."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Klasse uit gebruik sinds versie 2.13.0"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:da41dd9471ab0cb28c28490d587e5ea261ef9d82fdcbea1953fbb2fe01212605"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f3a7a177dcb12c07abe24d140d8a23970a656a2dd0db09eaa803350c093ad3f8"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4237bba1535aaedd3ac174f1093bf059cdfc2672ffd5fdaf136d114f4b3f5684",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring.resultaat",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "resultaat"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "resultaat"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De uitkomst van de keuring of de asset al dan niet voldoet aan de vastgelegde criteria, normen of voorschriften."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:28ae8dad5bb1fc6bafcd780564e2fb345aa30b96f4a226dd4f8d52089fd217aa"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fa5261770c12dadce99226cef93038d5abcbb00ed41bc3500cf5d1f0b42c84a3"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6b7a3cac36d73cba96187ed90757140aff4b8a5d9dd7a8b785bf3eefd9a50cf6",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring.geldigTot",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "geldig tot"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "geldigTot"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum tot en met welke de elektrische keuring als geldig wordt beschouwd, conform de geldende regelgeving of het keuringsverslag, waarna een herkeuring vereist is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:28ae8dad5bb1fc6bafcd780564e2fb345aa30b96f4a226dd4f8d52089fd217aa"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2240732f26f2f50ab1df83e617773d919bce67fc771156d638daedfe962f85f9",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#AanvullendeGeometrie.type",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "type"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type van aanvullende geometrie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bc2aa728051c2a9ee89878a99ea5b72a1556cc47200f68e6480aafb093def8ff"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3ad913b03e591505cb4ff8c44f42d8062899d7978ae242859b493221cfffd2f3"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:89cbc6cca32cc14d93f9ba5bede677d5af786989589e729a04cf6ad325ea3605",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bijlage.type",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "type"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De typering of categorie van de bijlage."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:cb117416ce95ed9301b4cbabfe927a599f7e4757b867c44a253406f79b86e7d4"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f3a7a177dcb12c07abe24d140d8a23970a656a2dd0db09eaa803350c093ad3f8"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a73cf7c1ab024b89b4192c78e78601c2782fc66804e983de97802ff948cff026",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitspanning",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "aansluitspanning"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "aansluitspanning"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Spanning van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:407901cddc339cd8fca02ac7d27a54f9d96c7a03f9252197c46b46f06dca625e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ae5d1ea784868c45d9bb878ead08bbf6235fdc8ce738d5ae9c144944d5e17896",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "aansluitvermogen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "aansluitvermogen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Vermogen van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Attribuut uit gebruik sinds versie 2.1.0"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:407901cddc339cd8fca02ac7d27a54f9d96c7a03f9252197c46b46f06dca625e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a25d492bebc7404cc75a0aebe7d3afb36637eb76b31c99f64eb1ad4129eff5e5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.rol",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "rol"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "rol"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Type voor de manier waarop een agent betrokken is bij een object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2cee64e678d92795bd8a5b545a7087a73026152a7a9837d4b8504e5a4636e3f5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d796c679d0e12d2ded08c26de4b4d10495c5f36f69057e3f0493e8e734208d12",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.specifiekeContactinfo",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "specifieke contactinfo"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "specifiekeContactinfo"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Specifieke contactgegevens van de betrokken agent met betrekking tot het gekoppelde object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c"
+      },
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:364946fa5c637e82d88117496792dd16c520b2175130c0b6263a03e74a8c7fce",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.datumAanvang",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "datum aanvang"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "datumAanvang"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop de betrokkenheid effectief geworden is of zal worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cc994bacd2fb6fcaa845da862c89e45fd86fe8aa603f1d96ad33904c7d8986a7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.datumEinde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "datum einde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "datumEinde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:67e1e185ef1f135b47939f64650572b892aa2a4625272f274753d9462a782c7d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/aim-object/#heeft%20betrokkene",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft betrokkene"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HeeftBetrokkene"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:10b2a744127700d55db0a7d77f10c137365193f4c3dbc892dcd22958d95a6ad1"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "datatypes": [
+    {
+      "@id": "urn:oslo-toolchain:7abcde71b5f2801cee035ed6cef8da34e949cf7d8444b62cc4e47143c92745c8",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toegangstijden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcToegangsprocedureToegangstijden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype om de toegangstijden bij een toegangsprocedure te specifieren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fa2549eec9c145e0c659edfac82d332081b4638a5a73332f1e33c34d860ca20d",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Identificator"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcIdentificator"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cee5b8b47f99aa68e68c0c1dfb2d0856cecba6bbec7b51f21a6d305941b8f580",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Adres"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAdres"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4017e2ebd7070ea21288b3548b74b44e704bdf4bf0e4d649c69265fcf9e9ae58",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Asset versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAssetVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:16918f82c7212d379ec917f4c210d0b820c4c046929152202abef06b1b8e148c",
+      "@type": "Datatype",
+      "assignedURI": "https://schema.org/ContactPoint",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Contactinfo"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcContactinfo"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8b14fc32e1154bb48446895b1ea0f9707f8340fe6e1fba6f844df1a72d4df933",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bestandsbijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcDocument"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor alle bestandsbijlages."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d4ca854ea988dcee91f241333bf9841cc97b204adfb37cf92549ae472e47e5cf",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bijlage toegangsprocedure"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcToegangsprocedureBijlage"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7b4c4f5917ecd7b832fb78a88081595169cf7d1b3301541a2633556ab54faabc",
+      "@type": "Datatype",
+      "assignedURI": "https://schema.org/OpeningHoursSpecification",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Openingsurenspecificatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcOpeningsurenSpecificatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype dat de openingsuren volgens https://schema.org/OpeningHoursSpecification specifieert."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6055d7d69cdda2efa9f8672442d334d9e0f5ff107cd952ce48ed0825c2b156ce",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Tekstblok"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DteTekstblok"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4ead5c46938571dc64a28adae93f3f3dbd14b236598d8928719f64d9bbb79ea6",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in volt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInVolt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in volt uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:68fb9c68c29c48fdc06aac35f98b63be5350d1bb98fc47241de8f97a12354d79",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in maand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMaand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a2d2938191b1f968fbd5cd54bd9dafce0442342ff0a4d149eceb7b155391f14f",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Literal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Literal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een constante."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:01c39cfc6f93e5e11216149f6e5c90fcd10fad8e09f2f49a5871a51bdbf6fd34",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Datumtijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DateTime"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7d5ced1991f88a820f3a8679c3750f4b46b6d0a0c23dcfd33a859e76a037e4b5",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#decimal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Decimaal getal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Decimal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#decimal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a05a61ac61122cbfd46d5ee50929ccdd4315a8e8844d80e0d0fdbdf3e62dee03",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#time",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Tijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Time"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een tijd volgens http://www.w3.org/2001/XMLSchema#time."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#time"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:20b99b9b0d8ae032d7726aae050b04c48daaf3910891fa6ea4aff0077a84b145",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#date",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Datum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Date"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een datum volgens http://www.w3.org/2001/XMLSchema#date."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#date"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c8a754f84072ba233ac7c173f20ac8e47ac8bf0e079ed2a90007980aab80b565",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Natuurlijk getal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NonNegativeInteger"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6c3ac9a51e3709752857fcf6a3d290032eb159279780290eebc4e0a55a4f04e6",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AnyURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een tekstwaarde die een verwijzing naar meer informatie van het element bevat volgens http://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#anyURI"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8753af28df48d941816836df379091959ff94b9bfe618935f9b9f01496f038ba",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#string",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "String"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "String"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#string"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Boolean"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Boolean"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#boolean"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "referencedEntities": [
+    {
+      "@id": "urn:oslo-toolchain:9777a456b2c970f271957eb394d75fe9a5b54303098392767785f377bda703cc",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Keuringobject"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KeuringObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bundeling van de gemeenschappelijke eigenschappen en relaties."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a587e4924c1b6520056dba3fbcc8aadbc1bcf22120251ab323d597feb703e2f0",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte aanvullende geometrie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AbstracteAanvullendeGeometrie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:da41dd9471ab0cb28c28490d587e5ea261ef9d82fdcbea1953fbb2fe01212605",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:28ae8dad5bb1fc6bafcd780564e2fb345aa30b96f4a226dd4f8d52089fd217aa",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:828ed68d3ab3b6fbf1da0c385b006c233669c9bd81ede469aa24a857d1cffb75",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ed683849367dcb78939a30ba21508d2b5cac2d3a07293cbedc32dbc9b3591084",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Niet-directionele relatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NietDirectioneleRelatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een abstracte die relaties groepeert waarbij de richting semantisch niet gedefinieerd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:407901cddc339cd8fca02ac7d27a54f9d96c7a03f9252197c46b46f06dca625e",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:46edf83d3ac3c3a9a050008c1b7a6eb8c2afc5195496b4fc3b36cc27e3168f9e",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Directionele relatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DirectioneleRelatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een abstracte die relaties groepeert waarbij de richting semantisch gedefinieerd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:397e67f31166faf65d0013f4746a3dc60061781bcb0eb2f64e00393e587386b8",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2d26412b3349658d9a7b69559db351b3f9a2be5a90da05a632de15ab17aeea61",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9f832bc6f27a55c7e4b6455c13f9137a75a92d6a25b06eceee6363b4f826a721",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:504be097ad6fa652dba6787ee9e2cd5ebc62e074e6730e3d2a239f8161ca1d0a",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5c3f023596d07ac336cc81f3163905308e7df681a5b5e61ff0f18e986629dfb4",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:684b5908a6cf8662c79f3d0f407fb9cd203aec0bff0f84cec06cb2947669d9ce",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cb752e50a127a8b8a3b839ff72cbdc7cab0a7fc0a629261b148d6be9198022d4",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    }
+  ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:d91fa4ecb40d2cfb0cd3b42dee0d9764763a064b6ed9d26915780f4ce65f518d",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:88aece2d1aedf7d75b5bd7c123c512e68185b1ce9b40d896bff5d7bbc3d95bcf",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7aad5b5fdff4fd3ef5af8af82bcdf20ac9144ca641e7355fb19edf85912023b3",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4961e707e678ed2a9d737a3511bd4bb4242e99868bab15c7c487533ebbd9e112",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f3a7a177dcb12c07abe24d140d8a23970a656a2dd0db09eaa803350c093ad3f8",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8cd2593036dbd6726de2a84985344d2a64f3803f9740cc0ad219372c66237a1c",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5a424b0a142c84d39d9d9d70a2c7470b1d3d62a20c91fd43502bd20054c512d0",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:62350c24f6fbcb3904d74cfe429455f22d16b60b476984a84b9cc9fd6e729e34",
+      "@type": "Enumeration",
+      "assignedURI": "https://schema.org/DayOfWeek",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:259473ff9ce861a2d6963a2d4e8fe20edd6c7392d221a8b5bc4a3b2f4f7ca059",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:74790d092c9cca4fa42032d6a75adc0e0cc0af649a2e08a875ffd599c3cb9c55",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cc62e7f96026e10cc6bce163cf4f4ae9c04cc2745550df1d0e1dadfd0d7a3fb",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fa5261770c12dadce99226cef93038d5abcbb00ed41bc3500cf5d1f0b42c84a3",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3ad913b03e591505cb4ff8c44f42d8062899d7978ae242859b493221cfffd2f3",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cee64e678d92795bd8a5b545a7087a73026152a7a9837d4b8504e5a4636e3f5",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ]
+}

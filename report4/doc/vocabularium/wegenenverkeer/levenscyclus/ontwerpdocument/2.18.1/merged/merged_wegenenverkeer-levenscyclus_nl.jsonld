@@ -1,0 +1,3155 @@
+{
+  "@context": {
+    "oslo": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
+    "packages": "@included",
+    "classes": "@included",
+    "datatypes": "@included",
+    "attributes": "@included",
+    "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
+    "baseURI": {
+      "@id": "oslo:baseURI",
+      "@type": "@id"
+    },
+    "vocDefinition": {
+      "@id": "oslo:vocDefinition",
+      "@container": "@set"
+    },
+    "apDefinition": {
+      "@id": "oslo:apDefinition",
+      "@container": "@set"
+    },
+    "vocLabel": {
+      "@id": "oslo:vocLabel",
+      "@container": "@set"
+    },
+    "apLabel": {
+      "@id": "oslo:apLabel",
+      "@container": "@set"
+    },
+    "diagramLabel": {
+      "@id": "oslo:diagramLabel"
+    },
+    "scope": {
+      "@id": "oslo:scope",
+      "@type": "@id"
+    },
+    "vocUsageNote": {
+      "@id": "oslo:vocUsageNote",
+      "@container": "@set"
+    },
+    "apUsageNote": {
+      "@id": "oslo:apUsageNote",
+      "@container": "@set"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@container": "@set"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "minCount": {
+      "@id": "sh:minCount"
+    },
+    "maxCount": {
+      "@id": "sh:maxCount"
+    },
+    "parent": {
+      "@id": "rdfs:subClassOf",
+      "@type": "owl:Class"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime"
+    },
+    "Package": "oslo:Package",
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "DatatypeProperty": {
+      "@id": "owl:DatatypeProperty"
+    },
+    "ObjectProperty": {
+      "@id": "owl:ObjectProperty"
+    },
+    "authors": {
+      "@type": "foaf:Person",
+      "@id": "foaf:maker"
+    },
+    "editors": {
+      "@type": "foaf:Person",
+      "@id": "rec:editor"
+    },
+    "contributors": {
+      "@type": "foaf:Person",
+      "@id": "dcterms:contributor"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "assignedURI": {
+      "@id": "oslo:assignedURI",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
+    },
+    "codelist": {
+      "@id": "oslo:codelist",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "adms:status",
+      "@type": "@id"
+    },
+    "extensions": {
+      "@id": "oslo:extensions",
+      "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
+    }
+  },
+  "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/vocabularium/wegenenverkeer/levenscyclus/ontwerpdocument/2.18.1",
+  "generatedAtTime": "2026-03-09T13:06:26.575Z",
+  "packages": [
+    {
+      "@id": "urn:oslo-toolchain:d52895e6cf47f8213c7515dad2d1ee3b601fff7432f1c92acf0ee7b1defef096",
+      "@type": "Package",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus",
+      "baseURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "classes": [
+    {
+      "@id": "urn:oslo-toolchain:72be07016b4a398a513c933dbcec515ee9a7a78e5da86e2c9907314b4668bc4a",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Uitgraving soorten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlUitgravingSoorten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type grond bij uitgraving."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlUitgravingSoorten",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b02e0d7082100b5a6be217918e44eac9af560ea4a23cf1860b8ccf7244f18651",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Vervuiling soorten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlVervuilingSoorten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van de vastgestelde vervuiling van de grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlVervuilingSoorten",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2e832dbcbb8823d335ef02a4e16891f2ab1d4a0f6c8633d0abfcd85277220d2d",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bemesting",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bemesting"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bemesting"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bodemverbeteringsmiddel",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bodemverbeteringsmiddel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bodemverbeteringsmiddel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het verwerken van bodemverbeteringsmiddelen omvat het gelijkmatig spreiden ervan op bepaalde grondoppervlakken en/of het verwerken in plantputten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Ophoging"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Ophoging"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afgraving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Afgraving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Uitgraving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Uitgraving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Uitgraving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:795e962557063b07b14f21d102f2562921ce117a9fcf2e1d12448761523b91d7",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Grondverbeteringsmiddel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlGrondverbeteringsmiddel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het verwerken van bodemverbeteringsmiddelen omvat het gelijkmatig spreiden ervan op bepaalde grondoppervlakken en/of het verwerken in plantputten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlGrondverbeteringsmiddel",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:41e9c9d03f44e7026bf451f610a142faf5fa33011f110617c8e1e9f77321340f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Grondherkomst"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlGrondherkomst"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De herkomst van de grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlGrondherkomst",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd7f1c1c289d5fd03c190486915d7283399c817589592d18f3fdb444b0de4877",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Grondbewerking",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Grondbewerking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Grondbewerking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Omvat de profielbewerkingen en bouwvoorwerkzaamheden voor aanleg van beplaningen, graslanden, wegbermen en grasmatten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5467d4a9f6654b9b30be985d72ae2da78aff83f136360feb26750bff603e5277",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Gewaarborgde wrijvingshoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlGewaarborgdeWrijvingshoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoek van inwendige wrijving geeft een aanwijzing omtrent de afschuifkarakteristieken en wordt dan ook gebruikt bij berekening van afschuiving, gronddruk en draagvermogen van paalfunderingen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlGewaarborgdeWrijvingshoek",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:48de77ae635b7cbe6c004b9466f0a217e6fe8be4a704910065279f53afd5d375",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bemesting"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBemesting"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het toevoegen van en verwerken van meststoffen zowel bij aanleg alsook bij beheer."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBemesting",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:da6f8ead2d9680b0b86c5c9b470d31746a82928b1aa890be8849c7009e697713",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Grondbewerkingen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlGrondbewerking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van mogelijke grondbewerkingen die uitgevoerd kunnen worden."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlGrondbewerking",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7d96fd3c1f86bb2a03f3dae9bfa2c5d1df98eeb7363591b9049bdd31f830196f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Ophoging soorten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlOphogingSoorten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type grond bij ophoging."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlOphogingSoorten",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:55fcb2f64bd66dc20451719fbc1de58c1c3fc7baa525b150e73e66f0f089216b",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afdekking",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afdekking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Afdekking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0492069a1a1485c2012f5d267347130f27ec06ba42f06c4c352696499bbd1955",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afgraving soorten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAfgravingSoorten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type handeling bij afgraving."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlAfgravingSoorten",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd6a0a968e3fd1972b624d9303e85d61c7bd0dac7082cee06c8649839dc2c24f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer exoten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBeheerExoten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Behandelingswijzen van exoten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBeheerExoten",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer grazige vegetatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BeheerGrazigeVegetatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het beheerobject voor de grazige vegetatie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:04d726cd9e4486e541c5e83843f32cce934ff3484ca92178729a2f9653cf6fd1",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer grazige vegetatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBeheerGrazigeVegetatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verschillende soorten van beheer voor grazige vegetatie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBeheerGrazigeVegetatie",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b6273e9e401f9549d7154069850997284384f7f72f8b7231ae9bb5de3ae161dd",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Nazorg jaarfrequentie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlNazorgJaarfrequentie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aantal keer dat jaarlijks de behandelde zone dient te worden gecontroleerd."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlNazorgJaarfrequentie",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8e1048740e42bb85e8a71007883ff08f45eab8b7d6d3e7a34f8deb1fbf999514",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer houtige vegetatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBeheerHoutigeVegetatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verschillende beheersopties voor houtige vegetatie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBeheerHoutigeVegetatie",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:db996d4a948be74be5c3002d4e3425f05eed0313c8a9e4a3a72e39799e299bb8",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerBoomvorm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer boomvorm"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BeheerBoomvorm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het beheerobject voor de solitaire boom."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:028a3ec0f86bb6a668308aa2790a484cc9eefe329d08dcbae306cd36498d7452",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer sierbeplanting"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBeheerSierbeplanting"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Verschillende mogelijke beheeropties bij sierbeplanting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBeheerSierbeplanting",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7eba9c8fd95672a24be6822fe46df4c9327a25f2f4d232ed5ffaab6f90f55773",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer boomvorm"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBeheerBoomvorm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Behandelingswijzen van bomen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlBeheerBoomvorm",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:586f7fa7e2966e33a368495dc1b3cb20753033b70d27ae5945f8815ba36ffc88",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerSierbeplanting",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer sierbeplanting"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BeheerSierbeplanting"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het beheerobject voor de sierbeplanting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer exoten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BeheerExoten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het beheerobject voor de exoten."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5d7b0225bca4d41c000a24e6a495be4bf445b986caa74a654ef9760b76542da1",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Maaiperiode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlMaaiPeriode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De maand waarin het maaien wordt uitgevoerd."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlMaaiPeriode",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:faa4ace2867ad1636e61fe31b811afe37a134e536058cb40aa605b60d5f5f3ed",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerHoutigeVegetatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Beheer houtige vegetatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BeheerHoutigeVegetatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het beheerobject voor de houtige vegetatie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fe67ca889423591854332a214cb6c5e8f8cf01ed4fb1faec84f0a4ed25667509",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Maaifrequentie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlMaaiFrequentie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het aantal keer dat er gemaaid wordt per jaar."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlMaaiFrequentie",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "attributes": [
+    {
+      "@id": "urn:oslo-toolchain:3bffb57bee7107a6cc520b4fe2ba6559a289ff45fa3f8959d445faa6b15bd843",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.isGazonbeheer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is gazonbeheer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isGazonbeheer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of de grazige vegetatie meer dan 3x per jaar gemaaid wordt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a9f79917c3093275ba0464e5d0c5548993f3664d8432c215daa8aca207dab1eb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.isMachinaal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is machinaal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isMachinaal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of het maaien machinaal of handmatig wordt uitgevoerd."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8b1c5a11211458353d37ee1a56fbbb12ed70909708648c5be5bdf25b76a5757c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bemesting.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht in kilogram van de te bewerken grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2e832dbcbb8823d335ef02a4e16891f2ab1d4a0f6c8633d0abfcd85277220d2d"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6977c1c923a53773fe3bd0bb4d1b1a97bc7090d137061a2f7bf1511a65be437d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:79584f87759c8357483c519d65e646df15ae1675e519048e0cf4d5087b7257c3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bemesting.bemesting",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bemesting"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bemesting"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het toevoegen van en verwerken van meststoffen zowel bij aanleg alsook bij beheer."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2e832dbcbb8823d335ef02a4e16891f2ab1d4a0f6c8633d0abfcd85277220d2d"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:48de77ae635b7cbe6c004b9466f0a217e6fe8be4a704910065279f53afd5d375"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:52e25f0aa716f69797b03afe20c8da6f3c1f38b3c7039d4c034f5be075441ec2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bodemverbeteringsmiddel.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte van de verbeterde grond in vierkante meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fa24d82f68907f95b8230dbe6c76a78ab1cbd1b97f38f9bffbec150023f1d05b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bodemverbeteringsmiddel.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht in kilogram van de verbeterde grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:6977c1c923a53773fe3bd0bb4d1b1a97bc7090d137061a2f7bf1511a65be437d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0641dfa8266b019aa5aa73794d57a9f5c1d0852d76d04b271bba7d667ab1f5a8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bodemverbeteringsmiddel.grondverbeteringsmiddel",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "grondverbeteringsmiddel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "grondverbeteringsmiddel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het verwerken van bodemverbeteringsmiddelen omvat het gelijkmatig spreiden ervan op bepaalde grondoppervlakken en/of het verwerken in plantputten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:795e962557063b07b14f21d102f2562921ce117a9fcf2e1d12448761523b91d7"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ae7511c9fb6662a0a0d60d663e1bcb82b96c8ec076bc212acb3fb8d099d406b3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Bodemverbeteringsmiddel.volume",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "volume"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "volume"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het volume van de verbeterde grond in kubieke meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c477c7fb7eb2b963f13da1e92ad354e4f06adbdc8cb72d585cbc98e5c1cd9758",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht van de grondlaag in ton."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:85106d23076d40675477236e680e07b8e037d81a7841748d38f87ab8ce3341eb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging.wrijvingshoek",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "wrijvingshoek"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "wrijvingshoek"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoek van inwendige wrijving geeft een aanwijzing omtrent de afschuifkarakteristieken en wordt dan ook gebruikt bij berekening van afschuiving, gronddruk en draagvermogen van paalfunderingen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5467d4a9f6654b9b30be985d72ae2da78aff83f136360feb26750bff603e5277"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:695bf36b0f5ddbe1582264c93dffe708ac6c479d8b1525b5c373f0be86831a8f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging.volume",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "volume"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "volume"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het volume van de grondlaag in kubieke meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:829c0cbf6f834db7c48a036599887bce4944402c85aa27029acce63f59053db7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging.herkomst",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "herkomst"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "herkomst"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De herkomst van de grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:41e9c9d03f44e7026bf451f610a142faf5fa33011f110617c8e1e9f77321340f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:282e314c21e0beb94d761c6a9340d40cc784da7a97a85043e289366399b2e89c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Ophoging.soortOphoging",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort ophoging"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortOphoging"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type grond bij ophoging."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7d96fd3c1f86bb2a03f3dae9bfa2c5d1df98eeb7363591b9049bdd31f830196f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:166d3829b20180bf09253153b5877f31b27ea94f24484f46f2dbce4a96d35385",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht van de grondlaag in ton."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9d0529d8fa5e7d74e8e505ff2db1e537a09727482f1e5e22bb9b7b939548b9af",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving.volume",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "volume"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "volume"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het volume van de grondlaag in kubieke meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2eb16aeff8f86571711b462ca535a993eefc5cb820800f29c5b2172923b84b93",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de afgraving."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3e03168b7c68f30f33a7b1133b2c9f2848b6b3248064d4eb2035e6827d3f58c5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving.bestemming",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestemming"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestemming"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De bestemmingen of doelen van de grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5a825ea4f2c5ea9a05dae9fa61d62b2961aaddf61a2aa75685ab9440239e87d5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:412695a223f424005bdcbefd83711bccb896b9974c3860ec4f705736d93b9ce8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afgraving.soortAfgraving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort afgraving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortAfgraving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type handeling bij afgraving."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:0492069a1a1485c2012f5d267347130f27ec06ba42f06c4c352696499bbd1955"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:061c1d9e2b9eea34c5fb150f83e98ba1ce4f95cabe992e1541b096e285f38778",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Uitgraving.gewicht",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "gewicht"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "gewicht"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het gewicht van de grondlaag in ton."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:87fbe5751a9f8b6e3ae7902b7cb56507bbe525547d1e81cc27c2bccf09ab459c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Uitgraving.soortUitgraving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort uitgraving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortUitgraving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De specificatie van type grond bij uitgraving."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:72be07016b4a398a513c933dbcec515ee9a7a78e5da86e2c9907314b4668bc4a"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:757bd861a9c5b326a1fbb7ae0c388ce9f9939b0304b26658330cf28b2fe07b1b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Uitgraving.volume",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "volume"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "volume"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het volume van de grondlaag in kubieke meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0683784e1d5b569e33cc5ff9b75ea46d40a7d18e8f0e0256dac8152b3c17793d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Uitgraving.bestemming",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestemming"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestemming"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De bestemmingen of doelen van de grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5a825ea4f2c5ea9a05dae9fa61d62b2961aaddf61a2aa75685ab9440239e87d5"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9fe9e3c54a5849431f5f6a604174f506be58183eea684be04b5423c7e932edcc",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Grondbewerking.soortGrondbewerking",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort grondbewerking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortGrondbewerking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Specificatie van het type profielbewerking en bouwvoorwerkzaamheden voor aanleg van beplantingen, graslanden, wegbermen en grasmatten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bd7f1c1c289d5fd03c190486915d7283399c817589592d18f3fdb444b0de4877"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:da6f8ead2d9680b0b86c5c9b470d31746a82928b1aa890be8849c7009e697713"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:802afbff8d06a629b28cba1463673ff930305a54644c1e83fad2b21308856407",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Grondbewerking.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de te bewerken grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bd7f1c1c289d5fd03c190486915d7283399c817589592d18f3fdb444b0de4877"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:061f751e789f7ee0ed15ae70019f1ab2b83d7646d9c97f2058d85a75d3df6d1c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afdekking.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de afdekking."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:55fcb2f64bd66dc20451719fbc1de58c1c3fc7baa525b150e73e66f0f089216b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9d752933ff1968b730f3800d09a03498fb16aac6bde68284dd785193abc7d041",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#Afdekking.herkomst",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "herkomst"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "herkomst"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De herkomst van de grond."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:55fcb2f64bd66dc20451719fbc1de58c1c3fc7baa525b150e73e66f0f089216b"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:41e9c9d03f44e7026bf451f610a142faf5fa33011f110617c8e1e9f77321340f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7cf2c1e42ad5bf4e2f1386acd35e3963c2408349c3ba43cc3f759b1234821f47",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie.beheeroptie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beheeroptie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beheeroptie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding van welk beheer wordt toegepast op de grazige vegetatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:04d726cd9e4486e541c5e83843f32cce934ff3484ca92178729a2f9653cf6fd1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:03cc26d6cf1b945857ea08de95e0a4ee7f09d8a8465d1443379f84532e7c08f8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie.heeftBeheerplan",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft beheerplan"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftBeheerplan"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of er een beheerplan bestaat."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a10a68a024f49ddf38729b69b42497fcfa921a975a3b51db6fb976a962b5015f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie.maaien",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "maaien"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "maaien"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de eigenschappen van maaien."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:33b5f976d0ecd7e116927fbebcf8056e6af80799cc79ce94b1fcf017cbac954e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie.lengte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lengte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lengte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lengte in meter van de te behandelen grazige vegetatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:974657f3c25d7d6bcd4d113372e28bc4de56ec6fbb87799ca50c5909f849f275",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerGrazigeVegetatie.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de te behandelen grazige vegetatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:384dbe6f4ab0269d31f01a890f15c7b59c45b5b01e6260956f9934f10f7f8d62",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.periode",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "periode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "periode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De maand waarin het maaien wordt uitgevoerd."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:5d7b0225bca4d41c000a24e6a495be4bf445b986caa74a654ef9760b76542da1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ef5ee30c961057ec6b98b91067d54755ad0479b3890c7a386c65fa213dd35fc7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.frequentie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "frequentie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "frequentie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het aantal keer dat er gemaaid wordt per jaar."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:fe67ca889423591854332a214cb6c5e8f8cf01ed4fb1faec84f0a4ed25667509"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e05d9c7b777b598e11cbb67c38e1fc62b2861d60c0d5f0c3033d76611323c913",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.isVeiligheidsmaaien",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is veiligheidsmaaien"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isVeiligheidsmaaien"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of er een maaistrook aanwezig is voor het vrijwaren van de zichtbaarheid en voor het vrijhouden van de bebakening en signalisatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ef4b91d9f8c2afa072cc883dac24f3f92f6f1aaff35f01b46e6ed7a55e0dc699",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.klepelmaaierToegelaten",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "klepelmaaier toegelaten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "klepelmaaierToegelaten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of er gemaaid mag worden met een klepelmaaier."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:03b3096484e08e4d49998ff0aab2d58309443052868afde330e40e0b5362a59d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien.isRuigtebeheer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is ruigtebeheer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isRuigtebeheer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of de grazige vegetatie minder dan 1x per jaar gemaaid wordt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:64b4940ae15aab13fd464df7105d6fa158db1ad3fd558a93387442e5fa10a2e1",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerBoomvorm.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de te behandelen grond rond de boom."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:db996d4a948be74be5c3002d4e3425f05eed0313c8a9e4a3a72e39799e299bb8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f21b0a01df256028d7e54b46d5da78e2eb66cc6c5e93ea8cfe69cf8392c4a134",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerBoomvorm.beheeroptie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beheeroptie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beheeroptie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Behandelingswijzen van bomen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:db996d4a948be74be5c3002d4e3425f05eed0313c8a9e4a3a72e39799e299bb8"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:7eba9c8fd95672a24be6822fe46df4c9327a25f2f4d232ed5ffaab6f90f55773"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:359571ba93670081200b5f1f803124e3191dec57aeed74636070af676d0e244d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerSierbeplanting.beheeroptie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beheeroptie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beheeroptie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding van welk beheer wordt toegepast op de sierbeplanting."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:586f7fa7e2966e33a368495dc1b3cb20753033b70d27ae5945f8815ba36ffc88"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:028a3ec0f86bb6a668308aa2790a484cc9eefe329d08dcbae306cd36498d7452"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:79393246b514022d7c771f481027bf5b538043e3d39b014125ce7a76ee703956",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerSierbeplanting.heeftBeheerplan",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft beheerplan"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftBeheerplan"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of er een beheerplan bestaat."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:586f7fa7e2966e33a368495dc1b3cb20753033b70d27ae5945f8815ba36ffc88"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8d468202b245cd60365a7e34cc6044c22586fcd9a2ce6e9d01328fbefde2f681",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerSierbeplanting.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de te behandelen sierbeplanting."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:586f7fa7e2966e33a368495dc1b3cb20753033b70d27ae5945f8815ba36ffc88"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4af2b63164249002f302e7776612d846fcc87edd119b020b20c557d4db244bfb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten.beheeroptie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beheeroptie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beheeroptie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Behandelingswijzen van exoten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:bd6a0a968e3fd1972b624d9303e85d61c7bd0dac7082cee06c8649839dc2c24f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:366eb496c564dea7f86017991ab41309c5a4d53434dd63cbae86d7dd6c60c7a3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten.oppervlakte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "oppervlakte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "oppervlakte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De oppervlakte in vierkante meter van de te behandelen exoten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b228b8d336d65360aa9920130d8b8f99c87d47be76d85aeb65a0804d661f7768",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten.bijzondereAfvoerVereist",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bijzondere afvoer vereist"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bijzondereAfvoerVereist"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of voor de verwijderde exoten een niet-reguliere afvoer is voorzien."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b720a43b66f875bc14a11048024298f13e53e6f4f13325013f6ee3df239a602e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten.heeftDeponie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft deponie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftDeponie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of de Japanse duizendknoop terplaatse kan worden gedeponeerd in een gecontamineerde zone."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:239bdc1d0c52f1bb04f5e423942299c5d91b2aaaa0667b865694b49809dc0f69",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerExoten.nazorgJaarfrequentie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "nazorg jaarfrequentie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "nazorgJaarfrequentie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aantal keer dat de behandelde zone jaarlijks dient te worden gecontroleerd."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:b6273e9e401f9549d7154069850997284384f7f72f8b7231ae9bb5de3ae161dd"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:60a6e46dfec726182b26421191e9b210ecc34553fe4fec4df79334305d101a5e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerHoutigeVegetatie.beheeroptie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "beheeroptie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "beheeroptie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding van welk beheer wordt toegepast op de houtige vegetatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:faa4ace2867ad1636e61fe31b811afe37a134e536058cb40aa605b60d5f5f3ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8e1048740e42bb85e8a71007883ff08f45eab8b7d6d3e7a34f8deb1fbf999514"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0eec75a44e4d8b40e837c784cbddd7d22e7c40526be546c4fc09117a3e3bc0c9",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#BeheerHoutigeVegetatie.heeftBeheerplan",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft beheerplan"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftBeheerplan"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of er een beheerplan bestaat."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:faa4ace2867ad1636e61fe31b811afe37a134e536058cb40aa605b60d5f5f3ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "datatypes": [
+    {
+      "@id": "urn:oslo-toolchain:315cfb9206e97af599858ca4c8f5a349a2712a0043e3d1285c7dd928da44a6e9",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/levenscyclus#DtcMaaien",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Maaien"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcMaaien"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de eigenschappen van maaien."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "referencedEntities": [
+    {
+      "@id": "urn:oslo-toolchain:2e832dbcbb8823d335ef02a4e16891f2ab1d4a0f6c8633d0abfcd85277220d2d",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5535d0613f21375573e4f083e95e1e2e4c8470467560120b8d15a941b708cc82",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f14549adf4b40d78bc612b84905d60e651e02d5887e5fb194300e44ee11653ce",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f1d3c2cf627ce377a57b352e28a808c55bcd58ea1156d38cf95a82b0ddf769ed",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:738e18c49a57cce92075ca10b3c4d4d6df0dcd22bd66cd0c7f9305faba542c2a",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:65ec8b97d68625f1b06b61268b95e92683b0418645fbf4555e2c9969e130a40b",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd7f1c1c289d5fd03c190486915d7283399c817589592d18f3fdb444b0de4877",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:55fcb2f64bd66dc20451719fbc1de58c1c3fc7baa525b150e73e66f0f089216b",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:417f383974eb070bb5b4ace54574e2d4571895a1d96b12f7366670eb00c57bd9",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:db996d4a948be74be5c3002d4e3425f05eed0313c8a9e4a3a72e39799e299bb8",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:586f7fa7e2966e33a368495dc1b3cb20753033b70d27ae5945f8815ba36ffc88",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bcddf018d1998d7d175646993b53baaa7a7160a8a54f179692a8e2a5f0466eeb",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:faa4ace2867ad1636e61fe31b811afe37a134e536058cb40aa605b60d5f5f3ed",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f39a10694559924b28fb9679705dfcd28dc6cedef29525bf9c4c66dc15962efb",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Boolean"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Boolean"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#boolean"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6977c1c923a53773fe3bd0bb4d1b1a97bc7090d137061a2f7bf1511a65be437d",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in kilogram"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInKilogram"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in kilogram uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:40218b2bf8ad979f9be2971bc28bedd54d86d5eba6e059dfeec5f76fa6e504e1",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in vierkante meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInVierkanteMeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in vierkante meter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e21649151cbfc0c31b2b0c9c78c658a72d01795980006ce76489232e3f4da989",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in kubieke meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInKubiekeMeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in kubieke meter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2053fad91883c6773aa749de87ee6731c7a189dd39ba99bcd5dd45a9c4d62100",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in ton"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInTon"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in ton uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5a825ea4f2c5ea9a05dae9fa61d62b2961aaddf61a2aa75685ab9440239e87d5",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Grondbestemming"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlGrondbestemming"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De bestemmingen of doelen van de grond."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:003158a153f3cd1f1679ecdcf3fd97b83bcd2caa9853bab472a629fa1568e560",
+      "assignedURI": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in meter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:72be07016b4a398a513c933dbcec515ee9a7a78e5da86e2c9907314b4668bc4a",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b02e0d7082100b5a6be217918e44eac9af560ea4a23cf1860b8ccf7244f18651",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:795e962557063b07b14f21d102f2562921ce117a9fcf2e1d12448761523b91d7",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:41e9c9d03f44e7026bf451f610a142faf5fa33011f110617c8e1e9f77321340f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5467d4a9f6654b9b30be985d72ae2da78aff83f136360feb26750bff603e5277",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:48de77ae635b7cbe6c004b9466f0a217e6fe8be4a704910065279f53afd5d375",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:da6f8ead2d9680b0b86c5c9b470d31746a82928b1aa890be8849c7009e697713",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7d96fd3c1f86bb2a03f3dae9bfa2c5d1df98eeb7363591b9049bdd31f830196f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0492069a1a1485c2012f5d267347130f27ec06ba42f06c4c352696499bbd1955",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd6a0a968e3fd1972b624d9303e85d61c7bd0dac7082cee06c8649839dc2c24f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:04d726cd9e4486e541c5e83843f32cce934ff3484ca92178729a2f9653cf6fd1",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b6273e9e401f9549d7154069850997284384f7f72f8b7231ae9bb5de3ae161dd",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8e1048740e42bb85e8a71007883ff08f45eab8b7d6d3e7a34f8deb1fbf999514",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:028a3ec0f86bb6a668308aa2790a484cc9eefe329d08dcbae306cd36498d7452",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7eba9c8fd95672a24be6822fe46df4c9327a25f2f4d232ed5ffaab6f90f55773",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5d7b0225bca4d41c000a24e6a495be4bf445b986caa74a654ef9760b76542da1",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fe67ca889423591854332a214cb6c5e8f8cf01ed4fb1faec84f0a4ed25667509",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard"
+    }
+  ],
+  "name": "wegenenverkeer-levenscyclus",
+  "type": "voc",
+  "prefix": "wegenenverkeer",
+  "title": "Levenscyclus",
+  "eap": "OSLO-AWV-VOC.eap",
+  "diagram": "OSLO-Levenscyclus",
+  "template": "levenscyclus-voc.j2",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+  "publication-date": "11-02-2026",
+  "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "OTL",
+  "site": "site-skeleton/levenscyclus-voc",
+  "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
+  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
+  "dependencies": [],
+  "translation": [
+    {
+      "language": "nl",
+      "template": "levenscyclus-voc.j2",
+      "title": "Levenscyclus",
+      "translationjson": "wegenenverkeer-levenscyclus_nl.json",
+      "mergefile": "merge_wegenenverkeer-levenscyclus_nl.jsonld",
+      "autotranslate": false
+    }
+  ],
+  "config": "config/config-voc.json",
+  "branchtag": "735b31074cc94fbbc052d68deebefd1db06f3852",
+  "navigation": {
+    "prev": "/doc/vocabularium/wegenenverkeer/levenscyclus/ontwerpdocument/2.18.0"
+  },
+  "repository": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer",
+  "urlref": "/doc/vocabularium/wegenenverkeer/levenscyclus/ontwerpdocument/2.18.1",
+  "documentcommit": "735b31074cc94fbbc052d68deebefd1db06f3852",
+  "toolchaincommit": "a5ec85c67793b62cefe676d04270584c0abd481b",
+  "hostname": "https://wegenenverkeer.data.dev-vlaanderen.be/"
+}
