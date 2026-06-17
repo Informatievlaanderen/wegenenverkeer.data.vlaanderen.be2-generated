@@ -2,367 +2,367 @@
 
 #||# -------------------------------------
 
-2026-06-17T09:42:00.834Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.071Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.835Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.072Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.835Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Sturing is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Sturing is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Sturing has name "Sturing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:Sturing has name "Sturing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Bevestiging is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Bevestiging is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.073Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Bevestiging is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Bevestiging is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Voedt is not an association with a source role. Ignoring this connector.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Voedt is not an association with a source role. Ignoring this connector.
 
-2026-06-17T09:42:00.836Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-06-17T11:55:48.074Z info: Connector OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-06-17T09:42:00.837Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
+2026-06-17T11:55:48.074Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
 
-2026-06-17T09:42:00.837Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_UPS:OSLO-UPS). Using fallback URI (http://todo.com/) instead.
+2026-06-17T11:55:48.074Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_UPS:OSLO-UPS). Using fallback URI (http://todo.com/) instead.
 
-2026-06-17T09:42:00.837Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_UPS). Using fallback URI (http://todo.com/) instead.
+2026-06-17T11:55:48.074Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_UPS). Using fallback URI (http://todo.com/) instead.
 
-2026-06-17T09:42:00.840Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.078Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.841Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.078Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.841Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.079Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.841Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.079Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:RHZModule has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.079Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:RHZModule has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.079Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KlAIMToestand has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.079Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KlAIMToestand has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.842Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.080Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KlAlgMimeType has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KlAlgMimeType has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteIPv4Adres has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteIPv4Adres has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteTekstblok has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteTekstblok has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInWatt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInWatt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.843Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpere has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpere has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpereUur has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpereUur has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInVolt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.081Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInVolt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInkWh has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInkWh has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMaand has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMaand has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInHerz has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInHerz has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMillimeter has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMillimeter has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInKiloWatt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInKiloWatt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Sturing has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Sturing has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Voedt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Voedt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DirectioneleRelatie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DirectioneleRelatie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.844Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Bevestiging has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Bevestiging has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.082Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlPDUMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlPDUMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSpanningsomvormerMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSpanningsomvormerMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSchakelaarUitvoering has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSchakelaarUitvoering has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlUPSMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlUPSMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSpanningsomvormerModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSpanningsomvormerModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.083Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.845Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlPDUModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlPDUModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarLocatie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.084Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBypassSchakelaarLocatie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijladerModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijladerModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlUPSModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlUPSModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijladerMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijladerMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:RHZModule has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:RHZModule has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.846Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSTSMerk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.085Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSTSMerk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSTSModelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlSTSModelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlAutoOmschakelaarWerking has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlAutoOmschakelaarWerking has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.847Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.848Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.848Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.848Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijMateriaal has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.086Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:KlBatterijMateriaal has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.849Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject:componentnummer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.088Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:ElektrischComponentennummerObject:componentnummer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.849Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject:serienummer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.088Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Abstracten:SerienummerObject:serienummer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.849Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus:isActief has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.088Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMDBStatus:isActief has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand:toestand has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.089Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMToestand:toestand has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:assetId has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.089Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:assetId has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:notitie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.089Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:notitie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:standaardBestekPostNummer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.089Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:standaardBestekPostNummer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:typeURI has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.089Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:typeURI has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:theoretischeLevensduur has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.090Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:theoretischeLevensduur has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:datumOprichtingObject has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.090Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMObject:datumOprichtingObject has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie:assetVersie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.090Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:AIMVersie:assetVersie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator:identificator has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.090Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator:identificator has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator:toegekendDoor has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcIdentificator:toegekendDoor has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:versienummer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:versienummer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:timestamp has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:timestamp has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:context has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAssetVersie:context has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:uri has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:uri has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:bestandsnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.091Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:bestandsnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:omschrijving has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:omschrijving has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:mimeType has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:mimeType has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:opmaakdatum has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcDocument:opmaakdatum has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm:breedte has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm:breedte has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm:hoogte has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DtcAfmetingBxhInMm:hoogte has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteTekstblok:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.092Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:DteTekstblok:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInWatt:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.093Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInWatt:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpere:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.093Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpere:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpereUur:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.093Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInAmpereUur:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInVolt:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.093Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInVolt:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInkWh:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.094Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInkWh:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMaand:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.094Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMaand:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInHerz:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.094Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInHerz:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.855Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMillimeter:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.094Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInMillimeter:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.855Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInKiloWatt:waarde has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.095Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Implementatieelement:KwantWrdInKiloWatt:waarde has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.855Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Voedt:aansluitspanning has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.095Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Voedt:aansluitspanning has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.855Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.095Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.095Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:spanning has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.096Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:spanning has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:fabricatiedatum has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.096Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:fabricatiedatum has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:afmetingen has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.096Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:afmetingen has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:materiaal has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.096Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterij:materiaal has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.096Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:locatie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:locatie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:uitvoering has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:BypassSchakelaar:uitvoering has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Batterijlader:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.097Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:aantalAansluitpunten has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:aantalAansluitpunten has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:heeftAlgemeneAanUit has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:heeftAlgemeneAanUit has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:ipAdres has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Stroomverdelingssysteem:ipAdres has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:maxPiekVermogen has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:maxPiekVermogen has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:autonomie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:autonomie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.098Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:serienummer has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:serienummer has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:maxContinuVermogen has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:maxContinuVermogen has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:uitgangsstroom has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:uitgangsstroom has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:uitgangsfrequentie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:UPS:uitgangsfrequentie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.099Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.100Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsspanning has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.100Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsspanning has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:technischeFiche has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.100Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:technischeFiche has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsstroom has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.100Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsstroom has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsspanning has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.100Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsspanning has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsfrequentie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:ingangsfrequentie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsstroom has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsstroom has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsfrequentie has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:uitgangsfrequentie has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:vermogen has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:Spanningsomvormer:vermogen has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:merk has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:merk has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:modelnaam has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.101Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:modelnaam has an empty value for tag usageNote-nl.
 
-2026-06-17T09:42:00.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:werkingsprincipe has an empty value for tag usageNote-nl.
+2026-06-17T11:55:48.102Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_UPS:OSLO-Onderdeel:AutomatischeOmschakelaar:werkingsprincipe has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 

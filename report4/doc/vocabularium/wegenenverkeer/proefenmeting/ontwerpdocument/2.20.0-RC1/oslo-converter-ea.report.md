@@ -2,9 +2,9 @@
 
 #||# -------------------------------------
 
-2026-06-17T09:43:11.592Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
+2026-06-17T11:56:58.295Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
 
-2026-06-17T09:43:11.593Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_Vocabularium). Using fallback URI (http://todo.com/) instead.
+2026-06-17T11:56:58.296Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_Vocabularium). Using fallback URI (http://todo.com/) instead.
 
 Error: [AttributeConverterHandler]: Invalid URL (Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld.) for attribute (OTL:OSLO²_Vocabularium:OSLO-Abstracten:Buis:breedteBuitenzijde)
 
