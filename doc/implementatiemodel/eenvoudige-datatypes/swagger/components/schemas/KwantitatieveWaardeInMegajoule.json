@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInMegajoule",
+  "type": "object",
+  "description": "Een kwantitatieve waarde dat een getal in megajoule voorstelt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMegajoule)",
+      "pattern": "^KwantitatieveWaardeInMegajoule$"
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in megajoule.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Bevat een getal die bij het datatype hoort.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

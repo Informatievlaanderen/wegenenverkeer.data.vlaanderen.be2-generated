@@ -1,0 +1,25 @@
+{
+  "title": "Masthoogte",
+  "type": "object",
+  "description": "Union datatype om een standaard of afwijkende masthoogte te bepalen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Masthoogte)",
+      "pattern": "^Masthoogte$"
+    },
+    "standaardHoogte": {
+      "$ref": "#/components/schemas/WvMasthoogte"
+    },
+    "afwijkendeHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

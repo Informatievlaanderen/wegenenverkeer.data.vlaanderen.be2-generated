@@ -1,0 +1,27 @@
+{
+  "title": "Betonstraatsteenafwerking",
+  "type": "object",
+  "description": "Complex datatype voor de afwerking van de rand van een betonstraatsteenverharding.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Betonstraatsteenafwerking)",
+      "pattern": "^Betonstraatsteenafwerking$"
+    },
+    "randafwerking": {
+      "$ref": "#/components/schemas/Randafwerking"
+    },
+    "lengteRandafwerking": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "randafwerking",
+    "lengteRandafwerking"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Staalspecificaties",
+  "type": "object",
+  "description": "Complex datatype om de eigenschappen van staal te bundelen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Staalspecificaties)",
+      "pattern": "^Staalspecificaties$"
+    },
+    "staalsoort": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "walsmethode": {
+      "$ref": "#/components/schemas/Walsmethode"
+    }
+  },
+  "required": [
+    "@type",
+    "staalsoort",
+    "walsmethode"
+  ]
+}

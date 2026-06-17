@@ -1,0 +1,135 @@
+{
+  "title": "ElektrischeKeuring",
+  "type": "object",
+  "description": "Een formele controle en beoordeling waarbij wordt nagegaan of de elektrische installatie voldoet aan de geldende wettelijke, normatieve en veiligheidsvereisten, met als doel de elektrische veiligheid en conformiteit te waarborgen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ElektrischeKeuring)",
+      "pattern": "^ElektrischeKeuring$"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Keuringsresultaat"
+    },
+    "geldigTot": {
+      "type": "object",
+      "description": "De datum tot en met welke de elektrische keuring als geldig wordt beschouwd, conform de geldende regelgeving of het keuringsverslag, waarna een herkeuring vereist is.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "keuringsdatum": {
+      "type": "object",
+      "description": "De datum waarop het asset laatst is gekeurd.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "resultaat",
+    "geldigTot",
+    "keuringsdatum",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

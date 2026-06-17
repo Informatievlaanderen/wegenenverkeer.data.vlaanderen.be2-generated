@@ -2,29 +2,365 @@
 
 #||# -------------------------------------
 
-node:internal/modules/cjs/loader:1205
+2026-06-17T09:40:35.557Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:Voedt)
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-17T09:40:35.559Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SoftwareToegang:Sturing)
 
-    ^
+2026-06-17T09:40:35.562Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
 
+2026-06-17T09:40:35.562Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
+2026-06-17T09:40:35.563Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Voedt is not an association with a source role. Ignoring this connector.
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs not supported.
+2026-06-17T09:40:35.563Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+2026-06-17T09:40:35.563Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
+2026-06-17T09:40:35.563Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-  code: 'ERR_REQUIRE_ESM'
+2026-06-17T09:40:35.563Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:Voedt is not an association with a source role. Ignoring this connector.
 
-}
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:Bevestiging is not an association with a source role. Ignoring this connector.
 
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-Node.js v20.15.1
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Voedt is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:HoortBij is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:HoortBij has name "HoortBij". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:HoortBij is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:HoortBij has name "HoortBij". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:FietstelDisplay:HoortBij is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:FietstelDisplay:HoortBij has name "HoortBij". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:Sturing is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:Sturing has name "Sturing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:Sturing is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:Sturing has name "Sturing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Bevestiging is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.564Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Voedt has name "Voedt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Bevestiging is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:Bevestiging has name "Bevestiging". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:Sturing is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:40:35.565Z info: Connector OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:Sturing has name "Sturing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:40:35.566Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:40:35.566Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Fietstelinstallatie). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:40:35.566Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_Fietstelinstallatie). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:40:35.571Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.572Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:BevestigingGC has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.572Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SoftwareToegang has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.573Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectielus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SelNietSelLus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectielus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KlAIMToestand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.574Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.575Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcIdentificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAssetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcTijdsduur has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.576Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlInM has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KlAlgMimeType has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxhInMm has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DteTekstblok has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInWatt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInSeconde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.577Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMeter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInAmpereUur has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInVolt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInUur has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMaand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMillimeter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMinuut has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Installatie:Fietstelinstallatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.578Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Sturing has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Voedt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:HoortBij has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Bevestiging has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.579Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlZonnepaneelModelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlBatterijModelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlBatterijMerk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Voedingspunt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.580Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:BevestigingGC has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlZonnepaneelMerk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlFietstelsysteemMerk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlFietstelsysteemModelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:FietstelDisplay has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.581Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SerienummerObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlBatterijMateriaal has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlVriBewaking has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SelNietSelLus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlVriLusFunctie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.582Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:KlVriLusSoortvoertuig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.584Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SerienummerObject:serienummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.585Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectie:soortBewaking has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.585Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectielus:bewakingstijd has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.585Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:Detectielus:afmetingenBL has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.585Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SelNietSelLus:heeftMofInTrekput has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.585Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Abstracten:SelNietSelLus:isPrioritair has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.586Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMDBStatus:isActief has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.586Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMToestand:toestand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.586Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:assetId has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.586Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:notitie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.586Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:standaardBestekPostNummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.587Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:typeURI has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.587Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:theoretischeLevensduur has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.587Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMObject:datumOprichtingObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.587Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:AIMVersie:assetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.588Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcIdentificator:identificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.588Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcIdentificator:toegekendDoor has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.588Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAssetVersie:versienummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.588Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAssetVersie:timestamp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.588Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAssetVersie:context has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.589Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcTijdsduur:uren has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.589Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcTijdsduur:minuten has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.589Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcTijdsduur:seconden has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.589Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument:uri has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.590Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument:bestandsnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.590Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument:omschrijving has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.590Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument:mimeType has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.590Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcDocument:opmaakdatum has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.591Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlInM:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.591Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlInM:lengte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.591Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxhInMm:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.591Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxhInMm:hoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.592Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.592Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:lengte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.592Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:hoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.592Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:DteTekstblok:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.593Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInWatt:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.593Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInSeconde:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.594Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMeter:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.594Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInAmpereUur:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.594Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInVolt:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.595Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInUur:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.595Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMaand:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.596Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMillimeter:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.596Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Implementatieelement:KwantWrdInMinuut:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.597Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Voedt:aansluitspanning has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.597Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Stroomkring:stroomkringnummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.597Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:merk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.598Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:modelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.598Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:spanning has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.598Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:fabricatiedatum has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.599Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:afmetingen has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.599Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Batterij:materiaal has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.599Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:vermogen has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.599Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:merk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.600Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:modelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.600Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Zonnepaneel:technischeFiche has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.600Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:FietstelDisplay:isDubbelzijdig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.600Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:FietstelDisplay:technischeFiche has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.601Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:merk has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.601Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:modelnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.601Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:technischeFiche has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.601Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:Fietstelsysteem:afmetingen has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.602Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:soortVoertuig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.602Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:isRichtingsgevoelig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.602Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:isMotorgevoelig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:35.602Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Fietstelinstallatie:OSLO-Onderdeel:NietSelectieveDetectielus:functie has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
-
-file fietstelinstallatie.jsonld does not exist
 

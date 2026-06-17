@@ -1,0 +1,70 @@
+{
+  "title": "DienstdatumV-Plan",
+  "type": "object",
+  "description": "Complex datatype ter inventarisatie van de indienst- en uitdienstname van een V-plan.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DienstdatumV-Plan)",
+      "pattern": "^DienstdatumV-Plan$"
+    },
+    "indienstname": {
+      "type": "object",
+      "description": "De datum waarop het VPlan effectief van toepassing wordt op de verkeersregelinstallatie.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "uitdienstname": {
+      "type": "object",
+      "description": "De uitdienstname is de datum waarop het VPlan niet langer van toepassing is op de verkeersregelinstallatie.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "commentaar": {
+      "type": "object",
+      "description": "Bijkomende informatie van de regeling.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "indienstname",
+    "uitdienstname",
+    "commentaar"
+  ]
+}

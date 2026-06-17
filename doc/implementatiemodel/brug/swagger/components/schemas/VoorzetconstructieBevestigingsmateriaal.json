@@ -1,0 +1,27 @@
+{
+  "title": "VoorzetconstructieBevestigingsmateriaal",
+  "type": "object",
+  "description": "Complex datatype voor de bevestigingsmaterialen van een voorzetconstructie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VoorzetconstructieBevestigingsmateriaal)",
+      "pattern": "^VoorzetconstructieBevestigingsmateriaal$"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/VoorzetconstructieBevestigingsmateriaalDiameter"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/VoorzetconstructieBevestigingsmateriaal"
+    }
+  },
+  "required": [
+    "@type",
+    "diameter",
+    "materiaal"
+  ]
+}

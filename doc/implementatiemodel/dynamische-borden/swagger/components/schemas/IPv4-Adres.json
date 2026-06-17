@@ -1,0 +1,32 @@
+{
+  "title": "IPv4-Adres",
+  "type": "object",
+  "description": "Beschrijft een ip-adres volgens de ipv4 specificatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IPv4-Adres)",
+      "pattern": "^IPv4-Adres$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "De string die het IPv4 adres representeert. Het formaat is een decimale notatie bv. 91.198.174.232",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde"
+  ]
+}

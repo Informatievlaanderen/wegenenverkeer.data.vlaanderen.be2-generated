@@ -1,0 +1,27 @@
+{
+  "title": "Profieltype",
+  "type": "object",
+  "description": "Complex datatype om de hoogtemaat en de soort van het profiel in te geven.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Profieltype)",
+      "pattern": "^Profieltype$"
+    },
+    "profielsoort": {
+      "$ref": "#/components/schemas/Profielsoort"
+    },
+    "profielhoogtemaat": {
+      "$ref": "#/components/schemas/Profielhoogtemaat"
+    }
+  },
+  "required": [
+    "@type",
+    "profielsoort",
+    "profielhoogtemaat"
+  ]
+}

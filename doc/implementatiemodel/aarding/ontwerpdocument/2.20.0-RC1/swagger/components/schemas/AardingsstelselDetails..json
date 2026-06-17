@@ -1,0 +1,27 @@
+{
+  "title": "AardingsstelselDetails.",
+  "type": "object",
+  "description": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AardingsstelselDetails.)",
+      "pattern": "^AardingsstelselDetails.$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/AardingsinstallatieAardingsstelsel"
+    },
+    "attestDistributienetbeheerder": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "attestDistributienetbeheerder"
+  ]
+}

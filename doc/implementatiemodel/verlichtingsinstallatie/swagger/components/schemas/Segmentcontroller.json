@@ -1,0 +1,251 @@
+{
+  "title": "Segmentcontroller",
+  "type": "object",
+  "description": "Controller die zorgt voor de bewaking en bediening van verlichtingssegmenten per paal en aldus zorgt voor de communicatie tussen de cabine en de armatuurcontrollers.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Segmentcontroller)",
+      "pattern": "^Segmentcontroller$"
+    },
+    "merk": {
+      "type": "object",
+      "description": "Merk van de segmentcontroller. Attribuut uit gebruik sinds versie 2.8.0-RC1",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "modelnaam": {
+      "type": "object",
+      "description": "Modelnaam van de segmentcontroller. Attribuut uit gebruik sinds versie 2.8.0-RC1",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "beveiligingssleutel": {
+      "$ref": "#/components/schemas/ControllerBeveiligingssleutel."
+    },
+    "netwerkconfiguratieWegverlichting": {
+      "$ref": "#/components/schemas/NetwerkconfiguratieWegverlichting"
+    },
+    "serienummer": {
+      "type": "object",
+      "description": "Het unieke nummer waarmee het toestel door de fabrikant geïdentificeerd is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "firmwareversie": {
+      "type": "object",
+      "description": "Firmwareversie van de controller.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "batchnummer": {
+      "type": "object",
+      "description": "Nummer van de productiebatch van de leverancier.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "dNS-Naam": {
+      "type": "object",
+      "description": "DNS-naam van de controller.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "type": "object",
+      "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "beveiligingssleutel",
+    "netwerkconfiguratieWegverlichting",
+    "serienummer",
+    "iP-Adres",
+    "firmwareversie",
+    "batchnummer",
+    "dNS-Naam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

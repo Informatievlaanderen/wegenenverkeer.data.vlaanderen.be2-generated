@@ -1,0 +1,230 @@
+{
+  "title": "BloemrijkGlanshavergrasland",
+  "type": "object",
+  "description": "G4a - aardaker, beemdkroon, beemdooievaarsbek, bevertjes, gele morgenster, gewone agrimonie, gewone rolklaver, gewone vogelmelk, glad walstro, goudhaver, graslathyrus, groot streepzaad, grote bevernel, grote pimpernel, gulden boterbloem, gulden sleutelbloem, klavervreter, kleine bevernel, kleine ratelaar, knolboterbloem, knolsteenbreek, knoopkruid, kraailook, margriet, muskuskaasjeskruid, naakte lathyrus, rapunzelklokje, ruige leeuwentand, veldlathyrus, veldsalie, vijfdelig kaasjeskruid en zachte haver, grote ratelaar, vertakte leeuwentand, vierzadige wikke.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BloemrijkGlanshavergrasland)",
+      "pattern": "^BloemrijkGlanshavergrasland$"
+    },
+    "huidigNatuurbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "natuurstreefbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/GrazigeVegetatieAanleg"
+    },
+    "heeftBolgewassen": {
+      "type": "object",
+      "description": "Grasland met bol- en knolgewassen die in het voorjaar bloeien.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isOvergroeienRandVerharding": {
+      "type": "object",
+      "description": "Geeft aan of de rand van de verharding al dan niet wordt overgroeid door de grazige vegetatie.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "type": "object",
+      "description": "Eigenschap die aangeeft of er binnen het beheerdeel al dan niet objecten voorkomen die de vrije werking van machines of andere werktuigen kan verhinderen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "huidigNatuurbeeld",
+    "natuurstreefbeeld",
+    "aanleg",
+    "heeftBolgewassen",
+    "isOvergroeienRandVerharding",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

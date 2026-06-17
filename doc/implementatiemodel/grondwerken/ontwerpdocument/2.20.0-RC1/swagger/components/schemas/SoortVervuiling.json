@@ -1,0 +1,33 @@
+{
+  "title": "SoortVervuiling",
+  "type": "object",
+  "description": "Complex datatype om het soort vervuiling te bepalen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SoortVervuiling)",
+      "pattern": "^SoortVervuiling$"
+    },
+    "soortVervuiling": {
+      "$ref": "#/components/schemas/VervuilingSoorten"
+    },
+    "microgramPerKilogram": {
+      "type": "array",
+      "description": "Lijst van KwantitatieveWaardeInMicrogramPerKilogram items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMicrogramPerKilogram"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    }
+  },
+  "required": [
+    "@type",
+    "soortVervuiling",
+    "microgramPerKilogram"
+  ]
+}

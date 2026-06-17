@@ -1,0 +1,27 @@
+{
+  "title": "MarkeringOpvatting",
+  "type": "object",
+  "description": "Complex datatype voor de opvatting van een markering.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MarkeringOpvatting)",
+      "pattern": "^MarkeringOpvatting$"
+    },
+    "opvatting": {
+      "$ref": "#/components/schemas/SignalisatieMarkeringOpvatting"
+    },
+    "waarborgperiode": {
+      "$ref": "#/components/schemas/Markeringswaarborgperiode"
+    }
+  },
+  "required": [
+    "@type",
+    "opvatting",
+    "waarborgperiode"
+  ]
+}

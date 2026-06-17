@@ -1,0 +1,73 @@
+{
+  "title": "Bestandsbijlage",
+  "type": "object",
+  "description": "Complex datatype voor alle bestandsbijlages.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bestandsbijlage)",
+      "pattern": "^Bestandsbijlage$"
+    },
+    "uri": {
+      "type": "object",
+      "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestandsnaam": {
+      "type": "object",
+      "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
+    "mime-Type": {
+      "$ref": "#/components/schemas/Mimetype"
+    },
+    "opmaakdatum": {
+      "type": "object",
+      "description": "De datum waarop het document is opgemaakt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "uri",
+    "bestandsnaam",
+    "omschrijving",
+    "mime-Type",
+    "opmaakdatum"
+  ]
+}

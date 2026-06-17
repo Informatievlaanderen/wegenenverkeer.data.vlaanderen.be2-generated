@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInInch",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in inches uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInInch)",
+      "pattern": "^KwantitatieveWaardeInInch$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Bevat een getal die bij het datatype hoort.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in inch als internationale eenheid (eengemaakte Britse en Amerikaanse systeem). \"[in_i]\"^^cdt:ucumunit",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "MinMaxHoogteSchermelement",
+  "type": "object",
+  "description": "Complex datatype voor de hoogte in centimeter van het laagste element en van het hoogste element.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MinMaxHoogteSchermelement)",
+      "pattern": "^MinMaxHoogteSchermelement$"
+    },
+    "minimaleSchermhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "maximaleSchermhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "minimaleSchermhoogte",
+    "maximaleSchermhoogte"
+  ]
+}

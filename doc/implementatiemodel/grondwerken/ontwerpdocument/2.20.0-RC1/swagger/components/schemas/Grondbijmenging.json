@@ -1,0 +1,45 @@
+{
+  "title": "Grondbijmenging",
+  "type": "object",
+  "description": "Complex datatype om extra informatie van de bijmenging van grond te capteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondbijmenging)",
+      "pattern": "^Grondbijmenging$"
+    },
+    "bijmengingshoofdnaamcode": {
+      "$ref": "#/components/schemas/GrondHoofdnaamcode"
+    },
+    "hoeveelheidscode": {
+      "$ref": "#/components/schemas/GrondbijmengingHoeveelheidscode"
+    },
+    "isGrondmengingPlaatselijk": {
+      "type": "object",
+      "description": "Grondbijmenging plaatselijk of niet-plaatselijk.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "bijmengingshoofdnaamcode",
+    "hoeveelheidscode",
+    "isGrondmengingPlaatselijk"
+  ]
+}

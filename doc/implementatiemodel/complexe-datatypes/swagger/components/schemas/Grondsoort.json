@@ -1,0 +1,33 @@
+{
+  "title": "Grondsoort",
+  "type": "object",
+  "description": "Complex datatype om het soort grond te bepalen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondsoort)",
+      "pattern": "^Grondsoort$"
+    },
+    "hoofdnaamcode": {
+      "$ref": "#/components/schemas/GrondHoofdnaamcode"
+    },
+    "bijmenging": {
+      "type": "array",
+      "description": "Lijst van Grondbijmenging items.",
+      "items": {
+        "$ref": "#/components/schemas/Grondbijmenging"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    }
+  },
+  "required": [
+    "@type",
+    "hoofdnaamcode",
+    "bijmenging"
+  ]
+}

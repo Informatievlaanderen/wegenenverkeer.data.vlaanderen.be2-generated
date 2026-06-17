@@ -1,0 +1,67 @@
+{
+  "title": "Bevestiging",
+  "type": "object",
+  "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bevestiging)",
+      "pattern": "^Bevestiging$"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

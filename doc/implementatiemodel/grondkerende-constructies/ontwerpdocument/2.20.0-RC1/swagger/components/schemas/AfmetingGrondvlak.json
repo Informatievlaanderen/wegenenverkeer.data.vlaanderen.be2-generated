@@ -1,0 +1,25 @@
+{
+  "title": "AfmetingGrondvlak",
+  "type": "object",
+  "description": "Datatype voor de afmeting van een (grond)vlak volgens zijn vorm.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingGrondvlak)",
+      "pattern": "^AfmetingGrondvlak$"
+    },
+    "rechthoekig": {
+      "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
+    },
+    "rond": {
+      "$ref": "#/components/schemas/AfmetingDiameterInCentimeter"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

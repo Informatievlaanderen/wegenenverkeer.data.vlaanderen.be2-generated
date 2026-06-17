@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInVierkanteMeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in vierkante meter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInVierkanteMeter)",
+      "pattern": "^KwantitatieveWaardeInVierkanteMeter$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Bevat een getal die bij het datatype hoort.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter. \"m2\"^^cdt:ucumunit",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

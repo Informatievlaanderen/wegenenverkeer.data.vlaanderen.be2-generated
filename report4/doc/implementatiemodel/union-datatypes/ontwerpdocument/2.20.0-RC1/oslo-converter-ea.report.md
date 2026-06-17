@@ -2,29 +2,125 @@
 
 #||# -------------------------------------
 
-node:internal/modules/cjs/loader:1205
+2026-06-17T09:41:58.975Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-17T09:41:58.976Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_Union-datatypes:OSLO-Union-datatypes). Using fallback URI (http://todo.com/) instead.
 
-    ^
+2026-06-17T09:41:58.977Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_Union-datatypes). Using fallback URI (http://todo.com/) instead.
 
+2026-06-17T09:41:58.980Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuHellingsSchoorhoek has an empty value for tag usageNote-nl.
 
+2026-06-17T09:41:58.980Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KlSchoorhoek has an empty value for tag usageNote-nl.
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs not supported.
+2026-06-17T09:41:58.980Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuDwarsafmetingen has an empty value for tag usageNote-nl.
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingZijdeInMm has an empty value for tag usageNote-nl.
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlInCm has an empty value for tag usageNote-nl.
 
-  code: 'ERR_REQUIRE_ESM'
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingDiameterInCm has an empty value for tag usageNote-nl.
 
-}
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxhInMm has an empty value for tag usageNote-nl.
 
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingDiameterInMm has an empty value for tag usageNote-nl.
 
+2026-06-17T09:41:58.981Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm has an empty value for tag usageNote-nl.
 
-Node.js v20.15.1
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInMeter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInCentimeter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInMillimeter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInTon has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInDecimaleGraden has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingGrondvlak has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtcProfileerlaag has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:KlBVLaagtype has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuBVLaagtypes has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuWvLichtmastBevsToestelMethode has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.982Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:KlWvLichtmastBevsToestel has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.983Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:KlLichtmastMasthoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.983Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuLichtmastMasthoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.983Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuHellingsSchoorhoek:hellingshoek has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuHellingsSchoorhoek:schoorhoek has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuDwarsafmetingen:rechthoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtuDwarsafmetingen:rond has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingZijdeInMm:zijde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlInCm:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlInCm:lengte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingDiameterInCm:diameter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.984Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxhInMm:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxhInMm:hoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingDiameterInMm:diameter has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:breedte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:lengte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:DtcAfmetingBxlxhInMm:hoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInMeter:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInCentimeter:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInMillimeter:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.985Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInTon:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Implementatieelement:KwantWrdInDecimaleGraden:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingGrondvlak:rechthoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingGrondvlak:rond has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord:driehoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord:rond has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord:vierhoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord:zeshoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuAfmetingVerkeersbord:achthoekig has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtcProfileerlaag:gewicht has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.986Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtcProfileerlaag:laagtype has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.987Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuBVLaagtypes:laagtype has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.987Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuBVLaagtypes:profileerlaag has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.987Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuWvLichtmastBevsToestelMethode:standaardMethode has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.987Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuWvLichtmastBevsToestelMethode:afwijkendeMethode has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.987Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuLichtmastMasthoogte:standaardHoogte has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:58.988Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Union-datatypes:OSLO-Onderdeel:DtuLichtmastMasthoogte:afwijkendeHoogte has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
-
-file union-datatypes.jsonld does not exist
 

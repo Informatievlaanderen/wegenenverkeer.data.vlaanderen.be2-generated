@@ -1,0 +1,54 @@
+{
+  "title": "SierbeplantingAanleg",
+  "type": "object",
+  "description": "Complex datatype voor dat de aanleg van sierbeplanting beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SierbeplantingAanleg)",
+      "pattern": "^SierbeplantingAanleg$"
+    },
+    "plantmaat": {
+      "$ref": "#/components/schemas/SierbeplPlantmaat"
+    },
+    "containermaat": {
+      "$ref": "#/components/schemas/SierbeplantingContainer"
+    },
+    "plantdichtheid": {
+      "type": "object",
+      "description": "Aantal planten per vierkante meter.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "plantverband": {
+      "$ref": "#/components/schemas/VegetatiePlantverband"
+    },
+    "aanplantingswijze": {
+      "$ref": "#/components/schemas/AanplantingswijzeSierbeplanting"
+    }
+  },
+  "required": [
+    "@type",
+    "plantmaat",
+    "containermaat",
+    "plantdichtheid",
+    "plantverband",
+    "aanplantingswijze"
+  ]
+}

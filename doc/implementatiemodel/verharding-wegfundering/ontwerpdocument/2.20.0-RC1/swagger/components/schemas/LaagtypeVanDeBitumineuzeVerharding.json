@@ -1,0 +1,25 @@
+{
+  "title": "LaagtypeVanDeBitumineuzeVerharding",
+  "type": "object",
+  "description": "Union datatype voor een laagtype anders dan de profileerlaag. Bij een profileerlaag kan men het gewicht toelichten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LaagtypeVanDeBitumineuzeVerharding)",
+      "pattern": "^LaagtypeVanDeBitumineuzeVerharding$"
+    },
+    "laagtype": {
+      "$ref": "#/components/schemas/BVLaagtype"
+    },
+    "profileerlaag": {
+      "$ref": "#/components/schemas/Profileerlaag"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

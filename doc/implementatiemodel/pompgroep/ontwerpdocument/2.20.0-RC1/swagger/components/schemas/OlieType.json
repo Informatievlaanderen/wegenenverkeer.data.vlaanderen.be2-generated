@@ -1,0 +1,81 @@
+{
+  "title": "OlieType",
+  "type": "object",
+  "description": "Complex datatype om het type olie te beschrijven.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse OlieType)",
+      "pattern": "^OlieType$"
+    },
+    "typeOlie": {
+      "$ref": "#/components/schemas/OlieType"
+    },
+    "viscositeitOlie": {
+      "$ref": "#/components/schemas/ViscositeitKlasse"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/OlieMerk"
+    },
+    "additievenOlie": {
+      "type": "array",
+      "description": "Lijst van OlieAdditieven items.",
+      "items": {
+        "$ref": "#/components/schemas/OlieAdditieven"
+      },
+      "minItems": 1
+    },
+    "isSynthetisch": {
+      "type": "object",
+      "description": "Geeft aan of de olie synthetisch is. Zo niet, dan is de olie biologisch.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "datumLaatstVerverst": {
+      "type": "object",
+      "description": "Geeft aan wanneer de olie voor het laatst ververst is geweest.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiter"
+    }
+  },
+  "required": [
+    "@type",
+    "typeOlie",
+    "viscositeitOlie",
+    "merk",
+    "additievenOlie",
+    "isSynthetisch",
+    "datumLaatstVerverst",
+    "volume"
+  ]
+}

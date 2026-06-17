@@ -1,0 +1,2835 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "AIMToestand": {
+        "title": "AIMToestand",
+        "type": "object",
+        "description": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AIMToestand)",
+            "pattern": "^AIMToestand$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Mimetype": {
+        "title": "Mimetype",
+        "type": "object",
+        "description": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Mimetype)",
+            "pattern": "^Mimetype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "UitgravingSoorten": {
+        "title": "UitgravingSoorten",
+        "type": "object",
+        "description": "De specificatie van type grond bij uitgraving.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse UitgravingSoorten)",
+            "pattern": "^UitgravingSoorten$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "VervuilingSoorten": {
+        "title": "VervuilingSoorten",
+        "type": "object",
+        "description": "De specificatie van de vastgestelde vervuiling van de grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VervuilingSoorten)",
+            "pattern": "^VervuilingSoorten$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Grondverbeteringsmiddel": {
+        "title": "Grondverbeteringsmiddel",
+        "type": "object",
+        "description": "Het verwerken van bodemverbeteringsmiddelen omvat het gelijkmatig spreiden ervan op bepaalde grondoppervlakken en/of het verwerken in plantputten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondverbeteringsmiddel)",
+            "pattern": "^Grondverbeteringsmiddel$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Grondherkomst": {
+        "title": "Grondherkomst",
+        "type": "object",
+        "description": "De herkomst van de grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondherkomst)",
+            "pattern": "^Grondherkomst$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GewaarborgdeWrijvingshoek": {
+        "title": "GewaarborgdeWrijvingshoek",
+        "type": "object",
+        "description": "De hoek van inwendige wrijving geeft een aanwijzing omtrent de afschuifkarakteristieken en wordt dan ook gebruikt bij berekening van afschuiving, gronddruk en draagvermogen van paalfunderingen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GewaarborgdeWrijvingshoek)",
+            "pattern": "^GewaarborgdeWrijvingshoek$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bemesting": {
+        "title": "Bemesting",
+        "type": "object",
+        "description": "Het toevoegen van en verwerken van meststoffen zowel bij aanleg alsook bij beheer.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bemesting)",
+            "pattern": "^Bemesting$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Grondbewerkingen": {
+        "title": "Grondbewerkingen",
+        "type": "object",
+        "description": "Lijst van mogelijke grondbewerkingen die uitgevoerd kunnen worden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondbewerkingen)",
+            "pattern": "^Grondbewerkingen$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "OphogingSoorten": {
+        "title": "OphogingSoorten",
+        "type": "object",
+        "description": "De specificatie van type grond bij ophoging.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse OphogingSoorten)",
+            "pattern": "^OphogingSoorten$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AfgravingSoorten": {
+        "title": "AfgravingSoorten",
+        "type": "object",
+        "description": "De specificatie van type handeling bij afgraving.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfgravingSoorten)",
+            "pattern": "^AfgravingSoorten$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Grondbestemming": {
+        "title": "Grondbestemming",
+        "type": "object",
+        "description": "De bestemmingen of doelen van de grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondbestemming)",
+            "pattern": "^Grondbestemming$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GrondHoofdnaamcode": {
+        "title": "GrondHoofdnaamcode",
+        "type": "object",
+        "description": "De hoofdnaamcode van de grond.Namespace :http://interpretatie.kern.schemas.dov.vlaanderen.be/GecodeerdHoofdnaamCodesEnumType.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GrondHoofdnaamcode)",
+            "pattern": "^GrondHoofdnaamcode$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GrondbijmengingHoeveelheidscode": {
+        "title": "GrondbijmengingHoeveelheidscode",
+        "type": "object",
+        "description": "De mogelijke waarden voor de hoeveelheid bijmenging (X staat voor de lithologie van de bijmenging).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GrondbijmengingHoeveelheidscode)",
+            "pattern": "^GrondbijmengingHoeveelheidscode$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LaagRol": {
+        "title": "LaagRol",
+        "type": "object",
+        "description": "De mogelijke rollen van de laag.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LaagRol)",
+            "pattern": "^LaagRol$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bodemverbeteringsmiddel": {
+        "title": "Bodemverbeteringsmiddel",
+        "type": "object",
+        "description": "Het verwerken van bodemverbeteringsmiddelen omvat het gelijkmatig spreiden ervan op bepaalde grondoppervlakken en/of het verwerken in plantputten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bodemverbeteringsmiddel)",
+            "pattern": "^Bodemverbeteringsmiddel$"
+          },
+          "oppervlakte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+          },
+          "grondverbeteringsmiddel": {
+            "$ref": "#/components/schemas/Grondverbeteringsmiddel"
+          },
+          "volume": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "oppervlakte",
+          "gewicht",
+          "grondverbeteringsmiddel",
+          "volume",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Ophoging": {
+        "title": "Ophoging",
+        "type": "object",
+        "description": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Ophoging)",
+            "pattern": "^Ophoging$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "wrijvingshoek": {
+            "$ref": "#/components/schemas/GewaarborgdeWrijvingshoek"
+          },
+          "volume": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Grondherkomst"
+          },
+          "soortOphoging": {
+            "$ref": "#/components/schemas/OphogingSoorten"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "wrijvingshoek",
+          "volume",
+          "herkomst",
+          "soortOphoging",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Afgraving": {
+        "title": "Afgraving",
+        "type": "object",
+        "description": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Afgraving)",
+            "pattern": "^Afgraving$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "volume": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+          },
+          "oppervlakte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+          },
+          "bestemming": {
+            "$ref": "#/components/schemas/Grondbestemming"
+          },
+          "soortAfgraving": {
+            "$ref": "#/components/schemas/AfgravingSoorten"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "volume",
+          "oppervlakte",
+          "bestemming",
+          "soortAfgraving",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Uitgraving": {
+        "title": "Uitgraving",
+        "type": "object",
+        "description": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Uitgraving)",
+            "pattern": "^Uitgraving$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "soortUitgraving": {
+            "$ref": "#/components/schemas/UitgravingSoorten"
+          },
+          "volume": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+          },
+          "bestemming": {
+            "$ref": "#/components/schemas/Grondbestemming"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "soortUitgraving",
+          "volume",
+          "bestemming",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Grondbewerking": {
+        "title": "Grondbewerking",
+        "type": "object",
+        "description": "Omvat de profielbewerkingen en bouwvoorwerkzaamheden voor aanleg van beplaningen, graslanden, wegbermen en grasmatten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondbewerking)",
+            "pattern": "^Grondbewerking$"
+          },
+          "soortGrondbewerking": {
+            "$ref": "#/components/schemas/Grondbewerkingen"
+          },
+          "oppervlakte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "soortGrondbewerking",
+          "oppervlakte",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Afdekking": {
+        "title": "Afdekking",
+        "type": "object",
+        "description": "Wordt beschouwd als de verzameling van beheeractiviteiten die uitgevoerd kunnen worden op grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Afdekking)",
+            "pattern": "^Afdekking$"
+          },
+          "oppervlakte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Grondherkomst"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "oppervlakte",
+          "herkomst",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "HeeftBeheer": {
+        "title": "HeeftBeheer",
+        "type": "object",
+        "description": "De relatie geeft aan dat een onderdeel wordt beheerd. Het beheer object bevat de nodige beheer eigenschappen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBeheer)",
+            "pattern": "^HeeftBeheer$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bevestiging": {
+        "title": "Bevestiging",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bevestiging)",
+            "pattern": "^Bevestiging$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LigtOp": {
+        "title": "LigtOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LigtOp)",
+            "pattern": "^LigtOp$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PiezometrischeBuis": {
+        "title": "PiezometrischeBuis",
+        "type": "object",
+        "description": "Een al dan niet permanente buis om waterstanden bij grondverlaging te meten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PiezometrischeBuis)",
+            "pattern": "^PiezometrischeBuis$"
+          },
+          "diepte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "diepte",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Grond": {
+        "title": "Grond",
+        "type": "object",
+        "description": "Lithologisch hoofd- en nevenbestanddeel (als code) van de laag zoals gebruikt bij Databank Ondergrond Vlaanderen (gecodeerde lithologie en geotechnische codering).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grond)",
+            "pattern": "^Grond$"
+          },
+          "milieuhygiëNischeCode": {
+            "type": "object",
+            "description": "Het 3-delig nummer dat gehanteerd wordt door de vzw grondbank om de milieuhygiënische mogelijkheden van een partij bodem of grond aan te geven.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "soortGrond": {
+            "$ref": "#/components/schemas/Grondsoort"
+          },
+          "technischVerslagBodemonderzoek": {
+            "type": "array",
+            "description": "Lijst van Bestandsbijlage items.",
+            "items": {
+              "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "tot": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "van": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "soortVervuiling": {
+            "$ref": "#/components/schemas/SoortVervuiling"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "oppervlakte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+          },
+          "laagrol": {
+            "$ref": "#/components/schemas/LaagRol"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "type": "object",
+            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "dikte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "milieuhygiëNischeCode",
+          "soortGrond",
+          "technischVerslagBodemonderzoek",
+          "tot",
+          "van",
+          "soortVervuiling",
+          "lengte",
+          "breedte",
+          "oppervlakte",
+          "laagrol",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie",
+          "dikte"
+        ]
+      },
+      "KwantitatieveWaardeInMeter": {
+        "title": "KwantitatieveWaardeInMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+            "pattern": "^KwantitatieveWaardeInMeter$"
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInVierkanteMeter": {
+        "title": "KwantitatieveWaardeInVierkanteMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in vierkante meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInVierkanteMeter)",
+            "pattern": "^KwantitatieveWaardeInVierkanteMeter$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter. \"m2\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter": {
+        "title": "KwantitatieveWaardeInCentimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in centimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInCentimeter)",
+            "pattern": "^KwantitatieveWaardeInCentimeter$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "type": "object",
+            "description": "Gegevens van de organisatie die de toekenning deed.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand": {
+        "title": "KwantitatieveWaardeInMaand",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+            "pattern": "^KwantitatieveWaardeInMaand$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "type": "object",
+            "description": "Het versienummer als een oplopende integer.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "timestamp": {
+            "type": "object",
+            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "context": {
+            "type": "object",
+            "description": "De context van de versie creatie.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Bestandsbijlage": {
+        "title": "Bestandsbijlage",
+        "type": "object",
+        "description": "Complex datatype voor alle bestandsbijlages.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bestandsbijlage)",
+            "pattern": "^Bestandsbijlage$"
+          },
+          "uri": {
+            "type": "object",
+            "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestandsnaam": {
+            "type": "object",
+            "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "omschrijving": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "mime-Type": {
+            "$ref": "#/components/schemas/Mimetype"
+          },
+          "opmaakdatum": {
+            "type": "object",
+            "description": "De datum waarop het document is opgemaakt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "uri",
+          "bestandsnaam",
+          "omschrijving",
+          "mime-Type",
+          "opmaakdatum"
+        ]
+      },
+      "Tekstblok": {
+        "title": "Tekstblok",
+        "type": "object",
+        "description": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tekstblok)",
+            "pattern": "^Tekstblok$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInKubiekeMeter": {
+        "title": "KwantitatieveWaardeInKubiekeMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in kubieke meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInKubiekeMeter)",
+            "pattern": "^KwantitatieveWaardeInKubiekeMeter$"
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in kubieke meter. \"m3\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInMicrogramPerKilogram": {
+        "title": "KwantitatieveWaardeInMicrogramPerKilogram",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in microgram per kg uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMicrogramPerKilogram)",
+            "pattern": "^KwantitatieveWaardeInMicrogramPerKilogram$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in µg/kg. \"µg/kg\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "KwantitatieveWaardeInKilogram": {
+        "title": "KwantitatieveWaardeInKilogram",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in kilogram uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInKilogram)",
+            "pattern": "^KwantitatieveWaardeInKilogram$"
+          },
+          "standaardeenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in kilogram. \"kg\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "standaardeenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInTon": {
+        "title": "KwantitatieveWaardeInTon",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in ton uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInTon)",
+            "pattern": "^KwantitatieveWaardeInTon$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in ton. \"t\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "Grondsoort": {
+        "title": "Grondsoort",
+        "type": "object",
+        "description": "Complex datatype om het soort grond te bepalen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondsoort)",
+            "pattern": "^Grondsoort$"
+          },
+          "hoofdnaamcode": {
+            "$ref": "#/components/schemas/GrondHoofdnaamcode"
+          },
+          "bijmenging": {
+            "type": "array",
+            "description": "Lijst van Grondbijmenging items.",
+            "items": {
+              "$ref": "#/components/schemas/Grondbijmenging"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "@type",
+          "hoofdnaamcode",
+          "bijmenging"
+        ]
+      },
+      "Grondbijmenging": {
+        "title": "Grondbijmenging",
+        "type": "object",
+        "description": "Complex datatype om extra informatie van de bijmenging van grond te capteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondbijmenging)",
+            "pattern": "^Grondbijmenging$"
+          },
+          "bijmengingshoofdnaamcode": {
+            "$ref": "#/components/schemas/GrondHoofdnaamcode"
+          },
+          "hoeveelheidscode": {
+            "$ref": "#/components/schemas/GrondbijmengingHoeveelheidscode"
+          },
+          "isGrondmengingPlaatselijk": {
+            "type": "object",
+            "description": "Grondbijmenging plaatselijk of niet-plaatselijk.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "bijmengingshoofdnaamcode",
+          "hoeveelheidscode",
+          "isGrondmengingPlaatselijk"
+        ]
+      },
+      "SoortVervuiling": {
+        "title": "SoortVervuiling",
+        "type": "object",
+        "description": "Complex datatype om het soort vervuiling te bepalen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse SoortVervuiling)",
+            "pattern": "^SoortVervuiling$"
+          },
+          "soortVervuiling": {
+            "$ref": "#/components/schemas/VervuilingSoorten"
+          },
+          "microgramPerKilogram": {
+            "type": "array",
+            "description": "Lijst van KwantitatieveWaardeInMicrogramPerKilogram items.",
+            "items": {
+              "$ref": "#/components/schemas/KwantitatieveWaardeInMicrogramPerKilogram"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "@type",
+          "soortVervuiling",
+          "microgramPerKilogram"
+        ]
+      }
+    },
+    "links": {
+      "Bemesting.gewicht": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKilogram` op te halen."
+      },
+      "Bemesting.bemesting": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.bemesting/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemesting` op te halen."
+      },
+      "Bemesting.asset-Id": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bemesting.theoretischeLevensduur": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Bemesting.aIM-Toestand": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Bemesting.asset-Versie": {
+        "operationId": "BemestingGET",
+        "parameters": {
+          "id": "$response.body#/Bemesting.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Bodemverbeteringsmiddel.oppervlakte": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.oppervlakte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVierkanteMeter` op te halen."
+      },
+      "Bodemverbeteringsmiddel.gewicht": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKilogram` op te halen."
+      },
+      "Bodemverbeteringsmiddel.grondverbeteringsmiddel": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.grondverbeteringsmiddel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondverbeteringsmiddel` op te halen."
+      },
+      "Bodemverbeteringsmiddel.volume": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.volume/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKubiekeMeter` op te halen."
+      },
+      "Bodemverbeteringsmiddel.asset-Id": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bodemverbeteringsmiddel.theoretischeLevensduur": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Bodemverbeteringsmiddel.aIM-Toestand": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Bodemverbeteringsmiddel.asset-Versie": {
+        "operationId": "BodemverbeteringsmiddelGET",
+        "parameters": {
+          "id": "$response.body#/Bodemverbeteringsmiddel.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Ophoging.gewicht": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInTon` op te halen."
+      },
+      "Ophoging.wrijvingshoek": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.wrijvingshoek/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GewaarborgdeWrijvingshoek` op te halen."
+      },
+      "Ophoging.volume": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.volume/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKubiekeMeter` op te halen."
+      },
+      "Ophoging.herkomst": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondherkomst` op te halen."
+      },
+      "Ophoging.soortOphoging": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.soortOphoging/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OphogingSoorten` op te halen."
+      },
+      "Ophoging.asset-Id": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Ophoging.theoretischeLevensduur": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Ophoging.aIM-Toestand": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Ophoging.asset-Versie": {
+        "operationId": "OphogingGET",
+        "parameters": {
+          "id": "$response.body#/Ophoging.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Afgraving.gewicht": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInTon` op te halen."
+      },
+      "Afgraving.volume": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.volume/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKubiekeMeter` op te halen."
+      },
+      "Afgraving.oppervlakte": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.oppervlakte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVierkanteMeter` op te halen."
+      },
+      "Afgraving.bestemming": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.bestemming/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondbestemming` op te halen."
+      },
+      "Afgraving.soortAfgraving": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.soortAfgraving/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AfgravingSoorten` op te halen."
+      },
+      "Afgraving.asset-Id": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Afgraving.theoretischeLevensduur": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Afgraving.aIM-Toestand": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Afgraving.asset-Versie": {
+        "operationId": "AfgravingGET",
+        "parameters": {
+          "id": "$response.body#/Afgraving.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Uitgraving.gewicht": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInTon` op te halen."
+      },
+      "Uitgraving.soortUitgraving": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.soortUitgraving/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `UitgravingSoorten` op te halen."
+      },
+      "Uitgraving.volume": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.volume/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKubiekeMeter` op te halen."
+      },
+      "Uitgraving.bestemming": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.bestemming/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondbestemming` op te halen."
+      },
+      "Uitgraving.asset-Id": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Uitgraving.theoretischeLevensduur": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Uitgraving.aIM-Toestand": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Uitgraving.asset-Versie": {
+        "operationId": "UitgravingGET",
+        "parameters": {
+          "id": "$response.body#/Uitgraving.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Grondbewerking.soortGrondbewerking": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.soortGrondbewerking/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondbewerkingen` op te halen."
+      },
+      "Grondbewerking.oppervlakte": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.oppervlakte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVierkanteMeter` op te halen."
+      },
+      "Grondbewerking.asset-Id": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Grondbewerking.theoretischeLevensduur": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Grondbewerking.aIM-Toestand": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Grondbewerking.asset-Versie": {
+        "operationId": "GrondbewerkingGET",
+        "parameters": {
+          "id": "$response.body#/Grondbewerking.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Afdekking.oppervlakte": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.oppervlakte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVierkanteMeter` op te halen."
+      },
+      "Afdekking.herkomst": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondherkomst` op te halen."
+      },
+      "Afdekking.asset-Id": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Afdekking.theoretischeLevensduur": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Afdekking.aIM-Toestand": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Afdekking.asset-Versie": {
+        "operationId": "AfdekkingGET",
+        "parameters": {
+          "id": "$response.body#/Afdekking.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "PiezometrischeBuis.diepte": {
+        "operationId": "PiezometrischeBuisGET",
+        "parameters": {
+          "id": "$response.body#/PiezometrischeBuis.diepte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "PiezometrischeBuis.asset-Id": {
+        "operationId": "PiezometrischeBuisGET",
+        "parameters": {
+          "id": "$response.body#/PiezometrischeBuis.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "PiezometrischeBuis.theoretischeLevensduur": {
+        "operationId": "PiezometrischeBuisGET",
+        "parameters": {
+          "id": "$response.body#/PiezometrischeBuis.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "PiezometrischeBuis.aIM-Toestand": {
+        "operationId": "PiezometrischeBuisGET",
+        "parameters": {
+          "id": "$response.body#/PiezometrischeBuis.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "PiezometrischeBuis.asset-Versie": {
+        "operationId": "PiezometrischeBuisGET",
+        "parameters": {
+          "id": "$response.body#/PiezometrischeBuis.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Grond.soortGrond": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.soortGrond/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Grondsoort` op te halen."
+      },
+      "Grond.technischVerslagBodemonderzoek": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.technischVerslagBodemonderzoek/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "Grond.tot": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.tot/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Grond.van": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.van/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Grond.soortVervuiling": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.soortVervuiling/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `SoortVervuiling` op te halen."
+      },
+      "Grond.lengte": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.lengte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Grond.breedte": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.breedte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Grond.oppervlakte": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.oppervlakte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVierkanteMeter` op te halen."
+      },
+      "Grond.laagrol": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.laagrol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LaagRol` op te halen."
+      },
+      "Grond.ligtOp": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.ligtOp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Laag` op te halen."
+      },
+      "Grond.asset-Id": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Grond.theoretischeLevensduur": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Grond.aIM-Toestand": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Grond.asset-Versie": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Grond.dikte": {
+        "operationId": "GrondGET",
+        "parameters": {
+          "id": "$response.body#/Grond.dikte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInCentimeter` op te halen."
+      }
+    }
+  }
+}

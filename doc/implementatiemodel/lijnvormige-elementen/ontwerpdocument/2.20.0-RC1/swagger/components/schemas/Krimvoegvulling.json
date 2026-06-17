@@ -1,0 +1,27 @@
+{
+  "title": "Krimvoegvulling",
+  "type": "object",
+  "description": "Complex datatype om de vulling voor de krimpvoeg aan te duiden met zijn technische fiche.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Krimvoegvulling)",
+      "pattern": "^Krimvoegvulling$"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "krimvoegvulling": {
+      "$ref": "#/components/schemas/Krimpvoegvulling"
+    }
+  },
+  "required": [
+    "@type",
+    "technischeFiche",
+    "krimvoegvulling"
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "title": "Verkeersbord-Verkeersteken",
+  "type": "object",
+  "description": "De voorstelling door middel van een verkeersbord van een aanwijzing ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersbord-Verkeersteken)",
+      "pattern": "^Verkeersbord-Verkeersteken$"
+    },
+    "isBeginVanEenZone": {
+      "type": "object",
+      "description": "Duidt aan of het verkeersteken het begin van een zone aanduidt.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isEindeVanEenZone": {
+      "type": "object",
+      "description": "Duidt aan of het verkeersteken het einde van een zone aanduidt.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "plaatsbeschrijving": {
+      "type": "object",
+      "description": "Tekstuele beschrijving waar het verkeersteken zal komen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "signalisatievergunning": {
+      "type": "array",
+      "description": "Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "mobiliteitsmaatregel": {
+      "type": "array",
+      "description": "Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "variabelOpschrift": {
+      "type": "object",
+      "description": "Variabele tekst die op het verkeersbordconcept komt te staan.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "wettelijkeStatus": {
+      "$ref": "#/components/schemas/VerkeerstekenWettelijkeStatus"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isBeginVanEenZone",
+    "isEindeVanEenZone",
+    "adres",
+    "plaatsbeschrijving",
+    "variabelOpschrift",
+    "wettelijkeStatus",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

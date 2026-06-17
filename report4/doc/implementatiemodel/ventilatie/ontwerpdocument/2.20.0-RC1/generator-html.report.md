@@ -2,33 +2,47 @@
 
 #||# -------------------------------------  
 
-Error reading or parsing config file: Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/html/int_ventilatie_nl.json
+Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2)
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2)
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 126, Column 17]
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 2, Column 3]
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 20, Column 3]
 
-Error reading or parsing config file: Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/stakeholders.json
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 160, Column 17]
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 27, Column 3]
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 204, Column 17]
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:95:18)
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 364, Column 19]
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 375, Column 19]
 
-Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/html/int_ventilatie_nl.json
+  Template render error: (/tmp/workspace/report4/doc/implementatiemodel/ventilatie/ontwerpdocument/2.20.0-RC1/templates/ventilatie-ap.j2) [Line 382, Column 19]
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  TypeError: Cannot read properties of undefined (reading 'length')
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+    at Object._prettifyError (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:32:11)
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:464:19
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
+    at Template.root [as rootRenderFunc] (eval at _compile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:527:18), <anonymous>:34:3)
+
+    at Template.render (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:454:10)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:301:27
+
+    at createTemplate (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:254:9)
+
+    at handle (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:265:11)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:276:9
+
+    at next (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:258:7)
+
+    at Object.asyncIter (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:263:3)
 

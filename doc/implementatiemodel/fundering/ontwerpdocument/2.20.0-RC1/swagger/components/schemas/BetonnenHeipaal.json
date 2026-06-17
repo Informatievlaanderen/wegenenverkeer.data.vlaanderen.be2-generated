@@ -1,0 +1,260 @@
+{
+  "title": "BetonnenHeipaal",
+  "type": "object",
+  "description": "Betonnen paal die in de grond wordt gebracht door deze in een hei-installatie te plaatsen waarna men er een zwaar gewicht (heiblok) op laat vallen. De grond onder de paal wordt samengeperst waardoor de draagkracht groter wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BetonnenHeipaal)",
+      "pattern": "^BetonnenHeipaal$"
+    },
+    "diameterPaalschacht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "heeftVerbredeVoet": {
+      "type": "object",
+      "description": "Geeft aan of de voet breder is gemaakt, al dan niet.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "heeftVerlorenVoerbuis": {
+      "type": "object",
+      "description": "Aanduiding of de heipaal een verloren voerbuis heeft.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "typeSchacht": {
+      "$ref": "#/components/schemas/TypeSchachtVanDeHeipaal"
+    },
+    "nuttigeLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "betonspecificaties": {
+      "$ref": "#/components/schemas/Betonspecificaties"
+    },
+    "wapeningsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "uitvoeringsmethode": {
+      "$ref": "#/components/schemas/Uitvoeringsmethode"
+    },
+    "bekistingsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFicheBetonbescherming": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "afkap-OfBovenpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "dwarsafmetingen": {
+      "$ref": "#/components/schemas/Dwarsafmetingen"
+    },
+    "paallengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hellings-OfSchoorhoek": {
+      "$ref": "#/components/schemas/Hellings-OfSchoorhoek"
+    },
+    "aanzetpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "diameterPaalschacht",
+    "heeftVerbredeVoet",
+    "heeftVerlorenVoerbuis",
+    "typeSchacht",
+    "nuttigeLengte",
+    "betonspecificaties",
+    "wapeningsplan",
+    "uitvoeringsmethode",
+    "bekistingsplan",
+    "technischeFicheBetonbescherming",
+    "afkap-OfBovenpeil",
+    "dwarsafmetingen",
+    "paallengte",
+    "hellings-OfSchoorhoek",
+    "aanzetpeil",
+    "hoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota"
+  ]
+}

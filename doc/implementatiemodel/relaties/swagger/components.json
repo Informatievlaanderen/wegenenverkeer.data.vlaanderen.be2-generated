@@ -1,0 +1,2834 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Provincie": {
+        "title": "Provincie",
+        "type": "object",
+        "description": "Lijst van provincies in Vlaanderen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Provincie)",
+            "pattern": "^Provincie$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Lijst van gemeentes in Vlaanderen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeente)",
+            "pattern": "^Gemeente$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BetrokkenheidRol": {
+        "title": "BetrokkenheidRol",
+        "type": "object",
+        "description": "Keuzelijst met mogelijke waarden voor de rol waarmee een agent betrokken is bij een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BetrokkenheidRol)",
+            "pattern": "^BetrokkenheidRol$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Weekdagen": {
+        "title": "Weekdagen",
+        "type": "object",
+        "description": "Lijst van de verschillende weekdagen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Weekdagen)",
+            "pattern": "^Weekdagen$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "IsSoftwareGehostOp": {
+        "title": "IsSoftwareGehostOp",
+        "type": "object",
+        "description": "Deze relatie legt de link tussen een software en hardware onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsSoftwareGehostOp)",
+            "pattern": "^IsSoftwareGehostOp$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "IsNetwerkECC": {
+        "title": "IsNetwerkECC",
+        "type": "object",
+        "description": "Deze relatie geeft aan hoe afgeschermde netwerkelementen bereikt kunnen worden vanuit het gewone netwerk. De relatie vertrekt steeds in het controlerende netwerkelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsNetwerkECC)",
+            "pattern": "^IsNetwerkECC$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftBeheer": {
+        "title": "HeeftBeheer",
+        "type": "object",
+        "description": "De relatie geeft aan dat een onderdeel wordt beheerd. Het beheer object bevat de nodige beheer eigenschappen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBeheer)",
+            "pattern": "^HeeftBeheer$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "Sturing": {
+        "title": "Sturing",
+        "type": "object",
+        "description": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Sturing)",
+            "pattern": "^Sturing$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "Voedt": {
+        "title": "Voedt",
+        "type": "object",
+        "description": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voedt)",
+            "pattern": "^Voedt$"
+          },
+          "aansluitspanning": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          },
+          "aansluitvermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "aansluitspanning",
+          "aansluitvermogen",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftBetrokkene": {
+        "title": "HeeftBetrokkene",
+        "type": "object",
+        "description": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBetrokkene)",
+            "pattern": "^HeeftBetrokkene$"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/BetrokkenheidRol"
+          },
+          "specifiekeContactinfo": {
+            "type": "array",
+            "description": "Lijst van Contactinfo items.",
+            "items": {
+              "$ref": "#/components/schemas/Contactinfo"
+            },
+            "minItems": 1
+          },
+          "datumAanvang": {
+            "type": "object",
+            "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "datumEinde": {
+            "type": "object",
+            "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "rol",
+          "datumAanvang",
+          "datumEinde",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HoortBij": {
+        "title": "HoortBij",
+        "type": "object",
+        "description": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HoortBij)",
+            "pattern": "^HoortBij$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftAanvullendeGeometrie": {
+        "title": "HeeftAanvullendeGeometrie",
+        "type": "object",
+        "description": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftAanvullendeGeometrie)",
+            "pattern": "^HeeftAanvullendeGeometrie$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftNetwerktoegang": {
+        "title": "HeeftNetwerktoegang",
+        "type": "object",
+        "description": "Koppelt de toegang zoals gekend in Kabelnet aan het fysiek object dat daarbij hoort.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftNetwerktoegang)",
+            "pattern": "^HeeftNetwerktoegang$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftToegangsprocedure": {
+        "title": "HeeftToegangsprocedure",
+        "type": "object",
+        "description": "Deze relatie wordt gelegd tussen een klasse en de klasse Toegangsprocedure. De relatie vertrekt vanuit de klasse Toegangsprocedure en geeft aan dat er een toegangsprocedure van toepassing is voor een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftToegangsprocedure)",
+            "pattern": "^HeeftToegangsprocedure$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "IsInspectieVan": {
+        "title": "IsInspectieVan",
+        "type": "object",
+        "description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsInspectieVan)",
+            "pattern": "^IsInspectieVan$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "Bevestiging": {
+        "title": "Bevestiging",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bevestiging)",
+            "pattern": "^Bevestiging$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftBijlage": {
+        "title": "HeeftBijlage",
+        "type": "object",
+        "description": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBijlage)",
+            "pattern": "^HeeftBijlage$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftAanzicht": {
+        "title": "HeeftAanzicht",
+        "type": "object",
+        "description": "Deze relatie verwijst naar het aanzicht vanuit de verkeersbordopstelling.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftAanzicht)",
+            "pattern": "^HeeftAanzicht$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftKeuring": {
+        "title": "HeeftKeuring",
+        "type": "object",
+        "description": "Deze relatie legt een link tussen een object, onderdeel of installatie en een keuring (of keuringsdocument) dat op dat object van toepassing is. De richting loopt vanuit het fysieke object naar de bijhorende keuring.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftKeuring)",
+            "pattern": "^HeeftKeuring$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "SluitAanOp": {
+        "title": "SluitAanOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse SluitAanOp)",
+            "pattern": "^SluitAanOp$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "IsSoftwareOnderdeelVan": {
+        "title": "IsSoftwareOnderdeelVan",
+        "type": "object",
+        "description": "Deze relatie geeft de link aan tussen een software onderdeel en een ander software onderdeel waarbij de eerste bv. een service is van een grotere software.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsSoftwareOnderdeelVan)",
+            "pattern": "^IsSoftwareOnderdeelVan$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "Omhult": {
+        "title": "Omhult",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat het ene onderdeel het andere omhult. Dit vereist geen gesloten omhulling: de omhulling kan een open zijde hebben of bestaan uit open ruimtes. Deze relatie heeft een richting en gaat van het omhullende onderdeel naar het onderdeel dat omhuld wordt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Omhult)",
+            "pattern": "^Omhult$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftNetwerkProtectie": {
+        "title": "HeeftNetwerkProtectie",
+        "type": "object",
+        "description": "Deze relatie geeft aan wat de redundante paden/linken zijn van elkaar, dit is enkel in gebruik binnen het netwerk domein. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftNetwerkProtectie)",
+            "pattern": "^HeeftNetwerkProtectie$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "LigtOp": {
+        "title": "LigtOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LigtOp)",
+            "pattern": "^LigtOp$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "IsAdministratiefOnderdeelVan": {
+        "title": "IsAdministratiefOnderdeelVan",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat een onderdeel louter met een administratieve functie toebehoort aan de collectie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsAdministratiefOnderdeelVan)",
+            "pattern": "^IsAdministratiefOnderdeelVan$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "VoedtAangestuurd": {
+        "title": "VoedtAangestuurd",
+        "type": "object",
+        "description": "Deze relatie wordt enkel gelegd naar objecttypes die typisch een groot vermogen vereisen en onder spanning komen nadat het voedend element aangestuurd is om die spanning door te sturen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VoedtAangestuurd)",
+            "pattern": "^VoedtAangestuurd$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "HeeftV-Plan": {
+        "title": "HeeftV-Plan",
+        "type": "object",
+        "description": "Deze relatie duidt aan welke V plannen gekoppeld zijn aan een verkeersregelinstallatie en/of ITSapp, met aanduiding van de periode waarin deze koppeling geldig is via een indienstdatum en uitdienstdatum.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftV-Plan)",
+            "pattern": "^HeeftV-Plan$"
+          },
+          "dienstdatum": {
+            "$ref": "#/components/schemas/DienstdatumV-Plan"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "dienstdatum",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "type": "object",
+            "description": "Gegevens van de organisatie die de toekenning deed.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "type": "object",
+            "description": "Het versienummer als een oplopende integer.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "timestamp": {
+            "type": "object",
+            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "context": {
+            "type": "object",
+            "description": "De context van de versie creatie.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Adres": {
+        "title": "Adres",
+        "type": "object",
+        "description": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adres)",
+            "pattern": "^Adres$"
+          },
+          "straatnaam": {
+            "type": "object",
+            "description": "De naam van de straat.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "huisnummer": {
+            "type": "object",
+            "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "bus": {
+            "type": "object",
+            "description": "Een nummer dat de postbus aanduidt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postcode": {
+            "type": "object",
+            "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "provincie": {
+            "$ref": "#/components/schemas/Provincie"
+          },
+          "gemeente": {
+            "$ref": "#/components/schemas/Gemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "straatnaam",
+          "huisnummer",
+          "bus",
+          "postcode",
+          "provincie",
+          "gemeente"
+        ]
+      },
+      "Contactinfo": {
+        "title": "Contactinfo",
+        "type": "object",
+        "description": "Complex datatype voor de informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Contactinfo)",
+            "pattern": "^Contactinfo$"
+          },
+          "contactnaam": {
+            "type": "object",
+            "description": "Naam van bv. de persoon die men kan contacteren.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "email": {
+            "type": "object",
+            "description": "Email-adres waarnaar men kan mailen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "telefoon": {
+            "type": "object",
+            "description": "Telefoonnummer waarop men kan bellen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "fax": {
+            "type": "object",
+            "description": "Faxnummer waarnaar men kan faxen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmerkingen": {
+            "type": "object",
+            "description": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "website": {
+            "type": "object",
+            "description": "Website waarnaar men kan surfen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "beschikbaarheid": {
+            "type": "array",
+            "description": "Lijst van Openingsurenspecificatie items.",
+            "items": {
+              "$ref": "#/components/schemas/Openingsurenspecificatie"
+            },
+            "minItems": 1
+          },
+          "adres": {
+            "$ref": "#/components/schemas/Adres"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Openingsurenspecificatie": {
+        "title": "Openingsurenspecificatie",
+        "type": "object",
+        "description": "Complex datatype dat de openingsuren volgens https://schema.org/OpeningHoursSpecification specifieert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Openingsurenspecificatie)",
+            "pattern": "^Openingsurenspecificatie$"
+          },
+          "openingstijd": {
+            "type": "object",
+            "description": "Het tijdsstip waarop de opening plaatsvindt.",
+            "properties": {
+              "$ref": "#/components/schemas/Tijd"
+            },
+            "required": [
+              "$ref"
+            ]
+          },
+          "sluitingstijd": {
+            "type": "object",
+            "description": "Het tijdsstip waarop de sluiting plaatsvindt.",
+            "properties": {
+              "$ref": "#/components/schemas/Tijd"
+            },
+            "required": [
+              "$ref"
+            ]
+          },
+          "weekdag": {
+            "$ref": "#/components/schemas/Weekdagen"
+          }
+        },
+        "required": [
+          "@type",
+          "openingstijd",
+          "sluitingstijd",
+          "weekdag"
+        ]
+      },
+      "KwantitatieveWaardeInVolt": {
+        "title": "KwantitatieveWaardeInVolt",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in volt uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInVolt)",
+            "pattern": "^KwantitatieveWaardeInVolt$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in Volt. \"V\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "DienstdatumV-Plan": {
+        "title": "DienstdatumV-Plan",
+        "type": "object",
+        "description": "Complex datatype ter inventarisatie van de indienst- en uitdienstname van een V-plan.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DienstdatumV-Plan)",
+            "pattern": "^DienstdatumV-Plan$"
+          },
+          "indienstname": {
+            "type": "object",
+            "description": "De datum waarop het VPlan effectief van toepassing wordt op de verkeersregelinstallatie.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "uitdienstname": {
+            "type": "object",
+            "description": "De uitdienstname is de datum waarop het VPlan niet langer van toepassing is op de verkeersregelinstallatie.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "commentaar": {
+            "type": "object",
+            "description": "Bijkomende informatie van de regeling.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "indienstname",
+          "uitdienstname",
+          "commentaar"
+        ]
+      }
+    },
+    "links": {
+      "IsSoftwareGehostOp.asset-Id": {
+        "operationId": "IsSoftwareGehostOpGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareGehostOp.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareGehostOp.asset-IdBron-Asset": {
+        "operationId": "IsSoftwareGehostOpGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareGehostOp.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareGehostOp.asset-IdDoel-Asset": {
+        "operationId": "IsSoftwareGehostOpGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareGehostOp.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareGehostOp.asset-Versie": {
+        "operationId": "IsSoftwareGehostOpGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareGehostOp.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "IsNetwerkECC.asset-Id": {
+        "operationId": "IsNetwerkECCGET",
+        "parameters": {
+          "id": "$response.body#/IsNetwerkECC.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsNetwerkECC.asset-IdBron-Asset": {
+        "operationId": "IsNetwerkECCGET",
+        "parameters": {
+          "id": "$response.body#/IsNetwerkECC.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsNetwerkECC.asset-IdDoel-Asset": {
+        "operationId": "IsNetwerkECCGET",
+        "parameters": {
+          "id": "$response.body#/IsNetwerkECC.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsNetwerkECC.asset-Versie": {
+        "operationId": "IsNetwerkECCGET",
+        "parameters": {
+          "id": "$response.body#/IsNetwerkECC.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftBeheer.asset-Id": {
+        "operationId": "HeeftBeheerGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBeheer.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBeheer.asset-IdBron-Asset": {
+        "operationId": "HeeftBeheerGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBeheer.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBeheer.asset-IdDoel-Asset": {
+        "operationId": "HeeftBeheerGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBeheer.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBeheer.asset-Versie": {
+        "operationId": "HeeftBeheerGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBeheer.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Sturing.asset-Id": {
+        "operationId": "SturingGET",
+        "parameters": {
+          "id": "$response.body#/Sturing.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Sturing.asset-IdBron-Asset": {
+        "operationId": "SturingGET",
+        "parameters": {
+          "id": "$response.body#/Sturing.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Sturing.asset-IdDoel-Asset": {
+        "operationId": "SturingGET",
+        "parameters": {
+          "id": "$response.body#/Sturing.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Sturing.asset-Versie": {
+        "operationId": "SturingGET",
+        "parameters": {
+          "id": "$response.body#/Sturing.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Voedt.aansluitspanning": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitspanning/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "Voedt.aansluitvermogen": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitvermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "Voedt.asset-Id": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Voedt.asset-IdBron-Asset": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Voedt.asset-IdDoel-Asset": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Voedt.asset-Versie": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftBetrokkene.rol": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.rol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BetrokkenheidRol` op te halen."
+      },
+      "HeeftBetrokkene.specifiekeContactinfo": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.specifiekeContactinfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "HeeftBetrokkene.asset-Id": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBetrokkene.asset-IdBron-Asset": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBetrokkene.asset-IdDoel-Asset": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBetrokkene.asset-Versie": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HoortBij.asset-Id": {
+        "operationId": "HoortBijGET",
+        "parameters": {
+          "id": "$response.body#/HoortBij.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HoortBij.asset-IdBron-Asset": {
+        "operationId": "HoortBijGET",
+        "parameters": {
+          "id": "$response.body#/HoortBij.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HoortBij.asset-IdDoel-Asset": {
+        "operationId": "HoortBijGET",
+        "parameters": {
+          "id": "$response.body#/HoortBij.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HoortBij.asset-Versie": {
+        "operationId": "HoortBijGET",
+        "parameters": {
+          "id": "$response.body#/HoortBij.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftAanvullendeGeometrie.asset-Id": {
+        "operationId": "HeeftAanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanvullendeGeometrie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanvullendeGeometrie.asset-IdBron-Asset": {
+        "operationId": "HeeftAanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanvullendeGeometrie.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanvullendeGeometrie.asset-IdDoel-Asset": {
+        "operationId": "HeeftAanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanvullendeGeometrie.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanvullendeGeometrie.asset-Versie": {
+        "operationId": "HeeftAanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanvullendeGeometrie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftNetwerktoegang.asset-Id": {
+        "operationId": "HeeftNetwerktoegangGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerktoegang.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerktoegang.asset-IdBron-Asset": {
+        "operationId": "HeeftNetwerktoegangGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerktoegang.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerktoegang.asset-IdDoel-Asset": {
+        "operationId": "HeeftNetwerktoegangGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerktoegang.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerktoegang.asset-Versie": {
+        "operationId": "HeeftNetwerktoegangGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerktoegang.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftToegangsprocedure.asset-Id": {
+        "operationId": "HeeftToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/HeeftToegangsprocedure.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftToegangsprocedure.asset-IdBron-Asset": {
+        "operationId": "HeeftToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/HeeftToegangsprocedure.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftToegangsprocedure.asset-IdDoel-Asset": {
+        "operationId": "HeeftToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/HeeftToegangsprocedure.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftToegangsprocedure.asset-Versie": {
+        "operationId": "HeeftToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/HeeftToegangsprocedure.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "IsInspectieVan.asset-Id": {
+        "operationId": "IsInspectieVanGET",
+        "parameters": {
+          "id": "$response.body#/IsInspectieVan.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsInspectieVan.asset-IdBron-Asset": {
+        "operationId": "IsInspectieVanGET",
+        "parameters": {
+          "id": "$response.body#/IsInspectieVan.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsInspectieVan.asset-IdDoel-Asset": {
+        "operationId": "IsInspectieVanGET",
+        "parameters": {
+          "id": "$response.body#/IsInspectieVan.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsInspectieVan.asset-Versie": {
+        "operationId": "IsInspectieVanGET",
+        "parameters": {
+          "id": "$response.body#/IsInspectieVan.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Bevestiging.asset-Id": {
+        "operationId": "BevestigingGET",
+        "parameters": {
+          "id": "$response.body#/Bevestiging.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bevestiging.asset-IdBron-Asset": {
+        "operationId": "BevestigingGET",
+        "parameters": {
+          "id": "$response.body#/Bevestiging.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bevestiging.asset-IdDoel-Asset": {
+        "operationId": "BevestigingGET",
+        "parameters": {
+          "id": "$response.body#/Bevestiging.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bevestiging.asset-Versie": {
+        "operationId": "BevestigingGET",
+        "parameters": {
+          "id": "$response.body#/Bevestiging.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftBijlage.asset-Id": {
+        "operationId": "HeeftBijlageGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBijlage.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBijlage.asset-IdBron-Asset": {
+        "operationId": "HeeftBijlageGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBijlage.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBijlage.asset-IdDoel-Asset": {
+        "operationId": "HeeftBijlageGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBijlage.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftBijlage.asset-Versie": {
+        "operationId": "HeeftBijlageGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBijlage.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftAanzicht.asset-Id": {
+        "operationId": "HeeftAanzichtGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanzicht.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanzicht.asset-IdBron-Asset": {
+        "operationId": "HeeftAanzichtGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanzicht.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanzicht.asset-IdDoel-Asset": {
+        "operationId": "HeeftAanzichtGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanzicht.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftAanzicht.asset-Versie": {
+        "operationId": "HeeftAanzichtGET",
+        "parameters": {
+          "id": "$response.body#/HeeftAanzicht.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftKeuring.asset-Id": {
+        "operationId": "HeeftKeuringGET",
+        "parameters": {
+          "id": "$response.body#/HeeftKeuring.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftKeuring.asset-IdBron-Asset": {
+        "operationId": "HeeftKeuringGET",
+        "parameters": {
+          "id": "$response.body#/HeeftKeuring.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftKeuring.asset-IdDoel-Asset": {
+        "operationId": "HeeftKeuringGET",
+        "parameters": {
+          "id": "$response.body#/HeeftKeuring.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftKeuring.asset-Versie": {
+        "operationId": "HeeftKeuringGET",
+        "parameters": {
+          "id": "$response.body#/HeeftKeuring.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "SluitAanOp.asset-Id": {
+        "operationId": "SluitAanOpGET",
+        "parameters": {
+          "id": "$response.body#/SluitAanOp.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "SluitAanOp.asset-IdBron-Asset": {
+        "operationId": "SluitAanOpGET",
+        "parameters": {
+          "id": "$response.body#/SluitAanOp.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "SluitAanOp.asset-IdDoel-Asset": {
+        "operationId": "SluitAanOpGET",
+        "parameters": {
+          "id": "$response.body#/SluitAanOp.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "SluitAanOp.asset-Versie": {
+        "operationId": "SluitAanOpGET",
+        "parameters": {
+          "id": "$response.body#/SluitAanOp.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "IsSoftwareOnderdeelVan.asset-Id": {
+        "operationId": "IsSoftwareOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareOnderdeelVan.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareOnderdeelVan.asset-IdBron-Asset": {
+        "operationId": "IsSoftwareOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareOnderdeelVan.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareOnderdeelVan.asset-IdDoel-Asset": {
+        "operationId": "IsSoftwareOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareOnderdeelVan.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsSoftwareOnderdeelVan.asset-Versie": {
+        "operationId": "IsSoftwareOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsSoftwareOnderdeelVan.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Omhult.asset-Id": {
+        "operationId": "OmhultGET",
+        "parameters": {
+          "id": "$response.body#/Omhult.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Omhult.asset-IdBron-Asset": {
+        "operationId": "OmhultGET",
+        "parameters": {
+          "id": "$response.body#/Omhult.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Omhult.asset-IdDoel-Asset": {
+        "operationId": "OmhultGET",
+        "parameters": {
+          "id": "$response.body#/Omhult.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Omhult.asset-Versie": {
+        "operationId": "OmhultGET",
+        "parameters": {
+          "id": "$response.body#/Omhult.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftNetwerkProtectie.asset-Id": {
+        "operationId": "HeeftNetwerkProtectieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerkProtectie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerkProtectie.asset-IdBron-Asset": {
+        "operationId": "HeeftNetwerkProtectieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerkProtectie.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerkProtectie.asset-IdDoel-Asset": {
+        "operationId": "HeeftNetwerkProtectieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerkProtectie.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftNetwerkProtectie.asset-Versie": {
+        "operationId": "HeeftNetwerkProtectieGET",
+        "parameters": {
+          "id": "$response.body#/HeeftNetwerkProtectie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "LigtOp.asset-Id": {
+        "operationId": "LigtOpGET",
+        "parameters": {
+          "id": "$response.body#/LigtOp.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "LigtOp.asset-IdBron-Asset": {
+        "operationId": "LigtOpGET",
+        "parameters": {
+          "id": "$response.body#/LigtOp.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "LigtOp.asset-IdDoel-Asset": {
+        "operationId": "LigtOpGET",
+        "parameters": {
+          "id": "$response.body#/LigtOp.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "LigtOp.asset-Versie": {
+        "operationId": "LigtOpGET",
+        "parameters": {
+          "id": "$response.body#/LigtOp.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "IsAdministratiefOnderdeelVan.asset-Id": {
+        "operationId": "IsAdministratiefOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsAdministratiefOnderdeelVan.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsAdministratiefOnderdeelVan.asset-IdBron-Asset": {
+        "operationId": "IsAdministratiefOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsAdministratiefOnderdeelVan.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsAdministratiefOnderdeelVan.asset-IdDoel-Asset": {
+        "operationId": "IsAdministratiefOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsAdministratiefOnderdeelVan.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "IsAdministratiefOnderdeelVan.asset-Versie": {
+        "operationId": "IsAdministratiefOnderdeelVanGET",
+        "parameters": {
+          "id": "$response.body#/IsAdministratiefOnderdeelVan.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "VoedtAangestuurd.asset-Id": {
+        "operationId": "VoedtAangestuurdGET",
+        "parameters": {
+          "id": "$response.body#/VoedtAangestuurd.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "VoedtAangestuurd.asset-IdBron-Asset": {
+        "operationId": "VoedtAangestuurdGET",
+        "parameters": {
+          "id": "$response.body#/VoedtAangestuurd.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "VoedtAangestuurd.asset-IdDoel-Asset": {
+        "operationId": "VoedtAangestuurdGET",
+        "parameters": {
+          "id": "$response.body#/VoedtAangestuurd.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "VoedtAangestuurd.asset-Versie": {
+        "operationId": "VoedtAangestuurdGET",
+        "parameters": {
+          "id": "$response.body#/VoedtAangestuurd.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HeeftV-Plan.dienstdatum": {
+        "operationId": "HeeftV-PlanGET",
+        "parameters": {
+          "id": "$response.body#/HeeftV-Plan.dienstdatum/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DienstdatumV-Plan` op te halen."
+      },
+      "HeeftV-Plan.asset-Id": {
+        "operationId": "HeeftV-PlanGET",
+        "parameters": {
+          "id": "$response.body#/HeeftV-Plan.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftV-Plan.asset-IdBron-Asset": {
+        "operationId": "HeeftV-PlanGET",
+        "parameters": {
+          "id": "$response.body#/HeeftV-Plan.asset-IdBron-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftV-Plan.asset-IdDoel-Asset": {
+        "operationId": "HeeftV-PlanGET",
+        "parameters": {
+          "id": "$response.body#/HeeftV-Plan.asset-IdDoel-Asset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HeeftV-Plan.asset-Versie": {
+        "operationId": "HeeftV-PlanGET",
+        "parameters": {
+          "id": "$response.body#/HeeftV-Plan.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      }
+    }
+  }
+}

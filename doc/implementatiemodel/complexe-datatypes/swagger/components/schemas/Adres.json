@@ -1,0 +1,79 @@
+{
+  "title": "Adres",
+  "type": "object",
+  "description": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Adres)",
+      "pattern": "^Adres$"
+    },
+    "straatnaam": {
+      "type": "object",
+      "description": "De naam van de straat.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "huisnummer": {
+      "type": "object",
+      "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "bus": {
+      "type": "object",
+      "description": "Een nummer dat de postbus aanduidt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "postcode": {
+      "type": "object",
+      "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "provincie": {
+      "$ref": "#/components/schemas/Provincie"
+    },
+    "gemeente": {
+      "$ref": "#/components/schemas/Gemeente"
+    }
+  },
+  "required": [
+    "@type",
+    "straatnaam",
+    "huisnummer",
+    "bus",
+    "postcode",
+    "provincie",
+    "gemeente"
+  ]
+}

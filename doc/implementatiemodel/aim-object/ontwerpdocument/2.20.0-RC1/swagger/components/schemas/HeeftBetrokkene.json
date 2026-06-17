@@ -1,0 +1,69 @@
+{
+  "title": "HeeftBetrokkene",
+  "type": "object",
+  "description": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HeeftBetrokkene)",
+      "pattern": "^HeeftBetrokkene$"
+    },
+    "rol": {
+      "$ref": "#/components/schemas/BetrokkenheidRol"
+    },
+    "specifiekeContactinfo": {
+      "type": "array",
+      "description": "Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "datumAanvang": {
+      "type": "object",
+      "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "datumEinde": {
+      "type": "object",
+      "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "rol",
+    "datumAanvang",
+    "datumEinde"
+  ]
+}

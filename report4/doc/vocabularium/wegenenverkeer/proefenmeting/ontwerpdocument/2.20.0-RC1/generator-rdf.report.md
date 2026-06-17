@@ -2,25 +2,11 @@
 
 #||# -------------------------------------  
 
-node:internal/modules/cjs/loader:1205
+Error: No package was defined in the OSLO RDF file.
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+    at RdfVocabularyGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:37:19)
 
-    ^
+    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
 
-
-
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/yargs/index.mjs not supported.
-
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
-
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
-
-  code: 'ERR_REQUIRE_ESM'
-
-}
-
-
-
-Node.js v20.15.1
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 

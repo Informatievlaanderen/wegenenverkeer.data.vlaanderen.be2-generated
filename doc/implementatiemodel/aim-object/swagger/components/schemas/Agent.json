@@ -1,0 +1,67 @@
+{
+  "title": "Agent",
+  "type": "object",
+  "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Agent)",
+      "pattern": "^Agent$"
+    },
+    "agentIdentificatie": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "contactinfo": {
+      "type": "array",
+      "description": "Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam waarmee de agent doorgaans benoemd wordt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "agentIdentificatie",
+    "contactinfo",
+    "naam",
+    "asset-Versie",
+    "isActief"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Dwarsafmetingen",
+  "type": "object",
+  "description": "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dwarsafmetingen)",
+      "pattern": "^Dwarsafmetingen$"
+    },
+    "rechthoekig": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+    },
+    "rond": {
+      "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

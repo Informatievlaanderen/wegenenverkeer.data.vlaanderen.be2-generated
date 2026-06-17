@@ -1,0 +1,27 @@
+{
+  "title": "Toegangstijden",
+  "type": "object",
+  "description": "Complex datatype om de toegangstijden bij een toegangsprocedure te specifieren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toegangstijden)",
+      "pattern": "^Toegangstijden$"
+    },
+    "toegangstijden": {
+      "$ref": "#/components/schemas/ToegangsprocedureToegangstijden"
+    },
+    "opmerking": {
+      "$ref": "#/components/schemas/Tekstblok"
+    }
+  },
+  "required": [
+    "@type",
+    "toegangstijden",
+    "opmerking"
+  ]
+}

@@ -1,0 +1,619 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#> rdfs:member <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#SchoorhoekShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BVLaagtypeShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingVoorWegverlichtingstoestellenShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#WvMasthoogteShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Hellings-OfSchoorhoekShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInDecimaleGradenShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#DwarsafmetingenShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlxhInMillimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInMillimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingZijdeInMillimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMillimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlInCentimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInCentimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInCentimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxhInMillimeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMeterShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#DecimaalGetalShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInTonShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingGrondvlakShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbordShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#ProfileerlaagShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#LaagtypeVanDeBitumineuzeVerhardingShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingWegverlichtingstoestelShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#StringShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#MasthoogteShape> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxhInMillimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting bxh in millimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van de breedte en hoogte in millimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "breedte"@nl;
+    rdfs:comment "De breedte in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxhInMillimeter.Breedte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De breedte in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "breedte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.breedte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hoogte"@nl;
+    rdfs:comment "De hoogte in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxhInMillimeter.Hoogte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De hoogte in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hoogte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.hoogte>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlInCentimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting bxl in centimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van de breedte en de lengte in centimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "breedte"@nl;
+    rdfs:comment "De breedte in centimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlInCentimeter.Breedte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
+    shacl:description "De breedte in centimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "breedte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.breedte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "lengte"@nl;
+    rdfs:comment "De lengte in centimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlInCentimeter.Lengte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
+    shacl:description "De lengte in centimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "lengte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.lengte>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlxhInMillimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting bxlxh in millimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "breedte"@nl;
+    rdfs:comment "De breedte in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlxhInMillimeter.Breedte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De breedte in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "breedte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.breedte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "lengte"@nl;
+    rdfs:comment "De lengte in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlxhInMillimeter.Lengte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De lengte in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "lengte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.lengte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hoogte"@nl;
+    rdfs:comment "De hoogte in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingBxlxhInMillimeter.Hoogte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De hoogte in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hoogte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.hoogte>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInCentimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting diameter in centimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van een diameter in centimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "diameter"@nl;
+    rdfs:comment "De diameter in centimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInCentimeter.Diameter>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
+    shacl:description "De diameter in centimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "diameter"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm.diameter>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInMillimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting diameter in millimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van een diameter in millimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "diameter"@nl;
+    rdfs:comment "De diameter in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingDiameterInMillimeter.Diameter>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De diameter in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "diameter"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm.diameter>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingGrondvlakShape> a shacl:NodeShape;
+  rdfs:label "afmeting grondvlak"@nl;
+  rdfs:comment "Datatype voor de afmeting van een (grond)vlak volgens zijn vorm."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "rechthoekig"@nl;
+    rdfs:comment "Afmetingen voor breedte en lengte of diepte. De breedte meet van links naar rechts in vooraanzicht, de lengte van voor naar achter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingGrondvlak.Rechthoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm>;
+    shacl:description "Afmetingen voor breedte en lengte of diepte. De breedte meet van links naar rechts in vooraanzicht, de lengte van voor naar achter."@nl;
+    shacl:maxCount 1;
+    shacl:name "rechthoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak.rechthoekig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rond"@nl;
+    rdfs:comment "Afmeting van de diameter in centimeter van een rond (grond)vlak."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingGrondvlak.Rond>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm>;
+    shacl:description "Afmeting van de diameter in centimeter van een rond (grond)vlak."@nl;
+    shacl:maxCount 1;
+    shacl:name "rond"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak.rond>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingGrondvlak> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbordShape> a shacl:NodeShape;
+  rdfs:label "Afmeting verkeersbord"@nl;
+  rdfs:comment "Union datatype voor de afmeting van het verkeersbord."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "driehoekig"@nl;
+    rdfs:comment "De afmeting van een driehoekig verkeersbord (zijde in millimeter)."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbord.Driehoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm>;
+    shacl:description "De afmeting van een driehoekig verkeersbord (zijde in millimeter)."@nl;
+    shacl:maxCount 1;
+    shacl:name "driehoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rond"@nl;
+    rdfs:comment "De afmeting voor een rond verkeersbord (diameter in millimeter)."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbord.Rond>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm>;
+    shacl:description "De afmeting voor een rond verkeersbord (diameter in millimeter)."@nl;
+    shacl:maxCount 1;
+    shacl:name "rond"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "vierhoekig"@nl;
+    rdfs:comment "De afmeting voor een vierhoekig verkeersbord (breedte en hoogte in millimeter)."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbord.Vierhoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm>;
+    shacl:description "De afmeting voor een vierhoekig verkeersbord (breedte en hoogte in millimeter)."@nl;
+    shacl:maxCount 1;
+    shacl:name "vierhoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.vierhoekig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "zeshoekig"@nl;
+    rdfs:comment "De afmeting voor een zeshoekig verkeersbord (zijde in millimeter)."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbord.Zeshoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm>;
+    shacl:description "De afmeting voor een zeshoekig verkeersbord (zijde in millimeter)."@nl;
+    shacl:maxCount 1;
+    shacl:name "zeshoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.zeshoekig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "achthoekig"@nl;
+    rdfs:comment "De afmeting voor een achthoekig verkeersbord (zijde in millimeter)."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingVerkeersbord.Achthoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm>;
+    shacl:description "De afmeting voor een achthoekig verkeersbord (zijde in millimeter)."@nl;
+    shacl:maxCount 1;
+    shacl:name "achthoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.achthoekig>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingZijdeInMillimeterShape> a shacl:NodeShape;
+  rdfs:label "Afmeting zijde in millimeter"@nl;
+  rdfs:comment "Complex datatype voor de afmeting van een zijde in millimeter."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "zijde"@nl;
+    rdfs:comment "De afmeting van een zijde in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#AfmetingZijdeInMillimeter.Zijde>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
+    shacl:description "De afmeting van een zijde in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "zijde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm.zijde>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BVLaagtypeShape> a shacl:NodeShape;
+  rdfs:label "BV laagtype"@nl;
+  rdfs:comment "Laagtypes van de bitumineuze verharding."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingVoorWegverlichtingstoestellenShape> a shacl:NodeShape;
+  rdfs:label "Bevestiging voor wegverlichtingstoestellen"@nl;
+  rdfs:comment "De standaard bevestigingen van verlichtingstoestellen aan lichtmasten."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingWegverlichtingstoestelShape> a shacl:NodeShape;
+  rdfs:label "Bevestiging wegverlichtingstoestel"@nl;
+  rdfs:comment "Union datatype voor de wijze waarop verlichtingstoestellen bevestigd zijn op een lichtmast, indien dit een standaard methode is dan kan deze geselecteerd worden uit een keuzelijst. Bij afwijkende methode kan de methode toegelicht worden."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "standaard methode"@nl;
+    rdfs:comment "Bepaling van de standaardbevestigingen van verlichtingstoestellen aan lichtmasten."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingWegverlichtingstoestel.StandaardMethode>;
+    shacl:class skos:Concept;
+    shacl:description "Bepaling van de standaardbevestigingen van verlichtingstoestellen aan lichtmasten."@nl;
+    shacl:maxCount 1;
+    shacl:name "standaard methode"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode.standaardMethode>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "afwijkende methode"@nl;
+    rdfs:comment "Tekstveld waarin de afwijkende methode van bevestiging van verlichtingstoestel aan lichtmast kan beschreven worden."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#BevestigingWegverlichtingstoestel.AfwijkendeMethode>;
+    shacl:class xsd:string;
+    shacl:description "Tekstveld waarin de afwijkende methode van bevestiging van verlichtingstoestel aan lichtmast kan beschreven worden."@nl;
+    shacl:maxCount 1;
+    shacl:name "afwijkende methode"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode.afwijkendeMethode>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuWvLichtmastBevsToestelMethode> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#DecimaalGetalShape> a shacl:NodeShape;
+  rdfs:label "Decimaal getal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#decimal"@nl;
+  rdfs:comment "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."@nl;
+  shacl:closed false;
+  shacl:targetClass xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#DwarsafmetingenShape> a shacl:NodeShape;
+  rdfs:label "Dwarsafmetingen"@nl;
+  rdfs:comment "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "rechthoekig"@nl;
+    rdfs:comment "Afmetingen voor breedte, lengte en hoogte van een rechthoekig object."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Dwarsafmetingen.Rechthoekig>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm>;
+    shacl:description "Afmetingen voor breedte, lengte en hoogte van een rechthoekig object."@nl;
+    shacl:maxCount 1;
+    shacl:name "rechthoekig"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen.rechthoekig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rond"@nl;
+    rdfs:comment "Afmeting van de diameter in milimeter van een rond object."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Dwarsafmetingen.Rond>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm>;
+    shacl:description "Afmeting van de diameter in milimeter van een rond object."@nl;
+    shacl:maxCount 1;
+    shacl:name "rond"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen.rond>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Hellings-OfSchoorhoekShape> a shacl:NodeShape;
+  rdfs:label "Hellings- of schoorhoek"@nl;
+  rdfs:comment "Union datatype voor de hellings- of de schoorhoek."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "hellingshoek"@nl;
+    rdfs:comment "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in decimale graden."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Hellings-OfSchoorhoek.Hellingshoek>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden>;
+    shacl:description "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in decimale graden."@nl;
+    shacl:maxCount 1;
+    shacl:name "hellingshoek"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.hellingshoek>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "schoorhoek"@nl;
+    rdfs:comment "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Hellings-OfSchoorhoek.Schoorhoek>;
+    shacl:class skos:Concept;
+    shacl:description "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."@nl;
+    shacl:maxCount 1;
+    shacl:name "schoorhoek"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.schoorhoek>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInCentimeterShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve waarde in centimeter"@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in centimeter uitdrukt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInCentimeter.Waarde>;
+    shacl:class xsd:decimal;
+    shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"cm\"^^cdt:ucumunit"@nl;
+    rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in centimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInCentimeter.StandaardEenheid>;
+    shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in centimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInDecimaleGradenShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve waarde in decimale graden"@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInDecimaleGraden.Waarde>;
+    shacl:class xsd:decimal;
+    shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.waarde>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"deg\"^^cdt:ucumunit"@nl;
+    rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInDecimaleGraden.StandaardEenheid>;
+    shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.standaardEenheid>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMeterShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve waarde in meter"@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in meter uitdrukt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
+    rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMeter.StandaardEenheid>;
+    shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMeter.Waarde>;
+    shacl:class xsd:decimal;
+    shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMillimeterShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve waarde in millimeter"@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in millimeter uitdrukt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMillimeter.Waarde>;
+    shacl:class xsd:decimal;
+    shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"mm\"^^cdt:ucumunit"@nl;
+    rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInMillimeter.StandaardEenheid>;
+    shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInTonShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve waarde in ton"@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in ton uitdrukt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInTon.Waarde>;
+    shacl:class xsd:decimal;
+    shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"t\"^^cdt:ucumunit"@nl;
+    rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in ton."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#KwantitatieveWaardeInTon.StandaardEenheid>;
+    shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in ton."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.standaardEenheid>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#LaagtypeVanDeBitumineuzeVerhardingShape> a shacl:NodeShape;
+  rdfs:label "Laagtype van de bitumineuze verharding"@nl;
+  rdfs:comment "Union datatype voor een laagtype anders dan de profileerlaag. Bij een profileerlaag kan men het gewicht toelichten."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "laagtype"@nl;
+    rdfs:comment "Het type van de bitumineuze verharding."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#LaagtypeVanDeBitumineuzeVerharding.Laagtype>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van de bitumineuze verharding."@nl;
+    shacl:maxCount 1;
+    shacl:name "laagtype"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes.laagtype>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "profileerlaag"@nl;
+    rdfs:comment "De laag die het profiel verbetert van de verharding."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#LaagtypeVanDeBitumineuzeVerharding.Profileerlaag>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag>;
+    shacl:description "De laag die het profiel verbetert van de verharding."@nl;
+    shacl:maxCount 1;
+    shacl:name "profileerlaag"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes.profileerlaag>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuBVLaagtypes> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#MasthoogteShape> a shacl:NodeShape;
+  rdfs:label "Masthoogte"@nl;
+  rdfs:comment "Union datatype om een standaard of afwijkende masthoogte te bepalen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "standaard hoogte"@nl;
+    rdfs:comment "Bepaling van de standaard hoogte van een mast."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Masthoogte.StandaardHoogte>;
+    shacl:class skos:Concept;
+    shacl:description "Bepaling van de standaard hoogte van een mast."@nl;
+    shacl:maxCount 1;
+    shacl:name "standaard hoogte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.standaardHoogte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "afwijkende hoogte"@nl;
+    rdfs:comment "De afwijkende hoogte van de mast in meter."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Masthoogte.AfwijkendeHoogte>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
+    shacl:description "De afwijkende hoogte van de mast in meter."@nl;
+    shacl:maxCount 1;
+    shacl:name "afwijkende hoogte"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.afwijkendeHoogte>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#ProfileerlaagShape> a shacl:NodeShape;
+  rdfs:label "Profileerlaag"@nl;
+  rdfs:comment "Complex datatype om extra informatie te capteren van de profilerende laag."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "gewicht"@nl;
+    rdfs:comment "Het gewicht van de profileerlaag in ton."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Profileerlaag.Gewicht>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon>;
+    shacl:description "Het gewicht van de profileerlaag in ton."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "gewicht"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag.gewicht>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "laagtype"@nl;
+    rdfs:comment "Het type van de bitumineuze verharding."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#Profileerlaag.Laagtype>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van de bitumineuze verharding."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "laagtype"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag.laagtype>
+  ];
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcProfileerlaag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#SchoorhoekShape> a shacl:NodeShape;
+  rdfs:label "Schoorhoek"@nl;
+  rdfs:comment "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4)."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#StringShape> a shacl:NodeShape;
+  rdfs:label "String"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#string"@nl;
+  rdfs:comment "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."@nl;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/union-datatypes/ontwerpdocument/2.20.0-RC1#WvMasthoogteShape> a shacl:NodeShape;
+  rdfs:label "Wv masthoogte"@nl;
+  rdfs:comment "De standaard masthoogten."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .

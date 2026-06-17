@@ -1,0 +1,327 @@
+{
+  "title": "VerlichtingstoestelLED",
+  "type": "object",
+  "description": "Het geheel van de LEDlichtmodule en de behuizing die werden samengesteld met als doel: * de lichtstroom van de lichtbronnen hoofdzakelijk op het te verlichten oppervlak (doorlopende wegsectie, conflictgebied,...) te richten, teneinde de zichtbaarheid te verhogen; * de lichtstroom te beheersen zodat de weggebruikers niet verblind worden en de lichthinder beperkt wordt; * het optisch systeem, de lichtbronnen en de hulpapparatuur tegen uitwendige invloeden te beschermen De LED driver bevindt zich fysiek in het verlichtingstoestel maar wordt als een apart onderdeel behandeld.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerlichtingstoestelLED)",
+      "pattern": "^VerlichtingstoestelLED$"
+    },
+    "heeftAntiVandalisme": {
+      "type": "object",
+      "description": "Is het een antivandalisme type verlichtingstoestel?",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "lichtpuntHoogte": {
+      "$ref": "#/components/schemas/WVLEDLichtpunthoogte"
+    },
+    "tussenafstandLED": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "tussenAfstand": {
+      "$ref": "#/components/schemas/WVLEDTussenafstand"
+    },
+    "aantalTeVerlichtenRijstroken": {
+      "$ref": "#/components/schemas/WVLEDAantalTeVerlichtenRijstroken"
+    },
+    "verlichtingsniveau": {
+      "type": "array",
+      "description": "Lijst van WVLEDVerlichtingsniveau items.",
+      "items": {
+        "$ref": "#/components/schemas/WVLEDVerlichtingsniveau"
+      },
+      "minItems": 1
+    },
+    "kleurTemperatuur": {
+      "$ref": "#/components/schemas/WVLEDKleurtemperatuur"
+    },
+    "overhang": {
+      "$ref": "#/components/schemas/WVLEDOverhang"
+    },
+    "lichtkleur": {
+      "$ref": "#/components/schemas/WVLEDLichtkleur"
+    },
+    "protector": {
+      "$ref": "#/components/schemas/WVProtector"
+    },
+    "kleurArmatuur": {
+      "$ref": "#/components/schemas/Armatuurkleur"
+    },
+    "armatuurkleur": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "isFaunavriendelijk": {
+      "type": "object",
+      "description": "Geeft aan of de lichtkleur van de verlichting is aangepast (gebruik van oranje/rode/amberkleur ipv wit licht) zodat deze als minder storend wordt ervaren door fauna zoals bijvoorbeeld vleermuizen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isLijnvormig": {
+      "type": "object",
+      "description": "Is de led verlichting lijnvormig, bv. een led-strip?",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "lumenOutput": {
+      "$ref": "#/components/schemas/LumenOutput"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "systeemvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "heeftAansluitkastGeïNtegreerd": {
+      "type": "object",
+      "description": "Is de aansluitkast geïntegreerd?",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "stroomkringnummer": {
+      "type": "object",
+      "description": "Nummer van de stroomkring waarop het verlichtingstoestel is aangesloten.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VerlichtingstoestelMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VerlichtingstoestelModelnaam"
+    },
+    "inclinatiehoek": {
+      "$ref": "#/components/schemas/VerlichtingstoestelInclinatiehoek"
+    },
+    "verlichtGebied": {
+      "$ref": "#/components/schemas/VerlichtingstoestelVerlichtGebied."
+    },
+    "serienummer": {
+      "type": "object",
+      "description": "Het unieke nummer waarmee het toestel door de fabrikant geïdentificeerd is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "besturingsconnector": {
+      "$ref": "#/components/schemas/WV-Besturingsconnector"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftAntiVandalisme",
+    "lichtpuntHoogte",
+    "tussenafstandLED",
+    "tussenAfstand",
+    "aantalTeVerlichtenRijstroken",
+    "verlichtingsniveau",
+    "kleurTemperatuur",
+    "overhang",
+    "lichtkleur",
+    "protector",
+    "kleurArmatuur",
+    "armatuurkleur",
+    "isFaunavriendelijk",
+    "isLijnvormig",
+    "lumenOutput",
+    "technischeFiche",
+    "systeemvermogen",
+    "heeftAansluitkastGeïNtegreerd",
+    "stroomkringnummer",
+    "merk",
+    "modelnaam",
+    "inclinatiehoek",
+    "verlichtGebied",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "besturingsconnector"
+  ]
+}

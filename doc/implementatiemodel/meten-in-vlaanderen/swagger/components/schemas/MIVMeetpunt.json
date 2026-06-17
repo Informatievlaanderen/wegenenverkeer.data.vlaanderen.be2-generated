@@ -1,0 +1,298 @@
+{
+  "title": "MIVMeetpunt",
+  "type": "object",
+  "description": "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MIVMeetpunt)",
+      "pattern": "^MIVMeetpunt$"
+    },
+    "logischeGroepVerkeerscentrum": {
+      "type": "object",
+      "description": "Identificator voor de verzameling van alle naast elkaar gelegen meetpunten op een weg in dezelfde rijrichting, toegekend door het Verkeerscentrum.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "datumHerslijpen": {
+      "type": "object",
+      "description": "De datum waarop de lussen van het meetpunt laatst herslepen zijn.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "uitslijprichting": {
+      "$ref": "#/components/schemas/MIV-LusUitslijprichting"
+    },
+    "meetrapport": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "isBedekt": {
+      "type": "object",
+      "description": "Geeft aan of de lussen bedekt zijn door een toplaag. De bedekking door een toplaag betekent dat de lus zich in de onderlaag bevindt en zorgt er voor dat de lus niet zichtbaar is met het blote oog.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "afmetingen": {
+      "$ref": "#/components/schemas/MIVMeetpuntAfmetingen"
+    },
+    "rijstrook": {
+      "$ref": "#/components/schemas/AlgemeenRijstrookcode"
+    },
+    "bemetenGebied": {
+      "$ref": "#/components/schemas/MIVMeetpuntgebied"
+    },
+    "trekput": {
+      "type": "object",
+      "description": "LEGACY-ATTRIBUUT zie usageNote! Een trekput is een ondergrondse put waarin kabels van meetlussen op snelwegen samenkomen voor verbinding en onderhoud, zonder het wegdek open te breken. Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Technische put.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aansluiting": {
+      "$ref": "#/components/schemas/AansluitingMeetlussen"
+    },
+    "servicePrioriteit": {
+      "$ref": "#/components/schemas/Serviceprioriteit"
+    },
+    "wegdek": {
+      "$ref": "#/components/schemas/MIVWegdek"
+    },
+    "isGekoppeld": {
+      "type": "object",
+      "description": "Geeft aan of de data van het meetpunt wordt gebruikt voor de aansturing van andere verkeerstechnieken.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aantalWindingen": {
+      "type": "object",
+      "description": "Het aantal windingen dat een meetpunt heeft.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naampad": {
+      "type": "object",
+      "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "logischeGroepVerkeerscentrum",
+    "datumHerslijpen",
+    "uitslijprichting",
+    "meetrapport",
+    "isBedekt",
+    "afmetingen",
+    "rijstrook",
+    "bemetenGebied",
+    "trekput",
+    "aansluiting",
+    "servicePrioriteit",
+    "wegdek",
+    "isGekoppeld",
+    "aantalWindingen",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

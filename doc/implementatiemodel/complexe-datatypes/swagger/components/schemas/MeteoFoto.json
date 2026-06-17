@@ -1,0 +1,27 @@
+{
+  "title": "MeteoFoto",
+  "type": "object",
+  "description": "Complex datatype voor meteo gerelateerde foto's.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MeteoFoto)",
+      "pattern": "^MeteoFoto$"
+    },
+    "fotobestand": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/MeteoFotoBeschrijving"
+    }
+  },
+  "required": [
+    "@type",
+    "fotobestand",
+    "beschrijving"
+  ]
+}

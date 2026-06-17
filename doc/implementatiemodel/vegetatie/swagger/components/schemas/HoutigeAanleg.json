@@ -1,0 +1,143 @@
+{
+  "title": "HoutigeAanleg",
+  "type": "object",
+  "description": "Complex datatype dat de aanleg van houtige vegetatie beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HoutigeAanleg)",
+      "pattern": "^HoutigeAanleg$"
+    },
+    "plantmaatHoogte": {
+      "$ref": "#/components/schemas/PlantmaatHoutigeVegetatie"
+    },
+    "plantdichtheid": {
+      "type": "object",
+      "description": "Aantal planten per vierkante meter.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "plantafstand": {
+      "type": "object",
+      "description": "Aantal planten per lopende meter.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "plantverband": {
+      "$ref": "#/components/schemas/VegetatiePlantverband"
+    },
+    "heeftHaagsteun": {
+      "type": "object",
+      "description": "Duidt op de aanezigheid van een constructie van palen en bedrading die haagbeplanting ondersteunt.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "wortel": {
+      "$ref": "#/components/schemas/VegetatieWortel"
+    },
+    "heeftBoomplaat": {
+      "type": "object",
+      "description": "Boomplaten worden aangebracht rond de stam van bomen, bosgoed en heesters en eventueel vastgezet met piketten. Ze hebben een centrale opening en een rechte snede, zodat ze op eenvoudige wijze rond de planten kunnen aangebracht worden.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "heeftWortelgeleiding-Wortelwering": {
+      "type": "object",
+      "description": "Wortelgeleiding en –wering moet voorkomen dat boomwortels het trottoir, de middenberm, het fietspad, de rijweg, andere wegverhardingen en leidingstelsels beschadigen. Het heeft als doel om boomwortels naar beneden te leiden, waar ze onder een obstakel verder kunnen groeien.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "vraatschadeBescherming": {
+      "$ref": "#/components/schemas/MateriaalBeschermingVraatschade"
+    },
+    "beschermingVraatschade": {
+      "$ref": "#/components/schemas/BeschermingVraatschade"
+    },
+    "vormAanlevering": {
+      "$ref": "#/components/schemas/VormAanleveringHoutigeVegetatie"
+    },
+    "plantmaatOmtrek": {
+      "$ref": "#/components/schemas/PlantmaatOmtrek"
+    },
+    "maaischadeBescherming": {
+      "$ref": "#/components/schemas/BeschermingMaaischade"
+    }
+  },
+  "required": [
+    "@type",
+    "plantmaatHoogte",
+    "plantdichtheid",
+    "plantafstand",
+    "plantverband",
+    "heeftHaagsteun",
+    "wortel",
+    "heeftBoomplaat",
+    "heeftWortelgeleiding-Wortelwering",
+    "vraatschadeBescherming",
+    "beschermingVraatschade",
+    "vormAanlevering",
+    "plantmaatOmtrek",
+    "maaischadeBescherming"
+  ]
+}

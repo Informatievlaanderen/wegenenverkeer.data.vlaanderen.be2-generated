@@ -1,0 +1,63 @@
+{
+  "title": "Productidentificatiecode",
+  "type": "object",
+  "description": "Complex datatype dat alle nodige informatie van het product capteert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Productidentificatiecode)",
+      "pattern": "^Productidentificatiecode$"
+    },
+    "productidentificatiecode": {
+      "type": "object",
+      "description": "De code van het gebruikte product (COPRO/BENOR).",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "producent": {
+      "type": "object",
+      "description": "De gerelateerde fabrikant.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "linkTechnischeFiche": {
+      "type": "object",
+      "description": "De link naar de technische fiche van het gerelateerd product.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "keuringsverslag": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "productidentificatiecode",
+    "producent",
+    "linkTechnischeFiche",
+    "keuringsverslag"
+  ]
+}

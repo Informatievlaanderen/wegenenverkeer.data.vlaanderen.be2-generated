@@ -1,0 +1,71 @@
+{
+  "title": "HeeftV-Plan",
+  "type": "object",
+  "description": "Deze relatie duidt aan welke V plannen gekoppeld zijn aan een verkeersregelinstallatie en/of ITSapp, met aanduiding van de periode waarin deze koppeling geldig is via een indienstdatum en uitdienstdatum.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HeeftV-Plan)",
+      "pattern": "^HeeftV-Plan$"
+    },
+    "dienstdatum": {
+      "$ref": "#/components/schemas/DienstdatumV-Plan"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "dienstdatum",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

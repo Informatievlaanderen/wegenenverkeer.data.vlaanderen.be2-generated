@@ -1,0 +1,1529 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://wegenenverkeer.data.dev-vlaanderen.be/",
+      "description": "Basis URL"
+    }
+  ],
+  "paths": {
+    "/id/Schoorhoek/{id}": {
+      "get": {
+        "summary": "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4).",
+        "operationId": "SchoorhoekGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een Schoorhoek object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Schoorhoek object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Schoorhoek"
+                }
+              }
+            },
+            "links": {}
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "SchoorhoekGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/BVLaagtype/{id}": {
+      "get": {
+        "summary": "Laagtypes van de bitumineuze verharding.",
+        "operationId": "BVLaagtypeGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een BVLaagtype object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BVLaagtype object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BVLaagtype"
+                }
+              }
+            },
+            "links": {}
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BVLaagtypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/BevestigingVoorWegverlichtingstoestellen/{id}": {
+      "get": {
+        "summary": "De standaard bevestigingen van verlichtingstoestellen aan lichtmasten.",
+        "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een BevestigingVoorWegverlichtingstoestellen object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BevestigingVoorWegverlichtingstoestellen object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BevestigingVoorWegverlichtingstoestellen"
+                }
+              }
+            },
+            "links": {}
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "BevestigingVoorWegverlichtingstoestellenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/WvMasthoogte/{id}": {
+      "get": {
+        "summary": "De standaard masthoogten.",
+        "operationId": "WvMasthoogteGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een WvMasthoogte object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "WvMasthoogte object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WvMasthoogte"
+                }
+              }
+            },
+            "links": {}
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "WvMasthoogteGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Schoorhoek": {
+        "title": "Schoorhoek",
+        "type": "object",
+        "description": "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Schoorhoek)",
+            "pattern": "^Schoorhoek$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BVLaagtype": {
+        "title": "BVLaagtype",
+        "type": "object",
+        "description": "Laagtypes van de bitumineuze verharding.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BVLaagtype)",
+            "pattern": "^BVLaagtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BevestigingVoorWegverlichtingstoestellen": {
+        "title": "BevestigingVoorWegverlichtingstoestellen",
+        "type": "object",
+        "description": "De standaard bevestigingen van verlichtingstoestellen aan lichtmasten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BevestigingVoorWegverlichtingstoestellen)",
+            "pattern": "^BevestigingVoorWegverlichtingstoestellen$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "WvMasthoogte": {
+        "title": "WvMasthoogte",
+        "type": "object",
+        "description": "De standaard masthoogten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse WvMasthoogte)",
+            "pattern": "^WvMasthoogte$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Hellings-OfSchoorhoek": {
+        "title": "Hellings-OfSchoorhoek",
+        "type": "object",
+        "description": "Union datatype voor de hellings- of de schoorhoek.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Hellings-OfSchoorhoek)",
+            "pattern": "^Hellings-OfSchoorhoek$"
+          },
+          "hellingshoek": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+          },
+          "schoorhoek": {
+            "$ref": "#/components/schemas/Schoorhoek"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "KwantitatieveWaardeInDecimaleGraden": {
+        "title": "KwantitatieveWaardeInDecimaleGraden",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInDecimaleGraden)",
+            "pattern": "^KwantitatieveWaardeInDecimaleGraden$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden. \"deg\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "Dwarsafmetingen": {
+        "title": "Dwarsafmetingen",
+        "type": "object",
+        "description": "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dwarsafmetingen)",
+            "pattern": "^Dwarsafmetingen$"
+          },
+          "rechthoekig": {
+            "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AfmetingBxlxhInMillimeter": {
+        "title": "AfmetingBxlxhInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxlxhInMillimeter)",
+            "pattern": "^AfmetingBxlxhInMillimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "hoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "lengte",
+          "hoogte"
+        ]
+      },
+      "AfmetingDiameterInMillimeter": {
+        "title": "AfmetingDiameterInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een diameter in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingDiameterInMillimeter)",
+            "pattern": "^AfmetingDiameterInMillimeter$"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "diameter"
+        ]
+      },
+      "AfmetingZijdeInMillimeter": {
+        "title": "AfmetingZijdeInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een zijde in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingZijdeInMillimeter)",
+            "pattern": "^AfmetingZijdeInMillimeter$"
+          },
+          "zijde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "zijde"
+        ]
+      },
+      "KwantitatieveWaardeInMillimeter": {
+        "title": "KwantitatieveWaardeInMillimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in millimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMillimeter)",
+            "pattern": "^KwantitatieveWaardeInMillimeter$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in millimeter. \"mm\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingBxlInCentimeter": {
+        "title": "AfmetingBxlInCentimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte en de lengte in centimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxlInCentimeter)",
+            "pattern": "^AfmetingBxlInCentimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "lengte"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter": {
+        "title": "KwantitatieveWaardeInCentimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in centimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInCentimeter)",
+            "pattern": "^KwantitatieveWaardeInCentimeter$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingDiameterInCentimeter": {
+        "title": "AfmetingDiameterInCentimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een diameter in centimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingDiameterInCentimeter)",
+            "pattern": "^AfmetingDiameterInCentimeter$"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "diameter"
+        ]
+      },
+      "AfmetingBxhInMillimeter": {
+        "title": "AfmetingBxhInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte en hoogte in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxhInMillimeter)",
+            "pattern": "^AfmetingBxhInMillimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "hoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "hoogte"
+        ]
+      },
+      "KwantitatieveWaardeInMeter": {
+        "title": "KwantitatieveWaardeInMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+            "pattern": "^KwantitatieveWaardeInMeter$"
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInTon": {
+        "title": "KwantitatieveWaardeInTon",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in ton uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInTon)",
+            "pattern": "^KwantitatieveWaardeInTon$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in ton. \"t\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingGrondvlak": {
+        "title": "AfmetingGrondvlak",
+        "type": "object",
+        "description": "Datatype voor de afmeting van een (grond)vlak volgens zijn vorm.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingGrondvlak)",
+            "pattern": "^AfmetingGrondvlak$"
+          },
+          "rechthoekig": {
+            "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInCentimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AfmetingVerkeersbord": {
+        "title": "AfmetingVerkeersbord",
+        "type": "object",
+        "description": "Union datatype voor de afmeting van het verkeersbord.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingVerkeersbord)",
+            "pattern": "^AfmetingVerkeersbord$"
+          },
+          "driehoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+          },
+          "vierhoekig": {
+            "$ref": "#/components/schemas/AfmetingBxhInMillimeter"
+          },
+          "zeshoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          },
+          "achthoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Profileerlaag": {
+        "title": "Profileerlaag",
+        "type": "object",
+        "description": "Complex datatype om extra informatie te capteren van de profilerende laag.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Profileerlaag)",
+            "pattern": "^Profileerlaag$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "laagtype": {
+            "$ref": "#/components/schemas/BVLaagtype"
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "laagtype"
+        ]
+      },
+      "LaagtypeVanDeBitumineuzeVerharding": {
+        "title": "LaagtypeVanDeBitumineuzeVerharding",
+        "type": "object",
+        "description": "Union datatype voor een laagtype anders dan de profileerlaag. Bij een profileerlaag kan men het gewicht toelichten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LaagtypeVanDeBitumineuzeVerharding)",
+            "pattern": "^LaagtypeVanDeBitumineuzeVerharding$"
+          },
+          "laagtype": {
+            "$ref": "#/components/schemas/BVLaagtype"
+          },
+          "profileerlaag": {
+            "$ref": "#/components/schemas/Profileerlaag"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BevestigingWegverlichtingstoestel": {
+        "title": "BevestigingWegverlichtingstoestel",
+        "type": "object",
+        "description": "Union datatype voor de wijze waarop verlichtingstoestellen bevestigd zijn op een lichtmast, indien dit een standaard methode is dan kan deze geselecteerd worden uit een keuzelijst. Bij afwijkende methode kan de methode toegelicht worden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BevestigingWegverlichtingstoestel)",
+            "pattern": "^BevestigingWegverlichtingstoestel$"
+          },
+          "standaardMethode": {
+            "$ref": "#/components/schemas/BevestigingVoorWegverlichtingstoestellen"
+          },
+          "afwijkendeMethode": {
+            "type": "object",
+            "description": "Tekstveld waarin de afwijkende methode van bevestiging van verlichtingstoestel aan lichtmast kan beschreven worden.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Masthoogte": {
+        "title": "Masthoogte",
+        "type": "object",
+        "description": "Union datatype om een standaard of afwijkende masthoogte te bepalen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Masthoogte)",
+            "pattern": "^Masthoogte$"
+          },
+          "standaardHoogte": {
+            "$ref": "#/components/schemas/WvMasthoogte"
+          },
+          "afwijkendeHoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    }
+  }
+}

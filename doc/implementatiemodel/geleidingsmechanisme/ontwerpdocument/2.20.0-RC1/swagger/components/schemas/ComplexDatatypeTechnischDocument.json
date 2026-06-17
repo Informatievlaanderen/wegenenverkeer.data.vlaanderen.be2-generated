@@ -1,0 +1,27 @@
+{
+  "title": "ComplexDatatypeTechnischDocument",
+  "type": "object",
+  "description": "Complex datatype om een of meerdere technische documenten aan te koppelen aan de assets",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ComplexDatatypeTechnischDocument)",
+      "pattern": "^ComplexDatatypeTechnischDocument$"
+    },
+    "typeDocument": {
+      "$ref": "#/components/schemas/KeuzelijstTechnischDocument"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "typeDocument",
+    "bijlage"
+  ]
+}

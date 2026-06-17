@@ -1,0 +1,70 @@
+{
+  "title": "AssetVersie",
+  "type": "object",
+  "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AssetVersie)",
+      "pattern": "^AssetVersie$"
+    },
+    "versienummer": {
+      "type": "object",
+      "description": "Het versienummer als een oplopende integer.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "timestamp": {
+      "type": "object",
+      "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "context": {
+      "type": "object",
+      "description": "De context van de versie creatie.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "versienummer",
+    "timestamp",
+    "context"
+  ]
+}

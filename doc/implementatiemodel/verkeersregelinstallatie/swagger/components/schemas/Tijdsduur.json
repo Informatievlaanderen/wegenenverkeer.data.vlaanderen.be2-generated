@@ -1,0 +1,31 @@
+{
+  "title": "Tijdsduur",
+  "type": "object",
+  "description": "Complex datatype voor de instelling van een tijdsbepaling.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Tijdsduur)",
+      "pattern": "^Tijdsduur$"
+    },
+    "uren": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur"
+    },
+    "minuten": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
+    },
+    "seconden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInSeconde"
+    }
+  },
+  "required": [
+    "@type",
+    "uren",
+    "minuten",
+    "seconden"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "ZelfsluiterSluitkracht",
+  "type": "object",
+  "description": "Datatype voor het bereik en de instelling van een zelfsluiter voor deuren, poorten etc.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ZelfsluiterSluitkracht)",
+      "pattern": "^ZelfsluiterSluitkracht$"
+    },
+    "bovengrens": {
+      "$ref": "#/components/schemas/ZelfsluiterSluitkrachtnorm"
+    },
+    "ingesteld": {
+      "$ref": "#/components/schemas/ZelfsluiterSluitkrachtnorm"
+    },
+    "ondergrens": {
+      "$ref": "#/components/schemas/ZelfsluiterSluitkrachtnorm"
+    }
+  },
+  "required": [
+    "@type",
+    "bovengrens",
+    "ingesteld",
+    "ondergrens"
+  ]
+}

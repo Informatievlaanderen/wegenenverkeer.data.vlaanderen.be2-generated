@@ -1,0 +1,304 @@
+{
+  "title": "Groutanker",
+  "type": "object",
+  "description": "Stalen staaf of strengen die de trekkracht op de grondkering overdraagt op een groutlichaam. Dit lichaam wordt rond het anker onder hoge druk in de bodem gevormd. Door wrijving tussen grout en grond kan de kracht worden overgedragen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Groutanker)",
+      "pattern": "^Groutanker$"
+    },
+    "vrijeLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "hellingshoek": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "wortellengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "aanzetpeilwortel": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "injectiemethode": {
+      "$ref": "#/components/schemas/GroutankerInjectie"
+    },
+    "dienstlast": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "voorspankracht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "breuklast": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "totaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "beschermingsklasse": {
+      "$ref": "#/components/schemas/Beschermingsklasse"
+    },
+    "diameterBoorkop": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "hellingshoekGroutanker": {
+      "$ref": "#/components/schemas/ComplexDatatypeHellingshoek"
+    },
+    "isStaafanker": {
+      "type": "object",
+      "description": "Mogelijkheid om aan te geven of het een staafanker is, indien het geen staafanker is, is het een strenganker.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "heeftAnkerkrachtcel": {
+      "type": "object",
+      "description": "Aanduiding of er een ankerkrachtcel aanwezig is of niet.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "staalspecificaties": {
+      "$ref": "#/components/schemas/Staalspecificaties"
+    },
+    "heeftBeschermingskap": {
+      "type": "object",
+      "description": "Geeft aan of het grondanker een beschermingskap heeft, al dan niet.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "staalsectie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMillimeters"
+    },
+    "isActiefAnker": {
+      "type": "object",
+      "description": "Geeft aan of het anker actief (voorgespannen) of passief (niet voorgespannen) is.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "typeGrondanker": {
+      "$ref": "#/components/schemas/TypeGrondanker"
+    },
+    "aanvaardingsdocument": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "vrijeLengte",
+    "hellingshoek",
+    "wortellengte",
+    "aanzetpeilwortel",
+    "injectiemethode",
+    "dienstlast",
+    "voorspankracht",
+    "breuklast",
+    "totaleLengte",
+    "beschermingsklasse",
+    "diameterBoorkop",
+    "hellingshoekGroutanker",
+    "isStaafanker",
+    "heeftAnkerkrachtcel",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "staalspecificaties",
+    "heeftBeschermingskap",
+    "staalsectie",
+    "isActiefAnker",
+    "typeGrondanker",
+    "aanvaardingsdocument",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota"
+  ]
+}

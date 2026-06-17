@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInMaand",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+      "pattern": "^KwantitatieveWaardeInMaand$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Bevat een getal die bij het datatype hoort.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

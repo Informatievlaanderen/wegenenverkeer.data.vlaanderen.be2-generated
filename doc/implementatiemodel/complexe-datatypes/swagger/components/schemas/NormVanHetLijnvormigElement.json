@@ -1,0 +1,36 @@
+{
+  "title": "NormVanHetLijnvormigElement",
+  "type": "object",
+  "description": "Complex datatype voor de norm van het lijnvormig element.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse NormVanHetLijnvormigElement)",
+      "pattern": "^NormVanHetLijnvormigElement$"
+    },
+    "bijkomendeParameter": {
+      "$ref": "#/components/schemas/KantopsluitingBijkomendeParameter"
+    },
+    "norm": {
+      "type": "object",
+      "description": "De opgelegde en beschreven standaard van de kantopsluiting.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "bijkomendeParameter",
+    "norm"
+  ]
+}

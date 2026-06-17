@@ -1,0 +1,25 @@
+{
+  "title": "Hellings-OfSchoorhoek",
+  "type": "object",
+  "description": "Union datatype voor de hellings- of de schoorhoek.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Hellings-OfSchoorhoek)",
+      "pattern": "^Hellings-OfSchoorhoek$"
+    },
+    "hellingshoek": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "schoorhoek": {
+      "$ref": "#/components/schemas/Schoorhoek"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "title": "Cabine",
+  "type": "object",
+  "description": "Een behuizing voornamelijk bestemd voor het beschermen van elektromechanische technieken waarin het omwille van de grootte en toegankelijkheid mogelijk is om rond te lopen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Cabine)",
+      "pattern": "^Cabine$"
+    },
+    "kelderdiepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftIsolatie": {
+      "type": "object",
+      "description": "Geeft aan of de cabine is voorzien van isolatie.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardtype": {
+      "$ref": "#/components/schemas/CabineStandaardtype"
+    },
+    "keuzelijstNetwerklocaties": {
+      "$ref": "#/components/schemas/KeuzelijstNetwerklocatie"
+    },
+    "aardingsstelsel": {
+      "$ref": "#/components/schemas/CabineAardingsstelsel"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/CabineModelnaam"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/CabineMerk"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
+    },
+    "beschrijvingBereikbaarheid": {
+      "type": "object",
+      "description": "Een beschrijving van de omgeving van de behuizing in functie van de bereikbaarheid en toegankelijkheid voor werken en toezicht.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "grondplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "inloopbehuizingMateriaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "risicoanalyse": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "tabelUitwendigeInvloeden": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "type": "object",
+      "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "kelderdiepte",
+    "heeftIsolatie",
+    "standaardtype",
+    "keuzelijstNetwerklocaties",
+    "aardingsstelsel",
+    "modelnaam",
+    "merk",
+    "afmeting",
+    "beschrijvingBereikbaarheid",
+    "grondplan",
+    "inloopbehuizingMateriaal",
+    "adres",
+    "risicoanalyse",
+    "tabelUitwendigeInvloeden",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

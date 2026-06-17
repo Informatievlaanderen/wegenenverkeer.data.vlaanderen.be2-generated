@@ -1,0 +1,35 @@
+{
+  "title": "ComplexDatatypeHellingshoek",
+  "type": "object",
+  "description": "Complex datatype dat informatie bevat over de helling van de hoek alsook de richitng t.o.v. de as.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ComplexDatatypeHellingshoek)",
+      "pattern": "^ComplexDatatypeHellingshoek$"
+    },
+    "hoek": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "richtingHellingshoek": {
+      "$ref": "#/components/schemas/KeuzelijstRichtingHellingshoek"
+    },
+    "hoekT.O.V.VerticaleAs": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "hoekT.O.V.HorizontaleAs": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    }
+  },
+  "required": [
+    "@type",
+    "hoek",
+    "richtingHellingshoek",
+    "hoekT.O.V.VerticaleAs",
+    "hoekT.O.V.HorizontaleAs"
+  ]
+}

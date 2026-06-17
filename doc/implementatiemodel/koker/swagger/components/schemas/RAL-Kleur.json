@@ -1,0 +1,32 @@
+{
+  "title": "RAL-Kleur",
+  "type": "object",
+  "description": "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde is een natuurlijk getal tussen 1000 en 9999.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RAL-Kleur)",
+      "pattern": "^RAL-Kleur$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde moet voldoen aan volgende regex: [1-9]\\d{3}",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde"
+  ]
+}

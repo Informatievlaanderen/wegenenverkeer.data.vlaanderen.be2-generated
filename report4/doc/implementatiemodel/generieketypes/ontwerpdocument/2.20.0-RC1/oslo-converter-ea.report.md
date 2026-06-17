@@ -2,29 +2,75 @@
 
 #||# -------------------------------------
 
-node:internal/modules/cjs/loader:1205
+2026-06-17T09:40:42.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-17T09:40:42.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_Generieke-types:OSLO-Generieke-types). Using fallback URI (http://todo.com/) instead.
 
-    ^
+2026-06-17T09:40:42.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_Generieke-types). Using fallback URI (http://todo.com/) instead.
 
+2026-06-17T09:40:42.378Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
 
+2026-06-17T09:40:42.378Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:KlAIMToestand has an empty value for tag usageNote-nl.
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs not supported.
+2026-06-17T09:40:42.379Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+2026-06-17T09:40:42.379Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
+2026-06-17T09:40:42.379Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-  code: 'ERR_REQUIRE_ESM'
+2026-06-17T09:40:42.379Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject has an empty value for tag usageNote-nl.
 
-}
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
 
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMToestand has an empty value for tag usageNote-nl.
 
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
 
-Node.js v20.15.1
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMNaamObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcIdentificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcAssetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.380Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:KwantWrdInMaand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.381Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Installatie:Weguitrusting has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.381Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:NaampadObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMDBStatus:isActief has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMToestand:toestand has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:assetId has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:notitie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:standaardBestekPostNummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.382Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:typeURI has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:theoretischeLevensduur has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMObject:datumOprichtingObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:AIMVersie:assetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcIdentificator:identificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcIdentificator:toegekendDoor has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcAssetVersie:versienummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.383Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcAssetVersie:timestamp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.384Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:DtcAssetVersie:context has an empty value for tag usageNote-nl.
+
+2026-06-17T09:40:42.384Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Generieke-types:OSLO-Implementatieelement:KwantWrdInMaand:waarde has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
-
-file generieketypes.jsonld does not exist
 

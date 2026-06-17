@@ -1,0 +1,27 @@
+{
+  "title": "CameraBeeldverwerkingsinstellingen",
+  "type": "object",
+  "description": "Complex datatype waarmee een type beeldverwerking van een camera en het relevant configuratiebestand, bijgehouden worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CameraBeeldverwerkingsinstellingen)",
+      "pattern": "^CameraBeeldverwerkingsinstellingen$"
+    },
+    "typeBeeldverwerking": {
+      "$ref": "#/components/schemas/CameraBeeldverwerkingstypes"
+    },
+    "configuratiebestandBeeldverwerking": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "typeBeeldverwerking",
+    "configuratiebestandBeeldverwerking"
+  ]
+}

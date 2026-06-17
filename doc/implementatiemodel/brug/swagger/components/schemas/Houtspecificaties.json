@@ -1,0 +1,53 @@
+{
+  "title": "Houtspecificaties",
+  "type": "object",
+  "description": "Complex datatype om de eigenschappen van hout te bundelen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Houtspecificaties)",
+      "pattern": "^Houtspecificaties$"
+    },
+    "houtduurzaamheidsklasse": {
+      "$ref": "#/components/schemas/DuurzaamheidsklasseVanHout"
+    },
+    "houtkwaliteitsklasse": {
+      "$ref": "#/components/schemas/KwaliteitsklasseVanHout"
+    },
+    "houtsterkteklasse": {
+      "$ref": "#/components/schemas/SterkteklasseVanHout"
+    },
+    "isResistentTegenMarieneBoorders": {
+      "type": "object",
+      "description": "Geeft aan of het hout resistent is bij toepassingen in contact met zout of brak water.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "fSC-Certificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "houtduurzaamheidsklasse",
+    "houtkwaliteitsklasse",
+    "houtsterkteklasse",
+    "isResistentTegenMarieneBoorders",
+    "fSC-Certificaat"
+  ]
+}

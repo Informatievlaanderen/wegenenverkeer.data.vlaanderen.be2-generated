@@ -1,0 +1,40 @@
+{
+  "title": "BurgerlijkeKlasseBrug",
+  "type": "object",
+  "description": "Complex datatype om de burgerlijke klasse van een brug te bepalen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BurgerlijkeKlasseBrug)",
+      "pattern": "^BurgerlijkeKlasseBrug$"
+    },
+    "voorwaarden": {
+      "type": "object",
+      "description": "De randvoorwaarden van toepassing op de brug.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "totaleLast": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "astype": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    }
+  },
+  "required": [
+    "@type",
+    "voorwaarden",
+    "totaleLast",
+    "astype"
+  ]
+}

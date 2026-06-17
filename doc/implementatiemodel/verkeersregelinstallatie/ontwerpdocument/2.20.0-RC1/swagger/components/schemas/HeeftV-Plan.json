@@ -1,0 +1,28 @@
+{
+  "title": "HeeftV-Plan",
+  "type": "object",
+  "description": "Deze relatie duidt aan welke V plannen gekoppeld zijn aan een verkeersregelinstallatie en/of ITSapp, met aanduiding van de periode waarin deze koppeling geldig is via een indienstdatum en uitdienstdatum.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HeeftV-Plan)",
+      "pattern": "^HeeftV-Plan$"
+    },
+    "dienstdatum": {
+      "type": "array",
+      "description": "Lijst van DienstdatumV-Plan items.",
+      "items": {
+        "$ref": "#/components/schemas/DienstdatumV-Plan"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "dienstdatum"
+  ]
+}

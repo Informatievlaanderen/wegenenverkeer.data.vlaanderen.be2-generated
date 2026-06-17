@@ -1,0 +1,2030 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "AIMToestand": {
+        "title": "AIMToestand",
+        "type": "object",
+        "description": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AIMToestand)",
+            "pattern": "^AIMToestand$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ToegangsprocedureAandachtspunt": {
+        "title": "ToegangsprocedureAandachtspunt",
+        "type": "object",
+        "description": "De soorten aandachtspunten voor toegang tot een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ToegangsprocedureAandachtspunt)",
+            "pattern": "^ToegangsprocedureAandachtspunt$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "TypeBadge": {
+        "title": "TypeBadge",
+        "type": "object",
+        "description": "De verschillende badgetypes.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse TypeBadge)",
+            "pattern": "^TypeBadge$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "TypeSleutel": {
+        "title": "TypeSleutel",
+        "type": "object",
+        "description": "De verschillende sleuteltypes.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse TypeSleutel)",
+            "pattern": "^TypeSleutel$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BijlageType": {
+        "title": "BijlageType",
+        "type": "object",
+        "description": "De mogelijke types of categorieën van het document.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BijlageType)",
+            "pattern": "^BijlageType$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ToegangsprocedureToegangstijden": {
+        "title": "ToegangsprocedureToegangstijden",
+        "type": "object",
+        "description": "De mogelijke toegangstijden bij een toegangsprocedure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ToegangsprocedureToegangstijden)",
+            "pattern": "^ToegangsprocedureToegangstijden$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Mimetype": {
+        "title": "Mimetype",
+        "type": "object",
+        "description": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Mimetype)",
+            "pattern": "^Mimetype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Provincie": {
+        "title": "Provincie",
+        "type": "object",
+        "description": "Lijst van provincies in Vlaanderen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Provincie)",
+            "pattern": "^Provincie$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Lijst van gemeentes in Vlaanderen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeente)",
+            "pattern": "^Gemeente$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BijlagetypeToegangsprocedure": {
+        "title": "BijlagetypeToegangsprocedure",
+        "type": "object",
+        "description": "De bijlagetypes van een toegangsprocedure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BijlagetypeToegangsprocedure)",
+            "pattern": "^BijlagetypeToegangsprocedure$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Keuringsresultaat": {
+        "title": "Keuringsresultaat",
+        "type": "object",
+        "description": "De mogelijke keuringsresultaten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Keuringsresultaat)",
+            "pattern": "^Keuringsresultaat$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BijlageMetGeometrieType": {
+        "title": "BijlageMetGeometrieType",
+        "type": "object",
+        "description": "De mogelijke opties als type van een bijlage met geometrie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BijlageMetGeometrieType)",
+            "pattern": "^BijlageMetGeometrieType$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BetrokkenheidRol": {
+        "title": "BetrokkenheidRol",
+        "type": "object",
+        "description": "Keuzelijst met mogelijke waarden voor de rol waarmee een agent betrokken is bij een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BetrokkenheidRol)",
+            "pattern": "^BetrokkenheidRol$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Derdenobject": {
+        "title": "Derdenobject",
+        "type": "object",
+        "description": "Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Derdenobject)",
+            "pattern": "^Derdenobject$"
+          },
+          "foto": {
+            "type": "array",
+            "description": "Lijst van Bestandsbijlage items.",
+            "items": {
+              "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "omschrijving": {
+            "type": "object",
+            "description": "Omschrijving van het derdenobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "contactgegevens": {
+            "type": "object",
+            "description": "Naam, voornaam, telefoonnummer en/of e-mailadres van de contactpersoon.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "heeftAansluitkastGeïNtegreerd": {
+            "type": "object",
+            "description": "Aanduiding of de aansluitkast geïntegreerd is.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          }
+        },
+        "required": [
+          "@type",
+          "foto",
+          "asset-Id",
+          "omschrijving",
+          "contactgegevens",
+          "heeftAansluitkastGeïNtegreerd",
+          "typeURI",
+          "asset-Versie",
+          "isActief",
+          "aIM-Toestand"
+        ]
+      },
+      "Agent": {
+        "title": "Agent",
+        "type": "object",
+        "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Agent)",
+            "pattern": "^Agent$"
+          },
+          "agentIdentificatie": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "contactinfo": {
+            "type": "array",
+            "description": "Lijst van Contactinfo items.",
+            "items": {
+              "$ref": "#/components/schemas/Contactinfo"
+            },
+            "minItems": 1
+          },
+          "naam": {
+            "type": "object",
+            "description": "De naam waarmee de agent doorgaans benoemd wordt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "agentIdentificatie",
+          "contactinfo",
+          "naam",
+          "asset-Versie",
+          "isActief"
+        ]
+      },
+      "Toegangsprocedure": {
+        "title": "Toegangsprocedure",
+        "type": "object",
+        "description": "De procedure die gevolgd moet worden om toegang te verkrijgen tot een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Toegangsprocedure)",
+            "pattern": "^Toegangsprocedure$"
+          },
+          "id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeSleutel": {
+            "type": "array",
+            "description": "Lijst van TypeSleutel items.",
+            "items": {
+              "$ref": "#/components/schemas/TypeSleutel"
+            },
+            "minItems": 1
+          },
+          "typeBadge": {
+            "type": "array",
+            "description": "Lijst van TypeBadge items.",
+            "items": {
+              "$ref": "#/components/schemas/TypeBadge"
+            },
+            "minItems": 1
+          },
+          "naam": {
+            "type": "object",
+            "description": "De naam van de toegangsprocedure.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "omschrijving": {
+            "type": "object",
+            "description": "Een uitgebreide toelichting die beschrijft hoe de toegangsprocedure gebruikt kan worden.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "aandachtspunt": {
+            "type": "array",
+            "description": "Lijst van ToegangsprocedureAandachtspunt items.",
+            "items": {
+              "$ref": "#/components/schemas/ToegangsprocedureAandachtspunt"
+            },
+            "minItems": 1
+          },
+          "toegangstijden": {
+            "type": "array",
+            "description": "Lijst van Toegangstijden items.",
+            "items": {
+              "$ref": "#/components/schemas/Toegangstijden"
+            },
+            "minItems": 1
+          },
+          "bijlage": {
+            "type": "array",
+            "description": "Lijst van BijlageToegangsprocedure items.",
+            "items": {
+              "$ref": "#/components/schemas/BijlageToegangsprocedure"
+            },
+            "minItems": 1
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          }
+        },
+        "required": [
+          "@type",
+          "id",
+          "typeSleutel",
+          "typeBadge",
+          "naam",
+          "omschrijving",
+          "typeURI",
+          "aandachtspunt",
+          "toegangstijden",
+          "bijlage",
+          "asset-Versie",
+          "isActief",
+          "aIM-Toestand"
+        ]
+      },
+      "Weekdagen": {
+        "title": "Weekdagen",
+        "type": "object",
+        "description": "Lijst van de verschillende weekdagen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Weekdagen)",
+            "pattern": "^Weekdagen$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bijlage": {
+        "title": "Bijlage",
+        "type": "object",
+        "description": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bijlage)",
+            "pattern": "^Bijlage$"
+          },
+          "type": {
+            "type": "array",
+            "description": "Lijst van BijlageType items.",
+            "items": {
+              "$ref": "#/components/schemas/BijlageType"
+            },
+            "minItems": 1
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "bijlage": {
+            "$ref": "#/components/schemas/Bestandsbijlage"
+          },
+          "naam": {
+            "type": "object",
+            "description": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "asset-Id",
+          "bijlage",
+          "naam",
+          "typeURI",
+          "notitie",
+          "asset-Versie",
+          "isActief",
+          "aIM-Toestand"
+        ]
+      },
+      "ElektrischeKeuring": {
+        "title": "ElektrischeKeuring",
+        "type": "object",
+        "description": "Een formele controle en beoordeling waarbij wordt nagegaan of de elektrische installatie voldoet aan de geldende wettelijke, normatieve en veiligheidsvereisten, met als doel de elektrische veiligheid en conformiteit te waarborgen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ElektrischeKeuring)",
+            "pattern": "^ElektrischeKeuring$"
+          },
+          "resultaat": {
+            "$ref": "#/components/schemas/Keuringsresultaat"
+          },
+          "geldigTot": {
+            "type": "object",
+            "description": "De datum tot en met welke de elektrische keuring als geldig wordt beschouwd, conform de geldende regelgeving of het keuringsverslag, waarna een herkeuring vereist is.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "keuringsdatum": {
+            "type": "object",
+            "description": "De datum waarop het asset laatst is gekeurd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "bijlage": {
+            "$ref": "#/components/schemas/Bestandsbijlage"
+          },
+          "naam": {
+            "type": "object",
+            "description": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          }
+        },
+        "required": [
+          "@type",
+          "resultaat",
+          "geldigTot",
+          "keuringsdatum",
+          "asset-Id",
+          "bijlage",
+          "naam",
+          "typeURI",
+          "notitie",
+          "asset-Versie",
+          "isActief",
+          "aIM-Toestand"
+        ]
+      },
+      "AanvullendeGeometrie": {
+        "title": "AanvullendeGeometrie",
+        "type": "object",
+        "description": "Beschrijft een geometrie die aanvullend is bij de de werking van een asset maar beschrijft niet de asset zelf, bv. een detailplan of een werkingsgebied met een specifieke locatie, enz...De aanvullende geometrie kan al dan niet een bijlage bevatten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AanvullendeGeometrie)",
+            "pattern": "^AanvullendeGeometrie$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/BijlageMetGeometrieType"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "bijlage": {
+            "$ref": "#/components/schemas/Bestandsbijlage"
+          },
+          "naam": {
+            "type": "object",
+            "description": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "typeURI": {
+            "type": "object",
+            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "notitie": {
+            "type": "object",
+            "description": "Extra notitie voor het object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "isActief": {
+            "type": "object",
+            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "asset-Id",
+          "bijlage",
+          "naam",
+          "typeURI",
+          "notitie",
+          "asset-Versie",
+          "isActief",
+          "aIM-Toestand"
+        ]
+      },
+      "Sturing": {
+        "title": "Sturing",
+        "type": "object",
+        "description": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Sturing)",
+            "pattern": "^Sturing$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Voedt": {
+        "title": "Voedt",
+        "type": "object",
+        "description": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voedt)",
+            "pattern": "^Voedt$"
+          },
+          "aansluitspanning": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          },
+          "aansluitvermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          }
+        },
+        "required": [
+          "@type",
+          "aansluitspanning",
+          "aansluitvermogen"
+        ]
+      },
+      "HeeftBetrokkene": {
+        "title": "HeeftBetrokkene",
+        "type": "object",
+        "description": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBetrokkene)",
+            "pattern": "^HeeftBetrokkene$"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/BetrokkenheidRol"
+          },
+          "specifiekeContactinfo": {
+            "type": "array",
+            "description": "Lijst van Contactinfo items.",
+            "items": {
+              "$ref": "#/components/schemas/Contactinfo"
+            },
+            "minItems": 1
+          },
+          "datumAanvang": {
+            "type": "object",
+            "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "datumEinde": {
+            "type": "object",
+            "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "rol",
+          "datumAanvang",
+          "datumEinde"
+        ]
+      },
+      "HeeftAanvullendeGeometrie": {
+        "title": "HeeftAanvullendeGeometrie",
+        "type": "object",
+        "description": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftAanvullendeGeometrie)",
+            "pattern": "^HeeftAanvullendeGeometrie$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "HeeftToegangsprocedure": {
+        "title": "HeeftToegangsprocedure",
+        "type": "object",
+        "description": "Deze relatie wordt gelegd tussen een klasse en de klasse Toegangsprocedure. De relatie vertrekt vanuit de klasse Toegangsprocedure en geeft aan dat er een toegangsprocedure van toepassing is voor een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftToegangsprocedure)",
+            "pattern": "^HeeftToegangsprocedure$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bevestiging": {
+        "title": "Bevestiging",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bevestiging)",
+            "pattern": "^Bevestiging$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "HeeftBijlage": {
+        "title": "HeeftBijlage",
+        "type": "object",
+        "description": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HeeftBijlage)",
+            "pattern": "^HeeftBijlage$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "SluitAanOp": {
+        "title": "SluitAanOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse SluitAanOp)",
+            "pattern": "^SluitAanOp$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LigtOp": {
+        "title": "LigtOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LigtOp)",
+            "pattern": "^LigtOp$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "type": "object",
+            "description": "Gegevens van de organisatie die de toekenning deed.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "Bestandsbijlage": {
+        "title": "Bestandsbijlage",
+        "type": "object",
+        "description": "Complex datatype voor alle bestandsbijlages.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bestandsbijlage)",
+            "pattern": "^Bestandsbijlage$"
+          },
+          "uri": {
+            "type": "object",
+            "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "bestandsnaam": {
+            "type": "object",
+            "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "omschrijving": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "mime-Type": {
+            "$ref": "#/components/schemas/Mimetype"
+          },
+          "opmaakdatum": {
+            "type": "object",
+            "description": "De datum waarop het document is opgemaakt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "uri",
+          "bestandsnaam",
+          "omschrijving",
+          "mime-Type",
+          "opmaakdatum"
+        ]
+      },
+      "Contactinfo": {
+        "title": "Contactinfo",
+        "type": "object",
+        "description": "Complex datatype voor de informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Contactinfo)",
+            "pattern": "^Contactinfo$"
+          },
+          "contactnaam": {
+            "type": "object",
+            "description": "Naam van bv. de persoon die men kan contacteren.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "email": {
+            "type": "object",
+            "description": "Email-adres waarnaar men kan mailen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "telefoon": {
+            "type": "object",
+            "description": "Telefoonnummer waarop men kan bellen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "fax": {
+            "type": "object",
+            "description": "Faxnummer waarnaar men kan faxen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmerkingen": {
+            "type": "object",
+            "description": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "website": {
+            "type": "object",
+            "description": "Website waarnaar men kan surfen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "beschikbaarheid": {
+            "type": "array",
+            "description": "Lijst van Openingsurenspecificatie items.",
+            "items": {
+              "$ref": "#/components/schemas/Openingsurenspecificatie"
+            },
+            "minItems": 1
+          },
+          "adres": {
+            "$ref": "#/components/schemas/Adres"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Toegangstijden": {
+        "title": "Toegangstijden",
+        "type": "object",
+        "description": "Complex datatype om de toegangstijden bij een toegangsprocedure te specifieren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Toegangstijden)",
+            "pattern": "^Toegangstijden$"
+          },
+          "toegangstijden": {
+            "$ref": "#/components/schemas/ToegangsprocedureToegangstijden"
+          },
+          "opmerking": {
+            "$ref": "#/components/schemas/Tekstblok"
+          }
+        },
+        "required": [
+          "@type",
+          "toegangstijden",
+          "opmerking"
+        ]
+      },
+      "BijlageToegangsprocedure": {
+        "title": "BijlageToegangsprocedure",
+        "type": "object",
+        "description": "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BijlageToegangsprocedure)",
+            "pattern": "^BijlageToegangsprocedure$"
+          },
+          "bijlageType": {
+            "$ref": "#/components/schemas/BijlagetypeToegangsprocedure"
+          },
+          "document": {
+            "type": "array",
+            "description": "Lijst van Bestandsbijlage items.",
+            "items": {
+              "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "nota": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "websiteURL": {
+            "type": "object",
+            "description": "Website URL die als bijlage bij de toegangsprocedure gevoegd kan worden",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "bijlageType",
+          "document",
+          "nota",
+          "websiteURL"
+        ]
+      },
+      "KwantitatieveWaardeInMaand": {
+        "title": "KwantitatieveWaardeInMaand",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+            "pattern": "^KwantitatieveWaardeInMaand$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "type": "object",
+            "description": "Het versienummer als een oplopende integer.",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^NonNegativeInteger$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "timestamp": {
+            "type": "object",
+            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "context": {
+            "type": "object",
+            "description": "De context van de versie creatie.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Tekstblok": {
+        "title": "Tekstblok",
+        "type": "object",
+        "description": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tekstblok)",
+            "pattern": "^Tekstblok$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "Adres": {
+        "title": "Adres",
+        "type": "object",
+        "description": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adres)",
+            "pattern": "^Adres$"
+          },
+          "straatnaam": {
+            "type": "object",
+            "description": "De naam van de straat.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "huisnummer": {
+            "type": "object",
+            "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "bus": {
+            "type": "object",
+            "description": "Een nummer dat de postbus aanduidt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postcode": {
+            "type": "object",
+            "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "provincie": {
+            "$ref": "#/components/schemas/Provincie"
+          },
+          "gemeente": {
+            "$ref": "#/components/schemas/Gemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "straatnaam",
+          "huisnummer",
+          "bus",
+          "postcode",
+          "provincie",
+          "gemeente"
+        ]
+      },
+      "Openingsurenspecificatie": {
+        "title": "Openingsurenspecificatie",
+        "type": "object",
+        "description": "Complex datatype dat de openingsuren volgens https://schema.org/OpeningHoursSpecification specifieert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Openingsurenspecificatie)",
+            "pattern": "^Openingsurenspecificatie$"
+          },
+          "openingstijd": {
+            "type": "object",
+            "description": "Het tijdsstip waarop de opening plaatsvindt.",
+            "properties": {
+              "$ref": "#/components/schemas/Tijd"
+            },
+            "required": [
+              "$ref"
+            ]
+          },
+          "sluitingstijd": {
+            "type": "object",
+            "description": "Het tijdsstip waarop de sluiting plaatsvindt.",
+            "properties": {
+              "$ref": "#/components/schemas/Tijd"
+            },
+            "required": [
+              "$ref"
+            ]
+          },
+          "weekdag": {
+            "$ref": "#/components/schemas/Weekdagen"
+          }
+        },
+        "required": [
+          "@type",
+          "openingstijd",
+          "sluitingstijd",
+          "weekdag"
+        ]
+      },
+      "KwantitatieveWaardeInVolt": {
+        "title": "KwantitatieveWaardeInVolt",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in volt uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInVolt)",
+            "pattern": "^KwantitatieveWaardeInVolt$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Bevat een getal die bij het datatype hoort.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Decimal$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "standaardEenheid": {
+            "type": "object",
+            "description": "De standaard eenheid bij dit datatype is uitgedrukt in Volt. \"V\"^^cdt:ucumunit",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      }
+    },
+    "links": {
+      "Derdenobject.foto": {
+        "operationId": "DerdenobjectGET",
+        "parameters": {
+          "id": "$response.body#/Derdenobject.foto/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "Derdenobject.asset-Id": {
+        "operationId": "DerdenobjectGET",
+        "parameters": {
+          "id": "$response.body#/Derdenobject.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Derdenobject.asset-Versie": {
+        "operationId": "DerdenobjectGET",
+        "parameters": {
+          "id": "$response.body#/Derdenobject.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Derdenobject.aIM-Toestand": {
+        "operationId": "DerdenobjectGET",
+        "parameters": {
+          "id": "$response.body#/Derdenobject.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Agent.agentIdentificatie": {
+        "operationId": "AgentGET",
+        "parameters": {
+          "id": "$response.body#/Agent.agentIdentificatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Agent.contactinfo": {
+        "operationId": "AgentGET",
+        "parameters": {
+          "id": "$response.body#/Agent.contactinfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "Agent.heeftBetrokkene": {
+        "operationId": "AgentGET",
+        "parameters": {
+          "id": "$response.body#/Agent.heeftBetrokkene/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Agent.asset-Versie": {
+        "operationId": "AgentGET",
+        "parameters": {
+          "id": "$response.body#/Agent.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Toegangsprocedure.id": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Toegangsprocedure.typeSleutel": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.typeSleutel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeSleutel` op te halen."
+      },
+      "Toegangsprocedure.typeBadge": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.typeBadge/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBadge` op te halen."
+      },
+      "Toegangsprocedure.aandachtspunt": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.aandachtspunt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ToegangsprocedureAandachtspunt` op te halen."
+      },
+      "Toegangsprocedure.toegangstijden": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.toegangstijden/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegangstijden` op te halen."
+      },
+      "Toegangsprocedure.bijlage": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.bijlage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BijlageToegangsprocedure` op te halen."
+      },
+      "Toegangsprocedure.asset-Versie": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Toegangsprocedure.aIM-Toestand": {
+        "operationId": "ToegangsprocedureGET",
+        "parameters": {
+          "id": "$response.body#/Toegangsprocedure.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Bijlage.type": {
+        "operationId": "BijlageGET",
+        "parameters": {
+          "id": "$response.body#/Bijlage.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BijlageType` op te halen."
+      },
+      "Bijlage.asset-Id": {
+        "operationId": "BijlageGET",
+        "parameters": {
+          "id": "$response.body#/Bijlage.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bijlage.bijlage": {
+        "operationId": "BijlageGET",
+        "parameters": {
+          "id": "$response.body#/Bijlage.bijlage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "Bijlage.asset-Versie": {
+        "operationId": "BijlageGET",
+        "parameters": {
+          "id": "$response.body#/Bijlage.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Bijlage.aIM-Toestand": {
+        "operationId": "BijlageGET",
+        "parameters": {
+          "id": "$response.body#/Bijlage.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "ElektrischeKeuring.resultaat": {
+        "operationId": "ElektrischeKeuringGET",
+        "parameters": {
+          "id": "$response.body#/ElektrischeKeuring.resultaat/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Keuringsresultaat` op te halen."
+      },
+      "ElektrischeKeuring.asset-Id": {
+        "operationId": "ElektrischeKeuringGET",
+        "parameters": {
+          "id": "$response.body#/ElektrischeKeuring.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "ElektrischeKeuring.bijlage": {
+        "operationId": "ElektrischeKeuringGET",
+        "parameters": {
+          "id": "$response.body#/ElektrischeKeuring.bijlage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "ElektrischeKeuring.asset-Versie": {
+        "operationId": "ElektrischeKeuringGET",
+        "parameters": {
+          "id": "$response.body#/ElektrischeKeuring.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "ElektrischeKeuring.aIM-Toestand": {
+        "operationId": "ElektrischeKeuringGET",
+        "parameters": {
+          "id": "$response.body#/ElektrischeKeuring.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "AanvullendeGeometrie.type": {
+        "operationId": "AanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/AanvullendeGeometrie.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BijlageMetGeometrieType` op te halen."
+      },
+      "AanvullendeGeometrie.asset-Id": {
+        "operationId": "AanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/AanvullendeGeometrie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "AanvullendeGeometrie.bijlage": {
+        "operationId": "AanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/AanvullendeGeometrie.bijlage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "AanvullendeGeometrie.asset-Versie": {
+        "operationId": "AanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/AanvullendeGeometrie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "AanvullendeGeometrie.aIM-Toestand": {
+        "operationId": "AanvullendeGeometrieGET",
+        "parameters": {
+          "id": "$response.body#/AanvullendeGeometrie.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Voedt.aansluitspanning": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitspanning/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "Voedt.aansluitvermogen": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitvermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "HeeftBetrokkene.rol": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.rol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BetrokkenheidRol` op te halen."
+      },
+      "HeeftBetrokkene.specifiekeContactinfo": {
+        "operationId": "HeeftBetrokkeneGET",
+        "parameters": {
+          "id": "$response.body#/HeeftBetrokkene.specifiekeContactinfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      }
+    }
+  }
+}

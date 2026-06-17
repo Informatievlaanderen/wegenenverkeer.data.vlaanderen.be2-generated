@@ -1,0 +1,116 @@
+{
+  "title": "Derdenobject",
+  "type": "object",
+  "description": "Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Derdenobject)",
+      "pattern": "^Derdenobject$"
+    },
+    "foto": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Omschrijving van het derdenobject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "contactgegevens": {
+      "type": "object",
+      "description": "Naam, voornaam, telefoonnummer en/of e-mailadres van de contactpersoon.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "heeftAansluitkastGeïNtegreerd": {
+      "type": "object",
+      "description": "Aanduiding of de aansluitkast geïntegreerd is.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "foto",
+    "asset-Id",
+    "omschrijving",
+    "contactgegevens",
+    "heeftAansluitkastGeïNtegreerd",
+    "typeURI",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

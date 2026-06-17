@@ -1,0 +1,44 @@
+{
+  "title": "Kunststofspecificaties",
+  "type": "object",
+  "description": "Complex datatype dat specifieke eigenschappen van de kunststof bevat.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Kunststofspecificaties)",
+      "pattern": "^Kunststofspecificaties$"
+    },
+    "norm": {
+      "$ref": "#/components/schemas/DuurzaamheidsklasseVanHout"
+    },
+    "elasticiteitsmodulus": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMPa"
+    },
+    "treksterkte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMPa"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam of chemische formule van het kunststof of de samengestelde elementen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "norm",
+    "elasticiteitsmodulus",
+    "treksterkte",
+    "naam"
+  ]
+}

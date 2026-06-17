@@ -1,0 +1,102 @@
+{
+  "title": "Contactinfo",
+  "type": "object",
+  "description": "Complex datatype voor de informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Contactinfo)",
+      "pattern": "^Contactinfo$"
+    },
+    "contactnaam": {
+      "type": "object",
+      "description": "Naam van bv. de persoon die men kan contacteren.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "email": {
+      "type": "object",
+      "description": "Email-adres waarnaar men kan mailen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "telefoon": {
+      "type": "object",
+      "description": "Telefoonnummer waarop men kan bellen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "fax": {
+      "type": "object",
+      "description": "Faxnummer waarnaar men kan faxen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "opmerkingen": {
+      "type": "object",
+      "description": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "website": {
+      "type": "object",
+      "description": "Website waarnaar men kan surfen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "beschikbaarheid": {
+      "type": "array",
+      "description": "Lijst van Openingsurenspecificatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Openingsurenspecificatie"
+      },
+      "minItems": 1
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

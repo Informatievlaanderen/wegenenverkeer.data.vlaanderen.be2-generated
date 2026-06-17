@@ -1,0 +1,45 @@
+{
+  "title": "Identificator",
+  "type": "object",
+  "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Identificator)",
+      "pattern": "^Identificator$"
+    },
+    "identificator": {
+      "type": "object",
+      "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "toegekendDoor": {
+      "type": "object",
+      "description": "Gegevens van de organisatie die de toekenning deed.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "toegekendDoor"
+  ]
+}

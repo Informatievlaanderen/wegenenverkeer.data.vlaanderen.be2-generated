@@ -1,4 +1,5603 @@
 {
+  "@context": {
+    "oslo": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
+    "packages": "@included",
+    "classes": "@included",
+    "datatypes": "@included",
+    "attributes": "@included",
+    "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
+    "abstractClasses": "@included",
+    "rootClasses": "@included",
+    "baseURI": {
+      "@id": "oslo:baseURI",
+      "@type": "@id"
+    },
+    "vocDefinition": {
+      "@id": "oslo:vocDefinition",
+      "@container": "@set"
+    },
+    "apDefinition": {
+      "@id": "oslo:apDefinition",
+      "@container": "@set"
+    },
+    "vocLabel": {
+      "@id": "oslo:vocLabel",
+      "@container": "@set"
+    },
+    "apLabel": {
+      "@id": "oslo:apLabel",
+      "@container": "@set"
+    },
+    "diagramLabel": {
+      "@id": "oslo:diagramLabel"
+    },
+    "scope": {
+      "@id": "oslo:scope",
+      "@type": "@id"
+    },
+    "vocUsageNote": {
+      "@id": "oslo:vocUsageNote",
+      "@container": "@set"
+    },
+    "apUsageNote": {
+      "@id": "oslo:apUsageNote",
+      "@container": "@set"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@container": "@set"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "minCount": {
+      "@id": "sh:minCount"
+    },
+    "maxCount": {
+      "@id": "sh:maxCount"
+    },
+    "parent": {
+      "@id": "rdfs:subClassOf",
+      "@type": "owl:Class"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime"
+    },
+    "Package": "oslo:Package",
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "AbstractClass": {
+      "@id": "oslo:AbstractClass"
+    },
+    "RootClass": {
+      "@id": "oslo:RootClass"
+    },
+    "DatatypeProperty": {
+      "@id": "owl:DatatypeProperty"
+    },
+    "ObjectProperty": {
+      "@id": "owl:ObjectProperty"
+    },
+    "authors": {
+      "@type": "foaf:Person",
+      "@id": "foaf:maker"
+    },
+    "editors": {
+      "@type": "foaf:Person",
+      "@id": "rec:editor"
+    },
+    "contributors": {
+      "@type": "foaf:Person",
+      "@id": "dcterms:contributor"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "assignedURI": {
+      "@id": "oslo:assignedURI",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
+    },
+    "codelist": {
+      "@id": "oslo:codelist",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "adms:status",
+      "@type": "@id"
+    },
+    "extensions": {
+      "@id": "oslo:extensions",
+      "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
+    }
+  },
+  "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fietstelinstallatie/ontwerpdocument/2.20.0-RC1",
+  "generatedAtTime": "2026-06-17T09:40:35.603Z",
+  "packages": [
+    {
+      "@id": "urn:oslo-toolchain:0811a4ffb3b2c16fd38e24d727fbf7ff88ead87b6b060d9dc780d22723a647aa",
+      "@type": "Package",
+      "assignedURI": "http://todo.com/",
+      "baseURI": "http://todo.com/",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "classes": [
+    {
+      "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Serienummerobject"
+        },
+        {
+          "@language": "nl",
+          "@value": "Serienummerobject"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SerienummerObject"
+        },
+        {
+          "@value": "SerienummerObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse voor een serienummer."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse voor een serienummer."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:aefc9055f39d4f0540c13acd974a67434226f19994093f723b5a035fc8625e30",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BevestigingGC",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging geluidswerende constructie"
+        },
+        {
+          "@language": "nl",
+          "@value": "Bevestiging geluidswerende constructie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BevestigingGC"
+        },
+        {
+          "@value": "BevestigingGC"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de bevestigingsrelatie naar de profielen en schermelementen van geluidswerende constructies te faciliteren."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de bevestigingsrelatie naar de profielen en schermelementen van geluidswerende constructies te faciliteren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:836217e385a2a1727a36e392e92ed6683c21f20aa5f029680a13c0709131e4cf",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Voedingspunt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Voedingspunt"
+        },
+        {
+          "@language": "nl",
+          "@value": "Voedingspunt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Voedingspunt"
+        },
+        {
+          "@value": "Voedingspunt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor het aansluitpunt van de voeding."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor het aansluitpunt van de voeding."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM naam object"
+        },
+        {
+          "@language": "nl",
+          "@value": "AIM naam object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMNaamObject"
+        },
+        {
+          "@value": "AIMNaamObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10ba697f1316c4e033ddf58b304afc1a26468d5db71a964bdce058c43230cf8f",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Software toegang"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SoftwareToegang"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een abstracte waarmee een object kan connecteren naar software, al dan niet door gebruik te maken van de logische poort."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f28bf0ae69146db3a6f746d4942b52bce8286c313b34a71e8213478dae5867cf",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Detectie"
+        },
+        {
+          "@language": "nl",
+          "@value": "Detectie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Detectie"
+        },
+        {
+          "@value": "Detectie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor de overige detecties, zijnde die die niet onder de groepen \"niet weggebonden detecties\", \" weggebonden detecties\" of \"detectielussen\" vallen."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor de overige detecties, zijnde die die niet onder de groepen \"niet weggebonden detecties\", \" weggebonden detecties\" of \"detectielussen\" vallen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectielus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Detectielussen"
+        },
+        {
+          "@language": "nl",
+          "@value": "Detectielussen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Detectielus"
+        },
+        {
+          "@value": "Detectielus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor een detectielus. Een detectielus is een kabel onder het wegdek die in staat is om voertuigen te detecteren teneinde de verkeersregelaar aan te sturen. Selectieve lussen zijn in staat om gecodeerde informatie door te geven van prioritaire voertuigen, niet-selectieve lussen geven informatie door van alle voertuigen die het detectie gebied passeren."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor een detectielus. Een detectielus is een kabel onder het wegdek die in staat is om voertuigen te detecteren teneinde de verkeersregelaar aan te sturen. Selectieve lussen zijn in staat om gecodeerde informatie door te geven van prioritaire voertuigen, niet-selectieve lussen geven informatie door van alle voertuigen die het detectie gebied passeren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:f28bf0ae69146db3a6f746d4942b52bce8286c313b34a71e8213478dae5867cf"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SelNietSelLus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Sel niet sel lussen"
+        },
+        {
+          "@language": "nl",
+          "@value": "Sel niet sel lussen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SelNietSelLus"
+        },
+        {
+          "@value": "SelNietSelLus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse die de eigenschappen van selectieve en niet-selectieve lussen combineert."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse die de eigenschappen van selectieve en niet-selectieve lussen combineert."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9c10b6cad0c06013babaf7a27e66d9232677818a1c4a9cec0fcf63a7880e978e",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM databank status"
+        },
+        {
+          "@language": "nl",
+          "@value": "AIM databank status"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMDBStatus"
+        },
+        {
+          "@value": "AIMDBStatus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+        },
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9f43bbfa521273e2496f02ef24ae21ac2a3f416b4e9fef0393ea93de14425b86",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAIMToestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAIMToestand",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:38906fa31634cd776725fe8150d4023c8d999f56dec8284fcfdef03b37e0b627",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM Toestand"
+        },
+        {
+          "@language": "nl",
+          "@value": "AIM Toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMToestand"
+        },
+        {
+          "@value": "AIMToestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+        },
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM object"
+        },
+        {
+          "@language": "nl",
+          "@value": "AIM object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMObject"
+        },
+        {
+          "@value": "AIMObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:9c10b6cad0c06013babaf7a27e66d9232677818a1c4a9cec0fcf63a7880e978e"
+        },
+        {
+          "@id": "urn:oslo-toolchain:38906fa31634cd776725fe8150d4023c8d999f56dec8284fcfdef03b37e0b627"
+        },
+        {
+          "@id": "urn:oslo-toolchain:16fd892876b24ac4801df4f011ea393fa8ff60a2747ef4f6db9be6e9554d5d9e"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:16fd892876b24ac4801df4f011ea393fa8ff60a2747ef4f6db9be6e9554d5d9e",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM versie"
+        },
+        {
+          "@language": "nl",
+          "@value": "AIM versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMVersie"
+        },
+        {
+          "@value": "AIMVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Naampad object"
+        },
+        {
+          "@language": "nl",
+          "@value": "Naampad object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NaampadObject"
+        },
+        {
+          "@value": "NaampadObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+        },
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:47b6abb714fcf094543a0c7f5dcb230f5c3c5ef37f62401e70976ecdc45237e2",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Mimetype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlAlgMimeType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c17c8b8defebb6167552d4d831c60f796cefd146c81edb9b4102e2fd888e11bb",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Fietstelinstallatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Fietstelinstallatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Fietstelinstallatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Groepering van onderdelen die samen een installatie vormen voor het verzamelen van telgegevens over passerende fietsers en in sommige installaties het tonenvan de gegevens."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9ac0da8a4968aa7c62028d7442262374e2d7cd8cc8df1bc7b9a2b590f1501456",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Sturing",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Sturing"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Sturing"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:9348be9b946a6b5f5900cb79b5005c0c7797c16308dc7b936ea56472988310aa"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:df2433d9dc8905ba0ab71fafd3caea335fea9527a0d8c48ce066b6fc8bbbbaf0",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Voedt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Voedt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:05a30fb4e24cc66451a68d443c62e9c29f694758047a95784e4784edac6ecfa8"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:67e22ea732b10fb9478ac336dc8d08436da3f205cc17c5b8b2ef8d7bff75dfd5",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HoortBij",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Hoort bij"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "HoortBij"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:05a30fb4e24cc66451a68d443c62e9c29f694758047a95784e4784edac6ecfa8"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:47b39eb85a3625f71113fe0f66c8d13eeebf578110932bfb4b2d3307e38525fa",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestiging",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Bevestiging"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:9348be9b946a6b5f5900cb79b5005c0c7797c16308dc7b936ea56472988310aa"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:125d0a0aeafb7fa87e8ec81bcbfaffdccfc49cb089f9e68ba03cb7bdfb477e56",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Zonnepaneel modelnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlZonnepaneelModelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De modelnaam van het zonnepaneel."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlZonnepaneelModelnaam",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:22da1f9ee7ac655d3a9c2e850b22a568ab8ec4f559ddd78a68ec26f210b37e19",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Stroomkring"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Stroomkring"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Ook wel vertrek of vertrekkende kabel genoemd. Afgezekerde elektrische geleiders waarmee de applicaties voorzien worden van de nodige voeding."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:932ff5322d2e6c45a13b6cb06fa0ab46762705b1ec6054cc1dec1fc345a642e4",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Batterij modelnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBatterijModelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De modelnaam van de batterij."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBatterijModelnaam",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cda0fd835547123875a4b4d197e029dce48a48defbd129eed4b42de1423b33d9",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Batterij merk"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBatterijMerk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het merk van de batterij."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBatterijMerk",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Batterij"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Batterij"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Element bestaande uit meerdere elektrochemische cellen voor het leveren van elektriciteit,die ontstaat door de omzetting van opgeslagen chemische energie in elektrische energie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7"
+        },
+        {
+          "@id": "urn:oslo-toolchain:836217e385a2a1727a36e392e92ed6683c21f20aa5f029680a13c0709131e4cf"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Zonnepaneel",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Zonnepaneel"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Zonnepaneel"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Toestel om elektrische energie op te wekken uit zonlicht met als doel het voeden van een installatie. Ook wel fotovoltaïsche cellen of zonnecellen genoemd."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:aefc9055f39d4f0540c13acd974a67434226f19994093f723b5a035fc8625e30"
+        },
+        {
+          "@id": "urn:oslo-toolchain:836217e385a2a1727a36e392e92ed6683c21f20aa5f029680a13c0709131e4cf"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0e451a4e3acb8cafa50eab0e39e8ad6deda0e9e95847d9acef8be5cd33508395",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Zonnepaneel merk"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlZonnepaneelMerk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het merk van het zonnepaneel."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlZonnepaneelMerk",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4b9651bdbb9e7896d23394b6a405c3dcefdd274c1d46db192605dcb000e411c8",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Merknaam fietstelsysteem"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlFietstelsysteemMerk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van mogelijke merknamen voor fietstelsystemen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlFietstelsysteemMerk",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8ebae1bee2d261c794c242ab97a454232decc8622a8604332a50363f773027f9",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Modelnaam fietstelsysteem"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlFietstelsysteemModelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met mogelijke modelnamen voor fietstelsystemen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlFietstelsysteemModelnaam",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7e13f0d796d6997f466479c195fe7d6b7ecf1cde92f3428afdbfda0cf2825d9a",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#FietstelDisplay",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Fietstel display"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "FietstelDisplay"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Verankerd toestel dat een selectie van telgegevens van het fietstelsysteem toont voor passerende fietsers."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Fietstelsysteem",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Fietstelsysteem"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Fietstelsysteem"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Toestel bij de fietstelinstallatie dat gegevens van detectielussen over passerende fietsers verzamelt en verwerkt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7"
+        },
+        {
+          "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:70cb14a3de82223e5dda49f226ab3989ddacaff7c6781173695375887129a7d8",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Batterij materiaal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlBatterijMateriaal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst voor de verschillende materialen waaruit een batterij gemaakt kan zijn."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBatterijMateriaal",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e646ae944da246a733080e7f614629e5f53ba681c842972424fa7edb6d676f65",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "VRI bewaking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlVriBewaking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met verschillende soorten bewaking of detectie bij een VRI."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVriBewaking",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13",
+      "@type": "Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#NietSelectieveDetectielus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Niet-selectieve detectielus"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NietSelectieveDetectielus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een niet-selectieve detectielus werkt onder invloed van een wijziging in de zelfinductie van een lus in het wegdek wanneer het metaal van een voertuig binnen het gevoeligheidsgebied van de lus komt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "parent": [
+        {
+          "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5"
+        },
+        {
+          "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2d3b984d9fae3c7f74effb9080070c1bc4bf98158d3283f39474dbb874a1471f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "VRI-lus functie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlVriLusFunctie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met verschillende types detectielussen naar functie."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVriLusFunctie",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3805aee8afa895c97a24431f7b6b5f0cca84d72e44af2a2afc7b4fccc9e89723",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "VRI-lus soort voertuig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KlVriLusSoortvoertuig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Keuzelijst met verschillende types voertuigen die een detectielus volgens diens instellingen kan detecteren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVriLusSoortvoertuig",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "attributes": [
+    {
+      "@id": "urn:oslo-toolchain:7c2adabde1a2c174e4b651d6dde949a43f6c669f750365563d77a2201f158b28",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "serienummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "serienummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het unieke nummer waarmee het toestel door de fabrikant geïdentificeerd is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:976204336a59e212d53e44716c742feec6f6f553914fd5f8f835283a746b4a0f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie.soortBewaking",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort bewaking"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortBewaking"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Type bewaking van de detectie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f28bf0ae69146db3a6f746d4942b52bce8286c313b34a71e8213478dae5867cf"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e646ae944da246a733080e7f614629e5f53ba681c842972424fa7edb6d676f65"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ff37553a4e0a85928dbe9ab52635a46cb739a3778dfcc08ffbfa9aca2a784fbb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectielus.bewakingstijd",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bewakingstijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bewakingstijd"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wachttijd (in uren) waarna een alarm pas mag optreden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d9f15fdc2eb3e10c926f4df7e503cdf688220d3c9fb1845a2cb588f339308d47"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8e56bc38ac8eac96f710d3509ed21735ccfacbc4126a4858361cee288883f557",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectielus.afmetingenBL",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afmetingen b l"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "afmetingenBL"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Afmetingen breedte x lengte van de lus."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4149731e869c2ad6c4fd33212fd22942b7d9c413fafd2d9b7d348d8fb1c3fe56"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8d7ce05d143b1fb7d5c7e5a80bdaa98c1aa0f72f04a1262728b0cc4ed3317ec4",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SelNietSelLus.heeftMofInTrekput",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "heeft mof in trekput"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "heeftMofInTrekput"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aanduiding of de mof bereikbaar is via een trekput."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f322cb8d7ce1d64e694632a2970cab99ca5e213305a92b970554f3d5a7030a83",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SelNietSelLus.isPrioritair",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is prioritair"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isPrioritair"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of de lus prioritair hersteld moet worden bij defect."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a557d046c23da6b665eb9e35a61684be893af22c39d33cace220b07e77435121",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is actief"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isActief"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:9c10b6cad0c06013babaf7a27e66d9232677818a1c4a9cec0fcf63a7880e978e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5dea967c899362b8b3e12ec1a11316be4af0f62028cbb5946ab0562f2a18d3c9",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM-toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft de actuele stand in de levenscyclus van het object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:38906fa31634cd776725fe8150d4023c8d999f56dec8284fcfdef03b37e0b627"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:9f43bbfa521273e2496f02ef24ae21ac2a3f416b4e9fef0393ea93de14425b86"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bd261e4abfe5d573b60a0e4d563987cd0acf637aa50b6adbe2f92aafd4e2fee7",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:76b6405aad8450fa49f71d6edaa1a536b3dd9c5c227e39613421cb56ea220bd9",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-id"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetId"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:0f43efe531c03fe196327a6c6887168a9dafba2ab00abc850759bc552f6cdc23"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:08bee07585e44aab4c3578bfffe28669237bd30429369cbff4295d03fc52401e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "notitie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "notitie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Extra notitie voor het object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6b735a7729e172fcc744211a69999c73dc7d986275d0c1f49d8c78cb3aecebba",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaardbestekpostnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardBestekPostNummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3a570b6a75dc1545bcb369482e867cc2178191b16ccb0f6ec1afb3d9fafdf5ef",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "type URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "typeURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:727ad52cfe2549318efb87105b1e888af9696d14cdac6c459395aebb29eb9050"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3f7b41c88649afbb679ff4686baa0db5dbd6ef193193a0caf5babb1459f44b9c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestekpostnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestekPostNummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:20fdf21b9e45a4d614389695a0b113792181df4b1a4e4175ecf6215443e6f654",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "theoretische levensduur"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "theoretischeLevensduur"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:0c2fb9252fe97a64a23cbe71908b57362541f1f11ebfee922230aec7d64d457a"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a4796e43b9a90b171be37fa0ad89450b794c41d3b37210b31fc48b334081d351",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "datum oprichting object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "datumOprichtingObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d36be4b6535fc4f416d876c24d8d22ddbf0441dc7b98d13ddb7207d9f180a92c"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:86207903f9a490663a32857048e787278c110cdba751f610e182ae6816b7b811",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "asset-versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "assetVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De versie van de asset in de database."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:16fd892876b24ac4801df4f011ea393fa8ff60a2747ef4f6db9be6e9554d5d9e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8c41eda123d99243d6a4505f0c1b1b278b18a6516236c47f0ce7733af384bf98"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:66d796cbc1328f23aae8bb8bbb153ad9507ea726cdfc8c4b7a1301f7e235a9c0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "naampad"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "naampad"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Dient consistent te zijn met de naam."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cb084cbde2cf60e79fd212d967782e58ec19cd025834eaab24000afbe0d5c8bb",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "identificator"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "identificator"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0f43efe531c03fe196327a6c6887168a9dafba2ab00abc850759bc552f6cdc23"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:de0b243e44acbebca39420b7565ab0a34b4d1d51a6f0d9b0d9f18d6fe68ba09d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "toegekend door"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "toegekendDoor"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Gegevens van de organisatie die de toekenning deed."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0f43efe531c03fe196327a6c6887168a9dafba2ab00abc850759bc552f6cdc23"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0b5befa4274a490df5029ca73ffcb8370063ef70d221a2873e20080985154200",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "versienummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "versienummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het versienummer als een oplopende integer."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8c41eda123d99243d6a4505f0c1b1b278b18a6516236c47f0ce7733af384bf98"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:56408eb9ba88217a4d678cf8a4d15898a8965b5cdb5864aaa1f8d9d6fc3d072a",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "timestamp"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "timestamp"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De timestamp van het moment dat de versienummer werd toegekend."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8c41eda123d99243d6a4505f0c1b1b278b18a6516236c47f0ce7733af384bf98"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e8a12d3a914adfaedd56d900247bf4a990126317048aa96cb56ebaf6cd19dd90"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:42d97177cacfd6a415881368e7594e76163e42da80efbc3837239b8c3957d660",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "context"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "context"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De context van de versie creatie."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:8c41eda123d99243d6a4505f0c1b1b278b18a6516236c47f0ce7733af384bf98"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:45da2b9b68196a4397268eef05ce34718fc08f09c7fb32cae3a7d00da2669abe",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur.uren",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "uren"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "uren"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het aantal uren."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d9f15fdc2eb3e10c926f4df7e503cdf688220d3c9fb1845a2cb588f339308d47"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:457f6ecd9be76d911f5f5fb4114119763f83b9ed0290ab9beacf47eed60a8f30"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:849b4f76dd643c6a907660e29308c45dc6ea5e765df5e198315f2211c4cd48af",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur.minuten",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "minuten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "minuten"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het aantal minuten."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d9f15fdc2eb3e10c926f4df7e503cdf688220d3c9fb1845a2cb588f339308d47"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e7833af3432ee3a1ac9be3db5f0428b82712fb3e6292fd9994f9767dddeb2a77"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:750f9db782e532830eb74a33f53ad9b16738f61a03dd0693a75eccdc3efafa2b",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur.seconden",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "seconden"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "seconden"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het aantal seconden."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:d9f15fdc2eb3e10c926f4df7e503cdf688220d3c9fb1845a2cb588f339308d47"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2c58d14b051e9eac36a58678f38f81f87fdd183182fdf3ce9205733d14a32c6f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:95d3ffc77cbe5efdf5eb045f3013e2a37a76c4c891a4368e8729a6d4edebec99",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "uri"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "uri"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:727ad52cfe2549318efb87105b1e888af9696d14cdac6c459395aebb29eb9050"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3044f28b00b1bb29eb3b6ccad8da6b66f8fa3b3bf4076aaa8882a65b42d7826f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "bestandsnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "bestandsnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4fb2faba347b6ca8e165f173ffd2ee22a91138ffae9026f4d4cb73dace38f99d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "omschrijving"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "omschrijving"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een korte toelichting over waar het document juist voor dient."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:08dc1828d9d32ef5e1031544223cc55c9900323afeffaf3269fe2d8df0c51dc1"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3506c9eaf27aa8447d728540e5e126ffd0f25b90ecec5f2ac3e6397a4d5e0ebc",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "mime-type"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "mimeType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het MIME type van het document."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:47b6abb714fcf094543a0c7f5dcb230f5c3c5ef37f62401e70976ecdc45237e2"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7714a7d79ac1e85a359566f67438b63f8632a7b475d25bc1c3c03d0608a33dc5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "opmaakdatum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "opmaakdatum"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop het document is opgemaakt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d36be4b6535fc4f416d876c24d8d22ddbf0441dc7b98d13ddb7207d9f180a92c"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ee8841ead7652a4a513c2fd64e7de1d7cf8693f8902051d8b34949f52bafa8d4",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4149731e869c2ad6c4fd33212fd22942b7d9c413fafd2d9b7d348d8fb1c3fe56"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2e0ba83d54fe240017bfa61b418e5721160da5cf8e392cf378262a3ec5464281"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b9940e9c5213db962603a46e596e3533e07e9d6f2dff09b02579a6e7a9b7d46d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM.lengte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lengte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lengte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lengte in meter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:4149731e869c2ad6c4fd33212fd22942b7d9c413fafd2d9b7d348d8fb1c3fe56"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2e0ba83d54fe240017bfa61b418e5721160da5cf8e392cf378262a3ec5464281"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:539a91b7db5539c8ae25ca1a9ac98074c0552e23da78b20d569b30fba23dc33d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:ea011fba35e35133e0da371f4ddbed118d774a73e22c03a23fc2e6f77b5c64ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5c40323d4ff95f84936f9838f8bba3a7363608fe57371c0298dc5a391d87b7aa",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm.hoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "hoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoogte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:ea011fba35e35133e0da371f4ddbed118d774a73e22c03a23fc2e6f77b5c64ed"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c73bdc60d0a2a4e1ad94f5e9bccf7987fb04bf2e1b8152760f0030dc044d4b5f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.breedte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "breedte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "breedte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De breedte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:51ab6241c146a82abff20dd10b364f938b88e5db58044dc01668b32e5c65b041"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:be70f0e3175b31d795e9a2fd7a42760929c9146ed05cc039e5f9dfac7ade7477",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.lengte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lengte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lengte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lengte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:51ab6241c146a82abff20dd10b364f938b88e5db58044dc01668b32e5c65b041"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ac6729a6e320a76f68c271192bc53db89edf9e6cfb65fcea169f31208275bea5",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.hoogte",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "hoogte"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "hoogte"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De hoogte in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:51ab6241c146a82abff20dd10b364f938b88e5db58044dc01668b32e5c65b041"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1c12a4b34b93a48d05cb2e4d811717a9c6a8ab3f059d3338584ce2d49066eba9",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:08dc1828d9d32ef5e1031544223cc55c9900323afeffaf3269fe2d8df0c51dc1"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e5e09262fdc307bf65598984de9ab24591bc312c2b09ba06dfb78053d5a2554a",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f9f4491049e076ec6fa5f1a57e74bfd68b775d120867083948774519550b103e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:88065d22e3e74fdd940d64715079932aeb61d56f94f8be925ab999cdf5cfc51c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in Watt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"W\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:f9f4491049e076ec6fa5f1a57e74bfd68b775d120867083948774519550b103e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4778817b79dd7870f0d8f89f6444b647627dab3314c7ccdcc1c356c70b56284e",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2c58d14b051e9eac36a58678f38f81f87fdd183182fdf3ce9205733d14a32c6f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e5e82a3115cab9970e59cb3e0787a3d794dda2ab8ba870c6ea3111c2369db3e0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in seconde."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"s\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2c58d14b051e9eac36a58678f38f81f87fdd183182fdf3ce9205733d14a32c6f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:45413320a951bd1a382d00261bbfb0521fc6bb6a4ae06c1050aeba437f6a4cd1",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in meter."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"m\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2e0ba83d54fe240017bfa61b418e5721160da5cf8e392cf378262a3ec5464281"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cef6a4dd8b4d01a8127016622cf50b6b8d92469f000be52209f9c6e92f113387",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2e0ba83d54fe240017bfa61b418e5721160da5cf8e392cf378262a3ec5464281"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:34172176e9909ac842bd42ba9a7fb2551e28bee3977b44ee4f31ff05b24940e2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c318ba7fdc78e87521cb1efb68f0141e166f306812d8eb1a13d330ea748bdb11"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0e969ded3f0c175b965d6f3cced839f933e5e35b5ed91bf71f3f61085302ea2a",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in ampere uur."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"Ah\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:c318ba7fdc78e87521cb1efb68f0141e166f306812d8eb1a13d330ea748bdb11"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3dcd6f6b3ea86377d410ed71eea17f3a5037cef8cc26898303c764e1bb49fd31",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cea65f970a57c3a55309991a7054cb23adc52058184c6cb24665b7a97839ba89",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in Volt."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"V\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c1027dcbb3d9965ddad4fb29276a8c79c3ee6854261aad72715e1648fe13e487",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:457f6ecd9be76d911f5f5fb4114119763f83b9ed0290ab9beacf47eed60a8f30"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9068d074974d3ed583514d91d72e422c95e1f1d1df895e7c9523d1ca6affe9c2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in uur."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"h\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:457f6ecd9be76d911f5f5fb4114119763f83b9ed0290ab9beacf47eed60a8f30"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:92ad025766fb07f8e76ed083f375c06888a2ba64df562ec5b4183cc7843318f3",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0c2fb9252fe97a64a23cbe71908b57362541f1f11ebfee922230aec7d64d457a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b1bdf82a027a637778909648371755e39d1608d68aee4dcfa297d638c60bd84d",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in maand."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"mo\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:0c2fb9252fe97a64a23cbe71908b57362541f1f11ebfee922230aec7d64d457a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:683e51c53dfd82d404584610bcc2cf4c8772c65895f34816761f703a89fc8f08",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6acd3b4f117c446b98ae8f1f18bd43f27b9f848a760353984f749f9e7c5dc711",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"mm\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1454d2f42a542e1665541af1e689a9fcaaac670795bfa235df29d8cbefb74539",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut.waarde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "waarde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "waarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Bevat een getal die bij het datatype hoort."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:e7833af3432ee3a1ac9be3db5f0428b82712fb3e6292fd9994f9767dddeb2a77"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4d5511bfc434b7618191c33628531a7949dc894530ab5c421a601e12a2c72678",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut.standaardEenheid",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "standaard eenheid"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "standaardEenheid"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De standaard eenheid bij dit datatype is uitgedrukt in minuten."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "\"min\"^^cdt:ucumunit"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:e7833af3432ee3a1ac9be3db5f0428b82712fb3e6292fd9994f9767dddeb2a77"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:54d1143e5a002a91011b0e50413c882493f8755b287d4ac1b77ed10d99e1b9ea",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitspanning",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "aansluitspanning"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "aansluitspanning"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Spanning van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:df2433d9dc8905ba0ab71fafd3caea335fea9527a0d8c48ce066b6fc8bbbbaf0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4e986637c10621842340c294cf9a5f0268791ab80f37980e76e3df4621fc1445",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "aansluitvermogen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "aansluitvermogen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Vermogen van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Attribuut uit gebruik sinds versie 2.1.0-RC2"
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:df2433d9dc8905ba0ab71fafd3caea335fea9527a0d8c48ce066b6fc8bbbbaf0"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:14d8888eb34dd531c1b25cc77f462afa608747788fc0681802ae80d88dd39341",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring.stroomkringnummer",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "stroomkringnummer"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "stroomkringnummer"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De identificatie van de stroomkring."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:22da1f9ee7ac655d3a9c2e850b22a568ab8ec4f559ddd78a68ec26f210b37e19"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d94aee9bbe60b0720d08175d572a169069842af6941a89a62302b641408f7684",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.merk",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "merk"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "merk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Merk van de batterij."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:cda0fd835547123875a4b4d197e029dce48a48defbd129eed4b42de1423b33d9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:22a1b7338c808b3538822b6d788c7a95bfe10b2d18ea7a69c58a7c2e600d3445",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.modelnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "modelnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "modelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Modelnaam van de batterij."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:932ff5322d2e6c45a13b6cb06fa0ab46762705b1ec6054cc1dec1fc345a642e4"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e0260133ae0dffe0f07399b6ed7fe33d7befea10841de86ce925abc70be0273f",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.spanning",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "spanning"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "spanning"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De spanning die de batterij kan leveren. Wordt ook wel het werkingsvoltage genoemd."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6f95904169d4d88e7e4d0cf61bf89f8314b77770b99cd9d5dd51b70423511ee8",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.lading",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "lading"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "lading"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Wordt ook wel capaciteit of autonomie genoemd. Geeft aan hoe veel energie de batterij kan leveren in volledig opgeladen staat."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Het gaat om de lading van de batterij vlak na productie wanneer de batterij volledig opgeladen is. De maximale lading dus."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:c318ba7fdc78e87521cb1efb68f0141e166f306812d8eb1a13d330ea748bdb11"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3550122ba3ed3f77d72575bef0a99fbb4906bc56a5a7416460965ac35b5f453c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.fabricatiedatum",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "fabricatiedatum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "fabricatiedatum"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De datum waarop de batterij geproduceerd is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:d36be4b6535fc4f416d876c24d8d22ddbf0441dc7b98d13ddb7207d9f180a92c"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c82031f9433136b844a9eeaf3439f8a679368250cd70f6d4a47a455000d097da",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.afmetingen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afmetingen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "afmetingen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmetingen van de batterij in millimeter."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:ea011fba35e35133e0da371f4ddbed118d774a73e22c03a23fc2e6f77b5c64ed"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4a9ee80c38c35660af97085873ada74645cb6b80ed9afc74b8b3a33b84b590b2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Batterij.materiaal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "materiaal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "materiaal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het materiaal waaruit de batterij gemaakt is. Het gaat hier om het materiaal waarin de lading opgeslagen is."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:70cb14a3de82223e5dda49f226ab3989ddacaff7c6781173695375887129a7d8"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a6c09fe62f0b821141dee96692e1b9565b3adc94cd7a1af9db366a48fa00c61a",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Zonnepaneel.vermogen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "vermogen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "vermogen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het vermogen van het zonnepaneel."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:f9f4491049e076ec6fa5f1a57e74bfd68b775d120867083948774519550b103e"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a72a492bafa8b1de0868c32cbeafb86e7ae1169a4ad0d500a650f24142030758",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Zonnepaneel.merk",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "merk"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "merk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het merk van het zonnepaneel."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:0e451a4e3acb8cafa50eab0e39e8ad6deda0e9e95847d9acef8be5cd33508395"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:116f48f6b99e888235ca05cc4a3299c68505a54402bdfd43e287a52c1ff7aaaa",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Zonnepaneel.modelnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "modelnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "modelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De modelnaam van het zonnepaneel."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:125d0a0aeafb7fa87e8ec81bcbfaffdccfc49cb089f9e68ba03cb7bdfb477e56"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:62cb88b44f5f09767c5344332add0af115340e9f09aff8c07abe6fb1599837b0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Zonnepaneel.technischeFiche",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "technische fiche"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "technischeFiche"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De technsiche fiche als bijlage van het zonnepaneel."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ee89c0b1c3aa5164a270bd456322b02aa64d2ab9f47e2ae0d986c0da0cf32589",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#FietstelDisplay.isDubbelzijdig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is dubbelzijdig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isDubbelzijdig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of het display telgegevens toont langs zijn beide zijden of niet."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7e13f0d796d6997f466479c195fe7d6b7ecf1cde92f3428afdbfda0cf2825d9a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:eeefcbe44f11a68a6110bcf5e48ebc33113b43219dd64433a5e0f07c63b113ba",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#FietstelDisplay.technischeFiche",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "technische fiche"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "technischeFiche"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Document met de technische specificaties van het display."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:7e13f0d796d6997f466479c195fe7d6b7ecf1cde92f3428afdbfda0cf2825d9a"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ac8b1cb06847eef72b91e5c7e0b4d3b57121be71e309757c5b375ae347bd15e0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Fietstelsysteem.merk",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "merk"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "merk"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Merknaam van het fietstelsysteem."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:4b9651bdbb9e7896d23394b6a405c3dcefdd274c1d46db192605dcb000e411c8"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e65148eefaaa2beca184e048fa29a4094ef725dd00b6c5b00c8b5f8417d6d6c2",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Fietstelsysteem.modelnaam",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "modelnaam"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "modelnaam"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Naam van het model van het fietstelsysteem volgens de fabrikant."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:8ebae1bee2d261c794c242ab97a454232decc8622a8604332a50363f773027f9"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ce42fc40208a40ae07a29fcab09e0174c6aa07b92b4463b7271cbc0bd791ed56",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Fietstelsysteem.technischeFiche",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "technische fiche"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "technischeFiche"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Document met de technische specificaties van het fietstelsysteem."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:91b3575f47b5119a0ddee67f3eedfa6145a49507c54313ed2f0095610a104617",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Fietstelsysteem.afmetingen",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "afmetingen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "afmetingen"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De afmetingen van het fietstelsysteem."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:51ab6241c146a82abff20dd10b364f938b88e5db58044dc01668b32e5c65b041"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:fac0230ff21631461cf1aa99ae74949edb058b97f03f5b0767be01eb0ce6b3d0",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#NietSelectieveDetectielus.soortVoertuig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "soort voertuig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "soortVoertuig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Type voertuig dat de detectielus volgens zijn instellingen kan detecteren."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:3805aee8afa895c97a24431f7b6b5f0cca84d72e44af2a2afc7b4fccc9e89723"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:45f6be47e5662df4606346b3a6f9de786bd6664f53c64fb6f19b5453971bb2c4",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#NietSelectieveDetectielus.isRichtingsgevoelig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is richtingsgevoelig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isRichtingsgevoelig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of de detectielus gevoelig is voor de richting waarin het voertuig het gevoeligheidsgebied van de lus al dan niet binnenkomt."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:de4ce08af4cbb40a80bf1bf2ea191b33a5936d46eba9c052ea25750aa9f8cd4c",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#NietSelectieveDetectielus.isMotorgevoelig",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "is motorgevoelig"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "isMotorgevoelig"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Geeft aan of de lus motorgevoelig is of niet."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:547cec33ccae12acb89391f4b5fef2697763973440e578954065088d15947568",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#NietSelectieveDetectielus.functie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "functie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "functie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Type niet-selectieve detectielus bv. file, afstand, hiaat,..."
+        }
+      ],
+      "domain": {
+        "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13"
+      },
+      "range": {
+        "@id": "urn:oslo-toolchain:2d3b984d9fae3c7f74effb9080070c1bc4bf98158d3283f39474dbb874a1471f"
+      },
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "datatypes": [
+    {
+      "@id": "urn:oslo-toolchain:0f43efe531c03fe196327a6c6887168a9dafba2ab00abc850759bc552f6cdc23",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Identificator"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcIdentificator"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8c41eda123d99243d6a4505f0c1b1b278b18a6516236c47f0ce7733af384bf98",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Asset versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAssetVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d9f15fdc2eb3e10c926f4df7e503cdf688220d3c9fb1845a2cb588f339308d47",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Tijdsduur"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcTijdsduur"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de instelling van een tijdsbepaling."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b7d59d226d5ff2a8c12bbe404154e165ca13c80fdf8937f9e3b5216d679e3613",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bestandsbijlage"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcDocument"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor alle bestandsbijlages."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4149731e869c2ad6c4fd33212fd22942b7d9c413fafd2d9b7d348d8fb1c3fe56",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxl in meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxlInM"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte en de lengte in meter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ea011fba35e35133e0da371f4ddbed118d774a73e22c03a23fc2e6f77b5c64ed",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxh in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxhInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte en hoogte in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:51ab6241c146a82abff20dd10b364f938b88e5db58044dc01668b32e5c65b041",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afmeting bxlxh in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DtcAfmetingBxlxhInMm"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:08dc1828d9d32ef5e1031544223cc55c9900323afeffaf3269fe2d8df0c51dc1",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Tekstblok"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DteTekstblok"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f9f4491049e076ec6fa5f1a57e74bfd68b775d120867083948774519550b103e",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in watt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInWatt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in watt uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2c58d14b051e9eac36a58678f38f81f87fdd183182fdf3ce9205733d14a32c6f",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in seconde"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInSeconde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in seconde uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2e0ba83d54fe240017bfa61b418e5721160da5cf8e392cf378262a3ec5464281",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in meter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in meter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c318ba7fdc78e87521cb1efb68f0141e166f306812d8eb1a13d330ea748bdb11",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInAmpereUur",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in ampere uur"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInAmpereUur"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in ampere uur uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2b85cd7f71d604759daa198deea725f70174d7218a3f6f46359b0040c2bec240",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in volt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInVolt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in volt uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:457f6ecd9be76d911f5f5fb4114119763f83b9ed0290ab9beacf47eed60a8f30",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in uur"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInUur"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in uur uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0c2fb9252fe97a64a23cbe71908b57362541f1f11ebfee922230aec7d64d457a",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in maand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMaand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:719df3b3a10dd8aeac49f514636f7088748e2f08fefac359285eae2a65def87f",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in millimeter"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMillimeter"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in millimeter uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e7833af3432ee3a1ac9be3db5f0428b82712fb3e6292fd9994f9767dddeb2a77",
+      "@type": "Datatype",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMinuut",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Kwantitatieve waarde in minuten"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "KwantWrdInMinuut"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een kwantitatieve waarde die een getal in minuten uitdrukt."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:acfca9b42ad800f8819339ad678cc39f34735986343b1fc201ad217eb33f268b",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Literal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Literal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een constante."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e8a12d3a914adfaedd56d900247bf4a990126317048aa96cb56ebaf6cd19dd90",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Datumtijd"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DateTime"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e4ec7988cd5405a5f4cf826f65a39875aa3ef06d5d16662dee01731721aed339",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#decimal",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Decimaal getal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Decimal"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#decimal"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:d36be4b6535fc4f416d876c24d8d22ddbf0441dc7b98d13ddb7207d9f180a92c",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#date",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Datum"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Date"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een datum volgens http://www.w3.org/2001/XMLSchema#date."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#date"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8cdd8abf2e974026c7ef2ac93bb2b95115e405adac3bcdf8aee187e8f02c9b2d",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Natuurlijk getal"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NonNegativeInteger"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:727ad52cfe2549318efb87105b1e888af9696d14cdac6c459395aebb29eb9050",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "URI"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AnyURI"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een tekstwaarde die een verwijzing naar meer informatie van het element bevat volgens http://www.w3.org/2001/XMLSchema#anyURI ."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#anyURI"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3994f03b9f358ce1c7a8026a2f6e50e170e97ac8f5c15d25b232a9c9cc6573e9",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#string",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "String"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "String"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#string"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a2bd818b334471d3667cd65453c1318d6ff367c613d84952eb1d7cad3a5f3752",
+      "@type": "Datatype",
+      "assignedURI": "http://www.w3.org/2001/XMLSchema#boolean",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Boolean"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Boolean"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "https://www.w3.org/TR/xmlschema-2/#boolean"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "referencedEntities": [
+    {
+      "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Serienummerobject"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SerienummerObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse voor een serienummer."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:aefc9055f39d4f0540c13acd974a67434226f19994093f723b5a035fc8625e30",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BevestigingGC",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Bevestiging geluidswerende constructie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "BevestigingGC"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte om de bevestigingsrelatie naar de profielen en schermelementen van geluidswerende constructies te faciliteren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:836217e385a2a1727a36e392e92ed6683c21f20aa5f029680a13c0709131e4cf",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Voedingspunt",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Voedingspunt"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Voedingspunt"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor het aansluitpunt van de voeding."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM naam object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMNaamObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10ba697f1316c4e033ddf58b304afc1a26468d5db71a964bdce058c43230cf8f",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f28bf0ae69146db3a6f746d4942b52bce8286c313b34a71e8213478dae5867cf",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Detectie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Detectie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor de overige detecties, zijnde die die niet onder de groepen \"niet weggebonden detecties\", \" weggebonden detecties\" of \"detectielussen\" vallen."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectielus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Detectielussen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Detectielus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte voor een detectielus. Een detectielus is een kabel onder het wegdek die in staat is om voertuigen te detecteren teneinde de verkeersregelaar aan te sturen. Selectieve lussen zijn in staat om gecodeerde informatie door te geven van prioritaire voertuigen, niet-selectieve lussen geven informatie door van alle voertuigen die het detectie gebied passeren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SelNietSelLus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Sel niet sel lussen"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SelNietSelLus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse die de eigenschappen van selectieve en niet-selectieve lussen combineert."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9c10b6cad0c06013babaf7a27e66d9232677818a1c4a9cec0fcf63a7880e978e",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM databank status"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMDBStatus"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:38906fa31634cd776725fe8150d4023c8d999f56dec8284fcfdef03b37e0b627",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM Toestand"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMToestand"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:16fd892876b24ac4801df4f011ea393fa8ff60a2747ef4f6db9be6e9554d5d9e",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "AIM versie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "AIMVersie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Naampad object"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NaampadObject"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c17c8b8defebb6167552d4d831c60f796cefd146c81edb9b4102e2fd888e11bb",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9ac0da8a4968aa7c62028d7442262374e2d7cd8cc8df1bc7b9a2b590f1501456",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9348be9b946a6b5f5900cb79b5005c0c7797c16308dc7b936ea56472988310aa",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Niet-directionele relatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "NietDirectioneleRelatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een abstracte die relaties groepeert waarbij de richting semantisch niet gedefinieerd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:df2433d9dc8905ba0ab71fafd3caea335fea9527a0d8c48ce066b6fc8bbbbaf0",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:05a30fb4e24cc66451a68d443c62e9c29f694758047a95784e4784edac6ecfa8",
+      "assignedURI": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Directionele relatie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DirectioneleRelatie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Een abstracte die relaties groepeert waarbij de richting semantisch gedefinieerd is."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:67e22ea732b10fb9478ac336dc8d08436da3f205cc17c5b8b2ef8d7bff75dfd5",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:47b39eb85a3625f71113fe0f66c8d13eeebf578110932bfb4b2d3307e38525fa",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:22da1f9ee7ac655d3a9c2e850b22a568ab8ec4f559ddd78a68ec26f210b37e19",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b3bdf1bd64c375e009adcef00f89626170b8b83679a81268ed12ded765f20c2c",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:79805f107f43c1338d805415f1187c79c23a016c4fa64acaeb7fb5a1d1914d41",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:7e13f0d796d6997f466479c195fe7d6b7ecf1cde92f3428afdbfda0cf2825d9a",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:a3c8a3902eb2e1d25fa7b9d8a08a2635b6f64990d60afa6e3464c23076368e3e",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    },
+    {
+      "@id": "urn:oslo-toolchain:1295e20d557eed2a61988b7c1aebf94cba229d1b7e7650ef09abb78b7006ad13",
+      "@type": "http://www.w3.org/2002/07/owl#Class"
+    }
+  ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "abstractClasses": [
+    {
+      "@id": "urn:oslo-toolchain:b55f9ec05b30053b40f8ffc9ba13068ebe07d3b3cc89dc5cf0993400bcbaacf7",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:aefc9055f39d4f0540c13acd974a67434226f19994093f723b5a035fc8625e30",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:836217e385a2a1727a36e392e92ed6683c21f20aa5f029680a13c0709131e4cf",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e26684ff38be769a0f7ace1ac4a9325b89786512543475aeb8eac81feb097aed",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:10ba697f1316c4e033ddf58b304afc1a26468d5db71a964bdce058c43230cf8f",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f28bf0ae69146db3a6f746d4942b52bce8286c313b34a71e8213478dae5867cf",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:550bdef33a32d0c467ace541f01b849f6bc5de0ca38be08852c52838c8caedb1",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2cca2617328cedbedb832826a3784ca98436f2885f93a68d768153459ae14da5",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9c10b6cad0c06013babaf7a27e66d9232677818a1c4a9cec0fcf63a7880e978e",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:38906fa31634cd776725fe8150d4023c8d999f56dec8284fcfdef03b37e0b627",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4947496a372b0cf24340b6d6b7cc530f35dd2ae30f61b8f79b57f151fb8118e2",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:16fd892876b24ac4801df4f011ea393fa8ff60a2747ef4f6db9be6e9554d5d9e",
+      "@type": "AbstractClass"
+    },
+    {
+      "@id": "urn:oslo-toolchain:17b22482083118231e0f7b0979818ab1bdb1d1a9b61a41d52fdd185f89e3bfee",
+      "@type": "AbstractClass"
+    }
+  ],
+  "rootClasses": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:9f43bbfa521273e2496f02ef24ae21ac2a3f416b4e9fef0393ea93de14425b86",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:47b6abb714fcf094543a0c7f5dcb230f5c3c5ef37f62401e70976ecdc45237e2",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:125d0a0aeafb7fa87e8ec81bcbfaffdccfc49cb089f9e68ba03cb7bdfb477e56",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:932ff5322d2e6c45a13b6cb06fa0ab46762705b1ec6054cc1dec1fc345a642e4",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cda0fd835547123875a4b4d197e029dce48a48defbd129eed4b42de1423b33d9",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:0e451a4e3acb8cafa50eab0e39e8ad6deda0e9e95847d9acef8be5cd33508395",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:4b9651bdbb9e7896d23394b6a405c3dcefdd274c1d46db192605dcb000e411c8",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:8ebae1bee2d261c794c242ab97a454232decc8622a8604332a50363f773027f9",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:70cb14a3de82223e5dda49f226ab3989ddacaff7c6781173695375887129a7d8",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e646ae944da246a733080e7f614629e5f53ba681c842972424fa7edb6d676f65",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2d3b984d9fae3c7f74effb9080070c1bc4bf98158d3283f39474dbb874a1471f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3805aee8afa895c97a24431f7b6b5f0cca84d72e44af2a2afc7b4fccc9e89723",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
   "name": "fietstelinstallatie",
   "type": "ap",
   "eap": "OSLO-Fietstelinstallatie-AP.eap",
@@ -32,6 +5631,6 @@
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer",
   "urlref": "/doc/implementatiemodel/fietstelinstallatie/ontwerpdocument/2.20.0-RC1",
   "documentcommit": "5963376074eeb268f8d049a0253b1a53a3d68554",
-  "toolchaincommit": "b6b184d48823602a9303e83dd4c2b6c588d10144",
+  "toolchaincommit": "402df0fde54c7ea6e0f6cd0abc5f91f2c1397871",
   "hostname": "https://wegenenverkeer.data.dev-vlaanderen.be/"
 }

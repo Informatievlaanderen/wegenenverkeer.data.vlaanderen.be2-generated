@@ -1,0 +1,27 @@
+{
+  "title": "MateriaalKarakteristiek",
+  "type": "object",
+  "description": "Complex datatype voor het materiaal en zijn geluidskarakteristiek van de geluidswerende constructie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MateriaalKarakteristiek)",
+      "pattern": "^MateriaalKarakteristiek$"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalGeluidswerendeConstructie"
+    },
+    "geluidskarakteristiek": {
+      "$ref": "#/components/schemas/Geluidskarakteristiek"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaal",
+    "geluidskarakteristiek"
+  ]
+}

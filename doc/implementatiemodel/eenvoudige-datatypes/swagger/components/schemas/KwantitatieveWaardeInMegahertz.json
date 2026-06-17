@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInMegahertz",
+  "type": "object",
+  "description": "Een kwantitatieve waarde dat een getal in megahertz voorstelt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMegahertz)",
+      "pattern": "^KwantitatieveWaardeInMegahertz$"
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in megahertz.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "waarde": {
+      "type": "object",
+      "description": "De waarde als decimal.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

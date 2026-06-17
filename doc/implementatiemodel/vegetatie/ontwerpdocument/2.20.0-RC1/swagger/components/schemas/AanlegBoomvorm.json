@@ -1,0 +1,108 @@
+{
+  "title": "AanlegBoomvorm",
+  "type": "object",
+  "description": "Complex datatype om alle eigenschappen van de aanleg van een opgaande boom onder 1 noemer te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AanlegBoomvorm)",
+      "pattern": "^AanlegBoomvorm$"
+    },
+    "heeftBoomplaat": {
+      "type": "object",
+      "description": "Boomplaten worden aangebracht rond de stam van bomen, bosgoed en heesters en eventueel vastgezet met piketten. Ze hebben een centrale opening en een rechte snede, zodat ze op eenvoudige wijze rond de planten kunnen aangebracht worden.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "wortelAanplant": {
+      "$ref": "#/components/schemas/VegetatieWortel"
+    },
+    "heeftWortelgeleidingWortelwering": {
+      "type": "object",
+      "description": "Aanduiding of de boom wortelwering heeft. Wortelgeleiding en –wering moet voorkomen dat boomwortels het trottoir, de middenberm, het fietspad, de rijweg, andere wegverhardingen en leidingstelsels beschadigen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "plantmaatHoogte": {
+      "$ref": "#/components/schemas/PlantmaatHoutigeVegetatie"
+    },
+    "verankering": {
+      "$ref": "#/components/schemas/BoomVerankering"
+    },
+    "verankeringstype": {
+      "$ref": "#/components/schemas/BoomVerankeringtype"
+    },
+    "boompaalconstructie": {
+      "$ref": "#/components/schemas/AantalBoompalen"
+    },
+    "vraatschadeBescherming": {
+      "$ref": "#/components/schemas/MateriaalBeschermingVraatschade"
+    },
+    "beschermingVraatschade": {
+      "$ref": "#/components/schemas/BeschermingVraatschade"
+    },
+    "groeiplaatsverbetering": {
+      "type": "array",
+      "description": "Lijst van Groeiplaatsverbetering items.",
+      "items": {
+        "$ref": "#/components/schemas/Groeiplaatsverbetering"
+      },
+      "minItems": 1
+    },
+    "vormAanlevering": {
+      "$ref": "#/components/schemas/VormAanleveringHoutigeVegetatie"
+    },
+    "plantmaatOmtrek": {
+      "$ref": "#/components/schemas/PlantmaatOmtrek"
+    },
+    "maaischadeBescherming": {
+      "$ref": "#/components/schemas/BeschermingMaaischade"
+    },
+    "plantwijze": {
+      "$ref": "#/components/schemas/Plantwijze"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftBoomplaat",
+    "wortelAanplant",
+    "heeftWortelgeleidingWortelwering",
+    "plantmaatHoogte",
+    "verankering",
+    "verankeringstype",
+    "boompaalconstructie",
+    "vraatschadeBescherming",
+    "beschermingVraatschade",
+    "groeiplaatsverbetering",
+    "vormAanlevering",
+    "plantmaatOmtrek",
+    "maaischadeBescherming",
+    "plantwijze"
+  ]
+}

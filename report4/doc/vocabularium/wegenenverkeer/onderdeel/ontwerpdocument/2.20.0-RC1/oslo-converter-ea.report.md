@@ -2,27 +2,23 @@
 
 #||# -------------------------------------
 
-node:internal/modules/cjs/loader:1205
+2026-06-17T09:43:03.391Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-17T09:43:03.392Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_Vocabularium). Using fallback URI (http://todo.com/) instead.
 
-    ^
+Error: [AttributeConverterHandler]: Invalid URL (Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld.) for attribute (OTL:OSLO²_Vocabularium:OSLO-Abstracten:Buis:breedteBuitenzijde)
 
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:62:27
 
+    at Array.forEach (<anonymous>)
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs not supported.
+    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:47:26)
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:38:50
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
+    at Array.map (<anonymous>)
 
-  code: 'ERR_REQUIRE_ESM'
-
-}
-
-
-
-Node.js v20.15.1
+    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:38:37)
 
 #||# -------------------------------------
 

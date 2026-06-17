@@ -1,0 +1,117 @@
+{
+  "title": "HeeftBetrokkene",
+  "type": "object",
+  "description": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HeeftBetrokkene)",
+      "pattern": "^HeeftBetrokkene$"
+    },
+    "rol": {
+      "$ref": "#/components/schemas/BetrokkenheidRol"
+    },
+    "specifiekeContactinfo": {
+      "type": "array",
+      "description": "Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "datumAanvang": {
+      "type": "object",
+      "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "datumEinde": {
+      "type": "object",
+      "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "rol",
+    "datumAanvang",
+    "datumEinde",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

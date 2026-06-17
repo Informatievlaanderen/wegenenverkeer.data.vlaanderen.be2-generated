@@ -1,0 +1,67 @@
+{
+  "title": "Grond",
+  "type": "object",
+  "description": "Lithologisch hoofd- en nevenbestanddeel (als code) van de laag zoals gebruikt bij Databank Ondergrond Vlaanderen (gecodeerde lithologie en geotechnische codering).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grond)",
+      "pattern": "^Grond$"
+    },
+    "milieuhygiëNischeCode": {
+      "type": "object",
+      "description": "Het 3-delig nummer dat gehanteerd wordt door de vzw grondbank om de milieuhygiënische mogelijkheden van een partij bodem of grond aan te geven.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "soortGrond": {
+      "$ref": "#/components/schemas/Grondsoort"
+    },
+    "technischVerslagBodemonderzoek": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "tot": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "van": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "soortVervuiling": {
+      "$ref": "#/components/schemas/SoortVervuiling"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "milieuhygiëNischeCode",
+    "soortGrond",
+    "technischVerslagBodemonderzoek",
+    "tot",
+    "van",
+    "soortVervuiling",
+    "dikte"
+  ]
+}

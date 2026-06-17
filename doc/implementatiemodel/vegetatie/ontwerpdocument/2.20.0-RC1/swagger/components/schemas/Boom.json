@@ -1,0 +1,290 @@
+{
+  "title": "Boom",
+  "type": "object",
+  "description": "Een opgaande boom is een boom waarvan de vorm van de kruin overeenkomt met zijn natuurlijke, soortgebonden habitus. Opgaande bomen kunnen een hoge, lage, brede, smalle of een afwijkende groeivorm hebben, zoals zuil- en treurvormen. De boom kan zich op volstrekt natuurlijke wijze uitgezaaid hebben en zijn groeivorm kan bepaald zijn door de natuurlijke groeiomstandigheden (bv. natuurlijke snoei). Ontstond de boom in kunstmatige omstandigheden, dan is de groeivorm bepaald door de jeugdsnoei in de kwekerij en is het eindbeeld van de boom bepaald door de begeleidingssnoei of vormsnoei die wordt uitgevoerd vanaf het planten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Boom)",
+      "pattern": "^Boom$"
+    },
+    "isVerplant": {
+      "type": "object",
+      "description": "Aanduiding of de opgaande boom al dan niet van locatie veranderd is na een eerste aanplant binnen het openbaar domein.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "eindbeeld": {
+      "$ref": "#/components/schemas/EindbeeldOpgaandeBoom"
+    },
+    "kroonDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "groeifase": {
+      "$ref": "#/components/schemas/Groeifasen"
+    },
+    "vrijeDoorrijhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "doorwortelbaarVolume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "totaleBoombeschermingszone": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "boomverankeringszone": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/AanlegBoomvorm"
+    },
+    "takvrijeHoogte": {
+      "$ref": "#/components/schemas/TakvrijeHoogte"
+    },
+    "heeftBoomrooster": {
+      "type": "object",
+      "description": "Duidt aan of een horizontale structuur aanwezig is die zorgt voor een adequate bescherming van bomen tegen betreding van de boomspiegel door voetgangers of verkeer. Attribuut uit gebruik sinds versie 2.12.0-RC2",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "doorrijhoogte": {
+      "$ref": "#/components/schemas/Doorrijhoogte"
+    },
+    "geschatteKlassePlantjaar": {
+      "$ref": "#/components/schemas/KlassePlantjaar"
+    },
+    "boomspiegel": {
+      "type": "array",
+      "description": "Lijst van Boomspiegel items.",
+      "items": {
+        "$ref": "#/components/schemas/Boomspiegel"
+      },
+      "minItems": 1
+    },
+    "heeftLuchtleiding": {
+      "type": "object",
+      "description": "Bepaling of een bovengrondse nutsleiding aanwezig is die in conflict kan komen met de boom.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "takvrijeStamlengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hoogteklasse": {
+      "$ref": "#/components/schemas/VegetatieelementHoogte"
+    },
+    "standplaats": {
+      "$ref": "#/components/schemas/VegetatieelementStandplaats"
+    },
+    "niveau": {
+      "type": "object",
+      "description": "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten. Negatieve waarden worden geassocieerd met ondergronds en positieve waarden met bovengronds. Nul wordt beschouwd als een absolute waarde om het maaiveld aan te duiden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "soortnaam": {
+      "$ref": "#/components/schemas/VegetatieSoortnaam"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "type": "object",
+      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isVerplant",
+    "eindbeeld",
+    "kroonDiameter",
+    "groeifase",
+    "vrijeDoorrijhoogte",
+    "doorwortelbaarVolume",
+    "totaleBoombeschermingszone",
+    "boomverankeringszone",
+    "aanleg",
+    "takvrijeHoogte",
+    "heeftBoomrooster",
+    "doorrijhoogte",
+    "geschatteKlassePlantjaar",
+    "boomspiegel",
+    "heeftLuchtleiding",
+    "takvrijeStamlengte",
+    "hoogteklasse",
+    "standplaats",
+    "niveau",
+    "soortnaam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

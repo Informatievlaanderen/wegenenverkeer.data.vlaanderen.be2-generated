@@ -1,0 +1,46 @@
+{
+  "title": "AfmetingNetwerkelement",
+  "type": "object",
+  "description": "Complex datatype voor de afmetingen van een netwerktelement.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingNetwerkelement)",
+      "pattern": "^AfmetingNetwerkelement$"
+    },
+    "hoogteInRU": {
+      "type": "object",
+      "description": "De hoogte die door het netwerkelement wordt ingenomen, uitgedrukt in RU (rack units).",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "diepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "hoogteInRU",
+    "diepte",
+    "breedte"
+  ]
+}

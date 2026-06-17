@@ -1,0 +1,27 @@
+{
+  "title": "VerankeringDekzerkprofiel",
+  "type": "object",
+  "description": "Complexdatatype met informatie over de verankering van een dekzerkprofiel",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerankeringDekzerkprofiel)",
+      "pattern": "^VerankeringDekzerkprofiel$"
+    },
+    "materiaalVerankering": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "typeVerankering": {
+      "$ref": "#/components/schemas/TypeVerankeringDekzerkprofiel"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalVerankering",
+    "typeVerankering"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "VegetatieSoortnaam",
+  "type": "object",
+  "description": "Complex datatype voor de soortnaam en code van een begroeiing.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VegetatieSoortnaam)",
+      "pattern": "^VegetatieSoortnaam$"
+    },
+    "code": {
+      "type": "object",
+      "description": "De unieke identificator voor de soort van het vegetatie-element. De GBIF code is een unieke gestandaardiseerde code uitgegeven door het GBIF (the Global Biodiversity Information Facility - GBIF.org)",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "soortnaamNederlands": {
+      "type": "object",
+      "description": "De Nederlandse soortnaam van de beplanting.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "wetenschappelijkeSoortnaam": {
+      "$ref": "#/components/schemas/WetenschappelijkeSoortnaam"
+    },
+    "soortnaamWetenschappelijk": {
+      "type": "object",
+      "description": "De wetenschappelijke soortnaam van de beplanting. Attribuut uit gebruik sinds versie 2.12.0-RC2",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "code",
+    "soortnaamNederlands",
+    "wetenschappelijkeSoortnaam",
+    "soortnaamWetenschappelijk"
+  ]
+}

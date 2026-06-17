@@ -1,0 +1,90 @@
+{
+  "title": "Noodverlichtingstoestel",
+  "type": "object",
+  "description": "Een verlichtingstoestel als combinatie van de lamp en de armatuur dat ingeschakeld is in een systeem voor noodverlichting en daarom moet voldoen aan bijkomende vereisten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Noodverlichtingstoestel)",
+      "pattern": "^Noodverlichtingstoestel$"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "typeBatterij": {
+      "$ref": "#/components/schemas/NoodverlichtingTypeBatterij"
+    },
+    "spanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "heeftAfstandsbewaking": {
+      "type": "object",
+      "description": "Geeft aan of de correcte werking van het noodverlichtingstoestel al dan niet van op afstand bewaakt wordt.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "getestViaAfleggenAutomaat": {
+      "type": "object",
+      "description": "Geeft aan of de werking van het noodverlichtingstoestel moet getest worden door het uitschakelen van de automaat waarlangs de netvoeding voor het toestel passeert.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "autonomie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
+    },
+    "aantalLampen": {
+      "type": "object",
+      "description": "Het aantal individueel vervangbare ampen in de armatuur van toestel.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "vermogen",
+    "typeBatterij",
+    "spanning",
+    "heeftAfstandsbewaking",
+    "getestViaAfleggenAutomaat",
+    "autonomie",
+    "aantalLampen"
+  ]
+}

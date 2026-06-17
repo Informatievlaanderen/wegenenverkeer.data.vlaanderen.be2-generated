@@ -1,0 +1,144 @@
+{
+  "title": "NatuurlijkPersoon",
+  "type": "object",
+  "description": "Complex datatype dat een natuurlijk persoon beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse NatuurlijkPersoon)",
+      "pattern": "^NatuurlijkPersoon$"
+    },
+    "voornaam": {
+      "type": "object",
+      "description": "De voornaam.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "achternaam": {
+      "type": "object",
+      "description": "De achternaam.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "telefoonnnummer": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Het telefoonnummer.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "adres": {
+      "type": "array",
+      "description": "Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    },
+    "emailadres": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Het emailadres.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "fax": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "De faxnummer.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "heeftEmailVoorkeur": {
+      "type": "object",
+      "description": "Aanduiding of een persoon de voorkeur heeft om via email gecontacteerd te worden.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "heeftFaxVoorkeur": {
+      "type": "object",
+      "description": "Aanduiding of een persoon een voorkeur heeft om via fax gegevens te ontvangen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "voornaam",
+    "achternaam",
+    "telefoonnnummer",
+    "adres",
+    "emailadres",
+    "fax",
+    "heeftEmailVoorkeur",
+    "heeftFaxVoorkeur"
+  ]
+}

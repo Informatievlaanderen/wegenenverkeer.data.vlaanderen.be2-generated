@@ -1,0 +1,51 @@
+{
+  "title": "KwantitatieveWaardeInSeconde",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in seconde uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInSeconde)",
+      "pattern": "^KwantitatieveWaardeInSeconde$"
+    },
+    "waarde": {
+      "type": "object",
+      "description": "Bevat een getal die bij het datatype hoort.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^NonNegativeInteger$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardEenheid": {
+      "type": "object",
+      "description": "De standaard eenheid bij dit datatype is uitgedrukt in seconde. \"s\"^^cdt:ucumunit",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

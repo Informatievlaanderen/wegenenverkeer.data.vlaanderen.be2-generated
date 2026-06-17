@@ -1,0 +1,27 @@
+{
+  "title": "TypeBeweegbareWaterkerendeConstructie",
+  "type": "object",
+  "description": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TypeBeweegbareWaterkerendeConstructie)",
+      "pattern": "^TypeBeweegbareWaterkerendeConstructie$"
+    },
+    "typeConstructie": {
+      "$ref": "#/components/schemas/BeweegbaarDeel"
+    },
+    "typeConcept": {
+      "$ref": "#/components/schemas/TypeBeweging"
+    }
+  },
+  "required": [
+    "@type",
+    "typeConstructie",
+    "typeConcept"
+  ]
+}

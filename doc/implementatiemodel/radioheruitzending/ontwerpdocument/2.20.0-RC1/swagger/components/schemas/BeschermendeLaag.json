@@ -1,0 +1,27 @@
+{
+  "title": "BeschermendeLaag",
+  "type": "object",
+  "description": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeschermendeLaag)",
+      "pattern": "^BeschermendeLaag$"
+    },
+    "corrosieklasse": {
+      "$ref": "#/components/schemas/Corrosiebelastingscategorie"
+    },
+    "beschermlaag": {
+      "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+    }
+  },
+  "required": [
+    "@type",
+    "corrosieklasse",
+    "beschermlaag"
+  ]
+}

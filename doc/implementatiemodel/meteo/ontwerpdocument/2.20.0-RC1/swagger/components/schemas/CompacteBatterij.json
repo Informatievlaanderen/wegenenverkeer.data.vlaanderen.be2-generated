@@ -1,0 +1,54 @@
+{
+  "title": "CompacteBatterij",
+  "type": "object",
+  "description": "Complex datatype waarmee de informatie, zoals merk, modelnaam, spanning, enz..., van de compacte batterij wordt verzameld.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CompacteBatterij)",
+      "pattern": "^CompacteBatterij$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/CompacteBatterijMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/CompacteBatterijModelnaam"
+    },
+    "ingebruikname": {
+      "type": "object",
+      "description": "De dag dat de batterij in bruik werd genomen.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "spanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "capaciteit": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMAh"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "ingebruikname",
+    "spanning",
+    "capaciteit"
+  ]
+}

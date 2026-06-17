@@ -1,0 +1,27 @@
+{
+  "title": "MaatVanDeSlotcilinder",
+  "type": "object",
+  "description": "Complex datatype voor de maat van de slotcilinder.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MaatVanDeSlotcilinder)",
+      "pattern": "^MaatVanDeSlotcilinder$"
+    },
+    "maatBinnenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "maatBuitenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "maatBinnenzijde",
+    "maatBuitenzijde"
+  ]
+}

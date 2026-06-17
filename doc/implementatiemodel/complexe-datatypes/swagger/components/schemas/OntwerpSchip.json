@@ -1,0 +1,35 @@
+{
+  "title": "OntwerpSchip",
+  "type": "object",
+  "description": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse OntwerpSchip)",
+      "pattern": "^OntwerpSchip$"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "diepgang": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    }
+  },
+  "required": [
+    "@type",
+    "lengte",
+    "breedte",
+    "diepgang",
+    "gewicht"
+  ]
+}

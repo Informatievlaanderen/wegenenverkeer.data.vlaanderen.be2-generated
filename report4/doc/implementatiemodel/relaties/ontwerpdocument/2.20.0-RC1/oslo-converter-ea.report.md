@@ -2,29 +2,263 @@
 
 #||# -------------------------------------
 
-node:internal/modules/cjs/loader:1205
+2026-06-17T09:41:32.841Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Bevestiging:(Bevestiging -> NietDirectioneleRelatie) is not an association with a source role. Ignoring this connector.
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Sturing:(Sturing -> NietDirectioneleRelatie) is not an association with a source role. Ignoring this connector.
 
-    ^
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:NietDirectioneleRelatie:(NietDirectioneleRelatie -> RelatieObject) is not an association with a source role. Ignoring this connector.
 
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Voedt:Generalisatie is not an association with a source role. Ignoring this connector.
 
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Voedt:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs not supported.
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:LigtOp:Generalisatie is not an association with a source role. Ignoring this connector.
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:LigtOp:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBijlage:Generalisatie is not an association with a source role. Ignoring this connector.
 
-  code: 'ERR_REQUIRE_ESM'
+2026-06-17T09:41:32.843Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBijlage:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-}
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBeheer:Generalisatie is not an association with a source role. Ignoring this connector.
 
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBeheer:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftToegangsprocedure:Generalisatie is not an association with a source role. Ignoring this connector.
 
-Node.js v20.15.1
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftToegangsprocedure:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsInspectieVan:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsInspectieVan:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWGehostOp:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWGehostOp:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsAdmOnderdeelVan:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsAdmOnderdeelVan:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftVPlan:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftVPlan:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HoortBij:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HoortBij:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:SluitAanOp:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:SluitAanOp:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanzicht:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanzicht:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWOnderdeelVan:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWOnderdeelVan:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Omhult:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Omhult:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftKeuring:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftKeuring:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerktoegang:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerktoegang:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsNetwerkECC:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.844Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsNetwerkECC:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DirectioneleRelatie:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DirectioneleRelatie:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanvullendeGeometrie:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanvullendeGeometrie:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:VoedtAangestuurd:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:VoedtAangestuurd:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerkProtectie:Generalisatie is not an association with a source role. Ignoring this connector.
+
+2026-06-17T09:41:32.845Z info: Connector OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerkProtectie:Generalisatie has name "Generalisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-06-17T09:41:32.845Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:41:32.845Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO²_implementatiemodel_Relaties:OSLO-Relaties). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:41:32.846Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OTL:OSLO²_implementatiemodel_Relaties). Using fallback URI (http://todo.com/) instead.
+
+2026-06-17T09:41:32.849Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.849Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:RelatieObject has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMDBStatus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:NietDirectioneleRelatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.850Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcIdentificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAssetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:KlAlgWeekdagen has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcOpeningsurenSpecificatie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:KlAlgProvincie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:KlAlgGemeente has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:KwantWrdInVolt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.851Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWGehostOp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsNetwerkECC has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBeheer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Sturing has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Voedt has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:KlBetrokkenheidRol has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HoortBij has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.852Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanvullendeGeometrie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerktoegang has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftToegangsprocedure has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsInspectieVan has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Bevestiging has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBijlage has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftAanzicht has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftKeuring has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:SluitAanOp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsSWOnderdeelVan has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.853Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Omhult has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftNetwerkProtectie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:LigtOp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:IsAdmOnderdeelVan has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:VoedtAangestuurd has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftVPlan has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.854Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:DtcDienstDatumVPlan has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMDBStatus:isActief has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:RelatieObject:assetId has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:RelatieObject:bronAssetId has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.856Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:RelatieObject:doelAssetId has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:RelatieObject:typeURI has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:AIMVersie:assetVersie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcIdentificator:identificator has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcIdentificator:toegekendDoor has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:straatnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.857Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:huisnummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:bus has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:postcode has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:provincie has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAdres:gemeente has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAssetVersie:versienummer has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAssetVersie:timestamp has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.858Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcAssetVersie:context has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:contactnaam has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:email has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:telefoon has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:fax has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:opmerkingen has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.859Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:website has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:beschikbaarheid has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcContactinfo:adres has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcOpeningsurenSpecificatie:openingstijd has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcOpeningsurenSpecificatie:sluitingstijd has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:DtcOpeningsurenSpecificatie:weekdag has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.860Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Implementatieelement:KwantWrdInVolt:waarde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:Voedt:aansluitspanning has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:rol has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:specifiekeContactinfo has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:datumAanvang has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftBetrokkene:datumEinde has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.861Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:HeeftVPlan:dienstdatum has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.862Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:DtcDienstDatumVPlan:indienstname has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.862Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:DtcDienstDatumVPlan:uitdienstname has an empty value for tag usageNote-nl.
+
+2026-06-17T09:41:32.862Z warn: [ConverterHandler]: Entity with path OSLO²_implementatiemodel_Relaties:OSLO-Onderdeel:DtcDienstDatumVPlan:commentaar has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
-
-file relaties.jsonld does not exist
 

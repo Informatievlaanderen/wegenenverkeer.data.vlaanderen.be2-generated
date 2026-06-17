@@ -1,0 +1,97 @@
+{
+  "title": "GeluidstestRapport",
+  "type": "object",
+  "description": "Complex datatype voor een verslag dat de resultaten van de geluidsmetingen weergeeft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeluidstestRapport)",
+      "pattern": "^GeluidstestRapport$"
+    },
+    "gemetenWaarde": {
+      "type": "object",
+      "description": "De sterkte van het geluid in dB.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "locatieInSitulabo": {
+      "$ref": "#/components/schemas/MeetMethode"
+    },
+    "norm": {
+      "$ref": "#/components/schemas/Norm"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TestType"
+    },
+    "testrapport": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "geluidsabsorptieReflectie": {
+      "type": "object",
+      "description": "De absorptie- of reflectiewaarde van het geluidsscherm als geheel getal.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "luchtgeluidsisolatie": {
+      "type": "object",
+      "description": "De gemeten waarde van het luchtgeluidsisiolatie van het geluidsscherm.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "gemetenWaarde",
+    "locatieInSitulabo",
+    "norm",
+    "type",
+    "testrapport",
+    "geluidsabsorptieReflectie",
+    "luchtgeluidsisolatie"
+  ]
+}

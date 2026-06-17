@@ -1,0 +1,23 @@
+{
+  "title": "TechnischePut",
+  "type": "object",
+  "description": "Ondergrondse toezichtsput (manhole). Deze kan telecom installaties (glasvezel,koper) of elektriciteitskabels bevatten. Kan uit verschillende materialen bestaan: polycarbonaat,beton,gemetst,of staal.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TechnischePut)",
+      "pattern": "^TechnischePut$"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaal"
+  ]
+}

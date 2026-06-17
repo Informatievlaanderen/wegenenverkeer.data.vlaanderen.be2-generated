@@ -1,0 +1,106 @@
+{
+  "title": "Onderdoorboring",
+  "type": "object",
+  "description": "Gebruikt voor de registratie van kenmerken en de geometrie van een boring onder een weg of spoorweg.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Onderdoorboring)",
+      "pattern": "^Onderdoorboring$"
+    },
+    "vergunning": {
+      "type": "array",
+      "description": "Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "retributie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInEuro"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "notitie": {
+      "type": "object",
+      "description": "Extra notitie voor het object.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "vergunning",
+    "retributie",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

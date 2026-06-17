@@ -1,0 +1,134 @@
+{
+  "title": "Toegangsprocedure",
+  "type": "object",
+  "description": "De procedure die gevolgd moet worden om toegang te verkrijgen tot een object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toegangsprocedure)",
+      "pattern": "^Toegangsprocedure$"
+    },
+    "id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeSleutel": {
+      "type": "array",
+      "description": "Lijst van TypeSleutel items.",
+      "items": {
+        "$ref": "#/components/schemas/TypeSleutel"
+      },
+      "minItems": 1
+    },
+    "typeBadge": {
+      "type": "array",
+      "description": "Lijst van TypeBadge items.",
+      "items": {
+        "$ref": "#/components/schemas/TypeBadge"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam van de toegangsprocedure.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Een uitgebreide toelichting die beschrijft hoe de toegangsprocedure gebruikt kan worden.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "typeURI": {
+      "type": "object",
+      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "aandachtspunt": {
+      "type": "array",
+      "description": "Lijst van ToegangsprocedureAandachtspunt items.",
+      "items": {
+        "$ref": "#/components/schemas/ToegangsprocedureAandachtspunt"
+      },
+      "minItems": 1
+    },
+    "toegangstijden": {
+      "type": "array",
+      "description": "Lijst van Toegangstijden items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegangstijden"
+      },
+      "minItems": 1
+    },
+    "bijlage": {
+      "type": "array",
+      "description": "Lijst van BijlageToegangsprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/BijlageToegangsprocedure"
+      },
+      "minItems": 1
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "type": "object",
+      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "id",
+    "typeSleutel",
+    "typeBadge",
+    "naam",
+    "omschrijving",
+    "typeURI",
+    "aandachtspunt",
+    "toegangstijden",
+    "bijlage",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

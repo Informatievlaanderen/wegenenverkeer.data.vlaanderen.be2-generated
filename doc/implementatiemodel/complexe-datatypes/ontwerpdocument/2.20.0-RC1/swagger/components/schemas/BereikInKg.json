@@ -1,0 +1,27 @@
+{
+  "title": "BereikInKg",
+  "type": "object",
+  "description": "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BereikInKg)",
+      "pattern": "^BereikInKg$"
+    },
+    "minimum": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "maximum": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    }
+  },
+  "required": [
+    "@type",
+    "minimum",
+    "maximum"
+  ]
+}

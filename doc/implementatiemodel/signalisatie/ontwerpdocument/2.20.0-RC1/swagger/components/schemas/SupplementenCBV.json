@@ -1,0 +1,27 @@
+{
+  "title": "SupplementenCBV",
+  "type": "object",
+  "description": "Complex datatype voor de supplementen van de CBV.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SupplementenCBV)",
+      "pattern": "^SupplementenCBV$"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KleurSupplementen"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeSupplementenCBV"
+    }
+  },
+  "required": [
+    "@type",
+    "kleur",
+    "type"
+  ]
+}
