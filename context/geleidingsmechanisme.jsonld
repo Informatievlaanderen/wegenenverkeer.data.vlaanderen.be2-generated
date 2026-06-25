@@ -1,0 +1,872 @@
+{
+  "@context": {
+    "AIMDatabankStatus": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+    "AIMNaamObject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+    "AIMObject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+    "AIMToestand": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+    "AIMVersie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
+    "Aangrijping": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Aangrijping",
+    "AfmetingBxlInCentimeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm",
+    "AfmetingBxlInCentimeter.breedte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.breedte",
+      "@type": "@id"
+    },
+    "AfmetingBxlInCentimeter.lengte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.lengte",
+      "@type": "@id"
+    },
+    "AfmetingBxlxhInMeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM",
+    "AfmetingBxlxhInMeter.breedte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.breedte",
+      "@type": "@id"
+    },
+    "AfmetingBxlxhInMeter.lengte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.lengte",
+      "@type": "@id"
+    },
+    "Ankerplaat": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ankerplaat",
+    "Ankerstang": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ankerstang",
+    "AsMechanisch": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AsMechanisch",
+    "AslagerCombinatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie",
+    "AssetVersie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+    "Balans": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Balans",
+    "Balans.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Balans.isGevuldMetTegengewicht",
+      "@type": "@id"
+    },
+    "Balansarm": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Balansarm",
+    "Bestandsbijlage": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
+    "Bevestiging": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestiging",
+    "BeweegbaarDeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BeweegbareWaterkerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie",
+    "BeweegbareWaterkerendeConstructie.gewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.gewicht",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftHijsogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftHijsogen",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftPompput": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftPompput",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.materiaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.materiaal",
+      "@type": "@id"
+    },
+    "Bewegingsmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme",
+    "Bewegingsmechanisme.aantalSmeerpunten": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme.aantalSmeerpunten",
+      "@type": "@id"
+    },
+    "Bewegingsmechanisme.typeSmering": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme.typeSmering",
+      "@type": "@id"
+    },
+    "BewegingsvrijheidInVlakBijOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "Bovenrolwagen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen",
+    "Bovenrolwagen.gewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.gewicht",
+      "@type": "@id"
+    },
+    "Bovenrolwagen.heeftHijsogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.heeftHijsogen",
+      "@type": "@id"
+    },
+    "Brugdeel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel",
+    "Brugligger": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger",
+    "Brugligger.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.type",
+      "@type": "@id"
+    },
+    "Buffercilinder": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Buffercilinder",
+    "Bufferinstallatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bufferinstallatie",
+    "BusMechanisch": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BusMechanisch",
+    "Centreermechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Centreermechanisme",
+    "Centreerstuk": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Centreerstuk",
+    "Centreerstuk.materiaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Centreerstuk.materiaal",
+      "@type": "@id"
+    },
+    "Centreervork": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Centreervork",
+    "Cilindermechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Cilindermechanisme",
+    "Cilindermechanisme.gewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Cilindermechanisme.gewicht",
+      "@type": "@id"
+    },
+    "ComplexDatatypeTechnischDocument": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTechnischDocument",
+    "ConstructieElement": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement",
+    "ConstructieElementSluisEnStuw": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+    "ConstructiefObject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject",
+    "Constructiehoofd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd",
+    "Datum": "http://www.w3.org/2001/XMLSchema#date",
+    "Datumtijd": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "DecimaalGetal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "Dichting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting",
+    "Dichting.materiaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting.materiaal",
+      "@type": "@id"
+    },
+    "Dichting.merk": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting.merk",
+      "@type": "@id"
+    },
+    "Dichting.modelnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting.modelnaam",
+      "@type": "@id"
+    },
+    "Dichting.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting.type",
+      "@type": "@id"
+    },
+    "DichtingMateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DichtingType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Draagstoel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Draagstoel",
+    "DraagstructuurBWCTWC": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DraagstructuurBWCTWC",
+    "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DraagstructuurBWCTWC.type",
+      "@type": "@id"
+    },
+    "Droogzetbaarheidtypes": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Drukvat": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Drukvat",
+    "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
+    "Geleidingsmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme",
+    "Geleidingsmechanisme.aantalSmeerpunten": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme.aantalSmeerpunten",
+      "@type": "@id"
+    },
+    "Geleidingsmechanisme.typeSmering": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme.typeSmering",
+      "@type": "@id"
+    },
+    "Glijgeleiding": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Glijgeleiding",
+    "Glijlager": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijlager",
+    "Glijlager.merk": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijlager.merk",
+      "@type": "@id"
+    },
+    "Glijlager.modelnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijlager.modelnaam",
+      "@type": "@id"
+    },
+    "Glijmateriaal": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijmateriaal",
+    "GraadVanBeweegbaarheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GraadVanStatischeBepaaldheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Grendel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Grendel",
+    "Grendelmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Grendelmechanisme",
+    "Halsbeugelmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme",
+    "Halsbeugelmechanisme.isRegelbaar": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme.isRegelbaar",
+      "@type": "@id"
+    },
+    "Halsbeugelmechanisme.typeMechanisme": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme.type",
+      "@type": "@id"
+    },
+    "Halsbeugeloog": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Halsbeugeloog",
+    "Halsbeugelpen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Halsbeugelpen",
+    "Halsbeugelschoen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Halsbeugelschoen",
+    "Hefportiek": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hefportiek",
+    "Hefportiek.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hefportiek.isGevuldMetTegengewicht",
+      "@type": "@id"
+    },
+    "Hefportiek.toegankelijkheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hefportiek.toegankelijkheid",
+      "@type": "@id"
+    },
+    "Heftoren": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Heftoren",
+    "Heftoren.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Heftoren.isGevuldMetTegengewicht",
+      "@type": "@id"
+    },
+    "Heftoren.toegankelijkheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Heftoren.toegankelijkheid",
+      "@type": "@id"
+    },
+    "Hoofdtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HoortBij": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HoortBij",
+    "Houdriem": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Houdriem",
+    "Identificator": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+    "Kelderlandhoofd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kelderlandhoofd",
+    "Kelderlandhoofd.funderingsaanzetOnderDeBodemVanDeWaterweg": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.funderingsAanzetOnderDeBodemVanDeWaterweg",
+      "@type": "@id"
+    },
+    "Kelderlandhoofd.inOfOpDeRandVanDeWaterweg": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.inOfOpDeRandVanDeWaterweg",
+      "@type": "@id"
+    },
+    "Kelderlandhoofd.typeVerbinding": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.typeVerbinding",
+      "@type": "@id"
+    },
+    "KeuzelijstTechnischDocument": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KwantitatieveWaardeInBar": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar",
+    "KwantitatieveWaardeInBar.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInBar.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCentimeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+    "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCentimeter.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKN": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+    "KwantitatieveWaardeInKN.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKN.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKilogram": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram",
+    "KwantitatieveWaardeInKilogram.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter",
+    "KwantitatieveWaardeInKubiekeCentimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKubiekeCentimeter.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMaand": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+    "KwantitatieveWaardeInMaand.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMaand.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+    "KwantitatieveWaardeInMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeter.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeterTAW": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW",
+    "KwantitatieveWaardeInMeterTAW.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeterTAW.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMillimeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
+    "KwantitatieveWaardeInMillimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMillimeter.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInTon": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+    "KwantitatieveWaardeInTon.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInTon.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMeter": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
+    "KwantitatieveWaardeInVierkanteMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.standaardEenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMeter.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.waarde",
+      "@type": "@id"
+    },
+    "Lager": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager",
+    "Lager.breedte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.breedte",
+      "@type": "@id"
+    },
+    "Lager.typeSmering": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.typeSmering",
+      "@type": "@id"
+    },
+    "Lagerblok": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Lagerblok",
+    "Landhoofd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd",
+    "Landhoofd.funderingsaanzetOnderDeBodemVanDeWaterweg": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.funderingsAanzetOnderDeBodemVanDeWaterweg",
+      "@type": "@id"
+    },
+    "Landhoofd.inOfOpDeRandVanDeWaterweg": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.inOfOpDeRandVanDeWaterweg",
+      "@type": "@id"
+    },
+    "Landhoofd.typeVerbinding": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.typeVerbinding",
+      "@type": "@id"
+    },
+    "LigtOp": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LigtOp",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MateriaalAanslagprofiel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalBWCTWC": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalBusEnRing": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalCentreerstuk": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalDeklaag": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalDragendeStructuurBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalTaatsmechanisme": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalTaatsschoen": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MerkDichting": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MerknamenVanGlijlagers": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ModelnaamDichting": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ModelnamenVanGlijlagers": "http://www.w3.org/2004/02/skos/core#Concept",
+    "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "Omhult": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omhult",
+    "Onderrolwagen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen",
+    "Onderrolwagen.gewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.gewicht",
+      "@type": "@id"
+    },
+    "Ophanging": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Ophanging",
+    "Oplegging": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Oplegging",
+    "Oplegging.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Oplegging.type",
+      "@type": "@id"
+    },
+    "Oplegmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Oplegmechanisme",
+    "OverigeFunctiesOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Pen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pen",
+    "Pendel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pendel",
+    "Pendel.gewicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pendel.gewicht",
+      "@type": "@id"
+    },
+    "Railconstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie",
+    "RingMechanisch": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RingMechanisch",
+    "Rol": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rol",
+    "Rolgeleiding": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rolgeleiding",
+    "RolwagenChassis": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rolwagenchassis",
+    "Schakel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Schakel",
+    "Scharnierpunt": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Scharnierpunt",
+    "Scharnierschoen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Scharnierschoen",
+    "Sluishoofd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Sluishoofd",
+    "SmeringType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Staalsoort": "http://www.w3.org/2004/02/skos/core#Concept",
+    "StaalsoortMetEquivalenten": "http://www.w3.org/2004/02/skos/core#Concept",
+    "StaalsoortObject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject",
+    "Stootblok": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stootblok",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Stuwhoofd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stuwhoofd",
+    "Taatsmechanisme": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme",
+    "Taatsmechanisme.isRegelbaar": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme.isRegelbaar",
+      "@type": "@id"
+    },
+    "Taatsmechanisme.typeMechanisme": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme.type",
+      "@type": "@id"
+    },
+    "Taatspen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspen",
+    "Taatspot": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspot",
+    "Taatsschoen": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatsschoen",
+    "TechnischDocument": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument",
+    "Tegenmateriaal": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Tegenmateriaal",
+    "Tekstblok": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok",
+    "Tekstblok.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
+      "@type": "@id"
+    },
+    "Toegankelijkheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Trekker": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker",
+    "Trekker.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker.type",
+      "@type": "@id"
+    },
+    "TypeAnkerplaat": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBevestigingRail": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBeweegbaarBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBeweegbareWaterkerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcTypeBWC",
+    "TypeBeweging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBrugligger": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeDoorsnede": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeGlijmateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeGrendel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeKlem": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeLandhoofd": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeMechanisme": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeNivelleringssysteem": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeTrekker": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeVerbinding": "http://www.w3.org/2004/02/skos/core#Concept",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "VasteWaterbouwkundigeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie",
+    "VasteWaterbouwkundigeConstructie.heeftPompput": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftPompput",
+      "@type": "@id"
+    },
+    "Veerhuis": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Veerhuis",
+    "Verenpakket": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verenpakket",
+    "Vormgeving": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Wentellager": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wentellager",
+    "Wentellager.merk": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wentellager.merk",
+      "@type": "@id"
+    },
+    "Wentellager.modelnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wentellager.modelnaam",
+      "@type": "@id"
+    },
+    "Wentellager.type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wentellager.type",
+      "@type": "@id"
+    },
+    "WentellagerMerk": "http://www.w3.org/2004/02/skos/core#Concept",
+    "WentellagerModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
+    "WentellagerType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Wiel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wiel",
+    "aIM-Toestand": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+      "@type": "@id"
+    },
+    "aantalCellen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.aantalCellen",
+      "@type": "@id"
+    },
+    "aantalOverspanningen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.aantalOverspanningen",
+      "@type": "@id"
+    },
+    "aantalVoegen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.aantalVoegen",
+      "@type": "@id"
+    },
+    "afmetingenMangat": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.afmetingenMangat",
+      "@type": "@id"
+    },
+    "asset-Id": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+      "@type": "@id"
+    },
+    "asset-Versie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "@type": "@id"
+    },
+    "basisAfmeting": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.basisAfmeting",
+      "@type": "@id"
+    },
+    "bestandsnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
+      "@type": "@id"
+    },
+    "bestekpostnummer": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+      "@type": "@id"
+    },
+    "bewegingsvrijheidInHetVlak": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Oplegging.bewegingsvrijheidInHetVlak",
+      "@type": "@id"
+    },
+    "bijlage": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTechnischDocument.bijlage",
+      "@type": "@id"
+    },
+    "context": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "@type": "@id"
+    },
+    "datumOprichtingObject": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+      "@type": "@id"
+    },
+    "detailplanBrugligger": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.detailplanBrugligger",
+      "@type": "@id"
+    },
+    "diepteVanDeSponning": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd.diepteSponning",
+      "@type": "@id"
+    },
+    "drempelpeil": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd.drempelpeil",
+      "@type": "@id"
+    },
+    "droogzetbaarheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd.droogzetbaarheid",
+      "@type": "@id"
+    },
+    "graadVanBeweegbaarheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.graadVanBeweegbaarheid",
+      "@type": "@id"
+    },
+    "graadVanStatischeBepaaldheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.graadVanStatischeBepaaldheid",
+      "@type": "@id"
+    },
+    "heeftAanslagprofiel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stuwhoofd.heeftAanslagprofiel",
+      "@type": "@id"
+    },
+    "heeftDeksel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.heeftDeksel",
+      "@type": "@id"
+    },
+    "heeftDraaischelpen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftDraaischelpen",
+      "@type": "@id"
+    },
+    "heeftDrukstoel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatsschoen.heeftDrukstoel",
+      "@type": "@id"
+    },
+    "heeftHouder": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspen.heeftHouder",
+      "@type": "@id"
+    },
+    "heeftKelder": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd.heeftKelder",
+      "@type": "@id"
+    },
+    "heeftLangsblokkeringrail": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.heeftLangsblokkeringrail",
+      "@type": "@id"
+    },
+    "heeftMeetcel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pendel.heeftMeetcel",
+      "@type": "@id"
+    },
+    "heeftOnderlegmat": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.heeftOnderlegmat",
+      "@type": "@id"
+    },
+    "heeftOpboutbareDraaischelpen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen",
+      "@type": "@id"
+    },
+    "heeftOpboutbareHijsogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen",
+      "@type": "@id"
+    },
+    "heeftSchraper": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.heeftSchraper",
+      "@type": "@id"
+    },
+    "heeftTrekoog": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.heeftTrekoog",
+      "@type": "@id"
+    },
+    "heeftTussenplaat": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.heeftTussenplaat",
+      "@type": "@id"
+    },
+    "heeftVerendElement": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker.heeftVerendElement",
+      "@type": "@id"
+    },
+    "heeftVoegen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.heeftVoegen",
+      "@type": "@id"
+    },
+    "heeftVoorzieningNegatieveReactie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.heeftVoorzieningNegatieveReactie",
+      "@type": "@id"
+    },
+    "heeftWoelkamer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftWoelkamer",
+      "@type": "@id"
+    },
+    "hoeveelheidVetPerSmeerronde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.hoeveelheidVetPerSmeerronde",
+      "@type": "@id"
+    },
+    "hoogte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.hoogte",
+      "@type": "@id"
+    },
+    "identificator": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
+      "@type": "@id"
+    },
+    "individueleAfstandOverspanningen": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.individueleAfstandOverspanningen",
+      "@type": "@id"
+    },
+    "inwendigeDiameter": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.inwendigeDiameter",
+      "@type": "@id"
+    },
+    "isActief": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
+      "@type": "@id"
+    },
+    "isHoogtebeperkingAanwezig": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig",
+      "@type": "@id"
+    },
+    "isMangatAanwezig": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isMangatAanwezig",
+      "@type": "@id"
+    },
+    "isNivelleerOfSpuivoorzieningAanwezig": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig",
+      "@type": "@id"
+    },
+    "karakteristiekeToelaatbareBelasting": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bufferinstallatie.karakteristiekeToelaatbareBelasting",
+      "@type": "@id"
+    },
+    "karakteristiekeToelaatbareKracht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pendel.karakteristiekeToelaatbareKracht",
+      "@type": "@id"
+    },
+    "klemtype": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.klemtype",
+      "@type": "@id"
+    },
+    "kracht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ankerplaat.kracht",
+      "@type": "@id"
+    },
+    "kruinpeil": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.kruinpeil",
+      "@type": "@id"
+    },
+    "materiaalAanslagprofiel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stuwhoofd.profielVastAanslag",
+      "@type": "@id"
+    },
+    "materiaalBus": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BusMechanisch.materiaalBus",
+      "@type": "@id"
+    },
+    "materiaalDeklaag": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspen.materiaalDeklaag",
+      "@type": "@id"
+    },
+    "materiaalDragendeStructuur": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.materiaalDragendeStructuur",
+      "@type": "@id"
+    },
+    "materiaalRing": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RingMechanisch.materiaalRing",
+      "@type": "@id"
+    },
+    "materiaalTaatspen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspen.materiaalTaatspen",
+      "@type": "@id"
+    },
+    "materiaalTaatspot": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatspot.materiaalTaatspot",
+      "@type": "@id"
+    },
+    "materiaalTaatsschoen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Taatsschoen.materiaalTaatsschoen",
+      "@type": "@id"
+    },
+    "maximaleDruk": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Drukvat.maximaleDruk",
+      "@type": "@id"
+    },
+    "maximaleKracht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Cilindermechanisme.maximaleKracht",
+      "@type": "@id"
+    },
+    "mime-Type": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType",
+      "@type": "@id"
+    },
+    "naam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+      "@type": "@id"
+    },
+    "niveauHoogtebeperking": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.niveauHoogtebeperking",
+      "@type": "@id"
+    },
+    "notitie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+      "@type": "@id"
+    },
+    "omschrijving": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving",
+      "@type": "@id"
+    },
+    "opmaakdatum": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum",
+      "@type": "@id"
+    },
+    "overigeFuncties": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Oplegging.overigeFuncties",
+      "@type": "@id"
+    },
+    "slag": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Cilindermechanisme.slag",
+      "@type": "@id"
+    },
+    "soortStaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject.soortStaal",
+      "@type": "@id"
+    },
+    "staalsoorten": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject.materiaal",
+      "@type": "@id"
+    },
+    "standaardbestekpostnummer": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+      "@type": "@id"
+    },
+    "standaardeenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram.standaardEenheid",
+      "@type": "@id"
+    },
+    "technischDocument": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument.technischDocument",
+      "@type": "@id"
+    },
+    "technischeFiche": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dichting.technischeFiche",
+      "@type": "@id"
+    },
+    "theoretischeLevensduur": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+      "@type": "@id"
+    },
+    "timestamp": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "@type": "@id"
+    },
+    "toegekendDoor": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
+      "@type": "@id"
+    },
+    "totaleBreedteBrugdeel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.totaleBreedteBrugdeel",
+      "@type": "@id"
+    },
+    "totaleLengteBrugdeel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.totaleLengteBrugdeel",
+      "@type": "@id"
+    },
+    "totaleOppervlakteBrugdeel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.totaleOppervlakteBrugdeel",
+      "@type": "@id"
+    },
+    "totaleSpankracht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.totaleSpankracht",
+      "@type": "@id"
+    },
+    "typeAnkerplaat": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ankerplaat.typeAnkerplaat",
+      "@type": "@id"
+    },
+    "typeBevestigingRail": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.typeBevestiging",
+      "@type": "@id"
+    },
+    "typeBeweegbaarBrugdeel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.typeBeweegbaarBrugdeel",
+      "@type": "@id"
+    },
+    "typeBeweegbareconstructie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.typeBeweegbareconstructie",
+      "@type": "@id"
+    },
+    "typeBeweging": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.typeBeweging",
+      "@type": "@id"
+    },
+    "typeBrugdeel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel.typeBrugdeel",
+      "@type": "@id"
+    },
+    "typeConcept": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcTypeBWC.typeConcept",
+      "@type": "@id"
+    },
+    "typeConstructie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcTypeBWC.typeConstructie",
+      "@type": "@id"
+    },
+    "typeDocument": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTechnischDocument.typeDocument",
+      "@type": "@id"
+    },
+    "typeDoorsnede": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.typeDoorsnede",
+      "@type": "@id"
+    },
+    "typeGlijmateriaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijmateriaal.typeGlijmateriaal",
+      "@type": "@id"
+    },
+    "typeGrendel": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Grendel.typeGrendel",
+      "@type": "@id"
+    },
+    "typeHoofd": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Sluishoofd.typeHoofd",
+      "@type": "@id"
+    },
+    "typeKlem": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Railconstructie.typeKlem",
+      "@type": "@id"
+    },
+    "typeLandhoofd": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.typeLandhoofd",
+      "@type": "@id"
+    },
+    "typeNivelleringssysteem": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.typeNivelleringssysteem",
+      "@type": "@id"
+    },
+    "typeURI": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+      "@type": "@id"
+    },
+    "uitwendigeDiameter": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Lager.uitwendigeDiameter",
+      "@type": "@id"
+    },
+    "uri": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
+      "@type": "@id"
+    },
+    "versienummer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "@type": "@id"
+    },
+    "vormgeving": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Glijlager.vormgeving",
+      "@type": "@id"
+    },
+    "zijnNegatieveSteunpuntreactiesAanwezig": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Oplegging.zijnNegatieveSteunpuntreactiesAanwezig",
+      "@type": "@id"
+    }
+  }
+}

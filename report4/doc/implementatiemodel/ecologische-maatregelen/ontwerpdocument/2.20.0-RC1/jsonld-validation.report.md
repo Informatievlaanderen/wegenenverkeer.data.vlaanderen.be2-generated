@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2026-06-17T11:59:10.134Z info: Loaded 54 URI prefixes into whitelist
+2026-06-25T15:42:53.703Z info: Loaded 52 URI prefixes into whitelist
 
-2026-06-17T11:59:10.149Z info: Validation successful! All assigned URIs are whitelisted.
+2026-06-25T15:42:53.716Z info: Validation successful! All assigned URIs are whitelisted.
 
-2026-06-17T11:59:10.149Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-06-25T15:42:53.717Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-06-17T11:59:10.149Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-06-25T15:42:53.717Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2026-06-17T11:59:10.150Z info: Validation successful! All base URIs seem to be valid.
+2026-06-25T15:42:53.717Z info: Validation successful! All base URIs seem to be valid.
 
-2026-06-17T11:59:10.150Z info: Validation successful! All referenced classes and attributes seem to be included.
+2026-06-25T15:42:53.717Z info: Validation successful! All referenced classes and attributes seem to be included.
 

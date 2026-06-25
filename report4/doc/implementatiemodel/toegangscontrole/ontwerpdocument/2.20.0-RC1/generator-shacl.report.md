@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-06-17T11:59:13.502Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cea35d36a426126ceeeb1ef14b861ec43e7a755397cbc0a65bc21ef7cec492c6](all-toegangscontrole.jsonld#L12755)".
+2026-06-25T15:43:31.429Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cea35d36a426126ceeeb1ef14b861ec43e7a755397cbc0a65bc21ef7cec492c6](all-toegangscontrole.jsonld#L12755)".
 
