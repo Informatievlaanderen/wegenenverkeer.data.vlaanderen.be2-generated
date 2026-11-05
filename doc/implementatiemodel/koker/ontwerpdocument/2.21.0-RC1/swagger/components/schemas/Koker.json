@@ -1,0 +1,118 @@
+{
+  "title": "Koker",
+  "type": "object",
+  "description": "Een koker is een opdeling van het kokercomplex in de lengte richting, het heeft een doorvoerende functie met een in- en uitgang en eventuele zijgangen, die met een gesloten doorsnede verbonden zijn.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Koker)",
+      "pattern": "^Koker$"
+    },
+    "gebruikersInDeKoker": {
+      "$ref": "#/components/schemas/KokerElementGebruikersType"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "typeFundering": {
+      "$ref": "#/components/schemas/KokerTypeFundering"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "ontwerpbelastingConstructie": {
+      "$ref": "#/components/schemas/Ontwerpbelasting"
+    },
+    "ontwerpbelasting": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "brandwerendeMaatregelen": {
+      "type": "array",
+      "description": "De verschillende brandwerende maatregelen toegepast in de koker. Lijst van TypeBrandwerendheid items.",
+      "items": {
+        "$ref": "#/components/schemas/TypeBrandwerendheid"
+      },
+      "minItems": 1
+    },
+    "maximaleVrijeHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Koker.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Koker.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Koker.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Koker.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Koker.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Koker.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Koker.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Koker.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "gebruikersInDeKoker",
+    "lengte",
+    "typeFundering",
+    "breedte",
+    "oppervlakte",
+    "ontwerpbelastingConstructie",
+    "ontwerpbelasting",
+    "brandwerendeMaatregelen",
+    "maximaleVrijeHoogte",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

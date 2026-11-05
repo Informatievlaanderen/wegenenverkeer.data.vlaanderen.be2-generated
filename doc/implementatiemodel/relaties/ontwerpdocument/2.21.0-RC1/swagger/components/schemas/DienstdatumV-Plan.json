@@ -1,0 +1,31 @@
+{
+  "title": "DienstdatumV-Plan",
+  "type": "object",
+  "description": "Complex datatype ter inventarisatie van de indienst- en uitdienstname van een V-plan.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DienstdatumV-Plan)",
+      "pattern": "^DienstdatumV-Plan$"
+    },
+    "indienstname": {
+      "$ref": "#/components/schemas/DienstdatumV-Plan.indienstname"
+    },
+    "uitdienstname": {
+      "$ref": "#/components/schemas/DienstdatumV-Plan.uitdienstname"
+    },
+    "commentaar": {
+      "$ref": "#/components/schemas/DienstdatumV-Plan.commentaar"
+    }
+  },
+  "required": [
+    "@type",
+    "indienstname",
+    "uitdienstname",
+    "commentaar"
+  ]
+}

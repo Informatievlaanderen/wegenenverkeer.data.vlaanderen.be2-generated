@@ -1,0 +1,120 @@
+{
+  "title": "GeluidwerendeConstructie",
+  "type": "object",
+  "description": "Een geluidswerende wandvormige constructie bestaande uit een desgevallend geluidsisolerend materiaal en/of geluidsabsorberend materiaal en voorzien van de nodige structuren om de bouwkundige stabiliteit te verzekeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeluidwerendeConstructie)",
+      "pattern": "^GeluidwerendeConstructie$"
+    },
+    "totaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "overzichtsafbeelding": {
+      "type": "array",
+      "description": "Dit een overzichtsfoto van de hele constructie. Op basis van deze afbeelding kan je snel bekijken hoe de kleur of hoogte varieert over het verloop van de geluidswerende constructie. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "rekennota": {
+      "type": "array",
+      "description": "Dit is een document waarin allerlei berekeningen bijgehouden worden omtrent de stabiliteit en sterkte van de geluidswerende constructie (oa de variatie in statische belasting en windbelasting over het verloop van geluidswerende constructie). Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "horizontaalRuimtebeslag": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "totaleOppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "Dit document geeft volgende zaken mee: producent, productnaam (type), beschrijving van de geplaatste constructie, certificatie (CE en ISO), montage, akoestische karakteristieken, duurzaamheid en brandwerende kenmerken. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "detailplanHoogteverloop": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "minimaleMaximaleSchermhoogte": {
+      "$ref": "#/components/schemas/MinMaxHoogteSchermelement"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GeluidwerendeConstructie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GeluidwerendeConstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "totaleLengte",
+    "overzichtsafbeelding",
+    "rekennota",
+    "horizontaalRuimtebeslag",
+    "totaleOppervlakte",
+    "technischeFiche",
+    "detailplanHoogteverloop",
+    "minimaleMaximaleSchermhoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

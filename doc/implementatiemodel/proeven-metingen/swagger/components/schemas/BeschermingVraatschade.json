@@ -1,0 +1,27 @@
+{
+  "title": "BeschermingVraatschade",
+  "type": "object",
+  "description": "Complex datatype voor bescherming van de stam tegen knaagdieren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeschermingVraatschade)",
+      "pattern": "^BeschermingVraatschade$"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalBeschermingVraatschade"
+    },
+    "tegenMaaischade": {
+      "$ref": "#/components/schemas/BeschermingVraatschade.tegenMaaischade"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaal",
+    "tegenMaaischade"
+  ]
+}

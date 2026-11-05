@@ -1,0 +1,142 @@
+{
+  "title": "VerschaaldeLetterMarkering",
+  "type": "object",
+  "description": "Een markering bestaande uit letters die een verschaling ondergaat zoals een vergroting en/of een verkleining.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerschaaldeLetterMarkering)",
+      "pattern": "^VerschaaldeLetterMarkering$"
+    },
+    "letter": {
+      "$ref": "#/components/schemas/LetterVerschaald"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeVanDeVerschaaldeLetter"
+    },
+    "vergrotingsfactor": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.vergrotingsfactor"
+    },
+    "basisoppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "verlengingsfactor": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.verlengingsfactor"
+    },
+    "isGoedgekeurd": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isGoedgekeurd"
+    },
+    "versieGoedgekeurd": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.versieGoedgekeurd"
+    },
+    "markeringsysteemCOPRO": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "opvatting": {
+      "$ref": "#/components/schemas/MarkeringOpvatting"
+    },
+    "markeringsoort": {
+      "$ref": "#/components/schemas/SoortMarkeringsproduct"
+    },
+    "isTijdelijk": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isTijdelijk"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche(s) van de markering. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "isHandwerk": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isHandwerk"
+    },
+    "markeringssysteem": {
+      "$ref": "#/components/schemas/Markeringssysteem"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KleurMarkering"
+    },
+    "markeringsproduct": {
+      "$ref": "#/components/schemas/Markeringsproduct"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerschaaldeLetterMarkering.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerschaaldeLetterMarkering.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "letter",
+    "oppervlakte",
+    "type",
+    "vergrotingsfactor",
+    "basisoppervlakte",
+    "verlengingsfactor",
+    "isGoedgekeurd",
+    "versieGoedgekeurd",
+    "markeringsysteemCOPRO",
+    "opvatting",
+    "markeringsoort",
+    "isTijdelijk",
+    "technischeFiche",
+    "isHandwerk",
+    "markeringssysteem",
+    "kleur",
+    "markeringsproduct",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

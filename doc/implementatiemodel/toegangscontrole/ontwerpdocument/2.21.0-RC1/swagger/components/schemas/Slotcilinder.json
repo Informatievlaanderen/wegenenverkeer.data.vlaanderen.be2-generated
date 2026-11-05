@@ -1,0 +1,97 @@
+{
+  "title": "Slotcilinder",
+  "type": "object",
+  "description": "Onderdeel van het slotmechanisme waarin de sleutel wordt gestoken. Het slot kan enkel worden geopend door de juiste sleutel in de cilinder te steken en deze te draaien in de behuizing.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Slotcilinder)",
+      "pattern": "^Slotcilinder$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenSlotcilinders"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenSlotcilinders"
+    },
+    "maat": {
+      "$ref": "#/components/schemas/MaatVanDeSlotcilinder"
+    },
+    "beveiligingsfactor": {
+      "$ref": "#/components/schemas/SlotcilinderBeveiligingsfactor"
+    },
+    "sleutelplan": {
+      "$ref": "#/components/schemas/Sleutelplan"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Slotcilinder.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Slotcilinder.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Slotcilinder.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Slotcilinder.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Slotcilinder.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Slotcilinder.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Slotcilinder.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Slotcilinder.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "maat",
+    "beveiligingsfactor",
+    "sleutelplan",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

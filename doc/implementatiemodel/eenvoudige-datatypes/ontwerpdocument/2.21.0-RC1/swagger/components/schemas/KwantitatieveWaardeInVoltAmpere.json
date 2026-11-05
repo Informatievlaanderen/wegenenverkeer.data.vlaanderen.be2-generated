@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInVoltAmpere",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in voltampere uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInVoltAmpere)",
+      "pattern": "^KwantitatieveWaardeInVoltAmpere$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVoltAmpere.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVoltAmpere.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

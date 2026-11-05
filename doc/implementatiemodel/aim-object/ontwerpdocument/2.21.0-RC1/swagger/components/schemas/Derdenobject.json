@@ -1,0 +1,60 @@
+{
+  "title": "Derdenobject",
+  "type": "object",
+  "description": "Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Derdenobject)",
+      "pattern": "^Derdenobject$"
+    },
+    "foto": {
+      "type": "array",
+      "description": "Een foto van het derdenobject die eventuele detailinformatie weergeeft. Enkel bestanden die een foto zijn. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Derdenobject.omschrijving"
+    },
+    "contactgegevens": {
+      "$ref": "#/components/schemas/Derdenobject.contactgegevens"
+    },
+    "heeftAansluitkastGeïNtegreerd": {
+      "$ref": "#/components/schemas/Derdenobject.heeftAansluitkastGeïNtegreerd"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Derdenobject.typeURI"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Derdenobject.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "foto",
+    "asset-Id",
+    "omschrijving",
+    "contactgegevens",
+    "heeftAansluitkastGeïNtegreerd",
+    "typeURI",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInLiter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in liter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInLiter)",
+      "pattern": "^KwantitatieveWaardeInLiter$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiter.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiter.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

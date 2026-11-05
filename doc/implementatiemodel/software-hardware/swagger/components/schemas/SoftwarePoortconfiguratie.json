@@ -13,34 +13,10 @@
       "pattern": "^SoftwarePoortconfiguratie$"
     },
     "service": {
-      "type": "object",
-      "description": "De service die op een bepaalde poort is aangesloten.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/SoftwarePoortconfiguratie.service"
     },
     "poortnummer": {
-      "type": "object",
-      "description": "Het nummer dat werd toegekend aan de (netwerk)poort.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Integer$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/SoftwarePoortconfiguratie.poortnummer"
     },
     "richting": {
       "$ref": "#/components/schemas/PoortconfiguratieRichting"

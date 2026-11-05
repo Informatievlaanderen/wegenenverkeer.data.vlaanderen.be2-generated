@@ -1,0 +1,117 @@
+{
+  "title": "Funderingspaal",
+  "type": "object",
+  "description": "Diepfundering waarbij d.m.v. palen de belasting wordt afgedragen naar de diepe ondergrond. Enkel te gebruiken wanneer het type paal niet gekend is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Funderingspaal)",
+      "pattern": "^Funderingspaal$"
+    },
+    "afkap-OfBovenpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "dwarsafmetingen": {
+      "$ref": "#/components/schemas/Dwarsafmetingen"
+    },
+    "paallengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hellings-OfSchoorhoek": {
+      "$ref": "#/components/schemas/Hellings-OfSchoorhoek"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "aanzetpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Funderingspaal.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Funderingspaal.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Funderingspaal.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Funderingspaal.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Funderingspaal.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Funderingspaal.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Funderingspaal.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "afkap-OfBovenpeil",
+    "dwarsafmetingen",
+    "paallengte",
+    "hellings-OfSchoorhoek",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota",
+    "aanzetpeil",
+    "hoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

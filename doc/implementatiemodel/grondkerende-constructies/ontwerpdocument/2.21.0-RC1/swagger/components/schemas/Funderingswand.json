@@ -1,0 +1,117 @@
+{
+  "title": "Funderingswand",
+  "type": "object",
+  "description": "Wand die dient om de belastingen van constructies/elementen op te vangen/over te brengen naar draagkrachtige lagen. Kan ook een grondkerende/waterkerende functie hebben.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Funderingswand)",
+      "pattern": "^Funderingswand$"
+    },
+    "totaleLengteFunderingswand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Funderingswand.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Funderingswand.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Funderingswand.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Funderingswand.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Funderingswand.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Funderingswand.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Funderingswand.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "heeftWaterremmendeFunctie": {
+      "$ref": "#/components/schemas/Funderingswand.heeftWaterremmendeFunctie"
+    },
+    "drukdraagvermogenInUitersteGrenstoestandVanDeWand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloNewtonPerMeter"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestandenVanDeWand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloNewtonPerMeter"
+    },
+    "trekdraagvermogenInUitersteGrenstoestandVanDeWand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloNewtonPerMeter"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestandenVanDeWand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloNewtonPerMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "totaleLengteFunderingswand",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota",
+    "heeftWaterremmendeFunctie",
+    "drukdraagvermogenInUitersteGrenstoestandVanDeWand",
+    "drukdraagvermogenInGebruiksgrenstoestandenVanDeWand",
+    "trekdraagvermogenInUitersteGrenstoestandVanDeWand",
+    "trekdraagvermogenInGebruiksgrenstoestandenVanDeWand"
+  ]
+}

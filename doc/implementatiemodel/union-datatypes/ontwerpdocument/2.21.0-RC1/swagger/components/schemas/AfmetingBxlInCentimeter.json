@@ -1,0 +1,27 @@
+{
+  "title": "AfmetingBxlInCentimeter",
+  "type": "object",
+  "description": "Complex datatype voor de afmeting van de breedte en de lengte in centimeter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingBxlInCentimeter)",
+      "pattern": "^AfmetingBxlInCentimeter$"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "breedte",
+    "lengte"
+  ]
+}

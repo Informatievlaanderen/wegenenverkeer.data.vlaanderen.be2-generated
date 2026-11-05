@@ -1,0 +1,121 @@
+{
+  "title": "IntercomToestel",
+  "type": "object",
+  "description": "Het toestel dat deel uitmaakt van een intercomsysteem en audio- en/of videocommunicatie tussen twee personen mogelijk maakt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IntercomToestel)",
+      "pattern": "^IntercomToestel$"
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "transporttype": {
+      "$ref": "#/components/schemas/AudioTransportType"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/IntercomtoestelMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/IntercomtoestelModelnamen"
+    },
+    "heeftVideo": {
+      "$ref": "#/components/schemas/IntercomToestel.heeftVideo"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/IntercomToestel.dNSNaam"
+    },
+    "oproepnummer": {
+      "$ref": "#/components/schemas/IntercomToestel.oproepnummer"
+    },
+    "heeftCamera": {
+      "$ref": "#/components/schemas/IntercomToestel.heeftCamera"
+    },
+    "isInbouw": {
+      "$ref": "#/components/schemas/IntercomToestel.isInbouw"
+    },
+    "uitvoering": {
+      "$ref": "#/components/schemas/IntercomUitvoering"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/IntercomToestel.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/IntercomToestel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/IntercomToestel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IntercomToestel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/IntercomToestel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IntercomToestel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/IntercomToestel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/IntercomToestel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "iP-Adres",
+    "transporttype",
+    "technischeFiche",
+    "merk",
+    "modelnaam",
+    "heeftVideo",
+    "dNSNaam",
+    "oproepnummer",
+    "heeftCamera",
+    "isInbouw",
+    "uitvoering",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

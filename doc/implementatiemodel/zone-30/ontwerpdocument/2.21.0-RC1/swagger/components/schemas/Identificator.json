@@ -1,0 +1,27 @@
+{
+  "title": "Identificator",
+  "type": "object",
+  "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Identificator)",
+      "pattern": "^Identificator$"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator.identificator"
+    },
+    "toegekendDoor": {
+      "$ref": "#/components/schemas/Identificator.toegekendDoor"
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "toegekendDoor"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Contactinfo",
+  "type": "object",
+  "description": "Complex datatype voor de informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Contactinfo)",
+      "pattern": "^Contactinfo$"
+    },
+    "contactnaam": {
+      "$ref": "#/components/schemas/Contactinfo.contactnaam"
+    },
+    "email": {
+      "$ref": "#/components/schemas/Contactinfo.email"
+    },
+    "telefoon": {
+      "$ref": "#/components/schemas/Contactinfo.telefoon"
+    },
+    "fax": {
+      "$ref": "#/components/schemas/Contactinfo.fax"
+    },
+    "opmerkingen": {
+      "$ref": "#/components/schemas/Contactinfo.opmerkingen"
+    },
+    "website": {
+      "$ref": "#/components/schemas/Contactinfo.website"
+    },
+    "beschikbaarheid": {
+      "type": "array",
+      "description": "Periode waarin contact kan worden opgenomen. Lijst van Openingsurenspecificatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Openingsurenspecificatie"
+      },
+      "minItems": 1
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

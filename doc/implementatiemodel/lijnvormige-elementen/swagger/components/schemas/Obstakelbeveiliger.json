@@ -20,59 +20,27 @@
     },
     "testrapport": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De testresultaten van een afschermende constructie. Attribuut uit gebruik sinds versie 2.0.0-RC3 Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
       "minItems": 1
     },
     "certificaathouder": {
-      "type": "object",
-      "description": "De houder van het uitvoeringscertificaat.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.certificaathouder"
     },
     "productnaam": {
-      "type": "object",
-      "description": "Dit is de commerciële naam van de afschermende constructie.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.productnaam"
     },
     "metTand-Groef": {
-      "type": "object",
-      "description": "Geeft aan of de afschermende constructie bevestigd is aan de onderliggende laag door middel van een tand-groef aansluiting.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.metTand-Groef"
     },
     "uitvoeringscertificatie": {
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "video": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Video van de testen op afschermende constructies. Attribuut uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -82,28 +50,14 @@
       "$ref": "#/components/schemas/Productidentificatiecode"
     },
     "isPermanent": {
-      "type": "object",
-      "description": "Vermelding of de afschermende constructie al dan niet van permanente aard is.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.isPermanent"
     },
     "materiaal": {
       "$ref": "#/components/schemas/MateriaalAfschermendeConstructie"
     },
     "videoVoertuigkering": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Video-opname van de crashtesten op de voertuigkerende constructie. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -111,7 +65,7 @@
     },
     "testrapportVoertuigkering": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De testresultaten van de crashtesten die op de voertuigkerende constructie uitgevoerd zijn. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -119,7 +73,7 @@
     },
     "technischeFiche": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -129,61 +83,24 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Obstakelbeveiliger.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Obstakelbeveiliger.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -191,39 +108,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Obstakelbeveiliger.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

@@ -17,7 +17,7 @@
     },
     "overzichtsafbeelding": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Dit een overzichtsfoto van de hele constructie. Op basis van deze afbeelding kan je snel bekijken hoe de kleur of hoogte varieert over het verloop van de geluidswerende constructie. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -25,7 +25,7 @@
     },
     "rekennota": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Dit is een document waarin allerlei berekeningen bijgehouden worden omtrent de stabiliteit en sterkte van de geluidswerende constructie (oa de variatie in statische belasting en windbelasting over het verloop van geluidswerende constructie). Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -39,7 +39,7 @@
     },
     "technischeFiche": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Dit document geeft volgende zaken mee: producent, productnaam (type), beschrijving van de geplaatste constructie, certificatie (CE en ISO), montage, akoestische karakteristieken, duurzaamheid en brandwerende kenmerken. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -52,76 +52,30 @@
       "$ref": "#/components/schemas/MinMaxHoogteSchermelement"
     },
     "naam": {
-      "type": "object",
-      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/GeluidwerendeConstructie.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/GeluidwerendeConstructie.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -129,39 +83,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidwerendeConstructie.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

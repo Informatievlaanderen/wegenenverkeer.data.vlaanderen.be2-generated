@@ -1,0 +1,146 @@
+{
+  "title": "WVLichtmast",
+  "type": "object",
+  "description": "Paal voorzien van armen voor het bevestigen van wegverlichtingstoestellen. Omvat het deurtje, klemmenblok, de bevestigingsmaterialen (bv. voetplaten) en fundering of verankeringsmassief. Gebruik Lichtmast voor de bevestiging van andere toestellen dan wegverlichting.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse WVLichtmast)",
+      "pattern": "^WVLichtmast$"
+    },
+    "aantalArmen": {
+      "$ref": "#/components/schemas/WV-MastAantalArmen"
+    },
+    "armlengte": {
+      "$ref": "#/components/schemas/WV-MastArmlengte"
+    },
+    "bevestigingToestellen": {
+      "type": "array",
+      "description": "Geeft de wijze aan waarop elk verlichtingstoestel bevestigd is op de lichtmast als keuze uit een lijst voor standaardmethodes of verder toegelicht wanneer een afwijkende methode gebruikt wordt. Lijst van BevestigingWegverlichtingstoestel items.",
+      "items": {
+        "$ref": "#/components/schemas/BevestigingWegverlichtingstoestel"
+      },
+      "minItems": 1
+    },
+    "masthoogte": {
+      "$ref": "#/components/schemas/Masthoogte"
+    },
+    "kleurStandaard": {
+      "$ref": "#/components/schemas/KleurStandaard"
+    },
+    "leverancier": {
+      "$ref": "#/components/schemas/LichtmastLeverancier"
+    },
+    "masttype": {
+      "$ref": "#/components/schemas/LichtmastType"
+    },
+    "beschermendeLaag": {
+      "$ref": "#/components/schemas/BeschermendeLaag"
+    },
+    "dwarsdoorsnede": {
+      "$ref": "#/components/schemas/DraagconstructieDwarsdoorsnede"
+    },
+    "normeringBotsvriendelijk": {
+      "$ref": "#/components/schemas/LichtmastBotsnormering"
+    },
+    "beschermlaag": {
+      "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+    },
+    "heeftAnti-VandalismeBeugel": {
+      "$ref": "#/components/schemas/WVLichtmast.heeftAnti-VandalismeBeugel"
+    },
+    "heeftStopcontactAanwezig": {
+      "$ref": "#/components/schemas/WVLichtmast.heeftStopcontactAanwezig"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "specialeUitvoeringswijze": {
+      "$ref": "#/components/schemas/WVLichtmast.specialeUitvoeringswijze"
+    },
+    "elektrischeBeveiliging": {
+      "$ref": "#/components/schemas/EM-DraagconstructieElektrischeBeveiliging"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/WVLichtmast.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/WVLichtmast.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/WVLichtmast.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/WVLichtmast.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/WVLichtmast.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/WVLichtmast.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/WVLichtmast.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/WVLichtmast.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "aantalArmen",
+    "armlengte",
+    "bevestigingToestellen",
+    "masthoogte",
+    "kleurStandaard",
+    "leverancier",
+    "masttype",
+    "beschermendeLaag",
+    "dwarsdoorsnede",
+    "normeringBotsvriendelijk",
+    "beschermlaag",
+    "heeftAnti-VandalismeBeugel",
+    "heeftStopcontactAanwezig",
+    "kleur",
+    "specialeUitvoeringswijze",
+    "elektrischeBeveiliging",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "HoutigeAanleg",
+  "type": "object",
+  "description": "Complex datatype dat de aanleg van houtige vegetatie beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HoutigeAanleg)",
+      "pattern": "^HoutigeAanleg$"
+    },
+    "plantmaatHoogte": {
+      "$ref": "#/components/schemas/PlantmaatHoutigeVegetatie"
+    },
+    "plantdichtheid": {
+      "$ref": "#/components/schemas/HoutigeAanleg.plantdichtheid"
+    },
+    "plantafstand": {
+      "$ref": "#/components/schemas/HoutigeAanleg.plantafstand"
+    },
+    "plantverband": {
+      "$ref": "#/components/schemas/VegetatiePlantverband"
+    },
+    "heeftHaagsteun": {
+      "$ref": "#/components/schemas/HoutigeAanleg.heeftHaagsteun"
+    },
+    "wortel": {
+      "$ref": "#/components/schemas/VegetatieWortel"
+    },
+    "heeftBoomplaat": {
+      "$ref": "#/components/schemas/HoutigeAanleg.heeftBoomplaat"
+    },
+    "heeftWortelgeleiding-Wortelwering": {
+      "$ref": "#/components/schemas/HoutigeAanleg.heeftWortelgeleiding-Wortelwering"
+    },
+    "vraatschadeBescherming": {
+      "$ref": "#/components/schemas/MateriaalBeschermingVraatschade"
+    },
+    "beschermingVraatschade": {
+      "$ref": "#/components/schemas/BeschermingVraatschade"
+    },
+    "vormAanlevering": {
+      "$ref": "#/components/schemas/VormAanleveringHoutigeVegetatie"
+    },
+    "plantmaatOmtrek": {
+      "$ref": "#/components/schemas/PlantmaatOmtrek"
+    },
+    "maaischadeBescherming": {
+      "$ref": "#/components/schemas/BeschermingMaaischade"
+    }
+  },
+  "required": [
+    "@type",
+    "plantmaatHoogte",
+    "plantdichtheid",
+    "plantafstand",
+    "plantverband",
+    "heeftHaagsteun",
+    "wortel",
+    "heeftBoomplaat",
+    "heeftWortelgeleiding-Wortelwering",
+    "vraatschadeBescherming",
+    "beschermingVraatschade",
+    "vormAanlevering",
+    "plantmaatOmtrek",
+    "maaischadeBescherming"
+  ]
+}

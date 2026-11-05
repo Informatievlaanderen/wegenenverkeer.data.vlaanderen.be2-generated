@@ -1,0 +1,47 @@
+{
+  "title": "Terugslagklep",
+  "type": "object",
+  "description": "Een terugslagklep is een klep die dient om water, vloeistof, granulaat, poeder of gas in één richting door te laten. Meestal duwt het medium de klep bij het heenstromen open en sluit een veer of de zwaartekracht de klep.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Terugslagklep)",
+      "pattern": "^Terugslagklep$"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TerugslagklepType"
+    },
+    "peil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "breedteOpening": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "hoogteOpening": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "vorm": {
+      "$ref": "#/components/schemas/VormTerugslagklep"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/TerugslagklepAfsluiterMateriaal"
+    }
+  },
+  "required": [
+    "@type",
+    "diameter",
+    "type",
+    "peil",
+    "breedteOpening",
+    "hoogteOpening",
+    "vorm",
+    "materiaal"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "title": "Onderrolwagen",
+  "type": "object",
+  "description": "Dit object is verbonden met de roldeur en bevat wielen die over de onderste looprails van de constructie rijden, waardoor de deur horizontaal kan bewegen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Onderrolwagen)",
+      "pattern": "^Onderrolwagen$"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    },
+    "heeftSchraper": {
+      "$ref": "#/components/schemas/Onderrolwagen.heeftSchraper"
+    },
+    "heeftTrekoog": {
+      "$ref": "#/components/schemas/Onderrolwagen.heeftTrekoog"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Onderrolwagen.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Onderrolwagen.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Onderrolwagen.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Onderrolwagen.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Onderrolwagen.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Onderrolwagen.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Onderrolwagen.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "aantalSmeerpunten": {
+      "$ref": "#/components/schemas/Onderrolwagen.aantalSmeerpunten"
+    },
+    "typeSmering": {
+      "$ref": "#/components/schemas/SmeringType"
+    },
+    "technischDocument": {
+      "type": "array",
+      "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
+      "items": {
+        "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
+      },
+      "minItems": 1
+    },
+    "soortStaal": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "staalsoorten": {
+      "$ref": "#/components/schemas/StaalsoortMetEquivalenten"
+    }
+  },
+  "required": [
+    "@type",
+    "gewicht",
+    "heeftSchraper",
+    "heeftTrekoog",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "aantalSmeerpunten",
+    "typeSmering",
+    "technischDocument",
+    "soortStaal",
+    "staalsoorten"
+  ]
+}

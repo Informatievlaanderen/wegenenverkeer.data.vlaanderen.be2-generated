@@ -1,0 +1,150 @@
+{
+  "title": "ProefBoomtoestand",
+  "type": "object",
+  "description": "De toestand met waarnemingen per inspectie van een boom.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ProefBoomtoestand)",
+      "pattern": "^ProefBoomtoestand$"
+    },
+    "conflicten": {
+      "$ref": "#/components/schemas/BoomConflicten"
+    },
+    "onderhoudstoestand": {
+      "$ref": "#/components/schemas/BoomOnderhoudstoestand"
+    },
+    "conditiewaarde": {
+      "$ref": "#/components/schemas/BoomConditiewaarde"
+    },
+    "basiswaarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInEuro"
+    },
+    "gebreken": {
+      "type": "array",
+      "description": "Een visueel defect aan een boom wat dient gemonitord te worden. Klasse uit gebruik sinds versie 2.12.0-RC2 Lijst van BoomGebreken items.",
+      "items": {
+        "$ref": "#/components/schemas/BoomGebreken"
+      },
+      "minItems": 1
+    },
+    "soortwaarde": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.soortwaarde"
+    },
+    "standplaatswaarde": {
+      "$ref": "#/components/schemas/BoomStandplaatswaarde"
+    },
+    "plantwijzewaarde": {
+      "$ref": "#/components/schemas/BoomPlantwijzewaarde"
+    },
+    "conditiebeoordeling": {
+      "$ref": "#/components/schemas/BoomConditiebeoordeling"
+    },
+    "rapportageOnderzoek": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "stamomtrek": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "krooninspectie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "meerwaarde": {
+      "$ref": "#/components/schemas/BoomtoestandMeerwaardefactor"
+    },
+    "tijdstempelBoomtoestand": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.tijdstempelBoomtoestand"
+    },
+    "wortelonderzoek": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "kroondiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "uitgebreidPlaatsonderzoek": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "onderzoekVisueleBoomcontrole": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ProefBoomtoestand.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ProefBoomtoestand.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/ProefBoomtoestand.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "conflicten",
+    "onderhoudstoestand",
+    "conditiewaarde",
+    "basiswaarde",
+    "gebreken",
+    "soortwaarde",
+    "standplaatswaarde",
+    "plantwijzewaarde",
+    "conditiebeoordeling",
+    "rapportageOnderzoek",
+    "stamomtrek",
+    "krooninspectie",
+    "meerwaarde",
+    "tijdstempelBoomtoestand",
+    "wortelonderzoek",
+    "kroondiameter",
+    "uitgebreidPlaatsonderzoek",
+    "onderzoekVisueleBoomcontrole",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

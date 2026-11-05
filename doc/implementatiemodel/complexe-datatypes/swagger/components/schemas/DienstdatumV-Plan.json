@@ -13,52 +13,13 @@
       "pattern": "^DienstdatumV-Plan$"
     },
     "indienstname": {
-      "type": "object",
-      "description": "De datum waarop het VPlan effectief van toepassing wordt op de verkeersregelinstallatie.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^DateTime$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/DienstdatumV-Plan.indienstname"
     },
     "uitdienstname": {
-      "type": "object",
-      "description": "De uitdienstname is de datum waarop het VPlan niet langer van toepassing is op de verkeersregelinstallatie.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^DateTime$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/DienstdatumV-Plan.uitdienstname"
     },
     "commentaar": {
-      "type": "object",
-      "description": "Bijkomende informatie van de regeling.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/DienstdatumV-Plan.commentaar"
     }
   },
   "required": [

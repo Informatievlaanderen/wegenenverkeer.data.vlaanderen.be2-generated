@@ -1,0 +1,115 @@
+{
+  "title": "Sierbeplanting",
+  "type": "object",
+  "description": "Planten die geen blijvende houtige stengel vormen. Eenjarige,tweejarige of vaste planten,die in de winter tot de grond toe afsterven.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sierbeplanting)",
+      "pattern": "^Sierbeplanting$"
+    },
+    "type": {
+      "type": "array",
+      "description": "Type van sierbeplanting. Lijst van SierbeplantingType items.",
+      "items": {
+        "$ref": "#/components/schemas/SierbeplantingType"
+      },
+      "minItems": 1
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/SierbeplantingAanleg"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "$ref": "#/components/schemas/Sierbeplanting.heeftObstakels"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Met deze eigenschap worden de Nederlandse soortnaam, wetenschappelijke soortnaam en de soortcode van de meest voorkomende soorten binnen het begroeid oppervlak weergegeven. Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Sierbeplanting.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Sierbeplanting.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Sierbeplanting.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Sierbeplanting.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Sierbeplanting.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Sierbeplanting.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "aanleg",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

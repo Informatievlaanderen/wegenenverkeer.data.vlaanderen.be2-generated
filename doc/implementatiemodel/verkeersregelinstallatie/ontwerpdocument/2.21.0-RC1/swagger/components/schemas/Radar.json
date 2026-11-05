@@ -1,0 +1,101 @@
+{
+  "title": "Radar",
+  "type": "object",
+  "description": "Een detector die werkt volgens het Doppler-effect. De detectie gebeurt met behulp van een microgolfbundel die in de richting van het wegdek wordt uitgezonden. Gebruikt voor het detecteren van voertuigen,voetgangers en fietsers.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Radar)",
+      "pattern": "^Radar$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RadarMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/RadarModelnaam"
+    },
+    "communicatiewijze": {
+      "$ref": "#/components/schemas/VRICommunicatieprotocolVerkeersdetectie"
+    },
+    "typeWeggebruiker": {
+      "$ref": "#/components/schemas/VRIDetectorTypeweggebruiker"
+    },
+    "voedingsspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/Radar.firmwareversie"
+    },
+    "soortBewaking": {
+      "$ref": "#/components/schemas/VRIBewaking"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Radar.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Radar.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Radar.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Radar.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Radar.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Radar.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Radar.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "communicatiewijze",
+    "typeWeggebruiker",
+    "voedingsspanning",
+    "firmwareversie",
+    "soortBewaking",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

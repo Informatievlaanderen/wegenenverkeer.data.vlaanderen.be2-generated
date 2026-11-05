@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInTon",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in ton uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInTon)",
+      "pattern": "^KwantitatieveWaardeInTon$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

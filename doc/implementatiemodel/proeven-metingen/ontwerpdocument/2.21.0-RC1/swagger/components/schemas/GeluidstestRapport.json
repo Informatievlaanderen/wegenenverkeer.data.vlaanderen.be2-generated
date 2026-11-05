@@ -1,0 +1,52 @@
+{
+  "title": "GeluidstestRapport",
+  "type": "object",
+  "description": "Complex datatype voor een verslag dat de resultaten van de geluidsmetingen weergeeft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeluidstestRapport)",
+      "pattern": "^GeluidstestRapport$"
+    },
+    "gemetenWaarde": {
+      "$ref": "#/components/schemas/GeluidstestRapport.gemetenWaarde"
+    },
+    "locatieInSitulabo": {
+      "$ref": "#/components/schemas/MeetMethode"
+    },
+    "norm": {
+      "$ref": "#/components/schemas/Norm"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TestType"
+    },
+    "testrapport": {
+      "type": "array",
+      "description": "Documentbijlage met de resultaten van de test. Bestanden van het type xlsx of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "geluidsabsorptieReflectie": {
+      "$ref": "#/components/schemas/GeluidstestRapport.geluidsabsorptieReflectie"
+    },
+    "luchtgeluidsisolatie": {
+      "$ref": "#/components/schemas/GeluidstestRapport.luchtgeluidsisolatie"
+    }
+  },
+  "required": [
+    "@type",
+    "gemetenWaarde",
+    "locatieInSitulabo",
+    "norm",
+    "type",
+    "testrapport",
+    "geluidsabsorptieReflectie",
+    "luchtgeluidsisolatie"
+  ]
+}

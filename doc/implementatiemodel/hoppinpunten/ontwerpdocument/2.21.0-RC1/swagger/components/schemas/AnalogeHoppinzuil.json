@@ -1,0 +1,98 @@
+{
+  "title": "AnalogeHoppinzuil",
+  "type": "object",
+  "description": "Een hoppinzuil is een informatiezuil, die als doel heeft de reizigers te informeren omtrent de vervoersmogelijkheden en diensten die op de locatie van de zuil voorhanden zijn.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AnalogeHoppinzuil)",
+      "pattern": "^AnalogeHoppinzuil$"
+    },
+    "macrokaart": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "microkaart": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "type": {
+      "$ref": "#/components/schemas/HoppinzuilType"
+    },
+    "weergegevenVervoersmodiOpKaart": {
+      "type": "array",
+      "description": "De verschillende beschikbare vervoersmodi die op de bijhorende kaart worden weergegeven. Lijst van WeergegevenVervoersmodiOpKaart items.",
+      "items": {
+        "$ref": "#/components/schemas/WeergegevenVervoersmodiOpKaart"
+      },
+      "minItems": 1
+    },
+    "zuilnaam": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.zuilnaam"
+    },
+    "zuilnummer": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.zuilnummer"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/AnalogeHoppinzuil.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/AnalogeHoppinzuil.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/AnalogeHoppinzuil.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "macrokaart",
+    "microkaart",
+    "type",
+    "weergegevenVervoersmodiOpKaart",
+    "zuilnaam",
+    "zuilnummer",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

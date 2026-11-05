@@ -1,0 +1,109 @@
+{
+  "title": "UPS",
+  "type": "object",
+  "description": "Toestel (Uninterruptible Power Supply = niet onderbreekbare voeding) voor het leveren van elektrische energie van een vastgelegde kwaliteit, onafhankelijk van de beschikbaarheid van een betrouwbare netspanning. Indien het openbare net niet langer bruikbaar is om als energiebron te fungeren, wordt de energievoorziening overgenomen door de accubatterij. Deze zal gedurende een bepaalde tijd, afhankelijk van de capaciteit, de stroomvoorziening verzorgen. De UPS dient om de (minimale) voeding ononderbroken te verzekeren",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse UPS)",
+      "pattern": "^UPS$"
+    },
+    "maxPiekvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "autonomie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKWh"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/UPSMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/UPSModelnaam"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/UPS.serienummer"
+    },
+    "maximaalContinuVermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "uitgangsstroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "uitgangsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/UPS.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/UPS.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/UPS.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/UPS.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/UPS.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/UPS.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/UPS.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/UPS.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "maxPiekvermogen",
+    "autonomie",
+    "merk",
+    "modelnaam",
+    "serienummer",
+    "maximaalContinuVermogen",
+    "uitgangsstroom",
+    "uitgangsfrequentie",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

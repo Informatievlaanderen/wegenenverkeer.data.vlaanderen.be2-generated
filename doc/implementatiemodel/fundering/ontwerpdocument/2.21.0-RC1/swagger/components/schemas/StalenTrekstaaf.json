@@ -1,0 +1,141 @@
+{
+  "title": "StalenTrekstaaf",
+  "type": "object",
+  "description": "Verbindingselement tussen 2 wanden, bv. ronde staven. Toegepast bij (passieve) ankerschotten, kofferdammen,...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StalenTrekstaaf)",
+      "pattern": "^StalenTrekstaaf$"
+    },
+    "dienstlast": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "voorspankracht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "heeftHDPEBuis": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.heeftHDPEBuis"
+    },
+    "peilAnkerwand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "peilAnkerkop": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenTrekstaaf.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenTrekstaaf.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "staalspecificaties": {
+      "$ref": "#/components/schemas/Staalspecificaties"
+    },
+    "heeftBeschermingskap": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.heeftBeschermingskap"
+    },
+    "staalsectie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMillimeters"
+    },
+    "isActiefAnker": {
+      "$ref": "#/components/schemas/StalenTrekstaaf.isActiefAnker"
+    },
+    "typeGrondanker": {
+      "$ref": "#/components/schemas/TypeGrondanker"
+    },
+    "aanvaardingsdocument": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "dienstlast",
+    "lengte",
+    "voorspankracht",
+    "heeftHDPEBuis",
+    "peilAnkerwand",
+    "peilAnkerkop",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "staalspecificaties",
+    "heeftBeschermingskap",
+    "staalsectie",
+    "isActiefAnker",
+    "typeGrondanker",
+    "aanvaardingsdocument",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota"
+  ]
+}

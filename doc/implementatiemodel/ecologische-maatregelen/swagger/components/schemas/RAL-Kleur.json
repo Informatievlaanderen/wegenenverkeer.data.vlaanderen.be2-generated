@@ -1,0 +1,23 @@
+{
+  "title": "RAL-Kleur",
+  "type": "object",
+  "description": "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde is een natuurlijk getal tussen 1000 en 9999.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RAL-Kleur)",
+      "pattern": "^RAL-Kleur$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/RAL-Kleur.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde"
+  ]
+}

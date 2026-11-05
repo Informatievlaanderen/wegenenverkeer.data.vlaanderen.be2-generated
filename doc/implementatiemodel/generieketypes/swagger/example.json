@@ -12,210 +12,9 @@
     }
   ],
   "paths": {
-    "/id/AIMDatabankStatus/{id}": {
-      "get": {
-        "summary": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is.",
-        "operationId": "AIMDatabankStatusGET",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Identificator van een AIMDatabankStatus object.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "AIMDatabankStatus object gevonden.",
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AIMDatabankStatus"
-                }
-              }
-            },
-            "links": {}
-          },
-          "400": {
-            "description": "Invalid data supplied.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "401": {
-            "description": "Invalid authorization.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "403": {
-            "description": "Authentication failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "412": {
-            "description": "Pre-condition failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "500": {
-            "description": "Unexpected Server Error.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "502": {
-            "description": "Bad Gateway.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "503": {
-            "description": "Service unavailable.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "504": {
-            "description": "Gateway Timeout.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMDatabankStatusGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          }
-        }
-      }
-    },
     "/id/AIMToestand/{id}": {
       "get": {
-        "summary": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft.",
+        "summary": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
         "operationId": "AIMToestandGET",
         "parameters": [
           {
@@ -237,25 +36,24 @@
                   "$ref": "#/components/schemas/AIMToestand"
                 }
               }
-            },
-            "links": {}
+            }
           },
           "400": {
             "description": "Invalid data supplied.",
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -264,17 +62,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -283,17 +81,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -302,17 +100,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -321,17 +119,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -340,17 +138,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -359,17 +157,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -378,17 +176,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -397,821 +195,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "AIMToestandGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          }
-        }
-      }
-    },
-    "/id/AIMNaamObject/{id}": {
-      "get": {
-        "summary": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator.",
-        "operationId": "AIMNaamObjectGET",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Identificator van een AIMNaamObject object.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "AIMNaamObject object gevonden.",
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AIMNaamObject"
-                }
-              }
-            },
-            "links": {}
-          },
-          "400": {
-            "description": "Invalid data supplied.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "401": {
-            "description": "Invalid authorization.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "403": {
-            "description": "Authentication failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "412": {
-            "description": "Pre-condition failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "500": {
-            "description": "Unexpected Server Error.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "502": {
-            "description": "Bad Gateway.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "503": {
-            "description": "Service unavailable.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "504": {
-            "description": "Gateway Timeout.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMNaamObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          }
-        }
-      }
-    },
-    "/id/AIMObject/{id}": {
-      "get": {
-        "summary": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft.",
-        "operationId": "AIMObjectGET",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Identificator van een AIMObject object.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "AIMObject object gevonden.",
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AIMObject"
-                }
-              }
-            },
-            "links": {}
-          },
-          "400": {
-            "description": "Invalid data supplied.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "401": {
-            "description": "Invalid authorization.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "403": {
-            "description": "Authentication failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "412": {
-            "description": "Pre-condition failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "500": {
-            "description": "Unexpected Server Error.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "502": {
-            "description": "Bad Gateway.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "503": {
-            "description": "Service unavailable.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "504": {
-            "description": "Gateway Timeout.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          }
-        }
-      }
-    },
-    "/id/AIMVersie/{id}": {
-      "get": {
-        "summary": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren.",
-        "operationId": "AIMVersieGET",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Identificator van een AIMVersie object.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "AIMVersie object gevonden.",
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AIMVersie"
-                }
-              }
-            },
-            "links": {}
-          },
-          "400": {
-            "description": "Invalid data supplied.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "401": {
-            "description": "Invalid authorization.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "403": {
-            "description": "Authentication failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "412": {
-            "description": "Pre-condition failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "500": {
-            "description": "Unexpected Server Error.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "502": {
-            "description": "Bad Gateway.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "503": {
-            "description": "Service unavailable.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "504": {
-            "description": "Gateway Timeout.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "AIMVersieGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          }
-        }
-      }
-    },
-    "/id/NaampadObject/{id}": {
-      "get": {
-        "summary": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad.",
-        "operationId": "NaampadObjectGET",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Identificator van een NaampadObject object.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "NaampadObject object gevonden.",
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NaampadObject"
-                }
-              }
-            },
-            "links": {}
-          },
-          "400": {
-            "description": "Invalid data supplied.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "401": {
-            "description": "Invalid authorization.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "403": {
-            "description": "Authentication failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "404": {
-            "description": "Resource not found.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "412": {
-            "description": "Pre-condition failed.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "500": {
-            "description": "Unexpected Server Error.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "502": {
-            "description": "Bad Gateway.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "503": {
-            "description": "Service unavailable.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
-              }
-            }
-          },
-          "504": {
-            "description": "Gateway Timeout.",
-            "content": {
-              "application/problem+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
-                }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "NaampadObjectGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           }
@@ -1279,17 +273,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1298,17 +292,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1317,17 +311,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1336,17 +330,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1355,17 +349,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1374,17 +368,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1393,17 +387,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1412,17 +406,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           },
@@ -1431,17 +425,17 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Probleemdetail"
+                  "$ref": "#/components/schemas/Problemdetail"
                 }
               }
             },
             "links": {
-              "Probleemdetail.type": {
+              "Problemdetail.type": {
                 "operationId": "WeguitrustingGET",
                 "parameters": {
                   "type": "$response.body#/type"
                 },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
               }
             }
           }
@@ -1451,24 +445,86 @@
   },
   "components": {
     "schemas": {
+      "Problemdetail": {
+        "title": "Problemdetail",
+        "type": "object",
+        "description": "Meer gedetailleerde beschrijving van de fout in een HTTP response.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "instance": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
       "AIMToestand": {
         "title": "AIMToestand",
         "type": "object",
-        "description": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
+        "description": "Enumeratie van AIMToestand",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse AIMToestand)",
-            "pattern": "^AIMToestand$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
+      },
+      "Weguitrusting.naampad": {
+        "title": "Weguitrusting.naampad",
+        "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+        "type": "string"
+      },
+      "Weguitrusting.naam": {
+        "title": "Weguitrusting.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Weguitrusting.notitie": {
+        "title": "Weguitrusting.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Weguitrusting.standaardbestekpostnummer": {
+        "title": "Weguitrusting.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Weguitrusting.typeURI": {
+        "title": "Weguitrusting.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Weguitrusting.bestekpostnummer": {
+        "title": "Weguitrusting.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Weguitrusting.datumOprichtingObject": {
+        "title": "Weguitrusting.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Weguitrusting.isActief": {
+        "title": "Weguitrusting.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "Weguitrusting": {
         "title": "Weguitrusting",
@@ -1485,88 +541,33 @@
             "pattern": "^Weguitrusting$"
           },
           "naampad": {
-            "type": "object",
-            "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.naampad"
           },
           "naam": {
-            "type": "object",
-            "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.naam"
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
           },
           "notitie": {
-            "type": "object",
-            "description": "Extra notitie voor het object.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.notitie"
           },
           "standaardbestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/Weguitrusting.standaardbestekpostnummer"
             },
             "minItems": 1
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.typeURI"
           },
           "bestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/Weguitrusting.bestekpostnummer"
             },
             "minItems": 1
           },
@@ -1574,39 +575,10 @@
             "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
           },
           "datumOprichtingObject": {
-            "type": "object",
-            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.datumOprichtingObject"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Weguitrusting.isActief"
           },
           "aIM-Toestand": {
             "$ref": "#/components/schemas/AIMToestand"
@@ -1631,6 +603,16 @@
           "asset-Versie"
         ]
       },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
+      },
       "Identificator": {
         "title": "Identificator",
         "type": "object",
@@ -1646,34 +628,38 @@
             "pattern": "^Identificator$"
           },
           "identificator": {
-            "type": "object",
-            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.identificator"
           },
           "toegekendDoor": {
-            "type": "object",
-            "description": "Gegevens van de organisatie die de toekenning deed.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
           }
         },
         "required": [
           "@type",
           "identificator",
           "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand.waarde": {
+        "title": "KwantitatieveWaardeInMaand.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "KwantitatieveWaardeInMaand.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMaand.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInMaand": {
@@ -1691,34 +677,10 @@
             "pattern": "^KwantitatieveWaardeInMaand$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^NonNegativeInteger$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
           }
         },
         "required": [
@@ -1726,6 +688,23 @@
           "waarde",
           "standaardEenheid"
         ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
       },
       "AssetVersie": {
         "title": "AssetVersie",
@@ -1742,52 +721,13 @@
             "pattern": "^AssetVersie$"
           },
           "versienummer": {
-            "type": "object",
-            "description": "Het versienummer als een oplopende integer.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^NonNegativeInteger$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
           },
           "timestamp": {
-            "type": "object",
-            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
           },
           "context": {
-            "type": "object",
-            "description": "De context van de versie creatie.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.context"
           }
         },
         "required": [

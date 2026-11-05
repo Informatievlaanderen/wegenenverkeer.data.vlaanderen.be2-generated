@@ -1,0 +1,122 @@
+{
+  "title": "Stroomdalgrasland",
+  "type": "object",
+  "description": "G4b - cipreswolfsmelk, geoorde zuring, gestreepte klaver, grote tijm, handjesgras, harige ratelaar, hemelsleutel, kaal breukkruid, kleine pimpernel, kleine ratelaar, knikkende distel, knolbeemdgras, kruisdistel, kweekdravik, moeslook, ronde ooievaarsbek, rozetkruidkers, rozetsteenkers, sikkelklaver, slangenlook, smalle raai, tripmadam, veldsalie, viltganzerik, voorjaarszegge, wit en zacht vetkruid, zachte haver, zeepkruid.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Stroomdalgrasland)",
+      "pattern": "^Stroomdalgrasland$"
+    },
+    "huidigNatuurbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "natuurstreefbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/GrazigeVegetatieAanleg"
+    },
+    "heeftBolgewassen": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.heeftBolgewassen"
+    },
+    "isOvergroeienRandVerharding": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.isOvergroeienRandVerharding"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.heeftObstakels"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Met deze eigenschap worden de Nederlandse soortnaam, wetenschappelijke soortnaam en de soortcode van de meest voorkomende soorten binnen het begroeid oppervlak weergegeven. Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Stroomdalgrasland.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Stroomdalgrasland.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Stroomdalgrasland.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "huidigNatuurbeeld",
+    "natuurstreefbeeld",
+    "aanleg",
+    "heeftBolgewassen",
+    "isOvergroeienRandVerharding",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

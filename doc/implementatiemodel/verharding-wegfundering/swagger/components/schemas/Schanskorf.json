@@ -13,69 +13,27 @@
       "pattern": "^Schanskorf$"
     },
     "heeftVerankeringspalen": {
-      "type": "object",
-      "description": "Aanduiding of de palen de functie hebben om een schanskorf te verankeren.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.heeftVerankeringspalen"
     },
     "vorm": {
       "$ref": "#/components/schemas/SchanskorfVorm"
     },
     "technischeFiche": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De technische fiche van de schanskorven als bijlage. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
       "minItems": 1
     },
     "isGegalvaniseerd": {
-      "type": "object",
-      "description": "Aanduiding of de schanskorf gegalvaniseerd is.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.isGegalvaniseerd"
     },
     "type": {
       "$ref": "#/components/schemas/TypeSchanskorf"
     },
     "isGelast": {
-      "type": "object",
-      "description": "Aanduiding of de schanskorf gelast is.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.isGelast"
     },
     "materiaalvulling": {
       "$ref": "#/components/schemas/StortsteenType"
@@ -102,61 +60,24 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Schanskorf.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Schanskorf.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -164,39 +85,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Schanskorf.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

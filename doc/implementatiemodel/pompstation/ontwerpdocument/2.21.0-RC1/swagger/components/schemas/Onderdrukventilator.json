@@ -1,0 +1,97 @@
+{
+  "title": "Onderdrukventilator",
+  "type": "object",
+  "description": "Onderdeel dat tot doel heeft onderdruk te creëren in een gesloten ruimte zodat bij het openen van de ruimte geen lucht kan ontsnappen naar de omgeving en dus om lucht,rook,partikels,... in de ruimte te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Onderdrukventilator)",
+      "pattern": "^Onderdrukventilator$"
+    },
+    "binnendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "maximaalVolumedebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerSeconde"
+    },
+    "maximaalDebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Onderdrukventilator.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Onderdrukventilator.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Onderdrukventilator.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Onderdrukventilator.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Onderdrukventilator.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Onderdrukventilator.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Onderdrukventilator.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Onderdrukventilator.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "binnendiameter",
+    "buitendiameter",
+    "vermogen",
+    "maximaalVolumedebiet",
+    "maximaalDebiet",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

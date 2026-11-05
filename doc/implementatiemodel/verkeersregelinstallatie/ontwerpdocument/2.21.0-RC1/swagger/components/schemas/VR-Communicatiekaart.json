@@ -1,0 +1,109 @@
+{
+  "title": "VR-Communicatiekaart",
+  "type": "object",
+  "description": "Modem die alle toestandswijzigingen van de stuurkaart doorgeeft aan het afstandsbewakingssysteem. De module maakt continue een backup van alle log en data gegevens en slaat deze op op de aanwezige SD kaart. Tevens wordt de module ook gebruikt om vanop afstand te kunnen communiceren met de regelaar",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VR-Communicatiekaart)",
+      "pattern": "^VR-Communicatiekaart$"
+    },
+    "typeGeheugen": {
+      "$ref": "#/components/schemas/VR-CommunicatiekaartTypeOpslaggeheugen"
+    },
+    "heeftSmartguard": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.heeftSmartguard"
+    },
+    "uitvoering": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.uitvoering"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.dNSNaam"
+    },
+    "telefoonnummer": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.telefoonnummer"
+    },
+    "ipv4Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VR-ModuleMetFirmwareMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VR-ModuleMetFirmwareModelnaam"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.firmwareversie"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VR-Communicatiekaart.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VR-Communicatiekaart.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VR-Communicatiekaart.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "typeGeheugen",
+    "heeftSmartguard",
+    "uitvoering",
+    "dNSNaam",
+    "telefoonnummer",
+    "ipv4Adres",
+    "merk",
+    "modelnaam",
+    "firmwareversie",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

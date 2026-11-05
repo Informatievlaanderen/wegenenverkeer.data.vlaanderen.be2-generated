@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+      "pattern": "^KwantitatieveWaardeInMeter$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

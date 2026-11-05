@@ -13,65 +13,28 @@
       "pattern": "^Verkeersbord-Verkeersteken$"
     },
     "isBeginVanEenZone": {
-      "type": "object",
-      "description": "Duidt aan of het verkeersteken het begin van een zone aanduidt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isBeginVanEenZone"
     },
     "isEindeVanEenZone": {
-      "type": "object",
-      "description": "Duidt aan of het verkeersteken het einde van een zone aanduidt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isEindeVanEenZone"
     },
     "adres": {
       "$ref": "#/components/schemas/Adres"
     },
     "afbeelding": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Foto van het verkeersteken. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
       "minItems": 1
     },
     "plaatsbeschrijving": {
-      "type": "object",
-      "description": "Tekstuele beschrijving waar het verkeersteken zal komen.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.plaatsbeschrijving"
     },
     "signalisatievergunning": {
       "type": "array",
-      "description": "Lijst van ExterneReferentie items.",
+      "description": "Externe referentie naar een vergunning voor het tijdelijk aanbrengen of wijzigen van signalisatie op het openbaar domein of privaat domein met openbaar karakter. Lijst van ExterneReferentie items.",
       "items": {
         "$ref": "#/components/schemas/ExterneReferentie"
       },
@@ -79,23 +42,14 @@
     },
     "mobiliteitsmaatregel": {
       "type": "array",
-      "description": "Lijst van ExterneReferentie items.",
+      "description": "Externe referentie naar een maatregel om de beweging en verplaatsing van de weggebruiker op het openbaar domein of privé domein met openbaar karakter te organiseren. Lijst van ExterneReferentie items.",
       "items": {
         "$ref": "#/components/schemas/ExterneReferentie"
       },
       "minItems": 1
     },
     "variabelOpschrift": {
-      "type": "object",
-      "description": "Variabele tekst die op het verkeersbordconcept komt te staan.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.variabelOpschrift"
     },
     "wettelijkeStatus": {
       "$ref": "#/components/schemas/VerkeerstekenWettelijkeStatus"
@@ -104,61 +58,24 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -166,39 +83,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

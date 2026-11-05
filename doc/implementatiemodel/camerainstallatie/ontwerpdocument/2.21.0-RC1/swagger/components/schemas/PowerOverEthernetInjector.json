@@ -1,0 +1,89 @@
+{
+  "title": "PowerOverEthernetInjector",
+  "type": "object",
+  "description": "Een toestel waarmee stroom/voeding voor een ander toestel over een datakabel kan gestuurd worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PowerOverEthernetInjector)",
+      "pattern": "^PowerOverEthernetInjector$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjectorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjectorModelnaam"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PowerOverEthernetInjector.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PowerOverEthernetInjector.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/PowerOverEthernetInjector.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

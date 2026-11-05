@@ -1,0 +1,35 @@
+{
+  "title": "VegetatieSoortnaam",
+  "type": "object",
+  "description": "Complex datatype voor de soortnaam en code van een begroeiing.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VegetatieSoortnaam)",
+      "pattern": "^VegetatieSoortnaam$"
+    },
+    "code": {
+      "$ref": "#/components/schemas/VegetatieSoortnaam.code"
+    },
+    "soortnaamNederlands": {
+      "$ref": "#/components/schemas/VegetatieSoortnaam.soortnaamNederlands"
+    },
+    "wetenschappelijkeSoortnaam": {
+      "$ref": "#/components/schemas/WetenschappelijkeSoortnaam"
+    },
+    "soortnaamWetenschappelijk": {
+      "$ref": "#/components/schemas/VegetatieSoortnaam.soortnaamWetenschappelijk"
+    }
+  },
+  "required": [
+    "@type",
+    "code",
+    "soortnaamNederlands",
+    "wetenschappelijkeSoortnaam",
+    "soortnaamWetenschappelijk"
+  ]
+}

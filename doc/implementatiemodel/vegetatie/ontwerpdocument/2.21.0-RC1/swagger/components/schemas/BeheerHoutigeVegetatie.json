@@ -1,0 +1,82 @@
+{
+  "title": "BeheerHoutigeVegetatie",
+  "type": "object",
+  "description": "Het beheerobject voor de houtige vegetatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeheerHoutigeVegetatie)",
+      "pattern": "^BeheerHoutigeVegetatie$"
+    },
+    "beheeroptie": {
+      "type": "array",
+      "description": "Aanduiding van welk beheer wordt toegepast op de houtige vegetatie. Lijst van BeheerVanHoutigeVegetatie items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerVanHoutigeVegetatie"
+      },
+      "minItems": 1
+    },
+    "heeftBeheerplan": {
+      "$ref": "#/components/schemas/BeheerHoutigeVegetatie.heeftBeheerplan"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BeheerHoutigeVegetatie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerHoutigeVegetatie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BeheerHoutigeVegetatie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerHoutigeVegetatie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BeheerHoutigeVegetatie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BeheerHoutigeVegetatie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "beheeroptie",
+    "heeftBeheerplan",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

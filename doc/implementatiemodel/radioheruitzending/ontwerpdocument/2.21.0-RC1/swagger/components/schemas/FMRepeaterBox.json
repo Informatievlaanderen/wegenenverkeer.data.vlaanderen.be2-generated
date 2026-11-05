@@ -1,0 +1,113 @@
+{
+  "title": "FMRepeaterBox",
+  "type": "object",
+  "description": "Een radio-ontvanger en -zender, die het FM-signaal ontvangt en weer doorgeeft om zo grotere afstanden te overbruggen en plaatsen te bereiken, waar de radiosignalen niet geraken, zoals in tunnels. De uitvoering is van het type 'box' waar aparte repeatermodules per frequentie of voor meerdere frequenties kunnen ingestoken worden, zoals in een vaste computer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FMRepeaterBox)",
+      "pattern": "^FMRepeaterBox$"
+    },
+    "aantalFMKaarten": {
+      "$ref": "#/components/schemas/FMRepeaterBox.aantalFMKaarten"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/FMRepeaterboxModelnaam"
+    },
+    "aantalModulators": {
+      "$ref": "#/components/schemas/FMRepeaterBox.aantalModulators"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/FMRepeaterboxModelnaam"
+    },
+    "aantalSwitches": {
+      "$ref": "#/components/schemas/FMRepeaterBox.aantalSwitches"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "aantalInstelbareFMFrequenties": {
+      "$ref": "#/components/schemas/FMRepeaterBox.aantalInstelbareFMFrequenties"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/FMRepeaterBox.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/FMRepeaterBox.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/FMRepeaterBox.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/FMRepeaterBox.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/FMRepeaterBox.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/FMRepeaterBox.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/FMRepeaterBox.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/FMRepeaterBox.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/FMRepeaterBox.dNSNaam"
+    }
+  },
+  "required": [
+    "@type",
+    "aantalFMKaarten",
+    "merk",
+    "aantalModulators",
+    "modelnaam",
+    "aantalSwitches",
+    "technischeFiche",
+    "aantalInstelbareFMFrequenties",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "ipAdres",
+    "dNSNaam"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Boom",
+  "type": "object",
+  "description": "Een opgaande boom is een boom waarvan de vorm van de kruin overeenkomt met zijn natuurlijke, soortgebonden habitus. Opgaande bomen kunnen een hoge, lage, brede, smalle of een afwijkende groeivorm hebben, zoals zuil- en treurvormen. De boom kan zich op volstrekt natuurlijke wijze uitgezaaid hebben en zijn groeivorm kan bepaald zijn door de natuurlijke groeiomstandigheden (bv. natuurlijke snoei). Ontstond de boom in kunstmatige omstandigheden, dan is de groeivorm bepaald door de jeugdsnoei in de kwekerij en is het eindbeeld van de boom bepaald door de begeleidingssnoei of vormsnoei die wordt uitgevoerd vanaf het planten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Boom)",
+      "pattern": "^Boom$"
+    },
+    "isVerplant": {
+      "$ref": "#/components/schemas/Boom.isVerplant"
+    },
+    "eindbeeld": {
+      "$ref": "#/components/schemas/EindbeeldOpgaandeBoom"
+    },
+    "kroonDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "groeifase": {
+      "$ref": "#/components/schemas/Groeifasen"
+    },
+    "vrijeDoorrijhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "doorwortelbaarVolume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "totaleBoombeschermingszone": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "boomverankeringszone": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/AanlegBoomvorm"
+    },
+    "takvrijeHoogte": {
+      "$ref": "#/components/schemas/TakvrijeHoogte"
+    },
+    "heeftBoomrooster": {
+      "$ref": "#/components/schemas/Boom.heeftBoomrooster"
+    },
+    "doorrijhoogte": {
+      "$ref": "#/components/schemas/Doorrijhoogte"
+    },
+    "geschatteKlassePlantjaar": {
+      "$ref": "#/components/schemas/KlassePlantjaar"
+    },
+    "boomspiegel": {
+      "type": "array",
+      "description": "Het stuk grond rondom de stam van een boom. Dit is in de ideale situatie minstens zo groot is als de kruin van de boom. Lijst van Boomspiegel items.",
+      "items": {
+        "$ref": "#/components/schemas/Boomspiegel"
+      },
+      "minItems": 1
+    },
+    "heeftLuchtleiding": {
+      "$ref": "#/components/schemas/Boom.heeftLuchtleiding"
+    },
+    "takvrijeStamlengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hoogteklasse": {
+      "$ref": "#/components/schemas/VegetatieelementHoogte"
+    },
+    "standplaats": {
+      "$ref": "#/components/schemas/VegetatieelementStandplaats"
+    },
+    "niveau": {
+      "$ref": "#/components/schemas/Boom.niveau"
+    },
+    "soortnaam": {
+      "$ref": "#/components/schemas/VegetatieSoortnaam"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Boom.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Boom.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Boom.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Boom.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Boom.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Boom.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Boom.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isVerplant",
+    "eindbeeld",
+    "kroonDiameter",
+    "groeifase",
+    "vrijeDoorrijhoogte",
+    "doorwortelbaarVolume",
+    "totaleBoombeschermingszone",
+    "boomverankeringszone",
+    "aanleg",
+    "takvrijeHoogte",
+    "heeftBoomrooster",
+    "doorrijhoogte",
+    "geschatteKlassePlantjaar",
+    "boomspiegel",
+    "heeftLuchtleiding",
+    "takvrijeStamlengte",
+    "hoogteklasse",
+    "standplaats",
+    "niveau",
+    "soortnaam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

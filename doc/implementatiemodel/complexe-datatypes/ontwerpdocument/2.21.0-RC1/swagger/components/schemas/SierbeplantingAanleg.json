@@ -1,0 +1,39 @@
+{
+  "title": "SierbeplantingAanleg",
+  "type": "object",
+  "description": "Complex datatype voor dat de aanleg van sierbeplanting beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SierbeplantingAanleg)",
+      "pattern": "^SierbeplantingAanleg$"
+    },
+    "plantmaat": {
+      "$ref": "#/components/schemas/SierbeplPlantmaat"
+    },
+    "containermaat": {
+      "$ref": "#/components/schemas/SierbeplantingContainer"
+    },
+    "plantdichtheid": {
+      "$ref": "#/components/schemas/SierbeplantingAanleg.plantdichtheid"
+    },
+    "plantverband": {
+      "$ref": "#/components/schemas/VegetatiePlantverband"
+    },
+    "aanplantingswijze": {
+      "$ref": "#/components/schemas/AanplantingswijzeSierbeplanting"
+    }
+  },
+  "required": [
+    "@type",
+    "plantmaat",
+    "containermaat",
+    "plantdichtheid",
+    "plantverband",
+    "aanplantingswijze"
+  ]
+}

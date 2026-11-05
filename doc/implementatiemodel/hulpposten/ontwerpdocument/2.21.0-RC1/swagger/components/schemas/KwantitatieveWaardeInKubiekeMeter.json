@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKubiekeMeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kubieke meter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKubiekeMeter)",
+      "pattern": "^KwantitatieveWaardeInKubiekeMeter$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

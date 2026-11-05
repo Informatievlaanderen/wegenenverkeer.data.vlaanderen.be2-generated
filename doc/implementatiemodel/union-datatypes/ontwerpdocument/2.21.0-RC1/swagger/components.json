@@ -1,0 +1,683 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Schoorhoek": {
+        "title": "Schoorhoek",
+        "type": "object",
+        "description": "Enumeratie van Schoorhoek",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "BVLaagtype": {
+        "title": "BVLaagtype",
+        "type": "object",
+        "description": "Enumeratie van BVLaagtype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "BevestigingVoorWegverlichtingstoestellen": {
+        "title": "BevestigingVoorWegverlichtingstoestellen",
+        "type": "object",
+        "description": "Enumeratie van BevestigingVoorWegverlichtingstoestellen",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "WvMasthoogte": {
+        "title": "WvMasthoogte",
+        "type": "object",
+        "description": "Enumeratie van WvMasthoogte",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Hellings-OfSchoorhoek": {
+        "title": "Hellings-OfSchoorhoek",
+        "type": "object",
+        "description": "Union datatype voor de hellings- of de schoorhoek.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Hellings-OfSchoorhoek)",
+            "pattern": "^Hellings-OfSchoorhoek$"
+          },
+          "hellingshoek": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+          },
+          "schoorhoek": {
+            "$ref": "#/components/schemas/Schoorhoek"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "KwantitatieveWaardeInDecimaleGraden.waarde": {
+        "title": "KwantitatieveWaardeInDecimaleGraden.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInDecimaleGraden.standaardEenheid": {
+        "title": "KwantitatieveWaardeInDecimaleGraden.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden. \"deg\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInDecimaleGraden": {
+        "title": "KwantitatieveWaardeInDecimaleGraden",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInDecimaleGraden)",
+            "pattern": "^KwantitatieveWaardeInDecimaleGraden$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "Dwarsafmetingen": {
+        "title": "Dwarsafmetingen",
+        "type": "object",
+        "description": "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dwarsafmetingen)",
+            "pattern": "^Dwarsafmetingen$"
+          },
+          "rechthoekig": {
+            "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AfmetingBxlxhInMillimeter": {
+        "title": "AfmetingBxlxhInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxlxhInMillimeter)",
+            "pattern": "^AfmetingBxlxhInMillimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "hoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "lengte",
+          "hoogte"
+        ]
+      },
+      "AfmetingDiameterInMillimeter": {
+        "title": "AfmetingDiameterInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een diameter in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingDiameterInMillimeter)",
+            "pattern": "^AfmetingDiameterInMillimeter$"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "diameter"
+        ]
+      },
+      "AfmetingZijdeInMillimeter": {
+        "title": "AfmetingZijdeInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een zijde in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingZijdeInMillimeter)",
+            "pattern": "^AfmetingZijdeInMillimeter$"
+          },
+          "zijde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "zijde"
+        ]
+      },
+      "KwantitatieveWaardeInMillimeter.waarde": {
+        "title": "KwantitatieveWaardeInMillimeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInMillimeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMillimeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in millimeter. \"mm\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMillimeter": {
+        "title": "KwantitatieveWaardeInMillimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in millimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMillimeter)",
+            "pattern": "^KwantitatieveWaardeInMillimeter$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingBxlInCentimeter": {
+        "title": "AfmetingBxlInCentimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte en de lengte in centimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxlInCentimeter)",
+            "pattern": "^AfmetingBxlInCentimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "lengte"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter.waarde": {
+        "title": "KwantitatieveWaardeInCentimeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInCentimeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter": {
+        "title": "KwantitatieveWaardeInCentimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in centimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInCentimeter)",
+            "pattern": "^KwantitatieveWaardeInCentimeter$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingDiameterInCentimeter": {
+        "title": "AfmetingDiameterInCentimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van een diameter in centimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingDiameterInCentimeter)",
+            "pattern": "^AfmetingDiameterInCentimeter$"
+          },
+          "diameter": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "diameter"
+        ]
+      },
+      "AfmetingBxhInMillimeter": {
+        "title": "AfmetingBxhInMillimeter",
+        "type": "object",
+        "description": "Complex datatype voor de afmeting van de breedte en hoogte in millimeter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingBxhInMillimeter)",
+            "pattern": "^AfmetingBxhInMillimeter$"
+          },
+          "breedte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          },
+          "hoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+          }
+        },
+        "required": [
+          "@type",
+          "breedte",
+          "hoogte"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.waarde": {
+        "title": "KwantitatieveWaardeInMeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInMeter": {
+        "title": "KwantitatieveWaardeInMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+            "pattern": "^KwantitatieveWaardeInMeter$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInTon.waarde": {
+        "title": "KwantitatieveWaardeInTon.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInTon.standaardEenheid": {
+        "title": "KwantitatieveWaardeInTon.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in ton. \"t\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInTon": {
+        "title": "KwantitatieveWaardeInTon",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in ton uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInTon)",
+            "pattern": "^KwantitatieveWaardeInTon$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AfmetingGrondvlak": {
+        "title": "AfmetingGrondvlak",
+        "type": "object",
+        "description": "Datatype voor de afmeting van een (grond)vlak volgens zijn vorm.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingGrondvlak)",
+            "pattern": "^AfmetingGrondvlak$"
+          },
+          "rechthoekig": {
+            "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInCentimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AfmetingVerkeersbord": {
+        "title": "AfmetingVerkeersbord",
+        "type": "object",
+        "description": "Union datatype voor de afmeting van het verkeersbord.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AfmetingVerkeersbord)",
+            "pattern": "^AfmetingVerkeersbord$"
+          },
+          "driehoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          },
+          "rond": {
+            "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+          },
+          "vierhoekig": {
+            "$ref": "#/components/schemas/AfmetingBxhInMillimeter"
+          },
+          "zeshoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          },
+          "achthoekig": {
+            "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Profileerlaag": {
+        "title": "Profileerlaag",
+        "type": "object",
+        "description": "Complex datatype om extra informatie te capteren van de profilerende laag.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Profileerlaag)",
+            "pattern": "^Profileerlaag$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "laagtype": {
+            "$ref": "#/components/schemas/BVLaagtype"
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "laagtype"
+        ]
+      },
+      "LaagtypeVanDeBitumineuzeVerharding": {
+        "title": "LaagtypeVanDeBitumineuzeVerharding",
+        "type": "object",
+        "description": "Union datatype voor een laagtype anders dan de profileerlaag. Bij een profileerlaag kan men het gewicht toelichten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LaagtypeVanDeBitumineuzeVerharding)",
+            "pattern": "^LaagtypeVanDeBitumineuzeVerharding$"
+          },
+          "laagtype": {
+            "$ref": "#/components/schemas/BVLaagtype"
+          },
+          "profileerlaag": {
+            "$ref": "#/components/schemas/Profileerlaag"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BevestigingWegverlichtingstoestel.afwijkendeMethode": {
+        "title": "BevestigingWegverlichtingstoestel.afwijkendeMethode",
+        "description": "Tekstveld waarin de afwijkende methode van bevestiging van verlichtingstoestel aan lichtmast kan beschreven worden.",
+        "type": "string"
+      },
+      "BevestigingWegverlichtingstoestel": {
+        "title": "BevestigingWegverlichtingstoestel",
+        "type": "object",
+        "description": "Union datatype voor de wijze waarop verlichtingstoestellen bevestigd zijn op een lichtmast, indien dit een standaard methode is dan kan deze geselecteerd worden uit een keuzelijst. Bij afwijkende methode kan de methode toegelicht worden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BevestigingWegverlichtingstoestel)",
+            "pattern": "^BevestigingWegverlichtingstoestel$"
+          },
+          "standaardMethode": {
+            "$ref": "#/components/schemas/BevestigingVoorWegverlichtingstoestellen"
+          },
+          "afwijkendeMethode": {
+            "$ref": "#/components/schemas/BevestigingWegverlichtingstoestel.afwijkendeMethode"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Masthoogte": {
+        "title": "Masthoogte",
+        "type": "object",
+        "description": "Union datatype om een standaard of afwijkende masthoogte te bepalen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Masthoogte)",
+            "pattern": "^Masthoogte$"
+          },
+          "standaardHoogte": {
+            "$ref": "#/components/schemas/WvMasthoogte"
+          },
+          "afwijkendeHoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    }
+  }
+}

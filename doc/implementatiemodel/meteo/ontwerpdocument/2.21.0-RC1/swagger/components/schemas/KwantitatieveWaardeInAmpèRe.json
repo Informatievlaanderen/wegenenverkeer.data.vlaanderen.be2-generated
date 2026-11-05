@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInAmpèRe",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in ampère uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInAmpèRe)",
+      "pattern": "^KwantitatieveWaardeInAmpèRe$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

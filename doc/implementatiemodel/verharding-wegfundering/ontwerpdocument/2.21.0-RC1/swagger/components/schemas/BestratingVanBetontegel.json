@@ -1,0 +1,126 @@
+{
+  "title": "BestratingVanBetontegel",
+  "type": "object",
+  "description": "Bestrating van geprefabriceerde platte stenen in beton die (in de afgesproken mate) voldoen aan de vereisten van NBN EN 1339 en NBN B21-211.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BestratingVanBetontegel)",
+      "pattern": "^BestratingVanBetontegel$"
+    },
+    "afwerking": {
+      "$ref": "#/components/schemas/BestratingAfwerking"
+    },
+    "afmetingVanBestratingselementLxB": {
+      "$ref": "#/components/schemas/AfmetingBestratingselementLengteXBreedte"
+    },
+    "type": {
+      "$ref": "#/components/schemas/BSSType"
+    },
+    "steenverband": {
+      "$ref": "#/components/schemas/BestratingSteenverband"
+    },
+    "voegvulling": {
+      "$ref": "#/components/schemas/BestratingVoegvulling"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KleurSupplementen"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van de bestrating. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BestratingVanBetontegel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BestratingVanBetontegel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BestratingVanBetontegel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BestratingVanBetontegel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BestratingVanBetontegel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BestratingVanBetontegel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "afwerking",
+    "afmetingVanBestratingselementLxB",
+    "type",
+    "steenverband",
+    "voegvulling",
+    "kleur",
+    "technischeFiche",
+    "productidentificatiecode",
+    "lengte",
+    "breedte",
+    "oppervlakte",
+    "laagrol",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "dikte"
+  ]
+}

@@ -13,34 +13,10 @@
       "pattern": "^KwantitatieveWaardeInWatt$"
     },
     "waarde": {
-      "type": "object",
-      "description": "Bevat een getal die bij het datatype hoort.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.waarde"
     },
     "standaardEenheid": {
-      "type": "object",
-      "description": "De standaard eenheid bij dit datatype is uitgedrukt in Watt. \"W\"^^cdt:ucumunit",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.standaardEenheid"
     }
   },
   "required": [

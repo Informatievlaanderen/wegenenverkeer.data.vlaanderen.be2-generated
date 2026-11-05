@@ -1,0 +1,118 @@
+{
+  "title": "Grasland",
+  "type": "object",
+  "description": "Grazige vegetatie met daarin kruidachtigen die jaarlijks één of meerdere malen per jaar gemaaid of begraasd wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grasland)",
+      "pattern": "^Grasland$"
+    },
+    "natuurstreefbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/GrazigeVegetatieAanleg"
+    },
+    "heeftBolgewassen": {
+      "$ref": "#/components/schemas/Grasland.heeftBolgewassen"
+    },
+    "isOvergroeienRandVerharding": {
+      "$ref": "#/components/schemas/Grasland.isOvergroeienRandVerharding"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "$ref": "#/components/schemas/Grasland.heeftObstakels"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Met deze eigenschap worden de Nederlandse soortnaam, wetenschappelijke soortnaam en de soortcode van de meest voorkomende soorten binnen het begroeid oppervlak weergegeven. Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Grasland.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Grasland.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Grasland.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Grasland.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Grasland.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Grasland.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "natuurstreefbeeld",
+    "aanleg",
+    "heeftBolgewassen",
+    "isOvergroeienRandVerharding",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

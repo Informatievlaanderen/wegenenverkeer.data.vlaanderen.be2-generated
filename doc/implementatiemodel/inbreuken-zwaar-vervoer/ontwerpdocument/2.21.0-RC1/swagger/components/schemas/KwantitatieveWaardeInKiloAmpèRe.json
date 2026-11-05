@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKiloAmpèRe",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kiloampère uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKiloAmpèRe)",
+      "pattern": "^KwantitatieveWaardeInKiloAmpèRe$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

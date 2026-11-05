@@ -1,0 +1,152 @@
+{
+  "title": "Wegkantkast",
+  "type": "object",
+  "description": "Behuizing in de vorm van een kast typisch gebruikt buiten,langs de kant van de weg.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wegkantkast)",
+      "pattern": "^Wegkantkast$"
+    },
+    "heeftMaaibescherming": {
+      "$ref": "#/components/schemas/Wegkantkast.heeftMaaibescherming"
+    },
+    "type": {
+      "$ref": "#/components/schemas/WegkantkastType"
+    },
+    "elektrischSchema": {
+      "type": "array",
+      "description": "Elektrisch aansluitschema van de kast. Attribuut uit gebruik sinds versie 2.19.0-RC1 .Bestanden van het type pdf,dwg of dxf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "m-Plan": {
+      "type": "array",
+      "description": "Mechanisch plan van de volledige installatie. Er wordt één plan toegevoegd per installatie/techniek die op de kast is aangesloten. Bestanden van het type dwg of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "ingressProtectionKlasse": {
+      "$ref": "#/components/schemas/IngressProtectionCodering"
+    },
+    "laatsteKeuringsdatum": {
+      "$ref": "#/components/schemas/Wegkantkast.laatsteKeuringsdatum"
+    },
+    "keuringsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAantalJaar"
+    },
+    "verfraaid": {
+      "$ref": "#/components/schemas/VerfraaiingBuitenkast"
+    },
+    "heeftVerlichting": {
+      "$ref": "#/components/schemas/Wegkantkast.heeftVerlichting"
+    },
+    "kastmateriaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "indelingsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "risicoanalyse": {
+      "type": "array",
+      "description": "Een bestandsbijlage met de risicoanalyse voor werken in en rond een behuizing. De risicoanalyse heeft in eerste instantie betrekking op werken in en rond een behuizing met elektrische installaties. Voor behuizingen met installaties van de distributienetbeheerder wordt de risicoanalyse bestemd voor die beheerder, bewaard in het gelijknamig attribuut van het onderdeel van die beheerder, bv. EnergiemeterDNB. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "tabelUitwendigeInvloeden": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Wegkantkast.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Wegkantkast.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wegkantkast.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Wegkantkast.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wegkantkast.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Wegkantkast.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Wegkantkast.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Wegkantkast.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftMaaibescherming",
+    "type",
+    "elektrischSchema",
+    "m-Plan",
+    "ingressProtectionKlasse",
+    "laatsteKeuringsdatum",
+    "keuringsfrequentie",
+    "verfraaid",
+    "heeftVerlichting",
+    "kastmateriaal",
+    "indelingsplan",
+    "afmeting",
+    "adres",
+    "risicoanalyse",
+    "tabelUitwendigeInvloeden",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

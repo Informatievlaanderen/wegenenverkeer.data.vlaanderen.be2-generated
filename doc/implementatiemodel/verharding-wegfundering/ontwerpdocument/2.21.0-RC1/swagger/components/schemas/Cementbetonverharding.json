@@ -1,0 +1,133 @@
+{
+  "title": "Cementbetonverharding",
+  "type": "object",
+  "description": "Stijve verharding met of zonder wapening verkregen door cementbeton te spreiden en mechanisch te verdichten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Cementbetonverharding)",
+      "pattern": "^Cementbetonverharding$"
+    },
+    "laagtype": {
+      "$ref": "#/components/schemas/CBVLaagtype"
+    },
+    "aantalAnkerstaven": {
+      "$ref": "#/components/schemas/Cementbetonverharding.aantalAnkerstaven"
+    },
+    "oppervlakbehandeling": {
+      "$ref": "#/components/schemas/CBVOppervlaktebehandeling"
+    },
+    "supplementenVanDeVerharding": {
+      "$ref": "#/components/schemas/SupplementenCBV"
+    },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "krimpvoegFrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "aardVerharding": {
+      "$ref": "#/components/schemas/CBVAardVerharding"
+    },
+    "bouwklasse": {
+      "$ref": "#/components/schemas/AlgBouwklassegroep"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Cementbetonverharding.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Cementbetonverharding.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Cementbetonverharding.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Cementbetonverharding.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Cementbetonverharding.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Cementbetonverharding.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Cementbetonverharding.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Cementbetonverharding.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "laagtype",
+    "aantalAnkerstaven",
+    "oppervlakbehandeling",
+    "supplementenVanDeVerharding",
+    "volume",
+    "krimpvoegFrequentie",
+    "aardVerharding",
+    "bouwklasse",
+    "productidentificatiecode",
+    "lengte",
+    "breedte",
+    "oppervlakte",
+    "laagrol",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "dikte",
+    "naampad",
+    "naam"
+  ]
+}

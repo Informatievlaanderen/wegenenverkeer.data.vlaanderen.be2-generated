@@ -1,0 +1,122 @@
+{
+  "title": "Neerslagsensor",
+  "type": "object",
+  "description": "Detectie van neerslag(hoeveelheid/intensiteit).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Neerslagsensor)",
+      "pattern": "^Neerslagsensor$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/NeerslagsensorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/NeerslagsensorModelnaam"
+    },
+    "type": {
+      "$ref": "#/components/schemas/NeerslagsensorType"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/Neerslagsensor.dNSNaam"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "opstelwijze": {
+      "$ref": "#/components/schemas/SensorOpstelwijze"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Neerslagsensor.serienummer"
+    },
+    "kalibratiecertificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technsiche fiche als bijlage van de sensor. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Neerslagsensor.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Neerslagsensor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Neerslagsensor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Neerslagsensor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Neerslagsensor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Neerslagsensor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Neerslagsensor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Neerslagsensor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "type",
+    "ipAdres",
+    "dNSNaam",
+    "opstelhoogte",
+    "opstelwijze",
+    "serienummer",
+    "kalibratiecertificaat",
+    "technischeFiche",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

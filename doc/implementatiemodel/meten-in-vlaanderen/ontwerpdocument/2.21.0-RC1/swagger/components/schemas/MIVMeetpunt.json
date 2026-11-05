@@ -1,0 +1,133 @@
+{
+  "title": "MIVMeetpunt",
+  "type": "object",
+  "description": "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MIVMeetpunt)",
+      "pattern": "^MIVMeetpunt$"
+    },
+    "logischeGroepVerkeerscentrum": {
+      "$ref": "#/components/schemas/MIVMeetpunt.logischeGroepVerkeerscentrum"
+    },
+    "datumHerslijpen": {
+      "$ref": "#/components/schemas/MIVMeetpunt.datumHerslijpen"
+    },
+    "uitslijprichting": {
+      "$ref": "#/components/schemas/MIV-LusUitslijprichting"
+    },
+    "meetrapport": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "isBedekt": {
+      "$ref": "#/components/schemas/MIVMeetpunt.isBedekt"
+    },
+    "afmetingen": {
+      "$ref": "#/components/schemas/MIVMeetpuntAfmetingen"
+    },
+    "rijstrook": {
+      "$ref": "#/components/schemas/AlgemeenRijstrookcode"
+    },
+    "bemetenGebied": {
+      "$ref": "#/components/schemas/MIVMeetpuntgebied"
+    },
+    "trekput": {
+      "$ref": "#/components/schemas/MIVMeetpunt.trekput"
+    },
+    "aansluiting": {
+      "$ref": "#/components/schemas/AansluitingMeetlussen"
+    },
+    "servicePrioriteit": {
+      "$ref": "#/components/schemas/Serviceprioriteit"
+    },
+    "wegdek": {
+      "$ref": "#/components/schemas/MIVWegdek"
+    },
+    "isGekoppeld": {
+      "$ref": "#/components/schemas/MIVMeetpunt.isGekoppeld"
+    },
+    "aantalWindingen": {
+      "$ref": "#/components/schemas/MIVMeetpunt.aantalWindingen"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/MIVMeetpunt.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/MIVMeetpunt.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/MIVMeetpunt.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/MIVMeetpunt.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/MIVMeetpunt.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/MIVMeetpunt.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/MIVMeetpunt.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/MIVMeetpunt.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "logischeGroepVerkeerscentrum",
+    "datumHerslijpen",
+    "uitslijprichting",
+    "meetrapport",
+    "isBedekt",
+    "afmetingen",
+    "rijstrook",
+    "bemetenGebied",
+    "trekput",
+    "aansluiting",
+    "servicePrioriteit",
+    "wegdek",
+    "isGekoppeld",
+    "aantalWindingen",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

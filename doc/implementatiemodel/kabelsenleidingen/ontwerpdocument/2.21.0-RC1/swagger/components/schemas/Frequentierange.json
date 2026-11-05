@@ -1,0 +1,27 @@
+{
+  "title": "Frequentierange",
+  "type": "object",
+  "description": "Complex datatype voor de frequentierange van een toestel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Frequentierange)",
+      "pattern": "^Frequentierange$"
+    },
+    "ondergrens": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz"
+    },
+    "bovengrens": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz"
+    }
+  },
+  "required": [
+    "@type",
+    "ondergrens",
+    "bovengrens"
+  ]
+}

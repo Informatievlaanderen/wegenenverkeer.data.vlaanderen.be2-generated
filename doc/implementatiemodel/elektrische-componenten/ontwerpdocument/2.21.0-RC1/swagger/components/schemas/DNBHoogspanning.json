@@ -1,0 +1,126 @@
+{
+  "title": "DNBHoogspanning",
+  "type": "object",
+  "description": "Aansluiting op het hoogspanningsnet van de distributienetbeheerder.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DNBHoogspanning)",
+      "pattern": "^DNBHoogspanning$"
+    },
+    "meternummer": {
+      "$ref": "#/components/schemas/DNBHoogspanning.meternummer"
+    },
+    "aansluitvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilovoltampèRe"
+    },
+    "adresVolgensDNB": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "eanNummer": {
+      "$ref": "#/components/schemas/DNBHoogspanning.eanNummer"
+    },
+    "energieleverancier": {
+      "$ref": "#/components/schemas/Rechtspersoon"
+    },
+    "netbeheerder": {
+      "$ref": "#/components/schemas/Rechtspersoon"
+    },
+    "datumOprichting": {
+      "$ref": "#/components/schemas/DNBHoogspanning.datumOprichting"
+    },
+    "risicoAnalyse": {
+      "type": "array",
+      "description": "Document met de risicoanalyse. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "datumEnergieleveringscontract": {
+      "$ref": "#/components/schemas/DNBHoogspanning.datumEnergieleveringscontract"
+    },
+    "datumStartEnergielevering": {
+      "$ref": "#/components/schemas/DNBHoogspanning.datumStartEnergielevering"
+    },
+    "referentieDistributienetbeheerder": {
+      "$ref": "#/components/schemas/DNBHoogspanning.referentieDistributienetbeheerder"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/DNBHoogspanning.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/DNBHoogspanning.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DNBHoogspanning.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/DNBHoogspanning.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DNBHoogspanning.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/DNBHoogspanning.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/DNBHoogspanning.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/DNBHoogspanning.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "meternummer",
+    "aansluitvermogen",
+    "adresVolgensDNB",
+    "eanNummer",
+    "energieleverancier",
+    "netbeheerder",
+    "datumOprichting",
+    "risicoAnalyse",
+    "datumEnergieleveringscontract",
+    "datumStartEnergielevering",
+    "referentieDistributienetbeheerder",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

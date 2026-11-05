@@ -1,0 +1,118 @@
+{
+  "title": "IO-Kaart",
+  "type": "object",
+  "description": "Een kaart of module die gebruikt wordt voor de ingang of uitgang van een verwerkingseenheid (bv. een PLC). Op de IO-kaart worden perifere toestellen en sensoren aangesloten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IO-Kaart)",
+      "pattern": "^IO-Kaart$"
+    },
+    "poortadres": {
+      "$ref": "#/components/schemas/IO-Kaart.poortadres"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/IO-Kaart.firmwareversie"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/IO-KaartMerken"
+    },
+    "richting": {
+      "$ref": "#/components/schemas/IORichting"
+    },
+    "signaalType": {
+      "$ref": "#/components/schemas/IO-KaartSignaaltype"
+    },
+    "bitsnelheid": {
+      "$ref": "#/components/schemas/IOBitSnelheid"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiches als bijlage. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/IO-KaartModelnaam"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/IO-Kaart.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/IO-Kaart.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/IO-Kaart.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/IO-Kaart.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IO-Kaart.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/IO-Kaart.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IO-Kaart.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/IO-Kaart.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/IO-Kaart.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "poortadres",
+    "firmwareversie",
+    "merk",
+    "richting",
+    "signaalType",
+    "bitsnelheid",
+    "technischeFiche",
+    "modelnaam",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

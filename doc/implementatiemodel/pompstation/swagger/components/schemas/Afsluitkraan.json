@@ -1,0 +1,98 @@
+{
+  "title": "Afsluitkraan",
+  "type": "object",
+  "description": "Een manueel bedienbare inrichting om de stroming van vloeistoffen of gassen doorheen een bepaalde opening tegen te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Afsluitkraan)",
+      "pattern": "^Afsluitkraan$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/AfsluitkraanType"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnaamAfsluitkraan"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerkAflsuitkraan"
+    },
+    "isContinuRegelbaar": {
+      "$ref": "#/components/schemas/Afsluitkraan.isContinuRegelbaar"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van een linkend element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Afsluitkraan.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Afsluitkraan.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Afsluitkraan.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Afsluitkraan.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Afsluitkraan.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Afsluitkraan.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "modelnaam",
+    "merk",
+    "isContinuRegelbaar",
+    "diameter",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

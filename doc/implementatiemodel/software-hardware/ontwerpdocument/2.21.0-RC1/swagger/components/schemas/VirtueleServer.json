@@ -1,0 +1,126 @@
+{
+  "title": "VirtueleServer",
+  "type": "object",
+  "description": "Gedeelte van een fysieke server, dat zich met behulp van software gedraagt als een 'echte' server.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VirtueleServer)",
+      "pattern": "^VirtueleServer$"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VirtueleServerModelnaam"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VirtueleServerMerk"
+    },
+    "oS": {
+      "$ref": "#/components/schemas/HardwareOS"
+    },
+    "rAM": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInGigabyte"
+    },
+    "ipAdres": {
+      "type": "array",
+      "description": "Het IP-adres van de hardware. Lijst van IPv4-Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/IPv4-Adres"
+      },
+      "minItems": 1
+    },
+    "disk": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInGigabyte"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/VirtueleServer.licentie"
+    },
+    "domein": {
+      "$ref": "#/components/schemas/HardwareDomein"
+    },
+    "cDDVDTape": {
+      "$ref": "#/components/schemas/HardwareCDDVDTape"
+    },
+    "cPU": {
+      "$ref": "#/components/schemas/VirtueleServer.cPU"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/VirtueleServer.dNSNaam"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/VirtueleServer.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/VirtueleServer.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VirtueleServer.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VirtueleServer.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VirtueleServer.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VirtueleServer.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VirtueleServer.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VirtueleServer.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "modelnaam",
+    "merk",
+    "oS",
+    "rAM",
+    "ipAdres",
+    "disk",
+    "licentie",
+    "domein",
+    "cDDVDTape",
+    "cPU",
+    "dNSNaam",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

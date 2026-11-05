@@ -1,0 +1,101 @@
+{
+  "title": "IntercomServer",
+  "type": "object",
+  "description": "Centrale module - inclusief configuratiesoftware - die de intercomtoestellen koppelt, bv. per tunnel of per complex, en een gateway opzet naar de centrale systemen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IntercomServer)",
+      "pattern": "^IntercomServer$"
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "transportType": {
+      "$ref": "#/components/schemas/AudioTransportType"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/IntercomserverMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/IntercomserverModelnaam"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/IntercomServer.dNSNaam"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/IntercomServer.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/IntercomServer.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/IntercomServer.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IntercomServer.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/IntercomServer.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/IntercomServer.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/IntercomServer.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/IntercomServer.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "iP-Adres",
+    "transportType",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "dNSNaam",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -13,34 +13,10 @@
       "pattern": "^Kwaliteitscertificaat$"
     },
     "identificator": {
-      "type": "object",
-      "description": "De identificator van de vergunning.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Kwaliteitscertificaat.identificator"
     },
     "datumOndertekening": {
-      "type": "object",
-      "description": "De datum waarop het kwalitetiscertificaat ondertekend is door de administrateur-generaal.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Kwaliteitscertificaat.datumOndertekening"
     },
     "document": {
       "$ref": "#/components/schemas/Bestandsbijlage"

@@ -1,7 +1,7 @@
 {
   "title": "Voedingskeuzeschakelaar",
   "type": "object",
-  "description": "Deze schakelaar biedt de mogelijkheid om handmatig over te schakelen tussen de twee voedingsbronnen om continuïteit van elektrische stroom te behouden, zelfs wanneer de reguliere stroomvoorziening tijdelijk niet beschikbaar is.",
+  "description": "Deze schakelaar biedt de mogelijkheid om handmatig over te schakelen tussen de twee voedingsbronnen om continuïteit van elektrische stroom te behouden,zelfs wanneer de reguliere stroomvoorziening tijdelijk niet beschikbaar is.",
   "properties": {
     "@id": {
       "type": "string",
@@ -12,65 +12,34 @@
       "description": "Object type (klasse Voedingskeuzeschakelaar)",
       "pattern": "^Voedingskeuzeschakelaar$"
     },
+    "naampad": {
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.naam"
+    },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Voedingskeuzeschakelaar.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Voedingskeuzeschakelaar.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -78,42 +47,13 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.datumOprichtingObject"
     },
     "asset-Versie": {
       "$ref": "#/components/schemas/AssetVersie"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Voedingskeuzeschakelaar.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"
@@ -121,6 +61,8 @@
   },
   "required": [
     "@type",
+    "naampad",
+    "naam",
     "asset-Id",
     "notitie",
     "standaardbestekpostnummer",

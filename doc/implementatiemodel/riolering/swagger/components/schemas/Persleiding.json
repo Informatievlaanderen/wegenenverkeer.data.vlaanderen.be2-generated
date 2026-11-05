@@ -1,0 +1,154 @@
+{
+  "title": "Persleiding",
+  "type": "object",
+  "description": "Ondergronds kanaal of pijp voor afvoer van een vloeistof of gas onder druk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Persleiding)",
+      "pattern": "^Persleiding$"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/PersleidingMateriaal"
+    },
+    "sDRKlasse": {
+      "$ref": "#/components/schemas/SDRKlasse"
+    },
+    "toestandBuis": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "hoogteBinnenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isManToegankelijk": {
+      "$ref": "#/components/schemas/Persleiding.isManToegankelijk"
+    },
+    "vorm": {
+      "$ref": "#/components/schemas/RioleringVorm"
+    },
+    "diepteOpwaarts": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van de buis. Bestanden van het type xlsx of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "bokOpwaarts": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "diepteAfwaarts": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "bokAfwaarts": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "helling": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInPromille"
+    },
+    "hoogteBuitenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "breedteBinnenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isOpgevuld": {
+      "$ref": "#/components/schemas/Persleiding.isOpgevuld"
+    },
+    "breedteBuitenzijde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Persleiding.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Persleiding.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Persleiding.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Persleiding.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Persleiding.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Persleiding.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Persleiding.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Persleiding.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaal",
+    "sDRKlasse",
+    "toestandBuis",
+    "breedte",
+    "hoogteBinnenzijde",
+    "isManToegankelijk",
+    "vorm",
+    "diepteOpwaarts",
+    "technischeFiche",
+    "bokOpwaarts",
+    "diepteAfwaarts",
+    "bokAfwaarts",
+    "lengte",
+    "helling",
+    "hoogteBuitenzijde",
+    "breedteBinnenzijde",
+    "isOpgevuld",
+    "breedteBuitenzijde",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad",
+    "naam"
+  ]
+}

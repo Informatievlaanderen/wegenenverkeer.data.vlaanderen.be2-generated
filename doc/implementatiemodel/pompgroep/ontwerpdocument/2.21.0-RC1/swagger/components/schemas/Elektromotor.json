@@ -1,0 +1,141 @@
+{
+  "title": "Elektromotor",
+  "type": "object",
+  "description": "Een machine die elektrische energie omzet in mechanische energie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Elektromotor)",
+      "pattern": "^Elektromotor$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/ElektromotorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ElektromotorModelnaam"
+    },
+    "gebruik": {
+      "$ref": "#/components/schemas/ElektromotorRol"
+    },
+    "nominaleSpanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "bouwvorm": {
+      "$ref": "#/components/schemas/ElektromotorBouwvorm"
+    },
+    "ashoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "asdiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "heeftGeforceerdeKoeling": {
+      "$ref": "#/components/schemas/Elektromotor.heeftGeforceerdeKoeling"
+    },
+    "nominaalVermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilowatt"
+    },
+    "arbeidsfactor": {
+      "$ref": "#/components/schemas/Elektromotor.arbeidsfactor"
+    },
+    "nominaleStroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "beschermingsgraad": {
+      "$ref": "#/components/schemas/ElektromotorBeschermingsgraad"
+    },
+    "nominaalToerental": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInRotatiesPerMinuut"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Elektromotor.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Elektromotor.serienummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Elektromotor.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Elektromotor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Elektromotor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Elektromotor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Elektromotor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Elektromotor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Elektromotor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Elektromotor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "gebruik",
+    "nominaleSpanning",
+    "bouwvorm",
+    "ashoogte",
+    "asdiameter",
+    "heeftGeforceerdeKoeling",
+    "nominaalVermogen",
+    "arbeidsfactor",
+    "nominaleStroom",
+    "technischeFiche",
+    "beschermingsgraad",
+    "nominaalToerental",
+    "componentnummer",
+    "serienummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

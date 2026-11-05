@@ -1,0 +1,126 @@
+{
+  "title": "Dompelpomp",
+  "type": "object",
+  "description": "Een pomp die geheel in de te verpompen vloeistof wordt ondergedompeld. Ook klokpomp of onderwaterpomp genoemd. Voor kleinschalige dompelpompen gebruikt men ook de naam lekwaterpomp.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dompelpomp)",
+      "pattern": "^Dompelpomp$"
+    },
+    "maximaalDebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiterPerMinuut"
+    },
+    "maximaleOpvoerhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenDompelpompen"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenDompelpompen"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "binnendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "nominaleSpanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "opvoerhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "pompcapaciteit": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerUur"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van een linkend element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Dompelpomp.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dompelpomp.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Dompelpomp.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dompelpomp.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Dompelpomp.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Dompelpomp.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Dompelpomp.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Dompelpomp.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "maximaalDebiet",
+    "maximaleOpvoerhoogte",
+    "merk",
+    "modelnaam",
+    "vermogen",
+    "binnendiameter",
+    "nominaleSpanning",
+    "buitendiameter",
+    "opvoerhoogte",
+    "pompcapaciteit",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad",
+    "naam"
+  ]
+}

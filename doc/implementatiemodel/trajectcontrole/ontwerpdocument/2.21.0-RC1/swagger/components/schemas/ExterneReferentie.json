@@ -1,0 +1,27 @@
+{
+  "title": "ExterneReferentie",
+  "type": "object",
+  "description": "Complex datatype waarmee een referentienummer zoals gekend bij de externe partij bv. aannemer, VLCC, ... kan toegevoegd worden aan object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ExterneReferentie)",
+      "pattern": "^ExterneReferentie$"
+    },
+    "externReferentienummer": {
+      "$ref": "#/components/schemas/ExterneReferentie.externReferentienummer"
+    },
+    "externePartij": {
+      "$ref": "#/components/schemas/ExterneReferentie.externePartij"
+    }
+  },
+  "required": [
+    "@type",
+    "externReferentienummer",
+    "externePartij"
+  ]
+}

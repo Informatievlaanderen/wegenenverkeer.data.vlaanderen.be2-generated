@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInEuro",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in Euro uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInEuro)",
+      "pattern": "^KwantitatieveWaardeInEuro$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInEuro.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInEuro.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

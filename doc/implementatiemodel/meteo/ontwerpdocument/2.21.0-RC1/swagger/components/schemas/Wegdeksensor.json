@@ -1,0 +1,98 @@
+{
+  "title": "Wegdeksensor",
+  "type": "object",
+  "description": "Een meettoestel dat wordt gebruikt om verschillende fysische parameters ter hoogte van het wegdek te meten, waaronder de temperatuur op verschillende dieptes, de vochtigheidsgraad van het wegdek en de aanwezigheid van smeltmiddelen op het wegdek.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wegdeksensor)",
+      "pattern": "^Wegdeksensor$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/WegdeksensorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/WegdeksensorModelnaam"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Wegdeksensor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Wegdeksensor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wegdeksensor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Wegdeksensor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wegdeksensor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Wegdeksensor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Wegdeksensor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Wegdeksensor.serienummer"
+    },
+    "kalibratiecertificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technsiche fiche als bijlage van de sensor. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "serienummer",
+    "kalibratiecertificaat",
+    "technischeFiche"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "title": "TelecommunicationsCable",
+  "type": "object",
+  "description": "Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet voor het overbrengen van data van de ene locatie naar een andere.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TelecommunicationsCable)",
+      "pattern": "^TelecommunicationsCable$"
+    },
+    "subthema": {
+      "$ref": "#/components/schemas/TelecommunicationsSubthema"
+    },
+    "materiaalType": {
+      "$ref": "#/components/schemas/DatakabelMateriaal"
+    },
+    "buitenmantelDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitenmantelKleur": {
+      "$ref": "#/components/schemas/KabelmantelKleur"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerLopendeMeter"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/KabelFabrikant"
+    },
+    "typeBescherming": {
+      "$ref": "#/components/schemas/KabelsEnLeidingenBescherming"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/TelecommunicationsCable.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/TelecommunicationsCable.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/TelecommunicationsCable.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/TelecommunicationsCable.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/TelecommunicationsCable.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/TelecommunicationsCable.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/TelecommunicationsCable.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "subthema",
+    "materiaalType",
+    "buitenmantelDiameter",
+    "buitenmantelKleur",
+    "gewicht",
+    "fabrikant",
+    "typeBescherming",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

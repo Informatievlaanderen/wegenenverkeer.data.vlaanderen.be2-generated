@@ -1,0 +1,31 @@
+{
+  "title": "SoftwarePoortconfiguratie",
+  "type": "object",
+  "description": "Complex datatype dat beschrijft welke poort voor welke service gebruikt wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SoftwarePoortconfiguratie)",
+      "pattern": "^SoftwarePoortconfiguratie$"
+    },
+    "service": {
+      "$ref": "#/components/schemas/SoftwarePoortconfiguratie.service"
+    },
+    "poortnummer": {
+      "$ref": "#/components/schemas/SoftwarePoortconfiguratie.poortnummer"
+    },
+    "richting": {
+      "$ref": "#/components/schemas/PoortconfiguratieRichting"
+    }
+  },
+  "required": [
+    "@type",
+    "service",
+    "poortnummer",
+    "richting"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "title": "StralendeKabel",
+  "type": "object",
+  "description": "Een stralende kabel zendt radiogolven uit waardoor het radiosignaal kan worden opgepikt en draadloze communicatie mogelijk blijft. Het radiosignaal wordt opgepikt uit de lucht en in de afgesloten ruimte terug uitgezonden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StralendeKabel)",
+      "pattern": "^StralendeKabel$"
+    },
+    "frequentierange": {
+      "$ref": "#/components/schemas/Frequentierange"
+    },
+    "kabeldikte": {
+      "$ref": "#/components/schemas/Kabeldikte"
+    },
+    "frequentiebereik": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMegahertz"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "buitenmantelDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitenmantelKleur": {
+      "$ref": "#/components/schemas/KabelmantelKleur"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerLopendeMeter"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/KabelFabrikant"
+    },
+    "typeBescherming": {
+      "$ref": "#/components/schemas/KabelsEnLeidingenBescherming"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/StralendeKabel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/StralendeKabel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StralendeKabel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/StralendeKabel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StralendeKabel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/StralendeKabel.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/StralendeKabel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/StralendeKabel.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "frequentierange",
+    "kabeldikte",
+    "frequentiebereik",
+    "technischeFiche",
+    "buitenmantelDiameter",
+    "buitenmantelKleur",
+    "gewicht",
+    "fabrikant",
+    "typeBescherming",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

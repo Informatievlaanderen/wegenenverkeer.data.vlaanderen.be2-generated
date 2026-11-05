@@ -1,0 +1,89 @@
+{
+  "title": "Toegangscontrole",
+  "type": "object",
+  "description": "Component voor controle van de toegang tot een ruimte of behuizing.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toegangscontrole)",
+      "pattern": "^Toegangscontrole$"
+    },
+    "heeftBadgelezer": {
+      "$ref": "#/components/schemas/Toegangscontrole.heeftBadgelezer"
+    },
+    "typeSleutel": {
+      "$ref": "#/components/schemas/ToegangscontroleSleuteltype"
+    },
+    "heeftSlotMetAfstandsbediening": {
+      "$ref": "#/components/schemas/Toegangscontrole.heeftSlotMetAfstandsbediening"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Toegangscontrole.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Toegangscontrole.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Toegangscontrole.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegangscontrole.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Toegangscontrole.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegangscontrole.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Toegangscontrole.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Toegangscontrole.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftBadgelezer",
+    "typeSleutel",
+    "heeftSlotMetAfstandsbediening",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

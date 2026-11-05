@@ -1,0 +1,89 @@
+{
+  "title": "HydrostatischeNiveaumeting",
+  "type": "object",
+  "description": "Een inrichting voor het bepalen van het peil van een vloeistof (bv. het waterniveau in een vloeistoftank of lekwaterput van een kelder). De sensor meet de hydrostatische druk (gewicht) van een vloeistof en bepaalt met deze gegevens het niveau van de vloeistof. Het resultaat wordt omgezet in een uitleesbaar signaal.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HydrostatischeNiveaumeting)",
+      "pattern": "^HydrostatischeNiveaumeting$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumetingMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumetingModelnaam"
+    },
+    "meetbereik": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HydrostatischeNiveaumeting.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HydrostatischeNiveaumeting.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/HydrostatischeNiveaumeting.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "meetbereik",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

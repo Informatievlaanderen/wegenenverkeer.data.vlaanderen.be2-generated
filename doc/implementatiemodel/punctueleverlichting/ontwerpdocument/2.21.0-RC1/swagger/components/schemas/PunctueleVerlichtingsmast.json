@@ -1,0 +1,117 @@
+{
+  "title": "PunctueleVerlichtingsmast",
+  "type": "object",
+  "description": "Paal waarop punctuele verlichting van niet-beveiligde oversteekplaatsen bevestigd kan worden, inclusief deurtje, klemmenblok, bevestigingsmaterialen (bv. voetplaten) en fundering (bv. buisfundering) of verankeringsmassief. Deze wordt geschilderd in afwisselende stroken zwart/geel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PunctueleVerlichtingsmast)",
+      "pattern": "^PunctueleVerlichtingsmast$"
+    },
+    "aantalArmen": {
+      "$ref": "#/components/schemas/WV-MastAantalArmen"
+    },
+    "armlengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "bevestigingToestellen": {
+      "$ref": "#/components/schemas/BevestigingWegverlichtingstoestel"
+    },
+    "dwarsdoorsnede": {
+      "$ref": "#/components/schemas/DraagconstructieDwarsdoorsnede"
+    },
+    "isDraaibaar": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.isDraaibaar"
+    },
+    "leverancier": {
+      "$ref": "#/components/schemas/LichtmastLeverancier"
+    },
+    "masthoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "masttype": {
+      "$ref": "#/components/schemas/MasttypeVoorPunctueleVerlichting"
+    },
+    "rekennota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "elektrischeBeveiliging": {
+      "$ref": "#/components/schemas/EM-DraagconstructieElektrischeBeveiliging"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PunctueleVerlichtingsmast.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PunctueleVerlichtingsmast.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/PunctueleVerlichtingsmast.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "aantalArmen",
+    "armlengte",
+    "bevestigingToestellen",
+    "dwarsdoorsnede",
+    "isDraaibaar",
+    "leverancier",
+    "masthoogte",
+    "masttype",
+    "rekennota",
+    "elektrischeBeveiliging",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

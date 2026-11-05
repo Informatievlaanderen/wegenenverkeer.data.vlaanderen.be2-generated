@@ -1,0 +1,31 @@
+{
+  "title": "AssetVersie",
+  "type": "object",
+  "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AssetVersie)",
+      "pattern": "^AssetVersie$"
+    },
+    "versienummer": {
+      "$ref": "#/components/schemas/AssetVersie.versienummer"
+    },
+    "timestamp": {
+      "$ref": "#/components/schemas/AssetVersie.timestamp"
+    },
+    "context": {
+      "$ref": "#/components/schemas/AssetVersie.context"
+    }
+  },
+  "required": [
+    "@type",
+    "versienummer",
+    "timestamp",
+    "context"
+  ]
+}

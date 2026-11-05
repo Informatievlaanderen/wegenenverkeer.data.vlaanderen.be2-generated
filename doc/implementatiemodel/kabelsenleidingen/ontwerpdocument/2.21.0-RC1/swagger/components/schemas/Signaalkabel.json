@@ -1,0 +1,105 @@
+{
+  "title": "Signaalkabel",
+  "type": "object",
+  "description": "Kabel die primair zorgt voor het uitwisselen van digitale en analoge stuursignalen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Signaalkabel)",
+      "pattern": "^Signaalkabel$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/SignalisatiekabelTypes"
+    },
+    "adersSpecificatie": {
+      "$ref": "#/components/schemas/VoedingskabelAdersSpecificaties"
+    },
+    "typeSpecificatie": {
+      "$ref": "#/components/schemas/SignaalkabelTypeSpecificatie"
+    },
+    "buitenmantelDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitenmantelKleur": {
+      "$ref": "#/components/schemas/KabelmantelKleur"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerLopendeMeter"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/KabelFabrikant"
+    },
+    "typeBescherming": {
+      "$ref": "#/components/schemas/KabelsEnLeidingenBescherming"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Signaalkabel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Signaalkabel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Signaalkabel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Signaalkabel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Signaalkabel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Signaalkabel.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Signaalkabel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "adersSpecificatie",
+    "typeSpecificatie",
+    "buitenmantelDiameter",
+    "buitenmantelKleur",
+    "gewicht",
+    "fabrikant",
+    "typeBescherming",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

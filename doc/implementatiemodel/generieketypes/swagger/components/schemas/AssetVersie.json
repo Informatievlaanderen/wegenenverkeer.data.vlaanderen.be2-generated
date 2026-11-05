@@ -13,52 +13,13 @@
       "pattern": "^AssetVersie$"
     },
     "versienummer": {
-      "type": "object",
-      "description": "Het versienummer als een oplopende integer.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^NonNegativeInteger$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/AssetVersie.versienummer"
     },
     "timestamp": {
-      "type": "object",
-      "description": "De timestamp van het moment dat de versienummer werd toegekend.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^DateTime$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/AssetVersie.timestamp"
     },
     "context": {
-      "type": "object",
-      "description": "De context van de versie creatie.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/AssetVersie.context"
     }
   },
   "required": [

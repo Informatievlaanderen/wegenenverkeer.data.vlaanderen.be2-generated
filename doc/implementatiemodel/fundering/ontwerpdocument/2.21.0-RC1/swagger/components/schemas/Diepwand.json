@@ -1,0 +1,113 @@
+{
+  "title": "Diepwand",
+  "type": "object",
+  "description": "Paneelsgewijs opgebouwde wand, met behulp van specifieke graafmachines in de grond gevormd. Hierbij stabiliseert een steunvloeistof (meestal een bentonietsuspensie) de sleuf.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Diepwand)",
+      "pattern": "^Diepwand$"
+    },
+    "rekennota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "betonspecificaties": {
+      "$ref": "#/components/schemas/Betonspecificaties"
+    },
+    "wapeningsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "totaleHorizontaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "afkappeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "paneelbreedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "aanzetpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Diepwand.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Diepwand.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Diepwand.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Diepwand.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Diepwand.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Diepwand.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Diepwand.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "heeftWaterremmendeFunctie": {
+      "$ref": "#/components/schemas/Diepwand.heeftWaterremmendeFunctie"
+    }
+  },
+  "required": [
+    "@type",
+    "rekennota",
+    "betonspecificaties",
+    "wapeningsplan",
+    "totaleHorizontaleLengte",
+    "afkappeil",
+    "dikte",
+    "paneelbreedte",
+    "aanzetpeil",
+    "hoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "heeftWaterremmendeFunctie"
+  ]
+}

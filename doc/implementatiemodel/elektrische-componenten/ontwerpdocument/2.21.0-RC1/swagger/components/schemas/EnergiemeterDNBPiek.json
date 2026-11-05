@@ -1,0 +1,89 @@
+{
+  "title": "EnergiemeterDNBPiek",
+  "type": "object",
+  "description": "Toestel dat eigendom is van de distributienetbeheerder en in de installatie van de asset beheerder geplaatst wordt voor het meten van piekvermogens.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse EnergiemeterDNBPiek)",
+      "pattern": "^EnergiemeterDNBPiek$"
+    },
+    "meteropnameFrequentie": {
+      "$ref": "#/components/schemas/EnergiemeterDNBMeteropnameFrequentie"
+    },
+    "metertype": {
+      "$ref": "#/components/schemas/ElektrischMetertype"
+    },
+    "meternummer": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.meternummer"
+    },
+    "aantalTelwerken": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.aantalTelwerken"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/EnergiemeterDNBPiek.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/EnergiemeterDNBPiek.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/EnergiemeterDNBPiek.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "meteropnameFrequentie",
+    "metertype",
+    "meternummer",
+    "aantalTelwerken",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "title": "Verankeringsmassief",
+  "type": "object",
+  "description": "Een fundering waarin ankers zijn aangebracht en die zorgen voor bevestiging en stabilisatie van een object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verankeringsmassief)",
+      "pattern": "^Verankeringsmassief$"
+    },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "isAfgedektMetBitumen": {
+      "$ref": "#/components/schemas/Verankeringsmassief.isAfgedektMetBitumen"
+    },
+    "grondvlakafmeting": {
+      "$ref": "#/components/schemas/AfmetingGrondvlak"
+    },
+    "funderingshoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "betonspecificaties": {
+      "$ref": "#/components/schemas/Betonspecificaties"
+    },
+    "wapeningsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "uitvoeringsmethode": {
+      "$ref": "#/components/schemas/Uitvoeringsmethode"
+    },
+    "bekistingsplan": {
+      "type": "array",
+      "description": "Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "technischeFicheBetonbescherming": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "aanzetpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Verankeringsmassief.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Verankeringsmassief.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verankeringsmassief.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Verankeringsmassief.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verankeringsmassief.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Verankeringsmassief.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Verankeringsmassief.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "afmetingGrondvlak": {
+      "$ref": "#/components/schemas/AfmetingBxlInMeter"
+    },
+    "betonkwaliteit": {
+      "$ref": "#/components/schemas/FunderingBetonkwaliteit"
+    }
+  },
+  "required": [
+    "@type",
+    "volume",
+    "isAfgedektMetBitumen",
+    "grondvlakafmeting",
+    "funderingshoogte",
+    "betonspecificaties",
+    "wapeningsplan",
+    "uitvoeringsmethode",
+    "bekistingsplan",
+    "technischeFicheBetonbescherming",
+    "aanzetpeil",
+    "hoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "afmetingGrondvlak",
+    "betonkwaliteit"
+  ]
+}

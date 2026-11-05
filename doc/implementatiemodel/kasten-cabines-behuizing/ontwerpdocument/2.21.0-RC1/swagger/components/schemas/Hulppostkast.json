@@ -1,0 +1,126 @@
+{
+  "title": "Hulppostkast",
+  "type": "object",
+  "description": "Een kast waarin verschillende onderdelen verzameld worden voor bijstand in noodgevallen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Hulppostkast)",
+      "pattern": "^Hulppostkast$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/HulppostkastType"
+    },
+    "ingressProtectionKlasse": {
+      "$ref": "#/components/schemas/IngressProtectionCodering"
+    },
+    "laatsteKeuringsdatum": {
+      "$ref": "#/components/schemas/Hulppostkast.laatsteKeuringsdatum"
+    },
+    "keuringsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAantalJaar"
+    },
+    "verfraaid": {
+      "$ref": "#/components/schemas/VerfraaiingBuitenkast"
+    },
+    "heeftVerlichting": {
+      "$ref": "#/components/schemas/Hulppostkast.heeftVerlichting"
+    },
+    "kastmateriaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "indelingsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "risicoanalyse": {
+      "type": "array",
+      "description": "Een bestandsbijlage met de risicoanalyse voor werken in en rond een behuizing. De risicoanalyse heeft in eerste instantie betrekking op werken in en rond een behuizing met elektrische installaties. Voor behuizingen met installaties van de distributienetbeheerder wordt de risicoanalyse bestemd voor die beheerder, bewaard in het gelijknamig attribuut van het onderdeel van die beheerder, bv. EnergiemeterDNB. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "tabelUitwendigeInvloeden": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Hulppostkast.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Hulppostkast.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Hulppostkast.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Hulppostkast.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Hulppostkast.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Hulppostkast.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Hulppostkast.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "ingressProtectionKlasse",
+    "laatsteKeuringsdatum",
+    "keuringsfrequentie",
+    "verfraaid",
+    "heeftVerlichting",
+    "kastmateriaal",
+    "indelingsplan",
+    "afmeting",
+    "adres",
+    "risicoanalyse",
+    "tabelUitwendigeInvloeden",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

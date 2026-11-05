@@ -23,46 +23,17 @@
     },
     "additievenOlie": {
       "type": "array",
-      "description": "Lijst van OlieAdditieven items.",
+      "description": "Geeft aan welke additieven er aan de olie zijn toegevoegd. Lijst van OlieAdditieven items.",
       "items": {
         "$ref": "#/components/schemas/OlieAdditieven"
       },
       "minItems": 1
     },
     "isSynthetisch": {
-      "type": "object",
-      "description": "Geeft aan of de olie synthetisch is. Zo niet, dan is de olie biologisch.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/OlieType.isSynthetisch"
     },
     "datumLaatstVerverst": {
-      "type": "object",
-      "description": "Geeft aan wanneer de olie voor het laatst ververst is geweest.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/OlieType.datumLaatstVerverst"
     },
     "volume": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInLiter"

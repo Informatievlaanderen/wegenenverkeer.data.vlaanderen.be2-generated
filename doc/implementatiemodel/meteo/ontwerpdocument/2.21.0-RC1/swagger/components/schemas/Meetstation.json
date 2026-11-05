@@ -1,0 +1,144 @@
+{
+  "title": "Meetstation",
+  "type": "object",
+  "description": "De plaats waar verschillende sensoren samen 1 meetstation vormen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meetstation)",
+      "pattern": "^Meetstation$"
+    },
+    "beoordelingLokaleTerrein": {
+      "type": "array",
+      "description": "Het soort terrein waarin het meetstation staat met betrekking tot het reliëf en de vegetatie. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van LokaalTerreintype items.",
+      "items": {
+        "$ref": "#/components/schemas/LokaalTerreintype"
+      },
+      "minItems": 1
+    },
+    "masterOfBridgeSensor": {
+      "$ref": "#/components/schemas/Meetstation.masterOfBridgeSensor"
+    },
+    "foto": {
+      "type": "array",
+      "description": "De verschillende foto's van het meetstation. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van MeteoFoto items.",
+      "items": {
+        "$ref": "#/components/schemas/MeteoFoto"
+      },
+      "minItems": 1
+    },
+    "nabijheidVanWaterlopen": {
+      "type": "array",
+      "description": "De afstand tot een waterloop in de nabijheid. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van KwantitatieveWaardeInMeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+      },
+      "minItems": 1
+    },
+    "nabijheidVanHindernissen": {
+      "type": "array",
+      "description": "De afstand tot een hindernis in de nabijheid. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van KwantitatieveWaardeInMeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+      },
+      "minItems": 1
+    },
+    "keuringsrapport": {
+      "type": "array",
+      "description": "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "onderhoudsrapport": {
+      "type": "array",
+      "description": "Het rapport dat jaarlijks wordt opgesteld met details over het onderhoud van het meetstation. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "sitePhysicsRapport": {
+      "type": "array",
+      "description": "Beschrijvend overzichtsrapport van het meteostation. Klasse uit gebruik sinds versie 2.14.0-RC1 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Meetstation.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Meetstation.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Meetstation.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Meetstation.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Meetstation.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Meetstation.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Meetstation.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Meetstation.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "beoordelingLokaleTerrein",
+    "masterOfBridgeSensor",
+    "foto",
+    "nabijheidVanWaterlopen",
+    "nabijheidVanHindernissen",
+    "keuringsrapport",
+    "onderhoudsrapport",
+    "sitePhysicsRapport",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

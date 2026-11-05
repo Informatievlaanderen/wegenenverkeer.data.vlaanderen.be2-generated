@@ -14,7 +14,7 @@
     },
     "betondekking": {
       "type": "array",
-      "description": "Lijst van KwantitatieveWaardeInMillimeter items.",
+      "description": "De afstand in millimeter tussen de buitenkant van het beton (het oppervlak van het beton) tot het dichtstbijzijnde wapeningsstaal. Lijst van KwantitatieveWaardeInMillimeter items.",
       "items": {
         "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
       },
@@ -22,7 +22,7 @@
     },
     "betonmilieuklassen": {
       "type": "array",
-      "description": "Lijst van Betonmilieuklasse items.",
+      "description": "Milieuklassen (X-klassen) leggen rechtstreeks de link met bepaalde aantastingsmechanismen, waaraan de betonconstructie (of een onderdeel ervan) wordt blootgesteld tijdens het gebruik. Er kunnen meerdere milieuklassen van toepassing zijn. Lijst van Betonmilieuklasse items.",
       "items": {
         "$ref": "#/components/schemas/Betonmilieuklasse"
       },
@@ -30,7 +30,7 @@
     },
     "betonomgevingsklassen": {
       "type": "array",
-      "description": "Lijst van Betonomgevingsklasse items.",
+      "description": "De omgeving waaraan de betonconstructie (of een onderdeel ervan) wordt blootgesteld tijdens het gebruik. Er kunnen meerdere omgevingsklassen van toepassing zijn. Lijst van Betonomgevingsklasse items.",
       "items": {
         "$ref": "#/components/schemas/Betonomgevingsklasse"
       },
@@ -46,96 +46,26 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
     },
     "isCementMetBeperktAlkaligehalte": {
-      "type": "object",
-      "description": "Aanduiding of het cement een beperkt alkaligehalte heeft (LA).",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetBeperktAlkaligehalte"
     },
     "isCementMetHogeBestandheidTegenSulfaten": {
-      "type": "object",
-      "description": "Geeft aan of het cement een hoge bestandheid heeft tegen sulfaten (SR).",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetHogeBestandheidTegenSulfaten"
     },
     "isCementMetHogeAanvangssterkte": {
-      "type": "object",
-      "description": "Geeft aan of het cement gebruikt wordt voor een snelle binding (bijvoorbeeld in de winter) (HES).",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetHogeAanvangssterkte"
     },
     "isCementMetLageHydratatiewarmte": {
-      "type": "object",
-      "description": "Geeft aan of het cement gebruikt wordt voor een tragere sterkteontwikkeling (LH).",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetLageHydratatiewarmte"
     },
     "isColloïDaalbeton": {
-      "type": "object",
-      "description": "Geeft aan of het beton zich niet ontmengt onder of in water.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isColloïDaalbeton"
     },
     "technischeFicheSpecificatiesBeton": {
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "toeslagmiddelen": {
       "type": "array",
-      "description": "Lijst van ToeslagmiddelBeton items.",
+      "description": "Materialen die aan het beton worden toegevoegd om vb.: een beter geheel te maken, holle ruimten te vullen waardoor de sterkte toeneemt, ruimten met minder massa te creëren,... Dit kunnen er meerdere zijn. Lijst van ToeslagmiddelBeton items.",
       "items": {
         "$ref": "#/components/schemas/ToeslagmiddelBeton"
       },
@@ -145,21 +75,7 @@
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "isCementMetPolypropyleenvezels": {
-      "type": "object",
-      "description": "Geeft aan of in het cement Polypropyleenvezels (PP) zijn verwerkt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetPolypropyleenvezels"
     }
   },
   "required": [

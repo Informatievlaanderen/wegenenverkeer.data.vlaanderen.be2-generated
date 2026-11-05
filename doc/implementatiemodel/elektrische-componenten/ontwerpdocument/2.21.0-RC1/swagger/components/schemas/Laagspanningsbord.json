@@ -1,0 +1,111 @@
+{
+  "title": "Laagspanningsbord",
+  "type": "object",
+  "description": "Verzameling van alle elektrische componenten nodig voor de voeding en sturing van applicaties die erop aangesloten zijn. Omvat onder andere automaten,klemmenblokken,...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Laagspanningsbord)",
+      "pattern": "^Laagspanningsbord$"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "elektrischSchema": {
+      "type": "array",
+      "description": "Het elektrisch aansluitschema van het laagspanningsbord. Bestanden van het type pdf,dwg of dxf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "nominaleStroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "kortsluitvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe"
+    },
+    "aardingsnet": {
+      "$ref": "#/components/schemas/AardingsinstallatieAardingsnet"
+    },
+    "kabelberekeningsnota": {
+      "type": "array",
+      "description": "De verzameling van alle berekeningen uitgevoerd om de secties en maximale lengtes van de kabels, gebruikt in de installatie, te bepalen. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Laagspanningsbord.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Laagspanningsbord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Laagspanningsbord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Laagspanningsbord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Laagspanningsbord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Laagspanningsbord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Laagspanningsbord.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Laagspanningsbord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "vermogen",
+    "elektrischSchema",
+    "nominaleStroom",
+    "kortsluitvermogen",
+    "aardingsnet",
+    "kabelberekeningsnota",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

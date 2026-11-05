@@ -1,0 +1,55 @@
+{
+  "title": "AanvullendeGeometrie",
+  "type": "object",
+  "description": "Beschrijft een geometrie die aanvullend is bij de de werking van een asset maar beschrijft niet de asset zelf, bv. een detailplan of een werkingsgebied met een specifieke locatie, enz...De aanvullende geometrie kan al dan niet een bijlage bevatten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AanvullendeGeometrie)",
+      "pattern": "^AanvullendeGeometrie$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/BijlageMetGeometrieType"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/AanvullendeGeometrie.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/AanvullendeGeometrie.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/AanvullendeGeometrie.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/AanvullendeGeometrie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

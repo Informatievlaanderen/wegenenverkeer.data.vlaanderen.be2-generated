@@ -13,29 +13,14 @@
       "pattern": "^Grond$"
     },
     "milieuhygiëNischeCode": {
-      "type": "object",
-      "description": "Het 3-delig nummer dat gehanteerd wordt door de vzw grondbank om de milieuhygiënische mogelijkheden van een partij bodem of grond aan te geven.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^NonNegativeInteger$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Grond.milieuhygiëNischeCode"
     },
     "soortGrond": {
       "$ref": "#/components/schemas/Grondsoort"
     },
     "technischVerslagBodemonderzoek": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Het technisch verslag van een bodemonderzoek. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },

@@ -1,0 +1,166 @@
+{
+  "title": "RVMS-Bord",
+  "type": "object",
+  "description": "Dynamisch verkeersbord dat verkeerstekens, teksten en figuren kan weergeven in alle kleuren. Het bord is bevestigd aan een seinbrug of galgpaal en heeft tot doel route- en bestemmingsinformatie of waarschuwingen te tonen. RVMS staat voor Road-side Variable Message Sign.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RVMS-Bord)",
+      "pattern": "^RVMS-Bord$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/DynBordRVMSMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/DynBordRVMSModelnaam"
+    },
+    "fabricagenummer": {
+      "$ref": "#/components/schemas/RVMS-Bord.fabricagenummer"
+    },
+    "revisienummer": {
+      "$ref": "#/components/schemas/RVMS-Bord.revisienummer"
+    },
+    "artikelnummer": {
+      "$ref": "#/components/schemas/RVMS-Bord.artikelnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/RVMS-Bord.serienummer"
+    },
+    "heeftDeurcontact": {
+      "$ref": "#/components/schemas/RVMS-Bord.heeftDeurcontact"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "logischeGroepVerkeerscentrum": {
+      "$ref": "#/components/schemas/RVMS-Bord.logischeGroepVerkeerscentrum"
+    },
+    "communicatieprotocol": {
+      "$ref": "#/components/schemas/LEDBordCommunicatieprotocol"
+    },
+    "protocol": {
+      "$ref": "#/components/schemas/RVMS-Bord.protocol"
+    },
+    "versie": {
+      "$ref": "#/components/schemas/RVMS-Bord.versie"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/RVMS-Bord.dNSNaam"
+    },
+    "aantalLichtsensoren": {
+      "$ref": "#/components/schemas/RVMS-Bord.aantalLichtsensoren"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/RVMS-Bord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/RVMS-Bord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RVMS-Bord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/RVMS-Bord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RVMS-Bord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/RVMS-Bord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/RVMS-Bord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/RVMS-Bord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/RVMS-Bord.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "fabricagenummer",
+    "revisienummer",
+    "artikelnummer",
+    "serienummer",
+    "heeftDeurcontact",
+    "ipAdres",
+    "technischeFiche",
+    "logischeGroepVerkeerscentrum",
+    "communicatieprotocol",
+    "protocol",
+    "versie",
+    "dNSNaam",
+    "aantalLichtsensoren",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte",
+    "naampad"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "BijlageToegangsprocedure",
+  "type": "object",
+  "description": "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BijlageToegangsprocedure)",
+      "pattern": "^BijlageToegangsprocedure$"
+    },
+    "bijlageType": {
+      "$ref": "#/components/schemas/BijlagetypeToegangsprocedure"
+    },
+    "document": {
+      "type": "array",
+      "description": "Document dat bij de toegangsprocedure als bijlage toegevoed kan worden. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "nota": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
+    "websiteURL": {
+      "$ref": "#/components/schemas/BijlageToegangsprocedure.websiteURL"
+    }
+  },
+  "required": [
+    "@type",
+    "bijlageType",
+    "document",
+    "nota",
+    "websiteURL"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "AfdichtingKabelleidingdoorvoer",
+  "type": "object",
+  "description": "Complex datatype voor materiaal en functionaliteitsvereisten van de kabelleidingdoorvoer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfdichtingKabelleidingdoorvoer)",
+      "pattern": "^AfdichtingKabelleidingdoorvoer$"
+    },
+    "afdichtingsmateriaal": {
+      "$ref": "#/components/schemas/Afdichtingsmateriaal"
+    },
+    "functionaliteitsvereiste": {
+      "$ref": "#/components/schemas/FunctionaliteitsvereisteKabelleidingdoorvoer"
+    }
+  },
+  "required": [
+    "@type",
+    "afdichtingsmateriaal",
+    "functionaliteitsvereiste"
+  ]
+}

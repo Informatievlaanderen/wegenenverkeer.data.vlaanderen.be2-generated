@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMinuten",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in minuten uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMinuten)",
+      "pattern": "^KwantitatieveWaardeInMinuten$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

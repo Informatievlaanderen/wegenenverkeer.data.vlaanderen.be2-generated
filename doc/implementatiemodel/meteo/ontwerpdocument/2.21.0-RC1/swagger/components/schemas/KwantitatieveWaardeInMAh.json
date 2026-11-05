@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMAh",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in milliampere per uur uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMAh)",
+      "pattern": "^KwantitatieveWaardeInMAh$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMAh.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMAh.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

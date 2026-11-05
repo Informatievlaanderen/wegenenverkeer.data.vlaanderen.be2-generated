@@ -1,0 +1,101 @@
+{
+  "title": "Motorbeveiliging",
+  "type": "object",
+  "description": "Techniek voor het beveiliging van een moter tegen schade door overbelasting.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Motorbeveiliging)",
+      "pattern": "^Motorbeveiliging$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerkenMotorbeveiligingen"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenMotorbeveiligingen"
+    },
+    "isInstelbaar": {
+      "$ref": "#/components/schemas/Motorbeveiliging.isInstelbaar"
+    },
+    "instellingen": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "type": {
+      "$ref": "#/components/schemas/MotorbeveiligingType"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Motorbeveiliging.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Motorbeveiliging.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Motorbeveiliging.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Motorbeveiliging.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Motorbeveiliging.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Motorbeveiliging.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Motorbeveiliging.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Motorbeveiliging.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Motorbeveiliging.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "isInstelbaar",
+    "instellingen",
+    "type",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "title": "SelectieveDetectielus",
+  "type": "object",
+  "description": "De selectieve detectielussen moeten bepaalde voertuigen toelaten het kruispunt prioritair te dwarsen. Daarvoor zijn die prioritaire voertuigen uitgerust met een zendtoestel dat gecodeerd informatie doorstuurt naar een datalus in het wegdek. Deze lus is verbonden met een demodulator die de informatie decodeert en doorstuurt naar de verkeersregelaar van het te dwarsen kruispunt",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SelectieveDetectielus)",
+      "pattern": "^SelectieveDetectielus$"
+    },
+    "soortLus": {
+      "type": "array",
+      "description": "Type detectielus vb bus, tram,... Lijst van SelectieveLusSoort items.",
+      "items": {
+        "$ref": "#/components/schemas/SelectieveLusSoort"
+      },
+      "minItems": 1
+    },
+    "heeftMeerdereKruisingen": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.heeftMeerdereKruisingen"
+    },
+    "verbinding": {
+      "$ref": "#/components/schemas/SelectieveLusVerbinding"
+    },
+    "heeftMofInTrekput": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.heeftMofInTrekput"
+    },
+    "isPrioritair": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.isPrioritair"
+    },
+    "bewakingstijd": {
+      "$ref": "#/components/schemas/Tijdsduur"
+    },
+    "afmetingenBL": {
+      "$ref": "#/components/schemas/AfmetingBxlInMeter"
+    },
+    "soortBewaking": {
+      "$ref": "#/components/schemas/VRIBewaking"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/SelectieveDetectielus.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/SelectieveDetectielus.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/SelectieveDetectielus.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "soortLus",
+    "heeftMeerdereKruisingen",
+    "verbinding",
+    "heeftMofInTrekput",
+    "isPrioritair",
+    "bewakingstijd",
+    "afmetingenBL",
+    "soortBewaking",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

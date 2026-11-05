@@ -1,0 +1,114 @@
+{
+  "title": "Geotextiel",
+  "type": "object",
+  "description": "Geotextiel om grondoppervlakken, taluds en/of bodems te beschermen tegen erosie door wind, golfslag en/of stroming van water, afkomstig hetzij van afstromende neerslag, hetzij van afvloeiend oppervlaktewater.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Geotextiel)",
+      "pattern": "^Geotextiel$"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het geotextiel. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/GeotextielType"
+    },
+    "isBiodegradeerbaar": {
+      "$ref": "#/components/schemas/Geotextiel.isBiodegradeerbaar"
+    },
+    "heeftVulling": {
+      "$ref": "#/components/schemas/Geotextiel.heeftVulling"
+    },
+    "isIngezaaid": {
+      "$ref": "#/components/schemas/Geotextiel.isIngezaaid"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Geotextiel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Geotextiel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Geotextiel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Geotextiel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Geotextiel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Geotextiel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "technischeFiche",
+    "type",
+    "isBiodegradeerbaar",
+    "heeftVulling",
+    "isIngezaaid",
+    "productidentificatiecode",
+    "lengte",
+    "breedte",
+    "oppervlakte",
+    "laagrol",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

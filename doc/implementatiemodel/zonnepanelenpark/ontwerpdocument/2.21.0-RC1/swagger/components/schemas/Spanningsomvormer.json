@@ -1,0 +1,126 @@
+{
+  "title": "Spanningsomvormer",
+  "type": "object",
+  "description": "Een apparaat dat de invoerspanning kan omvormen om een andere uitvoerspanning te bekomen. Typisch is dit type apparaat ook in staat om de frequentie van de elektriciteit te veranderen. Het kan dus gelijkspanning omvormen naar wisselspanning (alternator of wisselrichter), wisselspanning naar wisselspanning van een andere frequentie, of wisselspanning naar gelijkspanning (gelijkrichter).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Spanningsomvormer)",
+      "pattern": "^Spanningsomvormer$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenSpanningsomvormers"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenSpanningsomvormers"
+    },
+    "ingangsspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiches als bijlage. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "ingangsstroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "uitgangsspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "ingangsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz"
+    },
+    "uitgangsstroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "uitgangsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilowatt"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Spanningsomvormer.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Spanningsomvormer.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Spanningsomvormer.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Spanningsomvormer.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Spanningsomvormer.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Spanningsomvormer.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Spanningsomvormer.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Spanningsomvormer.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Spanningsomvormer.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "ingangsspanning",
+    "technischeFiche",
+    "ingangsstroom",
+    "uitgangsspanning",
+    "ingangsfrequentie",
+    "uitgangsstroom",
+    "uitgangsfrequentie",
+    "vermogen",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

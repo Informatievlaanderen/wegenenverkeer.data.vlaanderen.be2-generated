@@ -1,0 +1,60 @@
+{
+  "title": "Bijlage",
+  "type": "object",
+  "description": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bijlage)",
+      "pattern": "^Bijlage$"
+    },
+    "type": {
+      "type": "array",
+      "description": "De typering of categorie van de bijlage. Lijst van BijlageType items.",
+      "items": {
+        "$ref": "#/components/schemas/BijlageType"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Bijlage.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Bijlage.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Bijlage.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Bijlage.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

@@ -14,7 +14,7 @@
     },
     "periode": {
       "type": "array",
-      "description": "Lijst van Maaiperiode items.",
+      "description": "De maand waarin het maaien wordt uitgevoerd. Lijst van Maaiperiode items.",
       "items": {
         "$ref": "#/components/schemas/Maaiperiode"
       },
@@ -22,96 +22,26 @@
     },
     "frequentie": {
       "type": "array",
-      "description": "Lijst van Maaifrequentie items.",
+      "description": "Het aantal keer dat er gemaaid wordt per jaar. Lijst van Maaifrequentie items.",
       "items": {
         "$ref": "#/components/schemas/Maaifrequentie"
       },
       "minItems": 1
     },
     "isVeiligheidsmaaien": {
-      "type": "object",
-      "description": "Aanduiding of er een maaistrook aanwezig is voor het vrijwaren van de zichtbaarheid en voor het vrijhouden van de bebakening en signalisatie.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Maaien.isVeiligheidsmaaien"
     },
     "klepelmaaierToegelaten": {
-      "type": "object",
-      "description": "Aanduiding of er gemaaid mag worden met een klepelmaaier.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Maaien.klepelmaaierToegelaten"
     },
     "isRuigtebeheer": {
-      "type": "object",
-      "description": "Aanduiding of de grazige vegetatie minder dan 1x per jaar gemaaid wordt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Maaien.isRuigtebeheer"
     },
     "isGazonbeheer": {
-      "type": "object",
-      "description": "Aanduiding of de grazige vegetatie meer dan 3x per jaar gemaaid wordt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Maaien.isGazonbeheer"
     },
     "isMachinaal": {
-      "type": "object",
-      "description": "Aanduiding of het maaien machinaal of handmatig wordt uitgevoerd.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Maaien.isMachinaal"
     }
   },
   "required": [

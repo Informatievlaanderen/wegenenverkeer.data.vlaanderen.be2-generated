@@ -1,0 +1,35 @@
+{
+  "title": "Rechtspersoon",
+  "type": "object",
+  "description": "Complex datatype voor een rechtspersoon.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Rechtspersoon)",
+      "pattern": "^Rechtspersoon$"
+    },
+    "organisatie": {
+      "$ref": "#/components/schemas/Rechtspersoon.organisatie"
+    },
+    "afdeling": {
+      "$ref": "#/components/schemas/Rechtspersoon.afdeling"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "telefoonnnummer": {
+      "$ref": "#/components/schemas/Rechtspersoon.telefoonnnummer"
+    }
+  },
+  "required": [
+    "@type",
+    "organisatie",
+    "afdeling",
+    "adres",
+    "telefoonnnummer"
+  ]
+}

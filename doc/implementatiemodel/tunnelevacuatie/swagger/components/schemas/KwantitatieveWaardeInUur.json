@@ -13,34 +13,10 @@
       "pattern": "^KwantitatieveWaardeInUur$"
     },
     "waarde": {
-      "type": "object",
-      "description": "Bevat een getal die bij het datatype hoort.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^NonNegativeInteger$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur.waarde"
     },
     "standaardEenheid": {
-      "type": "object",
-      "description": "De standaard eenheid bij dit datatype is uitgedrukt in uur. \"h\"^^cdt:ucumunit",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur.standaardEenheid"
     }
   },
   "required": [

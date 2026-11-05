@@ -1,0 +1,52 @@
+{
+  "title": "OlieType",
+  "type": "object",
+  "description": "Complex datatype om het type olie te beschrijven.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse OlieType)",
+      "pattern": "^OlieType$"
+    },
+    "typeOlie": {
+      "$ref": "#/components/schemas/OlieType"
+    },
+    "viscositeitOlie": {
+      "$ref": "#/components/schemas/ViscositeitKlasse"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/OlieMerk"
+    },
+    "additievenOlie": {
+      "type": "array",
+      "description": "Geeft aan welke additieven er aan de olie zijn toegevoegd. Lijst van OlieAdditieven items.",
+      "items": {
+        "$ref": "#/components/schemas/OlieAdditieven"
+      },
+      "minItems": 1
+    },
+    "isSynthetisch": {
+      "$ref": "#/components/schemas/OlieType.isSynthetisch"
+    },
+    "datumLaatstVerverst": {
+      "$ref": "#/components/schemas/OlieType.datumLaatstVerverst"
+    },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiter"
+    }
+  },
+  "required": [
+    "@type",
+    "typeOlie",
+    "viscositeitOlie",
+    "merk",
+    "additievenOlie",
+    "isSynthetisch",
+    "datumLaatstVerverst",
+    "volume"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "AanvullendeMiddellijn",
+  "type": "object",
+  "description": "Een lijn die het midden of de centrale as van een object markeert, zoals bv. de centrale as van een gracht.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AanvullendeMiddellijn)",
+      "pattern": "^AanvullendeMiddellijn$"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/AanvullendeMiddellijn.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/AanvullendeMiddellijn.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/AanvullendeMiddellijn.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/AanvullendeMiddellijn.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

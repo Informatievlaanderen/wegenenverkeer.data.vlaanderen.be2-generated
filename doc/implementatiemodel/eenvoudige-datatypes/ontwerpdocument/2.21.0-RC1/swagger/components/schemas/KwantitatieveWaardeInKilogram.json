@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKilogram",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kilogram uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKilogram)",
+      "pattern": "^KwantitatieveWaardeInKilogram$"
+    },
+    "standaardeenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram.standaardeenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardeenheid",
+    "waarde"
+  ]
+}

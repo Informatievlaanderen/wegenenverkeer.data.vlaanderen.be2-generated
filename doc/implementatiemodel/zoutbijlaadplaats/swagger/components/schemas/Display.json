@@ -1,0 +1,97 @@
+{
+  "title": "Display",
+  "type": "object",
+  "description": "Een display is een elektrisch apparaat, ingebed in een techniek, waarop informatie visueel afgebeeld wordt. en dat kan gebruikt voor sturing van die techniek.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Display)",
+      "pattern": "^Display$"
+    },
+    "isTouchscreen": {
+      "$ref": "#/components/schemas/Display.isTouchscreen"
+    },
+    "type": {
+      "$ref": "#/components/schemas/DisplayType"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/DisplayMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/DisplayModelnaam"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Display.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Display.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Display.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Display.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Display.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Display.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Display.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Display.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Display.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isTouchscreen",
+    "type",
+    "merk",
+    "modelnaam",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

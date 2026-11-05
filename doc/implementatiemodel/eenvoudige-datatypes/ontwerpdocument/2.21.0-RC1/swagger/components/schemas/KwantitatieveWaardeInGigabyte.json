@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInGigabyte",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in gigabyte uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInGigabyte)",
+      "pattern": "^KwantitatieveWaardeInGigabyte$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInGigabyte.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInGigabyte.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

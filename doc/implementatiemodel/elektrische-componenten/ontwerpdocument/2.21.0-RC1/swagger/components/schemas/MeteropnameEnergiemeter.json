@@ -1,0 +1,85 @@
+{
+  "title": "MeteropnameEnergiemeter",
+  "type": "object",
+  "description": "Resultaten van een meteropname van een energiemeter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MeteropnameEnergiemeter)",
+      "pattern": "^MeteropnameEnergiemeter$"
+    },
+    "meterstandDag": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKWh"
+    },
+    "meterstandNacht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKWh"
+    },
+    "datumMeterstandDag": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.datumMeterstandDag"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/MeteropnameEnergiemeter.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/MeteropnameEnergiemeter.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/MeteropnameEnergiemeter.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "meterstandDag",
+    "meterstandNacht",
+    "datumMeterstandDag",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

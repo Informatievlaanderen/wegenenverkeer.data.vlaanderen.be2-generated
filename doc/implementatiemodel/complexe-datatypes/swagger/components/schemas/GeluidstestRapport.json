@@ -13,22 +13,7 @@
       "pattern": "^GeluidstestRapport$"
     },
     "gemetenWaarde": {
-      "type": "object",
-      "description": "De sterkte van het geluid in dB.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Integer$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidstestRapport.gemetenWaarde"
     },
     "locatieInSitulabo": {
       "$ref": "#/components/schemas/MeetMethode"
@@ -41,47 +26,17 @@
     },
     "testrapport": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Documentbijlage met de resultaten van de test. Bestanden van het type xlsx of pdf. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
       "minItems": 1
     },
     "geluidsabsorptieReflectie": {
-      "type": "object",
-      "description": "De absorptie- of reflectiewaarde van het geluidsscherm als geheel getal.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Integer$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidstestRapport.geluidsabsorptieReflectie"
     },
     "luchtgeluidsisolatie": {
-      "type": "object",
-      "description": "De gemeten waarde van het luchtgeluidsisiolatie van het geluidsscherm.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Integer$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidstestRapport.luchtgeluidsisolatie"
     }
   },
   "required": [

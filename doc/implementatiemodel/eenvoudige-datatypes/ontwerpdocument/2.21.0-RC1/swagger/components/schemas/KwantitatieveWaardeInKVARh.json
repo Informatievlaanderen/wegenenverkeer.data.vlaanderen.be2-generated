@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKVARh",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in KiloVoltAmpereReactiefUur uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKVARh)",
+      "pattern": "^KwantitatieveWaardeInKVARh$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKVARh.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKVARh.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

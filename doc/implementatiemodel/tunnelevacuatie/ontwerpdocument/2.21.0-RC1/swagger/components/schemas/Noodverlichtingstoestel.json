@@ -1,0 +1,47 @@
+{
+  "title": "Noodverlichtingstoestel",
+  "type": "object",
+  "description": "Een verlichtingstoestel als combinatie van de lamp en de armatuur dat ingeschakeld is in een systeem voor noodverlichting en daarom moet voldoen aan bijkomende vereisten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Noodverlichtingstoestel)",
+      "pattern": "^Noodverlichtingstoestel$"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "typeBatterij": {
+      "$ref": "#/components/schemas/NoodverlichtingTypeBatterij"
+    },
+    "spanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "heeftAfstandsbewaking": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.heeftAfstandsbewaking"
+    },
+    "getestViaAfleggenAutomaat": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.getestViaAfleggenAutomaat"
+    },
+    "autonomie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
+    },
+    "aantalLampen": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.aantalLampen"
+    }
+  },
+  "required": [
+    "@type",
+    "vermogen",
+    "typeBatterij",
+    "spanning",
+    "heeftAfstandsbewaking",
+    "getestViaAfleggenAutomaat",
+    "autonomie",
+    "aantalLampen"
+  ]
+}

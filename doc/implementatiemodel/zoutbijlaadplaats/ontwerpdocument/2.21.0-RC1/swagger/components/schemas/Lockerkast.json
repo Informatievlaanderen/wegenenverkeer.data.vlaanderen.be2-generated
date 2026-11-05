@@ -1,0 +1,51 @@
+{
+  "title": "Lockerkast",
+  "type": "object",
+  "description": "Een lockerkast is een geheel dat onderverdeeld is in een aantal kleinere en smallere opslagruimtes, bedoeld voor het opslaan van persoonlijke goederen of bezittingen. De lockers kunnen vaak afzonderlijk geopend en afgesloten worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Lockerkast)",
+      "pattern": "^Lockerkast$"
+    },
+    "aantalLockers": {
+      "$ref": "#/components/schemas/Lockerkast.aantalLockers"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/LockerkastMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/LockerkastModelnaam"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "heeftVerlichting": {
+      "$ref": "#/components/schemas/Lockerkast.heeftVerlichting"
+    },
+    "kastmateriaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "indelingsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMillimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "aantalLockers",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "heeftVerlichting",
+    "kastmateriaal",
+    "indelingsplan",
+    "afmeting"
+  ]
+}

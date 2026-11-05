@@ -1,0 +1,101 @@
+{
+  "title": "Tandwielkast",
+  "type": "object",
+  "description": "Systeem dat mechanisch vermogen van een motor omzet naar mechanisch vermogen met een kracht/snelheidsverhouding op maat van een bewegingsmechanisme.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Tandwielkast)",
+      "pattern": "^Tandwielkast$"
+    },
+    "reductieverhouding": {
+      "$ref": "#/components/schemas/Tandwielkast.reductieverhouding"
+    },
+    "typeOlie": {
+      "$ref": "#/components/schemas/OlieType"
+    },
+    "hoeveelheidOlie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInLiter"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenTandwielkasten"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenTandwielkasten"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Tandwielkast.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Tandwielkast.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Tandwielkast.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Tandwielkast.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Tandwielkast.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Tandwielkast.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Tandwielkast.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Tandwielkast.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "reductieverhouding",
+    "typeOlie",
+    "hoeveelheidOlie",
+    "technischeFiche",
+    "merk",
+    "modelnaam",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

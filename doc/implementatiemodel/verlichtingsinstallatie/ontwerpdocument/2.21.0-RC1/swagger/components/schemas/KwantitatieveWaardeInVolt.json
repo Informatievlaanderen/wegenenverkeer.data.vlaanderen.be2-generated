@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInVolt",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in volt uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInVolt)",
+      "pattern": "^KwantitatieveWaardeInVolt$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

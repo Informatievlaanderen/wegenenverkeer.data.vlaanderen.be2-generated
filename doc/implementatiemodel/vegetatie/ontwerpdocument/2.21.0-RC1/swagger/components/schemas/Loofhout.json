@@ -1,0 +1,144 @@
+{
+  "title": "Loofhout",
+  "type": "object",
+  "description": "H3 - Vegetaties op gerijpte, mesofiele tot droge bosbodems, gedomineerd door inheemse loofbomen. Boomlaag van mono-specifiek of dominant tot zeer gevarieerd met o.a.: beuk, zomereik, wintereik gewone es, haagbeuk, esdoorn, berk spp., hazelaar, zoete kers, trilpopulier. Mogelijke bijmenging (maar nooit dominant) met zwarte els, grauwe els, wilgen spp., sporkehout, en struweelsoorten (zie S1 tot S5). Kruidlaag: van afwezig tot zeer rijk met oude bosplanten (zie bijlage 3).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Loofhout)",
+      "pattern": "^Loofhout$"
+    },
+    "huidigNatuurbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "natuurstreefbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeHoutigeVegetatie"
+    },
+    "groeiplaatsverbetering": {
+      "type": "array",
+      "description": "De techniek waarmee de groeiplaats wordt verbeterd met als doel de levensverwachting en de conditie van de vegetatie te verbeteren. Lijst van Groeiplaatsverbetering items.",
+      "items": {
+        "$ref": "#/components/schemas/Groeiplaatsverbetering"
+      },
+      "minItems": 1
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "knipoppervlak": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "isVrijUitgroeiend": {
+      "$ref": "#/components/schemas/Loofhout.isVrijUitgroeiend"
+    },
+    "aanleg": {
+      "type": "array",
+      "description": "De manier van aanplanten van de houtige vegetatie. Lijst van HoutigeAanleg items.",
+      "items": {
+        "$ref": "#/components/schemas/HoutigeAanleg"
+      },
+      "minItems": 1
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "$ref": "#/components/schemas/Loofhout.heeftObstakels"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Met deze eigenschap worden de Nederlandse soortnaam, wetenschappelijke soortnaam en de soortcode van de meest voorkomende soorten binnen het begroeid oppervlak weergegeven. Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Loofhout.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Loofhout.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Loofhout.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Loofhout.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Loofhout.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Loofhout.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "huidigNatuurbeeld",
+    "natuurstreefbeeld",
+    "type",
+    "groeiplaatsverbetering",
+    "hoogte",
+    "knipoppervlak",
+    "isVrijUitgroeiend",
+    "aanleg",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInProcent",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in procent uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInProcent)",
+      "pattern": "^KwantitatieveWaardeInProcent$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInProcent.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInProcent.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

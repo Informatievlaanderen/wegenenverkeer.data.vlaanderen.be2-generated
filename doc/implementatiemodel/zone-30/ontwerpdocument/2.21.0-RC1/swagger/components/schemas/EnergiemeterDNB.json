@@ -1,0 +1,101 @@
+{
+  "title": "EnergiemeterDNB",
+  "type": "object",
+  "description": "Toestel dat eigendom is van de distributienetbeheerder en in de installatie van de asset beheerder geplaatst wordt voor het meten van het energieverbruik van de betreffende installatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse EnergiemeterDNB)",
+      "pattern": "^EnergiemeterDNB$"
+    },
+    "uurtarief": {
+      "$ref": "#/components/schemas/EnergiemeterDNBUurtarief"
+    },
+    "isGecombineerdeEnergiemeter": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.isGecombineerdeEnergiemeter"
+    },
+    "meteropnameFrequentie": {
+      "$ref": "#/components/schemas/EnergiemeterDNBMeteropnameFrequentie"
+    },
+    "metertype": {
+      "$ref": "#/components/schemas/ElektrischMetertype"
+    },
+    "meternummer": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.meternummer"
+    },
+    "aantalTelwerken": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.aantalTelwerken"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/EnergiemeterDNB.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/EnergiemeterDNB.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/EnergiemeterDNB.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "uurtarief",
+    "isGecombineerdeEnergiemeter",
+    "meteropnameFrequentie",
+    "metertype",
+    "meternummer",
+    "aantalTelwerken",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

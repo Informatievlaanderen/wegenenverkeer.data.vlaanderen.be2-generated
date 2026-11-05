@@ -1,0 +1,57 @@
+{
+  "title": "Maaien",
+  "type": "object",
+  "description": "Complex datatype voor de eigenschappen van maaien.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Maaien)",
+      "pattern": "^Maaien$"
+    },
+    "periode": {
+      "type": "array",
+      "description": "De maand waarin het maaien wordt uitgevoerd. Lijst van Maaiperiode items.",
+      "items": {
+        "$ref": "#/components/schemas/Maaiperiode"
+      },
+      "minItems": 1
+    },
+    "frequentie": {
+      "type": "array",
+      "description": "Het aantal keer dat er gemaaid wordt per jaar. Lijst van Maaifrequentie items.",
+      "items": {
+        "$ref": "#/components/schemas/Maaifrequentie"
+      },
+      "minItems": 1
+    },
+    "isVeiligheidsmaaien": {
+      "$ref": "#/components/schemas/Maaien.isVeiligheidsmaaien"
+    },
+    "klepelmaaierToegelaten": {
+      "$ref": "#/components/schemas/Maaien.klepelmaaierToegelaten"
+    },
+    "isRuigtebeheer": {
+      "$ref": "#/components/schemas/Maaien.isRuigtebeheer"
+    },
+    "isGazonbeheer": {
+      "$ref": "#/components/schemas/Maaien.isGazonbeheer"
+    },
+    "isMachinaal": {
+      "$ref": "#/components/schemas/Maaien.isMachinaal"
+    }
+  },
+  "required": [
+    "@type",
+    "periode",
+    "frequentie",
+    "isVeiligheidsmaaien",
+    "klepelmaaierToegelaten",
+    "isRuigtebeheer",
+    "isGazonbeheer",
+    "isMachinaal"
+  ]
+}

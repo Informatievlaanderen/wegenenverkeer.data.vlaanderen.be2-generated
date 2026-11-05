@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInInch",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in inches uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInInch)",
+      "pattern": "^KwantitatieveWaardeInInch$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInInch.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInInch.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

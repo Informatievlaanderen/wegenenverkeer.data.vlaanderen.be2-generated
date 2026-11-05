@@ -1,0 +1,135 @@
+{
+  "title": "Damwand",
+  "type": "object",
+  "description": "Een grond- en/of waterkerende constructie,die bestaat uit een verticaal in de grond geplaatste wand.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Damwand)",
+      "pattern": "^Damwand$"
+    },
+    "aansluitingBestaandeConstructie": {
+      "type": "array",
+      "description": "Hoe de aansluiting van de hele damwand op een bestaande constructie tot stand komt. Lijst van AansluitingDamwandBestaandeConstructie items.",
+      "items": {
+        "$ref": "#/components/schemas/AansluitingDamwandBestaandeConstructie"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "isWaterdicht": {
+      "$ref": "#/components/schemas/Damwand.isWaterdicht"
+    },
+    "profiellengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "totaleHorizontaleLengteDamwand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "slotvulling": {
+      "$ref": "#/components/schemas/SlotvullingDamwand"
+    },
+    "ontwerpMaaiveldAchterDeKering": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "totaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "ontwerpMaaiveldVoorDeKering": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "damwandMateriaal": {
+      "$ref": "#/components/schemas/DamwandMateriaal"
+    },
+    "ontwerpWaterpeilAchterDeKering": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "ontwerpWaterpeilVoorDeKering": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "planzicht": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Damwand.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Damwand.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Damwand.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Damwand.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Damwand.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Damwand.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Damwand.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "heeftWaterremmendeFunctie": {
+      "$ref": "#/components/schemas/Damwand.heeftWaterremmendeFunctie"
+    }
+  },
+  "required": [
+    "@type",
+    "aansluitingBestaandeConstructie",
+    "isWaterdicht",
+    "profiellengte",
+    "totaleHorizontaleLengteDamwand",
+    "oppervlakte",
+    "slotvulling",
+    "ontwerpMaaiveldAchterDeKering",
+    "totaleLengte",
+    "ontwerpMaaiveldVoorDeKering",
+    "damwandMateriaal",
+    "ontwerpWaterpeilAchterDeKering",
+    "ontwerpWaterpeilVoorDeKering",
+    "planzicht",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "heeftWaterremmendeFunctie"
+  ]
+}

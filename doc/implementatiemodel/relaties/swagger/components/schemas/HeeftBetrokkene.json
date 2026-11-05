@@ -17,47 +17,17 @@
     },
     "specifiekeContactinfo": {
       "type": "array",
-      "description": "Lijst van Contactinfo items.",
+      "description": "Specifieke contactgegevens van de betrokken agent met betrekking tot het gekoppelde object. Lijst van Contactinfo items.",
       "items": {
         "$ref": "#/components/schemas/Contactinfo"
       },
       "minItems": 1
     },
     "datumAanvang": {
-      "type": "object",
-      "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/HeeftBetrokkene.datumAanvang"
     },
     "datumEinde": {
-      "type": "object",
-      "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/HeeftBetrokkene.datumEinde"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
@@ -69,34 +39,10 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/HeeftBetrokkene.typeURI"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/HeeftBetrokkene.isActief"
     },
     "asset-Versie": {
       "$ref": "#/components/schemas/AssetVersie"

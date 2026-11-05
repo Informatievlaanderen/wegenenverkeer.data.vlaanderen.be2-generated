@@ -1,0 +1,97 @@
+{
+  "title": "Bolder",
+  "type": "object",
+  "description": "Een bolder is een aanmeervoorziening voor schepen geplaatst bovenop een constructie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bolder)",
+      "pattern": "^Bolder$"
+    },
+    "materiaalBolder": {
+      "$ref": "#/components/schemas/MateriaalBolder."
+    },
+    "maximaleTroskracht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "typeBolder": {
+      "$ref": "#/components/schemas/TypeBolder"
+    },
+    "typeBevestiging": {
+      "$ref": "#/components/schemas/TypeBevestigingBolder"
+    },
+    "materiaalVerankeringBolder": {
+      "$ref": "#/components/schemas/Bolder.materiaalVerankeringBolder"
+    },
+    "detailplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Bolder.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Bolder.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bolder.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Bolder.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bolder.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Bolder.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Bolder.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalBolder",
+    "maximaleTroskracht",
+    "typeBolder",
+    "typeBevestiging",
+    "materiaalVerankeringBolder",
+    "detailplan",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

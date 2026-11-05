@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMilliampèRe",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in milliampère uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMilliampèRe)",
+      "pattern": "^KwantitatieveWaardeInMilliampèRe$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMilliampèRe.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMilliampèRe.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

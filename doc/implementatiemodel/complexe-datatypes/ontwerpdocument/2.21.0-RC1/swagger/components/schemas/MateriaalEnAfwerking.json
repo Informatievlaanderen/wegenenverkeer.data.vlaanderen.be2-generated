@@ -1,0 +1,27 @@
+{
+  "title": "MateriaalEnAfwerking",
+  "type": "object",
+  "description": "Complex datatype voor materiaal en afwerking van de leuning.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MateriaalEnAfwerking)",
+      "pattern": "^MateriaalEnAfwerking$"
+    },
+    "afwerkingstypeLeuning": {
+      "$ref": "#/components/schemas/AfwerkingstypeLeuning"
+    },
+    "materiaalLeuning": {
+      "$ref": "#/components/schemas/MateriaalLeuning"
+    }
+  },
+  "required": [
+    "@type",
+    "afwerkingstypeLeuning",
+    "materiaalLeuning"
+  ]
+}

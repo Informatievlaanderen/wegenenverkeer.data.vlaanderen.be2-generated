@@ -1,0 +1,121 @@
+{
+  "title": "RechteSteun",
+  "type": "object",
+  "description": "Rechte paal voor het steun geven aan allerlei installaties. Dit omvat het volledige draagsysteem, zijnde de logische samenstelling van met elkaar verbonden onderdelen, bestemd voor het geven van mechanische sterkte en stabiliteit aan de installatie voor wegsignalering.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RechteSteun)",
+      "pattern": "^RechteSteun$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/RechteSteunType"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "beschermlaag": {
+      "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+    },
+    "bijzonderTransport": {
+      "$ref": "#/components/schemas/DraagconstructieBijzonderTransport"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "kleurStandaard": {
+      "$ref": "#/components/schemas/KleurStandaard"
+    },
+    "beschermendeLaag": {
+      "$ref": "#/components/schemas/BeschermendeLaag"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/RechteSteun.fabrikant"
+    },
+    "hoogteBovenkant": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/RechteSteun.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/RechteSteun.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RechteSteun.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/RechteSteun.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RechteSteun.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/RechteSteun.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/RechteSteun.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "elektrischeBeveiliging": {
+      "$ref": "#/components/schemas/EM-DraagconstructieElektrischeBeveiliging"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/RechteSteun.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "diameter",
+    "technischeFiche",
+    "beschermlaag",
+    "bijzonderTransport",
+    "kleur",
+    "kleurStandaard",
+    "beschermendeLaag",
+    "fabrikant",
+    "hoogteBovenkant",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "elektrischeBeveiliging",
+    "naampad"
+  ]
+}

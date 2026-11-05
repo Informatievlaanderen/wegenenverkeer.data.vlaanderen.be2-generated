@@ -1,0 +1,124 @@
+{
+  "title": "PT-Regelaar",
+  "type": "object",
+  "description": "Deze PT-module staat in voor het ontvangen en bewerken van telegrammen van voertuigen van het openbaar vervoer (bussen,trams).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PT-Regelaar)",
+      "pattern": "^PT-Regelaar$"
+    },
+    "lijnnummers": {
+      "type": "array",
+      "description": "Nummers van de PT lijnen die connecteren met de PT regelaar. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "voertuignummers": {
+      "type": "array",
+      "description": "Nummers van de voertuigen die connecteren met de PT regelaar. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PT-Regelaar.voertuignummers"
+      },
+      "minItems": 1
+    },
+    "communicatiewijze": {
+      "$ref": "#/components/schemas/PtregelaarCommunicatiewijze"
+    },
+    "protocol": {
+      "$ref": "#/components/schemas/PT-RegelaarProtocol"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/PTRegelaarMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/PTRegelaarModelnaam"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiches van een PTRegelaar. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "vplanNummer": {
+      "$ref": "#/components/schemas/PT-Regelaar.vplanNummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/PT-Regelaar.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/PT-Regelaar.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/PT-Regelaar.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PT-Regelaar.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/PT-Regelaar.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PT-Regelaar.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/PT-Regelaar.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/PT-Regelaar.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "lijnnummers",
+    "voertuignummers",
+    "communicatiewijze",
+    "protocol",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "vplanNummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

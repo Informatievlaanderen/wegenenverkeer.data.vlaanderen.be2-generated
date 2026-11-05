@@ -1,0 +1,97 @@
+{
+  "title": "Combilantaarn",
+  "type": "object",
+  "description": "Geheel van één of meerdere verkeerslichten die boven of naast elkaar worden opgesteld en worden bevestigd op een steun, teneinde de beweging van een weggebruiker die een bepaald traject volgt, te verhinderen of toe te laten door het gebruik van aangepaste lenzen",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Combilantaarn)",
+      "pattern": "^Combilantaarn$"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/SeinlantaarnDiameter"
+    },
+    "vormgeving": {
+      "$ref": "#/components/schemas/LantaarnVormgeving"
+    },
+    "heeftContrastschermAanwezig": {
+      "$ref": "#/components/schemas/Combilantaarn.heeftContrastschermAanwezig"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/SeinlantaarnMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/SeinlantaarnModelnaam"
+    },
+    "aantalModules": {
+      "$ref": "#/components/schemas/Combilantaarn.aantalModules"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Combilantaarn.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Combilantaarn.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Combilantaarn.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Combilantaarn.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Combilantaarn.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Combilantaarn.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Combilantaarn.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "diameter",
+    "vormgeving",
+    "heeftContrastschermAanwezig",
+    "merk",
+    "modelnaam",
+    "aantalModules",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

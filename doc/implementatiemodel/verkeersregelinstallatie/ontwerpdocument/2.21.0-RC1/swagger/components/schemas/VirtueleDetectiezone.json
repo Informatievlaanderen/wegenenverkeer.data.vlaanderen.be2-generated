@@ -1,0 +1,102 @@
+{
+  "title": "VirtueleDetectiezone",
+  "type": "object",
+  "description": "Een virtuele detectiezone is een draadloos alternatief voor een traditionele lus. Op basis van GPS gegevens wordt een zone of traject vastgelegd waarbinnen er (al dan niet selectieve) input dient geleverd te worden aan de verkeersregelaar. De virtuele detectiezone kan ook gebruikt worden om de detectiezones van detectiecamera's en radars te inventariseren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VirtueleDetectiezone)",
+      "pattern": "^VirtueleDetectiezone$"
+    },
+    "functie": {
+      "$ref": "#/components/schemas/VRI-LusFunctie"
+    },
+    "isRichtingsgevoelig": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.isRichtingsgevoelig"
+    },
+    "soortVerkeersdeelnemer": {
+      "type": "array",
+      "description": "Soort verkeersdeelnemer dat de detectiezone volgens zijn instellingen kan detecteren. Lijst van Verkeersdeelnemer items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersdeelnemer"
+      },
+      "minItems": 1
+    },
+    "bewakingstijd": {
+      "$ref": "#/components/schemas/Tijdsduur"
+    },
+    "afmetingenBL": {
+      "$ref": "#/components/schemas/AfmetingBxlInMeter"
+    },
+    "soortBewaking": {
+      "$ref": "#/components/schemas/VRIBewaking"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VirtueleDetectiezone.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VirtueleDetectiezone.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VirtueleDetectiezone.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "functie",
+    "isRichtingsgevoelig",
+    "soortVerkeersdeelnemer",
+    "bewakingstijd",
+    "afmetingenBL",
+    "soortBewaking",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

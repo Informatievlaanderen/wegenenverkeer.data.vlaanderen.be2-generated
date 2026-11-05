@@ -13,34 +13,10 @@
       "pattern": "^KwantitatieveWaardeInTon$"
     },
     "waarde": {
-      "type": "object",
-      "description": "Bevat een getal die bij het datatype hoort.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon.waarde"
     },
     "standaardEenheid": {
-      "type": "object",
-      "description": "De standaard eenheid bij dit datatype is uitgedrukt in ton. \"t\"^^cdt:ucumunit",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon.standaardEenheid"
     }
   },
   "required": [

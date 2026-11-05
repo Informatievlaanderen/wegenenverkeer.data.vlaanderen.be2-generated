@@ -1,0 +1,166 @@
+{
+  "title": "RSS-Bord",
+  "type": "object",
+  "description": "Dynamisch verkeersbord voor rijstrooksignalisatie (RSS).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RSS-Bord)",
+      "pattern": "^RSS-Bord$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/DynBordRSSMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/DynBordRSSModelnaam"
+    },
+    "fabricagenummer": {
+      "$ref": "#/components/schemas/RSS-Bord.fabricagenummer"
+    },
+    "revisienummer": {
+      "$ref": "#/components/schemas/RSS-Bord.revisienummer"
+    },
+    "artikelnummer": {
+      "$ref": "#/components/schemas/RSS-Bord.artikelnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/RSS-Bord.serienummer"
+    },
+    "heeftDeurcontact": {
+      "$ref": "#/components/schemas/RSS-Bord.heeftDeurcontact"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "logischeGroepVerkeerscentrum": {
+      "$ref": "#/components/schemas/RSS-Bord.logischeGroepVerkeerscentrum"
+    },
+    "communicatieprotocol": {
+      "$ref": "#/components/schemas/LEDBordCommunicatieprotocol"
+    },
+    "protocol": {
+      "$ref": "#/components/schemas/RSS-Bord.protocol"
+    },
+    "versie": {
+      "$ref": "#/components/schemas/RSS-Bord.versie"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/RSS-Bord.dNSNaam"
+    },
+    "aantalLichtsensoren": {
+      "$ref": "#/components/schemas/RSS-Bord.aantalLichtsensoren"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/RSS-Bord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/RSS-Bord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RSS-Bord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/RSS-Bord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RSS-Bord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/RSS-Bord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/RSS-Bord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/RSS-Bord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/RSS-Bord.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "fabricagenummer",
+    "revisienummer",
+    "artikelnummer",
+    "serienummer",
+    "heeftDeurcontact",
+    "ipAdres",
+    "technischeFiche",
+    "logischeGroepVerkeerscentrum",
+    "communicatieprotocol",
+    "protocol",
+    "versie",
+    "dNSNaam",
+    "aantalLichtsensoren",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte",
+    "naampad"
+  ]
+}

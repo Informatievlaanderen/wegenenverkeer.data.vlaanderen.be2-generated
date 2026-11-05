@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInHerz",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in herz uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInHerz)",
+      "pattern": "^KwantitatieveWaardeInHerz$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInHerz.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

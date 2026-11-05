@@ -1,0 +1,25 @@
+{
+  "title": "BevestigingWegverlichtingstoestel",
+  "type": "object",
+  "description": "Union datatype voor de wijze waarop verlichtingstoestellen bevestigd zijn op een lichtmast, indien dit een standaard methode is dan kan deze geselecteerd worden uit een keuzelijst. Bij afwijkende methode kan de methode toegelicht worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BevestigingWegverlichtingstoestel)",
+      "pattern": "^BevestigingWegverlichtingstoestel$"
+    },
+    "standaardMethode": {
+      "$ref": "#/components/schemas/BevestigingVoorWegverlichtingstoestellen"
+    },
+    "afwijkendeMethode": {
+      "$ref": "#/components/schemas/BevestigingWegverlichtingstoestel.afwijkendeMethode"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

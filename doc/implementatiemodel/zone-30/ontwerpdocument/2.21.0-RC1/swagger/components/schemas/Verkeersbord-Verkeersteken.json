@@ -1,0 +1,117 @@
+{
+  "title": "Verkeersbord-Verkeersteken",
+  "type": "object",
+  "description": "De voorstelling door middel van een verkeersbord van een aanwijzing ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersbord-Verkeersteken)",
+      "pattern": "^Verkeersbord-Verkeersteken$"
+    },
+    "isBeginVanEenZone": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isBeginVanEenZone"
+    },
+    "isEindeVanEenZone": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isEindeVanEenZone"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "Foto van het verkeersteken. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "plaatsbeschrijving": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.plaatsbeschrijving"
+    },
+    "signalisatievergunning": {
+      "type": "array",
+      "description": "Externe referentie naar een vergunning voor het tijdelijk aanbrengen of wijzigen van signalisatie op het openbaar domein of privaat domein met openbaar karakter. Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "mobiliteitsmaatregel": {
+      "type": "array",
+      "description": "Externe referentie naar een maatregel om de beweging en verplaatsing van de weggebruiker op het openbaar domein of privé domein met openbaar karakter te organiseren. Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "variabelOpschrift": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.variabelOpschrift"
+    },
+    "wettelijkeStatus": {
+      "$ref": "#/components/schemas/VerkeerstekenWettelijkeStatus"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Verkeersbord-Verkeersteken.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isBeginVanEenZone",
+    "isEindeVanEenZone",
+    "adres",
+    "plaatsbeschrijving",
+    "variabelOpschrift",
+    "wettelijkeStatus",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

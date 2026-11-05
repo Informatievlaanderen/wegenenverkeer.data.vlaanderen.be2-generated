@@ -1,0 +1,27 @@
+{
+  "title": "AfmetingBxhInMeter",
+  "type": "object",
+  "description": "Complex datatype voor de afmeting van de breedte en hoogte in meter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingBxhInMeter)",
+      "pattern": "^AfmetingBxhInMeter$"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "breedte",
+    "hoogte"
+  ]
+}

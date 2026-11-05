@@ -1,0 +1,86 @@
+{
+  "title": "BeheerSierbeplanting",
+  "type": "object",
+  "description": "Het beheerobject voor de sierbeplanting.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeheerSierbeplanting)",
+      "pattern": "^BeheerSierbeplanting$"
+    },
+    "beheeroptie": {
+      "type": "array",
+      "description": "Aanduiding van welk beheer wordt toegepast op de sierbeplanting. Lijst van BeheerVanSierbeplanting items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerVanSierbeplanting"
+      },
+      "minItems": 1
+    },
+    "heeftBeheerplan": {
+      "$ref": "#/components/schemas/BeheerSierbeplanting.heeftBeheerplan"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BeheerSierbeplanting.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerSierbeplanting.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BeheerSierbeplanting.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeheerSierbeplanting.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BeheerSierbeplanting.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BeheerSierbeplanting.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "beheeroptie",
+    "heeftBeheerplan",
+    "oppervlakte",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

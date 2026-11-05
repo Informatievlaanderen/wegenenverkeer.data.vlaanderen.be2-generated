@@ -1,0 +1,109 @@
+{
+  "title": "Bewegingssensor",
+  "type": "object",
+  "description": "Een bewegingsmelder of aanwezigheidsmelder detecteert de beweging of aanwezigheid van een persoon,dier of object binnen een bepaalde zone. Het resultaat wordt omgezet in een uitleesbaar signaal.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bewegingssensor)",
+      "pattern": "^Bewegingssensor$"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/BewegingssensorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/BewegingssensorModelnaam"
+    },
+    "detectiemethode": {
+      "$ref": "#/components/schemas/BewegingssensorDetectiemethode"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "materiaalBehuizing": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "detectieAfstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "isBuiten": {
+      "$ref": "#/components/schemas/Bewegingssensor.isBuiten"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Bewegingssensor.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Bewegingssensor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Bewegingssensor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewegingssensor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Bewegingssensor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewegingssensor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Bewegingssensor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Bewegingssensor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "opstelhoogte",
+    "merk",
+    "modelnaam",
+    "detectiemethode",
+    "technischeFiche",
+    "materiaalBehuizing",
+    "detectieAfstand",
+    "isBuiten",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

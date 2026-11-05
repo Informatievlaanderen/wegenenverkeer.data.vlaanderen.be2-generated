@@ -1,0 +1,122 @@
+{
+  "title": "VerruigdGrasland",
+  "type": "object",
+  "description": "R2 - grote brandnetel, kleefkruid, ridderzuring, akkerdistel, speerdistel, gewone berenklauw, fluitenkruid, bramen, klit, jacobskruiskruid, ijle dravik, dolle kervel, kweek, kropaar, haagwinde, zevenblad.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerruigdGrasland)",
+      "pattern": "^VerruigdGrasland$"
+    },
+    "huidigNatuurbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "natuurstreefbeeld": {
+      "$ref": "#/components/schemas/Natuurstreefbeeld"
+    },
+    "aanleg": {
+      "$ref": "#/components/schemas/GrazigeVegetatieAanleg"
+    },
+    "heeftBolgewassen": {
+      "$ref": "#/components/schemas/VerruigdGrasland.heeftBolgewassen"
+    },
+    "isOvergroeienRandVerharding": {
+      "$ref": "#/components/schemas/VerruigdGrasland.isOvergroeienRandVerharding"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftObstakels": {
+      "$ref": "#/components/schemas/VerruigdGrasland.heeftObstakels"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "taludwaarde": {
+      "$ref": "#/components/schemas/TaludWaarde"
+    },
+    "drassigheid": {
+      "$ref": "#/components/schemas/VegetatieDrassigheid"
+    },
+    "soort": {
+      "type": "array",
+      "description": "Met deze eigenschap worden de Nederlandse soortnaam, wetenschappelijke soortnaam en de soortcode van de meest voorkomende soorten binnen het begroeid oppervlak weergegeven. Lijst van VegetatieSoortnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/VegetatieSoortnaam"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VerruigdGrasland.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerruigdGrasland.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VerruigdGrasland.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerruigdGrasland.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VerruigdGrasland.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VerruigdGrasland.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "huidigNatuurbeeld",
+    "natuurstreefbeeld",
+    "aanleg",
+    "heeftBolgewassen",
+    "isOvergroeienRandVerharding",
+    "breedte",
+    "lengte",
+    "heeftObstakels",
+    "oppervlakte",
+    "taludwaarde",
+    "drassigheid",
+    "soort",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

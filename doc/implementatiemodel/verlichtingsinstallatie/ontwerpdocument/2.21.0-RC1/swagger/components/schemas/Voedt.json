@@ -1,0 +1,27 @@
+{
+  "title": "Voedt",
+  "type": "object",
+  "description": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Voedt)",
+      "pattern": "^Voedt$"
+    },
+    "aansluitspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "aansluitvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    }
+  },
+  "required": [
+    "@type",
+    "aansluitspanning",
+    "aansluitvermogen"
+  ]
+}

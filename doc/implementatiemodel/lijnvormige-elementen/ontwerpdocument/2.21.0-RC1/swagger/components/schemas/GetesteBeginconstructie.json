@@ -1,0 +1,150 @@
+{
+  "title": "GetesteBeginconstructie",
+  "type": "object",
+  "description": "Een gecertificeerd begin aan een geleideconstructie,met als doel de ernst van een frontale botsing te reduceren aan de stroomopwaartse zijde ten opzichte van de meest nabij gelegen rijstrook.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GetesteBeginconstructie)",
+      "pattern": "^GetesteBeginconstructie$"
+    },
+    "performantieklasse": {
+      "$ref": "#/components/schemas/Performantieklasse"
+    },
+    "testrapport": {
+      "type": "array",
+      "description": "De testresultaten van een afschermende constructie. Attribuut uit gebruik sinds versie 2.0.0-RC3 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "certificaathouder": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.certificaathouder"
+    },
+    "productnaam": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.productnaam"
+    },
+    "metTand-Groef": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.metTand-Groef"
+    },
+    "uitvoeringscertificatie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "video": {
+      "type": "array",
+      "description": "Video van de testen op afschermende constructies. Attribuut uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "isPermanent": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.isPermanent"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalAfschermendeConstructie"
+    },
+    "videoVoertuigkering": {
+      "type": "array",
+      "description": "Video-opname van de crashtesten op de voertuigkerende constructie. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "testrapportVoertuigkering": {
+      "type": "array",
+      "description": "De testresultaten van de crashtesten die op de voertuigkerende constructie uitgevoerd zijn. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GetesteBeginconstructie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GetesteBeginconstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/GetesteBeginconstructie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "schokindex": {
+      "$ref": "#/components/schemas/Schokindex"
+    }
+  },
+  "required": [
+    "@type",
+    "performantieklasse",
+    "testrapport",
+    "certificaathouder",
+    "productnaam",
+    "metTand-Groef",
+    "uitvoeringscertificatie",
+    "video",
+    "productidentificatiecode",
+    "isPermanent",
+    "materiaal",
+    "videoVoertuigkering",
+    "testrapportVoertuigkering",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "schokindex"
+  ]
+}

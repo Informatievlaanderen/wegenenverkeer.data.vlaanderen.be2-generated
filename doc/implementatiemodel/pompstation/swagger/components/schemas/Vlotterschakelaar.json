@@ -1,0 +1,89 @@
+{
+  "title": "Vlotterschakelaar",
+  "type": "object",
+  "description": "Een inrichting voor het bepalen van het peil van een vloeistof (bv. het waterniveau in een lekwaterput van een kelder of het waterniveau van een waterloop). Een vlotterschakelaar (peilpeer) genereert een stuursignaal door op- en neer te bewegen en contact te maken met discrete contactpunten. De combinatie van verschillende peilperen levert een niveaumeting op.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vlotterschakelaar)",
+      "pattern": "^Vlotterschakelaar$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VlotterschakelaarMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VlotterschakelaarModelnaam"
+    },
+    "meetbereik": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Vlotterschakelaar.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Vlotterschakelaar.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Vlotterschakelaar.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "meetbereik",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

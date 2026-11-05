@@ -1,0 +1,109 @@
+{
+  "title": "Voedingskabel",
+  "type": "object",
+  "description": "Zorgt voor het overbrengen van een elektrisch vermogen van de ene locatie naar de andere binnen een privaat netwerk. Onder dit type vallen ook installatiedraden die beschouwd worden als kabels met slechts één ader.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Voedingskabel)",
+      "pattern": "^Voedingskabel$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/VoedingskabelTypes"
+    },
+    "aantalAdersEnSectie": {
+      "$ref": "#/components/schemas/VoedingskabelAdersEnSectie"
+    },
+    "nominaleSpanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "typeSpecificatie": {
+      "$ref": "#/components/schemas/VoedingskabelTypeSpecificatie"
+    },
+    "buitenmantelDiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitenmantelKleur": {
+      "$ref": "#/components/schemas/KabelmantelKleur"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerLopendeMeter"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/KabelFabrikant"
+    },
+    "typeBescherming": {
+      "$ref": "#/components/schemas/KabelsEnLeidingenBescherming"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Voedingskabel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Voedingskabel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Voedingskabel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Voedingskabel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Voedingskabel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Voedingskabel.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Voedingskabel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "aantalAdersEnSectie",
+    "nominaleSpanning",
+    "typeSpecificatie",
+    "buitenmantelDiameter",
+    "buitenmantelKleur",
+    "gewicht",
+    "fabrikant",
+    "typeBescherming",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

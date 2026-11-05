@@ -1,0 +1,97 @@
+{
+  "title": "HoutenConstructieprofiel",
+  "type": "object",
+  "description": "Houten enkelvoudig constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. De breedte is weer gelijk of kleiner dan de hoogte. Dit profiel heeft een dragende functie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HoutenConstructieprofiel)",
+      "pattern": "^HoutenConstructieprofiel$"
+    },
+    "detailDwarsdoorsnede": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "heeftGrondcontact": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.heeftGrondcontact"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftWatercontact": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.heeftWatercontact"
+    },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "houtspecificaties": {
+      "$ref": "#/components/schemas/Houtspecificaties"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HoutenConstructieprofiel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HoutenConstructieprofiel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/HoutenConstructieprofiel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "detailDwarsdoorsnede",
+    "heeftGrondcontact",
+    "lengte",
+    "heeftWatercontact",
+    "volume",
+    "houtspecificaties",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

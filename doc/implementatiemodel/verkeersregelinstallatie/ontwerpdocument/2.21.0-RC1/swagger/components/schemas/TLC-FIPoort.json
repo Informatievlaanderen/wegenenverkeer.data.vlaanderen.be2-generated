@@ -1,0 +1,130 @@
+{
+  "title": "TLC-FIPoort",
+  "type": "object",
+  "description": "Functionele software component die een TLC-FI interface aanbiedt waardoor data kan uitgewisseld worden voor intelligente verkeersregelaars.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TLC-FIPoort)",
+      "pattern": "^TLC-FIPoort$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/IVRIMerkTLCfi"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/IVRIModelTLCfi"
+    },
+    "baseline": {
+      "$ref": "#/components/schemas/IVRIBaseline"
+    },
+    "certificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "dependencies": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "poortenconfiguratie": {
+      "type": "array",
+      "description": "Beschrijft welke poort voor welke service gebruikt wordt. Lijst van SoftwarePoortconfiguratie items.",
+      "items": {
+        "$ref": "#/components/schemas/SoftwarePoortconfiguratie"
+      },
+      "minItems": 1
+    },
+    "aangebodenServices": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "versie": {
+      "$ref": "#/components/schemas/TLC-FIPoort.versie"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/SoftwareLicentie"
+    },
+    "onlineDocumentatie": {
+      "$ref": "#/components/schemas/TLC-FIPoort.onlineDocumentatie"
+    },
+    "documentatie": {
+      "$ref": "#/components/schemas/TLC-FIPoort.documentatie"
+    },
+    "buildnummer": {
+      "$ref": "#/components/schemas/TLC-FIPoort.buildnummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/TLC-FIPoort.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/TLC-FIPoort.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/TLC-FIPoort.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/TLC-FIPoort.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/TLC-FIPoort.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/TLC-FIPoort.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/TLC-FIPoort.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/TLC-FIPoort.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "baseline",
+    "certificaat",
+    "dependencies",
+    "poortenconfiguratie",
+    "aangebodenServices",
+    "versie",
+    "licentie",
+    "onlineDocumentatie",
+    "documentatie",
+    "buildnummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

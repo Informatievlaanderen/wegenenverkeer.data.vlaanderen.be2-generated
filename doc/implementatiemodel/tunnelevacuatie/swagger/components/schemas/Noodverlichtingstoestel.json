@@ -22,59 +22,16 @@
       "$ref": "#/components/schemas/NominaleSpanning"
     },
     "heeftAfstandsbewaking": {
-      "type": "object",
-      "description": "Geeft aan of de correcte werking van het noodverlichtingstoestel al dan niet van op afstand bewaakt wordt.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.heeftAfstandsbewaking"
     },
     "getestViaAfleggenAutomaat": {
-      "type": "object",
-      "description": "Geeft aan of de werking van het noodverlichtingstoestel moet getest worden door het uitschakelen van de automaat waarlangs de netvoeding voor het toestel passeert.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.getestViaAfleggenAutomaat"
     },
     "autonomie": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
     },
     "aantalLampen": {
-      "type": "object",
-      "description": "Het aantal individueel vervangbare ampen in de armatuur van toestel.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^NonNegativeInteger$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.aantalLampen"
     }
   },
   "required": [

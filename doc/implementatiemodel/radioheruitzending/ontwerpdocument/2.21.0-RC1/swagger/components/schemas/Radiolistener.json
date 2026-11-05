@@ -1,0 +1,97 @@
+{
+  "title": "Radiolistener",
+  "type": "object",
+  "description": "Een radiotoestel om de verschillende uitgezonden radiozenders (FM en DAB+) of boodschappen te beluisteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Radiolistener)",
+      "pattern": "^Radiolistener$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RadiolistenerMerknaam"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/RadiolistenerModelnaam"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Radiolistener.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Radiolistener.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Radiolistener.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Radiolistener.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Radiolistener.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Radiolistener.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Radiolistener.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Radiolistener.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/Radiolistener.dNSNaam"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "ipAdres",
+    "dNSNaam"
+  ]
+}

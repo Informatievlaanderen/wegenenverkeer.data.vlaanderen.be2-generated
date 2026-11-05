@@ -1,0 +1,116 @@
+{
+  "title": "Bevestigingsbeugel",
+  "type": "object",
+  "description": "Verbindingsstuk waarmee een object kan vastgemaakt worden aan een steun of oppervlak.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bevestigingsbeugel)",
+      "pattern": "^Bevestigingsbeugel$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/BevestigingsbeugelType"
+    },
+    "berekeningsnota": {
+      "type": "array",
+      "description": "Document met de berekeningsnota van de bevestigingsbeugel. Bestanden van het type xlsx of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "constructieEnMontageplan": {
+      "type": "array",
+      "description": "Document met het constructie- en montageplan van de bevestigingsbeugel. Bestanden van het type dwg of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "isVerzegeld": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.isVerzegeld"
+    },
+    "heeftVeiligheidsstrip": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.heeftVeiligheidsstrip"
+    },
+    "materiaalBevestigingsbeugel": {
+      "$ref": "#/components/schemas/MateriaalBevestigingsbeugel"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van de bevestigingsbeugel. Bestanden van het type xlsx, dwg of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bevestigingsbeugel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bevestigingsbeugel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Bevestigingsbeugel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "berekeningsnota",
+    "constructieEnMontageplan",
+    "isVerzegeld",
+    "heeftVeiligheidsstrip",
+    "materiaalBevestigingsbeugel",
+    "technischeFiche",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

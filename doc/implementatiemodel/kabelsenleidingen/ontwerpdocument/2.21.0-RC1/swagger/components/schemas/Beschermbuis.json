@@ -1,0 +1,114 @@
+{
+  "title": "Beschermbuis",
+  "type": "object",
+  "description": "Een buis bestemd voor de doorvoer van kabels en/of leidingen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Beschermbuis)",
+      "pattern": "^Beschermbuis$"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/BeschermbuisMateriaal"
+    },
+    "isFlexibel": {
+      "$ref": "#/components/schemas/Beschermbuis.isFlexibel"
+    },
+    "voorzorgsmaatregel": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/Beschermbuiskleur"
+    },
+    "typeBescherming": {
+      "type": "array",
+      "description": "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd nadat ze in de sleuf gelegd is. Lijst van KabelsEnLeidingenBescherming items.",
+      "items": {
+        "$ref": "#/components/schemas/KabelsEnLeidingenBescherming"
+      },
+      "minItems": 1
+    },
+    "indicatieveDiepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isRisicovol": {
+      "$ref": "#/components/schemas/Beschermbuis.isRisicovol"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Beschermbuis.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Beschermbuis.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Beschermbuis.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Beschermbuis.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Beschermbuis.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Beschermbuis.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Beschermbuis.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaal",
+    "isFlexibel",
+    "voorzorgsmaatregel",
+    "kleur",
+    "typeBescherming",
+    "indicatieveDiepte",
+    "lengte",
+    "buitendiameter",
+    "isRisicovol",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

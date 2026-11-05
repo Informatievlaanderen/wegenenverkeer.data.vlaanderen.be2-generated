@@ -1,0 +1,23 @@
+{
+  "title": "IPv4-Adres",
+  "type": "object",
+  "description": "Beschrijft een ip-adres volgens de ipv4 specificatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IPv4-Adres)",
+      "pattern": "^IPv4-Adres$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/IPv4-Adres.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde"
+  ]
+}

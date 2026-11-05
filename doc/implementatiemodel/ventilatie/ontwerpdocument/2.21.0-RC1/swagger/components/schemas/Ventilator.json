@@ -1,0 +1,126 @@
+{
+  "title": "Ventilator",
+  "type": "object",
+  "description": "Onderdeel voor het creëren van luchtcirculatie binnen een open of gesloten ruimte met het oog op het vervangen van vervuilde door zuivere lucht. Voor een gesloten ruimte kan de luchtcirculatie ook zorgen voor afkoeling.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Ventilator)",
+      "pattern": "^Ventilator$"
+    },
+    "draairichting": {
+      "$ref": "#/components/schemas/VentilatorRichting"
+    },
+    "standen": {
+      "type": "array",
+      "description": "Met de standen van de ventilator kan de draaisnelheid en soms ook de draairichting van de de bladen van de ventilator bepaald worden. Lijst van KwantitatieveWaardeInProcent items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInProcent"
+      },
+      "minItems": 1
+    },
+    "gebruik": {
+      "$ref": "#/components/schemas/GebruikstypesVentilator"
+    },
+    "heeftTrillingsmeting": {
+      "$ref": "#/components/schemas/Ventilator.heeftTrillingsmeting"
+    },
+    "heeftTemperatuurmeting": {
+      "$ref": "#/components/schemas/Ventilator.heeftTemperatuurmeting"
+    },
+    "heeftDrukverschilmeting": {
+      "$ref": "#/components/schemas/Ventilator.heeftDrukverschilmeting"
+    },
+    "binnendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "maximaalVolumedebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerSeconde"
+    },
+    "maximaalDebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Ventilator.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Ventilator.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Ventilator.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ventilator.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Ventilator.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ventilator.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Ventilator.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Ventilator.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "draairichting",
+    "standen",
+    "gebruik",
+    "heeftTrillingsmeting",
+    "heeftTemperatuurmeting",
+    "heeftDrukverschilmeting",
+    "binnendiameter",
+    "buitendiameter",
+    "vermogen",
+    "maximaalVolumedebiet",
+    "maximaalDebiet",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Onderwaterkruising",
+  "type": "object",
+  "description": "Gebruikt voor de registratie van kenmerken en geometrie van een ruimte waar kabels en leidingen onder een waterweg door gaan.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Onderwaterkruising)",
+      "pattern": "^Onderwaterkruising$"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "aanlegWijze": {
+      "$ref": "#/components/schemas/OnderwaterkruisingAanlegWijze"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Onderwaterkruising.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Onderwaterkruising.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Onderwaterkruising.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Onderwaterkruising.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "lengte",
+    "buitendiameter",
+    "aanlegWijze",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

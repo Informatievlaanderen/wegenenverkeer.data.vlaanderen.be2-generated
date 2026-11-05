@@ -1,0 +1,152 @@
+{
+  "title": "InwendigVerlichtSignalisatiebord",
+  "type": "object",
+  "description": "Een verkeersbord dat door middel van interne verlichtingselementen,zoals LED's,TL-buizen of andere lichtbronnen,van binnenuit wordt verlicht om de leesbaarheid en zichtbaarheid van de verkeersinformatie onder alle lichtomstandigheden te verbeteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse InwendigVerlichtSignalisatiebord)",
+      "pattern": "^InwendigVerlichtSignalisatiebord$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeInwendigVerlichtSignalisatiebord"
+    },
+    "lampType": {
+      "$ref": "#/components/schemas/LampTypeInwendigVerlichtSignalisatiebord"
+    },
+    "opschrift": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.opschrift"
+    },
+    "aantalLampen": {
+      "$ref": "#/components/schemas/AantalLampenInwendigVerlichtSignalisatiebord"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordMerk"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "afwerkingsgraad": {
+      "$ref": "#/components/schemas/KeuzelijstAfwerkingsgraadRetroreflecterendVerkeersbord"
+    },
+    "grootteorde": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordGrootteorde"
+    },
+    "horizontaleVerschuiving": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "fabricageType": {
+      "$ref": "#/components/schemas/FabricageTypeRetroreflecterendVerkeersbord"
+    },
+    "fabricageDatum": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.fabricageDatum"
+    },
+    "kleurAchterkant": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/InwendigVerlichtSignalisatiebord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "lampType",
+    "opschrift",
+    "aantalLampen",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "merk",
+    "afwerkingsgraad",
+    "horizontaleVerschuiving",
+    "fabricageType",
+    "fabricageDatum",
+    "kleurAchterkant",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte"
+  ]
+}

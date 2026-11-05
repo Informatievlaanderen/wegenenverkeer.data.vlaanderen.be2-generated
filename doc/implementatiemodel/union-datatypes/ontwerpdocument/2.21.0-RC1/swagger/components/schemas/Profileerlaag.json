@@ -1,0 +1,27 @@
+{
+  "title": "Profileerlaag",
+  "type": "object",
+  "description": "Complex datatype om extra informatie te capteren van de profilerende laag.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Profileerlaag)",
+      "pattern": "^Profileerlaag$"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    },
+    "laagtype": {
+      "$ref": "#/components/schemas/BVLaagtype"
+    }
+  },
+  "required": [
+    "@type",
+    "gewicht",
+    "laagtype"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Dieptetemperatuursensor",
+  "type": "object",
+  "description": "Sensor die de temperatuur meet van de ondergrond op een bepaalde diepte.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dieptetemperatuursensor)",
+      "pattern": "^Dieptetemperatuursensor$"
+    },
+    "opsteldiepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/DieptetemperatuursensorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/DieptetemperatuursensorModelnaam"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dieptetemperatuursensor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dieptetemperatuursensor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Dieptetemperatuursensor.serienummer"
+    },
+    "kalibratiecertificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technsiche fiche als bijlage van de sensor. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "opsteldiepte",
+    "merk",
+    "modelnaam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "serienummer",
+    "kalibratiecertificaat",
+    "technischeFiche"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "NatuurlijkPersoon",
+  "type": "object",
+  "description": "Complex datatype dat een natuurlijk persoon beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse NatuurlijkPersoon)",
+      "pattern": "^NatuurlijkPersoon$"
+    },
+    "voornaam": {
+      "$ref": "#/components/schemas/NatuurlijkPersoon.voornaam"
+    },
+    "achternaam": {
+      "$ref": "#/components/schemas/NatuurlijkPersoon.achternaam"
+    },
+    "telefoonnnummer": {
+      "type": "array",
+      "description": "Het telefoonnummer. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/NatuurlijkPersoon.telefoonnnummer"
+      },
+      "minItems": 1
+    },
+    "adres": {
+      "type": "array",
+      "description": "Het adres. Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    },
+    "emailadres": {
+      "type": "array",
+      "description": "Het emailadres. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/NatuurlijkPersoon.emailadres"
+      },
+      "minItems": 1
+    },
+    "fax": {
+      "type": "array",
+      "description": "De faxnummer. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/NatuurlijkPersoon.fax"
+      },
+      "minItems": 1
+    },
+    "heeftEmailVoorkeur": {
+      "$ref": "#/components/schemas/NatuurlijkPersoon.heeftEmailVoorkeur"
+    },
+    "heeftFaxVoorkeur": {
+      "$ref": "#/components/schemas/NatuurlijkPersoon.heeftFaxVoorkeur"
+    }
+  },
+  "required": [
+    "@type",
+    "voornaam",
+    "achternaam",
+    "telefoonnnummer",
+    "adres",
+    "emailadres",
+    "fax",
+    "heeftEmailVoorkeur",
+    "heeftFaxVoorkeur"
+  ]
+}

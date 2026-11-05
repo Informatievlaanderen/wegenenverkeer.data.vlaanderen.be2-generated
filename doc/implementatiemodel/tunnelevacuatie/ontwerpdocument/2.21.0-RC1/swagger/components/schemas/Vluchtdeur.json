@@ -1,0 +1,117 @@
+{
+  "title": "Vluchtdeur",
+  "type": "object",
+  "description": "Deur voor het ontvluchten in geval van calamiteiten weg van de incidentlocatie naar een veilige zone. Een vluchtdeur wordt onder alle omstandigheden zonder sleutel geopend en dit met beperkte kracht.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vluchtdeur)",
+      "pattern": "^Vluchtdeur$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Vluchtdeur.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Vluchtdeur.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Vluchtdeur.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Vluchtdeur.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Vluchtdeur.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Vluchtdeur.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Vluchtdeur.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "ophangconstructie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "brandweerstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur"
+    },
+    "heeftDeurcontact": {
+      "$ref": "#/components/schemas/Vluchtdeur.heeftDeurcontact"
+    },
+    "afmetingDeuropening": {
+      "$ref": "#/components/schemas/AfmetingBxhInMeter"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "handgreeptype": {
+      "$ref": "#/components/schemas/DeurHandgreeptype"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/DeurFabrikant"
+    },
+    "isZelfsluitend": {
+      "$ref": "#/components/schemas/Vluchtdeur.isZelfsluitend"
+    },
+    "sluitingstijd": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInSeconde"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "ophangconstructie",
+    "brandweerstand",
+    "heeftDeurcontact",
+    "afmetingDeuropening",
+    "hoogte",
+    "breedte",
+    "dikte",
+    "handgreeptype",
+    "fabrikant",
+    "isZelfsluitend",
+    "sluitingstijd"
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "title": "HS-Cabine",
+  "type": "object",
+  "description": "Een behuizing bestemd voor het beschermen van elektrisch hoogspanningsmateriaal en optioneel het daarbij horende laagspanningsmateriaal en elektromechanische technieken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HS-Cabine)",
+      "pattern": "^HS-Cabine$"
+    },
+    "lokaalKlasse": {
+      "$ref": "#/components/schemas/CabineLokaalKlasse"
+    },
+    "elektrischSchema": {
+      "type": "array",
+      "description": "Elektrisch aansluitschema van de HS cabine. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "vervaldatumVeiligheidshandschoenen": {
+      "$ref": "#/components/schemas/HS-Cabine.vervaldatumVeiligheidshandschoenen"
+    },
+    "isKopcabine": {
+      "$ref": "#/components/schemas/HS-Cabine.isKopcabine"
+    },
+    "heeftAfstandssturing": {
+      "$ref": "#/components/schemas/HS-Cabine.heeftAfstandssturing"
+    },
+    "kelderdiepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftIsolatie": {
+      "$ref": "#/components/schemas/HS-Cabine.heeftIsolatie"
+    },
+    "standaardtype": {
+      "$ref": "#/components/schemas/CabineStandaardtype"
+    },
+    "keuzelijstNetwerklocaties": {
+      "$ref": "#/components/schemas/KeuzelijstNetwerklocatie"
+    },
+    "aardingsstelsel": {
+      "$ref": "#/components/schemas/CabineAardingsstelsel"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/CabineModelnaam"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/CabineMerk"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
+    },
+    "beschrijvingBereikbaarheid": {
+      "$ref": "#/components/schemas/HS-Cabine.beschrijvingBereikbaarheid"
+    },
+    "grondplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "inloopbehuizingMateriaal": {
+      "$ref": "#/components/schemas/MateriaalSoorten"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "risicoanalyse": {
+      "type": "array",
+      "description": "Een bestandsbijlage met de risicoanalyse voor werken in en rond een behuizing. De risicoanalyse heeft in eerste instantie betrekking op werken in en rond een behuizing met elektrische installaties. Voor behuizingen met installaties van de distributienetbeheerder wordt de risicoanalyse bestemd voor die beheerder, bewaard in het gelijknamig attribuut van het onderdeel van die beheerder, bv. EnergiemeterDNB. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "tabelUitwendigeInvloeden": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/HS-Cabine.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/HS-Cabine.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HS-Cabine.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/HS-Cabine.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HS-Cabine.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/HS-Cabine.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/HS-Cabine.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/HS-Cabine.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "lokaalKlasse",
+    "elektrischSchema",
+    "vervaldatumVeiligheidshandschoenen",
+    "isKopcabine",
+    "heeftAfstandssturing",
+    "kelderdiepte",
+    "heeftIsolatie",
+    "standaardtype",
+    "keuzelijstNetwerklocaties",
+    "aardingsstelsel",
+    "modelnaam",
+    "merk",
+    "afmeting",
+    "beschrijvingBereikbaarheid",
+    "grondplan",
+    "inloopbehuizingMateriaal",
+    "adres",
+    "risicoanalyse",
+    "tabelUitwendigeInvloeden",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

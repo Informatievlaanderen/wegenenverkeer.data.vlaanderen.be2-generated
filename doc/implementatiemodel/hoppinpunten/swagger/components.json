@@ -10,134 +10,99 @@
       "AIMToestand": {
         "title": "AIMToestand",
         "type": "object",
-        "description": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
+        "description": "Enumeratie van AIMToestand",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse AIMToestand)",
-            "pattern": "^AIMToestand$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Mimetype": {
         "title": "Mimetype",
         "type": "object",
-        "description": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen.",
+        "description": "Enumeratie van Mimetype",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Mimetype)",
-            "pattern": "^Mimetype$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "LaagRol": {
         "title": "LaagRol",
         "type": "object",
-        "description": "De mogelijke rollen van de laag.",
+        "description": "Enumeratie van LaagRol",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse LaagRol)",
-            "pattern": "^LaagRol$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "ZonnepaneelModelnaam": {
         "title": "ZonnepaneelModelnaam",
         "type": "object",
-        "description": "De modelnaam van het zonnepaneel.",
+        "description": "Enumeratie van ZonnepaneelModelnaam",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse ZonnepaneelModelnaam)",
-            "pattern": "^ZonnepaneelModelnaam$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "ZonnepaneelMerk": {
         "title": "ZonnepaneelMerk",
         "type": "object",
-        "description": "Het merk van het zonnepaneel.",
+        "description": "Enumeratie van ZonnepaneelMerk",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse ZonnepaneelMerk)",
-            "pattern": "^ZonnepaneelMerk$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "WeergegevenVervoersmodiOpKaart": {
         "title": "WeergegevenVervoersmodiOpKaart",
         "type": "object",
-        "description": "De verschillende beschikbare vervoersmodi die op de bijhorende kaart worden meegegeven.",
+        "description": "Enumeratie van WeergegevenVervoersmodiOpKaart",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse WeergegevenVervoersmodiOpKaart)",
-            "pattern": "^WeergegevenVervoersmodiOpKaart$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "HoppinzuilType": {
         "title": "HoppinzuilType",
         "type": "object",
-        "description": "De types van een analoge hoppinzuil.",
+        "description": "Enumeratie van HoppinzuilType",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse HoppinzuilType)",
-            "pattern": "^HoppinzuilType$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Bevestiging": {
@@ -178,6 +143,43 @@
           "@type"
         ]
       },
+      "Zonnepaneel.naam": {
+        "title": "Zonnepaneel.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Zonnepaneel.notitie": {
+        "title": "Zonnepaneel.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Zonnepaneel.standaardbestekpostnummer": {
+        "title": "Zonnepaneel.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Zonnepaneel.typeURI": {
+        "title": "Zonnepaneel.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Zonnepaneel.bestekpostnummer": {
+        "title": "Zonnepaneel.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Zonnepaneel.datumOprichtingObject": {
+        "title": "Zonnepaneel.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Zonnepaneel.isActief": {
+        "title": "Zonnepaneel.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
       "Zonnepaneel": {
         "title": "Zonnepaneel",
         "type": "object",
@@ -203,83 +205,37 @@
           },
           "technischeFiche": {
             "type": "array",
-            "description": "Lijst van Bestandsbijlage items.",
+            "description": "De technsiche fiche als bijlage van het zonnepaneel. Lijst van Bestandsbijlage items.",
             "items": {
               "$ref": "#/components/schemas/Bestandsbijlage"
             },
             "minItems": 1
           },
           "naam": {
-            "type": "object",
-            "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Zonnepaneel.naam"
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
           },
           "notitie": {
-            "type": "object",
-            "description": "Extra notitie voor het object.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Zonnepaneel.notitie"
           },
           "standaardbestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/Zonnepaneel.standaardbestekpostnummer"
             },
             "minItems": 1
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Zonnepaneel.typeURI"
           },
           "bestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/Zonnepaneel.bestekpostnummer"
             },
             "minItems": 1
           },
@@ -287,39 +243,10 @@
             "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
           },
           "datumOprichtingObject": {
-            "type": "object",
-            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Zonnepaneel.datumOprichtingObject"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Zonnepaneel.isActief"
           },
           "aIM-Toestand": {
             "$ref": "#/components/schemas/AIMToestand"
@@ -347,6 +274,48 @@
           "asset-Versie"
         ]
       },
+      "AnalogeHoppinzuil.zuilnaam": {
+        "title": "AnalogeHoppinzuil.zuilnaam",
+        "description": "Naam van het hoppinpunt die verwijst naar een duidelijke en herkenbare plaatsnaam.",
+        "type": "string"
+      },
+      "AnalogeHoppinzuil.zuilnummer": {
+        "title": "AnalogeHoppinzuil.zuilnummer",
+        "description": "Uniek identificatienummer dat elke zuil krijgt en dat wordt opgenomen in de hoppinpuntendatabank.",
+        "type": "string"
+      },
+      "AnalogeHoppinzuil.notitie": {
+        "title": "AnalogeHoppinzuil.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "AnalogeHoppinzuil.standaardbestekpostnummer": {
+        "title": "AnalogeHoppinzuil.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "AnalogeHoppinzuil.typeURI": {
+        "title": "AnalogeHoppinzuil.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "AnalogeHoppinzuil.bestekpostnummer": {
+        "title": "AnalogeHoppinzuil.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "AnalogeHoppinzuil.datumOprichtingObject": {
+        "title": "AnalogeHoppinzuil.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "AnalogeHoppinzuil.isActief": {
+        "title": "AnalogeHoppinzuil.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
       "AnalogeHoppinzuil": {
         "title": "AnalogeHoppinzuil",
         "type": "object",
@@ -372,95 +341,40 @@
           },
           "weergegevenVervoersmodiOpKaart": {
             "type": "array",
-            "description": "Lijst van WeergegevenVervoersmodiOpKaart items.",
+            "description": "De verschillende beschikbare vervoersmodi die op de bijhorende kaart worden weergegeven. Lijst van WeergegevenVervoersmodiOpKaart items.",
             "items": {
               "$ref": "#/components/schemas/WeergegevenVervoersmodiOpKaart"
             },
             "minItems": 1
           },
           "zuilnaam": {
-            "type": "object",
-            "description": "Naam van het hoppinpunt die verwijst naar een duidelijke en herkenbare plaatsnaam.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.zuilnaam"
           },
           "zuilnummer": {
-            "type": "object",
-            "description": "Uniek identificatienummer dat elke zuil krijgt en dat wordt opgenomen in de hoppinpuntendatabank.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.zuilnummer"
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
           },
           "notitie": {
-            "type": "object",
-            "description": "Extra notitie voor het object.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.notitie"
           },
           "standaardbestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/AnalogeHoppinzuil.standaardbestekpostnummer"
             },
             "minItems": 1
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.typeURI"
           },
           "bestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/AnalogeHoppinzuil.bestekpostnummer"
             },
             "minItems": 1
           },
@@ -468,39 +382,10 @@
             "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
           },
           "datumOprichtingObject": {
-            "type": "object",
-            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.datumOprichtingObject"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AnalogeHoppinzuil.isActief"
           },
           "aIM-Toestand": {
             "$ref": "#/components/schemas/AIMToestand"
@@ -529,6 +414,48 @@
           "asset-Versie"
         ]
       },
+      "DigitaleHoppinzuil.zuilnaam": {
+        "title": "DigitaleHoppinzuil.zuilnaam",
+        "description": "Naam van het hoppinpunt die verwijst naar een duidelijke en herkenbare plaatsnaam.",
+        "type": "string"
+      },
+      "DigitaleHoppinzuil.zuilnummer": {
+        "title": "DigitaleHoppinzuil.zuilnummer",
+        "description": "Uniek identificatienummer dat elke zuil krijgt en dat wordt opgenomen in de hoppinpuntendatabank.",
+        "type": "string"
+      },
+      "DigitaleHoppinzuil.notitie": {
+        "title": "DigitaleHoppinzuil.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "DigitaleHoppinzuil.standaardbestekpostnummer": {
+        "title": "DigitaleHoppinzuil.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "DigitaleHoppinzuil.typeURI": {
+        "title": "DigitaleHoppinzuil.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "DigitaleHoppinzuil.bestekpostnummer": {
+        "title": "DigitaleHoppinzuil.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "DigitaleHoppinzuil.datumOprichtingObject": {
+        "title": "DigitaleHoppinzuil.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "DigitaleHoppinzuil.isActief": {
+        "title": "DigitaleHoppinzuil.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
       "DigitaleHoppinzuil": {
         "title": "DigitaleHoppinzuil",
         "type": "object",
@@ -548,95 +475,40 @@
           },
           "weergegevenVervoersmodiOpKaart": {
             "type": "array",
-            "description": "Lijst van WeergegevenVervoersmodiOpKaart items.",
+            "description": "De verschillende beschikbare vervoersmodi die op de bijhorende kaart worden weergegeven. Lijst van WeergegevenVervoersmodiOpKaart items.",
             "items": {
               "$ref": "#/components/schemas/WeergegevenVervoersmodiOpKaart"
             },
             "minItems": 1
           },
           "zuilnaam": {
-            "type": "object",
-            "description": "Naam van het hoppinpunt die verwijst naar een duidelijke en herkenbare plaatsnaam.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.zuilnaam"
           },
           "zuilnummer": {
-            "type": "object",
-            "description": "Uniek identificatienummer dat elke zuil krijgt en dat wordt opgenomen in de hoppinpuntendatabank.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.zuilnummer"
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
           },
           "notitie": {
-            "type": "object",
-            "description": "Extra notitie voor het object.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.notitie"
           },
           "standaardbestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/DigitaleHoppinzuil.standaardbestekpostnummer"
             },
             "minItems": 1
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.typeURI"
           },
           "bestekpostnummer": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/DigitaleHoppinzuil.bestekpostnummer"
             },
             "minItems": 1
           },
@@ -644,39 +516,10 @@
             "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
           },
           "datumOprichtingObject": {
-            "type": "object",
-            "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.datumOprichtingObject"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/DigitaleHoppinzuil.isActief"
           },
           "aIM-Toestand": {
             "$ref": "#/components/schemas/AIMToestand"
@@ -703,6 +546,28 @@
           "asset-Versie"
         ]
       },
+      "KwantitatieveWaardeInMeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.waarde": {
+        "title": "KwantitatieveWaardeInMeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
       "KwantitatieveWaardeInMeter": {
         "title": "KwantitatieveWaardeInMeter",
         "type": "object",
@@ -718,40 +583,38 @@
             "pattern": "^KwantitatieveWaardeInMeter$"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.standaardEenheid"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.waarde"
           }
         },
         "required": [
           "@type",
           "standaardEenheid",
           "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInVierkanteMeter.waarde": {
+        "title": "KwantitatieveWaardeInVierkanteMeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInVierkanteMeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInVierkanteMeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter. \"m2\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInVierkanteMeter": {
@@ -769,34 +632,10 @@
             "pattern": "^KwantitatieveWaardeInVierkanteMeter$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter. \"m2\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter.standaardEenheid"
           }
         },
         "required": [
@@ -804,6 +643,28 @@
           "waarde",
           "standaardEenheid"
         ]
+      },
+      "KwantitatieveWaardeInMeterTAW.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMeterTAW.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMeterTAW.waarde": {
+        "title": "KwantitatieveWaardeInMeterTAW.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
       },
       "KwantitatieveWaardeInMeterTAW": {
         "title": "KwantitatieveWaardeInMeterTAW",
@@ -820,40 +681,38 @@
             "pattern": "^KwantitatieveWaardeInMeterTAW$"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW.standaardEenheid"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW.waarde"
           }
         },
         "required": [
           "@type",
           "standaardEenheid",
           "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter.waarde": {
+        "title": "KwantitatieveWaardeInCentimeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInCentimeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInCentimeter": {
@@ -871,34 +730,10 @@
             "pattern": "^KwantitatieveWaardeInCentimeter$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.standaardEenheid"
           }
         },
         "required": [
@@ -906,6 +741,16 @@
           "waarde",
           "standaardEenheid"
         ]
+      },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
       },
       "Identificator": {
         "title": "Identificator",
@@ -922,34 +767,38 @@
             "pattern": "^Identificator$"
           },
           "identificator": {
-            "type": "object",
-            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.identificator"
           },
           "toegekendDoor": {
-            "type": "object",
-            "description": "Gegevens van de organisatie die de toekenning deed.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
           }
         },
         "required": [
           "@type",
           "identificator",
           "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand.waarde": {
+        "title": "KwantitatieveWaardeInMaand.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "KwantitatieveWaardeInMaand.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMaand.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInMaand": {
@@ -967,34 +816,10 @@
             "pattern": "^KwantitatieveWaardeInMaand$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^NonNegativeInteger$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
           }
         },
         "required": [
@@ -1002,6 +827,23 @@
           "waarde",
           "standaardEenheid"
         ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
       },
       "AssetVersie": {
         "title": "AssetVersie",
@@ -1018,52 +860,13 @@
             "pattern": "^AssetVersie$"
           },
           "versienummer": {
-            "type": "object",
-            "description": "Het versienummer als een oplopende integer.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^NonNegativeInteger$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
           },
           "timestamp": {
-            "type": "object",
-            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
           },
           "context": {
-            "type": "object",
-            "description": "De context van de versie creatie.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.context"
           }
         },
         "required": [
@@ -1072,6 +875,23 @@
           "timestamp",
           "context"
         ]
+      },
+      "Bestandsbijlage.uri": {
+        "title": "Bestandsbijlage.uri",
+        "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bestandsbijlage.bestandsnaam": {
+        "title": "Bestandsbijlage.bestandsnaam",
+        "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+        "type": "string"
+      },
+      "Bestandsbijlage.opmaakdatum": {
+        "title": "Bestandsbijlage.opmaakdatum",
+        "description": "De datum waarop het document is opgemaakt.",
+        "type": "string",
+        "format": "date"
       },
       "Bestandsbijlage": {
         "title": "Bestandsbijlage",
@@ -1088,29 +908,10 @@
             "pattern": "^Bestandsbijlage$"
           },
           "uri": {
-            "type": "object",
-            "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Bestandsbijlage.uri"
           },
           "bestandsnaam": {
-            "type": "object",
-            "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
           },
           "omschrijving": {
             "$ref": "#/components/schemas/Tekstblok"
@@ -1119,22 +920,7 @@
             "$ref": "#/components/schemas/Mimetype"
           },
           "opmaakdatum": {
-            "type": "object",
-            "description": "De datum waarop het document is opgemaakt.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
           }
         },
         "required": [
@@ -1145,6 +931,11 @@
           "mime-Type",
           "opmaakdatum"
         ]
+      },
+      "Tekstblok.waarde": {
+        "title": "Tekstblok.waarde",
+        "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "type": "string"
       },
       "Tekstblok": {
         "title": "Tekstblok",
@@ -1161,21 +952,34 @@
             "pattern": "^Tekstblok$"
           },
           "waarde": {
-            "type": "object",
-            "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Tekstblok.waarde"
           }
         },
         "required": [
           "@type",
           "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInWatt.waarde": {
+        "title": "KwantitatieveWaardeInWatt.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInWatt.standaardEenheid": {
+        "title": "KwantitatieveWaardeInWatt.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in Watt. \"W\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInWatt": {
@@ -1193,34 +997,10 @@
             "pattern": "^KwantitatieveWaardeInWatt$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in Watt. \"W\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.standaardEenheid"
           }
         },
         "required": [

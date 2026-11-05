@@ -1,0 +1,80 @@
+{
+  "title": "AanlegBoomvorm",
+  "type": "object",
+  "description": "Complex datatype om alle eigenschappen van de aanleg van een opgaande boom onder 1 noemer te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AanlegBoomvorm)",
+      "pattern": "^AanlegBoomvorm$"
+    },
+    "heeftBoomplaat": {
+      "$ref": "#/components/schemas/AanlegBoomvorm.heeftBoomplaat"
+    },
+    "wortelAanplant": {
+      "$ref": "#/components/schemas/VegetatieWortel"
+    },
+    "heeftWortelgeleidingWortelwering": {
+      "$ref": "#/components/schemas/AanlegBoomvorm.heeftWortelgeleidingWortelwering"
+    },
+    "plantmaatHoogte": {
+      "$ref": "#/components/schemas/PlantmaatHoutigeVegetatie"
+    },
+    "verankering": {
+      "$ref": "#/components/schemas/BoomVerankering"
+    },
+    "verankeringstype": {
+      "$ref": "#/components/schemas/BoomVerankeringtype"
+    },
+    "boompaalconstructie": {
+      "$ref": "#/components/schemas/AantalBoompalen"
+    },
+    "vraatschadeBescherming": {
+      "$ref": "#/components/schemas/MateriaalBeschermingVraatschade"
+    },
+    "beschermingVraatschade": {
+      "$ref": "#/components/schemas/BeschermingVraatschade"
+    },
+    "groeiplaatsverbetering": {
+      "type": "array",
+      "description": "De techniek waarmee de groeiplaats wordt verbeterd met als doel de levensverwachting en de conditie van de vegetatie te verbeteren. Lijst van Groeiplaatsverbetering items.",
+      "items": {
+        "$ref": "#/components/schemas/Groeiplaatsverbetering"
+      },
+      "minItems": 1
+    },
+    "vormAanlevering": {
+      "$ref": "#/components/schemas/VormAanleveringHoutigeVegetatie"
+    },
+    "plantmaatOmtrek": {
+      "$ref": "#/components/schemas/PlantmaatOmtrek"
+    },
+    "maaischadeBescherming": {
+      "$ref": "#/components/schemas/BeschermingMaaischade"
+    },
+    "plantwijze": {
+      "$ref": "#/components/schemas/Plantwijze"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftBoomplaat",
+    "wortelAanplant",
+    "heeftWortelgeleidingWortelwering",
+    "plantmaatHoogte",
+    "verankering",
+    "verankeringstype",
+    "boompaalconstructie",
+    "vraatschadeBescherming",
+    "beschermingVraatschade",
+    "groeiplaatsverbetering",
+    "vormAanlevering",
+    "plantmaatOmtrek",
+    "maaischadeBescherming",
+    "plantwijze"
+  ]
+}

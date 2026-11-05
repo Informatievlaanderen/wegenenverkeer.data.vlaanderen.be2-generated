@@ -1,0 +1,93 @@
+{
+  "title": "Veiligheidsrelais",
+  "type": "object",
+  "description": "Relais voor de bewaking van de noodstop binnen het noodstopcircuit. Voldoet omwille aan specifieke vereisten om te vermijden dat een storing tot een verlies van de veiligheidsfunctie kan leiden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Veiligheidsrelais)",
+      "pattern": "^Veiligheidsrelais$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VeiligheidsrelaisMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VeiligheidsrelaisModelnaam"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Veiligheidsrelais.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Veiligheidsrelais.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Veiligheidsrelais.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

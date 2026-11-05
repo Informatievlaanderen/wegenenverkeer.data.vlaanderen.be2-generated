@@ -1,0 +1,101 @@
+{
+  "title": "BrandwerendeBekleding",
+  "type": "object",
+  "description": "Bekleding die op de wanden of andere oppervlakken van een constructie wordt aangebracht met als functie de achterliggende constructie gedurende een bepaalde tijd te beschermen tegen de effecten van brand, door warmteoverdracht te beperken en structurele integriteit te behouden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BrandwerendeBekleding)",
+      "pattern": "^BrandwerendeBekleding$"
+    },
+    "brandweerstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "bevestigingsmateriaal": {
+      "$ref": "#/components/schemas/BevestigingsmateriaalBrandwerendeBekleding"
+    },
+    "testnorm": {
+      "$ref": "#/components/schemas/Testnorm"
+    },
+    "typeBrandwerendeBekleding": {
+      "$ref": "#/components/schemas/TypeBrandwerendeBekleding"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "brandkromme": {
+      "$ref": "#/components/schemas/Brandkromme"
+    },
+    "maximaleTemperatuurinterface": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCelsius"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BrandwerendeBekleding.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BrandwerendeBekleding.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BrandwerendeBekleding.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BrandwerendeBekleding.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BrandwerendeBekleding.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BrandwerendeBekleding.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "brandweerstand",
+    "dikte",
+    "bevestigingsmateriaal",
+    "testnorm",
+    "typeBrandwerendeBekleding",
+    "technischeFiche",
+    "brandkromme",
+    "maximaleTemperatuurinterface",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

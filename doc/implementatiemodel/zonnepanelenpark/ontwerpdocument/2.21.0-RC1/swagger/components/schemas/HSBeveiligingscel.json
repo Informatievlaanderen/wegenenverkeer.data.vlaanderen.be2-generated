@@ -1,0 +1,138 @@
+{
+  "title": "HSBeveiligingscel",
+  "type": "object",
+  "description": "Cel die de hoogspanningsschakelinrichting omvat. Hieronder vallen onder meer de lastscheidingsschakelaar,smeltveiligheden,aardingsschakelaar,...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HSBeveiligingscel)",
+      "pattern": "^HSBeveiligingscel$"
+    },
+    "elektrischSchema": {
+      "type": "array",
+      "description": "Elektrisch aansluitschema van de HS beveiligingscel. Bestanden van het type pdf,dwg of dxf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "keuringsfrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAantalJaar"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelModelnaam"
+    },
+    "schakelmateriaalKlasse": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelSchakelmateriaalKlasse"
+    },
+    "schakelmateriaalType": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelSchakelmateriaalType"
+    },
+    "overstroombeveiligingVermogenschakelaar": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelOverstroombeveiligingVermogenschakelaar"
+    },
+    "overstroombeveiligingType": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.overstroombeveiligingType"
+    },
+    "overstroombeveiligingInstelwaarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+    },
+    "hoogspanningszekering": {
+      "$ref": "#/components/schemas/HS-BeveiligingscelHoogspanningszekering"
+    },
+    "heeftReserveZekering": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.heeftReserveZekering"
+    },
+    "kortsluitvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe"
+    },
+    "kortsluitstroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe"
+    },
+    "heeftAardingsschakelaar": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.heeftAardingsschakelaar"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HSBeveiligingscel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/HSBeveiligingscel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/HSBeveiligingscel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "elektrischSchema",
+    "keuringsfrequentie",
+    "merk",
+    "modelnaam",
+    "schakelmateriaalKlasse",
+    "schakelmateriaalType",
+    "overstroombeveiligingVermogenschakelaar",
+    "overstroombeveiligingType",
+    "overstroombeveiligingInstelwaarde",
+    "hoogspanningszekering",
+    "heeftReserveZekering",
+    "kortsluitvermogen",
+    "kortsluitstroom",
+    "heeftAardingsschakelaar",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

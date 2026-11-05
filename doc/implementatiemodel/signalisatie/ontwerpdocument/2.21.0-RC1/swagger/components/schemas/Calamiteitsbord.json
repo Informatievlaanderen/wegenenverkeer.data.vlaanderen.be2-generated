@@ -1,0 +1,140 @@
+{
+  "title": "Calamiteitsbord",
+  "type": "object",
+  "description": "De aanwijzingsborden ter plaatse van een startpunt, een aantakpunt, een wissel- of koppelpunt van een omleggingsroute bij calamiteiten zijn geïntegreerd in een één-bordsysteem met een scharnierende plaat.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Calamiteitsbord)",
+      "pattern": "^Calamiteitsbord$"
+    },
+    "calamiteitsbordType": {
+      "$ref": "#/components/schemas/CalamiteitsbordType"
+    },
+    "vorm": {
+      "$ref": "#/components/schemas/CalamiteitsbordVorm"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordMerk"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "afwerkingsgraad": {
+      "$ref": "#/components/schemas/KeuzelijstAfwerkingsgraadRetroreflecterendVerkeersbord"
+    },
+    "grootteorde": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordGrootteorde"
+    },
+    "horizontaleVerschuiving": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "fabricageType": {
+      "$ref": "#/components/schemas/FabricageTypeRetroreflecterendVerkeersbord"
+    },
+    "fabricageDatum": {
+      "$ref": "#/components/schemas/Calamiteitsbord.fabricageDatum"
+    },
+    "kleurAchterkant": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/Calamiteitsbord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Calamiteitsbord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Calamiteitsbord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Calamiteitsbord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Calamiteitsbord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Calamiteitsbord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Calamiteitsbord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Calamiteitsbord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "calamiteitsbordType",
+    "vorm",
+    "merk",
+    "afwerkingsgraad",
+    "horizontaleVerschuiving",
+    "fabricageType",
+    "fabricageDatum",
+    "kleurAchterkant",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

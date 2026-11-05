@@ -1,0 +1,89 @@
+{
+  "title": "Landhoofd",
+  "type": "object",
+  "description": "Eindsteunpunt van een brug die de overgang vormt naar het achterliggend grondlichaam én als hoofdfunctie heeft de brug te ondersteunen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Landhoofd)",
+      "pattern": "^Landhoofd$"
+    },
+    "inOfOpDeRandVanDeWaterweg": {
+      "$ref": "#/components/schemas/Landhoofd.inOfOpDeRandVanDeWaterweg"
+    },
+    "funderingsaanzetOnderDeBodemVanDeWaterweg": {
+      "$ref": "#/components/schemas/Landhoofd.funderingsaanzetOnderDeBodemVanDeWaterweg"
+    },
+    "typeLandhoofd": {
+      "$ref": "#/components/schemas/TypeLandhoofd"
+    },
+    "typeVerbinding": {
+      "$ref": "#/components/schemas/TypeVerbinding"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Landhoofd.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Landhoofd.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Landhoofd.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Landhoofd.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Landhoofd.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Landhoofd.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Landhoofd.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "inOfOpDeRandVanDeWaterweg",
+    "funderingsaanzetOnderDeBodemVanDeWaterweg",
+    "typeLandhoofd",
+    "typeVerbinding",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Adres",
+  "type": "object",
+  "description": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Adres)",
+      "pattern": "^Adres$"
+    },
+    "straatnaam": {
+      "$ref": "#/components/schemas/Adres.straatnaam"
+    },
+    "huisnummer": {
+      "$ref": "#/components/schemas/Adres.huisnummer"
+    },
+    "bus": {
+      "$ref": "#/components/schemas/Adres.bus"
+    },
+    "postcode": {
+      "$ref": "#/components/schemas/Adres.postcode"
+    },
+    "provincie": {
+      "$ref": "#/components/schemas/Provincie"
+    },
+    "gemeente": {
+      "$ref": "#/components/schemas/Gemeente"
+    }
+  },
+  "required": [
+    "@type",
+    "straatnaam",
+    "huisnummer",
+    "bus",
+    "postcode",
+    "provincie",
+    "gemeente"
+  ]
+}

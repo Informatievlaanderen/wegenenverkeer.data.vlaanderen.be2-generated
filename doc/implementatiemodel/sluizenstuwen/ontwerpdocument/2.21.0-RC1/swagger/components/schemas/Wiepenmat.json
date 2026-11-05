@@ -1,0 +1,35 @@
+{
+  "title": "Wiepenmat",
+  "type": "object",
+  "description": "Een wiepenmat is een specifieke vorm van een bodembescherming die bestaat uit een houten gevlochten mat in combinatie met een geotextiel waarboven nadien stortsteen (breuksteen) wordt aangebracht.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wiepenmat)",
+      "pattern": "^Wiepenmat$"
+    },
+    "voegmateriaal": {
+      "$ref": "#/components/schemas/SoortVoegmateriaal"
+    },
+    "elementBreedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "elementLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "elementGewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    }
+  },
+  "required": [
+    "@type",
+    "voegmateriaal",
+    "elementBreedte",
+    "elementLengte",
+    "elementGewicht"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "title": "KWSAfscheider",
+  "type": "object",
+  "description": "Een toestel in een afwaterings- of rioleringsstelsel dat niet met water mengbare lichte vloeistoffen van minerale oorsprong, zoals olie en brandstoffen, door zwaartekracht en eventueel met behulp van coalescentie uit afval- of afstromend water afscheidt en tijdelijk vasthoudt vóór verdere afvoer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KWSAfscheider)",
+      "pattern": "^KWSAfscheider$"
+    },
+    "materiaalKuipKWSAfscheider": {
+      "$ref": "#/components/schemas/MateriaalKuipKWSAfscheider"
+    },
+    "nominaalDebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerSeconde"
+    },
+    "heeftCoalescentiefilter": {
+      "$ref": "#/components/schemas/KWSAfscheider.heeftCoalescentiefilter"
+    },
+    "heeftGeintegreerdeSlibvanger": {
+      "$ref": "#/components/schemas/KWSAfscheider.heeftGeintegreerdeSlibvanger"
+    },
+    "heeftAutomatischeAfsluiter": {
+      "$ref": "#/components/schemas/KWSAfscheider.heeftAutomatischeAfsluiter"
+    },
+    "heeftLekdetectie": {
+      "$ref": "#/components/schemas/KWSAfscheider.heeftLekdetectie"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/KWSAfscheider.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/KWSAfscheider.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/KWSAfscheider.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/KWSAfscheider.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/KWSAfscheider.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/KWSAfscheider.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/KWSAfscheider.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalKuipKWSAfscheider",
+    "nominaalDebiet",
+    "heeftCoalescentiefilter",
+    "heeftGeintegreerdeSlibvanger",
+    "heeftAutomatischeAfsluiter",
+    "heeftLekdetectie",
+    "afmeting",
+    "technischeFiche",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -13,41 +13,13 @@
       "pattern": "^AanlegBoomvorm$"
     },
     "heeftBoomplaat": {
-      "type": "object",
-      "description": "Boomplaten worden aangebracht rond de stam van bomen, bosgoed en heesters en eventueel vastgezet met piketten. Ze hebben een centrale opening en een rechte snede, zodat ze op eenvoudige wijze rond de planten kunnen aangebracht worden.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/AanlegBoomvorm.heeftBoomplaat"
     },
     "wortelAanplant": {
       "$ref": "#/components/schemas/VegetatieWortel"
     },
     "heeftWortelgeleidingWortelwering": {
-      "type": "object",
-      "description": "Aanduiding of de boom wortelwering heeft. Wortelgeleiding en –wering moet voorkomen dat boomwortels het trottoir, de middenberm, het fietspad, de rijweg, andere wegverhardingen en leidingstelsels beschadigen.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/AanlegBoomvorm.heeftWortelgeleidingWortelwering"
     },
     "plantmaatHoogte": {
       "$ref": "#/components/schemas/PlantmaatHoutigeVegetatie"
@@ -69,7 +41,7 @@
     },
     "groeiplaatsverbetering": {
       "type": "array",
-      "description": "Lijst van Groeiplaatsverbetering items.",
+      "description": "De techniek waarmee de groeiplaats wordt verbeterd met als doel de levensverwachting en de conditie van de vegetatie te verbeteren. Lijst van Groeiplaatsverbetering items.",
       "items": {
         "$ref": "#/components/schemas/Groeiplaatsverbetering"
       },

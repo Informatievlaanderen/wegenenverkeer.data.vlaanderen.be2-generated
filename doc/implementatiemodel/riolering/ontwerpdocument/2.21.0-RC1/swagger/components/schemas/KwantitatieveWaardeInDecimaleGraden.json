@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInDecimaleGraden",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInDecimaleGraden)",
+      "pattern": "^KwantitatieveWaardeInDecimaleGraden$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

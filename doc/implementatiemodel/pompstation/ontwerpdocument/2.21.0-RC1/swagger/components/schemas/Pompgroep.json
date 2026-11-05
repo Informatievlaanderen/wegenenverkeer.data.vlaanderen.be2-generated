@@ -1,0 +1,101 @@
+{
+  "title": "Pompgroep",
+  "type": "object",
+  "description": "Een systeem dat instaat voor het omzetten van elektrische energie in een verplaatsing of drukverhoging van water. In dit geval spreekt men van een pomp. In de omgekeerde situatie spreekt men van een turbine.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Pompgroep)",
+      "pattern": "^Pompgroep$"
+    },
+    "heeftIdentificatieplaat": {
+      "$ref": "#/components/schemas/Pompgroep.heeftIdentificatieplaat"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/PompgroepModelnaam"
+    },
+    "kanTurbineren": {
+      "$ref": "#/components/schemas/Pompgroep.kanTurbineren"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/PompgroepMerk"
+    },
+    "soort": {
+      "$ref": "#/components/schemas/PompSoort"
+    },
+    "opvoerhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "pompcapaciteit": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerUur"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Pompgroep.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Pompgroep.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Pompgroep.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Pompgroep.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Pompgroep.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Pompgroep.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Pompgroep.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftIdentificatieplaat",
+    "modelnaam",
+    "kanTurbineren",
+    "merk",
+    "soort",
+    "opvoerhoogte",
+    "pompcapaciteit",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

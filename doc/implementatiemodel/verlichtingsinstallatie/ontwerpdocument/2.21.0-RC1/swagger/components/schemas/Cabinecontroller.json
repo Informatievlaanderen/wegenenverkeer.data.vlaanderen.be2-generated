@@ -1,0 +1,109 @@
+{
+  "title": "Cabinecontroller",
+  "type": "object",
+  "description": "Controller die zorgt voor de bewaking en bediening van de geschakelde verlichtingsaftakkingen en voor bewaking van de voedingsinstallatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Cabinecontroller)",
+      "pattern": "^Cabinecontroller$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/Cabinecontroller.merk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/Cabinecontroller.modelnaam"
+    },
+    "beveiligingssleutel": {
+      "$ref": "#/components/schemas/ControllerBeveiligingssleutel."
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Cabinecontroller.serienummer"
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/Cabinecontroller.firmwareversie"
+    },
+    "batchnummer": {
+      "$ref": "#/components/schemas/Cabinecontroller.batchnummer"
+    },
+    "dNS-Naam": {
+      "$ref": "#/components/schemas/Cabinecontroller.dNS-Naam"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Cabinecontroller.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Cabinecontroller.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Cabinecontroller.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Cabinecontroller.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Cabinecontroller.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Cabinecontroller.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Cabinecontroller.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Cabinecontroller.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "beveiligingssleutel",
+    "serienummer",
+    "iP-Adres",
+    "firmwareversie",
+    "batchnummer",
+    "dNS-Naam",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Dekzerkprofiel",
+  "type": "object",
+  "description": "Dit zijn stalen voorzieningen bedoeld om hoekige kanten van het verticale vlak met het horizontale vlak van betonconstructies tegen schade te beschermen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dekzerkprofiel)",
+      "pattern": "^Dekzerkprofiel$"
+    },
+    "detailplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "verankering": {
+      "$ref": "#/components/schemas/VerankeringDekzerkprofiel"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Dekzerkprofiel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Dekzerkprofiel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dekzerkprofiel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Dekzerkprofiel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Dekzerkprofiel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Dekzerkprofiel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Dekzerkprofiel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "detailplan",
+    "materiaal",
+    "verankering",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

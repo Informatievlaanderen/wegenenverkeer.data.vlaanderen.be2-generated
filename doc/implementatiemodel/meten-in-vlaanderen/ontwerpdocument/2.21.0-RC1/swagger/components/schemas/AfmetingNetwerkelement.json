@@ -1,0 +1,31 @@
+{
+  "title": "AfmetingNetwerkelement",
+  "type": "object",
+  "description": "Complex datatype voor de afmetingen van een netwerktelement.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingNetwerkelement)",
+      "pattern": "^AfmetingNetwerkelement$"
+    },
+    "hoogteInRU": {
+      "$ref": "#/components/schemas/AfmetingNetwerkelement.hoogteInRU"
+    },
+    "diepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "hoogteInRU",
+    "diepte",
+    "breedte"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "title": "PLC",
+  "type": "object",
+  "description": "Een verwerkingseenheid die volgens een vaste cyclus op basis van informatie van zijn ingangen, zijn uitgangen aanstuurt op basis van zijn programma. Omwille van zijn vormfactor kan de eenheid gebruikt worden in een vijandige omgeving.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PLC)",
+      "pattern": "^PLC$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/PLCMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/PLCModel"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/PLC.componentnummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/PLC.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/PLC.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/PLC.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PLC.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/PLC.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/PLC.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/PLC.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/PLC.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/PLC.serienummer"
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/PLC.firmwareversie"
+    },
+    "batchnummer": {
+      "$ref": "#/components/schemas/PLC.batchnummer"
+    },
+    "dNS-Naam": {
+      "$ref": "#/components/schemas/PLC.dNS-Naam"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "componentnummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "serienummer",
+    "iP-Adres",
+    "firmwareversie",
+    "batchnummer",
+    "dNS-Naam"
+  ]
+}

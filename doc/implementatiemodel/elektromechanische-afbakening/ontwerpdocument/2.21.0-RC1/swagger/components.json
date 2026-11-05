@@ -1,0 +1,2012 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "AIMToestand": {
+        "title": "AIMToestand",
+        "type": "object",
+        "description": "Enumeratie van AIMToestand",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Mimetype": {
+        "title": "Mimetype",
+        "type": "object",
+        "description": "Enumeratie van Mimetype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Provincie": {
+        "title": "Provincie",
+        "type": "object",
+        "description": "Enumeratie van Provincie",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Enumeratie van Gemeente",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "AardingsinstallatieAardingsnet": {
+        "title": "AardingsinstallatieAardingsnet",
+        "type": "object",
+        "description": "Enumeratie van AardingsinstallatieAardingsnet",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "MateriaalSoorten": {
+        "title": "MateriaalSoorten",
+        "type": "object",
+        "description": "Enumeratie van MateriaalSoorten",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "KleurReflector": {
+        "title": "KleurReflector",
+        "type": "object",
+        "description": "Enumeratie van KleurReflector",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "LichtzuilSoortLamp": {
+        "title": "LichtzuilSoortLamp",
+        "type": "object",
+        "description": "Enumeratie van LichtzuilSoortLamp",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "LEDRotondeafbakening.aantalActieveReflectoren": {
+        "title": "LEDRotondeafbakening.aantalActieveReflectoren",
+        "description": "Het aantal actieve reflectoren in de verzameling van reflectoren die hetzelfde obstakel of risico aangeven.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "LEDRotondeafbakening.naam": {
+        "title": "LEDRotondeafbakening.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "LEDRotondeafbakening.notitie": {
+        "title": "LEDRotondeafbakening.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "LEDRotondeafbakening.standaardbestekpostnummer": {
+        "title": "LEDRotondeafbakening.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "LEDRotondeafbakening.typeURI": {
+        "title": "LEDRotondeafbakening.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "LEDRotondeafbakening.bestekpostnummer": {
+        "title": "LEDRotondeafbakening.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "LEDRotondeafbakening.datumOprichtingObject": {
+        "title": "LEDRotondeafbakening.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "LEDRotondeafbakening.isActief": {
+        "title": "LEDRotondeafbakening.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "LEDRotondeafbakening": {
+        "title": "LEDRotondeafbakening",
+        "type": "object",
+        "description": "De verzameling van actieve lichtgevende modules ter hoogte van één toerit die ingeslepen worden in, of geplaatst worden op, de boordsteen van een rotonde en als doel hebben om de rand van de rotonde duidelijk zichtbaar te maken.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LEDRotondeafbakening)",
+            "pattern": "^LEDRotondeafbakening$"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "aantalActieveReflectoren": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.aantalActieveReflectoren"
+          },
+          "nominaalVermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+          },
+          "nominaleSpanning": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          },
+          "tussenafstand": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/LEDRotondeafbakening.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/LEDRotondeafbakening.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/LEDRotondeafbakening.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "lengte",
+          "aantalActieveReflectoren",
+          "nominaalVermogen",
+          "nominaleSpanning",
+          "tussenafstand",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "LEDWegdekreflectorBebakening.aantalActieveReflectoren": {
+        "title": "LEDWegdekreflectorBebakening.aantalActieveReflectoren",
+        "description": "Het aantal actieve reflectoren in de verzameling van reflectoren die hetzelfde obstakel of risico aangeven.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "LEDWegdekreflectorBebakening.heeftVoedingOpZonne-Energie": {
+        "title": "LEDWegdekreflectorBebakening.heeftVoedingOpZonne-Energie",
+        "description": "Geeft aan dat de verzameling bestaat uit actieve reflectoren met geintegreerde zonnecellen en een batterij die zorgen voor de voeding van de verlichting in de relfector.",
+        "type": "boolean"
+      },
+      "LEDWegdekreflectorBebakening.naam": {
+        "title": "LEDWegdekreflectorBebakening.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "LEDWegdekreflectorBebakening.notitie": {
+        "title": "LEDWegdekreflectorBebakening.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "LEDWegdekreflectorBebakening.standaardbestekpostnummer": {
+        "title": "LEDWegdekreflectorBebakening.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "LEDWegdekreflectorBebakening.typeURI": {
+        "title": "LEDWegdekreflectorBebakening.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "LEDWegdekreflectorBebakening.bestekpostnummer": {
+        "title": "LEDWegdekreflectorBebakening.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "LEDWegdekreflectorBebakening.datumOprichtingObject": {
+        "title": "LEDWegdekreflectorBebakening.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "LEDWegdekreflectorBebakening.isActief": {
+        "title": "LEDWegdekreflectorBebakening.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "LEDWegdekreflectorBebakening": {
+        "title": "LEDWegdekreflectorBebakening",
+        "type": "object",
+        "description": "De verzameling van op de rijbaan verankerde actieve lichtmodules. De modules hebben als doel de randen van de rijbaan of de grenzen tussen rijstroken te markeren of gevaarlijke plaatsen te signaleren. De verzameling bundelt de actieve reflectoren die hetzelfde obstakel of risico aanduiden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LEDWegdekreflectorBebakening)",
+            "pattern": "^LEDWegdekreflectorBebakening$"
+          },
+          "kleurAflopend": {
+            "$ref": "#/components/schemas/KleurReflector"
+          },
+          "kleurOplopend": {
+            "$ref": "#/components/schemas/KleurReflector"
+          },
+          "lengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "aantalActieveReflectoren": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.aantalActieveReflectoren"
+          },
+          "tussenafstand": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+          },
+          "heeftVoedingOpZonne-Energie": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.heeftVoedingOpZonne-Energie"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/LEDWegdekreflectorBebakening.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "kleurAflopend",
+          "kleurOplopend",
+          "lengte",
+          "aantalActieveReflectoren",
+          "tussenafstand",
+          "heeftVoedingOpZonne-Energie",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Bochtafbakeningsinstallatie.aantalBorden": {
+        "title": "Bochtafbakeningsinstallatie.aantalBorden",
+        "description": "Het aantal borden in de bochtafbakening voor het aanduiden van een bocht in een rijrichting.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "Bochtafbakeningsinstallatie.naam": {
+        "title": "Bochtafbakeningsinstallatie.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Bochtafbakeningsinstallatie.notitie": {
+        "title": "Bochtafbakeningsinstallatie.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Bochtafbakeningsinstallatie.standaardbestekpostnummer": {
+        "title": "Bochtafbakeningsinstallatie.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Bochtafbakeningsinstallatie.typeURI": {
+        "title": "Bochtafbakeningsinstallatie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bochtafbakeningsinstallatie.bestekpostnummer": {
+        "title": "Bochtafbakeningsinstallatie.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Bochtafbakeningsinstallatie.datumOprichtingObject": {
+        "title": "Bochtafbakeningsinstallatie.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Bochtafbakeningsinstallatie.isActief": {
+        "title": "Bochtafbakeningsinstallatie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Bochtafbakeningsinstallatie": {
+        "title": "Bochtafbakeningsinstallatie",
+        "type": "object",
+        "description": "De verzameling van alle bochtafbakeningsborden in dezelfde bocht en rijrichting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bochtafbakeningsinstallatie)",
+            "pattern": "^Bochtafbakeningsinstallatie$"
+          },
+          "materiaalBehuizing": {
+            "$ref": "#/components/schemas/MateriaalSoorten"
+          },
+          "aantalBorden": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.aantalBorden"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Bochtafbakeningsinstallatie.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "materiaalBehuizing",
+          "aantalBorden",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Voedt": {
+        "title": "Voedt",
+        "type": "object",
+        "description": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voedt)",
+            "pattern": "^Voedt$"
+          },
+          "aansluitspanning": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          },
+          "aansluitvermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+          }
+        },
+        "required": [
+          "@type",
+          "aansluitspanning",
+          "aansluitvermogen"
+        ]
+      },
+      "Bevestiging": {
+        "title": "Bevestiging",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bevestiging)",
+            "pattern": "^Bevestiging$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "VoedtAangestuurd": {
+        "title": "VoedtAangestuurd",
+        "type": "object",
+        "description": "Deze relatie wordt enkel gelegd naar objecttypes die typisch een groot vermogen vereisen en onder spanning komen nadat het voedend element aangestuurd is om die spanning door te sturen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VoedtAangestuurd)",
+            "pattern": "^VoedtAangestuurd$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Stroomkring.stroomkringnummer": {
+        "title": "Stroomkring.stroomkringnummer",
+        "description": "De identificatie van de stroomkring.",
+        "type": "string"
+      },
+      "Stroomkring.naam": {
+        "title": "Stroomkring.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Stroomkring.notitie": {
+        "title": "Stroomkring.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Stroomkring.standaardbestekpostnummer": {
+        "title": "Stroomkring.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Stroomkring.typeURI": {
+        "title": "Stroomkring.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Stroomkring.bestekpostnummer": {
+        "title": "Stroomkring.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Stroomkring.datumOprichtingObject": {
+        "title": "Stroomkring.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Stroomkring.isActief": {
+        "title": "Stroomkring.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Stroomkring": {
+        "title": "Stroomkring",
+        "type": "object",
+        "description": "Ook wel vertrek of vertrekkende kabel genoemd. Afgezekerde elektrische geleiders waarmee de applicaties voorzien worden van de nodige voeding.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Stroomkring)",
+            "pattern": "^Stroomkring$"
+          },
+          "stroomkringnummer": {
+            "$ref": "#/components/schemas/Stroomkring.stroomkringnummer"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Stroomkring.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Stroomkring.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Stroomkring.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Stroomkring.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Stroomkring.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Stroomkring.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Stroomkring.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "stroomkringnummer",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Laagspanningsbord.naampad": {
+        "title": "Laagspanningsbord.naampad",
+        "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+        "type": "string"
+      },
+      "Laagspanningsbord.naam": {
+        "title": "Laagspanningsbord.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Laagspanningsbord.notitie": {
+        "title": "Laagspanningsbord.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Laagspanningsbord.standaardbestekpostnummer": {
+        "title": "Laagspanningsbord.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Laagspanningsbord.typeURI": {
+        "title": "Laagspanningsbord.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Laagspanningsbord.bestekpostnummer": {
+        "title": "Laagspanningsbord.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Laagspanningsbord.datumOprichtingObject": {
+        "title": "Laagspanningsbord.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Laagspanningsbord.isActief": {
+        "title": "Laagspanningsbord.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Laagspanningsbord": {
+        "title": "Laagspanningsbord",
+        "type": "object",
+        "description": "Verzameling van alle elektrische componenten nodig voor de voeding en sturing van applicaties die erop aangesloten zijn. Omvat onder andere automaten,klemmenblokken,...",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Laagspanningsbord)",
+            "pattern": "^Laagspanningsbord$"
+          },
+          "vermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+          },
+          "elektrischSchema": {
+            "type": "array",
+            "description": "Het elektrisch aansluitschema van het laagspanningsbord. Bestanden van het type pdf,dwg of dxf. Lijst van Bestandsbijlage items.",
+            "items": {
+              "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "nominaleStroom": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe"
+          },
+          "kortsluitvermogen": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe"
+          },
+          "aardingsnet": {
+            "$ref": "#/components/schemas/AardingsinstallatieAardingsnet"
+          },
+          "kabelberekeningsnota": {
+            "type": "array",
+            "description": "De verzameling van alle berekeningen uitgevoerd om de secties en maximale lengtes van de kabels, gebruikt in de installatie, te bepalen. Lijst van Bestandsbijlage items.",
+            "items": {
+              "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "naampad": {
+            "$ref": "#/components/schemas/Laagspanningsbord.naampad"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Laagspanningsbord.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Laagspanningsbord.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Laagspanningsbord.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Laagspanningsbord.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Laagspanningsbord.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Laagspanningsbord.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Laagspanningsbord.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "vermogen",
+          "elektrischSchema",
+          "nominaleStroom",
+          "kortsluitvermogen",
+          "aardingsnet",
+          "kabelberekeningsnota",
+          "naampad",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Lichtzuil.naam": {
+        "title": "Lichtzuil.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Lichtzuil.notitie": {
+        "title": "Lichtzuil.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Lichtzuil.standaardbestekpostnummer": {
+        "title": "Lichtzuil.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Lichtzuil.typeURI": {
+        "title": "Lichtzuil.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Lichtzuil.bestekpostnummer": {
+        "title": "Lichtzuil.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Lichtzuil.datumOprichtingObject": {
+        "title": "Lichtzuil.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Lichtzuil.isActief": {
+        "title": "Lichtzuil.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Lichtzuil": {
+        "title": "Lichtzuil",
+        "type": "object",
+        "description": "Inwendig verlichte, geel gekleurde conische steun, inclusief het voetstuk waarop het bevestigd is, die gebruikt wordt om obstakels op de weg te signaleren voor het aankomend verkeer.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Lichtzuil)",
+            "pattern": "^Lichtzuil$"
+          },
+          "soortLamp": {
+            "$ref": "#/components/schemas/LichtzuilSoortLamp"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Lichtzuil.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Lichtzuil.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Lichtzuil.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Lichtzuil.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Lichtzuil.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Lichtzuil.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Lichtzuil.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "soortLamp",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Lichtnagel.isLED": {
+        "title": "Lichtnagel.isLED",
+        "description": "Geeft aan of de lichtnagel opgelicht wordt door middel van geïntegreerde LEDs.",
+        "type": "boolean"
+      },
+      "Lichtnagel.naam": {
+        "title": "Lichtnagel.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Lichtnagel.notitie": {
+        "title": "Lichtnagel.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Lichtnagel.standaardbestekpostnummer": {
+        "title": "Lichtnagel.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Lichtnagel.typeURI": {
+        "title": "Lichtnagel.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Lichtnagel.bestekpostnummer": {
+        "title": "Lichtnagel.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Lichtnagel.datumOprichtingObject": {
+        "title": "Lichtnagel.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Lichtnagel.isActief": {
+        "title": "Lichtnagel.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Lichtnagel": {
+        "title": "Lichtnagel",
+        "type": "object",
+        "description": "Een lage, gele, plastic koepel die geplaatst wordt op een ondergronds geïnstalleerde, lichtgevende module waardoor de weggebruiker de indruk heeft dat de koepel zelf verlicht is. De koepel kan ook geïntegreerde LEDjes bevatten om op te lichten in plaats van boven een lichtgevende module gezet te worden. Deze voorwerpen hebben als doel de weggebruiker attent te maken van een gewijzigde wegprofiel (bv. betonnen middeneiland op de weg,...).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Lichtnagel)",
+            "pattern": "^Lichtnagel$"
+          },
+          "isLED": {
+            "$ref": "#/components/schemas/Lichtnagel.isLED"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Lichtnagel.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Lichtnagel.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Lichtnagel.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Lichtnagel.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Lichtnagel.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Lichtnagel.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Lichtnagel.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "isLED",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Adres.straatnaam": {
+        "title": "Adres.straatnaam",
+        "description": "De naam van de straat.",
+        "type": "string"
+      },
+      "Adres.huisnummer": {
+        "title": "Adres.huisnummer",
+        "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
+        "type": "string"
+      },
+      "Adres.bus": {
+        "title": "Adres.bus",
+        "description": "Een nummer dat de postbus aanduidt.",
+        "type": "string"
+      },
+      "Adres.postcode": {
+        "title": "Adres.postcode",
+        "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
+        "type": "string"
+      },
+      "Adres": {
+        "title": "Adres",
+        "type": "object",
+        "description": "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adres)",
+            "pattern": "^Adres$"
+          },
+          "straatnaam": {
+            "$ref": "#/components/schemas/Adres.straatnaam"
+          },
+          "huisnummer": {
+            "$ref": "#/components/schemas/Adres.huisnummer"
+          },
+          "bus": {
+            "$ref": "#/components/schemas/Adres.bus"
+          },
+          "postcode": {
+            "$ref": "#/components/schemas/Adres.postcode"
+          },
+          "provincie": {
+            "$ref": "#/components/schemas/Provincie"
+          },
+          "gemeente": {
+            "$ref": "#/components/schemas/Gemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "straatnaam",
+          "huisnummer",
+          "bus",
+          "postcode",
+          "provincie",
+          "gemeente"
+        ]
+      },
+      "Bestandsbijlage.uri": {
+        "title": "Bestandsbijlage.uri",
+        "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bestandsbijlage.bestandsnaam": {
+        "title": "Bestandsbijlage.bestandsnaam",
+        "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+        "type": "string"
+      },
+      "Bestandsbijlage.opmaakdatum": {
+        "title": "Bestandsbijlage.opmaakdatum",
+        "description": "De datum waarop het document is opgemaakt.",
+        "type": "string",
+        "format": "date"
+      },
+      "Bestandsbijlage": {
+        "title": "Bestandsbijlage",
+        "type": "object",
+        "description": "Complex datatype voor alle bestandsbijlages.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bestandsbijlage)",
+            "pattern": "^Bestandsbijlage$"
+          },
+          "uri": {
+            "$ref": "#/components/schemas/Bestandsbijlage.uri"
+          },
+          "bestandsnaam": {
+            "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
+          },
+          "omschrijving": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "mime-Type": {
+            "$ref": "#/components/schemas/Mimetype"
+          },
+          "opmaakdatum": {
+            "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
+          }
+        },
+        "required": [
+          "@type",
+          "uri",
+          "bestandsnaam",
+          "omschrijving",
+          "mime-Type",
+          "opmaakdatum"
+        ]
+      },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator.identificator"
+          },
+          "toegekendDoor": {
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand.waarde": {
+        "title": "KwantitatieveWaardeInMaand.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "KwantitatieveWaardeInMaand.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMaand.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMaand": {
+        "title": "KwantitatieveWaardeInMaand",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+            "pattern": "^KwantitatieveWaardeInMaand$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
+          },
+          "timestamp": {
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
+          },
+          "context": {
+            "$ref": "#/components/schemas/AssetVersie.context"
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Tekstblok.waarde": {
+        "title": "Tekstblok.waarde",
+        "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "type": "string"
+      },
+      "Tekstblok": {
+        "title": "Tekstblok",
+        "type": "object",
+        "description": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tekstblok)",
+            "pattern": "^Tekstblok$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Tekstblok.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInWatt.waarde": {
+        "title": "KwantitatieveWaardeInWatt.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInWatt.standaardEenheid": {
+        "title": "KwantitatieveWaardeInWatt.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in Watt. \"W\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInWatt": {
+        "title": "KwantitatieveWaardeInWatt",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in watt uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInWatt)",
+            "pattern": "^KwantitatieveWaardeInWatt$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInWatt.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "KwantitatieveWaardeInAmpèRe.waarde": {
+        "title": "KwantitatieveWaardeInAmpèRe.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInAmpèRe.standaardEenheid": {
+        "title": "KwantitatieveWaardeInAmpèRe.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in ampere. \"A\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInAmpèRe": {
+        "title": "KwantitatieveWaardeInAmpèRe",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in ampère uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInAmpèRe)",
+            "pattern": "^KwantitatieveWaardeInAmpèRe$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInAmpèRe.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.waarde": {
+        "title": "KwantitatieveWaardeInMeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInMeter": {
+        "title": "KwantitatieveWaardeInMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+            "pattern": "^KwantitatieveWaardeInMeter$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInKiloAmpèRe.standaardEenheid": {
+        "title": "KwantitatieveWaardeInKiloAmpèRe.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in kiloampère.",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInKiloAmpèRe.waarde": {
+        "title": "KwantitatieveWaardeInKiloAmpèRe.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInKiloAmpèRe": {
+        "title": "KwantitatieveWaardeInKiloAmpèRe",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in kiloampère uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInKiloAmpèRe)",
+            "pattern": "^KwantitatieveWaardeInKiloAmpèRe$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe.standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKiloAmpèRe.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter.waarde": {
+        "title": "KwantitatieveWaardeInCentimeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInCentimeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in centimeter. \"cm\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInCentimeter": {
+        "title": "KwantitatieveWaardeInCentimeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in centimeter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInCentimeter)",
+            "pattern": "^KwantitatieveWaardeInCentimeter$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "KwantitatieveWaardeInVolt.waarde": {
+        "title": "KwantitatieveWaardeInVolt.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInVolt.standaardEenheid": {
+        "title": "KwantitatieveWaardeInVolt.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in Volt. \"V\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInVolt": {
+        "title": "KwantitatieveWaardeInVolt",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in volt uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInVolt)",
+            "pattern": "^KwantitatieveWaardeInVolt$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      }
+    },
+    "links": {
+      "LEDRotondeafbakening.lengte": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.lengte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "LEDRotondeafbakening.nominaalVermogen": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.nominaalVermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInWatt` op te halen."
+      },
+      "LEDRotondeafbakening.nominaleSpanning": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.nominaleSpanning/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "LEDRotondeafbakening.tussenafstand": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.tussenafstand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInCentimeter` op te halen."
+      },
+      "LEDRotondeafbakening.asset-Id": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "LEDRotondeafbakening.theoretischeLevensduur": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "LEDRotondeafbakening.aIM-Toestand": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "LEDRotondeafbakening.asset-Versie": {
+        "operationId": "LEDRotondeafbakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDRotondeafbakening.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.kleurAflopend": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.kleurAflopend/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KleurReflector` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.kleurOplopend": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.kleurOplopend/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KleurReflector` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.lengte": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.lengte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.tussenafstand": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.tussenafstand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInCentimeter` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.asset-Id": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.theoretischeLevensduur": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.aIM-Toestand": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "LEDWegdekreflectorBebakening.asset-Versie": {
+        "operationId": "LEDWegdekreflectorBebakeningGET",
+        "parameters": {
+          "id": "$response.body#/LEDWegdekreflectorBebakening.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Bochtafbakeningsinstallatie.materiaalBehuizing": {
+        "operationId": "BochtafbakeningsinstallatieGET",
+        "parameters": {
+          "id": "$response.body#/Bochtafbakeningsinstallatie.materiaalBehuizing/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MateriaalSoorten` op te halen."
+      },
+      "Bochtafbakeningsinstallatie.asset-Id": {
+        "operationId": "BochtafbakeningsinstallatieGET",
+        "parameters": {
+          "id": "$response.body#/Bochtafbakeningsinstallatie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bochtafbakeningsinstallatie.theoretischeLevensduur": {
+        "operationId": "BochtafbakeningsinstallatieGET",
+        "parameters": {
+          "id": "$response.body#/Bochtafbakeningsinstallatie.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Bochtafbakeningsinstallatie.aIM-Toestand": {
+        "operationId": "BochtafbakeningsinstallatieGET",
+        "parameters": {
+          "id": "$response.body#/Bochtafbakeningsinstallatie.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Bochtafbakeningsinstallatie.asset-Versie": {
+        "operationId": "BochtafbakeningsinstallatieGET",
+        "parameters": {
+          "id": "$response.body#/Bochtafbakeningsinstallatie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Voedt.aansluitspanning": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitspanning/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "Voedt.aansluitvermogen": {
+        "operationId": "VoedtGET",
+        "parameters": {
+          "id": "$response.body#/Voedt.aansluitvermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInVolt` op te halen."
+      },
+      "Stroomkring.voedt": {
+        "operationId": "StroomkringGET",
+        "parameters": {
+          "id": "$response.body#/Stroomkring.voedt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Stroomkring` op te halen."
+      },
+      "Stroomkring.asset-Id": {
+        "operationId": "StroomkringGET",
+        "parameters": {
+          "id": "$response.body#/Stroomkring.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Stroomkring.theoretischeLevensduur": {
+        "operationId": "StroomkringGET",
+        "parameters": {
+          "id": "$response.body#/Stroomkring.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Stroomkring.aIM-Toestand": {
+        "operationId": "StroomkringGET",
+        "parameters": {
+          "id": "$response.body#/Stroomkring.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Stroomkring.asset-Versie": {
+        "operationId": "StroomkringGET",
+        "parameters": {
+          "id": "$response.body#/Stroomkring.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Laagspanningsbord.vermogen": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.vermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInAmpèRe` op te halen."
+      },
+      "Laagspanningsbord.elektrischSchema": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.elektrischSchema/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "Laagspanningsbord.nominaleStroom": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.nominaleStroom/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInAmpèRe` op te halen."
+      },
+      "Laagspanningsbord.kortsluitvermogen": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.kortsluitvermogen/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKiloAmpèRe` op te halen."
+      },
+      "Laagspanningsbord.aardingsnet": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.aardingsnet/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AardingsinstallatieAardingsnet` op te halen."
+      },
+      "Laagspanningsbord.kabelberekeningsnota": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.kabelberekeningsnota/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "Laagspanningsbord.voedt": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.voedt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Laagspanningsbord` op te halen."
+      },
+      "Laagspanningsbord.asset-Id": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Laagspanningsbord.theoretischeLevensduur": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Laagspanningsbord.aIM-Toestand": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Laagspanningsbord.asset-Versie": {
+        "operationId": "LaagspanningsbordGET",
+        "parameters": {
+          "id": "$response.body#/Laagspanningsbord.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Lichtzuil.soortLamp": {
+        "operationId": "LichtzuilGET",
+        "parameters": {
+          "id": "$response.body#/Lichtzuil.soortLamp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LichtzuilSoortLamp` op te halen."
+      },
+      "Lichtzuil.asset-Id": {
+        "operationId": "LichtzuilGET",
+        "parameters": {
+          "id": "$response.body#/Lichtzuil.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Lichtzuil.theoretischeLevensduur": {
+        "operationId": "LichtzuilGET",
+        "parameters": {
+          "id": "$response.body#/Lichtzuil.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Lichtzuil.aIM-Toestand": {
+        "operationId": "LichtzuilGET",
+        "parameters": {
+          "id": "$response.body#/Lichtzuil.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Lichtzuil.asset-Versie": {
+        "operationId": "LichtzuilGET",
+        "parameters": {
+          "id": "$response.body#/Lichtzuil.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Lichtnagel.asset-Id": {
+        "operationId": "LichtnagelGET",
+        "parameters": {
+          "id": "$response.body#/Lichtnagel.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Lichtnagel.theoretischeLevensduur": {
+        "operationId": "LichtnagelGET",
+        "parameters": {
+          "id": "$response.body#/Lichtnagel.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Lichtnagel.aIM-Toestand": {
+        "operationId": "LichtnagelGET",
+        "parameters": {
+          "id": "$response.body#/Lichtnagel.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Lichtnagel.asset-Versie": {
+        "operationId": "LichtnagelGET",
+        "parameters": {
+          "id": "$response.body#/Lichtnagel.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      }
+    }
+  }
+}

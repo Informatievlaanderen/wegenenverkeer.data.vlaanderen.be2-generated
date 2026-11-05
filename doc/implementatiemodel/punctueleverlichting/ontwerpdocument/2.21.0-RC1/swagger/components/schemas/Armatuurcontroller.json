@@ -1,0 +1,101 @@
+{
+  "title": "Armatuurcontroller",
+  "type": "object",
+  "description": "Controller die op het verlichtingstoestel wordt gemonteerd en die één verlichtingstoestel aanstuurt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Armatuurcontroller)",
+      "pattern": "^Armatuurcontroller$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/Armatuurcontroller.merk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/Armatuurcontroller.modelnaam"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Armatuurcontroller.serienummer"
+    },
+    "isDummydot": {
+      "$ref": "#/components/schemas/Armatuurcontroller.isDummydot"
+    },
+    "iP-Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "netwerkconfiguratieWegverlichting": {
+      "$ref": "#/components/schemas/NetwerkconfiguratieWegverlichting"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/Armatuurcontroller.firmwareversie"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Armatuurcontroller.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Armatuurcontroller.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Armatuurcontroller.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Armatuurcontroller.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Armatuurcontroller.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Armatuurcontroller.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Armatuurcontroller.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "serienummer",
+    "isDummydot",
+    "iP-Adres",
+    "netwerkconfiguratieWegverlichting",
+    "firmwareversie",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

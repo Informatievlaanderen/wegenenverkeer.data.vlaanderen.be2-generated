@@ -1,0 +1,105 @@
+{
+  "title": "Niet-StandaardStalenProfiel",
+  "type": "object",
+  "description": "Een stalen constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. Niet-standaard stalen profiel omvat alle speciale,op maat gemaakte en/of niet vaak voorkomende profielen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Niet-StandaardStalenProfiel)",
+      "pattern": "^Niet-StandaardStalenProfiel$"
+    },
+    "profielbreedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "profielhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "detailDwarsdoorsnede": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "isVoorgebogen": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.isVoorgebogen"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "staalspecificaties": {
+      "$ref": "#/components/schemas/Staalspecificaties"
+    },
+    "totaalGewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Niet-StandaardStalenProfiel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "profielbreedte",
+    "profielhoogte",
+    "detailDwarsdoorsnede",
+    "isVoorgebogen",
+    "lengte",
+    "technischeFiche",
+    "staalspecificaties",
+    "totaalGewicht",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

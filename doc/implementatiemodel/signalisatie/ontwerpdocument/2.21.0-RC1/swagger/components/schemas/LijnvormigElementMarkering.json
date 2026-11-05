@@ -1,0 +1,134 @@
+{
+  "title": "LijnvormigElementMarkering",
+  "type": "object",
+  "description": "Een markering van een lijnvormig element om de zichtbaarheid te verhogen om het verkeer te waarschuwen, informeren of regelen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LijnvormigElementMarkering)",
+      "pattern": "^LijnvormigElementMarkering$"
+    },
+    "code": {
+      "$ref": "#/components/schemas/MarkeringCode"
+    },
+    "soortOmschrijving": {
+      "$ref": "#/components/schemas/SoortMarkeringVanLijnvormigElement"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "isGoedgekeurd": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.isGoedgekeurd"
+    },
+    "versieGoedgekeurd": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.versieGoedgekeurd"
+    },
+    "markeringsysteemCOPRO": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "opvatting": {
+      "$ref": "#/components/schemas/MarkeringOpvatting"
+    },
+    "markeringsoort": {
+      "$ref": "#/components/schemas/SoortMarkeringsproduct"
+    },
+    "isTijdelijk": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.isTijdelijk"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche(s) van de markering. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "isHandwerk": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.isHandwerk"
+    },
+    "markeringssysteem": {
+      "$ref": "#/components/schemas/Markeringssysteem"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KleurMarkering"
+    },
+    "markeringsproduct": {
+      "$ref": "#/components/schemas/Markeringsproduct"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/LijnvormigElementMarkering.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/LijnvormigElementMarkering.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/LijnvormigElementMarkering.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "code",
+    "soortOmschrijving",
+    "lengte",
+    "oppervlakte",
+    "isGoedgekeurd",
+    "versieGoedgekeurd",
+    "markeringsysteemCOPRO",
+    "opvatting",
+    "markeringsoort",
+    "isTijdelijk",
+    "technischeFiche",
+    "isHandwerk",
+    "markeringssysteem",
+    "kleur",
+    "markeringsproduct",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -14,7 +14,7 @@
     },
     "schermtype": {
       "type": "array",
-      "description": "Lijst van Schermtype items.",
+      "description": "Bepaling van een vlak of niet-vlak scherm. Een vlak scherm zijn alle schermtypes die getest kunnen worden volgens de normen NBN EN 1793-1 NBN EN 1793-2.\nDe niet-vlakke schermen zijn de schermen die niet kunnen getest worden volgens de normen NBN EN 1793-1 NBN EN 1793-2. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van Schermtype items.",
       "items": {
         "$ref": "#/components/schemas/Schermtype"
       },
@@ -25,7 +25,7 @@
     },
     "schermelement": {
       "type": "array",
-      "description": "Lijst van SchermelementType items.",
+      "description": "Het type van schermelement. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van SchermelementType items.",
       "items": {
         "$ref": "#/components/schemas/SchermelementType"
       },
@@ -39,7 +39,7 @@
     },
     "materiaalKarakteristiek": {
       "type": "array",
-      "description": "Lijst van MateriaalKarakteristiek items.",
+      "description": "Het materiaal van de geluidswerende constructie en het geluidskarakteristiek van het materiaal. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van MateriaalKarakteristiek items.",
       "items": {
         "$ref": "#/components/schemas/MateriaalKarakteristiek"
       },
@@ -49,21 +49,7 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInKNPerVierkanteMeter"
     },
     "heeftAfdeklatten": {
-      "type": "object",
-      "description": "Bepaling of er boven- of onderaan latten gebruikt worden om de geluidswerende constructie te laten aansluiten op de tunnel. Klasse uit gebruik sinds versie 2.0.0-RC3",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.heeftAfdeklatten"
     },
     "individueleLengteSchermelement": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
@@ -84,21 +70,7 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
     },
     "isBeginOfEindconstructie": {
-      "type": "object",
-      "description": "Bepaling of het gaat om een begin- of eindconstructie. Klasse uit gebruik sinds versie 2.0.0-RC3",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.isBeginOfEindconstructie"
     },
     "maximaleDikteSchermelement": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
@@ -108,7 +80,7 @@
     },
     "videoVoertuigkering": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "Video van de testen op geluidswerende constructies. Klasse uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -116,7 +88,7 @@
     },
     "testrapport": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De testresultaten van een geluidswerende constructie. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -124,7 +96,7 @@
     },
     "technischeFiche": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
@@ -134,61 +106,24 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/GeluidswerendeConstructie.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/GeluidswerendeConstructie.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -196,39 +131,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

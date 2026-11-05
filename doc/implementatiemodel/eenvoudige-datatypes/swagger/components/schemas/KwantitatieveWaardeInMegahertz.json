@@ -13,34 +13,10 @@
       "pattern": "^KwantitatieveWaardeInMegahertz$"
     },
     "standaardEenheid": {
-      "type": "object",
-      "description": "De standaard eenheid bij dit datatype is uitgedrukt in megahertz.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMegahertz.standaardEenheid"
     },
     "waarde": {
-      "type": "object",
-      "description": "De waarde als decimal.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMegahertz.waarde"
     }
   },
   "required": [

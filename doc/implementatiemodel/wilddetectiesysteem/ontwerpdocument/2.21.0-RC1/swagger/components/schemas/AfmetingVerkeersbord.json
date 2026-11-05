@@ -1,0 +1,34 @@
+{
+  "title": "AfmetingVerkeersbord",
+  "type": "object",
+  "description": "Union datatype voor de afmeting van het verkeersbord.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingVerkeersbord)",
+      "pattern": "^AfmetingVerkeersbord$"
+    },
+    "driehoekig": {
+      "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+    },
+    "rond": {
+      "$ref": "#/components/schemas/AfmetingDiameterInMillimeter"
+    },
+    "vierhoekig": {
+      "$ref": "#/components/schemas/AfmetingBxhInMillimeter"
+    },
+    "zeshoekig": {
+      "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+    },
+    "achthoekig": {
+      "$ref": "#/components/schemas/AfmetingZijdeInMillimeter"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

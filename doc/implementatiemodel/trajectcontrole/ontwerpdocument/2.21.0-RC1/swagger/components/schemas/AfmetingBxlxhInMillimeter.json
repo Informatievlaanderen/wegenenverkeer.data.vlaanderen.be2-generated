@@ -1,0 +1,31 @@
+{
+  "title": "AfmetingBxlxhInMillimeter",
+  "type": "object",
+  "description": "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingBxlxhInMillimeter)",
+      "pattern": "^AfmetingBxlxhInMillimeter$"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "breedte",
+    "lengte",
+    "hoogte"
+  ]
+}

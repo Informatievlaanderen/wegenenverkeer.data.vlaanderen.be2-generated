@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKilogramPerKubiekeMeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kilogram per kubieke meter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKilogramPerKubiekeMeter)",
+      "pattern": "^KwantitatieveWaardeInKilogramPerKubiekeMeter$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerKubiekeMeter.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogramPerKubiekeMeter.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

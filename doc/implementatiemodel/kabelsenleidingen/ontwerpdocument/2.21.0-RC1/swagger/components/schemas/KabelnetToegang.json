@@ -1,0 +1,98 @@
+{
+  "title": "KabelnetToegang",
+  "type": "object",
+  "description": "Knooppunt van Kabelnet dat toegang geeft tot de informatie die in Kabelnet bewaard wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KabelnetToegang)",
+      "pattern": "^KabelnetToegang$"
+    },
+    "kabelnettoegangID": {
+      "$ref": "#/components/schemas/KabelnetToegang.kabelnettoegangID"
+    },
+    "netwerkSoort": {
+      "type": "array",
+      "description": "Type netwerk dat bereikbaar is via het toegangspunt. Lijst van KabelnetToegangNetwerksoort items.",
+      "items": {
+        "$ref": "#/components/schemas/KabelnetToegangNetwerksoort"
+      },
+      "minItems": 1
+    },
+    "kabelnetURL": {
+      "$ref": "#/components/schemas/KabelnetToegang.kabelnetURL"
+    },
+    "geschatAantalRackUnitsInGebruik": {
+      "$ref": "#/components/schemas/KabelnetToegang.geschatAantalRackUnitsInGebruik"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/KabelnetToegang.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/KabelnetToegang.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/KabelnetToegang.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/KabelnetToegang.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/KabelnetToegang.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/KabelnetToegang.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/KabelnetToegang.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/KabelnetToegang.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "kabelnettoegangID",
+    "netwerkSoort",
+    "kabelnetURL",
+    "geschatAantalRackUnitsInGebruik",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

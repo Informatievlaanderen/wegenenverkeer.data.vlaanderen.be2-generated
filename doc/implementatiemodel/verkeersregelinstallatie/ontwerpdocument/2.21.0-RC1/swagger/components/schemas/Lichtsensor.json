@@ -1,0 +1,110 @@
+{
+  "title": "Lichtsensor",
+  "type": "object",
+  "description": "Een meettoestel dat wordt gebruikt om de lichtsterkte of illuminantie,voortgebracht door een lichtbron,te meten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Lichtsensor)",
+      "pattern": "^Lichtsensor$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/LichtsensorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/LichtsensorModelnaam"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "opstelwijze": {
+      "$ref": "#/components/schemas/SensorOpstelwijze"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Lichtsensor.serienummer"
+    },
+    "kalibratiecertificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technsiche fiche als bijlage van de sensor. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Lichtsensor.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Lichtsensor.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Lichtsensor.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Lichtsensor.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Lichtsensor.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Lichtsensor.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Lichtsensor.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Lichtsensor.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "opstelhoogte",
+    "opstelwijze",
+    "serienummer",
+    "kalibratiecertificaat",
+    "technischeFiche",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

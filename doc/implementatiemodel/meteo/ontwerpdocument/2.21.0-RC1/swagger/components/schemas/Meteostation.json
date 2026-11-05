@@ -1,0 +1,157 @@
+{
+  "title": "Meteostation",
+  "type": "object",
+  "description": "Het geheel van meteorologische sensoren en andere infrastructuurelementen die samen een meteostation vormen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meteostation)",
+      "pattern": "^Meteostation$"
+    },
+    "beoordelingLokaleTerrein": {
+      "type": "array",
+      "description": "Het soort terrein waarin het meetstation staat met betrekking tot het reliëf en de vegetatie. Lijst van LokaalTerreintype items.",
+      "items": {
+        "$ref": "#/components/schemas/LokaalTerreintype"
+      },
+      "minItems": 1
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiches als bijlage. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "masterOfBridgeSensor": {
+      "$ref": "#/components/schemas/Meteostation.masterOfBridgeSensor"
+    },
+    "nabijheidVanWaterlopen": {
+      "type": "array",
+      "description": "De afstand tot een waterloop in de nabijheid. Lijst van KwantitatieveWaardeInMeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+      },
+      "minItems": 1
+    },
+    "nabijheidVanHindernissen": {
+      "type": "array",
+      "description": "De afstand tot een hindernis in de nabijheid. Lijst van KwantitatieveWaardeInMeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+      },
+      "minItems": 1
+    },
+    "sitePhysicsRapport": {
+      "type": "array",
+      "description": "Beschrijvend overzichtsrapport van het meteostation. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "heeftMaaibescherming": {
+      "$ref": "#/components/schemas/Meteostation.heeftMaaibescherming"
+    },
+    "foto": {
+      "type": "array",
+      "description": "De verschillende foto's van het meetstation. Lijst van MeteoFoto items.",
+      "items": {
+        "$ref": "#/components/schemas/MeteoFoto"
+      },
+      "minItems": 1
+    },
+    "onderhoudsrapport": {
+      "type": "array",
+      "description": "Het rapport dat jaarlijks wordt opgesteld met details over het onderhoud van het meetstation. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "keuringsrapport": {
+      "type": "array",
+      "description": "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation. Attribuut uit gebruik sinds versie 2.20.0-RC2 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Meteostation.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Meteostation.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Meteostation.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Meteostation.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Meteostation.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Meteostation.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Meteostation.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Meteostation.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "beoordelingLokaleTerrein",
+    "technischeFiche",
+    "masterOfBridgeSensor",
+    "nabijheidVanWaterlopen",
+    "nabijheidVanHindernissen",
+    "sitePhysicsRapport",
+    "heeftMaaibescherming",
+    "foto",
+    "onderhoudsrapport",
+    "keuringsrapport",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

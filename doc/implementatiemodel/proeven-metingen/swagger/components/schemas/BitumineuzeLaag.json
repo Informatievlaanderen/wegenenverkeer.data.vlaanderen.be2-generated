@@ -1,0 +1,121 @@
+{
+  "title": "BitumineuzeLaag",
+  "type": "object",
+  "description": "Flexibele verharding die meestal uit bitumineus gebonden materialen (asfalt of gietasfalt) bestaat en laagsgewijs wordt aangelegd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BitumineuzeLaag)",
+      "pattern": "^BitumineuzeLaag$"
+    },
+    "laagtype": {
+      "$ref": "#/components/schemas/LaagtypeVanDeBitumineuzeVerharding"
+    },
+    "mengseltype": {
+      "$ref": "#/components/schemas/BVMengseltype"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KleurSupplementen"
+    },
+    "bindmiddelType": {
+      "$ref": "#/components/schemas/BVBindmiddel"
+    },
+    "bouwklasse": {
+      "$ref": "#/components/schemas/AlgBouwklassegroep"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BitumineuzeLaag.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BitumineuzeLaag.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/BitumineuzeLaag.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "laagtype",
+    "mengseltype",
+    "kleur",
+    "bindmiddelType",
+    "bouwklasse",
+    "productidentificatiecode",
+    "lengte",
+    "breedte",
+    "oppervlakte",
+    "laagrol",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "dikte",
+    "naampad",
+    "naam"
+  ]
+}

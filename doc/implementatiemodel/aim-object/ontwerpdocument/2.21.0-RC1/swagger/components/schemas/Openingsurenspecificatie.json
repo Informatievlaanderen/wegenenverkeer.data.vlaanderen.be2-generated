@@ -1,0 +1,31 @@
+{
+  "title": "Openingsurenspecificatie",
+  "type": "object",
+  "description": "Complex datatype dat de openingsuren volgens https://schema.org/OpeningHoursSpecification specifieert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Openingsurenspecificatie)",
+      "pattern": "^Openingsurenspecificatie$"
+    },
+    "openingstijd": {
+      "$ref": "#/components/schemas/Openingsurenspecificatie.openingstijd"
+    },
+    "sluitingstijd": {
+      "$ref": "#/components/schemas/Openingsurenspecificatie.sluitingstijd"
+    },
+    "weekdag": {
+      "$ref": "#/components/schemas/Weekdagen"
+    }
+  },
+  "required": [
+    "@type",
+    "openingstijd",
+    "sluitingstijd",
+    "weekdag"
+  ]
+}

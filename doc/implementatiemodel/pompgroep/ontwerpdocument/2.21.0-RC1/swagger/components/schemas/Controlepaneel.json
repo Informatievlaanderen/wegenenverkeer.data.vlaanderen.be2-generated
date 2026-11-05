@@ -1,0 +1,89 @@
+{
+  "title": "Controlepaneel",
+  "type": "object",
+  "description": "Een inrichting voor het besturen van een systeem dat of installatie die zich in de buurt van het controlepaneel bevindt. Een controlepaneel kan onder andere uitgerust zijn met schakelaars,drukknoppen,draaiknoppen,cijfertoetsen,signaallampen,etc.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Controlepaneel)",
+      "pattern": "^Controlepaneel$"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ControlepaneelModelnaam"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/ControlepaneelMerk"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Controlepaneel.serienummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Controlepaneel.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Controlepaneel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Controlepaneel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Controlepaneel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Controlepaneel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Controlepaneel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Controlepaneel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Controlepaneel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "modelnaam",
+    "merk",
+    "serienummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

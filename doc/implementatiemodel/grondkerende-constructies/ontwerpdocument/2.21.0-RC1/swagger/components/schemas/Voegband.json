@@ -1,0 +1,85 @@
+{
+  "title": "Voegband",
+  "type": "object",
+  "description": "Een flexibel afdichtingselement dat wordt geplaatst in voegen van betonconstructies. Het doel van de voegband is om grond- en waterdichtheid te bieden en om een zekere (thermische) vervorming van de constructie op te vangen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Voegband)",
+      "pattern": "^Voegband$"
+    },
+    "materiaalVoegband": {
+      "$ref": "#/components/schemas/KeuzelijstMateriaalVoegband"
+    },
+    "isGeïNjecteerd": {
+      "$ref": "#/components/schemas/Voegband.isGeïNjecteerd"
+    },
+    "isUitwendig": {
+      "$ref": "#/components/schemas/Voegband.isUitwendig"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Voegband.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Voegband.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Voegband.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Voegband.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Voegband.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Voegband.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Voegband.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalVoegband",
+    "isGeïNjecteerd",
+    "isUitwendig",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

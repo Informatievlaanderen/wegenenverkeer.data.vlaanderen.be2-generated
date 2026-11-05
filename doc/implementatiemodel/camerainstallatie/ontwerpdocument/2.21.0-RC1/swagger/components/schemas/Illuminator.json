@@ -1,0 +1,102 @@
+{
+  "title": "Illuminator",
+  "type": "object",
+  "description": "Een verlichtingscomponent gekoppeld aan een camera dat dient om voldoende belichting te bieden voor het detecteren en herkennen van oa. voertuigen,vaak door gebruik van infraroodlicht zodat de flits onzichtbaar is voor het menselijk oog.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Illuminator)",
+      "pattern": "^Illuminator$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/IlluminatorMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/IlluminatorModelnaam"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "Technische fiche van dit element. Bestanden van het type pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "plaatsingsdatum": {
+      "$ref": "#/components/schemas/Illuminator.plaatsingsdatum"
+    },
+    "waarborgperiode": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Illuminator.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Illuminator.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Illuminator.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Illuminator.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Illuminator.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Illuminator.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Illuminator.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Illuminator.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "technischeFiche",
+    "plaatsingsdatum",
+    "waarborgperiode",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

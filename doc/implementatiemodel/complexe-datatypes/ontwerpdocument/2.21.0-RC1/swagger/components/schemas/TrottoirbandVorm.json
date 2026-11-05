@@ -1,0 +1,31 @@
+{
+  "title": "TrottoirbandVorm",
+  "type": "object",
+  "description": "Complex datatype voor de vorm van een trotoirband.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TrottoirbandVorm)",
+      "pattern": "^TrottoirbandVorm$"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "vorm": {
+      "$ref": "#/components/schemas/TrottoirbandVorm"
+    }
+  },
+  "required": [
+    "@type",
+    "breedte",
+    "dikte",
+    "vorm"
+  ]
+}

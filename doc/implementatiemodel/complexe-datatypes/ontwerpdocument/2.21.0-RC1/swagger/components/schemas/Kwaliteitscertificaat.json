@@ -1,0 +1,31 @@
+{
+  "title": "Kwaliteitscertificaat",
+  "type": "object",
+  "description": "Complex datatype voor een rapport waarin vastgelegd wordt dat een apparaat of installatie voldoet aan vooropgestelde kwaliteitseisen. Kan vereist zijn voor de tegenstelbaarheid van het gebruik van het toestel of de installatie in kwestie",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Kwaliteitscertificaat)",
+      "pattern": "^Kwaliteitscertificaat$"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Kwaliteitscertificaat.identificator"
+    },
+    "datumOndertekening": {
+      "$ref": "#/components/schemas/Kwaliteitscertificaat.datumOndertekening"
+    },
+    "document": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "datumOndertekening",
+    "document"
+  ]
+}

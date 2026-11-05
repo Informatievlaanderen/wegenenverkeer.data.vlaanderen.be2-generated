@@ -1,0 +1,109 @@
+{
+  "title": "VerlichtingstoestelNaLP",
+  "type": "object",
+  "description": "Het geheel van de Natrium Lagedruk lamp(NaLP), eventuele voorschakelapparatuur en de behuizing die werden samengesteld met als doel: * de lichtstroom van de lichtbronnen hoofdzakelijk op het te verlichten oppervlak (doorlopende wegsectie, conflictgebied,...) te richten, teneinde de zichtbaarheid te verhogen; * de lichtstroom te beheersen, zodat de weggebruikers niet verblind worden en de lichthinder beperkt wordt; * het optisch systeem, de lichtbronnen en de hulpapparatuur tegen uitwendige invloeden te beschermen",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerlichtingstoestelNaLP)",
+      "pattern": "^VerlichtingstoestelNaLP$"
+    },
+    "lichtpuntHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "systeemvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "heeftAansluitkastGeïNtegreerd": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.heeftAansluitkastGeïNtegreerd"
+    },
+    "stroomkringnummer": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.stroomkringnummer"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VerlichtingstoestelMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VerlichtingstoestelModelnaam"
+    },
+    "inclinatiehoek": {
+      "$ref": "#/components/schemas/VerlichtingstoestelInclinatiehoek"
+    },
+    "verlichtGebied": {
+      "$ref": "#/components/schemas/VerlichtingstoestelVerlichtGebied."
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerlichtingstoestelNaLP.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VerlichtingstoestelNaLP.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/VerlichtingstoestelNaLP.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "lichtpuntHoogte",
+    "systeemvermogen",
+    "heeftAansluitkastGeïNtegreerd",
+    "stroomkringnummer",
+    "merk",
+    "modelnaam",
+    "inclinatiehoek",
+    "verlichtGebied",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

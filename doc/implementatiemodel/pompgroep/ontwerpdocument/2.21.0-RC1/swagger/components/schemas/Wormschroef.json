@@ -1,0 +1,118 @@
+{
+  "title": "Wormschroef",
+  "type": "object",
+  "description": "Een spiraalvormige schroef die toelaat vloeistoffen, sluries, of poeders te transporteren. De schroef, geplaatst in een gesloten of deels open buis, wordt aangedreven en draait rond zijn eigen as. Deze draaiende beweging leidt tot de verplaatsing van het te verplaatsen medium. Wanneer het medium in opwaartse richting getransporteerd wordt spreekt men van een pomp. Wanneer het medium in afwaartse richting beweegt en al doende de schroef doet draaien, spreekt men van een turbine. Wordt ook wel waterschroef, opvoerschroef, vijzelpomp, of een schroef van Archimedes genoemd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wormschroef)",
+      "pattern": "^Wormschroef$"
+    },
+    "isAfgesloten": {
+      "$ref": "#/components/schemas/Wormschroef.isAfgesloten"
+    },
+    "isVisvriendelijk": {
+      "$ref": "#/components/schemas/Wormschroef.isVisvriendelijk"
+    },
+    "opvoerhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "maximaalDebietPomp": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerSeconde"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "maximaalDebietTurbine": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeterPerSeconde"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van een linkend element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Wormschroef.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wormschroef.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Wormschroef.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Wormschroef.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Wormschroef.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Wormschroef.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Wormschroef.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Wormschroef.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "isAfgesloten",
+    "isVisvriendelijk",
+    "opvoerhoogte",
+    "gewicht",
+    "lengte",
+    "maximaalDebietPomp",
+    "diameter",
+    "maximaalDebietTurbine",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad",
+    "naam"
+  ]
+}

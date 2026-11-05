@@ -1,0 +1,35 @@
+{
+  "title": "ToelaatbareSchipsafmetingen",
+  "type": "object",
+  "description": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ToelaatbareSchipsafmetingen)",
+      "pattern": "^ToelaatbareSchipsafmetingen$"
+    },
+    "maximaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "maximaleBreedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "maximaleDiepgang": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "maximaleHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "maximaleLengte",
+    "maximaleBreedte",
+    "maximaleDiepgang",
+    "maximaleHoogte"
+  ]
+}

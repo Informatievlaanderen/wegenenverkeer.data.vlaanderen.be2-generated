@@ -1,0 +1,101 @@
+{
+  "title": "Drukknop",
+  "type": "object",
+  "description": "Drukknoppen zijn de toestellen die opgesteld zijn op kruispunten om de aanwezigheid te melden van voetgangers of fietsers die de rijweg wensen over te steken of voor het aanmelden van openbaar vervoer. De toestellen sturen een geheugenelement (module voor de sturing en visualisatie) in de verkeersregelaar aan, zodanig dat een kortstondig indrukken van de drukknop of kortstondig aanraken van de sensor volstaat opdat de aanvraag tot doorgang blijft gelden tot de doorgang verleend wordt",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Drukknop)",
+      "pattern": "^Drukknop$"
+    },
+    "soortDrukknop": {
+      "$ref": "#/components/schemas/DrukknopSoort"
+    },
+    "bewakingstijd": {
+      "$ref": "#/components/schemas/Tijdsduur"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/DrukknopMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/DrukknopModelnaam"
+    },
+    "voedingsspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "firmwareversie": {
+      "$ref": "#/components/schemas/Drukknop.firmwareversie"
+    },
+    "soortBewaking": {
+      "$ref": "#/components/schemas/VRIBewaking"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Drukknop.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Drukknop.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Drukknop.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Drukknop.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Drukknop.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Drukknop.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Drukknop.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "soortDrukknop",
+    "bewakingstijd",
+    "merk",
+    "modelnaam",
+    "voedingsspanning",
+    "firmwareversie",
+    "soortBewaking",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

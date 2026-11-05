@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKubiekeCentimeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kubieke centimeter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKubiekeCentimeter)",
+      "pattern": "^KwantitatieveWaardeInKubiekeCentimeter$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeCentimeter.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeCentimeter.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

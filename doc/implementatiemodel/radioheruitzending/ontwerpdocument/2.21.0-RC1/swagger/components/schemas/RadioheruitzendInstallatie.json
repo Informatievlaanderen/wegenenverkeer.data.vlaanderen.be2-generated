@@ -1,0 +1,105 @@
+{
+  "title": "RadioheruitzendInstallatie",
+  "type": "object",
+  "description": "Het geheel van ontvangstantenne, infrastructuur en straalkabel of zendantenne om de radiosignalen van radiozenders over FM (88 tot 108 MHz) of DAB (174 tot 230 MHz) uit te zenden op plaatsen, die afgesloten zijn van de buitenwereld, zoals tunnels en ondergrondse parkings.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RadioheruitzendInstallatie)",
+      "pattern": "^RadioheruitzendInstallatie$"
+    },
+    "bevatBreakIn": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.bevatBreakIn"
+    },
+    "bevatASTRID": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.bevatASTRID"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RadioheruitzendinstallatieMerk"
+    },
+    "certificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/RadioheruitzendinstallatieModelnaam"
+    },
+    "systemArchitectureDesignDocument": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RadioheruitzendInstallatie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RadioheruitzendInstallatie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/RadioheruitzendInstallatie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "bevatBreakIn",
+    "bevatASTRID",
+    "merk",
+    "certificaat",
+    "modelnaam",
+    "systemArchitectureDesignDocument",
+    "technischeFiche",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

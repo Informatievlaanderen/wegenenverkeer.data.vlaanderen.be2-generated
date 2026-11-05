@@ -1,0 +1,109 @@
+{
+  "title": "Batterij",
+  "type": "object",
+  "description": "Element bestaande uit meerdere elektrochemische cellen voor het leveren van elektriciteit,die ontstaat door de omzetting van opgeslagen chemische energie in elektrische energie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Batterij)",
+      "pattern": "^Batterij$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/BatterijMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/BatterijModelnaam"
+    },
+    "spanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVolt"
+    },
+    "lading": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpereUur"
+    },
+    "fabricatiedatum": {
+      "$ref": "#/components/schemas/Batterij.fabricatiedatum"
+    },
+    "afmetingen": {
+      "$ref": "#/components/schemas/AfmetingBxhInMillimeter"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/BatterijMateriaal"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Batterij.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Batterij.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Batterij.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Batterij.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Batterij.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Batterij.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Batterij.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Batterij.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Batterij.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "spanning",
+    "lading",
+    "fabricatiedatum",
+    "afmetingen",
+    "materiaal",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand",
+    "naampad"
+  ]
+}

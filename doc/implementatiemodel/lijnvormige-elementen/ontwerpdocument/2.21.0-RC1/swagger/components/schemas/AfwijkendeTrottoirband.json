@@ -1,0 +1,132 @@
+{
+  "title": "AfwijkendeTrottoirband",
+  "type": "object",
+  "description": "Afwijkende kantopsluiting,bestemd om de rand van de verharding te beschermen en te versterken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfwijkendeTrottoirband)",
+      "pattern": "^AfwijkendeTrottoirband$"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "technischeFicheAfwijking": {
+      "type": "array",
+      "description": "De technische fiche van de afwijkende kantopsluiting. Attribuut uit gebruik sinds versie 2.9.0-RC3 .Bestanden van het type xlsx of pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "heeftOppervlaktebehandeling": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.heeftOppervlaktebehandeling"
+    },
+    "isGeprefabriceerd": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.isGeprefabriceerd"
+    },
+    "krimpvoeg": {
+      "$ref": "#/components/schemas/Krimpvoeg"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KantopsluitingKleur"
+    },
+    "leveringsbon": {
+      "type": "array",
+      "description": "Een bon die informatie bevat zoals : tijdstip aanmaak van het mengsel, tijdstip begin lossen van het mengsel, toevoegingen aan het mengsel, eventuele opmerkingen, vrachtgegevens (chauffeur, kentekenplaat, naam van de werf, ...) Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "soort": {
+      "$ref": "#/components/schemas/KantopsluitingSoort"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/AfwijkendeTrottoirband.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/AfwijkendeTrottoirband.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/AfwijkendeTrottoirband.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    }
+  },
+  "required": [
+    "@type",
+    "breedte",
+    "technischeFicheAfwijking",
+    "dikte",
+    "heeftOppervlaktebehandeling",
+    "isGeprefabriceerd",
+    "krimpvoeg",
+    "lengte",
+    "kleur",
+    "leveringsbon",
+    "soort",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "productidentificatiecode"
+  ]
+}

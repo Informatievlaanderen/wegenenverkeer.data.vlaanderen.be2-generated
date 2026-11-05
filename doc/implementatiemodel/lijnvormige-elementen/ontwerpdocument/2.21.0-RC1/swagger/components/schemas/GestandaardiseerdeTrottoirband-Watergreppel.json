@@ -1,0 +1,131 @@
+{
+  "title": "GestandaardiseerdeTrottoirband-Watergreppel",
+  "type": "object",
+  "description": "Gestandaardiseerde kantopsluiting, die een trottoirband en een watergreppel combineert in een geheel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GestandaardiseerdeTrottoirband-Watergreppel)",
+      "pattern": "^GestandaardiseerdeTrottoirband-Watergreppel$"
+    },
+    "norm": {
+      "$ref": "#/components/schemas/NormVanHetLijnvormigElement"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TrottoirbandWatergreppelType"
+    },
+    "vorm": {
+      "$ref": "#/components/schemas/TrottoirbandVorm"
+    },
+    "fabricagelengte": {
+      "$ref": "#/components/schemas/StandaardFrabricageLengte"
+    },
+    "bijkomendeParameter": {
+      "$ref": "#/components/schemas/KantopsluitingBijkomendeParameter"
+    },
+    "isGeprefabriceerd": {
+      "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.isGeprefabriceerd"
+    },
+    "krimpvoeg": {
+      "$ref": "#/components/schemas/Krimpvoeg"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/KantopsluitingKleur"
+    },
+    "leveringsbon": {
+      "type": "array",
+      "description": "Een bon die informatie bevat zoals : tijdstip aanmaak van het mengsel, tijdstip begin lossen van het mengsel, toevoegingen aan het mengsel, eventuele opmerkingen, vrachtgegevens (chauffeur, kentekenplaat, naam van de werf, ...) Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "soort": {
+      "$ref": "#/components/schemas/KantopsluitingSoort"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/GestandaardiseerdeTrottoirband-Watergreppel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    }
+  },
+  "required": [
+    "@type",
+    "norm",
+    "type",
+    "vorm",
+    "fabricagelengte",
+    "bijkomendeParameter",
+    "isGeprefabriceerd",
+    "krimpvoeg",
+    "lengte",
+    "kleur",
+    "leveringsbon",
+    "soort",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "productidentificatiecode"
+  ]
+}

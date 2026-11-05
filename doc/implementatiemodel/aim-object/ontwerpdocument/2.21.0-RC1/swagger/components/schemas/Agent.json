@@ -1,0 +1,44 @@
+{
+  "title": "Agent",
+  "type": "object",
+  "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Agent)",
+      "pattern": "^Agent$"
+    },
+    "agentIdentificatie": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "contactinfo": {
+      "type": "array",
+      "description": "Algemene contactgegevens voor de agent. Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Agent.naam"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Agent.isActief"
+    }
+  },
+  "required": [
+    "@type",
+    "agentIdentificatie",
+    "contactinfo",
+    "naam",
+    "asset-Versie",
+    "isActief"
+  ]
+}

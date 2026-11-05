@@ -1,0 +1,90 @@
+{
+  "title": "Halsbeugelpen",
+  "type": "object",
+  "description": "Een onderdeel van het halsbeugelmechanisme dat is geïntegreerd in de sluisdeur. Deze pen fungeert als draaipunt voor de bewegingen van de deur. Rondom de pen zijn het lagerelement en het halsbeugeloog geplaatst, die de beweging ondersteunen en eventueel reguleren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Halsbeugelpen)",
+      "pattern": "^Halsbeugelpen$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Halsbeugelpen.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Halsbeugelpen.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Halsbeugelpen.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Halsbeugelpen.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Halsbeugelpen.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Halsbeugelpen.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Halsbeugelpen.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "technischDocument": {
+      "type": "array",
+      "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
+      "items": {
+        "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
+      },
+      "minItems": 1
+    },
+    "soortStaal": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "staalsoorten": {
+      "$ref": "#/components/schemas/StaalsoortMetEquivalenten"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "technischDocument",
+    "soortStaal",
+    "staalsoorten"
+  ]
+}

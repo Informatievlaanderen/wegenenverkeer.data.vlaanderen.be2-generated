@@ -13,34 +13,10 @@
       "pattern": "^KwantitatieveWaardeInMaand$"
     },
     "waarde": {
-      "type": "object",
-      "description": "Bevat een getal die bij het datatype hoort.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^NonNegativeInteger$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
     },
     "standaardEenheid": {
-      "type": "object",
-      "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
     }
   },
   "required": [

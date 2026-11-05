@@ -1,0 +1,23 @@
+{
+  "title": "AfmetingDiameterInMillimeter",
+  "type": "object",
+  "description": "Complex datatype voor de afmeting van een diameter in millimeter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfmetingDiameterInMillimeter)",
+      "pattern": "^AfmetingDiameterInMillimeter$"
+    },
+    "diameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "diameter"
+  ]
+}

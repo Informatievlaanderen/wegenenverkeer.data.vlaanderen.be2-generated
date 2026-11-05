@@ -1,0 +1,162 @@
+{
+  "title": "DynamischZone30Bord",
+  "type": "object",
+  "description": "Dynamisch verkeersbord dat verkeerstekens voor een zone 30 kan weergeven.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DynamischZone30Bord)",
+      "pattern": "^DynamischZone30Bord$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/Z30Merk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/Z30Modelnaam"
+    },
+    "langsGenummerdeWeg": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.langsGenummerdeWeg"
+    },
+    "isInverse": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.isInverse"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.serienummer"
+    },
+    "heeftDeurcontact": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.heeftDeurcontact"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "logischeGroepVerkeerscentrum": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.logischeGroepVerkeerscentrum"
+    },
+    "communicatieprotocol": {
+      "$ref": "#/components/schemas/LEDBordCommunicatieprotocol"
+    },
+    "protocol": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.protocol"
+    },
+    "versie": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.versie"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.dNSNaam"
+    },
+    "aantalLichtsensoren": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.aantalLichtsensoren"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DynamischZone30Bord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DynamischZone30Bord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/DynamischZone30Bord.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "langsGenummerdeWeg",
+    "isInverse",
+    "serienummer",
+    "heeftDeurcontact",
+    "ipAdres",
+    "technischeFiche",
+    "logischeGroepVerkeerscentrum",
+    "communicatieprotocol",
+    "protocol",
+    "versie",
+    "dNSNaam",
+    "aantalLichtsensoren",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte",
+    "naampad"
+  ]
+}

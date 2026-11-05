@@ -1,0 +1,97 @@
+{
+  "title": "Calamiteitendoorsteek",
+  "type": "object",
+  "description": "Een calamiteitendoorsteek,afgekort CADO,is een mechanische constructie voor het opklappen van een deel van de vangrail in de middenberm van een weg. Het primaire doel van de calamiteitendoorsteek is het doorlaten van hulpverleningsvoertuigen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Calamiteitendoorsteek)",
+      "pattern": "^Calamiteitendoorsteek$"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/CalamiteitendoorsteekModelnaam"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/CalamiteitendoorsteekMerk"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "isDubbelarmig": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.isDubbelarmig"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Calamiteitendoorsteek.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Calamiteitendoorsteek.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Calamiteitendoorsteek.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "lengte",
+    "modelnaam",
+    "merk",
+    "technischeFiche",
+    "isDubbelarmig",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

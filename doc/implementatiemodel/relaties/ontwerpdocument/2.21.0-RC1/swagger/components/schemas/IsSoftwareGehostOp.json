@@ -1,0 +1,43 @@
+{
+  "title": "IsSoftwareGehostOp",
+  "type": "object",
+  "description": "Deze relatie legt de link tussen een software en hardware onderdeel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse IsSoftwareGehostOp)",
+      "pattern": "^IsSoftwareGehostOp$"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/IsSoftwareGehostOp.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/IsSoftwareGehostOp.isActief"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

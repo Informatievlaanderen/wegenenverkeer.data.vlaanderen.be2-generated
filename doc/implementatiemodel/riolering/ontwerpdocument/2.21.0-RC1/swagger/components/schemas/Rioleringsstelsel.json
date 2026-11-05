@@ -1,0 +1,89 @@
+{
+  "title": "Rioleringsstelsel",
+  "type": "object",
+  "description": "De groepering van de objecten die behoren tot het riolering,aanvoer- of afvoerstelsel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Rioleringsstelsel)",
+      "pattern": "^Rioleringsstelsel$"
+    },
+    "functie": {
+      "$ref": "#/components/schemas/FunctieVanRioleringsstelsel"
+    },
+    "systeemtype": {
+      "$ref": "#/components/schemas/RioleringStelsel"
+    },
+    "rioleringsstelsel": {
+      "$ref": "#/components/schemas/RioleringStelsel"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Rioleringsstelsel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Rioleringsstelsel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Rioleringsstelsel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "functie",
+    "systeemtype",
+    "rioleringsstelsel",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

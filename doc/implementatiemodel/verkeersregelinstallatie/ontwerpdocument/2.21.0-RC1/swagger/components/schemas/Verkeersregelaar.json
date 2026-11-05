@@ -1,0 +1,167 @@
+{
+  "title": "Verkeersregelaar",
+  "type": "object",
+  "description": "Een verkeersregelaar is een programmeerbaar toestel dat de verkeerslichten op kruispunten kan regelen overeenkomstig een goedgekeurd verkeersplan. Een verkeersregelaar is bedoeld om het verkeer verkeersafhankelijk te sturen overeenkomstig het gedetecteerde verkeer. Verkeersregelaars kunnen op zichzelf werken of in groep ingeschakeld worden, zodoende op een gecoördineerde wijze de verkeersstromen te verwerken. Eveneens detecteert een verkeersregelaar defecte onderdelen, van zichzelf of van aangesloten installaties. Afhankelijk van het soort defect stuurt een verkeersregelaar een code uit opdat het euvel hersteld kan worden. Bij welbepaalde defecten worden verkeerslichten uitgeschakeld of op knipperstand gezet. Volgende documenten zijn specifiek van toepassing voor verkeersregelaars: *Koninklijk Besluit van 01.12.1975 (wegcode), aangevuld met alle officiële documenten hierover gepubliceerd; *NBN EN 12675:2000 (Verkeersregelapparaten - Functionele veiligheidseisen); *NBN EN 50556:2011 (Signalisatie voor wegverkeer; *NBN EN 12368:2006 (Verkeersregelinstallaties - Verkeerslantaars); *NBN EN 50293:2012 (Verkeersregelinstallaties - Elektromagnetische compatibiliteit)",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersregelaar)",
+      "pattern": "^Verkeersregelaar$"
+    },
+    "communicatiewijze": {
+      "$ref": "#/components/schemas/VRI-Communicatieprotocol"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/Verkeersregelaar.dNSNaam"
+    },
+    "regelaartype": {
+      "$ref": "#/components/schemas/RegelaarRegelaartype"
+    },
+    "ipv4Adres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "programmeertool": {
+      "$ref": "#/components/schemas/Verkeersregelaar.programmeertool"
+    },
+    "externeReferentie": {
+      "type": "array",
+      "description": "Referentie zoals gekend bij een externe partij bv. aannemer, VLCC, ... Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "voltageLampen": {
+      "$ref": "#/components/schemas/VerkeersregelaarVoltage"
+    },
+    "coöRdinatiewijze": {
+      "type": "array",
+      "description": "Wijze waarop de coördinatie is opgezet en de eventuele rol die de verkeersregelaar hierin speelt. Lijst van VerkeersregelaarCoordinatiewijze items.",
+      "items": {
+        "$ref": "#/components/schemas/VerkeersregelaarCoordinatiewijze"
+      },
+      "minItems": 1
+    },
+    "merk": {
+      "$ref": "#/components/schemas/VerkeersregelaarMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/VerkeersregelaarModelnaam"
+    },
+    "heeftSD-Kaart": {
+      "$ref": "#/components/schemas/Verkeersregelaar.heeftSD-Kaart"
+    },
+    "simkaartnummer": {
+      "$ref": "#/components/schemas/Verkeersregelaar.simkaartnummer"
+    },
+    "typeDisplay": {
+      "$ref": "#/components/schemas/VerkeersregelaarDisplayType"
+    },
+    "heeftHandbediening": {
+      "$ref": "#/components/schemas/Verkeersregelaar.heeftHandbediening"
+    },
+    "kabelaansluitschema": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "simkaarttype": {
+      "$ref": "#/components/schemas/Simkaarttype"
+    },
+    "mobieleNetwerktechnologie": {
+      "$ref": "#/components/schemas/MobieleNetwerktechologie"
+    },
+    "technischeDocumentatie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "vplanNummer": {
+      "$ref": "#/components/schemas/Verkeersregelaar.vplanNummer"
+    },
+    "vplanDatum": {
+      "$ref": "#/components/schemas/Verkeersregelaar.vplanDatum"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Verkeersregelaar.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Verkeersregelaar.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Verkeersregelaar.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersregelaar.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Verkeersregelaar.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersregelaar.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Verkeersregelaar.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Verkeersregelaar.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "communicatiewijze",
+    "dNSNaam",
+    "regelaartype",
+    "ipv4Adres",
+    "programmeertool",
+    "externeReferentie",
+    "voltageLampen",
+    "coöRdinatiewijze",
+    "merk",
+    "modelnaam",
+    "heeftSD-Kaart",
+    "simkaartnummer",
+    "typeDisplay",
+    "heeftHandbediening",
+    "kabelaansluitschema",
+    "simkaarttype",
+    "mobieleNetwerktechnologie",
+    "technischeDocumentatie",
+    "vplanNummer",
+    "vplanDatum",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

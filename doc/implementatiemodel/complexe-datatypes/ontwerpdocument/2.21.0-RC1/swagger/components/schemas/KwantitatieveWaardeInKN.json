@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKN",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in KiloNewton uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKN)",
+      "pattern": "^KwantitatieveWaardeInKN$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

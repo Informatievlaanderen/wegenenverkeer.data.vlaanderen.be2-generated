@@ -1,0 +1,89 @@
+{
+  "title": "Batterijlader",
+  "type": "object",
+  "description": "Een aparte permanente lader die een batterij oplaadt. Deze wordt ook wel een druppelaar of druppellader genoemd. Doorgaans wordt de batterij opgeladen door gebruik te maken van de netvoeding.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Batterijlader)",
+      "pattern": "^Batterijlader$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenBatterijladers"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenBatterijladers"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Batterijlader.serienummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Batterijlader.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Batterijlader.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Batterijlader.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Batterijlader.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Batterijlader.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Batterijlader.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Batterijlader.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Batterijlader.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "serienummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "title": "ElektrischeKeuring",
+  "type": "object",
+  "description": "Een formele controle en beoordeling waarbij wordt nagegaan of de elektrische installatie voldoet aan de geldende wettelijke,normatieve en veiligheidsvereisten,met als doel de elektrische veiligheid en conformiteit te waarborgen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ElektrischeKeuring)",
+      "pattern": "^ElektrischeKeuring$"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Keuringsresultaat"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.geldigTot"
+    },
+    "keuringstype": {
+      "$ref": "#/components/schemas/KeuringstypeElektrisch"
+    },
+    "keuringsdatum": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.keuringsdatum"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/ElektrischeKeuring.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "resultaat",
+    "geldigTot",
+    "keuringstype",
+    "keuringsdatum",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Geleideconstructie",
+  "type": "object",
+  "description": "Een doorlopende afschermende constructie voor voertuigen geïnstalleerd langs de weg of in de middenberm.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Geleideconstructie)",
+      "pattern": "^Geleideconstructie$"
+    },
+    "isVerwijderbaar": {
+      "$ref": "#/components/schemas/Geleideconstructie.isVerwijderbaar"
+    },
+    "werkingsbreedte": {
+      "$ref": "#/components/schemas/Werkingsbreedte"
+    },
+    "totaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "testrapport": {
+      "type": "array",
+      "description": "De testresultaten van een afschermende constructie. Attribuut uit gebruik sinds versie 2.0.0-RC3 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "certificaathouder": {
+      "$ref": "#/components/schemas/Geleideconstructie.certificaathouder"
+    },
+    "productnaam": {
+      "$ref": "#/components/schemas/Geleideconstructie.productnaam"
+    },
+    "metTand-Groef": {
+      "$ref": "#/components/schemas/Geleideconstructie.metTand-Groef"
+    },
+    "uitvoeringscertificatie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "video": {
+      "type": "array",
+      "description": "Video van de testen op afschermende constructies. Attribuut uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode"
+    },
+    "isPermanent": {
+      "$ref": "#/components/schemas/Geleideconstructie.isPermanent"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalAfschermendeConstructie"
+    },
+    "videoVoertuigkering": {
+      "type": "array",
+      "description": "Video-opname van de crashtesten op de voertuigkerende constructie. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "testrapportVoertuigkering": {
+      "type": "array",
+      "description": "De testresultaten van de crashtesten die op de voertuigkerende constructie uitgevoerd zijn. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Geleideconstructie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Geleideconstructie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Geleideconstructie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Geleideconstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Geleideconstructie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Geleideconstructie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "kerendVermogen": {
+      "$ref": "#/components/schemas/KerendVermogen"
+    },
+    "voertuigOverhelling": {
+      "$ref": "#/components/schemas/VoertuigOverhelling"
+    },
+    "schokindex": {
+      "$ref": "#/components/schemas/Schokindex"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Geleideconstructie.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Geleideconstructie.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "isVerwijderbaar",
+    "werkingsbreedte",
+    "totaleLengte",
+    "testrapport",
+    "certificaathouder",
+    "productnaam",
+    "metTand-Groef",
+    "uitvoeringscertificatie",
+    "video",
+    "productidentificatiecode",
+    "isPermanent",
+    "materiaal",
+    "videoVoertuigkering",
+    "testrapportVoertuigkering",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "kerendVermogen",
+    "voertuigOverhelling",
+    "schokindex",
+    "naampad",
+    "naam"
+  ]
+}

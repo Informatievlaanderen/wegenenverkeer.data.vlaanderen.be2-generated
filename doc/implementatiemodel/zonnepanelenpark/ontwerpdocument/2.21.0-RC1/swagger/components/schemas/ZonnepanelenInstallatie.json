@@ -1,0 +1,81 @@
+{
+  "title": "ZonnepanelenInstallatie",
+  "type": "object",
+  "description": "Een technische installatie die bestaat uit zonnepanelen, elektrische bekabeling, omvormers en ondersteunende infrastructuur, en die tot doel heeft om door middel van fotovoltaïsche omzetting gelijkstroom te produceren en deze, via energieomzetting en beveiligingscomponenten, bruikbaar te maken voor lokaal verbruik of injectie op het elektriciteitsnet.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ZonnepanelenInstallatie)",
+      "pattern": "^ZonnepanelenInstallatie$"
+    },
+    "totaalAantalZonnepanelen": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.totaalAantalZonnepanelen"
+    },
+    "linkDashboard": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.linkDashboard"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ZonnepanelenInstallatie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ZonnepanelenInstallatie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/ZonnepanelenInstallatie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "totaalAantalZonnepanelen",
+    "linkDashboard",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

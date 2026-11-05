@@ -1,0 +1,98 @@
+{
+  "title": "Hydrant",
+  "type": "object",
+  "description": "Aftappunt van de brandleiding bedoeld voor de brandweer. Ook brandkraan genoemd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Hydrant)",
+      "pattern": "^Hydrant$"
+    },
+    "koppeling": {
+      "$ref": "#/components/schemas/HydrantKoppeling"
+    },
+    "diameter": {
+      "type": "array",
+      "description": "Diameter van het aftappunt. Lijst van KwantitatieveWaardeInInch items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInInch"
+      },
+      "minItems": 1
+    },
+    "heeftEigenAfsluitkraan": {
+      "$ref": "#/components/schemas/Hydrant.heeftEigenAfsluitkraan"
+    },
+    "heeftIsolatie": {
+      "$ref": "#/components/schemas/Hydrant.heeftIsolatie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Hydrant.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Hydrant.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Hydrant.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Hydrant.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Hydrant.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Hydrant.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Hydrant.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Hydrant.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "koppeling",
+    "diameter",
+    "heeftEigenAfsluitkraan",
+    "heeftIsolatie",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

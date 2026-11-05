@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKilovoltampèRe",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kilovoltampère uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKilovoltampèRe)",
+      "pattern": "^KwantitatieveWaardeInKilovoltampèRe$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilovoltampèRe.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilovoltampèRe.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

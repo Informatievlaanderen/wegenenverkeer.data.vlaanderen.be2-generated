@@ -1,0 +1,31 @@
+{
+  "title": "Krimpvoeg",
+  "type": "object",
+  "description": "Complex datatype voor de informatie van de krimpvoegen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Krimpvoeg)",
+      "pattern": "^Krimpvoeg$"
+    },
+    "lengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "krimpvoegvulling": {
+      "$ref": "#/components/schemas/Krimvoegvulling"
+    },
+    "krimpvoegFrequentie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "lengte",
+    "krimpvoegvulling",
+    "krimpvoegFrequentie"
+  ]
+}

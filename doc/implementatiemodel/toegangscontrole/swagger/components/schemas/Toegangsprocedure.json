@@ -17,7 +17,7 @@
     },
     "typeSleutel": {
       "type": "array",
-      "description": "Lijst van TypeSleutel items.",
+      "description": "Het soort sleutel dat wordt gebruikt om toegang te verkrijgen. Lijst van TypeSleutel items.",
       "items": {
         "$ref": "#/components/schemas/TypeSleutel"
       },
@@ -25,52 +25,24 @@
     },
     "typeBadge": {
       "type": "array",
-      "description": "Lijst van TypeBadge items.",
+      "description": "Het soort badge dat wordt gebruikt om toegang te verkijgen. Lijst van TypeBadge items.",
       "items": {
         "$ref": "#/components/schemas/TypeBadge"
       },
       "minItems": 1
     },
     "naam": {
-      "type": "object",
-      "description": "De naam van de toegangsprocedure.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Toegangsprocedure.naam"
     },
     "omschrijving": {
-      "type": "object",
-      "description": "Een uitgebreide toelichting die beschrijft hoe de toegangsprocedure gebruikt kan worden.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Toegangsprocedure.omschrijving"
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Toegangsprocedure.typeURI"
     },
     "aandachtspunt": {
       "type": "array",
-      "description": "Lijst van ToegangsprocedureAandachtspunt items.",
+      "description": "Aandachtspunten waar men rekening mee moet houden, die een impact hebben op de toegankelijkheid van een object. Lijst van ToegangsprocedureAandachtspunt items.",
       "items": {
         "$ref": "#/components/schemas/ToegangsprocedureAandachtspunt"
       },
@@ -78,7 +50,7 @@
     },
     "toegangstijden": {
       "type": "array",
-      "description": "Lijst van Toegangstijden items.",
+      "description": "De dagen/uren van de dag waarop de procedure geldt. Lijst van Toegangstijden items.",
       "items": {
         "$ref": "#/components/schemas/Toegangstijden"
       },
@@ -86,28 +58,14 @@
     },
     "bijlage": {
       "type": "array",
-      "description": "Lijst van BijlageToegangsprocedure items.",
+      "description": "Bijlages, onder de vorm van een beschrijving en/of een document en/of een URL, die aanvullende informatie bevatten over de toegangsprocedure. Lijst van BijlageToegangsprocedure items.",
       "items": {
         "$ref": "#/components/schemas/BijlageToegangsprocedure"
       },
       "minItems": 1
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Toegangsprocedure.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

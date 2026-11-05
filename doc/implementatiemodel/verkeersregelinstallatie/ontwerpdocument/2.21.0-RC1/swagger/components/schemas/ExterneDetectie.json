@@ -1,0 +1,97 @@
+{
+  "title": "ExterneDetectie",
+  "type": "object",
+  "description": "Inputsignalen bv. van een brug of een overweg, die door een externe partij doorgegeven worden teneinde de verkeersregelaar aan te sturen. Dit object wordt niet gebruikt voor eigen lussen van een ander kruispunt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ExterneDetectie)",
+      "pattern": "^ExterneDetectie$"
+    },
+    "aangeslotenToestel": {
+      "$ref": "#/components/schemas/ExternedetectieAangeslotentoestel"
+    },
+    "heeftHandshaking": {
+      "$ref": "#/components/schemas/ExterneDetectie.heeftHandshaking"
+    },
+    "contactpersoon": {
+      "$ref": "#/components/schemas/NatuurlijkPersoon"
+    },
+    "communicatiewijze": {
+      "$ref": "#/components/schemas/ExternedetectieCommunicatiewijze"
+    },
+    "eigenaar": {
+      "$ref": "#/components/schemas/Rechtspersoon"
+    },
+    "soortBewaking": {
+      "$ref": "#/components/schemas/VRIBewaking"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/ExterneDetectie.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/ExterneDetectie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneDetectie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/ExterneDetectie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneDetectie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/ExterneDetectie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/ExterneDetectie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "aangeslotenToestel",
+    "heeftHandshaking",
+    "contactpersoon",
+    "communicatiewijze",
+    "eigenaar",
+    "soortBewaking",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "title": "DNBLaagspanning",
+  "type": "object",
+  "description": "Aansluiting op het laagspanningsnet van de distributienetbeheerder.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DNBLaagspanning)",
+      "pattern": "^DNBLaagspanning$"
+    },
+    "aansluitvermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilovoltampèRe"
+    },
+    "adresVolgensDNB": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "eanNummer": {
+      "$ref": "#/components/schemas/DNBLaagspanning.eanNummer"
+    },
+    "energieleverancier": {
+      "$ref": "#/components/schemas/Rechtspersoon"
+    },
+    "netbeheerder": {
+      "$ref": "#/components/schemas/Rechtspersoon"
+    },
+    "datumOprichting": {
+      "$ref": "#/components/schemas/DNBLaagspanning.datumOprichting"
+    },
+    "risicoAnalyse": {
+      "type": "array",
+      "description": "Document met de risicoanalyse. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "datumEnergieleveringscontract": {
+      "$ref": "#/components/schemas/DNBLaagspanning.datumEnergieleveringscontract"
+    },
+    "datumStartEnergielevering": {
+      "$ref": "#/components/schemas/DNBLaagspanning.datumStartEnergielevering"
+    },
+    "referentieDistributienetbeheerder": {
+      "$ref": "#/components/schemas/DNBLaagspanning.referentieDistributienetbeheerder"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/DNBLaagspanning.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/DNBLaagspanning.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DNBLaagspanning.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/DNBLaagspanning.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/DNBLaagspanning.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/DNBLaagspanning.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/DNBLaagspanning.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/DNBLaagspanning.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "aansluitvermogen",
+    "adresVolgensDNB",
+    "eanNummer",
+    "energieleverancier",
+    "netbeheerder",
+    "datumOprichting",
+    "risicoAnalyse",
+    "datumEnergieleveringscontract",
+    "datumStartEnergielevering",
+    "referentieDistributienetbeheerder",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

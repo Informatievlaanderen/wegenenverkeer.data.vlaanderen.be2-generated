@@ -1,0 +1,93 @@
+{
+  "title": "Noodstopknop",
+  "type": "object",
+  "description": "Een knop waarmee de werking van een machine of installatie koste wat het koste onmiddellijk stilgelegd wordt. Ook noodstopschakelaar genoemd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Noodstopknop)",
+      "pattern": "^Noodstopknop$"
+    },
+    "uitvoering": {
+      "$ref": "#/components/schemas/NoodstopknopUitvoering"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/NoodstopknopMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/NoodstopknopModelnaam"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Noodstopknop.componentnummer"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Noodstopknop.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Noodstopknop.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Noodstopknop.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Noodstopknop.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Noodstopknop.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Noodstopknop.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Noodstopknop.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Noodstopknop.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "uitvoering",
+    "merk",
+    "modelnaam",
+    "componentnummer",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

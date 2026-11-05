@@ -1,0 +1,97 @@
+{
+  "title": "LED-Driver",
+  "type": "object",
+  "description": "Een LED-driver is een elektronisch toestel dat de stroomtoevoer naar de LED's dimensioneert om de goede werking te verzekeren. Via de instelparameters van de driver kan uiteindelijk de lichtsterkte van de LED verlichting aangepast worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LED-Driver)",
+      "pattern": "^LED-Driver$"
+    },
+    "maximaleAanstuurstroom": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMilliampèRe"
+    },
+    "maximaalVermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "protocol": {
+      "$ref": "#/components/schemas/LEDStuurprotocol"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/LED-DriverMerk"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/LED-DriverModelnaam"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/LED-Driver.serienummer"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/LED-Driver.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/LED-Driver.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/LED-Driver.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/LED-Driver.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/LED-Driver.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/LED-Driver.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/LED-Driver.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "maximaleAanstuurstroom",
+    "maximaalVermogen",
+    "protocol",
+    "merk",
+    "modelnaam",
+    "serienummer",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

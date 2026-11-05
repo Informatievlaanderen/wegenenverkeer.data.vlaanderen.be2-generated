@@ -1,0 +1,157 @@
+{
+  "title": "Seinbrug",
+  "type": "object",
+  "description": "Metalen constructie bestaande uit twee of meer verticale steunen met voetplaat en uit een enkele of een dubbel uitgevoerde horizontale dwarsverbinding,allen kokervormig met rechthoekige doorsnede.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Seinbrug)",
+      "pattern": "^Seinbrug$"
+    },
+    "overspanning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "vrijeHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "type": {
+      "$ref": "#/components/schemas/SeinbrugType"
+    },
+    "hoogteVerticaleSteun": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "aantalLadders": {
+      "$ref": "#/components/schemas/Seinbrug.aantalLadders"
+    },
+    "heeftLooproosters": {
+      "$ref": "#/components/schemas/Seinbrug.heeftLooproosters"
+    },
+    "aantalLiggers": {
+      "$ref": "#/components/schemas/Seinbrug.aantalLiggers"
+    },
+    "aantalSteunen": {
+      "$ref": "#/components/schemas/Seinbrug.aantalSteunen"
+    },
+    "rijrichting": {
+      "$ref": "#/components/schemas/SeinbrugRijrichting"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "berekeningsnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "controlemetingEBS": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "beschermlaag": {
+      "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+    },
+    "bijzonderTransport": {
+      "$ref": "#/components/schemas/DraagconstructieBijzonderTransport"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "kleurStandaard": {
+      "$ref": "#/components/schemas/KleurStandaard"
+    },
+    "beschermendeLaag": {
+      "$ref": "#/components/schemas/BeschermendeLaag"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/Seinbrug.fabrikant"
+    },
+    "hoogteBovenkant": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Seinbrug.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Seinbrug.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Seinbrug.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Seinbrug.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Seinbrug.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Seinbrug.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Seinbrug.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "elektrischeBeveiliging": {
+      "$ref": "#/components/schemas/EM-DraagconstructieElektrischeBeveiliging"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Seinbrug.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "overspanning",
+    "vrijeHoogte",
+    "type",
+    "hoogteVerticaleSteun",
+    "aantalLadders",
+    "heeftLooproosters",
+    "aantalLiggers",
+    "aantalSteunen",
+    "rijrichting",
+    "technischeFiche",
+    "berekeningsnota",
+    "controlemetingEBS",
+    "beschermlaag",
+    "bijzonderTransport",
+    "kleur",
+    "kleurStandaard",
+    "beschermendeLaag",
+    "fabrikant",
+    "hoogteBovenkant",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "elektrischeBeveiliging",
+    "naampad"
+  ]
+}

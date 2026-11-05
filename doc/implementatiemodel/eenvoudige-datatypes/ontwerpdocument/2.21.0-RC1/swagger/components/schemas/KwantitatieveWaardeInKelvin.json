@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKelvin",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in Kelvin uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKelvin)",
+      "pattern": "^KwantitatieveWaardeInKelvin$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKelvin.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKelvin.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

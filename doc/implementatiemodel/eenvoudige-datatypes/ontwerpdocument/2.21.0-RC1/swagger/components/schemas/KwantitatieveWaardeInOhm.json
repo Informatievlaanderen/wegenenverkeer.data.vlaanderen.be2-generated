@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInOhm",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in ohm.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInOhm)",
+      "pattern": "^KwantitatieveWaardeInOhm$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInOhm.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInOhm.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

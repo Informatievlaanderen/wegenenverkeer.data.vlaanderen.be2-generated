@@ -1,0 +1,145 @@
+{
+  "title": "StalenBuispaal",
+  "type": "object",
+  "description": "Volledig op lengte gelast element,meestal door middel van rondnaden,eventueel met inbegrip van de slotprofielen,die door middel van heien of pulsen op diepte wordt gebracht en nadien wordt opgevuld.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StalenBuispaal)",
+      "pattern": "^StalenBuispaal$"
+    },
+    "staalspecificaties": {
+      "$ref": "#/components/schemas/Staalspecificaties"
+    },
+    "inbrengmethode": {
+      "$ref": "#/components/schemas/Inbrengmethode"
+    },
+    "heeftPropvorming": {
+      "$ref": "#/components/schemas/StalenBuispaal.heeftPropvorming"
+    },
+    "isSlotAanwezig": {
+      "$ref": "#/components/schemas/StalenBuispaal.isSlotAanwezig"
+    },
+    "aanzetpeilSlot": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "inbrenglengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "leveringsgewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "afkap-OfBovenpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "dwarsafmetingen": {
+      "$ref": "#/components/schemas/Dwarsafmetingen"
+    },
+    "paallengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "hellings-OfSchoorhoek": {
+      "$ref": "#/components/schemas/Hellings-OfSchoorhoek"
+    },
+    "aanzetpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/StalenBuispaal.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/StalenBuispaal.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenBuispaal.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/StalenBuispaal.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenBuispaal.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/StalenBuispaal.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/StalenBuispaal.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "drukdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "drukdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInUitersteGrenstoestand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "trekdraagvermogenInGebruiksgrenstoestanden": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+    },
+    "ontwerpnota": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    }
+  },
+  "required": [
+    "@type",
+    "staalspecificaties",
+    "inbrengmethode",
+    "heeftPropvorming",
+    "isSlotAanwezig",
+    "aanzetpeilSlot",
+    "inbrenglengte",
+    "leveringsgewicht",
+    "afkap-OfBovenpeil",
+    "dwarsafmetingen",
+    "paallengte",
+    "hellings-OfSchoorhoek",
+    "aanzetpeil",
+    "hoogte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "drukdraagvermogenInUitersteGrenstoestand",
+    "drukdraagvermogenInGebruiksgrenstoestanden",
+    "trekdraagvermogenInUitersteGrenstoestand",
+    "trekdraagvermogenInGebruiksgrenstoestanden",
+    "ontwerpnota"
+  ]
+}

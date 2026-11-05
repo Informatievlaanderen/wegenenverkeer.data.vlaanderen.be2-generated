@@ -1,0 +1,179 @@
+{
+  "title": "GeluidswerendeConstructie",
+  "type": "object",
+  "description": "Een geluidswerende wandvormige constructie bestaande uit een desgevallend geluidsisolerend materiaal en/of geluidsabsorberend materiaal en voorzien van de nodige structuren om de bouwkundige stabiliteit te verzekeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeluidswerendeConstructie)",
+      "pattern": "^GeluidswerendeConstructie$"
+    },
+    "schermtype": {
+      "type": "array",
+      "description": "Bepaling van een vlak of niet-vlak scherm. Een vlak scherm zijn alle schermtypes die getest kunnen worden volgens de normen NBN EN 1793-1 NBN EN 1793-2.\nDe niet-vlakke schermen zijn de schermen die niet kunnen getest worden volgens de normen NBN EN 1793-1 NBN EN 1793-2. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van Schermtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Schermtype"
+      },
+      "minItems": 1
+    },
+    "totaleLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "schermelement": {
+      "type": "array",
+      "description": "Het type van schermelement. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van SchermelementType items.",
+      "items": {
+        "$ref": "#/components/schemas/SchermelementType"
+      },
+      "minItems": 1
+    },
+    "windbelasting": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKNPerVierkanteMeter"
+    },
+    "kleur": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "materiaalKarakteristiek": {
+      "type": "array",
+      "description": "Het materiaal van de geluidswerende constructie en het geluidskarakteristiek van het materiaal. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van MateriaalKarakteristiek items.",
+      "items": {
+        "$ref": "#/components/schemas/MateriaalKarakteristiek"
+      },
+      "minItems": 1
+    },
+    "statischeBelasting": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKNPerVierkanteMeter"
+    },
+    "heeftAfdeklatten": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.heeftAfdeklatten"
+    },
+    "individueleLengteSchermelement": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "overzichtSchermhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "detailplan(3D-As-Built)": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "opstelling": {
+      "$ref": "#/components/schemas/Opstelling"
+    },
+    "totaleOppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "individueleHoogteSchermelement": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "isBeginOfEindconstructie": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.isBeginOfEindconstructie"
+    },
+    "maximaleDikteSchermelement": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "horizontaalRuimteBeslag": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "videoVoertuigkering": {
+      "type": "array",
+      "description": "Video van de testen op geluidswerende constructies. Klasse uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "testrapport": {
+      "type": "array",
+      "description": "De testresultaten van een geluidswerende constructie. Klasse uit gebruik sinds versie 2.0.0-RC3 Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van het lijnvormig element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GeluidswerendeConstructie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/GeluidswerendeConstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/GeluidswerendeConstructie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "schermtype",
+    "totaleLengte",
+    "schermelement",
+    "windbelasting",
+    "kleur",
+    "materiaalKarakteristiek",
+    "statischeBelasting",
+    "heeftAfdeklatten",
+    "individueleLengteSchermelement",
+    "overzichtSchermhoogte",
+    "detailplan(3D-As-Built)",
+    "opstelling",
+    "totaleOppervlakte",
+    "individueleHoogteSchermelement",
+    "isBeginOfEindconstructie",
+    "maximaleDikteSchermelement",
+    "horizontaalRuimteBeslag",
+    "videoVoertuigkering",
+    "testrapport",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

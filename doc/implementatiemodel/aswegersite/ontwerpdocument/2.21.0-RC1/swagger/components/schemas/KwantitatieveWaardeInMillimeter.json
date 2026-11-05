@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMillimeter",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in millimeter uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMillimeter)",
+      "pattern": "^KwantitatieveWaardeInMillimeter$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

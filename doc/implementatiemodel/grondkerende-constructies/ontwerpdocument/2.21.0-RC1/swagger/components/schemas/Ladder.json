@@ -1,0 +1,125 @@
+{
+  "title": "Ladder",
+  "type": "object",
+  "description": "Een ladder is een constructie van verticale bomen met horizontale sporten die gebruikt wordt als klimmiddel/gereedschap.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Ladder)",
+      "pattern": "^Ladder$"
+    },
+    "heeftRailMetAntivaltoestel": {
+      "$ref": "#/components/schemas/Ladder.heeftRailMetAntivaltoestel"
+    },
+    "heeftVeiligheidsinstap": {
+      "$ref": "#/components/schemas/Ladder.heeftVeiligheidsinstap"
+    },
+    "heeftVeiligheidskooi": {
+      "$ref": "#/components/schemas/Ladder.heeftVeiligheidskooi"
+    },
+    "isBeveiligd": {
+      "$ref": "#/components/schemas/Ladder.isBeveiligd"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "materiaalLadder": {
+      "$ref": "#/components/schemas/MateriaalLadder"
+    },
+    "uitschuifbareLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "lopendeMeter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "heeftBordes": {
+      "$ref": "#/components/schemas/Ladder.heeftBordes"
+    },
+    "typeOpstelling": {
+      "$ref": "#/components/schemas/KeuzelijstTypeOpstelling"
+    },
+    "materiaalVerankering": {
+      "$ref": "#/components/schemas/Staalsoort"
+    },
+    "typeBevestigingLadder": {
+      "$ref": "#/components/schemas/TypeBevestingLadder"
+    },
+    "detailplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Ladder.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Ladder.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ladder.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Ladder.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ladder.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Ladder.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Ladder.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftRailMetAntivaltoestel",
+    "heeftVeiligheidsinstap",
+    "heeftVeiligheidskooi",
+    "isBeveiligd",
+    "technischeFiche",
+    "materiaalLadder",
+    "uitschuifbareLengte",
+    "lopendeMeter",
+    "heeftBordes",
+    "typeOpstelling",
+    "materiaalVerankering",
+    "typeBevestigingLadder",
+    "detailplan",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -16,16 +16,7 @@
       "$ref": "#/components/schemas/VRI-Communicatieprotocol"
     },
     "dNSNaam": {
-      "type": "object",
-      "description": "De DNSNaam (ook \"volledige domein naam\" genoemd ) is een unieke naam binnen het Domain Name System (DNS), het naamgevingssysteem waarmee computers, webservers, diensten en toepassing op een unieke manier kunnen worden geïdentificeerd. Deze bevat zowel de hostname en de top level domein naam bv. 120c8-ar1.belfa.be.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.dNSNaam"
     },
     "regelaartype": {
       "$ref": "#/components/schemas/RegelaarRegelaartype"
@@ -34,20 +25,11 @@
       "$ref": "#/components/schemas/IPv4-Adres"
     },
     "programmeertool": {
-      "type": "object",
-      "description": "Software waarmee de verkeersregelaar geprogrammeerd kan worden.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.programmeertool"
     },
     "externeReferentie": {
       "type": "array",
-      "description": "Lijst van ExterneReferentie items.",
+      "description": "Referentie zoals gekend bij een externe partij bv. aannemer, VLCC, ... Lijst van ExterneReferentie items.",
       "items": {
         "$ref": "#/components/schemas/ExterneReferentie"
       },
@@ -58,7 +40,7 @@
     },
     "coöRdinatiewijze": {
       "type": "array",
-      "description": "Lijst van VerkeersregelaarCoordinatiewijze items.",
+      "description": "Wijze waarop de coördinatie is opgezet en de eventuele rol die de verkeersregelaar hierin speelt. Lijst van VerkeersregelaarCoordinatiewijze items.",
       "items": {
         "$ref": "#/components/schemas/VerkeersregelaarCoordinatiewijze"
       },
@@ -71,53 +53,16 @@
       "$ref": "#/components/schemas/VerkeersregelaarModelnaam"
     },
     "heeftSD-Kaart": {
-      "type": "object",
-      "description": "Aanduiding of er al dan niet een SD-kaart aanwezig is op de communicatiekaart van de verkeersregelaar.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.heeftSD-Kaart"
     },
     "simkaartnummer": {
-      "type": "object",
-      "description": "Het nummer van de simkaart die aanwezig is op de communicatiekaart.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.simkaartnummer"
     },
     "typeDisplay": {
       "$ref": "#/components/schemas/VerkeersregelaarDisplayType"
     },
     "heeftHandbediening": {
-      "type": "object",
-      "description": "Aanduiding of de verkeersregelaar uitgerust is met een manuele regeling.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.heeftHandbediening"
     },
     "kabelaansluitschema": {
       "$ref": "#/components/schemas/Bestandsbijlage"
@@ -132,118 +77,39 @@
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "vplanNummer": {
-      "type": "object",
-      "description": "Nummer van het V-plan.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.vplanNummer"
     },
     "vplanDatum": {
-      "type": "object",
-      "description": "Datum van het V-plan.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.vplanDatum"
     },
     "naampad": {
-      "type": "object",
-      "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.naampad"
     },
     "naam": {
-      "type": "object",
-      "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Verkeersregelaar.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/Verkeersregelaar.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -251,39 +117,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Verkeersregelaar.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

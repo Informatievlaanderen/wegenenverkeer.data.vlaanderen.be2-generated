@@ -1,0 +1,113 @@
+{
+  "title": "Noodverlichtingstoestel",
+  "type": "object",
+  "description": "Een verlichtingstoestel als combinatie van de lamp en de armatuur dat ingeschakeld is in een systeem voor noodverlichting en daarom moet voldoen aan bijkomende vereisten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Noodverlichtingstoestel)",
+      "pattern": "^Noodverlichtingstoestel$"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "typeBatterij": {
+      "$ref": "#/components/schemas/NoodverlichtingTypeBatterij"
+    },
+    "spanning": {
+      "$ref": "#/components/schemas/NominaleSpanning"
+    },
+    "heeftAfstandsbewaking": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.heeftAfstandsbewaking"
+    },
+    "getestViaAfleggenAutomaat": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.getestViaAfleggenAutomaat"
+    },
+    "autonomie": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMinuten"
+    },
+    "aantalLampen": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.aantalLampen"
+    },
+    "soortLamp": {
+      "$ref": "#/components/schemas/BinnenverlichtingstoestelSoortLamp"
+    },
+    "schakelwijze": {
+      "$ref": "#/components/schemas/BinnenverlichtingstoestelSchakelwijze"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Noodverlichtingstoestel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Noodverlichtingstoestel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Noodverlichtingstoestel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "vermogen",
+    "typeBatterij",
+    "spanning",
+    "heeftAfstandsbewaking",
+    "getestViaAfleggenAutomaat",
+    "autonomie",
+    "aantalLampen",
+    "soortLamp",
+    "schakelwijze",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

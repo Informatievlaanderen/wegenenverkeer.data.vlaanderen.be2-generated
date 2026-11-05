@@ -1,0 +1,63 @@
+{
+  "title": "HeeftBetrokkene",
+  "type": "object",
+  "description": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HeeftBetrokkene)",
+      "pattern": "^HeeftBetrokkene$"
+    },
+    "rol": {
+      "$ref": "#/components/schemas/BetrokkenheidRol"
+    },
+    "specifiekeContactinfo": {
+      "type": "array",
+      "description": "Specifieke contactgegevens van de betrokken agent met betrekking tot het gekoppelde object. Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "datumAanvang": {
+      "$ref": "#/components/schemas/HeeftBetrokkene.datumAanvang"
+    },
+    "datumEinde": {
+      "$ref": "#/components/schemas/HeeftBetrokkene.datumEinde"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/HeeftBetrokkene.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/HeeftBetrokkene.isActief"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "rol",
+    "datumAanvang",
+    "datumEinde",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "BijlageUitGebruik",
+  "type": "object",
+  "description": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BijlageUitGebruik)",
+      "pattern": "^BijlageUitGebruik$"
+    },
+    "type": {
+      "type": "array",
+      "description": "De typering of categorie van de bijlage. Klasse uit gebruik sinds versie 2.13.0-RC2 Lijst van BijlageType items.",
+      "items": {
+        "$ref": "#/components/schemas/BijlageType"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/BijlageUitGebruik.naam"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BijlageUitGebruik.typeURI"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BijlageUitGebruik.notitie"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BijlageUitGebruik.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "asset-Id",
+    "bijlage",
+    "naam",
+    "typeURI",
+    "notitie",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

@@ -13,49 +13,22 @@
       "pattern": "^NatuurlijkPersoon$"
     },
     "voornaam": {
-      "type": "object",
-      "description": "De voornaam.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/NatuurlijkPersoon.voornaam"
     },
     "achternaam": {
-      "type": "object",
-      "description": "De achternaam.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/NatuurlijkPersoon.achternaam"
     },
     "telefoonnnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Het telefoonnummer. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Het telefoonnummer.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/NatuurlijkPersoon.telefoonnnummer"
       },
       "minItems": 1
     },
     "adres": {
       "type": "array",
-      "description": "Lijst van Adres items.",
+      "description": "Het adres. Lijst van Adres items.",
       "items": {
         "$ref": "#/components/schemas/Adres"
       },
@@ -63,71 +36,25 @@
     },
     "emailadres": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Het emailadres. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Het emailadres.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/NatuurlijkPersoon.emailadres"
       },
       "minItems": 1
     },
     "fax": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "De faxnummer. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "De faxnummer.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/NatuurlijkPersoon.fax"
       },
       "minItems": 1
     },
     "heeftEmailVoorkeur": {
-      "type": "object",
-      "description": "Aanduiding of een persoon de voorkeur heeft om via email gecontacteerd te worden.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/NatuurlijkPersoon.heeftEmailVoorkeur"
     },
     "heeftFaxVoorkeur": {
-      "type": "object",
-      "description": "Aanduiding of een persoon een voorkeur heeft om via fax gegevens te ontvangen.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/NatuurlijkPersoon.heeftFaxVoorkeur"
     }
   },
   "required": [

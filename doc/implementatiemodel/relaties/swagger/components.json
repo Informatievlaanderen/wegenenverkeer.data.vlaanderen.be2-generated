@@ -7,81 +7,72 @@
   },
   "components": {
     "schemas": {
-      "Provincie": {
-        "title": "Provincie",
+      "Weekdagen": {
+        "title": "Weekdagen",
         "type": "object",
-        "description": "Lijst van provincies in Vlaanderen.",
+        "description": "Enumeratie van Weekdagen",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Provincie)",
-            "pattern": "^Provincie$"
           }
         },
         "required": [
-          "@type"
+          "@id"
+        ]
+      },
+      "Provincie": {
+        "title": "Provincie",
+        "type": "object",
+        "description": "Enumeratie van Provincie",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
         ]
       },
       "Gemeente": {
         "title": "Gemeente",
         "type": "object",
-        "description": "Lijst van gemeentes in Vlaanderen.",
+        "description": "Enumeratie van Gemeente",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Gemeente)",
-            "pattern": "^Gemeente$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "BetrokkenheidRol": {
         "title": "BetrokkenheidRol",
         "type": "object",
-        "description": "Keuzelijst met mogelijke waarden voor de rol waarmee een agent betrokken is bij een object.",
+        "description": "Enumeratie van BetrokkenheidRol",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse BetrokkenheidRol)",
-            "pattern": "^BetrokkenheidRol$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
-      "Weekdagen": {
-        "title": "Weekdagen",
-        "type": "object",
-        "description": "Lijst van de verschillende weekdagen.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Weekdagen)",
-            "pattern": "^Weekdagen$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
+      "IsSoftwareGehostOp.typeURI": {
+        "title": "IsSoftwareGehostOp.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsSoftwareGehostOp.isActief": {
+        "title": "IsSoftwareGehostOp.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "IsSoftwareGehostOp": {
         "title": "IsSoftwareGehostOp",
@@ -107,34 +98,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/IsSoftwareGehostOp.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/IsSoftwareGehostOp.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -149,6 +116,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "IsNetwerkECC.typeURI": {
+        "title": "IsNetwerkECC.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsNetwerkECC.isActief": {
+        "title": "IsNetwerkECC.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "IsNetwerkECC": {
         "title": "IsNetwerkECC",
@@ -174,34 +152,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/IsNetwerkECC.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/IsNetwerkECC.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -216,6 +170,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftBeheer.typeURI": {
+        "title": "HeeftBeheer.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftBeheer.isActief": {
+        "title": "HeeftBeheer.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftBeheer": {
         "title": "HeeftBeheer",
@@ -241,34 +206,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftBeheer.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftBeheer.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -283,6 +224,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "Sturing.typeURI": {
+        "title": "Sturing.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Sturing.isActief": {
+        "title": "Sturing.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "Sturing": {
         "title": "Sturing",
@@ -308,34 +260,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Sturing.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Sturing.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -350,6 +278,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "Voedt.typeURI": {
+        "title": "Voedt.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Voedt.isActief": {
+        "title": "Voedt.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "Voedt": {
         "title": "Voedt",
@@ -381,34 +320,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Voedt.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Voedt.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -425,6 +340,29 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftBetrokkene.datumAanvang": {
+        "title": "HeeftBetrokkene.datumAanvang",
+        "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
+        "type": "string",
+        "format": "date"
+      },
+      "HeeftBetrokkene.datumEinde": {
+        "title": "HeeftBetrokkene.datumEinde",
+        "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
+        "type": "string",
+        "format": "date"
+      },
+      "HeeftBetrokkene.typeURI": {
+        "title": "HeeftBetrokkene.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftBetrokkene.isActief": {
+        "title": "HeeftBetrokkene.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftBetrokkene": {
         "title": "HeeftBetrokkene",
@@ -445,47 +383,17 @@
           },
           "specifiekeContactinfo": {
             "type": "array",
-            "description": "Lijst van Contactinfo items.",
+            "description": "Specifieke contactgegevens van de betrokken agent met betrekking tot het gekoppelde object. Lijst van Contactinfo items.",
             "items": {
               "$ref": "#/components/schemas/Contactinfo"
             },
             "minItems": 1
           },
           "datumAanvang": {
-            "type": "object",
-            "description": "De datum waarop de betrokkenheid effectief geworden is of zal worden.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftBetrokkene.datumAanvang"
           },
           "datumEinde": {
-            "type": "object",
-            "description": "De datum waarop de betrokkenheid beëindigd is of moet beëindigd worden.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftBetrokkene.datumEinde"
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
@@ -497,34 +405,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftBetrokkene.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftBetrokkene.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -542,6 +426,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HoortBij.typeURI": {
+        "title": "HoortBij.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HoortBij.isActief": {
+        "title": "HoortBij.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HoortBij": {
         "title": "HoortBij",
@@ -567,34 +462,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HoortBij.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HoortBij.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -609,6 +480,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftAanvullendeGeometrie.typeURI": {
+        "title": "HeeftAanvullendeGeometrie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftAanvullendeGeometrie.isActief": {
+        "title": "HeeftAanvullendeGeometrie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftAanvullendeGeometrie": {
         "title": "HeeftAanvullendeGeometrie",
@@ -634,34 +516,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftAanvullendeGeometrie.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftAanvullendeGeometrie.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -676,6 +534,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftNetwerktoegang.typeURI": {
+        "title": "HeeftNetwerktoegang.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftNetwerktoegang.isActief": {
+        "title": "HeeftNetwerktoegang.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftNetwerktoegang": {
         "title": "HeeftNetwerktoegang",
@@ -701,34 +570,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftNetwerktoegang.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftNetwerktoegang.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -743,6 +588,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftToegangsprocedure.typeURI": {
+        "title": "HeeftToegangsprocedure.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftToegangsprocedure.isActief": {
+        "title": "HeeftToegangsprocedure.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftToegangsprocedure": {
         "title": "HeeftToegangsprocedure",
@@ -768,34 +624,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftToegangsprocedure.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftToegangsprocedure.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -810,6 +642,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "IsInspectieVan.typeURI": {
+        "title": "IsInspectieVan.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsInspectieVan.isActief": {
+        "title": "IsInspectieVan.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "IsInspectieVan": {
         "title": "IsInspectieVan",
@@ -835,34 +678,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/IsInspectieVan.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/IsInspectieVan.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -877,6 +696,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "Bevestiging.typeURI": {
+        "title": "Bevestiging.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bevestiging.isActief": {
+        "title": "Bevestiging.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "Bevestiging": {
         "title": "Bevestiging",
@@ -902,34 +732,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Bevestiging.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Bevestiging.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -944,6 +750,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftBijlage.typeURI": {
+        "title": "HeeftBijlage.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftBijlage.isActief": {
+        "title": "HeeftBijlage.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftBijlage": {
         "title": "HeeftBijlage",
@@ -969,34 +786,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftBijlage.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftBijlage.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1011,6 +804,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftAanzicht.typeURI": {
+        "title": "HeeftAanzicht.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftAanzicht.isActief": {
+        "title": "HeeftAanzicht.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftAanzicht": {
         "title": "HeeftAanzicht",
@@ -1036,34 +840,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftAanzicht.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftAanzicht.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1078,6 +858,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftKeuring.typeURI": {
+        "title": "HeeftKeuring.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftKeuring.isActief": {
+        "title": "HeeftKeuring.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftKeuring": {
         "title": "HeeftKeuring",
@@ -1103,34 +894,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftKeuring.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftKeuring.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1145,6 +912,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "SluitAanOp.typeURI": {
+        "title": "SluitAanOp.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "SluitAanOp.isActief": {
+        "title": "SluitAanOp.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "SluitAanOp": {
         "title": "SluitAanOp",
@@ -1170,34 +948,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/SluitAanOp.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/SluitAanOp.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1212,6 +966,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "IsSoftwareOnderdeelVan.typeURI": {
+        "title": "IsSoftwareOnderdeelVan.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsSoftwareOnderdeelVan.isActief": {
+        "title": "IsSoftwareOnderdeelVan.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "IsSoftwareOnderdeelVan": {
         "title": "IsSoftwareOnderdeelVan",
@@ -1237,34 +1002,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/IsSoftwareOnderdeelVan.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/IsSoftwareOnderdeelVan.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1279,6 +1020,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "Omhult.typeURI": {
+        "title": "Omhult.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Omhult.isActief": {
+        "title": "Omhult.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "Omhult": {
         "title": "Omhult",
@@ -1304,34 +1056,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/Omhult.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Omhult.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1346,6 +1074,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftNetwerkProtectie.typeURI": {
+        "title": "HeeftNetwerkProtectie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftNetwerkProtectie.isActief": {
+        "title": "HeeftNetwerkProtectie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftNetwerkProtectie": {
         "title": "HeeftNetwerkProtectie",
@@ -1371,34 +1110,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftNetwerkProtectie.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftNetwerkProtectie.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1413,6 +1128,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "LigtOp.typeURI": {
+        "title": "LigtOp.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "LigtOp.isActief": {
+        "title": "LigtOp.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "LigtOp": {
         "title": "LigtOp",
@@ -1438,34 +1164,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/LigtOp.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/LigtOp.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1480,6 +1182,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "IsAdministratiefOnderdeelVan.typeURI": {
+        "title": "IsAdministratiefOnderdeelVan.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsAdministratiefOnderdeelVan.isActief": {
+        "title": "IsAdministratiefOnderdeelVan.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "IsAdministratiefOnderdeelVan": {
         "title": "IsAdministratiefOnderdeelVan",
@@ -1505,34 +1218,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/IsAdministratiefOnderdeelVan.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/IsAdministratiefOnderdeelVan.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1547,6 +1236,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "VoedtAangestuurd.typeURI": {
+        "title": "VoedtAangestuurd.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "VoedtAangestuurd.isActief": {
+        "title": "VoedtAangestuurd.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "VoedtAangestuurd": {
         "title": "VoedtAangestuurd",
@@ -1572,34 +1272,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/VoedtAangestuurd.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/VoedtAangestuurd.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1614,6 +1290,17 @@
           "isActief",
           "asset-Versie"
         ]
+      },
+      "HeeftV-Plan.typeURI": {
+        "title": "HeeftV-Plan.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HeeftV-Plan.isActief": {
+        "title": "HeeftV-Plan.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
       },
       "HeeftV-Plan": {
         "title": "HeeftV-Plan",
@@ -1630,7 +1317,12 @@
             "pattern": "^HeeftV-Plan$"
           },
           "dienstdatum": {
-            "$ref": "#/components/schemas/DienstdatumV-Plan"
+            "type": "array",
+            "description": "De datum(s) waarop een V-plan indienst of uitdienst werd genomen. Lijst van DienstdatumV-Plan items.",
+            "items": {
+              "$ref": "#/components/schemas/DienstdatumV-Plan"
+            },
+            "minItems": 1
           },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
@@ -1642,34 +1334,10 @@
             "$ref": "#/components/schemas/Identificator"
           },
           "typeURI": {
-            "type": "object",
-            "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
+            "$ref": "#/components/schemas/HeeftV-Plan.typeURI"
           },
           "isActief": {
-            "type": "object",
-            "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/HeeftV-Plan.isActief"
           },
           "asset-Versie": {
             "$ref": "#/components/schemas/AssetVersie"
@@ -1686,6 +1354,16 @@
           "asset-Versie"
         ]
       },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
+      },
       "Identificator": {
         "title": "Identificator",
         "type": "object",
@@ -1701,28 +1379,10 @@
             "pattern": "^Identificator$"
           },
           "identificator": {
-            "type": "object",
-            "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.identificator"
           },
           "toegekendDoor": {
-            "type": "object",
-            "description": "Gegevens van de organisatie die de toekenning deed.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
           }
         },
         "required": [
@@ -1730,6 +1390,23 @@
           "identificator",
           "toegekendDoor"
         ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
       },
       "AssetVersie": {
         "title": "AssetVersie",
@@ -1746,52 +1423,13 @@
             "pattern": "^AssetVersie$"
           },
           "versienummer": {
-            "type": "object",
-            "description": "Het versienummer als een oplopende integer.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^NonNegativeInteger$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
           },
           "timestamp": {
-            "type": "object",
-            "description": "De timestamp van het moment dat de versienummer werd toegekend.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
           },
           "context": {
-            "type": "object",
-            "description": "De context van de versie creatie.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/AssetVersie.context"
           }
         },
         "required": [
@@ -1800,6 +1438,26 @@
           "timestamp",
           "context"
         ]
+      },
+      "Adres.straatnaam": {
+        "title": "Adres.straatnaam",
+        "description": "De naam van de straat.",
+        "type": "string"
+      },
+      "Adres.huisnummer": {
+        "title": "Adres.huisnummer",
+        "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
+        "type": "string"
+      },
+      "Adres.bus": {
+        "title": "Adres.bus",
+        "description": "Een nummer dat de postbus aanduidt.",
+        "type": "string"
+      },
+      "Adres.postcode": {
+        "title": "Adres.postcode",
+        "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
+        "type": "string"
       },
       "Adres": {
         "title": "Adres",
@@ -1816,52 +1474,16 @@
             "pattern": "^Adres$"
           },
           "straatnaam": {
-            "type": "object",
-            "description": "De naam van de straat.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.straatnaam"
           },
           "huisnummer": {
-            "type": "object",
-            "description": "Een nummer dat door de gemeente aan bv. een huis wordt toegekend.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.huisnummer"
           },
           "bus": {
-            "type": "object",
-            "description": "Een nummer dat de postbus aanduidt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.bus"
           },
           "postcode": {
-            "type": "object",
-            "description": "Een korte reeks tekens die in het postadres wordt opgenomen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.postcode"
           },
           "provincie": {
             "$ref": "#/components/schemas/Provincie"
@@ -1880,6 +1502,36 @@
           "gemeente"
         ]
       },
+      "Contactinfo.contactnaam": {
+        "title": "Contactinfo.contactnaam",
+        "description": "Naam van bv. de persoon die men kan contacteren.",
+        "type": "string"
+      },
+      "Contactinfo.email": {
+        "title": "Contactinfo.email",
+        "description": "Email-adres waarnaar men kan mailen.",
+        "type": "string"
+      },
+      "Contactinfo.telefoon": {
+        "title": "Contactinfo.telefoon",
+        "description": "Telefoonnummer waarop men kan bellen.",
+        "type": "string"
+      },
+      "Contactinfo.fax": {
+        "title": "Contactinfo.fax",
+        "description": "Faxnummer waarnaar men kan faxen.",
+        "type": "string"
+      },
+      "Contactinfo.opmerkingen": {
+        "title": "Contactinfo.opmerkingen",
+        "description": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens.",
+        "type": "string"
+      },
+      "Contactinfo.website": {
+        "title": "Contactinfo.website",
+        "description": "Website waarnaar men kan surfen.",
+        "type": "string"
+      },
       "Contactinfo": {
         "title": "Contactinfo",
         "type": "object",
@@ -1895,80 +1547,26 @@
             "pattern": "^Contactinfo$"
           },
           "contactnaam": {
-            "type": "object",
-            "description": "Naam van bv. de persoon die men kan contacteren.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.contactnaam"
           },
           "email": {
-            "type": "object",
-            "description": "Email-adres waarnaar men kan mailen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.email"
           },
           "telefoon": {
-            "type": "object",
-            "description": "Telefoonnummer waarop men kan bellen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.telefoon"
           },
           "fax": {
-            "type": "object",
-            "description": "Faxnummer waarnaar men kan faxen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.fax"
           },
           "opmerkingen": {
-            "type": "object",
-            "description": "Bijkomende informatie met betrekking tot het gebruik van de contactgegevens.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.opmerkingen"
           },
           "website": {
-            "type": "object",
-            "description": "Website waarnaar men kan surfen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Contactinfo.website"
           },
           "beschikbaarheid": {
             "type": "array",
-            "description": "Lijst van Openingsurenspecificatie items.",
+            "description": "Periode waarin contact kan worden opgenomen. Lijst van Openingsurenspecificatie items.",
             "items": {
               "$ref": "#/components/schemas/Openingsurenspecificatie"
             },
@@ -1981,6 +1579,16 @@
         "required": [
           "@type"
         ]
+      },
+      "Openingsurenspecificatie.openingstijd": {
+        "title": "Openingsurenspecificatie.openingstijd",
+        "description": "Het tijdsstip waarop de opening plaatsvindt.",
+        "$ref": "#/components/schemas/Tijd"
+      },
+      "Openingsurenspecificatie.sluitingstijd": {
+        "title": "Openingsurenspecificatie.sluitingstijd",
+        "description": "Het tijdsstip waarop de sluiting plaatsvindt.",
+        "$ref": "#/components/schemas/Tijd"
       },
       "Openingsurenspecificatie": {
         "title": "Openingsurenspecificatie",
@@ -1997,24 +1605,10 @@
             "pattern": "^Openingsurenspecificatie$"
           },
           "openingstijd": {
-            "type": "object",
-            "description": "Het tijdsstip waarop de opening plaatsvindt.",
-            "properties": {
-              "$ref": "#/components/schemas/Tijd"
-            },
-            "required": [
-              "$ref"
-            ]
+            "$ref": "#/components/schemas/Openingsurenspecificatie.openingstijd"
           },
           "sluitingstijd": {
-            "type": "object",
-            "description": "Het tijdsstip waarop de sluiting plaatsvindt.",
-            "properties": {
-              "$ref": "#/components/schemas/Tijd"
-            },
-            "required": [
-              "$ref"
-            ]
+            "$ref": "#/components/schemas/Openingsurenspecificatie.sluitingstijd"
           },
           "weekdag": {
             "$ref": "#/components/schemas/Weekdagen"
@@ -2025,6 +1619,28 @@
           "openingstijd",
           "sluitingstijd",
           "weekdag"
+        ]
+      },
+      "KwantitatieveWaardeInVolt.waarde": {
+        "title": "KwantitatieveWaardeInVolt.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInVolt.standaardEenheid": {
+        "title": "KwantitatieveWaardeInVolt.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in Volt. \"V\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
         ]
       },
       "KwantitatieveWaardeInVolt": {
@@ -2042,34 +1658,10 @@
             "pattern": "^KwantitatieveWaardeInVolt$"
           },
           "waarde": {
-            "type": "object",
-            "description": "Bevat een getal die bij het datatype hoort.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Decimal$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.waarde"
           },
           "standaardEenheid": {
-            "type": "object",
-            "description": "De standaard eenheid bij dit datatype is uitgedrukt in Volt. \"V\"^^cdt:ucumunit",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/KwantitatieveWaardeInVolt.standaardEenheid"
           }
         },
         "required": [
@@ -2077,6 +1669,23 @@
           "waarde",
           "standaardEenheid"
         ]
+      },
+      "DienstdatumV-Plan.indienstname": {
+        "title": "DienstdatumV-Plan.indienstname",
+        "description": "De datum waarop het VPlan effectief van toepassing wordt op de verkeersregelinstallatie.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "DienstdatumV-Plan.uitdienstname": {
+        "title": "DienstdatumV-Plan.uitdienstname",
+        "description": "De uitdienstname is de datum waarop het VPlan niet langer van toepassing is op de verkeersregelinstallatie.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "DienstdatumV-Plan.commentaar": {
+        "title": "DienstdatumV-Plan.commentaar",
+        "description": "Bijkomende informatie van de regeling.",
+        "type": "string"
       },
       "DienstdatumV-Plan": {
         "title": "DienstdatumV-Plan",
@@ -2093,52 +1702,13 @@
             "pattern": "^DienstdatumV-Plan$"
           },
           "indienstname": {
-            "type": "object",
-            "description": "De datum waarop het VPlan effectief van toepassing wordt op de verkeersregelinstallatie.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/DienstdatumV-Plan.indienstname"
           },
           "uitdienstname": {
-            "type": "object",
-            "description": "De uitdienstname is de datum waarop het VPlan niet langer van toepassing is op de verkeersregelinstallatie.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/DienstdatumV-Plan.uitdienstname"
           },
           "commentaar": {
-            "type": "object",
-            "description": "Bijkomende informatie van de regeling.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/DienstdatumV-Plan.commentaar"
           }
         },
         "required": [

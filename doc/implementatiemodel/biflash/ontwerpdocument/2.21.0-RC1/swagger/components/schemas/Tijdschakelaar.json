@@ -1,0 +1,89 @@
+{
+  "title": "Tijdschakelaar",
+  "type": "object",
+  "description": "Een apparaat met een interne klok dat een stuursignaal uitstuurt nadat de klok een specifiek tijdsinterval heeft opgemeten. Ook klokschakelaar of timer genoemd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Tijdschakelaar)",
+      "pattern": "^Tijdschakelaar$"
+    },
+    "componentnummer": {
+      "$ref": "#/components/schemas/Tijdschakelaar.componentnummer"
+    },
+    "instellingen": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Tijdschakelaar.serienummer"
+    },
+    "uitvoering": {
+      "$ref": "#/components/schemas/UitvoeringenTijdschakelaar"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Tijdschakelaar.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Tijdschakelaar.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Tijdschakelaar.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Tijdschakelaar.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Tijdschakelaar.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Tijdschakelaar.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Tijdschakelaar.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "componentnummer",
+    "instellingen",
+    "serienummer",
+    "uitvoering",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

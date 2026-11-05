@@ -1,0 +1,98 @@
+{
+  "title": "Verkeersbordopstelling",
+  "type": "object",
+  "description": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersbordopstelling)",
+      "pattern": "^Verkeersbordopstelling$"
+    },
+    "positieTenOpzichteVanDeRijweg": {
+      "$ref": "#/components/schemas/PositieSoort"
+    },
+    "wegsegment": {
+      "type": "array",
+      "description": "Wegsegment waarbij de verkeersbordopstelling geplaatst is. Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is. Lijst van ExterneReferentie items.",
+      "items": {
+        "$ref": "#/components/schemas/ExterneReferentie"
+      },
+      "minItems": 1
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "Grafische weergave van de opstelling geplaatst op het openbaar domein. Een bestand dat een afbeelding weergeeft. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "isBotsvriendelijk": {
+      "$ref": "#/components/schemas/Verkeersbordopstelling.isBotsvriendelijk"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Verkeersbordopstelling.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersbordopstelling.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Verkeersbordopstelling.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersbordopstelling.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Verkeersbordopstelling.datumOprichtingObject"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Verkeersbordopstelling.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    }
+  },
+  "required": [
+    "@type",
+    "positieTenOpzichteVanDeRijweg",
+    "afbeelding",
+    "operationeleStatus",
+    "isBotsvriendelijk",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "asset-Versie",
+    "isActief",
+    "aIM-Toestand"
+  ]
+}

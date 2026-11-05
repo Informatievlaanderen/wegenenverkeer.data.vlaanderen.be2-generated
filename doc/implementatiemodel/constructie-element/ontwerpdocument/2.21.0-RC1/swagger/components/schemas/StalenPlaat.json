@@ -1,0 +1,89 @@
+{
+  "title": "StalenPlaat",
+  "type": "object",
+  "description": "Een stalen enkelvoudig constructie-element dat zowel horizontaal geplaatst kan worden, in het geval van een plaat, alsook verticaal in het geval van een wand.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StalenPlaat)",
+      "pattern": "^StalenPlaat$"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "technischeFicheStalenObject": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "staalspecificaties": {
+      "$ref": "#/components/schemas/Staalspecificaties"
+    },
+    "totaalGewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/StalenPlaat.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/StalenPlaat.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenPlaat.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/StalenPlaat.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/StalenPlaat.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/StalenPlaat.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/StalenPlaat.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "dikte",
+    "technischeFicheStalenObject",
+    "staalspecificaties",
+    "totaalGewicht",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

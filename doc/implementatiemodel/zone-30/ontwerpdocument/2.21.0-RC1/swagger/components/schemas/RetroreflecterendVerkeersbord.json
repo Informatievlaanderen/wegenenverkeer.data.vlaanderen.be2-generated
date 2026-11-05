@@ -1,0 +1,132 @@
+{
+  "title": "RetroreflecterendVerkeersbord",
+  "type": "object",
+  "description": "Verkeersbord met op het beeldvlak een tekening en/of tekst die worden weergegeven met een geëigend bekledingsmateriaal.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RetroreflecterendVerkeersbord)",
+      "pattern": "^RetroreflecterendVerkeersbord$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordMerk"
+    },
+    "oppervlakte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
+    },
+    "afwerkingsgraad": {
+      "$ref": "#/components/schemas/KeuzelijstAfwerkingsgraadRetroreflecterendVerkeersbord"
+    },
+    "grootteorde": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbordGrootteorde"
+    },
+    "horizontaleVerschuiving": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "fabricageType": {
+      "$ref": "#/components/schemas/FabricageTypeRetroreflecterendVerkeersbord"
+    },
+    "fabricageDatum": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.fabricageDatum"
+    },
+    "kleurAchterkant": {
+      "$ref": "#/components/schemas/RAL-Kleur"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "afmeting": {
+      "$ref": "#/components/schemas/AfmetingVerkeersbord"
+    },
+    "afbeelding": {
+      "type": "array",
+      "description": "De afbeelding van het verkeersbord. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "fabricagevoorschrift": {
+      "$ref": "#/components/schemas/RetroreflecterendVerkeersbord.fabricagevoorschrift"
+    },
+    "operationeleStatus": {
+      "$ref": "#/components/schemas/KeuzelijstOperationeleStatus"
+    },
+    "aanzicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "afwerkingsgraad",
+    "horizontaleVerschuiving",
+    "fabricageType",
+    "fabricageDatum",
+    "kleurAchterkant",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "afmeting",
+    "afbeelding",
+    "fabricagevoorschrift",
+    "operationeleStatus",
+    "aanzicht",
+    "opstelhoogte"
+  ]
+}

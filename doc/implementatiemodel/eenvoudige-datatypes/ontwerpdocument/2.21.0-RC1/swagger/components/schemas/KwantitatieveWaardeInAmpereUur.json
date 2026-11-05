@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInAmpereUur",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in ampere uur uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInAmpereUur)",
+      "pattern": "^KwantitatieveWaardeInAmpereUur$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpereUur.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInAmpereUur.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

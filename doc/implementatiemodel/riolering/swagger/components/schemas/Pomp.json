@@ -1,0 +1,126 @@
+{
+  "title": "Pomp",
+  "type": "object",
+  "description": "Een pomp is een werktuig dat water verplaatst door er energie aan af te geven in de vorm van een drukverhoging of snelheidsverhoging.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Pomp)",
+      "pattern": "^Pomp$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/TypepompMerk"
+    },
+    "soort": {
+      "$ref": "#/components/schemas/PompSoort"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/TypepompModelnaam"
+    },
+    "maximaalDebiet": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "binnendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "buitendiameter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "vermogen": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInWatt"
+    },
+    "metVochtSensor": {
+      "$ref": "#/components/schemas/Pomp.metVochtSensor"
+    },
+    "metTemperatuurSensor": {
+      "$ref": "#/components/schemas/Pomp.metTemperatuurSensor"
+    },
+    "metSoftstarter": {
+      "$ref": "#/components/schemas/Pomp.metSoftstarter"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van een linkend element. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Pomp.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Pomp.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Pomp.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Pomp.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Pomp.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Pomp.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Pomp.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Pomp.naam"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "soort",
+    "modelnaam",
+    "maximaalDebiet",
+    "binnendiameter",
+    "buitendiameter",
+    "vermogen",
+    "metVochtSensor",
+    "metTemperatuurSensor",
+    "metSoftstarter",
+    "technischeFiche",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad",
+    "naam"
+  ]
+}

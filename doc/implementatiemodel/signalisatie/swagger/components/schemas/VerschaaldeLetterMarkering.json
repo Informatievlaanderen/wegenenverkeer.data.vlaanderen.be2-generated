@@ -22,72 +22,19 @@
       "$ref": "#/components/schemas/TypeVanDeVerschaaldeLetter"
     },
     "vergrotingsfactor": {
-      "type": "object",
-      "description": "Een decimaal getal dat weergeeft in welke mate de figuratiemarkering vergroot of verkleind wordt.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.vergrotingsfactor"
     },
     "basisoppervlakte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
     },
     "verlengingsfactor": {
-      "type": "object",
-      "description": "Een decimaal getal dat de verlenging van een figuratiemarkering weergeeft.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.verlengingsfactor"
     },
     "isGoedgekeurd": {
-      "type": "object",
-      "description": "Bepaling van de goedkeuring van AOWS.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isGoedgekeurd"
     },
     "versieGoedgekeurd": {
-      "type": "object",
-      "description": "De versie van het standaardbestek 250 waar de goedkeuring is bepaald.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.versieGoedgekeurd"
     },
     "markeringsysteemCOPRO": {
       "$ref": "#/components/schemas/Productidentificatiecode"
@@ -99,46 +46,18 @@
       "$ref": "#/components/schemas/SoortMarkeringsproduct"
     },
     "isTijdelijk": {
-      "type": "object",
-      "description": "Aanduiding of de wegmarkering al dan niet tot de werfsignalisatie behoort.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isTijdelijk"
     },
     "technischeFiche": {
       "type": "array",
-      "description": "Lijst van Bestandsbijlage items.",
+      "description": "De technische fiche(s) van de markering. Lijst van Bestandsbijlage items.",
       "items": {
         "$ref": "#/components/schemas/Bestandsbijlage"
       },
       "minItems": 1
     },
     "isHandwerk": {
-      "type": "object",
-      "description": "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isHandwerk"
     },
     "markeringssysteem": {
       "$ref": "#/components/schemas/Markeringssysteem"
@@ -153,61 +72,24 @@
       "$ref": "#/components/schemas/Identificator"
     },
     "notitie": {
-      "type": "object",
-      "description": "Extra notitie voor het object.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.notitie"
     },
     "standaardbestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/VerschaaldeLetterMarkering.standaardbestekpostnummer"
       },
       "minItems": 1
     },
     "typeURI": {
-      "type": "object",
-      "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.typeURI"
     },
     "bestekpostnummer": {
       "type": "array",
-      "description": "Lijst van String items.",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
       "items": {
-        "type": "object",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "@value"
-        ]
+        "$ref": "#/components/schemas/VerschaaldeLetterMarkering.bestekpostnummer"
       },
       "minItems": 1
     },
@@ -215,39 +97,10 @@
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
     "datumOprichtingObject": {
-      "type": "object",
-      "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Date$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.datumOprichtingObject"
     },
     "isActief": {
-      "type": "object",
-      "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-      "properties": {
-        "@value": {
-          "type": "boolean"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Boolean$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/VerschaaldeLetterMarkering.isActief"
     },
     "aIM-Toestand": {
       "$ref": "#/components/schemas/AIMToestand"

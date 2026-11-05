@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInKilowatt",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in kilowatt uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInKilowatt)",
+      "pattern": "^KwantitatieveWaardeInKilowatt$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilowatt.waarde"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKilowatt.standaardEenheid"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "standaardEenheid"
+  ]
+}

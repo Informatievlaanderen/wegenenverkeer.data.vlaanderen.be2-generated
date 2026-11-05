@@ -1,0 +1,163 @@
+{
+  "title": "Camera",
+  "type": "object",
+  "description": "Een CCTV-camera, closed-circuit television camera, kortweg camera, produceert beelden of opnames voor bewaking van een regio vanop afstand. Het is een element dat beelden neemt van een locatie en deze doorgeeft naar verschillende partijen om zo de werkelijke situatie te kunnen inschatten vanop afstand. Deze camera kan van het analoge type zijn of digitaal.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Camera)",
+      "pattern": "^Camera$"
+    },
+    "ipAdres": {
+      "$ref": "#/components/schemas/IPv4-Adres"
+    },
+    "rijrichting": {
+      "$ref": "#/components/schemas/Rijrichting"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "Technische fiche van dit element met opsplitsing tussen CCTV, AID en PTZ-camera's. Bestanden van het type pdf. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/CameraModelnaam"
+    },
+    "heeftSpitsstrook": {
+      "$ref": "#/components/schemas/Camera.heeftSpitsstrook"
+    },
+    "heeftFlits": {
+      "$ref": "#/components/schemas/Camera.heeftFlits"
+    },
+    "isPTZ": {
+      "$ref": "#/components/schemas/Camera.isPTZ"
+    },
+    "heeftAID": {
+      "$ref": "#/components/schemas/Camera.heeftAID"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/CameraMerk"
+    },
+    "configuratieBestandAID": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "dNSNaam": {
+      "$ref": "#/components/schemas/Camera.dNSNaam"
+    },
+    "opstelhoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "servicePrioriteit": {
+      "$ref": "#/components/schemas/Serviceprioriteit"
+    },
+    "beeldverwerkingsinstelling": {
+      "type": "array",
+      "description": "Geeft aan welke types beeldverwerking die camera zelf uitvoert dus zonder gebruik te maken van een externe verwerkingseenheid. Wanneer de camera de beeldverwerking niet zelf doet maar enkel beelden  verstuurt voor verwerking in een externe eenheid, moet die externe eenheid als aparte asset aangemaakt worden indien het specifieke type bestaat in de OTL of moet een instantie van Software gebruikt worden wanneer geen specifieke externe verwerkingseenheid voorzien is. Dit attribuut kan dus enkel gebruikt worden indien de camera of een verwerkingseenheid van de camera zelf de analyse doet en die analyse doorstuurt naar een asset die met de analyse werkt en niet met de beelden. Lijst van CameraBeeldverwerkingsinstellingen items.",
+      "items": {
+        "$ref": "#/components/schemas/CameraBeeldverwerkingsinstellingen"
+      },
+      "minItems": 1
+    },
+    "spectrum": {
+      "$ref": "#/components/schemas/Spectrum"
+    },
+    "opstelwijze": {
+      "$ref": "#/components/schemas/SensorOpstelwijze"
+    },
+    "cameradoeleinde": {
+      "$ref": "#/components/schemas/CameraDoeleinde"
+    },
+    "toegankelijkheidPlaats": {
+      "$ref": "#/components/schemas/ToegankelijkheidPlaats"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Camera.serienummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Camera.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Camera.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Camera.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Camera.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Camera.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Camera.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Camera.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Camera.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "ipAdres",
+    "rijrichting",
+    "technischeFiche",
+    "modelnaam",
+    "heeftSpitsstrook",
+    "heeftFlits",
+    "isPTZ",
+    "heeftAID",
+    "merk",
+    "configuratieBestandAID",
+    "dNSNaam",
+    "opstelhoogte",
+    "servicePrioriteit",
+    "beeldverwerkingsinstelling",
+    "spectrum",
+    "opstelwijze",
+    "cameradoeleinde",
+    "toegankelijkheidPlaats",
+    "serienummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

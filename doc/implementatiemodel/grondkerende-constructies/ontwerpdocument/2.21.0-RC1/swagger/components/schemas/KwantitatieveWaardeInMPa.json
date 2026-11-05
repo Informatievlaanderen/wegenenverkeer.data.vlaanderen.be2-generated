@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMPa",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in megapascal uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMPa)",
+      "pattern": "^KwantitatieveWaardeInMPa$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMPa.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMPa.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

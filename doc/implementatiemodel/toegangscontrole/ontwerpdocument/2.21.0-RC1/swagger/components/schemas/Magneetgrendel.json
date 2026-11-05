@@ -1,0 +1,93 @@
+{
+  "title": "Magneetgrendel",
+  "type": "object",
+  "description": "Een magnetisch slot dat instaat voor het gesloten houden van deuren, poorten, luiken met een elektromagneet.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Magneetgrendel)",
+      "pattern": "^Magneetgrendel$"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenMagneetgrendels"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenMagneetgrendels"
+    },
+    "sluitkracht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKiloNewtonPerMeter"
+    },
+    "aansluitingskabel": {
+      "$ref": "#/components/schemas/Aansluitingskabel"
+    },
+    "isBuiten": {
+      "$ref": "#/components/schemas/Magneetgrendel.isBuiten"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Magneetgrendel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Magneetgrendel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Magneetgrendel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Magneetgrendel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Magneetgrendel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Magneetgrendel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Magneetgrendel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "merk",
+    "modelnaam",
+    "sluitkracht",
+    "aansluitingskabel",
+    "isBuiten",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}
