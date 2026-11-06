@@ -764,6 +764,32 @@
           "tabelUitwendigeInvloeden": {
             "$ref": "#/components/schemas/Bestandsbijlage"
           },
+          "bevestiging": {
+            "type": "array",
+            "description": "undefined Lijst van Behuizing items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Kast"
+                },
+                {
+                  "$ref": "#/components/schemas/Gebouw"
+                },
+                {
+                  "$ref": "#/components/schemas/Lokaal"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Kast": "#/components/schemas/Kast",
+                  "Gebouw": "#/components/schemas/Gebouw",
+                  "Lokaal": "#/components/schemas/Lokaal"
+                }
+              }
+            },
+            "minItems": 1
+          },
           "naam": {
             "$ref": "#/components/schemas/Gebouw.naam"
           },
@@ -904,6 +930,32 @@
           },
           "tabelUitwendigeInvloeden": {
             "$ref": "#/components/schemas/Bestandsbijlage"
+          },
+          "bevestiging": {
+            "type": "array",
+            "description": "undefined Lijst van Behuizing items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Kast"
+                },
+                {
+                  "$ref": "#/components/schemas/Gebouw"
+                },
+                {
+                  "$ref": "#/components/schemas/Lokaal"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Kast": "#/components/schemas/Kast",
+                  "Gebouw": "#/components/schemas/Gebouw",
+                  "Lokaal": "#/components/schemas/Lokaal"
+                }
+              }
+            },
+            "minItems": 1
           },
           "naam": {
             "$ref": "#/components/schemas/Lokaal.naam"
@@ -1640,6 +1692,9 @@
           "checksum": {
             "$ref": "#/components/schemas/Weegcomputer.checksum"
           },
+          "bevestiging": {
+            "$ref": "#/components/schemas/IndoorKast"
+          },
           "asset-Id": {
             "$ref": "#/components/schemas/Identificator"
           },
@@ -2250,6 +2305,32 @@
             "description": "Mechanisch plan van de volledige installatie. Er wordt 1 plan toegevoegd per installatie/techniek die op de kast is aangesloten. Bestanden van het type dwg of pdf. Lijst van Bestandsbijlage items.",
             "items": {
               "$ref": "#/components/schemas/Bestandsbijlage"
+            },
+            "minItems": 1
+          },
+          "bevestiging": {
+            "type": "array",
+            "description": "undefined Lijst van Behuizing items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Kast"
+                },
+                {
+                  "$ref": "#/components/schemas/Gebouw"
+                },
+                {
+                  "$ref": "#/components/schemas/Lokaal"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Kast": "#/components/schemas/Kast",
+                  "Gebouw": "#/components/schemas/Gebouw",
+                  "Lokaal": "#/components/schemas/Lokaal"
+                }
+              }
             },
             "minItems": 1
           },
@@ -3883,6 +3964,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `WeegcomputerMerk` op te halen."
       },
+      "Weegcomputer.bevestiging": {
+        "operationId": "WeegcomputerGET",
+        "parameters": {
+          "id": "$response.body#/Weegcomputer.bevestiging/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IndoorKast` op te halen."
+      },
       "Weegcomputer.asset-Id": {
         "operationId": "WeegcomputerGET",
         "parameters": {
@@ -4100,6 +4188,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
       },
+      "IndoorKast.bevestiging": {
+        "operationId": "IndoorKastGET",
+        "parameters": {
+          "id": "$response.body#/IndoorKast.bevestiging/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
+      },
       "IndoorKast.kastmateriaal": {
         "operationId": "IndoorKastGET",
         "parameters": {
@@ -4141,13 +4236,6 @@
           "id": "$response.body#/IndoorKast.tabelUitwendigeInvloeden/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
-      },
-      "IndoorKast.bevestiging": {
-        "operationId": "IndoorKastGET",
-        "parameters": {
-          "id": "$response.body#/IndoorKast.bevestiging/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
       },
       "IndoorKast.asset-Id": {
         "operationId": "IndoorKastGET",
