@@ -12,6 +12,9 @@
       "description": "Object type (klasse Ladder)",
       "pattern": "^Ladder$"
     },
+    "heeftBordes": {
+      "$ref": "#/components/schemas/Ladder.heeftBordes"
+    },
     "heeftRailMetAntivaltoestel": {
       "$ref": "#/components/schemas/Ladder.heeftRailMetAntivaltoestel"
     },
@@ -24,29 +27,26 @@
     "isBeveiligd": {
       "$ref": "#/components/schemas/Ladder.isBeveiligd"
     },
-    "technischeFiche": {
-      "$ref": "#/components/schemas/Bestandsbijlage"
+    "lopendeMeter": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "materiaalLadder": {
       "$ref": "#/components/schemas/MateriaalLadder"
     },
-    "uitschuifbareLengte": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    "materiaalVerankering": {
+      "$ref": "#/components/schemas/Staalsoort"
     },
-    "lopendeMeter": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
     },
-    "heeftBordes": {
-      "$ref": "#/components/schemas/Ladder.heeftBordes"
+    "typeBevestigingLadder": {
+      "$ref": "#/components/schemas/TypeBevestingLadder"
     },
     "typeOpstelling": {
       "$ref": "#/components/schemas/KeuzelijstTypeOpstelling"
     },
-    "materiaalVerankering": {
-      "$ref": "#/components/schemas/Staalsoort"
-    },
-    "typeBevestigingLadder": {
-      "$ref": "#/components/schemas/TypeBevestingLadder"
+    "uitschuifbareLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "detailplan": {
       "$ref": "#/components/schemas/Bestandsbijlage"
@@ -56,6 +56,17 @@
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ladder.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Ladder.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Ladder.notitie"
@@ -68,22 +79,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Ladder.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Ladder.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Ladder.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Ladder.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Ladder.isActief"
@@ -97,27 +97,27 @@
   },
   "required": [
     "@type",
+    "heeftBordes",
     "heeftRailMetAntivaltoestel",
     "heeftVeiligheidsinstap",
     "heeftVeiligheidskooi",
     "isBeveiligd",
-    "technischeFiche",
-    "materiaalLadder",
-    "uitschuifbareLengte",
     "lopendeMeter",
-    "heeftBordes",
-    "typeOpstelling",
+    "materiaalLadder",
     "materiaalVerankering",
+    "technischeFiche",
     "typeBevestigingLadder",
+    "typeOpstelling",
+    "uitschuifbareLengte",
     "detailplan",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

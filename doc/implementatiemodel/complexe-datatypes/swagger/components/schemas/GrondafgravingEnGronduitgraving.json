@@ -1,0 +1,27 @@
+{
+  "title": "GrondafgravingEnGronduitgraving",
+  "type": "object",
+  "description": "Complex datatype voor de afgraving of uitgraving van grond.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GrondafgravingEnGronduitgraving)",
+      "pattern": "^GrondafgravingEnGronduitgraving$"
+    },
+    "grondbestemming": {
+      "$ref": "#/components/schemas/Grondbestemming"
+    },
+    "soortGrondwerk": {
+      "$ref": "#/components/schemas/Grondwerksoorten"
+    }
+  },
+  "required": [
+    "@type",
+    "grondbestemming",
+    "soortGrondwerk"
+  ]
+}

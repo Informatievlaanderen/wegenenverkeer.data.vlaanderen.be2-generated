@@ -12,28 +12,28 @@
       "description": "Object type (klasse Bestandsbijlage)",
       "pattern": "^Bestandsbijlage$"
     },
-    "uri": {
-      "$ref": "#/components/schemas/Bestandsbijlage.uri"
-    },
     "bestandsnaam": {
       "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
-    },
-    "omschrijving": {
-      "$ref": "#/components/schemas/Tekstblok"
     },
     "mime-Type": {
       "$ref": "#/components/schemas/Mimetype"
     },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
     "opmaakdatum": {
       "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
+    },
+    "uri": {
+      "$ref": "#/components/schemas/Bestandsbijlage.uri"
     }
   },
   "required": [
     "@type",
-    "uri",
     "bestandsnaam",
-    "omschrijving",
     "mime-Type",
-    "opmaakdatum"
+    "omschrijving",
+    "opmaakdatum",
+    "uri"
   ]
 }

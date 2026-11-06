@@ -1,0 +1,85 @@
+{
+  "title": "Bodembescherming",
+  "type": "object",
+  "description": "Een constructieve maatregel om de onderwaterbodem te beschermen tegen erosie en andere vormen van schade.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bodembescherming)",
+      "pattern": "^Bodembescherming$"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
+    "heeftVoegen": {
+      "$ref": "#/components/schemas/Bodembescherming.heeftVoegen"
+    },
+    "isWaterdoorlatend": {
+      "$ref": "#/components/schemas/Bodembescherming.isWaterdoorlatend"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Bodembescherming.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bodembescherming.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Bodembescherming.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Bodembescherming.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Bodembescherming.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Bodembescherming.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Bodembescherming.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "dikte",
+    "heeftVoegen",
+    "isWaterdoorlatend",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

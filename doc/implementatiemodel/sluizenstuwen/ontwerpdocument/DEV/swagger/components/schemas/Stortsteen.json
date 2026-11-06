@@ -1,0 +1,61 @@
+{
+  "title": "Stortsteen",
+  "type": "object",
+  "description": "Natuursteen van onregelmatige vorm,meestal gebruikt voor verstevigings- en beschermingsdoeleinden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Stortsteen)",
+      "pattern": "^Stortsteen$"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    },
+    "hechtspecie": {
+      "type": "array",
+      "description": "Het gebruikte hechtingsmateriaal tussen gestapelde stenen. Lijst van HechtSpecie items.",
+      "items": {
+        "$ref": "#/components/schemas/HechtSpecie"
+      },
+      "minItems": 1
+    },
+    "isVerankerd": {
+      "$ref": "#/components/schemas/Stortsteen.isVerankerd"
+    },
+    "kaliber": {
+      "$ref": "#/components/schemas/StortsteenKaliber"
+    },
+    "bestortingswijze": {
+      "$ref": "#/components/schemas/Plaatsingswijze"
+    },
+    "technischeFiche": {
+      "type": "array",
+      "description": "De technische fiche van stortsteen als bijlage. Lijst van Bestandsbijlage items.",
+      "items": {
+        "$ref": "#/components/schemas/Bestandsbijlage"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/StortsteenType"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    }
+  },
+  "required": [
+    "@type",
+    "gewicht",
+    "hechtspecie",
+    "isVerankerd",
+    "kaliber",
+    "bestortingswijze",
+    "technischeFiche",
+    "type",
+    "dikte"
+  ]
+}

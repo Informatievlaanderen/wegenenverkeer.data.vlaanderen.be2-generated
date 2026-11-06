@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInUur",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in uur uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInUur)",
+      "pattern": "^KwantitatieveWaardeInUur$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

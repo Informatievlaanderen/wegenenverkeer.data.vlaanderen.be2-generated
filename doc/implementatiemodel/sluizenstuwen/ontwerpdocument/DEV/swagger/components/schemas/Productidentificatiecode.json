@@ -1,0 +1,35 @@
+{
+  "title": "Productidentificatiecode",
+  "type": "object",
+  "description": "Complex datatype dat alle nodige informatie van het product capteert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Productidentificatiecode)",
+      "pattern": "^Productidentificatiecode$"
+    },
+    "keuringsverslag": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "linkTechnischeFiche": {
+      "$ref": "#/components/schemas/Productidentificatiecode.linkTechnischeFiche"
+    },
+    "producent": {
+      "$ref": "#/components/schemas/Productidentificatiecode.producent"
+    },
+    "productidentificatiecode": {
+      "$ref": "#/components/schemas/Productidentificatiecode.productidentificatiecode"
+    }
+  },
+  "required": [
+    "@type",
+    "keuringsverslag",
+    "linkTechnischeFiche",
+    "producent",
+    "productidentificatiecode"
+  ]
+}

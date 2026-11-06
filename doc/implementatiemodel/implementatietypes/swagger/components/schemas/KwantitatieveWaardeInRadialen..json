@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInRadialen.",
+  "type": "object",
+  "description": "Een kwantitatieve waarde dat een getal uitdrukt in radialen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInRadialen.)",
+      "pattern": "^KwantitatieveWaardeInRadialen.$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Grondophoging",
+  "type": "object",
+  "description": "Complex datatype om extra informatie van ophoging van grond te capteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondophoging)",
+      "pattern": "^Grondophoging$"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Grondbestemming"
+    },
+    "grondtoevoegsel": {
+      "$ref": "#/components/schemas/Grondtoevoegsel"
+    },
+    "soortGrondwerk": {
+      "$ref": "#/components/schemas/Grondwerksoorten"
+    }
+  },
+  "required": [
+    "@type",
+    "herkomst",
+    "grondtoevoegsel",
+    "soortGrondwerk"
+  ]
+}

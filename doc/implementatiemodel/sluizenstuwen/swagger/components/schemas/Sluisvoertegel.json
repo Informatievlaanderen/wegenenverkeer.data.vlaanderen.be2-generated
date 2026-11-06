@@ -12,20 +12,11 @@
       "description": "Object type (klasse Sluisvoertegel)",
       "pattern": "^Sluisvoertegel$"
     },
-    "heeftVoegbanden": {
-      "$ref": "#/components/schemas/Sluisvoertegel.heeftVoegbanden"
-    },
     "afmetingen": {
       "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
     },
-    "betonspecificaties": {
-      "$ref": "#/components/schemas/Betonspecificaties"
-    },
-    "wapeningsplan": {
-      "$ref": "#/components/schemas/Bestandsbijlage"
-    },
-    "uitvoeringsmethode": {
-      "$ref": "#/components/schemas/Uitvoeringsmethode"
+    "heeftVoegbanden": {
+      "$ref": "#/components/schemas/Sluisvoertegel.heeftVoegbanden"
     },
     "bekistingsplan": {
       "type": "array",
@@ -35,7 +26,16 @@
       },
       "minItems": 1
     },
+    "betonspecificaties": {
+      "$ref": "#/components/schemas/Betonspecificaties"
+    },
     "technischeFicheBetonbescherming": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "uitvoeringsmethode": {
+      "$ref": "#/components/schemas/Uitvoeringsmethode"
+    },
+    "wapeningsplan": {
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "naam": {
@@ -43,6 +43,17 @@
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Sluisvoertegel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Sluisvoertegel.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Sluisvoertegel.notitie"
@@ -55,22 +66,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Sluisvoertegel.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Sluisvoertegel.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Sluisvoertegel.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Sluisvoertegel.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Sluisvoertegel.isActief"
@@ -84,21 +84,21 @@
   },
   "required": [
     "@type",
-    "heeftVoegbanden",
     "afmetingen",
-    "betonspecificaties",
-    "wapeningsplan",
-    "uitvoeringsmethode",
+    "heeftVoegbanden",
     "bekistingsplan",
+    "betonspecificaties",
     "technischeFicheBetonbescherming",
+    "uitvoeringsmethode",
+    "wapeningsplan",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

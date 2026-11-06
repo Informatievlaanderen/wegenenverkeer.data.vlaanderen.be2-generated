@@ -12,17 +12,28 @@
       "description": "Object type (klasse Fendering)",
       "pattern": "^Fendering$"
     },
-    "typeFendering": {
-      "$ref": "#/components/schemas/KeuzelijstTypeFendering"
-    },
     "energie": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMegajoule"
+    },
+    "typeFendering": {
+      "$ref": "#/components/schemas/KeuzelijstTypeFendering"
     },
     "naam": {
       "$ref": "#/components/schemas/Fendering.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Fendering.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Fendering.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Fendering.notitie"
@@ -35,22 +46,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Fendering.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Fendering.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Fendering.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Fendering.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Fendering.isActief"
@@ -64,16 +64,16 @@
   },
   "required": [
     "@type",
-    "typeFendering",
     "energie",
+    "typeFendering",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

@@ -1,0 +1,133 @@
+{
+  "title": "BeweegbareWaterkerendeConstructie",
+  "type": "object",
+  "description": "Een beweegbare constructie ontworpen om een waterpeilverschil te keren, inclusief alle gelaste onderdelen die bijdragen aan de structurele integriteit en functionaliteit van de constructie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeweegbareWaterkerendeConstructie)",
+      "pattern": "^BeweegbareWaterkerendeConstructie$"
+    },
+    "afmetingenMangat": {
+      "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
+    },
+    "basisAfmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
+    },
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    },
+    "heeftDraaischelpen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftDraaischelpen"
+    },
+    "heeftHijsogen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftHijsogen"
+    },
+    "heeftOpboutbareDraaischelpen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen"
+    },
+    "heeftOpboutbareHijsogen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen"
+    },
+    "heeftPompput": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftPompput"
+    },
+    "isHoogtebeperkingAanwezig": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig"
+    },
+    "isMangatAanwezig": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isMangatAanwezig"
+    },
+    "isNivelleerOfSpuivoorzieningAanwezig": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig"
+    },
+    "kruinpeil": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalBWCTWC"
+    },
+    "niveauHoogtebeperking": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "typeBeweegbareconstructie": {
+      "$ref": "#/components/schemas/TypeBeweegbareWaterkerendeConstructie"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "afmetingenMangat",
+    "basisAfmeting",
+    "gewicht",
+    "heeftDraaischelpen",
+    "heeftHijsogen",
+    "heeftOpboutbareDraaischelpen",
+    "heeftOpboutbareHijsogen",
+    "heeftPompput",
+    "isHoogtebeperkingAanwezig",
+    "isMangatAanwezig",
+    "isNivelleerOfSpuivoorzieningAanwezig",
+    "kruinpeil",
+    "materiaal",
+    "niveauHoogtebeperking",
+    "typeBeweegbareconstructie",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

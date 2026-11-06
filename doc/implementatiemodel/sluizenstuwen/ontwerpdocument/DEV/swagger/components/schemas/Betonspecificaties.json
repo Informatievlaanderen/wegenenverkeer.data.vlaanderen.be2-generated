@@ -1,0 +1,99 @@
+{
+  "title": "Betonspecificaties",
+  "type": "object",
+  "description": "Complex datatype om de eigenschappen van beton te bundelen. Deze omvat onder andere de verschillende betonklassen,hoe het beton gebruikt wordt,eigenschappen van het cement,een technische fiche van het beton,...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Betonspecificaties)",
+      "pattern": "^Betonspecificaties$"
+    },
+    "betondekking": {
+      "type": "array",
+      "description": "De afstand in millimeter tussen de buitenkant van het beton (het oppervlak van het beton) tot het dichtstbijzijnde wapeningsstaal. Lijst van KwantitatieveWaardeInMillimeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+      },
+      "minItems": 1
+    },
+    "betonmilieuklassen": {
+      "type": "array",
+      "description": "Milieuklassen (X-klassen) leggen rechtstreeks de link met bepaalde aantastingsmechanismen, waaraan de betonconstructie (of een onderdeel ervan) wordt blootgesteld tijdens het gebruik. Er kunnen meerdere milieuklassen van toepassing zijn. Lijst van Betonmilieuklasse items.",
+      "items": {
+        "$ref": "#/components/schemas/Betonmilieuklasse"
+      },
+      "minItems": 1
+    },
+    "betonomgevingsklassen": {
+      "type": "array",
+      "description": "De omgeving waaraan de betonconstructie (of een onderdeel ervan) wordt blootgesteld tijdens het gebruik. Er kunnen meerdere omgevingsklassen van toepassing zijn. Lijst van Betonomgevingsklasse items.",
+      "items": {
+        "$ref": "#/components/schemas/Betonomgevingsklasse"
+      },
+      "minItems": 1
+    },
+    "betonsterkteklasse": {
+      "$ref": "#/components/schemas/Betonsterkteklasse"
+    },
+    "gebruiksdomein": {
+      "$ref": "#/components/schemas/Gebruiksdomein"
+    },
+    "grootsteKorrelafmeting(Dmax)": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isCementMetBeperktAlkaligehalte": {
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetBeperktAlkaligehalte"
+    },
+    "isCementMetHogeAanvangssterkte": {
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetHogeAanvangssterkte"
+    },
+    "isCementMetHogeBestandheidTegenSulfaten": {
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetHogeBestandheidTegenSulfaten"
+    },
+    "isCementMetLageHydratatiewarmte": {
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetLageHydratatiewarmte"
+    },
+    "isCementMetPolypropyleenvezels": {
+      "$ref": "#/components/schemas/Betonspecificaties.isCementMetPolypropyleenvezels"
+    },
+    "isColloïDaalbeton": {
+      "$ref": "#/components/schemas/Betonspecificaties.isColloïDaalbeton"
+    },
+    "technischeFiche": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "technischeFicheSpecificatiesBeton": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "toeslagmiddelen": {
+      "type": "array",
+      "description": "Materialen die aan het beton worden toegevoegd om vb.: een beter geheel te maken, holle ruimten te vullen waardoor de sterkte toeneemt, ruimten met minder massa te creëren,... Dit kunnen er meerdere zijn. Lijst van ToeslagmiddelBeton items.",
+      "items": {
+        "$ref": "#/components/schemas/ToeslagmiddelBeton"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "betondekking",
+    "betonmilieuklassen",
+    "betonomgevingsklassen",
+    "betonsterkteklasse",
+    "gebruiksdomein",
+    "grootsteKorrelafmeting(Dmax)",
+    "isCementMetBeperktAlkaligehalte",
+    "isCementMetHogeAanvangssterkte",
+    "isCementMetHogeBestandheidTegenSulfaten",
+    "isCementMetLageHydratatiewarmte",
+    "isCementMetPolypropyleenvezels",
+    "isColloïDaalbeton",
+    "technischeFiche",
+    "technischeFicheSpecificatiesBeton",
+    "toeslagmiddelen"
+  ]
+}

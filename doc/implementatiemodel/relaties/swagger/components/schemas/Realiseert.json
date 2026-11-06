@@ -1,0 +1,43 @@
+{
+  "title": "Realiseert",
+  "type": "object",
+  "description": "Verwijst naar een extern element in een extern vocabularium.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Realiseert)",
+      "pattern": "^Realiseert$"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdBron-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "asset-IdDoel-Asset": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Realiseert.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Realiseert.isActief"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "asset-Id",
+    "asset-IdBron-Asset",
+    "asset-IdDoel-Asset",
+    "typeURI",
+    "isActief",
+    "asset-Versie"
+  ]
+}

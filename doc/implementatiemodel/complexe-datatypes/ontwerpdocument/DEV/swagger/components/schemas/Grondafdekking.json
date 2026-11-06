@@ -1,0 +1,27 @@
+{
+  "title": "Grondafdekking",
+  "type": "object",
+  "description": "Complex datatype om extra informatie van de afdekking van grond te capteren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondafdekking)",
+      "pattern": "^Grondafdekking$"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Grondbestemming"
+    },
+    "soortGrondwerk": {
+      "$ref": "#/components/schemas/Grondwerksoorten"
+    }
+  },
+  "required": [
+    "@type",
+    "herkomst",
+    "soortGrondwerk"
+  ]
+}

@@ -12,6 +12,9 @@
       "description": "Object type (klasse Houtspecificaties)",
       "pattern": "^Houtspecificaties$"
     },
+    "fSC-Certificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
     "houtduurzaamheidsklasse": {
       "$ref": "#/components/schemas/DuurzaamheidsklasseVanHout"
     },
@@ -23,17 +26,14 @@
     },
     "isResistentTegenMarieneBoorders": {
       "$ref": "#/components/schemas/Houtspecificaties.isResistentTegenMarieneBoorders"
-    },
-    "fSC-Certificaat": {
-      "$ref": "#/components/schemas/Bestandsbijlage"
     }
   },
   "required": [
     "@type",
+    "fSC-Certificaat",
     "houtduurzaamheidsklasse",
     "houtkwaliteitsklasse",
     "houtsterkteklasse",
-    "isResistentTegenMarieneBoorders",
-    "fSC-Certificaat"
+    "isResistentTegenMarieneBoorders"
   ]
 }

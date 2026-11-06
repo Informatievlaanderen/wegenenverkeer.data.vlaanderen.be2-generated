@@ -1,0 +1,77 @@
+{
+  "title": "Loopprofiel",
+  "type": "object",
+  "description": "Een dragend profiel dat de werkbreedte van het hijs- en hefwerktuig overspant en dient als rijbaan voor de loopkat, waarbij de uiteinden worden ondersteund door wielen die op de loopbanen rijden of vast bevestigd zijn aan de bouwkundige constructie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Loopprofiel)",
+      "pattern": "^Loopprofiel$"
+    },
+    "beschikbareLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Loopprofiel.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Loopprofiel.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Loopprofiel.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Loopprofiel.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Loopprofiel.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Loopprofiel.datumOprichtingObject"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Loopprofiel.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "beschikbareLengte",
+    "naam",
+    "asset-Id",
+    "notitie",
+    "standaardbestekpostnummer",
+    "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

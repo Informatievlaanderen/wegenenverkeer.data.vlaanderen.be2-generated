@@ -18,20 +18,31 @@
     "productidentificatiecode": {
       "$ref": "#/components/schemas/Productidentificatiecode"
     },
-    "lengte": {
+    "breedte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
-    "breedte": {
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
+    "lengte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "oppervlakte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
     },
-    "laagrol": {
-      "$ref": "#/components/schemas/LaagRol"
-    },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Asfaltmat.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Asfaltmat.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Asfaltmat.notitie"
@@ -44,22 +55,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Asfaltmat.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Asfaltmat.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Asfaltmat.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Asfaltmat.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Asfaltmat.isActief"
@@ -73,33 +73,33 @@
     "elementBreedte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
-    "elementLengte": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-    },
     "elementGewicht": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInKilogram"
+    },
+    "elementLengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     }
   },
   "required": [
     "@type",
     "voegmateriaal",
     "productidentificatiecode",
-    "lengte",
     "breedte",
-    "oppervlakte",
     "laagrol",
+    "lengte",
+    "oppervlakte",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie",
     "elementBreedte",
-    "elementLengte",
-    "elementGewicht"
+    "elementGewicht",
+    "elementLengte"
   ]
 }

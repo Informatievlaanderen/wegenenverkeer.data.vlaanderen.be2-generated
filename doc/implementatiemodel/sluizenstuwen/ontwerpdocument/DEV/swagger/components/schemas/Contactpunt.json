@@ -1,0 +1,105 @@
+{
+  "title": "Contactpunt",
+  "type": "object",
+  "description": "Techniek voor het meten van een aan- of afwezigheid van contact tussen de onderdelen waaraan deze bevestigd is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Contactpunt)",
+      "pattern": "^Contactpunt$"
+    },
+    "isBuiten": {
+      "$ref": "#/components/schemas/Contactpunt.isBuiten"
+    },
+    "isOpbouw": {
+      "$ref": "#/components/schemas/Contactpunt.isOpbouw"
+    },
+    "isWisselcontact": {
+      "$ref": "#/components/schemas/Contactpunt.isWisselcontact"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenContactpunten"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenContactpunten"
+    },
+    "typeContactpunt": {
+      "$ref": "#/components/schemas/ContactpuntType"
+    },
+    "serienummer": {
+      "$ref": "#/components/schemas/Contactpunt.serienummer"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Contactpunt.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Contactpunt.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactpunt.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Contactpunt.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Contactpunt.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactpunt.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Contactpunt.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Contactpunt.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "isBuiten",
+    "isOpbouw",
+    "isWisselcontact",
+    "merk",
+    "modelnaam",
+    "typeContactpunt",
+    "serienummer",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "Toegangsvoorziening",
+  "type": "object",
+  "description": "Een toegangsschouw of ruimte die is ontworpen om personen in staat te stellen componenten van het kunstwerk te bereiken, te inspecteren en eraan te werken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toegangsvoorziening)",
+      "pattern": "^Toegangsvoorziening$"
+    },
+    "afmetingenToegangsvoorziening": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.afmetingenToegangsvoorziening"
+    },
+    "isVeiligheidsvoorzieningAanwezig": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.isVeiligheidsvoorzieningAanwezig"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegangsvoorziening.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegangsvoorziening.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Toegangsvoorziening.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "afmetingenToegangsvoorziening",
+    "isVeiligheidsvoorzieningAanwezig",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

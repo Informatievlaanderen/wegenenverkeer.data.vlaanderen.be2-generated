@@ -2034,6 +2034,55 @@
           "standaardEenheid"
         ]
       },
+      "KwantitatieveWaardeInRadialen..standaardEenheid": {
+        "title": "KwantitatieveWaardeInRadialen..standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in radialen.",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInRadialen..waarde": {
+        "title": "KwantitatieveWaardeInRadialen..waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInRadialen.": {
+        "title": "KwantitatieveWaardeInRadialen.",
+        "type": "object",
+        "description": "Een kwantitatieve waarde dat een getal uitdrukt in radialen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInRadialen.)",
+            "pattern": "^KwantitatieveWaardeInRadialen.$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
       "KwantitatieveWaardeInKiloNewtonPerMeter.standaardEenheid": {
         "title": "KwantitatieveWaardeInKiloNewtonPerMeter.standaardEenheid",
         "description": "De standaard eenheid bij dit datatype is uitgedrukt in kiloNewton per meter. \"kN/m\"^^cdt:ucumunit",

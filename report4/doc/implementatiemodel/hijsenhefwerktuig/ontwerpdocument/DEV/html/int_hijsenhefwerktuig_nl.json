@@ -1,0 +1,2960 @@
+{
+  "baseURI": "http://todo.com/",
+  "classes": [
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+      "vocabularyLabel": {
+        "nl": "AIM databank status"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM databank status"
+      },
+      "vocabularyDefinition": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
+          "vocabularyLabel": {
+            "nl": "is actief"
+          },
+          "applicationProfileLabel": {
+            "nl": "is actief"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Boolean"
+            },
+            "applicationProfileLabel": {
+              "nl": "Boolean"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+      "vocabularyLabel": {
+        "nl": "AIM naam object"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM naam object"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "vocabularyLabel": {
+            "nl": "AIM object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+          "vocabularyLabel": {
+            "nl": "naam"
+          },
+          "applicationProfileLabel": {
+            "nl": "naam"
+          },
+          "vocabularyDefinition": {
+            "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
+          },
+          "vocabularyUsageNote": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+      "vocabularyLabel": {
+        "nl": "AIM object"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM object"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+          "vocabularyLabel": {
+            "nl": "AIM databank status"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM databank status"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
+          "vocabularyLabel": {
+            "nl": "AIM Toestand"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM Toestand"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "vocabularyLabel": {
+            "nl": "AIM versie"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM versie"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+          "vocabularyLabel": {
+            "nl": "asset-id"
+          },
+          "applicationProfileLabel": {
+            "nl": "asset-id"
+          },
+          "vocabularyDefinition": {
+            "nl": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Identificator"
+            },
+            "applicationProfileLabel": {
+              "nl": "Identificator"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+          "vocabularyLabel": {
+            "nl": "bestekpostnummer"
+          },
+          "applicationProfileLabel": {
+            "nl": "bestekpostnummer"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."
+          },
+          "vocabularyUsageNote": {
+            "nl": "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "*"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+          "vocabularyLabel": {
+            "nl": "datum oprichting object"
+          },
+          "applicationProfileLabel": {
+            "nl": "datum oprichting object"
+          },
+          "vocabularyDefinition": {
+            "nl": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#date",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Datum"
+            },
+            "applicationProfileLabel": {
+              "nl": "Datum"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+          "vocabularyLabel": {
+            "nl": "notitie"
+          },
+          "applicationProfileLabel": {
+            "nl": "notitie"
+          },
+          "vocabularyDefinition": {
+            "nl": "Extra notitie voor het object."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Extra notitie voor het object."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+          "vocabularyLabel": {
+            "nl": "standaardbestekpostnummer"
+          },
+          "applicationProfileLabel": {
+            "nl": "standaardbestekpostnummer"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "*"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+          "vocabularyLabel": {
+            "nl": "theoretische levensduur"
+          },
+          "applicationProfileLabel": {
+            "nl": "theoretische levensduur"
+          },
+          "vocabularyDefinition": {
+            "nl": "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in maand"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in maand"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+          "vocabularyLabel": {
+            "nl": "type URI"
+          },
+          "applicationProfileLabel": {
+            "nl": "type URI"
+          },
+          "vocabularyDefinition": {
+            "nl": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "URI"
+            },
+            "applicationProfileLabel": {
+              "nl": "URI"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "AIM toestand"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM toestand"
+      },
+      "vocabularyDefinition": {
+        "nl": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
+      "vocabularyLabel": {
+        "nl": "AIM Toestand"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM Toestand"
+      },
+      "vocabularyDefinition": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+          "vocabularyLabel": {
+            "nl": "AIM-toestand"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM-toestand"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft de actuele stand in de levenscyclus van het object."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft de actuele stand in de levenscyclus van het object."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "AIM toestand"
+            },
+            "applicationProfileLabel": {
+              "nl": "AIM toestand"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAIMToestand"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "vocabularyLabel": {
+        "nl": "AIM versie"
+      },
+      "applicationProfileLabel": {
+        "nl": "AIM versie"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+          "vocabularyLabel": {
+            "nl": "asset-versie"
+          },
+          "applicationProfileLabel": {
+            "nl": "asset-versie"
+          },
+          "vocabularyDefinition": {
+            "nl": "De versie van de asset in de database."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De versie van de asset in de database."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Asset versie"
+            },
+            "applicationProfileLabel": {
+              "nl": "Asset versie"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balk",
+      "vocabularyLabel": {
+        "nl": "Balk"
+      },
+      "applicationProfileLabel": {
+        "nl": "Balk"
+      },
+      "vocabularyDefinition": {
+        "nl": "Ruimteoverspannend enkelvoudig constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. De breedte is weer gelijk of kleiner dan de hoogte."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Ruimteoverspannend enkelvoudig constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. De breedte is weer gelijk of kleiner dan de hoogte."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk",
+          "vocabularyLabel": {
+            "nl": "Constructie element aanvaarbescherming geleidewerk"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructie element aanvaarbescherming geleidewerk"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+          "vocabularyLabel": {
+            "nl": "Constructie element sluis en stuw"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructie element sluis en stuw"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+          "vocabularyLabel": {
+            "nl": "Constructief object"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructief object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balk.typeBalk",
+          "vocabularyLabel": {
+            "nl": "type balk"
+          },
+          "applicationProfileLabel": {
+            "nl": "type balk"
+          },
+          "vocabularyDefinition": {
+            "nl": "De soort van balk."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De soort van balk."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balk",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type balk"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type balk"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeBalk"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestiging",
+      "vocabularyLabel": {
+        "nl": "Bevestiging"
+      },
+      "applicationProfileLabel": {
+        "nl": "Bevestiging"
+      },
+      "vocabularyDefinition": {
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
+          "vocabularyLabel": {
+            "nl": "Niet-directionele relatie"
+          },
+          "applicationProfileLabel": {
+            "nl": "Niet-directionele relatie"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElement",
+      "vocabularyLabel": {
+        "nl": "Constructie element"
+      },
+      "applicationProfileLabel": {
+        "nl": "Constructie element"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk",
+      "vocabularyLabel": {
+        "nl": "Constructie element aanvaarbescherming geleidewerk"
+      },
+      "applicationProfileLabel": {
+        "nl": "Constructie element aanvaarbescherming geleidewerk"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen van de aanvaarbescherming en geleidewerk."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen van de aanvaarbescherming en geleidewerk."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+      "vocabularyLabel": {
+        "nl": "Constructie element sluis en stuw"
+      },
+      "applicationProfileLabel": {
+        "nl": "Constructie element sluis en stuw"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen die bij een sluis of stuw kunnen horen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte voor de verschillende constructie elementen die bij een sluis of stuw kunnen horen."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+      "vocabularyLabel": {
+        "nl": "Constructief object"
+      },
+      "applicationProfileLabel": {
+        "nl": "Constructief object"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een bundeling van alle constructieve installaties."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een bundeling van alle constructieve installaties."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElement",
+          "vocabularyLabel": {
+            "nl": "Constructie element"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructie element"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Draagstructuur BWCTWC"
+      },
+      "applicationProfileLabel": {
+        "nl": "Draagstructuur BWCTWC"
+      },
+      "vocabularyDefinition": {
+        "nl": "Type van draagstructuur gebruikt in beweegbare waterkerende constructies en tijdelijke waterkerende constructies."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Type van draagstructuur gebruikt in beweegbare waterkerende constructies en tijdelijke waterkerende constructies."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC",
+      "vocabularyLabel": {
+        "nl": "Draagstructuur van een beweegbare -en tijdelijke waterkerende constructie"
+      },
+      "applicationProfileLabel": {
+        "nl": "Draagstructuur van een beweegbare -en tijdelijke waterkerende constructie"
+      },
+      "vocabularyDefinition": {
+        "nl": "Dragende constructie (raamwerk) van een beweegbare waterkerende constructie of tijdelijke waterkerende constructie."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Dragende constructie (raamwerk) van een beweegbare waterkerende constructie of tijdelijke waterkerende constructie."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+          "vocabularyLabel": {
+            "nl": "Constructief object"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructief object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC.type",
+          "vocabularyLabel": {
+            "nl": "type"
+          },
+          "applicationProfileLabel": {
+            "nl": "type"
+          },
+          "vocabularyDefinition": {
+            "nl": "Verwijst naar de type van draagstructuur gebruikt in beweegbare waterkerende constructies en tijdelijke waterkerende constructies"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Verwijst naar de type van draagstructuur gebruikt in beweegbare waterkerende constructies en tijdelijke waterkerende constructies"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Draagstructuur BWCTWC"
+            },
+            "applicationProfileLabel": {
+              "nl": "Draagstructuur BWCTWC"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDraagstructuurBWCTWC"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HijsEnHefwerktuig",
+      "vocabularyLabel": {
+        "nl": "Hijs en hefwerktuig"
+      },
+      "applicationProfileLabel": {
+        "nl": "Hijs en hefwerktuig"
+      },
+      "vocabularyDefinition": {
+        "nl": "Het geheel van mechanische componenten dat bedoeld is voor het verticaal en/of horizontaal verplaatsen van lasten door middel van hijs- en/of hefbewegingen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Het geheel van mechanische componenten dat bedoeld is voor het verticaal en/of horizontaal verplaatsen van lasten door middel van hijs- en/of hefbewegingen."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+          "vocabularyLabel": {
+            "nl": "Naampad object"
+          },
+          "applicationProfileLabel": {
+            "nl": "Naampad object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hijspunt",
+      "vocabularyLabel": {
+        "nl": "Hijspunt"
+      },
+      "applicationProfileLabel": {
+        "nl": "Hijspunt"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een vast bevestigingspunt, gemonteerd aan de bouwkundige constructie, waaraan een takel kan worden opgehangen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een vast bevestigingspunt, gemonteerd aan de bouwkundige constructie, waaraan een takel kan worden opgehangen."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hijspunt.maximaleWerklast",
+          "vocabularyLabel": {
+            "nl": "maximale werklast"
+          },
+          "applicationProfileLabel": {
+            "nl": "maximale werklast"
+          },
+          "vocabularyDefinition": {
+            "nl": "De maximaal toegelaten belasting die het hijspunt kan opnemen en overdragen in kilonewton."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De maximaal toegelaten belasting die het hijspunt kan opnemen en overdragen in kilonewton."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hijspunt",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in kN"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in kN"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hijspunt.typeBevestiging",
+          "vocabularyLabel": {
+            "nl": "type bevestiging"
+          },
+          "applicationProfileLabel": {
+            "nl": "type bevestiging"
+          },
+          "vocabularyDefinition": {
+            "nl": "De wijze waarop het hijspunt aan het constructie-element is bevestigd."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De wijze waarop het hijspunt aan het constructie-element is bevestigd."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hijspunt",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type bevestigingspunt"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type bevestigingspunt"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeBevestigingHijspunt"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HoortBij",
+      "vocabularyLabel": {
+        "nl": "Hoort bij"
+      },
+      "applicationProfileLabel": {
+        "nl": "Hoort bij"
+      },
+      "vocabularyDefinition": {
+        "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "vocabularyLabel": {
+            "nl": "Directionele relatie"
+          },
+          "applicationProfileLabel": {
+            "nl": "Directionele relatie"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat",
+      "vocabularyLabel": {
+        "nl": "Horizontale constructieplaat"
+      },
+      "applicationProfileLabel": {
+        "nl": "Horizontale constructieplaat"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een plaat die dient ter constructie en die horizontaal wordt gebruikt. Deze omvat geen platen die met fundering te maken hebben (vb.: funderingsplaat,funderingszool,...)."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een plaat die dient ter constructie en die horizontaal wordt gebruikt. Deze omvat geen platen die met fundering te maken hebben (vb.: funderingsplaat,funderingszool,...)."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk",
+          "vocabularyLabel": {
+            "nl": "Constructie element aanvaarbescherming geleidewerk"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructie element aanvaarbescherming geleidewerk"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+          "vocabularyLabel": {
+            "nl": "Constructie element sluis en stuw"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructie element sluis en stuw"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+          "vocabularyLabel": {
+            "nl": "Constructief object"
+          },
+          "applicationProfileLabel": {
+            "nl": "Constructief object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat.type",
+          "vocabularyLabel": {
+            "nl": "type"
+          },
+          "applicationProfileLabel": {
+            "nl": "type"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het type horizontale plaat."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het type horizontale plaat."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type horizontale plaat"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type horizontale plaat"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeHorizontalePlaat"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Keuzelijst technisch document"
+      },
+      "applicationProfileLabel": {
+        "nl": "Keuzelijst technisch document"
+      },
+      "vocabularyDefinition": {
+        "nl": "Keuzelijst met de verschillende optie voor technische documenten"
+      },
+      "applicationProfileDefinition": {
+        "nl": "Keuzelijst met de verschillende optie voor technische documenten"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LigtOp",
+      "vocabularyLabel": {
+        "nl": "Ligt op"
+      },
+      "applicationProfileLabel": {
+        "nl": "Ligt op"
+      },
+      "vocabularyDefinition": {
+        "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "vocabularyLabel": {
+            "nl": "Directionele relatie"
+          },
+          "applicationProfileLabel": {
+            "nl": "Directionele relatie"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Loopkat",
+      "vocabularyLabel": {
+        "nl": "Loopkat"
+      },
+      "applicationProfileLabel": {
+        "nl": "Loopkat"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een drager voorzien van wielen of rollers die over het loopprofiel loopt en een takel of andere hijsinrichting draagt, waardoor de last horizontaal verplaatst kan worden."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een drager voorzien van wielen of rollers die over het loopprofiel loopt en een takel of andere hijsinrichting draagt, waardoor de last horizontaal verplaatst kan worden."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Loopprofiel",
+      "vocabularyLabel": {
+        "nl": "Loopprofiel"
+      },
+      "applicationProfileLabel": {
+        "nl": "Loopprofiel"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een dragend profiel dat de werkbreedte van het hijs- en hefwerktuig overspant en dient als rijbaan voor de loopkat, waarbij de uiteinden worden ondersteund door wielen die op de loopbanen rijden of vast bevestigd zijn aan de bouwkundige constructie."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een dragend profiel dat de werkbreedte van het hijs- en hefwerktuig overspant en dient als rijbaan voor de loopkat, waarbij de uiteinden worden ondersteund door wielen die op de loopbanen rijden of vast bevestigd zijn aan de bouwkundige constructie."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Loopprofiel.beschikbareLengte",
+          "vocabularyLabel": {
+            "nl": "beschikbare lengte"
+          },
+          "applicationProfileLabel": {
+            "nl": "beschikbare lengte"
+          },
+          "vocabularyDefinition": {
+            "nl": "De beschikbare lengte van het loopprofiel waarover een loopkat zich kan verplaatsen."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De beschikbare lengte van het loopprofiel waarover een loopkat zich kan verplaatsen."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Loopprofiel",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in meter"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in meter"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Mimetype"
+      },
+      "applicationProfileLabel": {
+        "nl": "Mimetype"
+      },
+      "vocabularyDefinition": {
+        "nl": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "vocabularyLabel": {
+        "nl": "Naampad object"
+      },
+      "applicationProfileLabel": {
+        "nl": "Naampad object"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+          "vocabularyLabel": {
+            "nl": "naampad"
+          },
+          "applicationProfileLabel": {
+            "nl": "naampad"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+          },
+          "vocabularyUsageNote": {
+            "nl": "Dient consistent te zijn met de naam."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Dient consistent te zijn met de naam."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Portiek",
+      "vocabularyLabel": {
+        "nl": "Portiek"
+      },
+      "applicationProfileLabel": {
+        "nl": "Portiek"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een dragende constructie in de vorm van een omgekeerde (dubbele) U."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een dragende constructie in de vorm van een omgekeerde (dubbele) U."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TechnischDocument",
+          "vocabularyLabel": {
+            "nl": "Technisch document"
+          },
+          "applicationProfileLabel": {
+            "nl": "Technisch document"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Portiek.gewicht",
+          "vocabularyLabel": {
+            "nl": "gewicht"
+          },
+          "applicationProfileLabel": {
+            "nl": "gewicht"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het gewicht, uitgedrukt in kilogram."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het gewicht, uitgedrukt in kilogram."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Portiek",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in ton"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in ton"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+      "vocabularyLabel": {
+        "nl": "Railconstructie"
+      },
+      "applicationProfileLabel": {
+        "nl": "Railconstructie"
+      },
+      "vocabularyDefinition": {
+        "nl": "Geheel bestaande uit een doorlopend profiel waarop of waartegen iets rijdt of glijdt, samen met de klemmen, tussenplaten en ondersteuningsprofielen die het profiel bevestigen en ondersteunen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Geheel bestaande uit een doorlopend profiel waarop of waartegen iets rijdt of glijdt, samen met de klemmen, tussenplaten en ondersteuningsprofielen die het profiel bevestigen en ondersteunen."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TechnischDocument",
+          "vocabularyLabel": {
+            "nl": "Technisch document"
+          },
+          "applicationProfileLabel": {
+            "nl": "Technisch document"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.aantalVoegen",
+          "vocabularyLabel": {
+            "nl": "aantal voegen"
+          },
+          "applicationProfileLabel": {
+            "nl": "aantal voegen"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het aantal voegen."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het aantal voegen."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#integer",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Geheel getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Geheel getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.heeftLangsblokkeringrail",
+          "vocabularyLabel": {
+            "nl": "heeft langsblokkeringrail"
+          },
+          "applicationProfileLabel": {
+            "nl": "heeft langsblokkeringrail"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft aan of de rail langsblokkeringrail heeft of niet."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft aan of de rail langsblokkeringrail heeft of niet."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Boolean"
+            },
+            "applicationProfileLabel": {
+              "nl": "Boolean"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.heeftOnderlegmat",
+          "vocabularyLabel": {
+            "nl": "heeft onderlegmat"
+          },
+          "applicationProfileLabel": {
+            "nl": "heeft onderlegmat"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft aan of de railconstructie een onderlegmat heeft."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft aan of de railconstructie een onderlegmat heeft."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Boolean"
+            },
+            "applicationProfileLabel": {
+              "nl": "Boolean"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.heeftTussenplaat",
+          "vocabularyLabel": {
+            "nl": "heeft tussenplaat"
+          },
+          "applicationProfileLabel": {
+            "nl": "heeft tussenplaat"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft aan of de railconstructie een tussenplaat heeft."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft aan of de railconstructie een tussenplaat heeft."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Boolean"
+            },
+            "applicationProfileLabel": {
+              "nl": "Boolean"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.heeftVoegen",
+          "vocabularyLabel": {
+            "nl": "heeft voegen"
+          },
+          "applicationProfileLabel": {
+            "nl": "heeft voegen"
+          },
+          "vocabularyDefinition": {
+            "nl": "Geeft aan of de bovenrolwagen voegen heeft of niet."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Geeft aan of de bovenrolwagen voegen heeft of niet."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#boolean",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Boolean"
+            },
+            "applicationProfileLabel": {
+              "nl": "Boolean"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.klemtype",
+          "vocabularyLabel": {
+            "nl": "klemtype"
+          },
+          "applicationProfileLabel": {
+            "nl": "klemtype"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het type klem gebruikt in de railconstructie."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het type klem gebruikt in de railconstructie."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type klem"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type klem"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeKlem"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.typeBevestiging",
+          "vocabularyLabel": {
+            "nl": "type bevestiging rail"
+          },
+          "applicationProfileLabel": {
+            "nl": "type bevestiging rail"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het type bevestiging van een rail."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het type bevestiging van een rail."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type bevestiging rail"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type bevestiging rail"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeBevestigingRail"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie.typeKlem",
+          "vocabularyLabel": {
+            "nl": "type klem"
+          },
+          "applicationProfileLabel": {
+            "nl": "type klem"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het type klem gebruikt in de railconstructie."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het type klem gebruikt in de railconstructie."
+          },
+          "vocabularyUsageNote": {
+            "nl": "Attribuut uit gebruik sinds versie 2.20.0-RC1"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Attribuut uit gebruik sinds versie 2.20.0-RC1"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Railconstructie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+      "vocabularyLabel": {
+        "nl": "Takel"
+      },
+      "applicationProfileLabel": {
+        "nl": "Takel"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een hijsmiddel dat instaat voor het verticaal verplaatsen van een last via onder andere een staalkabel, ketting of hijsband."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een hijsmiddel dat instaat voor het verticaal verplaatsen van een last via onder andere een staalkabel, ketting of hijsband."
+      },
+      "parents": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "vocabularyLabel": {
+            "nl": "AIM naam object"
+          },
+          "applicationProfileLabel": {
+            "nl": "AIM naam object"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel.hijshoogte",
+          "vocabularyLabel": {
+            "nl": "hijshoogte"
+          },
+          "applicationProfileLabel": {
+            "nl": "hijshoogte"
+          },
+          "vocabularyDefinition": {
+            "nl": "De maximale verticale afstand waarover een last door de takel kan worden verplaatst in meter."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De maximale verticale afstand waarover een last door de takel kan worden verplaatst in meter."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in meter"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in meter"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel.massa",
+          "vocabularyLabel": {
+            "nl": "massa"
+          },
+          "applicationProfileLabel": {
+            "nl": "massa"
+          },
+          "vocabularyDefinition": {
+            "nl": "De massa van de takel als object, exclusief de hijslast, in ton."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De massa van de takel als object, exclusief de hijslast, in ton."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in ton"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in ton"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel.maximaleWerklast",
+          "vocabularyLabel": {
+            "nl": "maximale werklast"
+          },
+          "applicationProfileLabel": {
+            "nl": "maximale werklast"
+          },
+          "vocabularyDefinition": {
+            "nl": "De maximaal toegelaten belasting die door de takel veilig kan worden gehesen in kilonewton."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De maximaal toegelaten belasting die door de takel veilig kan worden gehesen in kilonewton."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Kwantitatieve waarde in kN"
+            },
+            "applicationProfileLabel": {
+              "nl": "Kwantitatieve waarde in kN"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel.typeAandrijvingTakel",
+          "vocabularyLabel": {
+            "nl": "type aandrijving takel"
+          },
+          "applicationProfileLabel": {
+            "nl": "type aandrijving takel"
+          },
+          "vocabularyDefinition": {
+            "nl": "De aard van het mechanisme waarmee de takel wordt aangedreven om de hijsbeweging te realiseren."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De aard van het mechanisme waarmee de takel wordt aangedreven om de hijsbeweging te realiseren."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type aandrijving takel"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type aandrijving takel"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeAandrijvingTakel"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel.typeTakel",
+          "vocabularyLabel": {
+            "nl": "type takel"
+          },
+          "applicationProfileLabel": {
+            "nl": "type takel"
+          },
+          "vocabularyDefinition": {
+            "nl": "De classificatie van de takel op basis van constructie en werkingsprincipe."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De classificatie van de takel op basis van constructie en werkingsprincipe."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Takel",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Type takel"
+            },
+            "applicationProfileLabel": {
+              "nl": "Type takel"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeTakel"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TechnischDocument",
+      "vocabularyLabel": {
+        "nl": "Technisch document"
+      },
+      "applicationProfileLabel": {
+        "nl": "Technisch document"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstracte met technisch document"
+      },
+      "applicationProfileDefinition": {
+        "nl": "Abstracte met technisch document"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TechnischDocument.technischDocument",
+          "vocabularyLabel": {
+            "nl": "technisch document"
+          },
+          "applicationProfileLabel": {
+            "nl": "technisch document"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TechnischDocument",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "complex datatype technisch document"
+            },
+            "applicationProfileLabel": {
+              "nl": "complex datatype technisch document"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "*"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type aandrijving takel"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type aandrijving takel"
+      },
+      "vocabularyDefinition": {
+        "nl": "De mogelijke types aandrijving van een takel, volgens de aard van het mechanisme waarmee de hijsbeweging wordt gerealiseerd."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De mogelijke types aandrijving van een takel, volgens de aard van het mechanisme waarmee de hijsbeweging wordt gerealiseerd."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type balk"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type balk"
+      },
+      "vocabularyDefinition": {
+        "nl": "De soort balk."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De soort balk."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type bevestiging rail"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type bevestiging rail"
+      },
+      "vocabularyDefinition": {
+        "nl": "Lijst met de verschillende types bevestiging van een rail."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Lijst met de verschillende types bevestiging van een rail."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type bevestigingspunt"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type bevestigingspunt"
+      },
+      "vocabularyDefinition": {
+        "nl": "De mogelijke wijzen waarop een hijspunt aan de bouwkundige constructie is bevestigd."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De mogelijke wijzen waarop een hijspunt aan de bouwkundige constructie is bevestigd."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type horizontale plaat"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type horizontale plaat"
+      },
+      "vocabularyDefinition": {
+        "nl": "Het type horizontale plaat."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Het type horizontale plaat."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type klem"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type klem"
+      },
+      "vocabularyDefinition": {
+        "nl": "De verschillende types klemmen."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De verschillende types klemmen."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocabularyLabel": {
+        "nl": "Type takel"
+      },
+      "applicationProfileLabel": {
+        "nl": "Type takel"
+      },
+      "vocabularyDefinition": {
+        "nl": "De mogelijke types takel, geclassificeerd op basis van constructie en werkingsprincipe."
+      },
+      "applicationProfileDefinition": {
+        "nl": "De mogelijke types takel, geclassificeerd op basis van constructie en werkingsprincipe."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    }
+  ],
+  "dataTypes": [
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "vocabularyLabel": {
+        "nl": "Asset versie"
+      },
+      "applicationProfileLabel": {
+        "nl": "Asset versie"
+      },
+      "vocabularyDefinition": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "vocabularyLabel": {
+            "nl": "context"
+          },
+          "applicationProfileLabel": {
+            "nl": "context"
+          },
+          "vocabularyDefinition": {
+            "nl": "De context van de versie creatie."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De context van de versie creatie."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "vocabularyLabel": {
+            "nl": "timestamp"
+          },
+          "applicationProfileLabel": {
+            "nl": "timestamp"
+          },
+          "vocabularyDefinition": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Datumtijd"
+            },
+            "applicationProfileLabel": {
+              "nl": "Datumtijd"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "vocabularyLabel": {
+            "nl": "versienummer"
+          },
+          "applicationProfileLabel": {
+            "nl": "versienummer"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Natuurlijk getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Natuurlijk getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+      "vocabularyLabel": {
+        "nl": "Bestandsbijlage"
+      },
+      "applicationProfileLabel": {
+        "nl": "Bestandsbijlage"
+      },
+      "vocabularyDefinition": {
+        "nl": "Complex datatype voor alle bestandsbijlages."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Complex datatype voor alle bestandsbijlages."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
+          "vocabularyLabel": {
+            "nl": "bestandsnaam"
+          },
+          "applicationProfileLabel": {
+            "nl": "bestandsnaam"
+          },
+          "vocabularyDefinition": {
+            "nl": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType",
+          "vocabularyLabel": {
+            "nl": "mime-type"
+          },
+          "applicationProfileLabel": {
+            "nl": "mime-type"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het MIME type van het document."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het MIME type van het document."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Mimetype"
+            },
+            "applicationProfileLabel": {
+              "nl": "Mimetype"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving",
+          "vocabularyLabel": {
+            "nl": "omschrijving"
+          },
+          "applicationProfileLabel": {
+            "nl": "omschrijving"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een korte toelichting over waar het document juist voor dient."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een korte toelichting over waar het document juist voor dient."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Tekstblok"
+            },
+            "applicationProfileLabel": {
+              "nl": "Tekstblok"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum",
+          "vocabularyLabel": {
+            "nl": "opmaakdatum"
+          },
+          "applicationProfileLabel": {
+            "nl": "opmaakdatum"
+          },
+          "vocabularyDefinition": {
+            "nl": "De datum waarop het document is opgemaakt."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De datum waarop het document is opgemaakt."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#date",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Datum"
+            },
+            "applicationProfileLabel": {
+              "nl": "Datum"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
+          "vocabularyLabel": {
+            "nl": "uri"
+          },
+          "applicationProfileLabel": {
+            "nl": "uri"
+          },
+          "vocabularyDefinition": {
+            "nl": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "URI"
+            },
+            "applicationProfileLabel": {
+              "nl": "URI"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#boolean",
+      "vocabularyLabel": {
+        "nl": "Boolean"
+      },
+      "applicationProfileLabel": {
+        "nl": "Boolean"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#boolean"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#boolean"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument",
+      "vocabularyLabel": {
+        "nl": "complex datatype technisch document"
+      },
+      "applicationProfileLabel": {
+        "nl": "complex datatype technisch document"
+      },
+      "vocabularyDefinition": {
+        "nl": "Complex datatype om een of meerdere technische documenten aan te koppelen aan de assets"
+      },
+      "applicationProfileDefinition": {
+        "nl": "Complex datatype om een of meerdere technische documenten aan te koppelen aan de assets"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument.bijlage",
+          "vocabularyLabel": {
+            "nl": "bijlage"
+          },
+          "applicationProfileLabel": {
+            "nl": "bijlage"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een bestandsbijlage."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een bestandsbijlage."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument",
+          "range": {
+            "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Bestandsbijlage"
+            },
+            "applicationProfileLabel": {
+              "nl": "Bestandsbijlage"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument.typeDocument",
+          "vocabularyLabel": {
+            "nl": "type document"
+          },
+          "applicationProfileLabel": {
+            "nl": "type document"
+          },
+          "vocabularyDefinition": {
+            "nl": "Het type bestandsbijlage."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het type bestandsbijlage."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTechnischDocument",
+          "range": {
+            "id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Keuzelijst technisch document"
+            },
+            "applicationProfileLabel": {
+              "nl": "Keuzelijst technisch document"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1",
+          "codelist": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTechnischDocument"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#date",
+      "vocabularyLabel": {
+        "nl": "Datum"
+      },
+      "applicationProfileLabel": {
+        "nl": "Datum"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een datum volgens http://www.w3.org/2001/XMLSchema#date."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een datum volgens http://www.w3.org/2001/XMLSchema#date."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#date"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#date"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "vocabularyLabel": {
+        "nl": "Datumtijd"
+      },
+      "applicationProfileLabel": {
+        "nl": "Datumtijd"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#decimal",
+      "vocabularyLabel": {
+        "nl": "Decimaal getal"
+      },
+      "applicationProfileLabel": {
+        "nl": "Decimaal getal"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#decimal"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#decimal"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#integer",
+      "vocabularyLabel": {
+        "nl": "Geheel getal"
+      },
+      "applicationProfileLabel": {
+        "nl": "Geheel getal"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een geheel getal volgens http://www.w3.org/2001/XMLSchema#integer."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een geheel getal volgens http://www.w3.org/2001/XMLSchema#integer."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#integer"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#integer"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+      "vocabularyLabel": {
+        "nl": "Identificator"
+      },
+      "applicationProfileLabel": {
+        "nl": "Identificator"
+      },
+      "vocabularyDefinition": {
+        "nl": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
+          "vocabularyLabel": {
+            "nl": "identificator"
+          },
+          "applicationProfileLabel": {
+            "nl": "identificator"
+          },
+          "vocabularyDefinition": {
+            "nl": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
+          "vocabularyLabel": {
+            "nl": "toegekend door"
+          },
+          "applicationProfileLabel": {
+            "nl": "toegekend door"
+          },
+          "vocabularyDefinition": {
+            "nl": "Gegevens van de organisatie die de toekenning deed."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Gegevens van de organisatie die de toekenning deed."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+      "vocabularyLabel": {
+        "nl": "Kwantitatieve waarde in kN"
+      },
+      "applicationProfileLabel": {
+        "nl": "Kwantitatieve waarde in kN"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in KiloNewton uitdrukt."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in KiloNewton uitdrukt."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.standaardEenheid",
+          "vocabularyLabel": {
+            "nl": "standaard eenheid"
+          },
+          "applicationProfileLabel": {
+            "nl": "standaard eenheid"
+          },
+          "vocabularyDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in kiloNewton."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in kiloNewton."
+          },
+          "vocabularyUsageNote": {
+            "nl": "\"kN\"^^cdt:ucumunit"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "\"kN\"^^cdt:ucumunit"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton.waarde",
+          "vocabularyLabel": {
+            "nl": "waarde"
+          },
+          "applicationProfileLabel": {
+            "nl": "waarde"
+          },
+          "vocabularyDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#decimal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Decimaal getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Decimaal getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+      "vocabularyLabel": {
+        "nl": "Kwantitatieve waarde in maand"
+      },
+      "applicationProfileLabel": {
+        "nl": "Kwantitatieve waarde in maand"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+          "vocabularyLabel": {
+            "nl": "standaard eenheid"
+          },
+          "applicationProfileLabel": {
+            "nl": "standaard eenheid"
+          },
+          "vocabularyDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in maand."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in maand."
+          },
+          "vocabularyUsageNote": {
+            "nl": "\"mo\"^^cdt:ucumunit"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "\"mo\"^^cdt:ucumunit"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+          "vocabularyLabel": {
+            "nl": "waarde"
+          },
+          "applicationProfileLabel": {
+            "nl": "waarde"
+          },
+          "vocabularyDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Natuurlijk getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Natuurlijk getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+      "vocabularyLabel": {
+        "nl": "Kwantitatieve waarde in meter"
+      },
+      "applicationProfileLabel": {
+        "nl": "Kwantitatieve waarde in meter"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in meter uitdrukt."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in meter uitdrukt."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+          "vocabularyLabel": {
+            "nl": "standaard eenheid"
+          },
+          "applicationProfileLabel": {
+            "nl": "standaard eenheid"
+          },
+          "vocabularyDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in meter."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in meter."
+          },
+          "vocabularyUsageNote": {
+            "nl": "\"m\"^^cdt:ucumunit"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "\"m\"^^cdt:ucumunit"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+          "vocabularyLabel": {
+            "nl": "waarde"
+          },
+          "applicationProfileLabel": {
+            "nl": "waarde"
+          },
+          "vocabularyDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#decimal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Decimaal getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Decimaal getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+      "vocabularyLabel": {
+        "nl": "Kwantitatieve waarde in ton"
+      },
+      "applicationProfileLabel": {
+        "nl": "Kwantitatieve waarde in ton"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in ton uitdrukt."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een kwantitatieve waarde die een getal in ton uitdrukt."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon.standaardEenheid",
+          "vocabularyLabel": {
+            "nl": "standaard eenheid"
+          },
+          "applicationProfileLabel": {
+            "nl": "standaard eenheid"
+          },
+          "vocabularyDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in ton."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in ton."
+          },
+          "vocabularyUsageNote": {
+            "nl": "\"t\"^^cdt:ucumunit"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "\"t\"^^cdt:ucumunit"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde",
+          "vocabularyLabel": {
+            "nl": "waarde"
+          },
+          "applicationProfileLabel": {
+            "nl": "waarde"
+          },
+          "vocabularyDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#decimal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Decimaal getal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Decimaal getal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "vocabularyLabel": {
+        "nl": "Literal"
+      },
+      "applicationProfileLabel": {
+        "nl": "Literal"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een constante."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een constante."
+      },
+      "vocabularyUsageNote": {
+        "nl": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      "vocabularyLabel": {
+        "nl": "Natuurlijk getal"
+      },
+      "applicationProfileLabel": {
+        "nl": "Natuurlijk getal"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#string",
+      "vocabularyLabel": {
+        "nl": "String"
+      },
+      "applicationProfileLabel": {
+        "nl": "String"
+      },
+      "vocabularyDefinition": {
+        "nl": "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#string"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok",
+      "vocabularyLabel": {
+        "nl": "Tekstblok"
+      },
+      "applicationProfileLabel": {
+        "nl": "Tekstblok"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
+          "vocabularyLabel": {
+            "nl": "waarde"
+          },
+          "applicationProfileLabel": {
+            "nl": "waarde"
+          },
+          "vocabularyDefinition": {
+            "nl": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+          },
+          "applicationProfileDefinition": {
+            "nl": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPublicationEnvironment",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#string",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "String"
+            },
+            "applicationProfileLabel": {
+              "nl": "String"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "vocabularyLabel": {
+        "nl": "URI"
+      },
+      "applicationProfileLabel": {
+        "nl": "URI"
+      },
+      "vocabularyDefinition": {
+        "nl": "Een tekstwaarde die een verwijzing naar meer informatie van het element bevat volgens http://www.w3.org/2001/XMLSchema#anyURI ."
+      },
+      "applicationProfileDefinition": {
+        "nl": "Een tekstwaarde die een verwijzing naar meer informatie van het element bevat volgens http://www.w3.org/2001/XMLSchema#anyURI ."
+      },
+      "vocabularyUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#anyURI"
+      },
+      "applicationProfileUsageNote": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#anyURI"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    }
+  ],
+  "properties": []
+}

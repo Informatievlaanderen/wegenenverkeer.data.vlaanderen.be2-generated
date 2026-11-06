@@ -1,0 +1,39 @@
+{
+  "title": "Bestandsbijlage",
+  "type": "object",
+  "description": "Complex datatype voor alle bestandsbijlages.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bestandsbijlage)",
+      "pattern": "^Bestandsbijlage$"
+    },
+    "bestandsnaam": {
+      "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
+    },
+    "mime-Type": {
+      "$ref": "#/components/schemas/Mimetype"
+    },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Tekstblok"
+    },
+    "opmaakdatum": {
+      "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
+    },
+    "uri": {
+      "$ref": "#/components/schemas/Bestandsbijlage.uri"
+    }
+  },
+  "required": [
+    "@type",
+    "bestandsnaam",
+    "mime-Type",
+    "omschrijving",
+    "opmaakdatum",
+    "uri"
+  ]
+}

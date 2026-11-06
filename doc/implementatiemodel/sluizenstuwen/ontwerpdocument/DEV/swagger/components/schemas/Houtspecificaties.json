@@ -1,0 +1,39 @@
+{
+  "title": "Houtspecificaties",
+  "type": "object",
+  "description": "Complex datatype om de eigenschappen van hout te bundelen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Houtspecificaties)",
+      "pattern": "^Houtspecificaties$"
+    },
+    "fSC-Certificaat": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "houtduurzaamheidsklasse": {
+      "$ref": "#/components/schemas/DuurzaamheidsklasseVanHout"
+    },
+    "houtkwaliteitsklasse": {
+      "$ref": "#/components/schemas/KwaliteitsklasseVanHout"
+    },
+    "houtsterkteklasse": {
+      "$ref": "#/components/schemas/SterkteklasseVanHout"
+    },
+    "isResistentTegenMarieneBoorders": {
+      "$ref": "#/components/schemas/Houtspecificaties.isResistentTegenMarieneBoorders"
+    }
+  },
+  "required": [
+    "@type",
+    "fSC-Certificaat",
+    "houtduurzaamheidsklasse",
+    "houtkwaliteitsklasse",
+    "houtsterkteklasse",
+    "isResistentTegenMarieneBoorders"
+  ]
+}

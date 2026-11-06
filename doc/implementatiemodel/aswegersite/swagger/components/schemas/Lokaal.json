@@ -29,6 +29,32 @@
     "tabelUitwendigeInvloeden": {
       "$ref": "#/components/schemas/Bestandsbijlage"
     },
+    "bevestiging": {
+      "type": "array",
+      "description": "undefined Lijst van Behuizing items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Kast"
+          },
+          {
+            "$ref": "#/components/schemas/Gebouw"
+          },
+          {
+            "$ref": "#/components/schemas/Lokaal"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Kast": "#/components/schemas/Kast",
+            "Gebouw": "#/components/schemas/Gebouw",
+            "Lokaal": "#/components/schemas/Lokaal"
+          }
+        }
+      },
+      "minItems": 1
+    },
     "naam": {
       "$ref": "#/components/schemas/Lokaal.naam"
     },

@@ -12,6 +12,15 @@
       "description": "Object type (klasse Geotextiel)",
       "pattern": "^Geotextiel$"
     },
+    "heeftVulling": {
+      "$ref": "#/components/schemas/Geotextiel.heeftVulling"
+    },
+    "isBiodegradeerbaar": {
+      "$ref": "#/components/schemas/Geotextiel.isBiodegradeerbaar"
+    },
+    "isIngezaaid": {
+      "$ref": "#/components/schemas/Geotextiel.isIngezaaid"
+    },
     "technischeFiche": {
       "type": "array",
       "description": "De technische fiche van het geotextiel. Lijst van Bestandsbijlage items.",
@@ -22,23 +31,14 @@
     },
     "type": {
       "$ref": "#/components/schemas/GeotextielType"
-    },
-    "isBiodegradeerbaar": {
-      "$ref": "#/components/schemas/Geotextiel.isBiodegradeerbaar"
-    },
-    "heeftVulling": {
-      "$ref": "#/components/schemas/Geotextiel.heeftVulling"
-    },
-    "isIngezaaid": {
-      "$ref": "#/components/schemas/Geotextiel.isIngezaaid"
     }
   },
   "required": [
     "@type",
-    "technischeFiche",
-    "type",
-    "isBiodegradeerbaar",
     "heeftVulling",
-    "isIngezaaid"
+    "isBiodegradeerbaar",
+    "isIngezaaid",
+    "technischeFiche",
+    "type"
   ]
 }

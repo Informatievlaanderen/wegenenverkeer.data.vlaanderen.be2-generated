@@ -1,0 +1,27 @@
+{
+  "title": "KwantitatieveWaardeInMaand",
+  "type": "object",
+  "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+      "pattern": "^KwantitatieveWaardeInMaand$"
+    },
+    "standaardEenheid": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
+    }
+  },
+  "required": [
+    "@type",
+    "standaardEenheid",
+    "waarde"
+  ]
+}

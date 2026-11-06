@@ -1,0 +1,130 @@
+{
+  "title": "Deur",
+  "type": "object",
+  "description": "Een beweegbaar element ter afsluiting van een ruimte. In een gebouw is een deur meestal bevestigd in een kozijn,dat weer in een muur of wand is aangebracht.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Deur)",
+      "pattern": "^Deur$"
+    },
+    "afmetingDeuropening": {
+      "$ref": "#/components/schemas/AfmetingBxhInMeter"
+    },
+    "brandweerstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur"
+    },
+    "breedte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "dikte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "fabrikant": {
+      "$ref": "#/components/schemas/DeurFabrikant"
+    },
+    "handgreeptype": {
+      "$ref": "#/components/schemas/DeurHandgreeptype"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isWaterdicht": {
+      "$ref": "#/components/schemas/Deur.isWaterdicht"
+    },
+    "ophangconstructie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "sluitingstijd": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInSeconde"
+    },
+    "typeDeur": {
+      "type": "array",
+      "description": "Aanduiding tot welk type de deur behoort. Lijst van Deurtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Deurtype"
+      },
+      "minItems": 1
+    },
+    "typeOpening": {
+      "$ref": "#/components/schemas/ToegangsdeurTypeOpening"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Deur.naampad"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Deur.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Deur.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Deur.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Deur.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Deur.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Deur.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Deur.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    }
+  },
+  "required": [
+    "@type",
+    "afmetingDeuropening",
+    "brandweerstand",
+    "breedte",
+    "dikte",
+    "fabrikant",
+    "handgreeptype",
+    "hoogte",
+    "isWaterdicht",
+    "ophangconstructie",
+    "sluitingstijd",
+    "typeDeur",
+    "typeOpening",
+    "naampad",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie"
+  ]
+}

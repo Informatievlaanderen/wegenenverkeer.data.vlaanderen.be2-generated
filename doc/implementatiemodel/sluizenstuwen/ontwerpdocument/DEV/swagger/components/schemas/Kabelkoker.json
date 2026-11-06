@@ -1,0 +1,77 @@
+{
+  "title": "Kabelkoker",
+  "type": "object",
+  "description": "Een ruimte die een of meerdere kabels of leidingen beschermt tegen beschadiging en/of de kabels of leidingen op een gecontroleerde plaats laat hangen of liggen. De constructieve elementen die de ruimte creëeren vormen een aaneen- en afgesloten geheel dat niet meer uit elkaar kan gehaald worden. De kabels en leidingen zijn enkel nog toegankelijk door in de koker zelf rond te lopen (of te kruipen). De koker is op die toegankelijkheid voorzien.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Kabelkoker)",
+      "pattern": "^Kabelkoker$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Kabelkoker.naam"
+    },
+    "asset-Id": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Kabelkoker.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Kabelkoker.datumOprichtingObject"
+    },
+    "notitie": {
+      "$ref": "#/components/schemas/Kabelkoker.notitie"
+    },
+    "standaardbestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Kabelkoker.standaardbestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "theoretischeLevensduur": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+    },
+    "typeURI": {
+      "$ref": "#/components/schemas/Kabelkoker.typeURI"
+    },
+    "isActief": {
+      "$ref": "#/components/schemas/Kabelkoker.isActief"
+    },
+    "aIM-Toestand": {
+      "$ref": "#/components/schemas/AIMToestand"
+    },
+    "asset-Versie": {
+      "$ref": "#/components/schemas/AssetVersie"
+    },
+    "naampad": {
+      "$ref": "#/components/schemas/Kabelkoker.naampad"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
+    "notitie",
+    "standaardbestekpostnummer",
+    "theoretischeLevensduur",
+    "typeURI",
+    "isActief",
+    "aIM-Toestand",
+    "asset-Versie",
+    "naampad"
+  ]
+}

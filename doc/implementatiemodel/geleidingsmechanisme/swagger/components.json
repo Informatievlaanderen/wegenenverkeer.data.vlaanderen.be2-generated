@@ -4254,6 +4254,9 @@
             "minItems": 1,
             "maxItems": 3
           },
+          "technischeFiche": {
+            "$ref": "#/components/schemas/Bestandsbijlage"
+          },
           "naam": {
             "$ref": "#/components/schemas/Oplegging.naam"
           },
@@ -4304,6 +4307,7 @@
           "bewegingsvrijheidInHetVlak",
           "zijnNegatieveSteunpuntreactiesAanwezig",
           "overigeFuncties",
+          "technischeFiche",
           "naam",
           "asset-Id",
           "notitie",
@@ -7545,6 +7549,188 @@
           "technischDocument"
         ]
       },
+      "Railconstructie.heeftVoegen": {
+        "title": "Railconstructie.heeftVoegen",
+        "description": "Geeft aan of de bovenrolwagen voegen heeft of niet.",
+        "type": "boolean"
+      },
+      "Railconstructie.aantalVoegen": {
+        "title": "Railconstructie.aantalVoegen",
+        "description": "Het aantal voegen.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "Railconstructie.heeftLangsblokkeringrail": {
+        "title": "Railconstructie.heeftLangsblokkeringrail",
+        "description": "Geeft aan of de rail langsblokkeringrail heeft of niet.",
+        "type": "boolean"
+      },
+      "Railconstructie.heeftOnderlegmat": {
+        "title": "Railconstructie.heeftOnderlegmat",
+        "description": "Geeft aan of de railconstructie een onderlegmat heeft.",
+        "type": "boolean"
+      },
+      "Railconstructie.heeftTussenplaat": {
+        "title": "Railconstructie.heeftTussenplaat",
+        "description": "Geeft aan of de railconstructie een tussenplaat heeft.",
+        "type": "boolean"
+      },
+      "Railconstructie.typeKlem": {
+        "title": "Railconstructie.typeKlem",
+        "description": "Het type klem gebruikt in de railconstructie. Attribuut uit gebruik sinds versie 2.20.0-RC1",
+        "type": "string"
+      },
+      "Railconstructie.naam": {
+        "title": "Railconstructie.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Railconstructie.notitie": {
+        "title": "Railconstructie.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Railconstructie.standaardbestekpostnummer": {
+        "title": "Railconstructie.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Railconstructie.typeURI": {
+        "title": "Railconstructie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Railconstructie.bestekpostnummer": {
+        "title": "Railconstructie.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Railconstructie.datumOprichtingObject": {
+        "title": "Railconstructie.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Railconstructie.isActief": {
+        "title": "Railconstructie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Railconstructie": {
+        "title": "Railconstructie",
+        "type": "object",
+        "description": "Geheel bestaande uit een doorlopend profiel waarop of waartegen iets rijdt of glijdt, samen met de klemmen, tussenplaten en ondersteuningsprofielen die het profiel bevestigen en ondersteunen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Railconstructie)",
+            "pattern": "^Railconstructie$"
+          },
+          "typeBevestigingRail": {
+            "$ref": "#/components/schemas/TypeBevestigingRail"
+          },
+          "heeftVoegen": {
+            "$ref": "#/components/schemas/Railconstructie.heeftVoegen"
+          },
+          "aantalVoegen": {
+            "$ref": "#/components/schemas/Railconstructie.aantalVoegen"
+          },
+          "heeftLangsblokkeringrail": {
+            "$ref": "#/components/schemas/Railconstructie.heeftLangsblokkeringrail"
+          },
+          "heeftOnderlegmat": {
+            "$ref": "#/components/schemas/Railconstructie.heeftOnderlegmat"
+          },
+          "heeftTussenplaat": {
+            "$ref": "#/components/schemas/Railconstructie.heeftTussenplaat"
+          },
+          "klemtype": {
+            "$ref": "#/components/schemas/TypeKlem"
+          },
+          "typeKlem": {
+            "$ref": "#/components/schemas/Railconstructie.typeKlem"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Railconstructie.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Railconstructie.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Railconstructie.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Railconstructie.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Railconstructie.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Railconstructie.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Railconstructie.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "technischDocument": {
+            "type": "array",
+            "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
+            "items": {
+              "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "typeBevestigingRail",
+          "heeftVoegen",
+          "aantalVoegen",
+          "heeftLangsblokkeringrail",
+          "heeftOnderlegmat",
+          "heeftTussenplaat",
+          "klemtype",
+          "typeKlem",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie",
+          "technischDocument"
+        ]
+      },
       "Centreerstuk.naam": {
         "title": "Centreerstuk.naam",
         "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
@@ -7911,188 +8097,6 @@
           "technischDocument",
           "soortStaal",
           "staalsoorten"
-        ]
-      },
-      "Railconstructie.heeftVoegen": {
-        "title": "Railconstructie.heeftVoegen",
-        "description": "Geeft aan of de bovenrolwagen voegen heeft of niet.",
-        "type": "boolean"
-      },
-      "Railconstructie.aantalVoegen": {
-        "title": "Railconstructie.aantalVoegen",
-        "description": "Het aantal voegen.",
-        "type": "integer",
-        "format": "int64"
-      },
-      "Railconstructie.heeftLangsblokkeringrail": {
-        "title": "Railconstructie.heeftLangsblokkeringrail",
-        "description": "Geeft aan of de rail langsblokkeringrail heeft of niet.",
-        "type": "boolean"
-      },
-      "Railconstructie.heeftOnderlegmat": {
-        "title": "Railconstructie.heeftOnderlegmat",
-        "description": "Geeft aan of de railconstructie een onderlegmat heeft.",
-        "type": "boolean"
-      },
-      "Railconstructie.heeftTussenplaat": {
-        "title": "Railconstructie.heeftTussenplaat",
-        "description": "Geeft aan of de railconstructie een tussenplaat heeft.",
-        "type": "boolean"
-      },
-      "Railconstructie.typeKlem": {
-        "title": "Railconstructie.typeKlem",
-        "description": "Het type klem gebruikt in de railconstructie. Attribuut uit gebruik sinds versie 2.20.0-RC1",
-        "type": "string"
-      },
-      "Railconstructie.naam": {
-        "title": "Railconstructie.naam",
-        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
-        "type": "string"
-      },
-      "Railconstructie.notitie": {
-        "title": "Railconstructie.notitie",
-        "description": "Extra notitie voor het object.",
-        "type": "string"
-      },
-      "Railconstructie.standaardbestekpostnummer": {
-        "title": "Railconstructie.standaardbestekpostnummer",
-        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
-        "type": "string"
-      },
-      "Railconstructie.typeURI": {
-        "title": "Railconstructie.typeURI",
-        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
-        "type": "string",
-        "format": "uri"
-      },
-      "Railconstructie.bestekpostnummer": {
-        "title": "Railconstructie.bestekpostnummer",
-        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
-        "type": "string"
-      },
-      "Railconstructie.datumOprichtingObject": {
-        "title": "Railconstructie.datumOprichtingObject",
-        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
-        "type": "string",
-        "format": "date"
-      },
-      "Railconstructie.isActief": {
-        "title": "Railconstructie.isActief",
-        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
-        "type": "boolean"
-      },
-      "Railconstructie": {
-        "title": "Railconstructie",
-        "type": "object",
-        "description": "Doorlopend metalen profiel met klemmen en tussenplaten waarop of waartegen iets rijdt of glijdt.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Railconstructie)",
-            "pattern": "^Railconstructie$"
-          },
-          "typeBevestigingRail": {
-            "$ref": "#/components/schemas/TypeBevestigingRail"
-          },
-          "heeftVoegen": {
-            "$ref": "#/components/schemas/Railconstructie.heeftVoegen"
-          },
-          "aantalVoegen": {
-            "$ref": "#/components/schemas/Railconstructie.aantalVoegen"
-          },
-          "heeftLangsblokkeringrail": {
-            "$ref": "#/components/schemas/Railconstructie.heeftLangsblokkeringrail"
-          },
-          "heeftOnderlegmat": {
-            "$ref": "#/components/schemas/Railconstructie.heeftOnderlegmat"
-          },
-          "heeftTussenplaat": {
-            "$ref": "#/components/schemas/Railconstructie.heeftTussenplaat"
-          },
-          "klemtype": {
-            "$ref": "#/components/schemas/TypeKlem"
-          },
-          "typeKlem": {
-            "$ref": "#/components/schemas/Railconstructie.typeKlem"
-          },
-          "naam": {
-            "$ref": "#/components/schemas/Railconstructie.naam"
-          },
-          "asset-Id": {
-            "$ref": "#/components/schemas/Identificator"
-          },
-          "notitie": {
-            "$ref": "#/components/schemas/Railconstructie.notitie"
-          },
-          "standaardbestekpostnummer": {
-            "type": "array",
-            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
-            "items": {
-              "$ref": "#/components/schemas/Railconstructie.standaardbestekpostnummer"
-            },
-            "minItems": 1
-          },
-          "typeURI": {
-            "$ref": "#/components/schemas/Railconstructie.typeURI"
-          },
-          "bestekpostnummer": {
-            "type": "array",
-            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-            "items": {
-              "$ref": "#/components/schemas/Railconstructie.bestekpostnummer"
-            },
-            "minItems": 1
-          },
-          "theoretischeLevensduur": {
-            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
-          },
-          "datumOprichtingObject": {
-            "$ref": "#/components/schemas/Railconstructie.datumOprichtingObject"
-          },
-          "isActief": {
-            "$ref": "#/components/schemas/Railconstructie.isActief"
-          },
-          "aIM-Toestand": {
-            "$ref": "#/components/schemas/AIMToestand"
-          },
-          "asset-Versie": {
-            "$ref": "#/components/schemas/AssetVersie"
-          },
-          "technischDocument": {
-            "type": "array",
-            "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
-            "items": {
-              "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
-            },
-            "minItems": 1
-          }
-        },
-        "required": [
-          "@type",
-          "typeBevestigingRail",
-          "heeftVoegen",
-          "aantalVoegen",
-          "heeftLangsblokkeringrail",
-          "heeftOnderlegmat",
-          "heeftTussenplaat",
-          "klemtype",
-          "typeKlem",
-          "naam",
-          "asset-Id",
-          "notitie",
-          "standaardbestekpostnummer",
-          "typeURI",
-          "bestekpostnummer",
-          "theoretischeLevensduur",
-          "datumOprichtingObject",
-          "isActief",
-          "aIM-Toestand",
-          "asset-Versie",
-          "technischDocument"
         ]
       },
       "Schakel.naam": {
@@ -10808,6 +10812,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OverigeFunctiesOplegging` op te halen."
       },
+      "Oplegging.technischeFiche": {
+        "operationId": "OpleggingGET",
+        "parameters": {
+          "id": "$response.body#/Oplegging.technischeFiche/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
       "Oplegging.asset-Id": {
         "operationId": "OpleggingGET",
         "parameters": {
@@ -11942,6 +11953,55 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
       },
+      "Railconstructie.typeBevestigingRail": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.typeBevestigingRail/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBevestigingRail` op te halen."
+      },
+      "Railconstructie.klemtype": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.klemtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeKlem` op te halen."
+      },
+      "Railconstructie.asset-Id": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Railconstructie.theoretischeLevensduur": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Railconstructie.aIM-Toestand": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Railconstructie.asset-Versie": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Railconstructie.technischDocument": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.technischDocument/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
+      },
       "Centreerstuk.materiaal": {
         "operationId": "CentreerstukGET",
         "parameters": {
@@ -12074,55 +12134,6 @@
           "id": "$response.body#/Halsbeugelschoen.staalsoorten/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StaalsoortMetEquivalenten` op te halen."
-      },
-      "Railconstructie.typeBevestigingRail": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.typeBevestigingRail/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBevestigingRail` op te halen."
-      },
-      "Railconstructie.klemtype": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.klemtype/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeKlem` op te halen."
-      },
-      "Railconstructie.asset-Id": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.asset-Id/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
-      "Railconstructie.theoretischeLevensduur": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.theoretischeLevensduur/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
-      },
-      "Railconstructie.aIM-Toestand": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.aIM-Toestand/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
-      },
-      "Railconstructie.asset-Versie": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.asset-Versie/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
-      },
-      "Railconstructie.technischDocument": {
-        "operationId": "RailconstructieGET",
-        "parameters": {
-          "id": "$response.body#/Railconstructie.technischDocument/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
       },
       "Schakel.asset-Id": {
         "operationId": "SchakelGET",

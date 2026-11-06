@@ -21,6 +21,17 @@
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Sluishoofd.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Sluishoofd.datumOprichtingObject"
+    },
     "notitie": {
       "$ref": "#/components/schemas/Sluishoofd.notitie"
     },
@@ -32,22 +43,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Sluishoofd.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Sluishoofd.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Sluishoofd.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Sluishoofd.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Sluishoofd.isActief"
@@ -58,14 +58,14 @@
     "asset-Versie": {
       "$ref": "#/components/schemas/AssetVersie"
     },
+    "diepteVanDeSponning": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
+    },
     "drempelpeil": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
     },
     "droogzetbaarheid": {
       "$ref": "#/components/schemas/Droogzetbaarheidtypes"
-    },
-    "diepteVanDeSponning": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
     },
     "heeftKelder": {
       "$ref": "#/components/schemas/Sluishoofd.heeftKelder"
@@ -76,18 +76,18 @@
     "typeHoofd",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie",
+    "diepteVanDeSponning",
     "drempelpeil",
     "droogzetbaarheid",
-    "diepteVanDeSponning",
     "heeftKelder"
   ]
 }

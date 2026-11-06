@@ -24537,6 +24537,20 @@
                   "id": "$response.body#/CilinderStangkop.technischDocument/@id"
                 },
                 "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
+              },
+              "CilinderStangkop.soortStaal": {
+                "operationId": "CilinderStangkopGET",
+                "parameters": {
+                  "id": "$response.body#/CilinderStangkop.soortStaal/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Staalsoort` op te halen."
+              },
+              "CilinderStangkop.staalsoorten": {
+                "operationId": "CilinderStangkopGET",
+                "parameters": {
+                  "id": "$response.body#/CilinderStangkop.staalsoorten/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StaalsoortMetEquivalenten` op te halen."
               }
             }
           },
@@ -28047,7 +28061,7 @@
     "/id/Kabelsteun/{id}": {
       "get": {
         "summary": "Dit onderdeel dient om de doorbuiging van (staal)kabels te minimaliseren.",
-        "description": "Klasse uit gebruik sinds versie 2.21.0-RC1",
+        "description": "Klasse uit gebruik sinds versie 0.0.0-RC0",
         "operationId": "KabelsteunGET",
         "parameters": [
           {
@@ -37287,6 +37301,12 @@
               "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
             },
             "minItems": 1
+          },
+          "soortStaal": {
+            "$ref": "#/components/schemas/Staalsoort"
+          },
+          "staalsoorten": {
+            "$ref": "#/components/schemas/StaalsoortMetEquivalenten"
           }
         },
         "required": [
@@ -37303,7 +37323,9 @@
           "isActief",
           "aIM-Toestand",
           "asset-Versie",
-          "technischDocument"
+          "technischDocument",
+          "soortStaal",
+          "staalsoorten"
         ]
       },
       "Tandwiel.naam": {

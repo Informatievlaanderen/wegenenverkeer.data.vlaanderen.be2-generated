@@ -1,0 +1,2247 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "AIMToestand": {
+        "title": "AIMToestand",
+        "type": "object",
+        "description": "Enumeratie van AIMToestand",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Mimetype": {
+        "title": "Mimetype",
+        "type": "object",
+        "description": "Enumeratie van Mimetype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeBalk": {
+        "title": "TypeBalk",
+        "type": "object",
+        "description": "Enumeratie van TypeBalk",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeHorizontalePlaat": {
+        "title": "TypeHorizontalePlaat",
+        "type": "object",
+        "description": "Enumeratie van TypeHorizontalePlaat",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "DraagstructuurBWCTWC": {
+        "title": "DraagstructuurBWCTWC",
+        "type": "object",
+        "description": "Enumeratie van DraagstructuurBWCTWC",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "KeuzelijstTechnischDocument": {
+        "title": "KeuzelijstTechnischDocument",
+        "type": "object",
+        "description": "Enumeratie van KeuzelijstTechnischDocument",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeAandrijvingTakel": {
+        "title": "TypeAandrijvingTakel",
+        "type": "object",
+        "description": "Enumeratie van TypeAandrijvingTakel",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeBevestigingspunt": {
+        "title": "TypeBevestigingspunt",
+        "type": "object",
+        "description": "Enumeratie van TypeBevestigingspunt",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeTakel": {
+        "title": "TypeTakel",
+        "type": "object",
+        "description": "Enumeratie van TypeTakel",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeBevestigingRail": {
+        "title": "TypeBevestigingRail",
+        "type": "object",
+        "description": "Enumeratie van TypeBevestigingRail",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "TypeKlem": {
+        "title": "TypeKlem",
+        "type": "object",
+        "description": "Enumeratie van TypeKlem",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Balk.naam": {
+        "title": "Balk.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Balk.notitie": {
+        "title": "Balk.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Balk.standaardbestekpostnummer": {
+        "title": "Balk.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Balk.typeURI": {
+        "title": "Balk.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Balk.bestekpostnummer": {
+        "title": "Balk.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Balk.datumOprichtingObject": {
+        "title": "Balk.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Balk.isActief": {
+        "title": "Balk.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Balk": {
+        "title": "Balk",
+        "type": "object",
+        "description": "Ruimteoverspannend enkelvoudig constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. De breedte is weer gelijk of kleiner dan de hoogte.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Balk)",
+            "pattern": "^Balk$"
+          },
+          "typeBalk": {
+            "$ref": "#/components/schemas/TypeBalk"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Balk.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Balk.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Balk.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Balk.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Balk.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Balk.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Balk.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "typeBalk",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "HorizontaleConstructieplaat.naam": {
+        "title": "HorizontaleConstructieplaat.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "HorizontaleConstructieplaat.notitie": {
+        "title": "HorizontaleConstructieplaat.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "HorizontaleConstructieplaat.standaardbestekpostnummer": {
+        "title": "HorizontaleConstructieplaat.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "HorizontaleConstructieplaat.typeURI": {
+        "title": "HorizontaleConstructieplaat.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HorizontaleConstructieplaat.bestekpostnummer": {
+        "title": "HorizontaleConstructieplaat.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "HorizontaleConstructieplaat.datumOprichtingObject": {
+        "title": "HorizontaleConstructieplaat.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "HorizontaleConstructieplaat.isActief": {
+        "title": "HorizontaleConstructieplaat.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "HorizontaleConstructieplaat": {
+        "title": "HorizontaleConstructieplaat",
+        "type": "object",
+        "description": "Een plaat die dient ter constructie en die horizontaal wordt gebruikt. Deze omvat geen platen die met fundering te maken hebben (vb.: funderingsplaat,funderingszool,...).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HorizontaleConstructieplaat)",
+            "pattern": "^HorizontaleConstructieplaat$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeHorizontalePlaat"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/HorizontaleConstructieplaat.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/HorizontaleConstructieplaat.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/HorizontaleConstructieplaat.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/HorizontaleConstructieplaat.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/HorizontaleConstructieplaat.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/HorizontaleConstructieplaat.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/HorizontaleConstructieplaat.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.naam": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.notitie": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.standaardbestekpostnummer": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.typeURI": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.bestekpostnummer": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.datumOprichtingObject": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.isActief": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie": {
+        "title": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie",
+        "type": "object",
+        "description": "Dragende constructie (raamwerk) van een beweegbare waterkerende constructie of tijdelijke waterkerende constructie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie)",
+            "pattern": "^DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/DraagstructuurBWCTWC"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "HijsEnHefwerktuig.naampad": {
+        "title": "HijsEnHefwerktuig.naampad",
+        "description": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra). Dient consistent te zijn met de naam.",
+        "type": "string"
+      },
+      "HijsEnHefwerktuig.naam": {
+        "title": "HijsEnHefwerktuig.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "HijsEnHefwerktuig.notitie": {
+        "title": "HijsEnHefwerktuig.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "HijsEnHefwerktuig.standaardbestekpostnummer": {
+        "title": "HijsEnHefwerktuig.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "HijsEnHefwerktuig.typeURI": {
+        "title": "HijsEnHefwerktuig.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "HijsEnHefwerktuig.bestekpostnummer": {
+        "title": "HijsEnHefwerktuig.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "HijsEnHefwerktuig.datumOprichtingObject": {
+        "title": "HijsEnHefwerktuig.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "HijsEnHefwerktuig.isActief": {
+        "title": "HijsEnHefwerktuig.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "HijsEnHefwerktuig": {
+        "title": "HijsEnHefwerktuig",
+        "type": "object",
+        "description": "Het geheel van mechanische componenten dat bedoeld is voor het verticaal en/of horizontaal verplaatsen van lasten door middel van hijs- en/of hefbewegingen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HijsEnHefwerktuig)",
+            "pattern": "^HijsEnHefwerktuig$"
+          },
+          "naampad": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.naampad"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/HijsEnHefwerktuig.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/HijsEnHefwerktuig.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/HijsEnHefwerktuig.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "naampad",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "HoortBij": {
+        "title": "HoortBij",
+        "type": "object",
+        "description": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HoortBij)",
+            "pattern": "^HoortBij$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bevestiging": {
+        "title": "Bevestiging",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bevestiging)",
+            "pattern": "^Bevestiging$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LigtOp": {
+        "title": "LigtOp",
+        "type": "object",
+        "description": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LigtOp)",
+            "pattern": "^LigtOp$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Portiek.naam": {
+        "title": "Portiek.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Portiek.notitie": {
+        "title": "Portiek.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Portiek.standaardbestekpostnummer": {
+        "title": "Portiek.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Portiek.typeURI": {
+        "title": "Portiek.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Portiek.bestekpostnummer": {
+        "title": "Portiek.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Portiek.datumOprichtingObject": {
+        "title": "Portiek.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Portiek.isActief": {
+        "title": "Portiek.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Portiek": {
+        "title": "Portiek",
+        "type": "object",
+        "description": "Een dragende constructie in de vorm van een omgekeerde (dubbele) U.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Portiek)",
+            "pattern": "^Portiek$"
+          },
+          "gewicht": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Portiek.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Portiek.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Portiek.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Portiek.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Portiek.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Portiek.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Portiek.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "technischDocument": {
+            "type": "array",
+            "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
+            "items": {
+              "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "gewicht",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie",
+          "technischDocument"
+        ]
+      },
+      "Hijspunt.naam": {
+        "title": "Hijspunt.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Hijspunt.notitie": {
+        "title": "Hijspunt.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Hijspunt.standaardbestekpostnummer": {
+        "title": "Hijspunt.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Hijspunt.typeURI": {
+        "title": "Hijspunt.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Hijspunt.bestekpostnummer": {
+        "title": "Hijspunt.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Hijspunt.datumOprichtingObject": {
+        "title": "Hijspunt.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Hijspunt.isActief": {
+        "title": "Hijspunt.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Hijspunt": {
+        "title": "Hijspunt",
+        "type": "object",
+        "description": "Een vast bevestigingspunt, gemonteerd aan de bouwkundige constructie, waaraan een takel kan worden opgehangen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Hijspunt)",
+            "pattern": "^Hijspunt$"
+          },
+          "maximaleWerklast": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+          },
+          "typeBevestiging": {
+            "$ref": "#/components/schemas/TypeBevestigingspunt"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Hijspunt.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Hijspunt.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Hijspunt.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Hijspunt.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Hijspunt.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Hijspunt.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Hijspunt.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "maximaleWerklast",
+          "typeBevestiging",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Loopprofiel.naam": {
+        "title": "Loopprofiel.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Loopprofiel.notitie": {
+        "title": "Loopprofiel.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Loopprofiel.standaardbestekpostnummer": {
+        "title": "Loopprofiel.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Loopprofiel.typeURI": {
+        "title": "Loopprofiel.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Loopprofiel.bestekpostnummer": {
+        "title": "Loopprofiel.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Loopprofiel.datumOprichtingObject": {
+        "title": "Loopprofiel.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Loopprofiel.isActief": {
+        "title": "Loopprofiel.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Loopprofiel": {
+        "title": "Loopprofiel",
+        "type": "object",
+        "description": "Een dragend profiel dat de werkbreedte van het hijs- en hefwerktuig overspant en dient als rijbaan voor de loopkat, waarbij de uiteinden worden ondersteund door wielen die op de loopbanen rijden of vast bevestigd zijn aan de bouwkundige constructie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Loopprofiel)",
+            "pattern": "^Loopprofiel$"
+          },
+          "beschikbareLengte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Loopprofiel.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Loopprofiel.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Loopprofiel.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Loopprofiel.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Loopprofiel.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Loopprofiel.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Loopprofiel.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "beschikbareLengte",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Loopkat.naam": {
+        "title": "Loopkat.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Loopkat.notitie": {
+        "title": "Loopkat.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Loopkat.standaardbestekpostnummer": {
+        "title": "Loopkat.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Loopkat.typeURI": {
+        "title": "Loopkat.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Loopkat.bestekpostnummer": {
+        "title": "Loopkat.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Loopkat.datumOprichtingObject": {
+        "title": "Loopkat.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Loopkat.isActief": {
+        "title": "Loopkat.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Loopkat": {
+        "title": "Loopkat",
+        "type": "object",
+        "description": "Een drager voorzien van wielen of rollers die over het loopprofiel loopt en een takel of andere hijsinrichting draagt, waardoor de last horizontaal verplaatst kan worden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Loopkat)",
+            "pattern": "^Loopkat$"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Loopkat.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Loopkat.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Loopkat.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Loopkat.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Loopkat.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Loopkat.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Loopkat.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Takel.naam": {
+        "title": "Takel.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Takel.notitie": {
+        "title": "Takel.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Takel.standaardbestekpostnummer": {
+        "title": "Takel.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Takel.typeURI": {
+        "title": "Takel.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Takel.bestekpostnummer": {
+        "title": "Takel.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Takel.datumOprichtingObject": {
+        "title": "Takel.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Takel.isActief": {
+        "title": "Takel.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Takel": {
+        "title": "Takel",
+        "type": "object",
+        "description": "Een hijsmiddel dat instaat voor het verticaal verplaatsen van een last via onder andere een staalkabel, ketting of hijsband.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Takel)",
+            "pattern": "^Takel$"
+          },
+          "typeTakel": {
+            "$ref": "#/components/schemas/TypeTakel"
+          },
+          "typeAandrijvingTakel": {
+            "$ref": "#/components/schemas/TypeAandrijvingTakel"
+          },
+          "maximaleWerklast": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
+          },
+          "massa": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+          },
+          "hijshoogte": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Takel.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Takel.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Takel.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Takel.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Takel.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Takel.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Takel.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "typeTakel",
+          "typeAandrijvingTakel",
+          "maximaleWerklast",
+          "massa",
+          "hijshoogte",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Railconstructie.heeftVoegen": {
+        "title": "Railconstructie.heeftVoegen",
+        "description": "Geeft aan of de bovenrolwagen voegen heeft of niet.",
+        "type": "boolean"
+      },
+      "Railconstructie.aantalVoegen": {
+        "title": "Railconstructie.aantalVoegen",
+        "description": "Het aantal voegen.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "Railconstructie.heeftLangsblokkeringrail": {
+        "title": "Railconstructie.heeftLangsblokkeringrail",
+        "description": "Geeft aan of de rail langsblokkeringrail heeft of niet.",
+        "type": "boolean"
+      },
+      "Railconstructie.heeftOnderlegmat": {
+        "title": "Railconstructie.heeftOnderlegmat",
+        "description": "Geeft aan of de railconstructie een onderlegmat heeft.",
+        "type": "boolean"
+      },
+      "Railconstructie.heeftTussenplaat": {
+        "title": "Railconstructie.heeftTussenplaat",
+        "description": "Geeft aan of de railconstructie een tussenplaat heeft.",
+        "type": "boolean"
+      },
+      "Railconstructie.typeKlem": {
+        "title": "Railconstructie.typeKlem",
+        "description": "Het type klem gebruikt in de railconstructie. Attribuut uit gebruik sinds versie 2.20.0-RC1",
+        "type": "string"
+      },
+      "Railconstructie.naam": {
+        "title": "Railconstructie.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "Railconstructie.notitie": {
+        "title": "Railconstructie.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "Railconstructie.standaardbestekpostnummer": {
+        "title": "Railconstructie.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "Railconstructie.typeURI": {
+        "title": "Railconstructie.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Railconstructie.bestekpostnummer": {
+        "title": "Railconstructie.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "Railconstructie.datumOprichtingObject": {
+        "title": "Railconstructie.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "Railconstructie.isActief": {
+        "title": "Railconstructie.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Railconstructie": {
+        "title": "Railconstructie",
+        "type": "object",
+        "description": "Geheel bestaande uit een doorlopend profiel waarop of waartegen iets rijdt of glijdt, samen met de klemmen, tussenplaten en ondersteuningsprofielen die het profiel bevestigen en ondersteunen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Railconstructie)",
+            "pattern": "^Railconstructie$"
+          },
+          "typeBevestigingRail": {
+            "$ref": "#/components/schemas/TypeBevestigingRail"
+          },
+          "heeftVoegen": {
+            "$ref": "#/components/schemas/Railconstructie.heeftVoegen"
+          },
+          "aantalVoegen": {
+            "$ref": "#/components/schemas/Railconstructie.aantalVoegen"
+          },
+          "heeftLangsblokkeringrail": {
+            "$ref": "#/components/schemas/Railconstructie.heeftLangsblokkeringrail"
+          },
+          "heeftOnderlegmat": {
+            "$ref": "#/components/schemas/Railconstructie.heeftOnderlegmat"
+          },
+          "heeftTussenplaat": {
+            "$ref": "#/components/schemas/Railconstructie.heeftTussenplaat"
+          },
+          "klemtype": {
+            "$ref": "#/components/schemas/TypeKlem"
+          },
+          "typeKlem": {
+            "$ref": "#/components/schemas/Railconstructie.typeKlem"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Railconstructie.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/Railconstructie.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Railconstructie.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Railconstructie.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Railconstructie.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/Railconstructie.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Railconstructie.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          },
+          "technischDocument": {
+            "type": "array",
+            "description": "Een technisch document zoals een detailplan, een technische fiche en/of een rekennota. Lijst van ComplexDatatypeTechnischDocument items.",
+            "items": {
+              "$ref": "#/components/schemas/ComplexDatatypeTechnischDocument"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "typeBevestigingRail",
+          "heeftVoegen",
+          "aantalVoegen",
+          "heeftLangsblokkeringrail",
+          "heeftOnderlegmat",
+          "heeftTussenplaat",
+          "klemtype",
+          "typeKlem",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie",
+          "technischDocument"
+        ]
+      },
+      "ComplexDatatypeTechnischDocument": {
+        "title": "ComplexDatatypeTechnischDocument",
+        "type": "object",
+        "description": "Complex datatype om een of meerdere technische documenten aan te koppelen aan de assets",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ComplexDatatypeTechnischDocument)",
+            "pattern": "^ComplexDatatypeTechnischDocument$"
+          },
+          "typeDocument": {
+            "$ref": "#/components/schemas/KeuzelijstTechnischDocument"
+          },
+          "bijlage": {
+            "$ref": "#/components/schemas/Bestandsbijlage"
+          }
+        },
+        "required": [
+          "@type",
+          "typeDocument",
+          "bijlage"
+        ]
+      },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator.identificator"
+          },
+          "toegekendDoor": {
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand.waarde": {
+        "title": "KwantitatieveWaardeInMaand.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "KwantitatieveWaardeInMaand.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMaand.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMaand": {
+        "title": "KwantitatieveWaardeInMaand",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+            "pattern": "^KwantitatieveWaardeInMaand$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
+          },
+          "timestamp": {
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
+          },
+          "context": {
+            "$ref": "#/components/schemas/AssetVersie.context"
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Bestandsbijlage.uri": {
+        "title": "Bestandsbijlage.uri",
+        "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bestandsbijlage.bestandsnaam": {
+        "title": "Bestandsbijlage.bestandsnaam",
+        "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+        "type": "string"
+      },
+      "Bestandsbijlage.opmaakdatum": {
+        "title": "Bestandsbijlage.opmaakdatum",
+        "description": "De datum waarop het document is opgemaakt.",
+        "type": "string",
+        "format": "date"
+      },
+      "Bestandsbijlage": {
+        "title": "Bestandsbijlage",
+        "type": "object",
+        "description": "Complex datatype voor alle bestandsbijlages.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bestandsbijlage)",
+            "pattern": "^Bestandsbijlage$"
+          },
+          "uri": {
+            "$ref": "#/components/schemas/Bestandsbijlage.uri"
+          },
+          "bestandsnaam": {
+            "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
+          },
+          "omschrijving": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "mime-Type": {
+            "$ref": "#/components/schemas/Mimetype"
+          },
+          "opmaakdatum": {
+            "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
+          }
+        },
+        "required": [
+          "@type",
+          "uri",
+          "bestandsnaam",
+          "omschrijving",
+          "mime-Type",
+          "opmaakdatum"
+        ]
+      },
+      "Tekstblok.waarde": {
+        "title": "Tekstblok.waarde",
+        "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "type": "string"
+      },
+      "Tekstblok": {
+        "title": "Tekstblok",
+        "type": "object",
+        "description": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tekstblok)",
+            "pattern": "^Tekstblok$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Tekstblok.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMeter.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in meter. \"m\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMeter.waarde": {
+        "title": "KwantitatieveWaardeInMeter.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInMeter": {
+        "title": "KwantitatieveWaardeInMeter",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in meter uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMeter)",
+            "pattern": "^KwantitatieveWaardeInMeter$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMeter.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInKN.standaardEenheid": {
+        "title": "KwantitatieveWaardeInKN.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in kiloNewton. \"kN\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInKN.waarde": {
+        "title": "KwantitatieveWaardeInKN.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInKN": {
+        "title": "KwantitatieveWaardeInKN",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in KiloNewton uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInKN)",
+            "pattern": "^KwantitatieveWaardeInKN$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKN.standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInKN.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInTon.waarde": {
+        "title": "KwantitatieveWaardeInTon.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInTon.standaardEenheid": {
+        "title": "KwantitatieveWaardeInTon.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in ton. \"t\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInTon": {
+        "title": "KwantitatieveWaardeInTon",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in ton uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInTon)",
+            "pattern": "^KwantitatieveWaardeInTon$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInTon.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      }
+    },
+    "links": {
+      "Balk.typeBalk": {
+        "operationId": "BalkGET",
+        "parameters": {
+          "id": "$response.body#/Balk.typeBalk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBalk` op te halen."
+      },
+      "Balk.asset-Id": {
+        "operationId": "BalkGET",
+        "parameters": {
+          "id": "$response.body#/Balk.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Balk.theoretischeLevensduur": {
+        "operationId": "BalkGET",
+        "parameters": {
+          "id": "$response.body#/Balk.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Balk.aIM-Toestand": {
+        "operationId": "BalkGET",
+        "parameters": {
+          "id": "$response.body#/Balk.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Balk.asset-Versie": {
+        "operationId": "BalkGET",
+        "parameters": {
+          "id": "$response.body#/Balk.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HorizontaleConstructieplaat.type": {
+        "operationId": "HorizontaleConstructieplaatGET",
+        "parameters": {
+          "id": "$response.body#/HorizontaleConstructieplaat.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeHorizontalePlaat` op te halen."
+      },
+      "HorizontaleConstructieplaat.asset-Id": {
+        "operationId": "HorizontaleConstructieplaatGET",
+        "parameters": {
+          "id": "$response.body#/HorizontaleConstructieplaat.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HorizontaleConstructieplaat.theoretischeLevensduur": {
+        "operationId": "HorizontaleConstructieplaatGET",
+        "parameters": {
+          "id": "$response.body#/HorizontaleConstructieplaat.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "HorizontaleConstructieplaat.aIM-Toestand": {
+        "operationId": "HorizontaleConstructieplaatGET",
+        "parameters": {
+          "id": "$response.body#/HorizontaleConstructieplaat.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "HorizontaleConstructieplaat.asset-Versie": {
+        "operationId": "HorizontaleConstructieplaatGET",
+        "parameters": {
+          "id": "$response.body#/HorizontaleConstructieplaat.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.type": {
+        "operationId": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructieGET",
+        "parameters": {
+          "id": "$response.body#/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DraagstructuurBWCTWC` op te halen."
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.asset-Id": {
+        "operationId": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructieGET",
+        "parameters": {
+          "id": "$response.body#/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.theoretischeLevensduur": {
+        "operationId": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructieGET",
+        "parameters": {
+          "id": "$response.body#/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.aIM-Toestand": {
+        "operationId": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructieGET",
+        "parameters": {
+          "id": "$response.body#/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.asset-Versie": {
+        "operationId": "DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructieGET",
+        "parameters": {
+          "id": "$response.body#/DraagstructuurVanEenBeweegbare-EnTijdelijkeWaterkerendeConstructie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "HijsEnHefwerktuig.asset-Id": {
+        "operationId": "HijsEnHefwerktuigGET",
+        "parameters": {
+          "id": "$response.body#/HijsEnHefwerktuig.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "HijsEnHefwerktuig.theoretischeLevensduur": {
+        "operationId": "HijsEnHefwerktuigGET",
+        "parameters": {
+          "id": "$response.body#/HijsEnHefwerktuig.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "HijsEnHefwerktuig.aIM-Toestand": {
+        "operationId": "HijsEnHefwerktuigGET",
+        "parameters": {
+          "id": "$response.body#/HijsEnHefwerktuig.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "HijsEnHefwerktuig.asset-Versie": {
+        "operationId": "HijsEnHefwerktuigGET",
+        "parameters": {
+          "id": "$response.body#/HijsEnHefwerktuig.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Portiek.gewicht": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.gewicht/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInTon` op te halen."
+      },
+      "Portiek.asset-Id": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Portiek.theoretischeLevensduur": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Portiek.aIM-Toestand": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Portiek.asset-Versie": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Portiek.technischDocument": {
+        "operationId": "PortiekGET",
+        "parameters": {
+          "id": "$response.body#/Portiek.technischDocument/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
+      },
+      "Hijspunt.maximaleWerklast": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.maximaleWerklast/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKN` op te halen."
+      },
+      "Hijspunt.typeBevestiging": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.typeBevestiging/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBevestigingspunt` op te halen."
+      },
+      "Hijspunt.asset-Id": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Hijspunt.theoretischeLevensduur": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Hijspunt.aIM-Toestand": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Hijspunt.asset-Versie": {
+        "operationId": "HijspuntGET",
+        "parameters": {
+          "id": "$response.body#/Hijspunt.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Loopprofiel.beschikbareLengte": {
+        "operationId": "LoopprofielGET",
+        "parameters": {
+          "id": "$response.body#/Loopprofiel.beschikbareLengte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Loopprofiel.asset-Id": {
+        "operationId": "LoopprofielGET",
+        "parameters": {
+          "id": "$response.body#/Loopprofiel.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Loopprofiel.theoretischeLevensduur": {
+        "operationId": "LoopprofielGET",
+        "parameters": {
+          "id": "$response.body#/Loopprofiel.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Loopprofiel.aIM-Toestand": {
+        "operationId": "LoopprofielGET",
+        "parameters": {
+          "id": "$response.body#/Loopprofiel.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Loopprofiel.asset-Versie": {
+        "operationId": "LoopprofielGET",
+        "parameters": {
+          "id": "$response.body#/Loopprofiel.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Loopkat.asset-Id": {
+        "operationId": "LoopkatGET",
+        "parameters": {
+          "id": "$response.body#/Loopkat.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Loopkat.theoretischeLevensduur": {
+        "operationId": "LoopkatGET",
+        "parameters": {
+          "id": "$response.body#/Loopkat.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Loopkat.aIM-Toestand": {
+        "operationId": "LoopkatGET",
+        "parameters": {
+          "id": "$response.body#/Loopkat.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Loopkat.asset-Versie": {
+        "operationId": "LoopkatGET",
+        "parameters": {
+          "id": "$response.body#/Loopkat.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Takel.typeTakel": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.typeTakel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeTakel` op te halen."
+      },
+      "Takel.typeAandrijvingTakel": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.typeAandrijvingTakel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeAandrijvingTakel` op te halen."
+      },
+      "Takel.maximaleWerklast": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.maximaleWerklast/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInKN` op te halen."
+      },
+      "Takel.massa": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.massa/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInTon` op te halen."
+      },
+      "Takel.hijshoogte": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.hijshoogte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMeter` op te halen."
+      },
+      "Takel.asset-Id": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Takel.theoretischeLevensduur": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Takel.aIM-Toestand": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Takel.asset-Versie": {
+        "operationId": "TakelGET",
+        "parameters": {
+          "id": "$response.body#/Takel.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Railconstructie.typeBevestigingRail": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.typeBevestigingRail/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeBevestigingRail` op te halen."
+      },
+      "Railconstructie.klemtype": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.klemtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeKlem` op te halen."
+      },
+      "Railconstructie.asset-Id": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.asset-Id/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Railconstructie.theoretischeLevensduur": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.theoretischeLevensduur/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+      },
+      "Railconstructie.aIM-Toestand": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.aIM-Toestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+      },
+      "Railconstructie.asset-Versie": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.asset-Versie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+      },
+      "Railconstructie.technischDocument": {
+        "operationId": "RailconstructieGET",
+        "parameters": {
+          "id": "$response.body#/Railconstructie.technischDocument/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ComplexDatatypeTechnischDocument` op te halen."
+      }
+    }
+  }
+}

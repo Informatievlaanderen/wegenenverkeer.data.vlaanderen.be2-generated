@@ -3830,6 +3830,236 @@
         }
       }
     },
+    "/id/Realiseert/{id}": {
+      "get": {
+        "summary": "Verwijst naar een extern element in een extern vocabularium.",
+        "operationId": "RealiseertGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een Realiseert object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Realiseert object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Realiseert"
+                }
+              }
+            },
+            "links": {
+              "Realiseert.asset-Id": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "id": "$response.body#/Realiseert.asset-Id/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "Realiseert.asset-IdBron-Asset": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "id": "$response.body#/Realiseert.asset-IdBron-Asset/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "Realiseert.asset-IdDoel-Asset": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "id": "$response.body#/Realiseert.asset-IdDoel-Asset/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "Realiseert.asset-Versie": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "id": "$response.body#/Realiseert.asset-Versie/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "RealiseertGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
     "/id/HeeftAanzicht/{id}": {
       "get": {
         "summary": "Deze relatie verwijst naar het aanzicht vanuit de verkeersbordopstelling.",
@@ -5440,6 +5670,236 @@
         }
       }
     },
+    "/id/IsOntwerpVan/{id}": {
+      "get": {
+        "summary": "Het verkeersbord of markering in ontwerp is een wijziging van een bestaand bord of markering.",
+        "operationId": "IsOntwerpVanGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een IsOntwerpVan object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "IsOntwerpVan object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IsOntwerpVan"
+                }
+              }
+            },
+            "links": {
+              "IsOntwerpVan.asset-Id": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "id": "$response.body#/IsOntwerpVan.asset-Id/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "IsOntwerpVan.asset-IdBron-Asset": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "id": "$response.body#/IsOntwerpVan.asset-IdBron-Asset/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "IsOntwerpVan.asset-IdDoel-Asset": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "id": "$response.body#/IsOntwerpVan.asset-IdDoel-Asset/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "IsOntwerpVan.asset-Versie": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "id": "$response.body#/IsOntwerpVan.asset-Versie/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "IsOntwerpVanGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
     "/id/IsAdministratiefOnderdeelVan/{id}": {
       "get": {
         "summary": "Deze relatie geeft aan dat een onderdeel louter met een administratieve functie toebehoort aan de collectie.",
@@ -6963,6 +7423,60 @@
           "asset-Versie"
         ]
       },
+      "Realiseert.typeURI": {
+        "title": "Realiseert.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "Realiseert.isActief": {
+        "title": "Realiseert.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "Realiseert": {
+        "title": "Realiseert",
+        "type": "object",
+        "description": "Verwijst naar een extern element in een extern vocabularium.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Realiseert)",
+            "pattern": "^Realiseert$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/Realiseert.typeURI"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/Realiseert.isActief"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
       "HeeftAanzicht.typeURI": {
         "title": "HeeftAanzicht.typeURI",
         "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
@@ -7341,6 +7855,60 @@
           "asset-Versie"
         ]
       },
+      "IsOntwerpVan.typeURI": {
+        "title": "IsOntwerpVan.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "IsOntwerpVan.isActief": {
+        "title": "IsOntwerpVan.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "IsOntwerpVan": {
+        "title": "IsOntwerpVan",
+        "type": "object",
+        "description": "Het verkeersbord of markering in ontwerp is een wijziging van een bestaand bord of markering.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IsOntwerpVan)",
+            "pattern": "^IsOntwerpVan$"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdBron-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "asset-IdDoel-Asset": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/IsOntwerpVan.typeURI"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/IsOntwerpVan.isActief"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "asset-Id",
+          "asset-IdBron-Asset",
+          "asset-IdDoel-Asset",
+          "typeURI",
+          "isActief",
+          "asset-Versie"
+        ]
+      },
       "IsAdministratiefOnderdeelVan.typeURI": {
         "title": "IsAdministratiefOnderdeelVan.typeURI",
         "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
@@ -7662,22 +8230,22 @@
       },
       "Contactinfo.contactnaam": {
         "title": "Contactinfo.contactnaam",
-        "description": "Naam van bv. de persoon die men kan contacteren.",
+        "description": "Naam van bv. de persoon die men kan contacteren. http://xmlns.com/foaf/0.1/name",
         "type": "string"
       },
       "Contactinfo.email": {
         "title": "Contactinfo.email",
-        "description": "Email-adres waarnaar men kan mailen.",
+        "description": "Email-adres waarnaar men kan mailen. http://schema.org/email",
         "type": "string"
       },
       "Contactinfo.telefoon": {
         "title": "Contactinfo.telefoon",
-        "description": "Telefoonnummer waarop men kan bellen.",
+        "description": "Telefoonnummer waarop men kan bellen. http://schema.org/telephone",
         "type": "string"
       },
       "Contactinfo.fax": {
         "title": "Contactinfo.fax",
-        "description": "Faxnummer waarnaar men kan faxen.",
+        "description": "Faxnummer waarnaar men kan faxen. http://schema.org/faxNumber",
         "type": "string"
       },
       "Contactinfo.opmerkingen": {
@@ -7687,7 +8255,7 @@
       },
       "Contactinfo.website": {
         "title": "Contactinfo.website",
-        "description": "Website waarnaar men kan surfen.",
+        "description": "Website waarnaar men kan surfen. http://xmlns.com/foaf/0.1/page",
         "type": "string"
       },
       "Contactinfo": {
@@ -7724,7 +8292,7 @@
           },
           "beschikbaarheid": {
             "type": "array",
-            "description": "Periode waarin contact kan worden opgenomen. Lijst van Openingsurenspecificatie items.",
+            "description": "Periode waarin contact kan worden opgenomen. http://schema.org/hoursAvailable Lijst van Openingsurenspecificatie items.",
             "items": {
               "$ref": "#/components/schemas/Openingsurenspecificatie"
             },

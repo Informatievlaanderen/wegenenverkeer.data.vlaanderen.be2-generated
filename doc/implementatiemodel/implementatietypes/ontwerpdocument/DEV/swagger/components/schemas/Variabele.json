@@ -1,0 +1,32 @@
+{
+  "title": "Variabele",
+  "type": "object",
+  "description": "Complex datatype die de variabele bevat.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Variabele)",
+      "pattern": "^Variabele$"
+    },
+    "waarde": {
+      "type": "array",
+      "description": "Dit is een letterlijke waarde (bijvoorbeeld een tekst, getal of datum) die als uitgangspunt of suggestie dient bij het invullen van de variabele. Lijst van VariabeleWaarden items.",
+      "items": {
+        "$ref": "#/components/schemas/VariabeleWaarden"
+      },
+      "minItems": 1
+    },
+    "uri": {
+      "$ref": "#/components/schemas/Variabele.uri"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "uri"
+  ]
+}

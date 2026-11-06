@@ -399,6 +399,34 @@
           "@id"
         ]
       },
+      "Grondtoevoegsel": {
+        "title": "Grondtoevoegsel",
+        "type": "object",
+        "description": "Enumeratie van Grondtoevoegsel",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Grondbestemming": {
+        "title": "Grondbestemming",
+        "type": "object",
+        "description": "Enumeratie van Grondbestemming",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
       "GrondHoofdnaamcode": {
         "title": "GrondHoofdnaamcode",
         "type": "object",
@@ -417,6 +445,20 @@
         "title": "GrondbijmengingHoeveelheidscode",
         "type": "object",
         "description": "Enumeratie van GrondbijmengingHoeveelheidscode",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Grondwerksoorten": {
+        "title": "Grondwerksoorten",
+        "type": "object",
+        "description": "Enumeratie van Grondwerksoorten",
         "properties": {
           "@id": {
             "type": "string",
@@ -1485,22 +1527,22 @@
       },
       "Contactinfo.contactnaam": {
         "title": "Contactinfo.contactnaam",
-        "description": "Naam van bv. de persoon die men kan contacteren.",
+        "description": "Naam van bv. de persoon die men kan contacteren. http://xmlns.com/foaf/0.1/name",
         "type": "string"
       },
       "Contactinfo.email": {
         "title": "Contactinfo.email",
-        "description": "Email-adres waarnaar men kan mailen.",
+        "description": "Email-adres waarnaar men kan mailen. http://schema.org/email",
         "type": "string"
       },
       "Contactinfo.telefoon": {
         "title": "Contactinfo.telefoon",
-        "description": "Telefoonnummer waarop men kan bellen.",
+        "description": "Telefoonnummer waarop men kan bellen. http://schema.org/telephone",
         "type": "string"
       },
       "Contactinfo.fax": {
         "title": "Contactinfo.fax",
-        "description": "Faxnummer waarnaar men kan faxen.",
+        "description": "Faxnummer waarnaar men kan faxen. http://schema.org/faxNumber",
         "type": "string"
       },
       "Contactinfo.opmerkingen": {
@@ -1510,7 +1552,7 @@
       },
       "Contactinfo.website": {
         "title": "Contactinfo.website",
-        "description": "Website waarnaar men kan surfen.",
+        "description": "Website waarnaar men kan surfen. http://xmlns.com/foaf/0.1/page",
         "type": "string"
       },
       "Contactinfo": {
@@ -1547,7 +1589,7 @@
           },
           "beschikbaarheid": {
             "type": "array",
-            "description": "Periode waarin contact kan worden opgenomen. Lijst van Openingsurenspecificatie items.",
+            "description": "Periode waarin contact kan worden opgenomen. http://schema.org/hoursAvailable Lijst van Openingsurenspecificatie items.",
             "items": {
               "$ref": "#/components/schemas/Openingsurenspecificatie"
             },
@@ -2109,7 +2151,7 @@
       },
       "BijlageToegangsprocedure.websiteURL": {
         "title": "BijlageToegangsprocedure.websiteURL",
-        "description": "Website URL die als bijlage bij de toegangsprocedure gevoegd kan worden",
+        "description": "Website URL die als bijlage bij de toegangsprocedure gevoegd kan worden http://xmlns.com/foaf/0.1/page",
         "type": "string",
         "format": "uri"
       },
@@ -3340,6 +3382,64 @@
           "standaardEenheid"
         ]
       },
+      "VariabeleWaarden.getal": {
+        "title": "VariabeleWaarden.getal",
+        "description": "Bevat de waarde als getal.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "VariabeleWaarden.tekst": {
+        "title": "VariabeleWaarden.tekst",
+        "description": "Bevat de waarde als tekst.",
+        "type": "string"
+      },
+      "VariabeleWaarden.codelijst": {
+        "title": "VariabeleWaarden.codelijst",
+        "description": "Bevat een optie uit de codelijst.",
+        "type": "string",
+        "format": "uri"
+      },
+      "VariabeleWaarden.datum": {
+        "title": "VariabeleWaarden.datum",
+        "description": "Bevat de waarde als datum.",
+        "type": "string",
+        "format": "date"
+      },
+      "VariabeleWaarden": {
+        "title": "VariabeleWaarden",
+        "type": "object",
+        "description": "Complex datatype die de variabele waarden definieert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VariabeleWaarden)",
+            "pattern": "^VariabeleWaarden$"
+          },
+          "getal": {
+            "$ref": "#/components/schemas/VariabeleWaarden.getal"
+          },
+          "tekst": {
+            "$ref": "#/components/schemas/VariabeleWaarden.tekst"
+          },
+          "codelijst": {
+            "$ref": "#/components/schemas/VariabeleWaarden.codelijst"
+          },
+          "datum": {
+            "$ref": "#/components/schemas/VariabeleWaarden.datum"
+          }
+        },
+        "required": [
+          "@type",
+          "getal",
+          "tekst",
+          "codelijst",
+          "datum"
+        ]
+      },
       "MinMaxHoogteSchermelement": {
         "title": "MinMaxHoogteSchermelement",
         "type": "object",
@@ -3732,6 +3832,37 @@
           "isGrondmengingPlaatselijk"
         ]
       },
+      "Grondophoging": {
+        "title": "Grondophoging",
+        "type": "object",
+        "description": "Complex datatype om extra informatie van ophoging van grond te capteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondophoging)",
+            "pattern": "^Grondophoging$"
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Grondbestemming"
+          },
+          "grondtoevoegsel": {
+            "$ref": "#/components/schemas/Grondtoevoegsel"
+          },
+          "soortGrondwerk": {
+            "$ref": "#/components/schemas/Grondwerksoorten"
+          }
+        },
+        "required": [
+          "@type",
+          "herkomst",
+          "grondtoevoegsel",
+          "soortGrondwerk"
+        ]
+      },
       "SoortVervuiling": {
         "title": "SoortVervuiling",
         "type": "object",
@@ -3763,6 +3894,60 @@
           "@type",
           "soortVervuiling",
           "microgramPerKilogram"
+        ]
+      },
+      "Grondafdekking": {
+        "title": "Grondafdekking",
+        "type": "object",
+        "description": "Complex datatype om extra informatie van de afdekking van grond te capteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Grondafdekking)",
+            "pattern": "^Grondafdekking$"
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Grondbestemming"
+          },
+          "soortGrondwerk": {
+            "$ref": "#/components/schemas/Grondwerksoorten"
+          }
+        },
+        "required": [
+          "@type",
+          "herkomst",
+          "soortGrondwerk"
+        ]
+      },
+      "GrondafgravingEnGronduitgraving": {
+        "title": "GrondafgravingEnGronduitgraving",
+        "type": "object",
+        "description": "Complex datatype voor de afgraving of uitgraving van grond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GrondafgravingEnGronduitgraving)",
+            "pattern": "^GrondafgravingEnGronduitgraving$"
+          },
+          "grondbestemming": {
+            "$ref": "#/components/schemas/Grondbestemming"
+          },
+          "soortGrondwerk": {
+            "$ref": "#/components/schemas/Grondwerksoorten"
+          }
+        },
+        "required": [
+          "@type",
+          "grondbestemming",
+          "soortGrondwerk"
         ]
       },
       "MateriaalKarakteristiek": {

@@ -12,17 +12,11 @@
       "description": "Object type (klasse Deur)",
       "pattern": "^Deur$"
     },
-    "ophangconstructie": {
-      "$ref": "#/components/schemas/Bestandsbijlage"
-    },
-    "brandweerstand": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInUur"
-    },
     "afmetingDeuropening": {
       "$ref": "#/components/schemas/AfmetingBxhInMeter"
     },
-    "hoogte": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    "brandweerstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInUur"
     },
     "breedte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
@@ -30,11 +24,20 @@
     "dikte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
     },
+    "fabrikant": {
+      "$ref": "#/components/schemas/DeurFabrikant"
+    },
     "handgreeptype": {
       "$ref": "#/components/schemas/DeurHandgreeptype"
     },
-    "fabrikant": {
-      "$ref": "#/components/schemas/DeurFabrikant"
+    "hoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMillimeter"
+    },
+    "isWaterdicht": {
+      "$ref": "#/components/schemas/Deur.isWaterdicht"
+    },
+    "ophangconstructie": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
     },
     "sluitingstijd": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInSeconde"
@@ -46,9 +49,6 @@
         "$ref": "#/components/schemas/Deurtype"
       },
       "minItems": 1
-    },
-    "isWaterdicht": {
-      "$ref": "#/components/schemas/Deur.isWaterdicht"
     },
     "typeOpening": {
       "$ref": "#/components/schemas/ToegangsdeurTypeOpening"
@@ -62,6 +62,17 @@
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Deur.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Deur.datumOprichtingObject"
+    },
     "notitie": {
       "$ref": "#/components/schemas/Deur.notitie"
     },
@@ -73,22 +84,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Deur.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Deur.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Deur.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Deur.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Deur.isActief"
@@ -102,27 +102,27 @@
   },
   "required": [
     "@type",
-    "ophangconstructie",
-    "brandweerstand",
     "afmetingDeuropening",
-    "hoogte",
+    "brandweerstand",
     "breedte",
     "dikte",
-    "handgreeptype",
     "fabrikant",
+    "handgreeptype",
+    "hoogte",
+    "isWaterdicht",
+    "ophangconstructie",
     "sluitingstijd",
     "typeDeur",
-    "isWaterdicht",
     "typeOpening",
     "naampad",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

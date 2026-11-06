@@ -12,15 +12,6 @@
       "description": "Object type (klasse Contactpunt)",
       "pattern": "^Contactpunt$"
     },
-    "typeContactpunt": {
-      "$ref": "#/components/schemas/ContactpuntType"
-    },
-    "merk": {
-      "$ref": "#/components/schemas/MerknamenContactpunten"
-    },
-    "modelnaam": {
-      "$ref": "#/components/schemas/ModelnamenContactpunten"
-    },
     "isBuiten": {
       "$ref": "#/components/schemas/Contactpunt.isBuiten"
     },
@@ -29,6 +20,15 @@
     },
     "isWisselcontact": {
       "$ref": "#/components/schemas/Contactpunt.isWisselcontact"
+    },
+    "merk": {
+      "$ref": "#/components/schemas/MerknamenContactpunten"
+    },
+    "modelnaam": {
+      "$ref": "#/components/schemas/ModelnamenContactpunten"
+    },
+    "typeContactpunt": {
+      "$ref": "#/components/schemas/ContactpuntType"
     },
     "serienummer": {
       "$ref": "#/components/schemas/Contactpunt.serienummer"
@@ -42,6 +42,17 @@
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
     },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactpunt.bestekpostnummer"
+      },
+      "minItems": 1
+    },
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Contactpunt.datumOprichtingObject"
+    },
     "notitie": {
       "$ref": "#/components/schemas/Contactpunt.notitie"
     },
@@ -53,22 +64,11 @@
       },
       "minItems": 1
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Contactpunt.typeURI"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Contactpunt.bestekpostnummer"
-      },
-      "minItems": 1
-    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Contactpunt.datumOprichtingObject"
+    "typeURI": {
+      "$ref": "#/components/schemas/Contactpunt.typeURI"
     },
     "isActief": {
       "$ref": "#/components/schemas/Contactpunt.isActief"
@@ -82,22 +82,22 @@
   },
   "required": [
     "@type",
-    "typeContactpunt",
-    "merk",
-    "modelnaam",
     "isBuiten",
     "isOpbouw",
     "isWisselcontact",
+    "merk",
+    "modelnaam",
+    "typeContactpunt",
     "serienummer",
     "naampad",
     "naam",
     "asset-Id",
+    "bestekpostnummer",
+    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "typeURI",
-    "bestekpostnummer",
     "theoretischeLevensduur",
-    "datumOprichtingObject",
+    "typeURI",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

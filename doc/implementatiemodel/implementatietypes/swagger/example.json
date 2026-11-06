@@ -1,0 +1,2401 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://wegenenverkeer.data.dev-vlaanderen.be/",
+      "description": "Basis URL"
+    }
+  ],
+  "paths": {
+    "/id/AIMToestand/{id}": {
+      "get": {
+        "summary": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen.",
+        "operationId": "AIMToestandGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een AIMToestand object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "AIMToestand object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AIMToestand"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "AIMToestandGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/Corrosiebelastingscategorie/{id}": {
+      "get": {
+        "summary": "De mogelijke codes om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven.",
+        "operationId": "CorrosiebelastingscategorieGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een Corrosiebelastingscategorie object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Corrosiebelastingscategorie object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Corrosiebelastingscategorie"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "CorrosiebelastingscategorieGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/Mimetype/{id}": {
+      "get": {
+        "summary": "De mime types van bestanden (AWVDocument) beperkt tot mime types voor toegelaten bestandstypen.",
+        "operationId": "MimetypeGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een Mimetype object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mimetype object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mimetype"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "MimetypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/VerankeringSV/{id}": {
+      "get": {
+        "summary": "De mogelijke verankeringen.",
+        "description": "Exclusief attribuut voor Signalisatie Vlaanderen.",
+        "operationId": "VerankeringSVGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een VerankeringSV object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "VerankeringSV object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerankeringSV"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VerankeringSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/OndergrondSV/{id}": {
+      "get": {
+        "summary": "De mogelijke opties van ondergrond.",
+        "description": "Exclusief attribuut voor Signalisatie Vlaanderen.",
+        "operationId": "OndergrondSVGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een OndergrondSV object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OndergrondSV object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OndergrondSV"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "OndergrondSVGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/VKSSteuntype/{id}": {
+      "get": {
+        "summary": "De mogelijke types VKS steunen.",
+        "operationId": "VKSSteuntypeGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een VKSSteuntype object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "VKSSteuntype object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VKSSteuntype"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteuntypeGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/VKSSteun/{id}": {
+      "get": {
+        "summary": "Steunen voor verkeerssignalisatie.",
+        "description": "Implementatietype enkel voor Signalisatie Vlaanderen (VKS).",
+        "operationId": "VKSSteunGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een VKSSteun object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "VKSSteun object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VKSSteun"
+                }
+              }
+            },
+            "links": {
+              "VKSSteun.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "id": "$response.body#/VKSSteun.type/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `VKSSteuntype` op te halen."
+              },
+              "VKSSteun.asset-Id": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "id": "$response.body#/VKSSteun.asset-Id/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+              },
+              "VKSSteun.theoretischeLevensduur": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "id": "$response.body#/VKSSteun.theoretischeLevensduur/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `KwantitatieveWaardeInMaand` op te halen."
+              },
+              "VKSSteun.aIM-Toestand": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "id": "$response.body#/VKSSteun.aIM-Toestand/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AIMToestand` op te halen."
+              },
+              "VKSSteun.asset-Versie": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "id": "$response.body#/VKSSteun.asset-Versie/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AssetVersie` op te halen."
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "VKSSteunGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/DraagconstructieBeschermlaag/{id}": {
+      "get": {
+        "summary": "De manieren van aanbrengen van een beschermlaag ter voorkoming van roestvorming.",
+        "operationId": "DraagconstructieBeschermlaagGET",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Identificator van een DraagconstructieBeschermlaag object.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "DraagconstructieBeschermlaag object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid authorization.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "412": {
+            "description": "Pre-condition failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problemdetail"
+                }
+              }
+            },
+            "links": {
+              "Problemdetail.type": {
+                "operationId": "DraagconstructieBeschermlaagGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `Problemdetail` op te halen."
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Problemdetail": {
+        "title": "Problemdetail",
+        "type": "object",
+        "description": "Meer gedetailleerde beschrijving van de fout in een HTTP response.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "instance": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "AIMToestand": {
+        "title": "AIMToestand",
+        "type": "object",
+        "description": "Enumeratie van AIMToestand",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Corrosiebelastingscategorie": {
+        "title": "Corrosiebelastingscategorie",
+        "type": "object",
+        "description": "Enumeratie van Corrosiebelastingscategorie",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Mimetype": {
+        "title": "Mimetype",
+        "type": "object",
+        "description": "Enumeratie van Mimetype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "VerankeringSV": {
+        "title": "VerankeringSV",
+        "type": "object",
+        "description": "Enumeratie van VerankeringSV",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "OndergrondSV": {
+        "title": "OndergrondSV",
+        "type": "object",
+        "description": "Enumeratie van OndergrondSV",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "VKSSteuntype": {
+        "title": "VKSSteuntype",
+        "type": "object",
+        "description": "Enumeratie van VKSSteuntype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "DraagconstructieBeschermlaag": {
+        "title": "DraagconstructieBeschermlaag",
+        "type": "object",
+        "description": "Enumeratie van DraagconstructieBeschermlaag",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "VKSSteun.naam": {
+        "title": "VKSSteun.naam",
+        "description": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt. Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is.",
+        "type": "string"
+      },
+      "VKSSteun.notitie": {
+        "title": "VKSSteun.notitie",
+        "description": "Extra notitie voor het object.",
+        "type": "string"
+      },
+      "VKSSteun.standaardbestekpostnummer": {
+        "title": "VKSSteun.standaardbestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G.",
+        "type": "string"
+      },
+      "VKSSteun.typeURI": {
+        "title": "VKSSteun.typeURI",
+        "description": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .",
+        "type": "string",
+        "format": "uri"
+      },
+      "VKSSteun.bestekpostnummer": {
+        "title": "VKSSteun.bestekpostnummer",
+        "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek.",
+        "type": "string"
+      },
+      "VKSSteun.datumOprichtingObject": {
+        "title": "VKSSteun.datumOprichtingObject",
+        "description": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg.",
+        "type": "string",
+        "format": "date"
+      },
+      "VKSSteun.isActief": {
+        "title": "VKSSteun.isActief",
+        "description": "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem.",
+        "type": "boolean"
+      },
+      "VKSSteun": {
+        "title": "VKSSteun",
+        "type": "object",
+        "description": "Steunen voor verkeerssignalisatie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VKSSteun)",
+            "pattern": "^VKSSteun$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/VKSSteuntype"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/VKSSteun.naam"
+          },
+          "asset-Id": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "notitie": {
+            "$ref": "#/components/schemas/VKSSteun.notitie"
+          },
+          "standaardbestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/VKSSteun.standaardbestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "typeURI": {
+            "$ref": "#/components/schemas/VKSSteun.typeURI"
+          },
+          "bestekpostnummer": {
+            "type": "array",
+            "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/VKSSteun.bestekpostnummer"
+            },
+            "minItems": 1
+          },
+          "theoretischeLevensduur": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
+          },
+          "datumOprichtingObject": {
+            "$ref": "#/components/schemas/VKSSteun.datumOprichtingObject"
+          },
+          "isActief": {
+            "$ref": "#/components/schemas/VKSSteun.isActief"
+          },
+          "aIM-Toestand": {
+            "$ref": "#/components/schemas/AIMToestand"
+          },
+          "asset-Versie": {
+            "$ref": "#/components/schemas/AssetVersie"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "naam",
+          "asset-Id",
+          "notitie",
+          "standaardbestekpostnummer",
+          "typeURI",
+          "bestekpostnummer",
+          "theoretischeLevensduur",
+          "datumOprichtingObject",
+          "isActief",
+          "aIM-Toestand",
+          "asset-Versie"
+        ]
+      },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "Een groep van tekens om een AIM object te identificeren of te benoemen.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Gegevens van de organisatie die de toekenning deed.",
+        "type": "string"
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator.identificator"
+          },
+          "toegekendDoor": {
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegekendDoor"
+        ]
+      },
+      "KwantitatieveWaardeInMaand.waarde": {
+        "title": "KwantitatieveWaardeInMaand.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "KwantitatieveWaardeInMaand.standaardEenheid": {
+        "title": "KwantitatieveWaardeInMaand.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in maand. \"mo\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInMaand": {
+        "title": "KwantitatieveWaardeInMaand",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInMaand)",
+            "pattern": "^KwantitatieveWaardeInMaand$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInMaand.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "AssetVersie.versienummer": {
+        "title": "AssetVersie.versienummer",
+        "description": "Het versienummer als een oplopende integer.",
+        "type": "integer",
+        "format": "int64"
+      },
+      "AssetVersie.timestamp": {
+        "title": "AssetVersie.timestamp",
+        "description": "De timestamp van het moment dat de versienummer werd toegekend.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssetVersie.context": {
+        "title": "AssetVersie.context",
+        "description": "De context van de versie creatie.",
+        "type": "string"
+      },
+      "AssetVersie": {
+        "title": "AssetVersie",
+        "type": "object",
+        "description": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AssetVersie)",
+            "pattern": "^AssetVersie$"
+          },
+          "versienummer": {
+            "$ref": "#/components/schemas/AssetVersie.versienummer"
+          },
+          "timestamp": {
+            "$ref": "#/components/schemas/AssetVersie.timestamp"
+          },
+          "context": {
+            "$ref": "#/components/schemas/AssetVersie.context"
+          }
+        },
+        "required": [
+          "@type",
+          "versienummer",
+          "timestamp",
+          "context"
+        ]
+      },
+      "Bestandsbijlage.uri": {
+        "title": "Bestandsbijlage.uri",
+        "description": "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn.",
+        "type": "string",
+        "format": "uri"
+      },
+      "Bestandsbijlage.bestandsnaam": {
+        "title": "Bestandsbijlage.bestandsnaam",
+        "description": "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt.",
+        "type": "string"
+      },
+      "Bestandsbijlage.opmaakdatum": {
+        "title": "Bestandsbijlage.opmaakdatum",
+        "description": "De datum waarop het document is opgemaakt.",
+        "type": "string",
+        "format": "date"
+      },
+      "Bestandsbijlage": {
+        "title": "Bestandsbijlage",
+        "type": "object",
+        "description": "Complex datatype voor alle bestandsbijlages.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bestandsbijlage)",
+            "pattern": "^Bestandsbijlage$"
+          },
+          "uri": {
+            "$ref": "#/components/schemas/Bestandsbijlage.uri"
+          },
+          "bestandsnaam": {
+            "$ref": "#/components/schemas/Bestandsbijlage.bestandsnaam"
+          },
+          "omschrijving": {
+            "$ref": "#/components/schemas/Tekstblok"
+          },
+          "mime-Type": {
+            "$ref": "#/components/schemas/Mimetype"
+          },
+          "opmaakdatum": {
+            "$ref": "#/components/schemas/Bestandsbijlage.opmaakdatum"
+          }
+        },
+        "required": [
+          "@type",
+          "uri",
+          "bestandsnaam",
+          "omschrijving",
+          "mime-Type",
+          "opmaakdatum"
+        ]
+      },
+      "Tekstblok.waarde": {
+        "title": "Tekstblok.waarde",
+        "description": "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "type": "string"
+      },
+      "Tekstblok": {
+        "title": "Tekstblok",
+        "type": "object",
+        "description": "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tekstblok)",
+            "pattern": "^Tekstblok$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Tekstblok.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "BeschermendeLaag": {
+        "title": "BeschermendeLaag",
+        "type": "object",
+        "description": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BeschermendeLaag)",
+            "pattern": "^BeschermendeLaag$"
+          },
+          "corrosieklasse": {
+            "$ref": "#/components/schemas/Corrosiebelastingscategorie"
+          },
+          "beschermlaag": {
+            "$ref": "#/components/schemas/DraagconstructieBeschermlaag"
+          }
+        },
+        "required": [
+          "@type",
+          "corrosieklasse",
+          "beschermlaag"
+        ]
+      },
+      "RAL-Kleur.waarde": {
+        "title": "RAL-Kleur.waarde",
+        "description": "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde moet voldoen aan volgende regex: [1-9]\\d{3}",
+        "type": "string"
+      },
+      "RAL-Kleur": {
+        "title": "RAL-Kleur",
+        "type": "object",
+        "description": "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde is een natuurlijk getal tussen 1000 en 9999.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RAL-Kleur)",
+            "pattern": "^RAL-Kleur$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/RAL-Kleur.waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInRadialen..standaardEenheid": {
+        "title": "KwantitatieveWaardeInRadialen..standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in radialen.",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInRadialen..waarde": {
+        "title": "KwantitatieveWaardeInRadialen..waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInRadialen.": {
+        "title": "KwantitatieveWaardeInRadialen.",
+        "type": "object",
+        "description": "Een kwantitatieve waarde dat een getal uitdrukt in radialen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInRadialen.)",
+            "pattern": "^KwantitatieveWaardeInRadialen.$"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..standaardEenheid"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInRadialen..waarde"
+          }
+        },
+        "required": [
+          "@type",
+          "standaardEenheid",
+          "waarde"
+        ]
+      },
+      "KwantitatieveWaardeInDecimaleGraden.waarde": {
+        "title": "KwantitatieveWaardeInDecimaleGraden.waarde",
+        "description": "Bevat een getal die bij het datatype hoort.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "KwantitatieveWaardeInDecimaleGraden.standaardEenheid": {
+        "title": "KwantitatieveWaardeInDecimaleGraden.standaardEenheid",
+        "description": "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden. \"deg\"^^cdt:ucumunit",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "KwantitatieveWaardeInDecimaleGraden": {
+        "title": "KwantitatieveWaardeInDecimaleGraden",
+        "type": "object",
+        "description": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaardeInDecimaleGraden)",
+            "pattern": "^KwantitatieveWaardeInDecimaleGraden$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.waarde"
+          },
+          "standaardEenheid": {
+            "$ref": "#/components/schemas/KwantitatieveWaardeInDecimaleGraden.standaardEenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "standaardEenheid"
+        ]
+      },
+      "Variabele.uri": {
+        "title": "Variabele.uri",
+        "description": "TODO",
+        "type": "string",
+        "format": "uri"
+      },
+      "Variabele": {
+        "title": "Variabele",
+        "type": "object",
+        "description": "Complex datatype die de variabele bevat.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Variabele)",
+            "pattern": "^Variabele$"
+          },
+          "waarde": {
+            "type": "array",
+            "description": "Dit is een letterlijke waarde (bijvoorbeeld een tekst, getal of datum) die als uitgangspunt of suggestie dient bij het invullen van de variabele. Lijst van VariabeleWaarden items.",
+            "items": {
+              "$ref": "#/components/schemas/VariabeleWaarden"
+            },
+            "minItems": 1
+          },
+          "uri": {
+            "$ref": "#/components/schemas/Variabele.uri"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "uri"
+        ]
+      },
+      "VariabeleWaarden.getal": {
+        "title": "VariabeleWaarden.getal",
+        "description": "Bevat de waarde als getal.",
+        "type": "string",
+        "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+      },
+      "VariabeleWaarden.tekst": {
+        "title": "VariabeleWaarden.tekst",
+        "description": "Bevat de waarde als tekst.",
+        "type": "string"
+      },
+      "VariabeleWaarden.codelijst": {
+        "title": "VariabeleWaarden.codelijst",
+        "description": "Bevat een optie uit de codelijst.",
+        "type": "string",
+        "format": "uri"
+      },
+      "VariabeleWaarden.datum": {
+        "title": "VariabeleWaarden.datum",
+        "description": "Bevat de waarde als datum.",
+        "type": "string",
+        "format": "date"
+      },
+      "VariabeleWaarden": {
+        "title": "VariabeleWaarden",
+        "type": "object",
+        "description": "Complex datatype die de variabele waarden definieert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VariabeleWaarden)",
+            "pattern": "^VariabeleWaarden$"
+          },
+          "getal": {
+            "$ref": "#/components/schemas/VariabeleWaarden.getal"
+          },
+          "tekst": {
+            "$ref": "#/components/schemas/VariabeleWaarden.tekst"
+          },
+          "codelijst": {
+            "$ref": "#/components/schemas/VariabeleWaarden.codelijst"
+          },
+          "datum": {
+            "$ref": "#/components/schemas/VariabeleWaarden.datum"
+          }
+        },
+        "required": [
+          "@type",
+          "getal",
+          "tekst",
+          "codelijst",
+          "datum"
+        ]
+      },
+      "ExterneReferentie.externReferentienummer": {
+        "title": "ExterneReferentie.externReferentienummer",
+        "description": "Referentienummer zoals gekend bij de externe partij bv. aannemer, VLCC, ...",
+        "type": "string"
+      },
+      "ExterneReferentie.externePartij": {
+        "title": "ExterneReferentie.externePartij",
+        "description": "De naam van de externe partij waarvoor de referentie geldt. Dit kan een organisatie zijn maar ook een softwaretoepassing zoals bv. ABBA of VLCC.",
+        "type": "string"
+      },
+      "ExterneReferentie": {
+        "title": "ExterneReferentie",
+        "type": "object",
+        "description": "Complex datatype waarmee een referentienummer zoals gekend bij de externe partij bv. aannemer, VLCC, ... kan toegevoegd worden aan object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ExterneReferentie)",
+            "pattern": "^ExterneReferentie$"
+          },
+          "externReferentienummer": {
+            "$ref": "#/components/schemas/ExterneReferentie.externReferentienummer"
+          },
+          "externePartij": {
+            "$ref": "#/components/schemas/ExterneReferentie.externePartij"
+          }
+        },
+        "required": [
+          "@type",
+          "externReferentienummer",
+          "externePartij"
+        ]
+      }
+    }
+  }
+}

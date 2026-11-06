@@ -12,11 +12,8 @@
       "description": "Object type (klasse Stortsteen)",
       "pattern": "^Stortsteen$"
     },
-    "type": {
-      "$ref": "#/components/schemas/StortsteenType"
-    },
-    "kaliber": {
-      "$ref": "#/components/schemas/StortsteenKaliber"
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
     },
     "hechtspecie": {
       "type": "array",
@@ -26,6 +23,15 @@
       },
       "minItems": 1
     },
+    "isVerankerd": {
+      "$ref": "#/components/schemas/Stortsteen.isVerankerd"
+    },
+    "kaliber": {
+      "$ref": "#/components/schemas/StortsteenKaliber"
+    },
+    "bestortingswijze": {
+      "$ref": "#/components/schemas/Plaatsingswijze"
+    },
     "technischeFiche": {
       "type": "array",
       "description": "De technische fiche van stortsteen als bijlage. Lijst van Bestandsbijlage items.",
@@ -34,14 +40,8 @@
       },
       "minItems": 1
     },
-    "isVerankerd": {
-      "$ref": "#/components/schemas/Stortsteen.isVerankerd"
-    },
-    "bestortingswijze": {
-      "$ref": "#/components/schemas/Plaatsingswijze"
-    },
-    "gewicht": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    "type": {
+      "$ref": "#/components/schemas/StortsteenType"
     },
     "dikte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
@@ -49,13 +49,13 @@
   },
   "required": [
     "@type",
-    "type",
-    "kaliber",
-    "hechtspecie",
-    "technischeFiche",
-    "isVerankerd",
-    "bestortingswijze",
     "gewicht",
+    "hechtspecie",
+    "isVerankerd",
+    "kaliber",
+    "bestortingswijze",
+    "technischeFiche",
+    "type",
     "dikte"
   ]
 }
