@@ -97,12 +97,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMDatabankStatusShape> a shacl:NodeShape;
   rdfs:label "AIM databank status"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMDatabankStatus>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "is actief"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMDatabankStatus.IsActief>;
     shacl:class xsd:boolean;
@@ -140,6 +142,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMNaamObjectShape> a shacl:NodeShape;
   rdfs:label "AIM naam object"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMNaamObject>;
   shacl:closed false;
@@ -176,12 +179,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObjectShape> a shacl:NodeShape;
   rdfs:label "AIM object"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "asset-id"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.Asset-Id>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator>;
@@ -193,6 +198,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "notitie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Extra notitie voor het object."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.Notitie>;
     shacl:class xsd:string;
@@ -204,6 +210,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaardbestekpostnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.Standaardbestekpostnummer>;
     shacl:class xsd:string;
@@ -214,6 +221,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "type URI"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.TypeURI>;
     shacl:class xsd:anyURI;
@@ -236,6 +244,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "theoretische levensduur"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.TheoretischeLevensduur>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand>;
@@ -247,6 +256,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "datum oprichting object"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMObject.DatumOprichtingObject>;
     shacl:class xsd:date;
@@ -283,12 +293,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMToestandShape> a shacl:NodeShape;
   rdfs:label "AIM Toestand"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMToestand>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "AIM-toestand"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Geeft de actuele stand in de levenscyclus van het object."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMToestand.AIM-Toestand>;
     shacl:description "Geeft de actuele stand in de levenscyclus van het object."@nl;
@@ -326,12 +338,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMVersieShape> a shacl:NodeShape;
   rdfs:label "AIM versie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMVersie>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "asset-versie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De versie van de asset in de database."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AIMVersie.Asset-Versie>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie>;
@@ -369,12 +383,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AdresShape> a shacl:NodeShape;
   rdfs:label "Adres"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "straatnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De naam van de straat."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Straatnaam>;
     shacl:class xsd:string;
@@ -386,6 +402,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "huisnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Huisnummer>;
     shacl:class xsd:string;
@@ -397,6 +414,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "bus"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een nummer dat de postbus aanduidt."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Bus>;
     shacl:class xsd:string;
@@ -408,6 +426,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "postcode"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een korte reeks tekens die in het postadres wordt opgenomen."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Postcode>;
     shacl:class xsd:string;
@@ -419,6 +438,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "provincie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het deelgebied waarin het adres gelegen is."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Provincie>;
     shacl:description "Het deelgebied waarin het adres gelegen is."@nl;
@@ -430,6 +450,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "gemeente"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Adres.Gemeente>;
     shacl:description "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
@@ -443,12 +464,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlInCentimeterShape> a shacl:NodeShape;
   rdfs:label "Afmeting bxl in centimeter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor de afmeting van de breedte en de lengte in centimeter."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlInCentimeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "breedte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De breedte in centimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlInCentimeter.Breedte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
@@ -460,6 +483,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "lengte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De lengte in centimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlInCentimeter.Lengte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
@@ -473,12 +497,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlxhInMillimeterShape> a shacl:NodeShape;
   rdfs:label "Afmeting bxlxh in millimeter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlxhInMillimeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "breedte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De breedte in millimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlxhInMillimeter.Breedte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
@@ -490,6 +516,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "lengte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De lengte in millimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlxhInMillimeter.Lengte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
@@ -501,6 +528,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "hoogte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De hoogte in millimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfmetingBxlxhInMillimeter.Hoogte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
@@ -514,12 +542,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfsluitingShape> a shacl:NodeShape;
   rdfs:label "Afsluiting"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Op het terrein ondubbelzinnig aanwijsbare en permanent verankerde scheiding."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het type van afsluiting."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.Type>;
     shacl:description "Het type van afsluiting."@nl;
@@ -531,6 +561,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het merk van de afsluiting."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.Merk>;
     shacl:description "Het merk van de afsluiting."@nl;
@@ -542,6 +573,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "modelnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De modelnaam van de afsluiting."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.Modelnaam>;
     shacl:description "De modelnaam van de afsluiting."@nl;
@@ -553,6 +585,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "technische fiche"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De technische fiche van de afsluiting."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.TechnischeFiche>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -564,6 +597,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "materiaal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het materiaal waaruit de afsluiting vervaardigd is."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.Materiaal>;
     shacl:description "Het materiaal waaruit de afsluiting vervaardigd is."@nl;
@@ -575,6 +609,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "hoogte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De hoogte in centimeter van de afsluiting."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Afsluiting.Hoogte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
@@ -588,12 +623,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AssetVersieShape> a shacl:NodeShape;
   rdfs:label "Asset versie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AssetVersie>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "versienummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het versienummer als een oplopende integer."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AssetVersie.Versienummer>;
     shacl:class xsd:nonNegativeInteger;
@@ -605,6 +642,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "timestamp"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De timestamp van het moment dat de versienummer werd toegekend."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AssetVersie.Timestamp>;
     shacl:class xsd:dateTime;
@@ -616,6 +654,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "context"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De context van de versie creatie."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AssetVersie.Context>;
     shacl:class xsd:string;
@@ -629,6 +668,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape> a shacl:NodeShape;
   rdfs:label "Asweger"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een asweger is een meetinstrument dat wordt gebruikt om de belasting van individuele assen van voertuigen te meten. De meting heeft tot doel te controleren of voertuigen voldoen aan wettelijke maxima voor aslast, om zo schade aan wegeninfrastructuur te vermijden."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Asweger>;
   shacl:closed false;
@@ -636,12 +676,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerputShape> a shacl:NodeShape;
   rdfs:label "Aswegerput"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een ondergrondse constructie die de elektronica van een asweger bevat."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegerput>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "afmeting grondvlak"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De binnenafmeting, breedte en lengte in cm van de aswegerput ter hoogte van het maaiveld."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegerput.AfmetingGrondvlak>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm>;
@@ -655,12 +697,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegersiteShape> a shacl:NodeShape;
   rdfs:label "Aswegersite"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Het geheel van infrastructuurelementen en toestellen op één locatie voor de exploitatie van een asweger."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegersite>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "type markering"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Geeft welke wegmarkering er aanwezig zijn rond de aswegerzone als een waarde uit een vaste lijst van mogelijkheden."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegersite.TypeMarkering>;
     shacl:description "Geeft welke wegmarkering er aanwezig zijn rond de aswegerzone als een waarde uit een vaste lijst van mogelijkheden."@nl;
@@ -672,6 +716,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "weegvermogen bereik"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het bereik (gewicht) dat de asweger kan wegen, uitgedrukt in kilo."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegersite.WeegvermogenBereik>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBereikInKg>;
@@ -683,6 +728,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "afmeting aswegerzone"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De afmeting van de zone voor en na de weegplaat, inclusief de weegplaat zelf, als een waarde uit een vaste lijst van standaard afmetingen."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegersite.AfmetingAswegerzone>;
     shacl:description "De afmeting van de zone voor en na de weegplaat, inclusief de weegplaat zelf, als een waarde uit een vaste lijst van standaard afmetingen."@nl;
@@ -694,6 +740,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "kwaliteitscertificaat"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het certificaat uitgereikt bij de eerste ijk nodig voor de rechtsgeldige uitbating van de aswegersite."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegersite.Kwaliteitscertificaat>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKwaliteitscertifcaat>;
@@ -707,12 +754,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape> a shacl:NodeShape;
   rdfs:label "Behuizing"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte voor alle types van behuizing voor het beschermen van technieken."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Adres (aanduiding van de locatie) van de behuizing. Indien deze geen adres heeft, wordt net zoals door Fluvius voor cabines, het adres van een nabijgelegen straat genomen."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing.Adres>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres>;
@@ -724,7 +773,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "risicoanalyse"@nl;
-    <http://purl.org/vocab/vann/usageNote> "De risicoanalyse heeft in eerste instantie betrekking op werken in en rond een behuizing met elektrische installaties. Voor behuizingen met installaties van de distributienetbeheerder wordt de risicoanalyse bestemd voor die beheerder, bewaard in het gelijknamig attribuut van het onderdeel van die beheerder, bv. EnergiemeterDNB."@nl;
+    <http://purl.org/vocab/vann/usageNote> "NOTE."@nl;
     rdfs:comment "Een bestandsbijlage met de risicoanalyse voor werken in en rond een behuizing."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing.Risicoanalyse>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -747,6 +796,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Bevestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing.Bevestiging>;
     shacl:name "Bevestiging"@nl;
     shacl:or ([shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IndoorKast>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lokaal>]);
@@ -754,6 +804,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Bevestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing.Bevestiging>;
     shacl:name "Bevestiging"@nl;
     shacl:or ([shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IndoorKast>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw>] [shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lokaal>]);
@@ -767,12 +818,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BereikInKgShape> a shacl:NodeShape;
   rdfs:label "Bereik in kg"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BereikInKg>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "minimum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Ondergrens van het bereik uitgedrukt in kilogram."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BereikInKg.Minimum>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram>;
@@ -784,6 +837,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "maximum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bovengrens van het bereik uitgedrukt in kilogram."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BereikInKg.Maximum>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram>;
@@ -797,12 +851,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BestandsbijlageShape> a shacl:NodeShape;
   rdfs:label "Bestandsbijlage"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor alle bestandsbijlages."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "uri"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage.Uri>;
     shacl:class xsd:anyURI;
@@ -814,6 +870,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "bestandsnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De naam van het Document inclusief de bestandsextensie, van de naam gescheiden door een punt."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage.Bestandsnaam>;
     shacl:class xsd:string;
@@ -825,6 +882,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "omschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een korte toelichting over waar het document juist voor dient."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage.Omschrijving>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok>;
@@ -836,6 +894,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "mime-type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het MIME type van het document."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage.Mime-Type>;
     shacl:description "Het MIME type van het document."@nl;
@@ -847,6 +906,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "opmaakdatum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De datum waarop het document is opgemaakt."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bestandsbijlage.Opmaakdatum>;
     shacl:class xsd:date;
@@ -860,6 +920,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BevestigingShape> a shacl:NodeShape;
   rdfs:label "Bevestiging"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Bevestiging>;
   shacl:closed false;
@@ -867,7 +928,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BooleanShape> a shacl:NodeShape;
   rdfs:label "Boolean"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#boolean"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#boolean."@nl;
   rdfs:comment "Beschrijft een boolean volgens http://www.w3.org/2001/XMLSchema#boolean."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Boolean>;
   shacl:closed false;
@@ -875,12 +936,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BrandblusserShape> a shacl:NodeShape;
   rdfs:label "Brandblusser"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een apparaat om het vuur van een kleine brand mee te doven. Het bestaat uit een cilinder waarin een beperkte hoeveelheid blusmiddel onder druk staat."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het type van de brandblusser."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser.Type>;
     shacl:description "Het type van de brandblusser."@nl;
@@ -892,6 +955,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "blusmiddel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Substantie waarmee het toestel gevuld is in functie van het blussen van vuur."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser.Blusmiddel>;
     shacl:description "Substantie waarmee het toestel gevuld is in functie van het blussen van vuur."@nl;
@@ -903,6 +967,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "keuringsdatum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Datum waarop het toestel laatst is gekeurd."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser.Keuringsdatum>;
     shacl:class xsd:date;
@@ -914,6 +979,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "gewicht"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Totaal gewicht van het gevulde toestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser.Gewicht>;
     shacl:description "Totaal gewicht van het gevulde toestel."@nl;
@@ -925,6 +991,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "aankoopdatum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Datum wordt het toestel is aangekocht."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Brandblusser.Aankoopdatum>;
     shacl:class xsd:date;
@@ -938,7 +1005,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#DatumShape> a shacl:NodeShape;
   rdfs:label "Datum"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#date"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#date."@nl;
   rdfs:comment "Beschrijft een datum volgens http://www.w3.org/2001/XMLSchema#date."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Datum>;
   shacl:closed false;
@@ -946,7 +1013,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#DatumtijdShape> a shacl:NodeShape;
   rdfs:label "Datumtijd"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#dateTime"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#dateTime."@nl;
   rdfs:comment "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Datumtijd>;
   shacl:closed false;
@@ -954,7 +1021,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#DecimaalGetalShape> a shacl:NodeShape;
   rdfs:label "Decimaal getal"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#decimal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#decimal."@nl;
   rdfs:comment "Beschrijft een decimaal getal volgens http://www.w3.org/2001/XMLSchema#decimal."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#DecimaalGetal>;
   shacl:closed false;
@@ -962,12 +1029,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwShape> a shacl:NodeShape;
   rdfs:label "Gebouw"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Elk bouwwerk,dat een voor mensen toegankelijke overdekte,geheel of gedeeltelijk met wanden omsloten ruimte vormt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouw>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "grondplan"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Plattegrond van het gebouw met aanduidingen van de verschillende aanwezige elementen zoals kelder, kasten met kastnummers, toegangscontrole en meer."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouw.Grondplan>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -979,6 +1048,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "gebruik"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het dominante gebruikstype dat het gebouw het best omschrijft."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouw.Gebruik>;
     shacl:description "Het dominante gebruikstype dat het gebouw het best omschrijft."@nl;
@@ -992,6 +1062,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwuitrustingShape> a shacl:NodeShape;
   rdfs:label "Gebouwuitrusting"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een generiek type dat alle zaken omvat waarmee een gebouw kan worden uitgerust (bijvoorbeeld meubilair,verwarming...)."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouwuitrusting>;
   shacl:closed false;
@@ -999,7 +1070,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GeheelGetalShape> a shacl:NodeShape;
   rdfs:label "Geheel getal"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#integer"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#integer."@nl;
   rdfs:comment "Beschrijft een geheel getal volgens http://www.w3.org/2001/XMLSchema#integer."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GeheelGetal>;
   shacl:closed false;
@@ -1007,6 +1078,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#HoortBijShape> a shacl:NodeShape;
   rdfs:label "Hoort bij"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#HoortBij>;
   shacl:closed false;
@@ -1014,12 +1086,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#IdentificatorShape> a shacl:NodeShape;
   rdfs:label "Identificator"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Identificator>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een groep van tekens om een AIM object te identificeren of te benoemen."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Identificator.Identificator>;
     shacl:class xsd:string;
@@ -1031,6 +1105,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "toegekend door"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Gegevens van de organisatie die de toekenning deed."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Identificator.ToegekendDoor>;
     shacl:class xsd:string;
@@ -1044,6 +1119,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#IndoorKastShape> a shacl:NodeShape;
   rdfs:label "Indoor kast"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Behuizing in de vorm van een kast voor gebruik in binnenruimtes."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#IndoorKast>;
   shacl:closed false;
@@ -1061,6 +1137,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Bevestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#IndoorKast.Bevestiging>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Weegcomputer>;
     shacl:maxCount 0;
@@ -1071,12 +1148,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KastShape> a shacl:NodeShape;
   rdfs:label "Kast"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte voor allerlei types kasten."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kast>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "heeft verlichting"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Geeft aan of er verlichting aanwezig is binnen de kast."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kast.HeeftVerlichting>;
     shacl:class xsd:boolean;
@@ -1088,6 +1167,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "kastmateriaal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Materiaal waaruit de kast is opgebouwd."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kast.Kastmateriaal>;
     shacl:description "Materiaal waaruit de kast is opgebouwd."@nl;
@@ -1099,6 +1179,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "indelingsplan"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Schematisch overzicht van de indeling van de kast volgens de aanwezige technieken in vooraanzicht."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kast.Indelingsplan>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -1110,6 +1191,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "afmeting"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Buitenafmeting van de kast als maximale breedte, lengte en hoogte in millimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kast.Afmeting>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm>;
@@ -1124,6 +1206,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KokerruimteShape> a shacl:NodeShape;
   rdfs:label "Kokerruimte"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een abstracte en overkoepelende klasse. Het is een ruimte van het kokercomplex die geen doorvoerende functie heeft."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kokerruimte>;
   shacl:closed false;
@@ -1132,12 +1215,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwaliteitscertificaatShape> a shacl:NodeShape;
   rdfs:label "kwaliteitscertificaat"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Complex datatype voor een rapport waarin vastgelegd wordt dat een apparaat of installatie voldoet aan vooropgestelde kwaliteitseisen. Kan vereist zijn voor de tegenstelbaarheid van het gebruik van het toestel of de installatie in kwestie"@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kwaliteitscertificaat>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De identificator van de vergunning."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kwaliteitscertificaat.Identificator>;
     shacl:class xsd:string;
@@ -1149,6 +1234,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "datum ondertekening"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De datum waarop het kwalitetiscertificaat ondertekend is door de administrateur-generaal."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kwaliteitscertificaat.DatumOndertekening>;
     shacl:class xsd:date;
@@ -1160,6 +1246,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "document"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Documentbijlage met de vergunning."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Kwaliteitscertificaat.Document>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -1173,12 +1260,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInCentimeterShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in centimeter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in centimeter uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInCentimeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInCentimeter.Waarde>;
     shacl:class xsd:decimal;
@@ -1190,7 +1279,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"cm\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"cm\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in centimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInCentimeter.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in centimeter."@nl;
@@ -1204,13 +1293,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInKilogramShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in kilogram"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in kilogram uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInKilogram>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "standaardeenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"kg\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"kg\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kilogram."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInKilogram.Standaardeenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in kilogram."@nl;
@@ -1222,6 +1312,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInKilogram.Waarde>;
     shacl:class xsd:decimal;
@@ -1235,12 +1326,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMaandShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in maand"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMaand>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMaand.Waarde>;
     shacl:class xsd:nonNegativeInteger;
@@ -1252,7 +1345,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"mo\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"mo\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in maand."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMaand.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in maand."@nl;
@@ -1266,13 +1359,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeterShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in meter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in meter uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeter.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
@@ -1284,6 +1378,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeter.Waarde>;
     shacl:class xsd:decimal;
@@ -1297,13 +1392,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeterTAWShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in meter TAW"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die de hoogte weergeeft in meter van een locatie tov het TAW-referentiepeil."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeterTAW>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeterTAW.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
@@ -1315,6 +1411,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMeterTAW.Waarde>;
     shacl:class xsd:decimal;
@@ -1328,12 +1425,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMillimeterShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in millimeter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in millimeter uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMillimeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMillimeter.Waarde>;
     shacl:class xsd:decimal;
@@ -1345,7 +1444,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"mm\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"mm\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInMillimeter.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in millimeter."@nl;
@@ -1359,12 +1458,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVierkanteMeterShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in vierkante meter"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in vierkante meter uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVierkanteMeter>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVierkanteMeter.Waarde>;
     shacl:class xsd:decimal;
@@ -1376,7 +1477,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"m2\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"m2\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVierkanteMeter.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in vierkante meter."@nl;
@@ -1390,12 +1491,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVoltShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in volt"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in volt uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVolt>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVolt.Waarde>;
     shacl:class xsd:decimal;
@@ -1407,7 +1510,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"V\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"V\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in Volt."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInVolt.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in Volt."@nl;
@@ -1421,12 +1524,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInWattShape> a shacl:NodeShape;
   rdfs:label "Kwantitatieve waarde in watt"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een kwantitatieve waarde die een getal in watt uitdrukt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInWatt>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInWatt.Waarde>;
     shacl:class xsd:decimal;
@@ -1438,7 +1543,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "standaard eenheid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "\"W\"^^cdt:ucumunit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "\"W\"^^cdt:ucumunit."@nl;
     rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in Watt."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantitatieveWaardeInWatt.StandaardEenheid>;
     shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in Watt."@nl;
@@ -1452,12 +1557,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LaagShape> a shacl:NodeShape;
   rdfs:label "Laag"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen van de onderliggende verhardings- en funderings-onderdelen."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "lengte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De (gemiddelde) lengte van een laag in meter. Dit kan ook de nominale lengte zijn afhankelijk van de laag en situatie."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.Lengte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
@@ -1469,6 +1576,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "breedte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De (gemiddelde) breedte van een laag in meter. Dit kan ook de nominale breedte zijn afhankelijk van de laag en situatie."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.Breedte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
@@ -1480,6 +1588,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "oppervlakte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De oppervlakte van een laag in vierkante meter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.Oppervlakte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter>;
@@ -1491,6 +1600,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "laagrol"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De functie die de laag vervult in de verticale opbouw."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.Laagrol>;
     shacl:description "De functie die de laag vervult in de verticale opbouw."@nl;
@@ -1502,6 +1612,17 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Ligt op"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
+    rdfs:comment "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."@nl;
+    rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.LigtOp>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Laag>;
+    shacl:description "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."@nl;
+    shacl:name "Ligt op"@nl;
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/aswegersite/#Ligt%20op>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Ligt op"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag.LigtOp>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Laag>;
@@ -1513,6 +1634,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LigtOpShape> a shacl:NodeShape;
   rdfs:label "Ligt op"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LigtOp>;
   shacl:closed false;
@@ -1520,12 +1642,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LokaalShape> a shacl:NodeShape;
   rdfs:label "Lokaal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een ruimte binnen een gebouw."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Lokaal>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "grondplan"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Plattegrond van het lokaal met aanduidingen van de verschillende aanwezige elementen zoals kasten met kastnummers, toegangscontrole en meer."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Lokaal.Grondplan>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -1539,6 +1663,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NaampadObjectShape> a shacl:NodeShape;
   rdfs:label "Naampad object"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NaampadObject>;
   shacl:closed false;
@@ -1567,7 +1692,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NatuurlijkGetalShape> a shacl:NodeShape;
   rdfs:label "Natuurlijk getal"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger."@nl;
   rdfs:comment "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NatuurlijkGetal>;
   shacl:closed false;
@@ -1575,12 +1700,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NetwerkpoortShape> a shacl:NodeShape;
   rdfs:label "Netwerkpoort"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "De ingang van het toestel samen met component die erop zit,bv. SFP of XFP."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "config"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Soort verbinding aangeboden aan de klant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Config>;
     shacl:description "Soort verbinding aangeboden aan de klant."@nl;
@@ -1592,6 +1719,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Merk waarmee de fabrikant de netwerkpoort identificeert."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Merk>;
     shacl:description "Merk waarmee de fabrikant de netwerkpoort identificeert."@nl;
@@ -1603,6 +1731,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "model"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Geeft het soort netwerk interface weer."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Model>;
     shacl:description "Geeft het soort netwerk interface weer."@nl;
@@ -1614,6 +1743,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "serienummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Unieke identificatiecode van het toestel, toegekend door de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Serienummer>;
     shacl:class xsd:string;
@@ -1625,6 +1755,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "technologie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Intern gebruikt netwerk protocol."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Technologie>;
     shacl:description "Intern gebruikt netwerk protocol."@nl;
@@ -1636,6 +1767,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "golflengte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De golflengte waarop deze poort communiceert."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Golflengte>;
     shacl:description "De golflengte waarop deze poort communiceert."@nl;
@@ -1647,6 +1779,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "NNI LAN-capaciteit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bandbreedte via deze poort, uitgedrukt in Mb/s, enkel van toepassing indien NNI poort."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.NNILAN-Capaciteit>;
     shacl:class xsd:integer;
@@ -1658,6 +1791,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "code"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bestelcode van dit toestel of onderdeel bij de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Code>;
     shacl:class xsd:string;
@@ -1669,6 +1803,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "beschrijving fabrikant"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Bijkomende specificaties over het apparaat of onderdeel type van de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.BeschrijvingFabrikant>;
     shacl:class xsd:string;
@@ -1680,6 +1815,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Sturing"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Sturing>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:name "Sturing"@nl;
@@ -1687,6 +1823,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Sturing"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Netwerkpoort.Sturing>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:name "Sturing"@nl;
@@ -1696,12 +1833,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#PrinterShape> a shacl:NodeShape;
   rdfs:label "Printer"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een apparaat dat de uitvoer van een ander toestel afdrukt, in de meeste gevallen op papier."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Printer>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "modelnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Modelnaam van de printer volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Printer.Modelnaam>;
     shacl:description "Modelnaam van de printer volgens de fabrikant."@nl;
@@ -1713,6 +1852,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Merknaam van de printer volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Printer.Merk>;
     shacl:description "Merknaam van de printer volgens de fabrikant."@nl;
@@ -1726,6 +1866,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#PutRelatieShape> a shacl:NodeShape;
   rdfs:label "Put relatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte om de relaties van de verschillende soorten putten te groeperen."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#PutRelatie>;
   shacl:closed false;
@@ -1734,12 +1875,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#PutShape> a shacl:NodeShape;
   rdfs:label "Put"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte bedoeld om de verschillende soort putten onder te brengen en gemeenschappelijke eigenschappen over te dragen. De relaties worden overgedragen via de abstracte PutRelaties."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "maaiveldpeil"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De hoogte van het grondoppervlak in meter-TAW in het midden van het deksel van de put."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put.Maaiveldpeil>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW>;
@@ -1751,6 +1894,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "toestand put"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Opmerkingen van de toestand en staat van de (verbindings-)put."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put.ToestandPut>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok>;
@@ -1762,6 +1906,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Dichtstbijgelegen adres voor de put, het adres bestaat enkel uit de straatnaam indien het dichtstbijzijnde adres > 100m verwijderd is."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put.Adres>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres>;
@@ -1773,6 +1918,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "diepte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het verschil tussen het maaiveldpeil en het laagste punt van de binnenkant van de put in meter."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put.Diepte>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
@@ -1784,6 +1930,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "technische fiche"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De technische fiche van de put."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Put.TechnischeFiche>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -1797,12 +1944,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#SerienummerobjectShape> a shacl:NodeShape;
   rdfs:label "Serienummerobject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Abstracte klasse voor een serienummer."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Serienummerobject>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "serienummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het unieke nummer waarmee het toestel door de fabrikant geïdentificeerd is."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Serienummerobject.Serienummer>;
     shacl:class xsd:string;
@@ -1817,6 +1966,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#SlagboomInstallatieShape> a shacl:NodeShape;
   rdfs:label "Slagboom installatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een afsluitingsmechanisme met slagboomarmen dat dient om controle uit te kunnen oefenen over het gebruik van een doorgang of een toegang."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#SlagboomInstallatie>;
   shacl:closed false;
@@ -1837,7 +1987,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#StringShape> a shacl:NodeShape;
   rdfs:label "String"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#string"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#string."@nl;
   rdfs:comment "Beschrijft een tekstregel volgens http://www.w3.org/2001/XMLSchema#string."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#String>;
   shacl:closed false;
@@ -1845,12 +1995,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#StroomkringShape> a shacl:NodeShape;
   rdfs:label "Stroomkring"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Ook wel vertrek of vertrekkende kabel genoemd. Afgezekerde elektrische geleiders waarmee de applicaties voorzien worden van de nodige voeding."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Stroomkring>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "stroomkringnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De identificatie van de stroomkring."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Stroomkring.Stroomkringnummer>;
     shacl:class xsd:string;
@@ -1864,6 +2016,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#SturingShape> a shacl:NodeShape;
   rdfs:label "Sturing"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Sturing>;
   shacl:closed false;
@@ -1871,12 +2024,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#TekstblokShape> a shacl:NodeShape;
   rdfs:label "Tekstblok"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Tekstblok>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De string welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Tekstblok.Waarde>;
     shacl:class xsd:string;
@@ -1890,7 +2045,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#URIShape> a shacl:NodeShape;
   rdfs:label "URI"@nl;
-  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#anyURI"@nl;
+  <http://purl.org/vocab/vann/usageNote> "https://www.w3.org/TR/xmlschema-2/#anyURI."@nl;
   rdfs:comment "Een tekstwaarde die een verwijzing naar meer informatie van het element bevat volgens http://www.w3.org/2001/XMLSchema#anyURI ."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#URI>;
   shacl:closed false;
@@ -1898,12 +2053,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#VerlichtingstoestelShape> a shacl:NodeShape;
   rdfs:label "Verlichtingstoestel"@nl;
-  rdfs:comment "Abstracte voor het geheel van de lichtbron en de behuizing die werden samengesteld met als doel: * de lichtstroom van de lichtbronnen hoofdzakelijk op het te verlichten oppervlak (doorlopende wegsectie, conflictgebied,...) te richten, teneinde de zichtbaarheid te verhogen; * de lichtstroom te beheersen zodat de weggebruikers niet verblind worden en de lichthinder beperkt wordt; * het optisch systeem, de lichtbronnen en de hulpapparatuur tegen uitwendige invloeden te beschermen"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
+  rdfs:comment "Abstracte voor het geheel van de lichtbron en de behuizing die werden samengesteld met als doel: * de lichtstroom van de lichtbronnen hoofdzakelijk op het te verlichten oppervlak (doorlopende wegsectie, conflictgebied,...) te richten, teneinde de zichtbaarheid te verhogen; * de lichtstroom te beheersen zodat de weggebruikers niet verblind worden en de lichthinder beperkt wordt; * het optisch systeem, de lichtbronnen en de hulpapparatuur tegen uitwendige invloeden te beschermen."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "systeemvermogen"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Systeemvermogen (Watt) van het verlichtingstoestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.Systeemvermogen>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt>;
@@ -1915,6 +2072,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft aansluitkast geïntegreerd"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Is de aansluitkast geïntegreerd?"@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.HeeftAansluitkastGeïNtegreerd>;
     shacl:class xsd:boolean;
@@ -1926,6 +2084,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "stroomkringnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Nummer van de stroomkring waarop het verlichtingstoestel is aangesloten."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.Stroomkringnummer>;
     shacl:class xsd:string;
@@ -1937,6 +2096,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het merk van het verlichtingstoestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.Merk>;
     shacl:description "Het merk van het verlichtingstoestel."@nl;
@@ -1948,6 +2108,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "modelnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De modelnaam van het verlichtingstoestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.Modelnaam>;
     shacl:description "De modelnaam van het verlichtingstoestel."@nl;
@@ -1959,6 +2120,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "inclinatiehoek"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De inclinatiehoek geeft aan hoeveel het verlichtingstoestel naar voren of naar achteren is gekanteld ten opzichte van de horizontale stand. Deze informatie wordt uitgedrukt in graden."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.Inclinatiehoek>;
     shacl:description "De inclinatiehoek geeft aan hoeveel het verlichtingstoestel naar voren of naar achteren is gekanteld ten opzichte van de horizontale stand. Deze informatie wordt uitgedrukt in graden."@nl;
@@ -1970,6 +2132,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "verlicht gebied"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het gebied op de wegbaan of het object dat verlicht wordt door het verlichtingstoestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Verlichtingstoestel.VerlichtGebied>;
     shacl:description "Het gebied op de wegbaan of het object dat verlicht wordt door het verlichtingstoestel."@nl;
@@ -1983,12 +2146,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#VoedtShape> a shacl:NodeShape;
   rdfs:label "Voedt"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Voedt>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "aansluitspanning"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Spanning van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Voedt.Aansluitspanning>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt>;
@@ -2000,7 +2165,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "aansluitvermogen"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.1.0-RC2"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.1.0-RC2."@nl;
     rdfs:comment "Vermogen van de aansluiting, dit wordt enkel ingevuld op voedingsrelaties voorbij de hoofdschakelaar."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Voedt.Aansluitvermogen>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt>;
@@ -2014,12 +2179,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcelShape> a shacl:NodeShape;
   rdfs:label "Weegcel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een toestel dat op basis van druk het gewicht meet van een object dat er rechtstreeks of via een tussenliggende plaat bovenop geplaatst wordt."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "serienummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De unieke identificatie van de fabrikant voor een concreet toestel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel.Serienummer>;
     shacl:class xsd:string;
@@ -2031,6 +2198,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "modelnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Modelnaam van het toestel volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel.Modelnaam>;
     shacl:description "Modelnaam van het toestel volgens de fabrikant."@nl;
@@ -2042,6 +2210,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Merknaam van het toestel volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel.Merk>;
     shacl:description "Merknaam van het toestel volgens de fabrikant."@nl;
@@ -2053,6 +2222,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "technische fiche"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "De technische fiche van de weegcel."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel.TechnischeFiche>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -2073,6 +2243,7 @@
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "serienummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Unieke identificatie van het toestel, toegekend door de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer.Serienummer>;
     shacl:class xsd:string;
@@ -2084,6 +2255,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "modelnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Modelnaam van het toestel volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer.Modelnaam>;
     shacl:description "Modelnaam van het toestel volgens de fabrikant."@nl;
@@ -2095,6 +2267,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "merk"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Merknaam van het toestel volgens de fabrikant."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer.Merk>;
     shacl:description "Merknaam van het toestel volgens de fabrikant."@nl;
@@ -2106,6 +2279,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "checksum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Een tekenreeks waarmee kan gecontroleerd worden of de vooropgestelde waardes van paramaters van de weegcomputer correct en ongewijzigd gebleven zijn."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer.Checksum>;
     shacl:class xsd:string;
@@ -2117,6 +2291,7 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "Bevestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer.Bevestiging>;
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IndoorKast>;
     shacl:maxCount 0;
@@ -2127,12 +2302,14 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegplaatShape> a shacl:NodeShape;
   rdfs:label "Weegplaat"@nl;
+  <http://purl.org/vocab/vann/usageNote> "."@nl;
   rdfs:comment "Een plaat waarop te wegen objecten komen en die op weegsensoren rust."@nl;
   rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegplaat>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "materiaal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "."@nl;
     rdfs:comment "Het materiaal waaruit de weegplaat is gemaakt volgens een vaste lijst van mogelijke materialen."@nl;
     rdfs:seeAlso <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegplaat.Materiaal>;
     shacl:description "Het materiaal waaruit de weegplaat is gemaakt volgens een vaste lijst van mogelijke materialen."@nl;
