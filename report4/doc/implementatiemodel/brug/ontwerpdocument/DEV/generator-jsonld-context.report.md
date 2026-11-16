@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-11-06T10:37:03.640Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:7d2fb448cf91063aa2d5c512e2b5a8a1085892ef46f504f8918b1535960b6ef3](all-brug.jsonld#L16549).
+2026-11-16T09:48:37.404Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:7d2fb448cf91063aa2d5c512e2b5a8a1085892ef46f504f8918b1535960b6ef3](all-brug.jsonld#L16549).
 

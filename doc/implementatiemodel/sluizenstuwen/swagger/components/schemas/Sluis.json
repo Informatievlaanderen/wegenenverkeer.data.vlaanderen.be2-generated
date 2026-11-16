@@ -12,25 +12,17 @@
       "description": "Object type (klasse Sluis)",
       "pattern": "^Sluis$"
     },
-    "breedte": {
-      "type": "array",
-      "description": "De afstand tussen de dagkanten van de vaste constructie, uitgedrukt in meter. Lijst van KwantitatieveWaardeInMeter items.",
-      "items": {
-        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-      },
-      "minItems": 1
+    "kerendeKarakter": {
+      "$ref": "#/components/schemas/KerendeKarakterVanEenSluis"
     },
-    "heeftStopstreep": {
-      "$ref": "#/components/schemas/Sluis.heeftStopstreep"
+    "sluiscategorie": {
+      "$ref": "#/components/schemas/Sluiscategorie"
     },
     "isMiddenhoofdAanwezig": {
       "$ref": "#/components/schemas/Sluis.isMiddenhoofdAanwezig"
     },
-    "isOnderhevigAanGetijden": {
-      "$ref": "#/components/schemas/Sluis.isOnderhevigAanGetijden"
-    },
-    "kerendeKarakter": {
-      "$ref": "#/components/schemas/KerendeKarakterVanEenSluis"
+    "tonnenmaat": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
     },
     "lengte": {
       "type": "array",
@@ -40,6 +32,23 @@
       },
       "minItems": 1
     },
+    "breedte": {
+      "type": "array",
+      "description": "De afstand tussen de dagkanten van de vaste constructie, uitgedrukt in meter. Lijst van KwantitatieveWaardeInMeter items.",
+      "items": {
+        "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+      },
+      "minItems": 1
+    },
+    "waterdiepte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "vrijeHoogte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
+    "toelaatbareSchipsafmetingen": {
+      "$ref": "#/components/schemas/ToelaatbareSchipsafmetingen"
+    },
     "ontwerpSchip": {
       "type": "array",
       "description": "Schip met afmetingen dat wordt gekozen voor het ontwerp en de berekeningen van de sluis, dat representatief is voor het gemiddelde of typische scheepsverkeer dat naar verwachting de sluis zal gebruiken. Lijst van OntwerpSchip items.",
@@ -48,22 +57,13 @@
       },
       "minItems": 1
     },
-    "sluiscategorie": {
-      "$ref": "#/components/schemas/Sluiscategorie"
+    "heeftStopstreep": {
+      "$ref": "#/components/schemas/Sluis.heeftStopstreep"
     },
-    "toelaatbareSchipsafmetingen": {
-      "$ref": "#/components/schemas/ToelaatbareSchipsafmetingen"
-    },
-    "tonnenmaat": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    "isOnderhevigAanGetijden": {
+      "$ref": "#/components/schemas/Sluis.isOnderhevigAanGetijden"
     },
     "verval": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-    },
-    "vrijeHoogte": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-    },
-    "waterdiepte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "naam": {
@@ -71,17 +71,6 @@
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Sluis.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Sluis.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Sluis.notitie"
@@ -94,11 +83,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/Sluis.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Sluis.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Sluis.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Sluis.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/Sluis.isActief"
@@ -109,48 +109,48 @@
     "asset-Versie": {
       "$ref": "#/components/schemas/AssetVersie"
     },
-    "relevanteOntwerpwaterstandAfwaarts": {
-      "$ref": "#/components/schemas/Sluis.relevanteOntwerpwaterstandAfwaarts"
-    },
-    "relevanteOntwerpwaterstandOpwaarts": {
-      "$ref": "#/components/schemas/Sluis.relevanteOntwerpwaterstandOpwaarts"
-    },
     "streefpeilAfwaarts": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
     },
     "streefpeilOpwaarts": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
+    },
+    "relevanteOntwerpwaterstandOpwaarts": {
+      "$ref": "#/components/schemas/Sluis.relevanteOntwerpwaterstandOpwaarts"
+    },
+    "relevanteOntwerpwaterstandAfwaarts": {
+      "$ref": "#/components/schemas/Sluis.relevanteOntwerpwaterstandAfwaarts"
     }
   },
   "required": [
     "@type",
-    "breedte",
-    "heeftStopstreep",
-    "isMiddenhoofdAanwezig",
-    "isOnderhevigAanGetijden",
     "kerendeKarakter",
-    "lengte",
-    "ontwerpSchip",
     "sluiscategorie",
-    "toelaatbareSchipsafmetingen",
+    "isMiddenhoofdAanwezig",
     "tonnenmaat",
-    "verval",
-    "vrijeHoogte",
+    "lengte",
+    "breedte",
     "waterdiepte",
+    "vrijeHoogte",
+    "toelaatbareSchipsafmetingen",
+    "ontwerpSchip",
+    "heeftStopstreep",
+    "isOnderhevigAanGetijden",
+    "verval",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie",
-    "relevanteOntwerpwaterstandAfwaarts",
-    "relevanteOntwerpwaterstandOpwaarts",
     "streefpeilAfwaarts",
-    "streefpeilOpwaarts"
+    "streefpeilOpwaarts",
+    "relevanteOntwerpwaterstandOpwaarts",
+    "relevanteOntwerpwaterstandAfwaarts"
   ]
 }

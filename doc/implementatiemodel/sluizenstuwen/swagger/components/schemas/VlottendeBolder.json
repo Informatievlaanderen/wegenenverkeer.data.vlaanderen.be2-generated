@@ -12,34 +12,23 @@
       "description": "Object type (klasse VlottendeBolder)",
       "pattern": "^VlottendeBolder$"
     },
-    "heeftStopper": {
-      "$ref": "#/components/schemas/VlottendeBolder.heeftStopper"
-    },
-    "hoogteT.O.V.Waterlijn": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-    },
     "materiaalVlottendeBolder": {
       "$ref": "#/components/schemas/VlottendeBolder.materiaalVlottendeBolder"
     },
     "maximaleTroskracht": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInKN"
     },
+    "heeftStopper": {
+      "$ref": "#/components/schemas/VlottendeBolder.heeftStopper"
+    },
+    "hoogteT.O.V.Waterlijn": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
+    },
     "naam": {
       "$ref": "#/components/schemas/VlottendeBolder.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/VlottendeBolder.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/VlottendeBolder.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/VlottendeBolder.notitie"
@@ -52,11 +41,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/VlottendeBolder.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/VlottendeBolder.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/VlottendeBolder.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/VlottendeBolder.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/VlottendeBolder.isActief"
@@ -70,18 +70,18 @@
   },
   "required": [
     "@type",
-    "heeftStopper",
-    "hoogteT.O.V.Waterlijn",
     "materiaalVlottendeBolder",
     "maximaleTroskracht",
+    "heeftStopper",
+    "hoogteT.O.V.Waterlijn",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

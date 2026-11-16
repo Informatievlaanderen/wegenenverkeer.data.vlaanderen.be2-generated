@@ -12,34 +12,23 @@
       "description": "Object type (klasse Omloopriool)",
       "pattern": "^Omloopriool$"
     },
-    "droogzetbaarheid": {
-      "$ref": "#/components/schemas/KeuzelijstDroogzetbaarheidOmloopriool"
-    },
-    "heeftOntluchtingskanaal": {
-      "$ref": "#/components/schemas/Omloopriool.heeftOntluchtingskanaal"
-    },
     "nattesectie": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
     },
     "stroomsnelheid": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInKgPerKubiekeMeter"
     },
+    "droogzetbaarheid": {
+      "$ref": "#/components/schemas/KeuzelijstDroogzetbaarheidOmloopriool"
+    },
+    "heeftOntluchtingskanaal": {
+      "$ref": "#/components/schemas/Omloopriool.heeftOntluchtingskanaal"
+    },
     "naam": {
       "$ref": "#/components/schemas/Omloopriool.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Omloopriool.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Omloopriool.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Omloopriool.notitie"
@@ -52,11 +41,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/Omloopriool.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Omloopriool.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Omloopriool.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Omloopriool.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/Omloopriool.isActief"
@@ -70,18 +70,18 @@
   },
   "required": [
     "@type",
-    "droogzetbaarheid",
-    "heeftOntluchtingskanaal",
     "nattesectie",
     "stroomsnelheid",
+    "droogzetbaarheid",
+    "heeftOntluchtingskanaal",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"
