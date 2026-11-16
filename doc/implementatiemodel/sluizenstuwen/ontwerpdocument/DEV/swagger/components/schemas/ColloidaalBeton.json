@@ -21,31 +21,20 @@
     "productidentificatiecode": {
       "$ref": "#/components/schemas/Productidentificatiecode"
     },
-    "breedte": {
+    "lengte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
-    "laagrol": {
-      "$ref": "#/components/schemas/LaagRol"
-    },
-    "lengte": {
+    "breedte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "oppervlakte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInVierkanteMeter"
     },
+    "laagrol": {
+      "$ref": "#/components/schemas/LaagRol"
+    },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/ColloidaalBeton.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/ColloidaalBeton.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/ColloidaalBeton.notitie"
@@ -58,11 +47,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/ColloidaalBeton.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/ColloidaalBeton.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/ColloidaalBeton.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/ColloidaalBeton.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/ColloidaalBeton.isActief"
@@ -76,6 +76,15 @@
     "dikte": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInCentimeter"
     },
+    "betonspecificaties": {
+      "$ref": "#/components/schemas/Betonspecificaties"
+    },
+    "wapeningsplan": {
+      "$ref": "#/components/schemas/Bestandsbijlage"
+    },
+    "uitvoeringsmethode": {
+      "$ref": "#/components/schemas/Uitvoeringsmethode"
+    },
     "bekistingsplan": {
       "type": "array",
       "description": "Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn. Lijst van Bestandsbijlage items.",
@@ -84,16 +93,7 @@
       },
       "minItems": 1
     },
-    "betonspecificaties": {
-      "$ref": "#/components/schemas/Betonspecificaties"
-    },
     "technischeFicheBetonbescherming": {
-      "$ref": "#/components/schemas/Bestandsbijlage"
-    },
-    "uitvoeringsmethode": {
-      "$ref": "#/components/schemas/Uitvoeringsmethode"
-    },
-    "wapeningsplan": {
       "$ref": "#/components/schemas/Bestandsbijlage"
     }
   },
@@ -102,25 +102,25 @@
     "heeftOpenStructuur",
     "uitvoeringsmethodeColloïDaalBeton",
     "productidentificatiecode",
-    "breedte",
-    "laagrol",
     "lengte",
+    "breedte",
     "oppervlakte",
+    "laagrol",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie",
     "dikte",
-    "bekistingsplan",
     "betonspecificaties",
-    "technischeFicheBetonbescherming",
+    "wapeningsplan",
     "uitvoeringsmethode",
-    "wapeningsplan"
+    "bekistingsplan",
+    "technischeFicheBetonbescherming"
   ]
 }

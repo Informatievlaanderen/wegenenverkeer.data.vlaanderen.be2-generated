@@ -12,67 +12,56 @@
       "description": "Object type (klasse BeweegbareWaterkerendeConstructie)",
       "pattern": "^BeweegbareWaterkerendeConstructie$"
     },
-    "afmetingenMangat": {
-      "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
-    },
-    "basisAfmeting": {
-      "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
-    },
-    "gewicht": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
-    },
-    "heeftDraaischelpen": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftDraaischelpen"
-    },
-    "heeftHijsogen": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftHijsogen"
-    },
-    "heeftOpboutbareDraaischelpen": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen"
-    },
-    "heeftOpboutbareHijsogen": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen"
-    },
-    "heeftPompput": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftPompput"
-    },
-    "isHoogtebeperkingAanwezig": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig"
-    },
     "isMangatAanwezig": {
       "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isMangatAanwezig"
+    },
+    "afmetingenMangat": {
+      "$ref": "#/components/schemas/AfmetingBxlInCentimeter"
     },
     "isNivelleerOfSpuivoorzieningAanwezig": {
       "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig"
     },
+    "basisAfmeting": {
+      "$ref": "#/components/schemas/AfmetingBxlxhInMeter"
+    },
+    "typeBeweegbareconstructie": {
+      "$ref": "#/components/schemas/TypeBeweegbareWaterkerendeConstructie"
+    },
+    "isHoogtebeperkingAanwezig": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig"
+    },
     "kruinpeil": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
     },
-    "materiaal": {
-      "$ref": "#/components/schemas/MateriaalBWCTWC"
+    "heeftHijsogen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftHijsogen"
     },
     "niveauHoogtebeperking": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeterTAW"
     },
-    "typeBeweegbareconstructie": {
-      "$ref": "#/components/schemas/TypeBeweegbareWaterkerendeConstructie"
+    "gewicht": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
+    },
+    "heeftOpboutbareHijsogen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen"
+    },
+    "heeftDraaischelpen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftDraaischelpen"
+    },
+    "heeftOpboutbareDraaischelpen": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen"
+    },
+    "heeftPompput": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.heeftPompput"
+    },
+    "materiaal": {
+      "$ref": "#/components/schemas/MateriaalBWCTWC"
     },
     "naam": {
       "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.notitie"
@@ -85,11 +74,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/BeweegbareWaterkerendeConstructie.isActief"
@@ -103,29 +103,29 @@
   },
   "required": [
     "@type",
-    "afmetingenMangat",
-    "basisAfmeting",
-    "gewicht",
-    "heeftDraaischelpen",
-    "heeftHijsogen",
-    "heeftOpboutbareDraaischelpen",
-    "heeftOpboutbareHijsogen",
-    "heeftPompput",
-    "isHoogtebeperkingAanwezig",
     "isMangatAanwezig",
+    "afmetingenMangat",
     "isNivelleerOfSpuivoorzieningAanwezig",
-    "kruinpeil",
-    "materiaal",
-    "niveauHoogtebeperking",
+    "basisAfmeting",
     "typeBeweegbareconstructie",
+    "isHoogtebeperkingAanwezig",
+    "kruinpeil",
+    "heeftHijsogen",
+    "niveauHoogtebeperking",
+    "gewicht",
+    "heeftOpboutbareHijsogen",
+    "heeftDraaischelpen",
+    "heeftOpboutbareDraaischelpen",
+    "heeftPompput",
+    "materiaal",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

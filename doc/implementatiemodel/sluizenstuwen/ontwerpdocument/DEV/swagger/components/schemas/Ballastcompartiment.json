@@ -12,6 +12,12 @@
       "description": "Object type (klasse Ballastcompartiment)",
       "pattern": "^Ballastcompartiment$"
     },
+    "volume": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    },
+    "typeBallast": {
+      "$ref": "#/components/schemas/TypeBallast"
+    },
     "gewicht": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInTon"
     },
@@ -21,34 +27,17 @@
     "heeftPeilbuis": {
       "$ref": "#/components/schemas/Ballastcompartiment.heeftPeilbuis"
     },
-    "isLuchtkistOfBallastcompartimentInspecteerbaar?": {
-      "$ref": "#/components/schemas/InspecteerbaarheidVanEenElement"
-    },
     "isRegelbaar": {
       "$ref": "#/components/schemas/Ballastcompartiment.isRegelbaar"
     },
-    "typeBallast": {
-      "$ref": "#/components/schemas/TypeBallast"
-    },
-    "volume": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInKubiekeMeter"
+    "isLuchtkistOfBallastcompartimentInspecteerbaar?": {
+      "$ref": "#/components/schemas/InspecteerbaarheidVanEenElement"
     },
     "naam": {
       "$ref": "#/components/schemas/Ballastcompartiment.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Ballastcompartiment.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Ballastcompartiment.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Ballastcompartiment.notitie"
@@ -61,11 +50,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/Ballastcompartiment.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Ballastcompartiment.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Ballastcompartiment.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Ballastcompartiment.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/Ballastcompartiment.isActief"
@@ -79,21 +79,21 @@
   },
   "required": [
     "@type",
+    "volume",
+    "typeBallast",
     "gewicht",
     "heeftOntluchtingsgat",
     "heeftPeilbuis",
-    "isLuchtkistOfBallastcompartimentInspecteerbaar?",
     "isRegelbaar",
-    "typeBallast",
-    "volume",
+    "isLuchtkistOfBallastcompartimentInspecteerbaar?",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

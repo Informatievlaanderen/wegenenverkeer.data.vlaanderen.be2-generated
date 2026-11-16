@@ -12,34 +12,23 @@
       "description": "Object type (klasse Kolk)",
       "pattern": "^Kolk$"
     },
-    "breedteVanDeKolk": {
-      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
-    },
     "droogzetbaarheid": {
       "$ref": "#/components/schemas/Droogzetbaarheidtypes"
     },
-    "nuttigeKolklengte": {
+    "breedteVanDeKolk": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "positieVanDeKolk": {
       "$ref": "#/components/schemas/PositieKolk"
+    },
+    "nuttigeKolklengte": {
+      "$ref": "#/components/schemas/KwantitatieveWaardeInMeter"
     },
     "naam": {
       "$ref": "#/components/schemas/Kolk.naam"
     },
     "asset-Id": {
       "$ref": "#/components/schemas/Identificator"
-    },
-    "bestekpostnummer": {
-      "type": "array",
-      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
-      "items": {
-        "$ref": "#/components/schemas/Kolk.bestekpostnummer"
-      },
-      "minItems": 1
-    },
-    "datumOprichtingObject": {
-      "$ref": "#/components/schemas/Kolk.datumOprichtingObject"
     },
     "notitie": {
       "$ref": "#/components/schemas/Kolk.notitie"
@@ -52,11 +41,22 @@
       },
       "minItems": 1
     },
+    "typeURI": {
+      "$ref": "#/components/schemas/Kolk.typeURI"
+    },
+    "bestekpostnummer": {
+      "type": "array",
+      "description": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt. Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Kolk.bestekpostnummer"
+      },
+      "minItems": 1
+    },
     "theoretischeLevensduur": {
       "$ref": "#/components/schemas/KwantitatieveWaardeInMaand"
     },
-    "typeURI": {
-      "$ref": "#/components/schemas/Kolk.typeURI"
+    "datumOprichtingObject": {
+      "$ref": "#/components/schemas/Kolk.datumOprichtingObject"
     },
     "isActief": {
       "$ref": "#/components/schemas/Kolk.isActief"
@@ -70,18 +70,18 @@
   },
   "required": [
     "@type",
-    "breedteVanDeKolk",
     "droogzetbaarheid",
-    "nuttigeKolklengte",
+    "breedteVanDeKolk",
     "positieVanDeKolk",
+    "nuttigeKolklengte",
     "naam",
     "asset-Id",
-    "bestekpostnummer",
-    "datumOprichtingObject",
     "notitie",
     "standaardbestekpostnummer",
-    "theoretischeLevensduur",
     "typeURI",
+    "bestekpostnummer",
+    "theoretischeLevensduur",
+    "datumOprichtingObject",
     "isActief",
     "aIM-Toestand",
     "asset-Versie"

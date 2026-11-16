@@ -20,7 +20,6 @@ error: missing '/tmp/generated/doc/vocabularium/wegenenverkeer/installatie/ontwe
 error: missing '/tmp/generated/doc/vocabularium/wegenenverkeer/levenscyclus/ontwerpdocument/DEV/index.html'
 error: missing '/tmp/generated/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/DEV/index.html'
 error: missing '/tmp/generated/doc/vocabularium/wegenenverkeer/proefenmeting/ontwerpdocument/DEV/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/sluizenstuwen/ontwerpdocument/DEV/index.html'
 error: missing '/tmp/generated/doc/implementatiemodel/generieketypes/ontwerpdocument/DEV/index.html'
 error: missing '/tmp/generated/doc/implementatiemodel/implementatietypes/ontwerpdocument/DEV/index.html'
 
