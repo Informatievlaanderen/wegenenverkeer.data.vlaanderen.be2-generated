@@ -764,9 +764,9 @@
           "tabelUitwendigeInvloeden": {
             "$ref": "#/components/schemas/Bestandsbijlage"
           },
-          "bevestiging": {
+          "bevestiging1": {
             "type": "array",
-            "description": "undefined . Lijst van Behuizing items.",
+            "description": "prutser . Lijst van Behuizing items.",
             "items": {
               "oneOf": [
                 {
@@ -931,9 +931,9 @@
           "tabelUitwendigeInvloeden": {
             "$ref": "#/components/schemas/Bestandsbijlage"
           },
-          "bevestiging": {
+          "bevestiging1": {
             "type": "array",
-            "description": "undefined . Lijst van Behuizing items.",
+            "description": "prutser . Lijst van Behuizing items.",
             "items": {
               "oneOf": [
                 {
@@ -1692,7 +1692,7 @@
           "checksum": {
             "$ref": "#/components/schemas/Weegcomputer.checksum"
           },
-          "bevestiging": {
+          "bevestiging2": {
             "$ref": "#/components/schemas/IndoorKast"
           },
           "asset-Id": {
@@ -2308,31 +2308,8 @@
             },
             "minItems": 1
           },
-          "bevestiging": {
-            "type": "array",
-            "description": "undefined . Lijst van Behuizing items.",
-            "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Kast"
-                },
-                {
-                  "$ref": "#/components/schemas/Gebouw"
-                },
-                {
-                  "$ref": "#/components/schemas/Lokaal"
-                }
-              ],
-              "discriminator": {
-                "propertyName": "@type",
-                "mapping": {
-                  "Kast": "#/components/schemas/Kast",
-                  "Gebouw": "#/components/schemas/Gebouw",
-                  "Lokaal": "#/components/schemas/Lokaal"
-                }
-              }
-            },
-            "minItems": 1
+          "bevestiging2": {
+            "$ref": "#/components/schemas/Weegcomputer"
           },
           "heeftVerlichting": {
             "$ref": "#/components/schemas/IndoorKast.heeftVerlichting"
@@ -2359,6 +2336,32 @@
           },
           "tabelUitwendigeInvloeden": {
             "$ref": "#/components/schemas/Bestandsbijlage"
+          },
+          "bevestiging1": {
+            "type": "array",
+            "description": "prutser . Lijst van Behuizing items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Kast"
+                },
+                {
+                  "$ref": "#/components/schemas/Gebouw"
+                },
+                {
+                  "$ref": "#/components/schemas/Lokaal"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Kast": "#/components/schemas/Kast",
+                  "Gebouw": "#/components/schemas/Gebouw",
+                  "Lokaal": "#/components/schemas/Lokaal"
+                }
+              }
+            },
+            "minItems": 1
           },
           "naam": {
             "$ref": "#/components/schemas/IndoorKast.naam"
@@ -3650,10 +3653,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
       },
-      "Gebouw.bevestiging": {
+      "Gebouw.bevestiging1": {
         "operationId": "GebouwGET",
         "parameters": {
-          "id": "$response.body#/Gebouw.bevestiging/@id"
+          "id": "$response.body#/Gebouw.bevestiging1/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
       },
@@ -3713,10 +3716,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
       },
-      "Lokaal.bevestiging": {
+      "Lokaal.bevestiging1": {
         "operationId": "LokaalGET",
         "parameters": {
-          "id": "$response.body#/Lokaal.bevestiging/@id"
+          "id": "$response.body#/Lokaal.bevestiging1/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
       },
@@ -3972,10 +3975,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `WeegcomputerMerk` op te halen."
       },
-      "Weegcomputer.bevestiging": {
+      "Weegcomputer.bevestiging2": {
         "operationId": "WeegcomputerGET",
         "parameters": {
-          "id": "$response.body#/Weegcomputer.bevestiging/@id"
+          "id": "$response.body#/Weegcomputer.bevestiging2/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IndoorKast` op te halen."
       },
@@ -4196,12 +4199,12 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
       },
-      "IndoorKast.bevestiging": {
+      "IndoorKast.bevestiging2": {
         "operationId": "IndoorKastGET",
         "parameters": {
-          "id": "$response.body#/IndoorKast.bevestiging/@id"
+          "id": "$response.body#/IndoorKast.bevestiging2/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Weegcomputer` op te halen."
       },
       "IndoorKast.kastmateriaal": {
         "operationId": "IndoorKastGET",
@@ -4244,6 +4247,13 @@
           "id": "$response.body#/IndoorKast.tabelUitwendigeInvloeden/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bestandsbijlage` op te halen."
+      },
+      "IndoorKast.bevestiging1": {
+        "operationId": "IndoorKastGET",
+        "parameters": {
+          "id": "$response.body#/IndoorKast.bevestiging1/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Behuizing` op te halen."
       },
       "IndoorKast.asset-Id": {
         "operationId": "IndoorKastGET",

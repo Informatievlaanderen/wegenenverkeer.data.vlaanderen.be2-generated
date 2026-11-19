@@ -2,15 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-11-16T09:48:33.963Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bea3f772237ea15eadc1c95abb73e7b0b008956f7481239874e57d8b7f517a25](all-aswegersite.jsonld#L7838)".
+2026-11-19T12:44:14.425Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bea3f772237ea15eadc1c95abb73e7b0b008956f7481239874e57d8b7f517a25](all-aswegersite.jsonld#L7838)".
 
-2026-11-16T09:48:33.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:59b2e194ee75f0d28c74529fb770ae143daff81ed2b45e6afdfb236573e2781b](all-aswegersite.jsonld#L7876)".
+2026-11-19T12:44:14.426Z warn: Unable to find the description for subject "[urn:oslo-toolchain:59b2e194ee75f0d28c74529fb770ae143daff81ed2b45e6afdfb236573e2781b](all-aswegersite.jsonld#L7876)".
 
-2026-11-16T09:48:33.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6ba8aa4b124207359aea146c19f991a89b03277e9b343dcca2a26c0a0daf4dc9](all-aswegersite.jsonld#L7914)".
+2026-11-19T12:44:14.427Z warn: Unable to find the description for subject "[urn:oslo-toolchain:f7b225adde17e91342f6fa67bee62c5daabc8b88e5b05dc6a10f826e42f8376a](all-aswegersite.jsonld#L7914)".
 
-2026-11-16T09:48:33.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b69cc71b7f6d3efed34dbdab6c29a1554de56c06e7486d4460ce4c05af7172aa](all-aswegersite.jsonld#L7952)".
-
-2026-11-16T09:48:33.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76fcc68896fbc1991d6accb6de23aa37fb5d704111b767e402cb83c089744904](all-aswegersite.jsonld#L7990)".
-
-2026-11-16T09:48:33.966Z warn: Unable to find the description for subject "[urn:oslo-toolchain:30e3068c898f6a0dbb2af1a5320aa5cf3ca9d35054d846e137a89cea73f44cfa](all-aswegersite.jsonld#L8028)".
+2026-11-19T12:44:14.427Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e5de14bc640934d2e3de72395945be05a225cc55da0ccbb927a951a31672752b](all-aswegersite.jsonld#L7952)".
 
